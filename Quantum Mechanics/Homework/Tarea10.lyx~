@@ -1,0 +1,1481 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea 10
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 09/06/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera un problema de dos niveles sujeto a un potencial sinosoidal dependient
+e del tiempo 
+\begin_inset Formula 
+\[
+H_{0}=E_{1}|1\rangle\langle1|+E_{2}|2\rangle\langle2|,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V=\gamma\exp\left(i\omega t\right)|1\rangle\langle2|+\gamma\exp\left(-i\omega t\right)|2\rangle\langle1|.
+\]
+
+\end_inset
+
+Demuestre la fórmula de Rabi 
+\begin_inset Formula 
+\[
+\left|c_{2}\left(t\right)\right|^{2}=\frac{4\Gamma^{2}}{4\Gamma^{2}+\left(\omega-\omega_{21}\right)}\sin^{2}\left\{ \left[4\Gamma^{2}+\left(\omega-\omega_{21}\right)^{2}\right]^{1/2}\frac{t}{2}\right\} ,
+\]
+
+\end_inset
+
+con 
+\begin_inset Formula $\hbar\omega_{21}=E_{2}-E_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+El problema que queremos resolver viene dado por 
+\begin_inset Formula 
+\begin{equation}
+i\hbar\left(\begin{array}{c}
+\dot{c_{1}}\\
+\dot{c_{2}}
+\end{array}\right)=\left(\begin{array}{cc}
+V_{11} & V_{12}e^{i\omega_{12}t}\\
+V_{21}e^{i\omega_{21}t} & V_{22}
+\end{array}\right)\left(\begin{array}{c}
+c_{1}\\
+c_{2}
+\end{array}\right),\label{eq:c1c2}
+\end{equation}
+
+\end_inset
+
+en nuestro caso, tenemos que 
+\begin_inset Formula 
+\[
+V_{12}=V_{21}^{*}=\gamma e^{i\omega t}\ \ \ \&\ \ \ V_{11}=V_{22}=0.
+\]
+
+\end_inset
+
+Con lo cual , la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:c1c2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se transforma en 
+\begin_inset Formula 
+\[
+i\hbar\left(\begin{array}{c}
+\dot{c_{1}}\\
+\dot{c_{2}}
+\end{array}\right)=\left(\begin{array}{cc}
+0 & \gamma e^{i\omega t}e^{i\omega_{12}t}\\
+\gamma e^{-i\omega t}e^{i\omega_{21}t} & 0
+\end{array}\right)\left(\begin{array}{c}
+c_{1}\\
+c_{2}
+\end{array}\right)
+\]
+
+\end_inset
+
+Ahora bien, si consideramos que 
+\begin_inset Formula 
+\[
+c_{1}\left(0\right)=1\ \ \ \&\ \ \ c_{2}\left(0\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un oscilador armónico unidimensional se encuentra en el estado base para
+ 
+\begin_inset Formula $t>0$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+ se sujeta a una fuerza en la dirección 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ espacialmente uniforme pero dependiente del tiempo, de la forma 
+\begin_inset Formula 
+\[
+F\left(t\right)=F_{0}\exp\left(-\frac{t}{\tau}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Usado la teorı́a de perturbaciones dependiente del tiempo a primer orden,
+ obtén la probabilidad de encontrar al oscilador en el primer estado para
+ 
+\begin_inset Formula $t>0$
+\end_inset
+
+.
+ Muestra que para 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ (con 
+\begin_inset Formula $\tau$
+\end_inset
+
+ finita) la expresión es dependiente del tiempo.
+ ¿Es este resultado razonable o no? 
+\end_layout
+
+\begin_layout Enumerate
+¿Es posible encontrar al oscilador en estados excitados superiores? 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+De manera general, la transición de probabilidad de 
+\begin_inset Formula $|i\rangle\rightarrow|n\rangle$
+\end_inset
+
+, con 
+\begin_inset Formula $n\neq i$
+\end_inset
+
+ viene dada por 
+\begin_inset Formula 
+\[
+P\left(i\rightarrow n\right)=\left|c_{n}^{\left(1\right)}\left(t\right)+c_{n}^{\left(2\right)}\left(t\right)+\dots\right|^{2}.
+\]
+
+\end_inset
+
+Ahora bien, considerando la transición 
+\begin_inset Formula $|0\rangle\rightarrow|n\rangle$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+P\left(0\rightarrow n\right)=\left|c_{n}^{\left(1\right)}\left(t\right)\right|^{2},
+\]
+
+\end_inset
+
+a primer orden, donde 
+\begin_inset Formula $c_{n}^{\left(1\right)}$
+\end_inset
+
+ viene dado por 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}\left(t\right)=\frac{-i}{\hbar}\int_{t_{0}}^{t}e^{i\omega_{ni}t^{\prime}}V_{ni}\left(t^{\prime}\right)dt^{\prime}.
+\]
+
+\end_inset
+
+En nuestro caso, tenemos que 
+\begin_inset Formula 
+\[
+V\left(x,t\right)=-F_{0}xe^{-t/\tau},
+\]
+
+\end_inset
+
+cuando 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+ y cero cuando 
+\begin_inset Formula $t<0$
+\end_inset
+
+.
+ De manera que 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=\frac{i}{\hbar}\int_{0}^{t}e^{i\left(E_{n}-E_{0}\right)t^{\prime}/\hbar}\langle n|F_{0}xe^{-t^{\prime}/\tau}|0\rangle=\frac{i}{\hbar}F_{0}\sqrt{\frac{\hbar}{2m\omega_{0}}}\delta_{n1}\int_{0}^{t}e^{i\omega_{0}t^{\prime}}e^{-t^{\prime}/\tau}dt^{\prime},
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=\frac{i}{\hbar}F_{0}\sqrt{\frac{\hbar}{2m\omega_{0}}}\frac{e^{\left(i\omega_{0}-1/\tau\right)t}-1}{i\omega_{0}-1/\tau},
+\]
+
+\end_inset
+
+y 
+\begin_inset Formula $c_{n}^{\left(1\right)}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+.
+ Por lo tanto, se tiene que 
+\begin_inset Formula 
+\[
+\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{F_{0}^{2}}{2m\omega_{0}}\frac{e^{-2t\tau}-2e^{-t\tau}\cos\omega_{0}t+1}{\omega_{0}^{2}+1/\tau^{2}}\rightarrow\frac{1}{2m\omega_{0}}\frac{F_{0}^{2}\tau^{2}}{1+\omega_{0}^{2}\tau^{2}},
+\]
+
+\end_inset
+
+cuando 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+El formalismo Lippmann-Schwinger puede aplicarse también a un problema unidimens
+ional de transmisión-reflexión con un potencial de alcance finito, 
+\begin_inset Formula $V\left(x\right)\neq0$
+\end_inset
+
+ para 
+\begin_inset Formula $0<\left|x\right|<a$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Supongamos que tenemos una onda incidente llegando desde la izquierda: 
+\begin_inset Formula $\langle x|\phi\rangle=\frac{1}{\sqrt{2\pi}}\exp\left(ikx\right)$
+\end_inset
+
+.
+ ¿Cómo podemos manejar el operador 
+\begin_inset Formula $1/\left(E-H_{0}\right)$
+\end_inset
+
+ si tenemos una onda transmitida solo para 
+\begin_inset Formula $x>a$
+\end_inset
+
+ y una onda reflejada y la onda original para 
+\begin_inset Formula $x<-a$
+\end_inset
+
+? ¿es la prescripción 
+\begin_inset Formula $E\rightarrow E+i\epsilon$
+\end_inset
+
+ aún correcta? Obtén una expresión para la función de Green apropiada y
+ escribe una ecuación integral para 
+\begin_inset Formula $\langle x|\psi^{\left(+\right)}\rangle$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera el caso especial para un potencial función-
+\begin_inset Formula $\delta$
+\end_inset
+
+ atractivo 
+\begin_inset Formula 
+\[
+V=-\frac{\gamma\hbar^{2}}{2m}\delta\left(x\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+.
+ Resuelve la ecuación integral para obtener las amplitudes de transición
+ y reflexión.
+\end_layout
+
+\begin_layout Enumerate
+El potencial función-
+\begin_inset Formula $\delta$
+\end_inset
+
+ unidimensional con 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ admite un y sólo un estado ligado para cualquier valor de 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ Muestra que las amplitudes de reflexión y transmisión que calculaste tienen
+ polos (estados ligados) en la posición esperada cuando 
+\begin_inset Formula $k$
+\end_inset
+
+ se toma como una variable compleja.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Para este problema, lo que tenemos que hacer es resolver la ecuación de
+ Lippman-Schwinger, la cual esta dada por 
+\begin_inset Formula 
+\[
+\langle\mathbf{x}|\psi^{\left(\pm\right)}\rangle=\langle\mathbf{x}|i\rangle+\int d^{3}x^{\prime}\left\langle \mathbf{x}|\frac{1}{E-H_{0}\pm i\epsilon}|\mathbf{x}^{\prime}\right\rangle \langle\mathbf{x}^{\prime}|V|\psi^{\left(\pm\right)}\rangle.
+\]
+
+\end_inset
+
+Consideremos solo el caso de 
+\begin_inset Quotes xld
+\end_inset
+
+scattering forward in time
+\begin_inset Quotes xrd
+\end_inset
+
+, es decir 
+\begin_inset Formula $\langle\mathbf{x}|\psi^{\left(+\right)}\rangle$
+\end_inset
+
+, y hagamos 
+\begin_inset Formula 
+\[
+\psi^{+}\left(x\right)=\langle\mathbf{x}|\psi^{\left(+\right)}\rangle,
+\]
+
+\end_inset
+
+con lo cual, se tiene (ya que estamos en 1D)
+\begin_inset Formula 
+\[
+\psi^{+}\left(x\right)=\phi\left(x\right)+\int dx^{\prime}\left\langle x|\frac{1}{E-H_{0}+i\epsilon}|x^{\prime}\right\rangle \langle x^{\prime}|V|\psi^{\left(\pm\right)}\rangle,
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\phi\left(x\right)=\langle x|i\rangle$
+\end_inset
+
+, el cual nos fue dado y tiene por expresión 
+\begin_inset Formula 
+\[
+\phi\left(x\right)=\frac{1}{\sqrt{2\pi}}\exp\left(ikx\right),
+\]
+
+\end_inset
+
+por otra parte, para la integral se tiene que
+\begin_inset Formula 
+\[
+\int dx^{\prime}\left\langle x|\frac{1}{E-H_{0}\pm i\epsilon}|x^{\prime}\right\rangle \langle x^{\prime}|V|\psi^{\left(\pm\right)}\rangle=\frac{2m}{\hbar^{2}}\int dx^{\prime}G^{\left(+\right)}\left(x,x^{\prime}\right)V\left(x^{\prime}\right)\psi^{\left(\pm\right)}\left(x^{\prime}\right),
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\begin{equation}
+G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{\hbar^{2}}{2m}\langle x|\frac{1}{E-H_{0}+i\epsilon}|x^{\prime}\rangle,\label{eq:G+}
+\end{equation}
+
+\end_inset
+
+y con lo cual 
+\begin_inset Formula 
+\begin{equation}
+\psi^{+}\left(x\right)=\phi\left(x\right)+\frac{2m}{\hbar^{2}}\int dx^{\prime}G^{\left(+\right)}\left(x,x^{\prime}\right)V\left(x^{\prime}\right)\psi^{\left(\pm\right)}\left(x^{\prime}\right).\label{eq:Psi+}
+\end{equation}
+
+\end_inset
+
+Ahora bien, para hallar a 
+\begin_inset Formula $G^{\left(+\right)}\left(x,x^{\prime}\right)$
+\end_inset
+
+, usemos la definición dada en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:G+"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e introduzcamos la base de momento
+\begin_inset Formula 
+\[
+G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{\hbar^{2}}{2m}\langle x|\frac{1}{E-H_{0}+i\epsilon}|x^{\prime}\rangle=\frac{\hbar^{2}}{2m}\int dp\int dp^{\prime}\langle x|p\rangle\langle p|\frac{1}{E-H_{0}+i\epsilon}|p^{\prime}\rangle\langle p^{\prime}|x^{\prime}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{\hbar^{2}}{2m}\int dp\int dp^{\prime}\langle x|p\rangle\langle p|\frac{1}{E-H_{0}+i\epsilon}|p^{\prime}\rangle\langle p^{\prime}|x^{\prime}\rangle,
+\]
+
+\end_inset
+
+pero para 
+\begin_inset Formula $\langle x|p\rangle$
+\end_inset
+
+ y 
+\begin_inset Formula $\langle p^{\prime}|x^{\prime}\rangle$
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+\langle x|p\rangle=\frac{\exp\left(\frac{ipx}{\hbar}\right)}{\sqrt{2\pi\hbar}}\ \ \ \&\ \ \ \langle p^{\prime}|x^{\prime}\rangle=\frac{\exp\left(-\frac{ip^{\prime}x^{\prime}}{\hbar}\right)}{\sqrt{2\pi\hbar}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{\hbar^{2}}{2m}\int dp\int dp^{\prime}\frac{\exp\left(\frac{ipx}{\hbar}\right)}{\sqrt{2\pi\hbar}}\langle p|\frac{1}{E-H_{0}+i\epsilon}|p^{\prime}\rangle\frac{\exp\left(-\frac{ip^{\prime}x^{\prime}}{\hbar}\right)}{\sqrt{2\pi\hbar}},
+\]
+
+\end_inset
+
+mientras que para 
+\begin_inset Formula $\langle p|\frac{1}{E-H_{0}+i\epsilon}|p^{\prime}\rangle$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula 
+\[
+\langle p|\frac{1}{E-H_{0}+i\epsilon}|p^{\prime}\rangle=\frac{\langle p|p^{\prime}\rangle}{E-\left(p^{\prime}\right)^{2}/2m+i\epsilon},
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{\hbar^{2}}{2m}\int dp\int dp^{\prime}\frac{\exp\left(\frac{ipx}{\hbar}\right)}{\sqrt{2\pi\hbar}}\frac{\langle p|p^{\prime}\rangle}{E-\left(p^{\prime}\right)^{2}/2m+i\epsilon}\frac{\exp\left(-\frac{ip^{\prime}x^{\prime}}{\hbar}\right)}{\sqrt{2\pi\hbar}},
+\]
+
+\end_inset
+
+pero el factor 
+\begin_inset Formula $\langle p|p^{\prime}\rangle$
+\end_inset
+
+ colapsa una integral, con lo cual
+\begin_inset Formula 
+\[
+\implies G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{1}{2\pi\hbar}\frac{\hbar^{2}}{2m}\int dp\frac{1}{E-\left(p^{\prime}\right)^{2}/2m+i\epsilon}\exp\left[\frac{ip}{\hbar}\left(x-x^{\prime}\right)\right],
+\]
+
+\end_inset
+
+si ahora recordamos que 
+\begin_inset Formula $E=\hbar^{2}k^{2}/2m$
+\end_inset
+
+ y hacemos las definiciones 
+\begin_inset Formula $p=\hbar q$
+\end_inset
+
+ junto con 
+\begin_inset Formula $q_{0}=k\left(1+i\epsilon\right)$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{1}{2\pi\hbar}\frac{\hbar^{2}}{2m}\int dq\frac{1}{\left(q-q_{0}\right)\left(q+q_{0}\right)}\exp\left[iq\left(x-x^{\prime}\right)\right].
+\]
+
+\end_inset
+
+Ahora bien, para evaluar la integral anterior, una posible configuración
+ es hacerla sobre un contorno semi infinito sobre el plano complejo.
+ Para 
+\begin_inset Formula $x>x^{\prime}$
+\end_inset
+
+, consideremos la parte superior del plano y cerremos el contorno con un
+ semicirculo orientado en la dirección contraria a las manercillas del reloj,
+ lo cual nos da un polo simple en 
+\begin_inset Formula $q=q_{0}$
+\end_inset
+
+.
+ Mientras que para 
+\begin_inset Formula $x<x^{\prime}$
+\end_inset
+
+ consideramos un semicirculo en el plano inferior orientado en la dirección
+ de las manecillas del reloj, lo cual nos da un polo simple en 
+\begin_inset Formula $q=-q_{0}$
+\end_inset
+
+.
+ Usando el teorema del residuo, tenemos que para 
+\begin_inset Formula $x>x^{\prime}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G^{\left(+\right)}\left(x,x^{\prime}\right)=-\frac{1}{2\pi}\left(2\pi i\right)\frac{\exp\left[ik\left(x-x^{\prime}\right)\right]}{k+k}=\frac{1}{2ik}\exp\left[ik\left(x-x^{\prime}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{1}{2ik}\exp\left[ik\left(x-x^{\prime}\right)\right],
+\]
+
+\end_inset
+
+mientras que para 
+\begin_inset Formula $x<x^{\prime}$
+\end_inset
+
+, se tiene 
+\begin_inset Formula 
+\[
+G^{\left(+\right)}\left(x,x^{\prime}\right)=-\frac{1}{2\pi}\left(-2\pi i\right)\frac{\exp\left[-ik\left(x-x^{\prime}\right)\right]}{-k-k}=\frac{1}{2ik}\exp\left[-ik\left(x-x^{\prime}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies G^{\left(+\right)}\left(x,x^{\prime}\right)=\frac{1}{2ik}\exp\left[-ik\left(x-x^{\prime}\right)\right]
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien, si consideramos al potencial 
+\begin_inset Formula $V$
+\end_inset
+
+ dado por 
+\begin_inset Formula 
+\[
+V\left(x\right)=-\frac{\gamma\hbar^{2}}{2m}\delta\left(x\right),
+\]
+
+\end_inset
+
+tenemos que, de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Psi+"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\psi\left(x\right)=\phi\left(x\right)+\frac{2m}{\hbar^{2}}\int dx^{\prime}G\left(x,x^{\prime}\right)\left(-\frac{\gamma\hbar^{2}}{2m}\delta\left(x^{\prime}\right)\right)\psi\left(x^{\prime}\right)=,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\psi\left(x\right)=\phi\left(x\right)-\gamma\int dx^{\prime}G\left(x,x^{\prime}\right)\delta\left(x^{\prime}\right)\psi\left(x^{\prime}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\psi\left(x\right)=\phi\left(x\right)-\gamma G\left(x,0\right)\psi\left(0\right),
+\]
+
+\end_inset
+
+pero dado que 
+\begin_inset Formula 
+\[
+G\left(0,0\right)=\frac{1}{2ik},
+\]
+
+\end_inset
+
+se tiene como consecuencia 
+\begin_inset Formula 
+\[
+\psi\left(0\right)=\phi\left(0\right)-\gamma G\left(0,0\right)\psi\left(0\right)=\phi\left(0\right)-\gamma\frac{1}{2ik}\psi\left(0\right),
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\psi\left(0\right)=\frac{\phi\left(0\right)}{1+\gamma/2ik},
+\]
+
+\end_inset
+
+con lo cual, para 
+\begin_inset Formula $x>0$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula 
+\[
+\psi\left(x\right)=\frac{1}{\sqrt{2\pi}}\left[\exp\left(ikx\right)-\frac{\gamma}{2ik+\gamma}\right]=\frac{1}{\sqrt{2\pi}}\frac{2ik}{2ik+\gamma}\exp\left(ikx\right),
+\]
+
+\end_inset
+
+mientras que para 
+\begin_inset Formula $x<0$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\psi\left(x\right)=\frac{1}{\sqrt{2\pi}}\left[\exp\left(ikx\right)-\frac{\gamma}{2ik+\gamma}\exp\left(-ikx\right)\right].
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+T\left(k\right)=\frac{2ik}{2ik+\gamma}\ \ \ \&\ \ \ R\left(k\right)=\frac{-\gamma}{2ik+\gamma}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Por otra parte, la energía del único estado ligado para el potencial 
+\begin_inset Formula $V$
+\end_inset
+
+ dado es 
+\begin_inset Formula 
+\[
+E=\frac{-m\nu_{0}^{2}}{2\hbar^{2}},
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\nu_{0}=-\frac{\gamma\hbar^{2}}{2m}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+E=\frac{-\hbar^{2}\gamma^{2}}{8m},
+\]
+
+\end_inset
+
+es decir 
+\begin_inset Formula 
+\[
+k=\frac{i\gamma}{2},
+\]
+
+\end_inset
+
+es decir, los polos de 
+\begin_inset Formula $T\left(k\right)$
+\end_inset
+
+ y de 
+\begin_inset Formula $R\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Demuestra 
+\begin_inset Formula 
+\[
+\sigma_{tot}\simeq\frac{m^{2}}{\pi\hbar^{4}}\int d^{3}x\int d^{3}x^{\prime}V\left(r\right)V\left(r^{\prime}\right)\frac{\sin^{2}k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|}{k^{2}\left|\mathbf{x}-\mathbf{x}^{\prime}\right|^{2}},
+\]
+
+\end_inset
+
+de las siguientes maneras:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Integrando la sección transversal diferencial calculada usando la aproximación
+ de Born a primer orden.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Aplicando el teorema óptico a la amplitud de esparcimiento adelante (forward-sca
+ttering ) en la aproximación de Born a segundo orden.
+ [Note que 
+\begin_inset Formula $f\left(0\right)$
+\end_inset
+
+ es real y se usa la aproximación de Born a primer orden.] 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+La aproximación de Born a primer orden nos dice que 
+\begin_inset Formula 
+\[
+\langle\mathbf{k}^{\prime}|V|\psi^{\left(+\right)}\rangle=\langle\mathbf{k}^{\prime}|T|\mathbf{k}\rangle\approx\langle\mathbf{k}^{\prime}|V|\mathbf{k}\rangle,
+\]
+
+\end_inset
+
+por otra parte, sabemos que 
+\begin_inset Formula 
+\[
+\frac{d\sigma}{d\Omega}=\left|f\left(\mathbf{k}^{\prime},\mathbf{k}\right)\right|^{2}\implies\sigma_{tot}=\int d\Omega_{\mathbf{k}^{\prime}}\left|f\left(\mathbf{k}^{\prime},\mathbf{k}\right)\right|^{2},
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $f\left(\mathbf{k}^{\prime},\mathbf{k}\right)$
+\end_inset
+
+, viene dado por 
+\begin_inset Formula 
+\[
+f\left(\mathbf{k}^{\prime},\mathbf{k}\right)=\frac{-mL^{3}}{2\pi\hbar^{2}}\langle\mathbf{k}^{\prime}|V|\psi^{\left(+\right)}\rangle\approx\frac{-mL^{3}}{2\pi\hbar^{2}}\langle\mathbf{k}^{\prime}|V|\mathbf{k}\rangle,
+\]
+
+\end_inset
+
+donde hemos usado la aproximación a primer orden de Born.
+ Entonces 
+\begin_inset Formula 
+\[
+\left|f\left(\mathbf{k}^{\prime},\mathbf{k}\right)\right|^{2}\approx\left(\frac{mL^{3}}{2\pi\hbar^{2}}\right)^{2}\langle\mathbf{k}^{\prime}|V|\mathbf{k}\rangle\langle\mathbf{k}|V|\mathbf{k}^{\prime}\rangle,
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\sigma_{tot}\approx\left(\frac{mL^{3}}{2\pi\hbar^{2}}\right)^{2}\int d\Omega_{\mathbf{k}^{\prime}}\langle\mathbf{k}^{\prime}|V|\mathbf{k}\rangle\langle\mathbf{k}|V|\mathbf{k}^{\prime}\rangle.
+\]
+
+\end_inset
+
+Si ahora introducimos la base de momento, tenemos que 
+\begin_inset Formula 
+\[
+\sigma_{tot}\approx\left(\frac{mL^{3}}{2\pi\hbar^{2}}\right)^{2}\int\int\int d\Omega_{\mathbf{k}^{\prime}}d^{3}xd^{3}x^{\prime}\langle\mathbf{k}^{\prime}|V|\mathbf{x}\rangle\langle\mathbf{x}|\mathbf{k}\rangle\langle\mathbf{k}|V|\mathbf{x}^{\prime}\rangle\langle\mathbf{x}^{\prime}|\mathbf{k}^{\prime}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}\approx\left(\frac{mL^{3}}{2\pi\hbar^{2}}\right)^{2}\int\int\int d\Omega_{\mathbf{k}^{\prime}}d^{3}xd^{3}x^{\prime}V\left(x\right)V\left(x^{\prime}\right)\langle\mathbf{k}^{\prime}|\mathbf{x}\rangle\langle\mathbf{x}|\mathbf{k}\rangle\langle\mathbf{k}|\mathbf{x}^{\prime}\rangle\langle\mathbf{x}^{\prime}|\mathbf{k}^{\prime}\rangle
+\]
+
+\end_inset
+
+usando que 
+\begin_inset Formula 
+\[
+\langle\mathbf{x}|\mathbf{k}\rangle=\frac{1}{L^{3/2}}\exp\left(i\mathbf{k}\cdot\mathbf{x}\right)\ \ \ \&\langle\mathbf{x}^{\prime}|\mathbf{k}^{\prime}\rangle=\frac{1}{L^{3/2}}\exp\left(i\mathbf{k}^{\prime}\cdot\mathbf{x}^{\prime}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle\mathbf{k}|\mathbf{x}^{\prime}\rangle=\frac{1}{L^{3/2}}\exp\left(-i\mathbf{k}\cdot\mathbf{x}^{\prime}\right)\ \ \ \&\langle\mathbf{k}^{\prime}|\mathbf{x}\rangle=\frac{1}{L^{3/2}}\exp\left(-i\mathbf{k}^{\prime}\cdot\mathbf{x}\right),
+\]
+
+\end_inset
+
+se tiene 
+\begin_inset Formula 
+\[
+\sigma_{tot}\approx\left(\frac{mL^{3}}{2\pi\hbar^{2}}\right)^{2}\left(\frac{1}{L^{3}}\right)^{2}\int\int\int d\Omega_{\mathbf{k}^{\prime}}d^{3}xd^{3}x^{\prime}V\left(x\right)V\left(x^{\prime}\right)\exp\left[i\mathbf{k}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right]\exp\left[i\mathbf{k}^{\prime}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right],
+\]
+
+\end_inset
+
+con lo cual, se tiene que 
+\begin_inset Formula 
+\[
+\sigma_{tot}\approx\left(\frac{m}{2\pi\hbar^{2}}\right)^{2}\int\int\int d\Omega_{\mathbf{k}^{\prime}}d^{3}xd^{3}x^{\prime}V\left(x\right)V\left(x^{\prime}\right)\exp\left[i\mathbf{k}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right]\exp\left[i\mathbf{k}^{\prime}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right].
+\]
+
+\end_inset
+
+Para integrar la ecuación anterior, hacemos lo siguiente: ponemos 
+\begin_inset Formula $\hat{\mathbf{k}}^{\prime}$
+\end_inset
+
+ en la dirección de 
+\begin_inset Formula $\mathbf{x}-\mathbf{x}^{\prime}$
+\end_inset
+
+, con lo cual tenemos que 
+\begin_inset Formula 
+\[
+\hat{\mathbf{k}}^{\prime}\cdot\left(\mathbf{x}-\mathbf{x}^{\prime}\right)=k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\cos\theta_{\mathbf{k}^{\prime}},
+\]
+
+\end_inset
+
+con lo cual se tiene que 
+\begin_inset Formula 
+\[
+\int d\Omega_{\mathbf{k}^{\prime}}\exp\left[-i\mathbf{k}^{\prime}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right]=2\pi\int_{-1}^{1}d\left(\cos\theta_{\mathbf{k}^{\prime}}\right)\exp\left[-k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\cos\theta_{\mathbf{k}^{\prime}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\int d\Omega_{\mathbf{k}^{\prime}}\exp\left[-i\mathbf{k}^{\prime}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right]=4\pi\frac{\sin\left(k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\right)}{k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|}.
+\]
+
+\end_inset
+
+Por otra parte, podemos reducir la sección total de dispersiíon si tenemos
+ simetria esférica.
+ En este caso, cada una de las direcciones espaciales 
+\begin_inset Formula $\mathbf{x}-\mathbf{x}^{\prime}$
+\end_inset
+
+ contribuye de la misma forma en cada una de las dos integrales de posición.
+ De forma tal que podemos hacer un promedio sobre todas las direcciones
+ 
+\begin_inset Formula $\mathbf{k}$
+\end_inset
+
+, haciendo 
+\begin_inset Formula 
+\[
+\frac{1}{4\pi}\int d\Omega_{\mathbf{k}^{\prime}}\exp\left[-i\mathbf{k}^{\prime}\cdot\left(\mathbf{x}-\mathbf{x^{\prime}}\right)\right]=\frac{\sin\left(k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\right)}{k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|},
+\]
+
+\end_inset
+
+lo cual nos conduce a 
+\begin_inset Formula 
+\[
+\sigma_{tot}\approx\frac{m^{2}}{\pi\hbar^{4}}\int d^{3}x\int d^{3}x^{\prime}V\left(r\right)V\left(r^{\prime}\right)\frac{\sin^{2}k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|}{k^{2}\left|\mathbf{x}-\mathbf{x}^{\prime}\right|^{2}},
+\]
+
+\end_inset
+
+justo como se buscaba.
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien, el teorema óptico nos dice que 
+\begin_inset Formula 
+\[
+Imf\left(\theta=0\right)=\text{Im}f\left(\mathbf{k},\mathbf{k}\right)=\frac{k\sigma_{tot}}{4\pi},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}=\frac{4\pi}{k}\text{Im}f\left(\mathbf{k},\mathbf{k}\right),
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+f\left(\mathbf{k},\mathbf{k}\right)=-\frac{mL^{3}}{2\pi\hbar^{2}}\langle\mathbf{k}|V|\psi^{\left(+\right)}\rangle,
+\]
+
+\end_inset
+
+y junto con 
+\begin_inset Formula 
+\[
+\langle\mathbf{k}|V|\psi^{\left(+\right)}\rangle=\langle\mathbf{k}|T|\mathbf{k}\rangle,
+\]
+
+\end_inset
+
+de modo que 
+\begin_inset Formula 
+\[
+\sigma_{tot}=-\frac{4\pi}{k}\frac{mL^{3}}{2\pi\hbar^{2}}\text{Im}\langle\mathbf{k}|T|\mathbf{k}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}=-\frac{2mL^{3}}{\hbar^{2}k}\text{Im}\langle\mathbf{k}|T|\mathbf{k}\rangle.
+\]
+
+\end_inset
+
+Si ahora usamos la aproximación de Born a primer orden, tenemos que 
+\begin_inset Formula 
+\[
+\sigma_{tot}=-\frac{2mL^{3}}{\hbar^{2}k}\text{Im}\langle\mathbf{k}|V\frac{1}{E-H_{0}+i\epsilon}V|\mathbf{k}\rangle,
+\]
+
+\end_inset
+
+haciendo un procedimiento análogo an caso anterior, tenemos que 
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}=-\frac{2mL^{3}}{\hbar^{2}k}\text{Im}\int d^{3}xd^{3}x^{\prime}\langle\mathbf{k}|x\rangle\langle x|V\frac{1}{E-H_{0}+i\epsilon}|\mathbf{x}^{\prime}\rangle\langle\mathbf{x}^{\prime}|V|\mathbf{k}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}=-\frac{2mL^{3}}{\hbar^{2}k}\text{Im}\int d^{3}xd^{3}x^{\prime}V\left(r\right)V\left(r^{\prime}\right)\exp\left[-i\mathbf{k}\cdot\left(\mathbf{x}-\mathbf{x}^{\prime}\right)\right]\frac{2m}{\hbar^{2}}G_{+}\left(\mathbf{x},\mathbf{x}^{\prime}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}=-\frac{4m^{2}}{\hbar^{2}k}\text{Im}\int d^{3}xd^{3}x^{\prime}V\left(r\right)V\left(r^{\prime}\right)\frac{\sin\left(k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\right)}{k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|}\frac{\exp\left[k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\right]}{4\pi\left|\mathbf{x}-\mathbf{x}^{\prime}\right|},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sigma_{tot}=\frac{m^{2}}{\hbar^{2}k}\int d^{3}xd^{3}x^{\prime}V\left(r\right)V\left(r^{\prime}\right)\frac{\sin^{2}\left(k\left|\mathbf{x}-\mathbf{x}^{\prime}\right|\right)}{k^{2}\left|\mathbf{x}-\mathbf{x}^{\prime}\right|^{2}},
+\]
+
+\end_inset
+
+justo como se pedía.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera el potencial 
+\begin_inset Formula 
+\[
+V=0,r>R,\ \ \ V=V_{0},r<R
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ puede ser positivo o negativo.
+ Usando el método de ondas parciales, muestra que para 
+\begin_inset Formula $\left|V_{0}\right|\ll E=\hbar^{2}k^{2}/2m$
+\end_inset
+
+ y 
+\begin_inset Formula $kR\gg1$
+\end_inset
+
+ la sección diferencial transversal es isotrópica y la sección transversal
+ total está dada por 
+\begin_inset Formula 
+\[
+\sigma_{tot}=\frac{16\pi}{9}\frac{m^{2}V_{0}^{2}R^{6}}{\hbar^{4}}.
+\]
+
+\end_inset
+
+Suponga que la energı́a se eleva ligeramente.
+ Muestra que la distribución angular puede ser escrita como 
+\begin_inset Formula 
+\[
+\frac{d\sigma}{d\Omega}=A+B\cos\theta.
+\]
+
+\end_inset
+
+Obtén una expresión aproximada para 
+\begin_inset Formula $B/A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Para este problema, necesitamos resolver la ecuación radial de Schrödinger,
+ esto es 
+\begin_inset Formula 
+\[
+\frac{d^{2}u_{l}}{dr^{2}}+\left(k^{2}-\frac{2m}{\hbar^{2}}V-\frac{l\left(l+1\right)}{r^{2}}\right)u_{l}=0,
+\]
+
+\end_inset
+
+cuando 
+\begin_inset Formula $u_{l}\left(r\right)=rA_{l}\left(r\right)$
+\end_inset
+
+ en la región 
+\begin_inset Formula $r\leq R$
+\end_inset
+
+, donde 
+\begin_inset Formula $V=V_{0}$
+\end_inset
+
+.
+ Dado que 
+\begin_inset Formula $E-V_{0}=\hbar^{2}\kappa^{2}/2m$
+\end_inset
+
+, esto implica que 
+\begin_inset Formula 
+\[
+A_{l}\left(r\right)=j_{l}\left(r\right),
+\]
+
+\end_inset
+
+ y esto a su vez, que la derivada logaritmica en 
+\begin_inset Formula $r=R$
+\end_inset
+
+, sea 
+\begin_inset Formula 
+\[
+\beta_{l}=\frac{\kappa Rj_{l}^{\prime}\left(\kappa R\right)}{j_{l}\left(\kappa R\right)}.
+\]
+
+\end_inset
+
+Por otra parte, notemos que 
+\begin_inset Formula $|V_{0}|\ll E$
+\end_inset
+
+, con lo cual 
+\begin_inset Formula $k\sim\kappa$
+\end_inset
+
+ y 
+\begin_inset Formula $kR\ll1$
+\end_inset
+
+ implica que 
+\begin_inset Formula $\kappa R\ll1$
+\end_inset
+
+.
+ Lo anterior significa que estamos expandiendo ambos al término mas bajo.
+ Ahora bien, si usamos la siguiente identidad
+\begin_inset Formula 
+\[
+f_{l}^{\prime}\left(x\right)=\frac{l}{x}f_{l}\left(x\right)-f_{l+1}\left(x\right),
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $f_{l}\left(x\right)$
+\end_inset
+
+ es cualqueir función de Bessel, tenemos que la derivada logaritmica se
+ convierte en 
+\begin_inset Formula 
+\[
+\beta_{l}=\frac{\kappa R}{j_{l}\left(\kappa R\right)}j_{l}^{\prime}\left(\kappa R\right)=\frac{\kappa}{j_{l}\left(\kappa R\right)}\left[\frac{l}{\kappa R}j_{l}\left(\kappa R\right)-j_{l+1}\left(\kappa R\right)\right]=l-\kappa R\frac{j_{l+1}\left(\kappa R\right)}{j_{l}\left(\kappa R\right)},
+\]
+
+\end_inset
+
+mientras que 
+\begin_inset Formula 
+\[
+kRf_{l}^{\prime}\left(kR\right)-\beta_{l}f_{l}\left(kR\right)=kR\left[\frac{l}{kR}f_{l}\left(kR\right)-f_{l+1}\left(kR\right)\right]-\left[l-\kappa R\frac{j_{l+1}\left(\kappa R\right)}{j_{l}\left(\kappa R\right)}\right]f_{l}\left(kR\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies kRf_{l}^{\prime}\left(kR\right)-\beta_{l}f_{l}\left(kR\right)=\kappa R\frac{j_{l+1}\left(\kappa R\right)}{j_{l}\left(\kappa R\right)}f_{l}\left(\kappa R\right)-kRf_{l+1}\left(kR\right).
+\]
+
+\end_inset
+
+Ahora bien, hagamos 
+\begin_inset Formula 
+\[
+j_{l}\left(x\right)\approx\frac{x^{l}}{\left(2l+1\right)!!},\ \ \ x\ll1,
+\]
+
+\end_inset
+
+lo cual implica que 
+\begin_inset Formula 
+\[
+\frac{j_{l+1}\left(\kappa R\right)}{j_{l}\left(\kappa R\right)}=\frac{\kappa R}{2l+3},
+\]
+
+\end_inset
+
+hasta el termino dominante.
+ Por otra parte, sabemos que 
+\begin_inset Formula 
+\[
+n_{l}\left(x\right)=-\frac{\left(2l-1\right)!!}{x^{l+1}},\ \ \ x\ll1,
+\]
+
+\end_inset
+
+de manera que el cambio de fase, dado por
+\begin_inset Formula 
+\[
+\tan\delta_{l}=\frac{kRj_{l}^{\prime}\left(kR\right)-\beta_{l}j_{l}\left(kR\right)}{kRn_{l}^{\prime}\left(kR\right)-\beta_{l}n_{l}\left(kR\right)},
+\]
+
+\end_inset
+
+se convierte en 
+\begin_inset Formula 
+\[
+\tan\delta_{l}=\frac{\left(\kappa R\right)^{2}j_{l}\left(kR\right)/\left(2l+3\right)-kRj_{l+1}\left(kR\right)}{\left(\kappa R\right)^{2}n_{l}\left(kR\right)/\left(2l+3\right)-kRn_{l+1}\left(kR\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\tan\delta_{l}=\frac{\left(\kappa R\right)^{2}\left(kR\right)^{l}/\left(2l+3\right)!!-\left(kR\right)^{l+2}/\left(2l+3\right)!!}{-\left(2l-1\right)!!\left(\kappa R\right)^{2}/\left[\left(2l+3\right)\left(kR\right)^{l+1}\right]+\left(2l+1\right)!!/\left(kR\right)^{l+1}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\tan\delta_{l}\approx\left(kR\right)^{2l+1}\frac{\left(\kappa R\right)^{2}-kR^{2}}{\left(2l+3\right)!!\left(2l+1\right)!!}=\frac{\left(kR\right)^{2l+3}}{\left(2l+3\right)!!\left(2l+1\right)!!}\left[\frac{\kappa^{2}}{k^{2}}-1\right],
+\]
+
+\end_inset
+
+donde hemos ignorado el primer termino en el denominador para 
+\begin_inset Formula $kR\ll1$
+\end_inset
+
+.
+ Como sabemos, el término dominante es 
+\begin_inset Formula $l=0$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+\tan\delta_{0}=\frac{1}{3}\left(kR\right)^{3}\left[\frac{E-V_{0}}{E}-1\right]=-\frac{1}{3}\left(kR\right)^{3}\frac{V_{0}}{E}=-\frac{1}{3}k\frac{2mV_{0}R^{3}}{\hbar^{2}}\approx\delta_{0}\approx\sin\delta_{0}.
+\]
+
+\end_inset
+
+Mientras que para la seccción total de dispersión, tenemos que 
+\begin_inset Formula 
+\[
+\sigma_{tot}=\frac{4\pi}{k^{2}}\sin\delta_{0}=\frac{16\pi}{9}\frac{m^{2}V_{0}^{2}R^{6}}{\hbar^{4}}.
+\]
+
+\end_inset
+
+El siguiente término más importante es cuando 
+\begin_inset Formula $l=1$
+\end_inset
+
+, esto es, cuando tenemos una onda-p, con el cambio de fase dado por 
+\begin_inset Formula 
+\[
+\tan\delta_{1}=-\frac{1}{45}\left(kR\right)^{5}\frac{V_{0}}{E}\approx\delta_{1}\approx\sin\delta_{1}\ll\sin\delta_{0}.
+\]
+
+\end_inset
+
+Con estas dos ondas, la sección de dispersion viene dada por 
+\begin_inset Formula 
+\[
+\frac{d\sigma}{d\Omega}=\frac{1}{k^{2}}\left|e^{i\delta_{0}}\sin\delta_{0}+3e^{i\delta_{1}}\sin\delta_{1}\cos\theta\right|^{2}\approx\frac{1}{k^{2}}\left[\sin^{2}\delta_{0}+6\cos\left(\delta_{0}-\delta_{1}\right)\sin\delta_{0}\sin\delta_{1}\cos\theta\right],
+\]
+
+\end_inset
+
+el cual es de la forma 
+\begin_inset Formula 
+\[
+\frac{d\sigma}{d\Omega}=A+B\cos\theta.
+\]
+
+\end_inset
+
+Pero, dado que 
+\begin_inset Formula $\delta_{1}\ll\delta_{0}\ll1$
+\end_inset
+
+, se tiene que 
+\begin_inset Formula $\cos\left(\delta_{0}-\delta_{1}\right)\approx1$
+\end_inset
+
+, y con lo cual, tenemos que
+\begin_inset Formula 
+\[
+\frac{B}{A}=\frac{6\sin\delta_{1}}{\sin\delta_{0}}=\frac{6\cdot3}{45}\left(kR\right)^{2}=\frac{2}{5}\left(kR\right)^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

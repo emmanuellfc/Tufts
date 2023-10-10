@@ -1,0 +1,2729 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea 1
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 07/03/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Una matriz 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+ de 
+\begin_inset Formula $2\text{x}2$
+\end_inset
+
+ (no necesariamente Hermitiana ni unitaria) está escrita como 
+\begin_inset Formula 
+\[
+\hat{X}=a_{0}\mathbb{I}+\hat{\sigma}\cdot\mathbf{a}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{1,2,3}$
+\end_inset
+
+ son números.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+¿Cómo están 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{k}\ \left(k=1,2,3\right)$
+\end_inset
+
+ relacionadas con 
+\begin_inset Formula $tr(\hat{X})$
+\end_inset
+
+ y 
+\begin_inset Formula $tr(\sigma_{k}\hat{X})$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Obten 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ en términos de los elementos de matriz 
+\begin_inset Formula $X_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Las matrices de Pauli tienen la forma 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{x}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right),\ \sigma_{y}=\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right),\ \sigma_{z}=\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right).\label{eq:01}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Y además, cumplen con lo siguiente:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\sigma_{i}\sigma_{j}=\delta_{ij}+i\epsilon_{ijk}\sigma_{k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+De manera que para 
+\series bold
+a)
+\series default
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\hat{X}=a_{0}\delta_{ij}+\sigma_{k}a_{k},\ \text{con}\ i,j=1,2,\ k=1,2,3\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\implies\hat{X}=a_{0}\delta_{ij}+\sigma_{1}a_{1}+\sigma_{2}a_{2}+\sigma_{3}a_{3}\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Haciendo la identificación de 
+\begin_inset Formula $\sigma_{1}=\sigma_{x},\ \sigma_{2}=\sigma_{y}$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma_{3}=\sigma_{z}$
+\end_inset
+
+, tenemos que 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\begin{equation}
+\hat{X}=a_{0}\delta_{ij}+a_{1}\sigma_{x}+a_{2}\sigma_{y}+a_{3}\sigma_{z}\text{,}\label{eq:02}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+o en notación matricial
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\hat{X}=a_{0}\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right)+a_{1}\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)+a_{2}\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)+a_{3}\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\begin{equation}
+\implies\hat{X}=\left(\begin{array}{cc}
+a_{0}+a_{3} & a_{1}-ia_{2}\\
+a_{1}+ia_{2} & a_{0}-a_{3}
+\end{array}\right)\text{.}\label{eq:03}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Para la traza de 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+, fijemonos en las ecuaciones dadas en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:01"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y notemos que las matrices de Pauli son de traza cero, es decir
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\sigma_{i})=0\ \forall i=1,2,3\ \text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+con lo cual, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\hat{X})=tr\left(a_{0}\delta_{ij}+a_{1}\sigma_{x}+a_{2}\sigma_{y}+a_{3}\sigma_{z}\right)=a_{0}tr(\delta_{ij})+a_{1}tr(\sigma_{x})+a_{2}tr(\sigma_{y})+a_{3}tr(\sigma_{z})\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\implies tr(\hat{X})=a_{0}tr(\delta_{ij})=a_{0}\delta_{ii}=2a_{0}\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\therefore\ tr(\hat{X})=2a_{0}
+\]
+
+\end_inset
+
+Ahora bien, para la 
+\begin_inset Formula $tr(\sigma_{k}\hat{X})$
+\end_inset
+
+, sucede
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\sigma_{k}\hat{X}=a_{0}\sigma_{k}\delta_{ij}+a_{1}\sigma_{k}\sigma_{1}+a_{2}\sigma_{k}\sigma_{2}+a_{3}\sigma_{k}\sigma_{3}\text{, con }k=1,2,3\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+O bien 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{1}\hat{X}=a_{0}\sigma_{1}\delta_{ij}+a_{1}\sigma_{1}\sigma_{1}+a_{2}\sigma_{1}\sigma_{2}+a_{3}\sigma_{1}\sigma_{3}\text{,}\label{eq:04}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma_{2}\hat{X}=a_{0}\sigma_{2}\delta_{ij}+a_{1}\sigma_{2}\sigma_{1}+a_{2}\sigma_{2}\sigma_{2}+a_{3}\sigma_{2}\sigma_{3}\text{ y }\label{eq:05}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma_{3}\hat{X}=a_{0}\sigma_{3}\delta_{ij}+a_{1}\sigma_{3}\sigma_{1}+a_{2}\sigma_{3}\sigma_{2}+a_{3}\sigma_{3}\sigma_{3}\text{,}\label{eq:06}
+\end{equation}
+
+\end_inset
+
+Para 
+\begin_inset Formula $\sigma_{k}\delta_{ij}$
+\end_inset
+
+ tenemos, en notación matricial
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula $\sigma_{1}\delta_{ij}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right),\ \sigma_{2}\delta_{ij}=\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right)\ \text{y}\ \sigma_{3}\delta_{ij}=\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right),$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+de manera que 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{1}\delta_{ij}=\left(\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right)\text{,}\ \sigma_{2}\delta_{ij}=\left(\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right)\ \text{y}\ \text{´}\sigma_{3}\delta_{ij}=\sigma_{3}.\label{eq:07}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En lugar de hacer los calculos de los productos involucrados en las ecuaciones
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:04"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:05"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:06"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, notemos lo siguiente: en general sabemos, por las propiedades de las matrices
+ de Pauli, que sucede lo siguiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{i}\sigma_{j}=\delta_{ij}+i\epsilon_{ijk}\sigma_{k}\text{,}
+\]
+
+\end_inset
+
+Pero 
+\begin_inset Formula $\epsilon_{ijk}$
+\end_inset
+
+ es en general una constante que depende del orden en el que se encuentren
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ y 
+\begin_inset Formula $j$
+\end_inset
+
+, el cual puede ser 
+\begin_inset Formula $0,1\text{ o }-1$
+\end_inset
+
+, así que para nuestros propósitos, hagamos 
+\begin_inset Formula $\alpha=i\epsilon_{ijk}$
+\end_inset
+
+.
+ Por otra parte, en general, el producto 
+\begin_inset Formula $\epsilon_{ijk}\sigma_{k}$
+\end_inset
+
+ es alguna matriz de Pauli, llamemosla 
+\begin_inset Formula $\sigma_{\alpha}$
+\end_inset
+
+, donde el índice 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es diferente de los valores que puede tomar 
+\begin_inset Formula $i$
+\end_inset
+
+ y 
+\begin_inset Formula $j$
+\end_inset
+
+, esto es así por las propiedades del símbolo 
+\begin_inset Formula $\epsilon_{ijk}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+De manera que, con lo discutido anteriormente y con los cambios de variable
+ hechos, tenemos que
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\sigma_{i}\sigma_{j}=\delta_{ij}+\alpha\sigma_{\alpha}.
+\]
+
+\end_inset
+
+Ahora bien, tomemos la traza de la ecuación anterior
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\sigma_{i}\sigma_{j})=tr\left(\delta_{ij}+\alpha\sigma_{\alpha}\right)=tr(\delta_{ij})+\alpha tr(\sigma_{\alpha})=tr(\delta_{ij})\text{.}
+\]
+
+\end_inset
+
+Es decir, la traza de 
+\begin_inset Formula $\sigma_{i}\sigma_{j}$
+\end_inset
+
+ es diferente de cero siempre y cuando 
+\begin_inset Formula $i=j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Ahora bien, usando el resultado anterior junto con las ecuaciones dadas
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:07"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y aplicandolo a las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:04"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:05"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:06"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\sigma_{1}\hat{X})=tr\left(a_{0}\sigma_{1}\delta_{ij}+a_{1}\sigma_{1}\sigma_{1}+a_{2}\sigma_{1}\sigma_{2}+a_{3}\sigma_{1}\sigma_{3}\right)=tr\left(a_{0}\sigma_{1}\delta_{ij}+a_{1}\sigma_{1}\sigma_{1}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies tr(\sigma_{1}\hat{X})=a_{1}tr\left(\sigma_{1}\sigma_{1}\right)=a_{1}tr(\delta_{11})=2a_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\ tr(\sigma_{1}\hat{X})=2a_{1}.
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $\sigma_{2}\hat{X}$
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\sigma_{2}\hat{X})=tr\left(a_{0}\sigma_{2}\delta_{ij}+a_{2}\sigma_{2}\sigma_{2}\right)=a_{2}tr(\sigma_{2}\sigma_{2})=a_{2}tr(\delta_{22})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies tr(\sigma_{2}\hat{X})=2a_{2}.
+\]
+
+\end_inset
+
+Mientras que para el 
+\begin_inset Formula $\sigma_{3}\hat{X}$
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\sigma_{3}\hat{X})=tr\left(a_{0}\sigma_{3}\delta_{ij}+a_{3}\sigma_{3}\sigma_{3}\right)=a_{0}tr(\sigma_{3})+a_{3}tr(\sigma_{33})=2a_{3}tr(\delta_{33}),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies tr(\sigma_{3}\hat{X})=2a_{3}tr(\delta_{33}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Por lo tanto, tenemos el siguiente resultado: si 
+\begin_inset Formula $k=1,2,3$
+\end_inset
+
+, entonces
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+tr(\sigma_{k}\hat{X})=2a_{k}.
+\]
+
+\end_inset
+
+Para 
+\series bold
+b)
+\series default
+, fijemonos en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:03"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Es claro que 
+\begin_inset Formula 
+\[
+\hat{X}_{11}+\hat{X}_{22}=a_{0}+a_{3}+a_{0}-a_{3}=2a_{0}\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\therefore\ a_{0}=\frac{1}{2}\left(\hat{X}_{11}+\hat{X}_{22}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Para 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\hat{X}_{12}+\hat{X}_{21}=a_{1}-ia_{2}+a_{1}+ia_{2}=2a_{1}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\ a_{1}=\frac{1}{2}\left(\hat{X}_{12}+\hat{X}_{21}\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Por otra parte, para 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+-\hat{X}_{12}+\hat{X}_{21}=-a_{1}+ia_{2}-a_{1}+ia_{2}=2ia_{2}\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\therefore\ a_{2}=\frac{1}{2i}\left(\hat{X}_{21}-\hat{X}_{12}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Finalmente, para 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Formula 
+\[
+\hat{X}_{11}-\hat{X}_{22}=a_{0}+a_{3}-a_{0}+a_{3}=2a_{3}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\ a_{3}=\frac{1}{2}\left(\hat{X}_{11}-\hat{X}_{22}\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Construya 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+\mathbf{S}\cdot\hat{\mathbf{n}}|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle=\frac{\hbar}{2}|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\hat{n}$
+\end_inset
+
+ está dada en coordenadas esféricas, con 
+\begin_inset Formula $\beta$
+\end_inset
+
+ el ángulo polar y 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ el ángulo azimutal.
+ Exprese su respuesta como una combinación lineal de 
+\begin_inset Formula $|+\rangle$
+\end_inset
+
+ y 
+\begin_inset Formula $|-\rangle$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Siendo 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ el ángulo azimutal y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ el ángulo polar, podemos escribir al vector 
+\begin_inset Formula $\mathbf{\hat{n}}$
+\end_inset
+
+ de la siguiente manera
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{\hat{n}}=\sin(\alpha)\cos(\alpha)\hat{\mathbf{x}}+\sin(\alpha)\sin(\beta)\hat{\mathbf{y}}+\cos(\alpha)\mathbf{\hat{z}}\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con lo cual, tenemos que el producto 
+\begin_inset Formula $\mathbf{S}\cdot\mathbf{\hat{n}}$
+\end_inset
+
+ esta dado por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{S\cdot\hat{n}}=S_{x}\sin(\alpha)\cos(\alpha)+S_{y}\sin(\alpha)\sin(\beta)+S_{z}\cos(\alpha)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, la representación matricial de los operadores 
+\begin_inset Formula $S_{x},S_{y},S_{z}$
+\end_inset
+
+ en la base de 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ esta dada por 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{2}\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right),\ S_{y}=\frac{\hbar}{2}\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)\ \text{y}\ S_{z}=\frac{\hbar}{2}\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+de manera que el producto 
+\begin_inset Formula $\mathbf{S\cdot\hat{n}}$
+\end_inset
+
+, en notación matricial, queda escrito como 
+\begin_inset Formula 
+\[
+\mathbf{S\cdot\hat{n}}=\frac{\hbar}{2}\sin(\beta)\cos(\alpha)\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)+\frac{\hbar}{2}\sin(\beta)\sin(\alpha)\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)+\frac{\hbar}{2}\cos(\beta)\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{S\cdot\hat{n}}=\frac{\hbar}{2}\left(\begin{array}{cc}
+\cos(\beta) & \sin(\beta)\cos(\alpha)-i\sin(\beta)\sin(\alpha)\\
+\sin(\beta)\cos(\alpha)+i\sin(\beta)\sin(\alpha) & -\cos(\beta)
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+o bien 
+\begin_inset Formula 
+\[
+\mathbf{S\cdot\hat{n}}=\frac{\hbar}{2}\left(\begin{array}{cc}
+\cos(\beta) & \sin(\beta)\exp(-i\alpha)\\
+\sin(\beta)\exp(i\alpha) & -\cos(\beta)
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, debemos construir 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+ de tal manera que cumpla con 
+\begin_inset Formula 
+\begin{equation}
+\frac{\hbar}{2}\left(\begin{array}{cc}
+\cos(\beta) & \sin(\beta)\exp(-i\alpha)\\
+\sin(\beta)\exp(i\alpha) & -\cos(\beta)
+\end{array}\right)|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle=\frac{\hbar}{2}|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle,\label{eq:08}
+\end{equation}
+
+\end_inset
+
+pero sabemos que podemos expresar al ket 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+ como una combinación lineal de los ket base 
+\begin_inset Formula $|+\rangle$
+\end_inset
+
+ y 
+\begin_inset Formula $|-\rangle$
+\end_inset
+
+.
+ De manera que, sea 
+\begin_inset Formula 
+\[
+|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle=\mathcal{C}_{+}|+\rangle+\mathcal{C}_{-}|-\rangle\text{,}
+\]
+
+\end_inset
+
+o bien, en notación matricial como 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle=\left(\begin{array}{c}
+\mathcal{C}_{+}\\
+\mathcal{C}_{-}
+\end{array}\right)$
+\end_inset
+
+, con lo cual, la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:08"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ queda escrita como 
+\begin_inset Formula 
+\[
+\frac{\hbar}{2}\left(\begin{array}{cc}
+\cos(\beta) & \sin(\beta)\exp(-i\alpha)\\
+\sin(\beta)\exp(i\alpha) & -\cos(\beta)
+\end{array}\right)\left(\begin{array}{c}
+\mathcal{C}_{+}\\
+\mathcal{C}_{-}
+\end{array}\right)=\frac{\hbar}{2}\left(\begin{array}{c}
+\mathcal{C}_{+}\\
+\mathcal{C}_{-}
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+o bien 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\mathcal{C}_{+}\cos(\beta)+\mathcal{C}_{-}\sin(\beta)\exp(-i\alpha)\\
+\mathcal{C}_{+}\sin(\beta)\exp(i\alpha)-\mathcal{C}_{-}\cos(\beta)
+\end{array}\right)=\left(\begin{array}{c}
+\mathcal{C}_{+}\\
+\mathcal{C}_{-}
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+lo cual nos conduce a las siguientes ecuaciones 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{C}_{+}\cos(\beta)+\mathcal{C}_{-}\sin(\beta)\exp(-i\alpha)=\mathcal{C}_{+},\label{eq:09}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathcal{C}_{+}\sin(\beta)\exp(i\alpha)-\mathcal{C}_{-}\cos(\beta)=\mathcal{C}_{-}.\label{eq:10}
+\end{equation}
+
+\end_inset
+
+Antes de continuar, recordemos que el ket 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+ debe estar normalizado, lo cual se traduce en 
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \langle+;\mathbf{S\cdot\hat{n}}|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle\right\Vert =\mathcal{C}_{+}^{2}+\mathcal{C}_{-}^{2}=1\text{.}\label{eq:11}
+\end{equation}
+
+\end_inset
+
+Ahora bien, manipulemos un poco la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:09"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\mathcal{C}_{+}\cos(\beta)+\mathcal{C}_{-}\sin(\beta)\exp(-i\alpha)=\mathcal{C}_{+}\implies\mathcal{C}_{+}\left(1-\cos(\beta)\right)=\mathcal{C}_{-}\sin(\beta)\exp(-i\alpha)\text{,}
+\]
+
+\end_inset
+
+recordemos que en general 
+\begin_inset Formula $\mathcal{C}_{+}\text{,}\mathcal{C}_{-}\in\mathbb{C}$
+\end_inset
+
+, de manera que multiplicando cada uno por su respectivo complejo conjugado,
+ tenemos 
+\begin_inset Formula 
+\[
+\mathcal{C}_{+}^{2}\left(1-\cos(\beta)\right)^{2}=\mathcal{C}_{-}^{2}\sin^{2}(\beta).
+\]
+
+\end_inset
+
+Ahora bien, usando la identidad 
+\begin_inset Formula $\sin^{2}(\beta/2)=1/2\left(1-\cos(\beta)\right)$
+\end_inset
+
+ y la relación 
+\begin_inset Formula $\mathcal{C}_{-}^{2}=1-\mathcal{C}_{+}^{2}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\begin{equation}
+4\mathcal{C}_{+}^{2}\sin^{4}(\beta/2)=\left(1-\mathcal{C}_{+}^{2}\right)\sin^{2}(\beta)\text{.}\label{eq:12}
+\end{equation}
+
+\end_inset
+
+Ahora usemos la siguiente identidad 
+\begin_inset Formula $\sin(\theta)\cos(\phi)=1/2(\sin(\theta+\phi)+\sin(\theta-\phi))$
+\end_inset
+
+ con 
+\begin_inset Formula $\theta=\beta/2$
+\end_inset
+
+ y 
+\begin_inset Formula $\phi=\beta/2$
+\end_inset
+
+, teniendo así 
+\begin_inset Formula 
+\[
+\sin\left(\frac{\beta}{2}\right)\cos\left(\frac{\beta}{2}\right)=\frac{1}{2}\left(\sin\left(\beta\right)+\sin(0)\right)\implies\sin\left(\beta\right)=2\sin\left(\frac{\beta}{2}\right)\cos\left(\frac{\beta}{2}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sin^{2}\left(\beta\right)=4\sin^{2}\left(\frac{\beta}{2}\right)\cos^{2}\left(\frac{\beta}{2}\right)\text{,}
+\]
+
+\end_inset
+
+sustituyendo el resultado anterior en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+4\mathcal{C}_{+}^{2}\sin^{4}(\beta/2)=4\left(1-\mathcal{C}_{+}^{2}\right)\sin^{2}\left(\frac{\beta}{2}\right)\cos^{2}\left(\frac{\beta}{2}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{C}_{+}^{2}\sin^{2}\left(\frac{\beta}{2}\right)=\left(1-\mathcal{C}_{+}^{2}\right)\cos\left(\frac{\beta}{2}\right)\implies\mathcal{C}_{+}^{2}\sin^{2}\left(\frac{\beta}{2}\right)+\mathcal{C}_{+}^{2}\cos^{2}\left(\frac{\beta}{2}\right)=\cos^{2}\left(\frac{\beta}{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\ \mathcal{C}_{+}^{2}\left(\sin^{2}\left(\frac{\beta}{2}\right)+\cos^{2}\left(\frac{\beta}{2}\right)\right)=\cos^{2}\left(\frac{\beta}{2}\right)\implies\mathcal{C}_{+}^{2}=\cos^{2}\left(\frac{\beta}{2}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\ \mathcal{C}_{+}=\cos\left(\frac{\beta}{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, para la constante 
+\begin_inset Formula $\mathcal{C}_{-}$
+\end_inset
+
+, nuevamente, fijemonos en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:09"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, de la cual tenemos 
+\begin_inset Formula 
+\[
+\mathcal{C}_{-}\sin(\beta)\exp(-i\alpha)=\mathcal{C}_{+}\left(1-\cos\left(\beta\right)\right).
+\]
+
+\end_inset
+
+Y usando las relaciónes antes deducidas 
+\begin_inset Formula $\sin^{2}\left(\beta/2\right)=1/2\left(1-\cos(\beta)\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\sin\left(\beta\right)=2\sin(\beta/2)\cos(\beta/2)$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+2\mathcal{C}_{-}\sin(\beta/2)\cos(\beta/2)\exp(-i\alpha)=2\mathcal{C}_{+}\sin^{2}\left(\beta/2\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{C}_{-}\cos(\beta/2)\exp(-i\alpha)=\mathcal{C}_{+}\sin\left(\beta/2\right)\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $\mathcal{C}_{+}=\cos\left(\frac{\beta}{2}\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\mathcal{C}_{-}\cos(\beta/2)\exp(-i\alpha)=\cos\left(\frac{\beta}{2}\right)\sin\left(\beta/2\right),\implies\mathcal{C}_{-}\exp(-i\alpha)=\sin\left(\beta/2\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\ \mathcal{C}_{-}=\sin\left(\frac{\beta}{2}\right)\exp(i\alpha)\label{eq:13}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, el ket 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+ expresado en los kets base 
+\begin_inset Formula $\left\{ |+\rangle,|-\rangle\right\} $
+\end_inset
+
+ esta dado por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle=\cos\left(\frac{\beta}{2}\right)|+\rangle+\sin\left(\frac{\beta}{2}\right)\exp(i\alpha)|-\rangle\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un sistema de spín 1/2 es sabido que está en un autoestado 
+\begin_inset Formula $\mathbf{S}\cdot\mathbf{\hat{n}}$
+\end_inset
+
+ con autovalor de 
+\begin_inset Formula $\frac{\hbar}{2}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\hat{n}$
+\end_inset
+
+ es un vector unitario que yace en el plano-
+\begin_inset Formula $xz$
+\end_inset
+
+ que genera un ángulo 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ con el eje-
+\begin_inset Formula $z$
+\end_inset
+
+ positivo.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Suponga que medimos 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+.
+ ¿Cuál es la probabilidad de obtener 
+\begin_inset Formula $\frac{\hbar}{2}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Evalua la dispersión en 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+.
+ Esto es 
+\begin_inset Formula 
+\[
+\langle\left(S_{x}-\langle S_{x}\rangle\right)^{2}\rangle.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Usemos la solución del problema anterior con los siguientes cambios, 
+\begin_inset Formula $\beta\rightarrow\gamma$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, que son los datos dados aquí.
+ Entonces, el vector de estado para este problema, expresado en la base
+ 
+\begin_inset Formula $\left\{ |+\rangle,|-\rangle\right\} $
+\end_inset
+
+ está escrito como 
+\begin_inset Formula 
+\[
+|\mathbf{S\cdot\hat{n}};+\rangle=\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\text{.}
+\]
+
+\end_inset
+
+Ahora bien, sabemos que dado un ket arbitrario 
+\begin_inset Formula $\text{\ensuremath{|\alpha\rangle}}$
+\end_inset
+
+, la probabilidad de que colapse en algún ket base 
+\begin_inset Formula $|a\rangle$
+\end_inset
+
+ está dada por 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(|a\rangle\right)=\left|\langle a|\alpha\rangle\right|^{2}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En nuestro caso, la probabilidad de que al medir 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ obtengamos 
+\begin_inset Formula $\frac{\hbar}{2}$
+\end_inset
+
+ es la probabilidad de que el ket 
+\begin_inset Formula $|\mathbf{S\cdot\hat{n}};+\rangle$
+\end_inset
+
+ colapse en 
+\begin_inset Formula $\left|S_{x};+\right\rangle $
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(S_{x};+\right)=\left|\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle \right|^{2}\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos que el ket 
+\begin_inset Formula $|S_{x};+\rangle$
+\end_inset
+
+ esta dado por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|S_{x};+\rangle=\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\text{.}
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+\langle S_{x};+|=\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\text{,}
+\]
+
+\end_inset
+
+con lo cual tenemos lo siguiente
+\begin_inset Formula 
+\[
+\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle =\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle =\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)\langle+|+\rangle+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\langle+|-\rangle\text{+\ensuremath{\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)\langle-|+\rangle+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\langle-|-\rangle}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora bien, usando las propiedades de ortogonalidad de los kets base, tenemos
+ que 
+\begin_inset Formula 
+\[
+\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle =\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\text{.}
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(S_{x};+\right)=\left|\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\right|^{2}=\frac{1}{2}\left(\cos^{2}\left(\frac{\gamma}{2}\right)+\sin^{2}\left(\frac{\gamma}{2}\right)+2\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(S_{x};+\right)=\frac{1}{2}\left(1+2\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\right)\text{,}
+\]
+
+\end_inset
+
+pero, usando la identidad 
+\begin_inset Formula $2\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)=\sin\left(\gamma\right)$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(S_{x};+\right)=\frac{1}{2}\left(1+\sin\left(\gamma\right)\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora bien, para 
+\series bold
+b)
+\series default
+ tenemos que el operador 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ está dado por 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}$
+\end_inset
+
+ está dado por 
+\begin_inset Formula 
+\[
+\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\left\langle \mathbf{S\cdot\hat{n}};+\right|S_{x}\left|\mathbf{S\cdot\hat{n}};+\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\text{,}
+\]
+
+\end_inset
+
+desarrollando el producto del segundo parentesis por el tercero, tenemos
+\begin_inset Formula 
+\[
+\left(\left[2\right]\right)\left(\left[3\right]\right)=\left(\cos\left(\frac{\gamma}{2}\right)|+\rangle\langle-|+\rangle+\cos\left(\frac{\gamma}{2}\right)|-\rangle\langle+|+\rangle+\sin\left(\frac{\gamma}{2}\right)|+\rangle\langle-|-\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\langle+|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\left[2\right]\right)\left(\left[3\right]\right)=\left(\cos\left(\frac{\gamma}{2}\right)|-\rangle+\sin\left(\frac{\gamma}{2}\right)|+\rangle\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En donde nuevamente, hemos hecho uso de las propiedades de ortogonalidad.
+ De manera que 
+\begin_inset Formula 
+\[
+\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(\cos\left(\frac{\gamma}{2}\right)|-\rangle+\sin\left(\frac{\gamma}{2}\right)|+\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(\cos^{2}\left(\frac{\gamma}{2}\right)\langle+|-\rangle+\cos\left(\frac{\gamma}{2}\right)\sin\left(\frac{\gamma}{2}\right)\langle+|+\rangle+\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\langle-|-\rangle+\sin^{2}\left(\frac{\gamma}{2}\right)\langle-|+\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(2\cos\left(\frac{\gamma}{2}\right)\sin\left(\frac{\gamma}{2}\right)\right)\implies\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\sin\left(\gamma\right)\text{.}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula 
+\[
+\left\langle S_{x}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}^{2}=\frac{\hbar^{2}}{4}\sin^{2}\left(\gamma\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, para 
+\begin_inset Formula $S_{x}^{2}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+S_{x}^{2}=S_{x}S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}^{2}=\frac{\hbar^{2}}{4}\left[\left(\mathbf{|+\rangle\langle-|+\rangle\langle-|}\right)+\left(|+\rangle\langle-|-\rangle\langle+|\right)+\left(|-\rangle\langle+|+\rangle\langle-|\right)+\left(|-\rangle\langle+|-\rangle\langle+|\right)\right].
+\]
+
+\end_inset
+
+De la expresión anterior, el primer y ultimo término son cero, debido a
+ la ortogonalidad de los estados, de manera que 
+\begin_inset Formula 
+\[
+S_{x}^{2}=\frac{\hbar^{2}}{4}\left(\left|+\right\rangle \left\langle +\right|+\left|-\right\rangle \left\langle -\right|\right)\text{.}
+\]
+
+\end_inset
+
+Por lo tanto, el valor esperado para el operador anterior en el estado de
+ interes esta dado por 
+\begin_inset Formula 
+\[
+\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(\left|+\right\rangle \left\langle +\right|+\left|-\right\rangle \left\langle -\right|\right)\left(\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+desarrollando la expresión del producto del segundo con el tercer parentesis,
+ tenemos 
+\begin_inset Formula 
+\[
+\left(\left[2\right]\right)\left(\left[3\right]\right)=\cos\left(\frac{\gamma}{2}\right)\left|+\right\rangle \left\langle +\right|+\rangle+\sin\left(\frac{\gamma}{2}\right)\left|+\right\rangle \left\langle +\right|-\rangle+\cos\left(\frac{\gamma}{2}\right)\left|-\right\rangle \left\langle -\right|+\rangle+\sin\left(\frac{\gamma}{2}\right)\left|-\right\rangle \left\langle -\right|-\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\implies\left(\left[2\right]\right)\left(\left[3\right]\right)=\cos\left(\frac{\gamma}{2}\right)\left|+\right\rangle +\sin\left(\frac{\gamma}{2}\right)\left|-\right\rangle \text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(\cos\left(\frac{\gamma}{2}\right)\left|+\right\rangle +\sin\left(\frac{\gamma}{2}\right)\left|-\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos^{2}\left(\frac{\gamma}{2}\right)\langle+|+\rangle+\cos\left(\frac{\gamma}{2}\right)\sin\left(\frac{\gamma}{2}\right)\langle+|-\rangle+\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\langle-|+\rangle+\sin^{2}\left(\frac{\gamma}{2}\right)\langle-|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos^{2}\left(\frac{\gamma}{2}\right)+\sin^{2}\left(\frac{\gamma}{2}\right)\right)\text{,}\implies\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{2}\text{.}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula 
+\[
+\langle\left(S_{x}-\langle S_{x}\rangle\right)^{2}\rangle_{\mathbf{S\cdot\hat{n}}}=\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{\mathbf{S\cdot\hat{n}}}=\frac{\hbar^{2}}{4}-\frac{\hbar^{2}}{4}\sin^{2}\left(\gamma\right)=\frac{\hbar^{2}}{4}\left(1-\sin^{2}\left(\gamma\right)\right)\text{,}
+\]
+
+\end_inset
+
+o bien
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{\mathbf{S\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\cos^{2}\left(\gamma\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Dos observables 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ que no depeden explícitamente del tiempo se conocen por no conmutar 
+\begin_inset Formula 
+\[
+\left[A_{1},A_{2}\right]\neq0.
+\]
+
+\end_inset
+
+ Aún así, sabemos que conmutan con el Hamiltoniano: 
+\begin_inset Formula $\left[A_{1},H\right]=0$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[A_{2},H\right]=0$
+\end_inset
+
+.
+ Pruebe que las energías de los autoestados están, en general, degeneradas.
+ ¿Existen excepciones? Piense en el problema de la fuerza central 
+\begin_inset Formula $H=\frac{\mathbf{p}^{2}}{2m}+V(r)$
+\end_inset
+
+, con 
+\begin_inset Formula $A_{1}\rightarrow L_{z}$
+\end_inset
+
+ y 
+\begin_inset Formula $A_{2}\rightarrow L_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Otra forma de escribir la proposición anterior es la siguiente: 
+\series bold
+sean 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ dos observables que no dependen del tiempo y se cumple que 
+\begin_inset Formula $\left[A_{1},H\right]=0$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[A_{2},H\right]=0$
+\end_inset
+
+, pero 
+\begin_inset Formula $\left[A_{1},A_{2}\right]\neq0$
+\end_inset
+
+, entonces los eigenkets de 
+\begin_inset Formula $H$
+\end_inset
+
+ están degenerados
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+La demostración de la proposición anterior la haremos por contradicción.
+ 
+\end_layout
+
+\begin_layout Standard
+En efecto, supongamos que se cumplen las premisas de la proposición anterior
+ y los eigenkets de 
+\begin_inset Formula $H$
+\end_inset
+
+ no están degenerados.
+ Esto es, el conjunto de eigenkets
+\begin_inset Formula $\left\{ \left|e_{i}\right\rangle \right\} $
+\end_inset
+
+ que cumple con 
+\begin_inset Formula $H\left|e_{i}\right\rangle =E_{i}\left|e_{i}\right\rangle $
+\end_inset
+
+ 
+\begin_inset Formula $\forall i$
+\end_inset
+
+, son tales manera que para los eigenvalores se cumple que 
+\begin_inset Formula $E_{i}\neq E_{j}\ \forall i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora bien, consideremos al ket 
+\begin_inset Formula $\left|e_{1}\right\rangle $
+\end_inset
+
+, sabemos que cumple con 
+\begin_inset Formula 
+\[
+H\left|e_{i}\right\rangle =E_{1}\left|e_{i}\right\rangle \text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+\left[A_{1},H\right]=0\implies A_{1}H=HA_{1}\implies A_{1}H\left|e_{1}\right\rangle =HA_{1}\left|e_{1}\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies HA_{1}\left|e_{1}\right\rangle =A_{1}H\left|e_{1}\right\rangle =A_{1}E_{1}\left|e_{1}\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies HA_{1}\left|e_{1}\right\rangle =E_{1}A_{1}\left|e_{1}\right\rangle \text{,}
+\]
+
+\end_inset
+
+de manera que el ket 
+\begin_inset Formula $A_{1}\left|e_{1}\right\rangle $
+\end_inset
+
+ es eigenket de 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Por otra parte, dado que 
+\begin_inset Formula $H$
+\end_inset
+
+ y 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+son compatibles, esto implica que si 
+\begin_inset Formula $\left|e_{1}\right\rangle $
+\end_inset
+
+ es eigenket de 
+\begin_inset Formula $H$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left|e_{1}\right\rangle $
+\end_inset
+
+ también es eigenket de 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+.
+ Esto es, existe un 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+A_{1}\left|e_{1}\right\rangle =\alpha_{1}\left|e_{1}\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera análoga, como 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ es compatible con 
+\begin_inset Formula $H$
+\end_inset
+
+, entonces existe un 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+A_{2}\left|e_{1}\right\rangle =\alpha_{2}\left|e_{1}\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En donde 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ son escalares dentro del campo en el cual estan definidos los kets del
+ espacio vectorial en cuestion.
+ Ahora bien, calculemos lo siguiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{1}A_{2}\left|e_{1}\right\rangle =A_{1}\alpha_{2}\left|e_{1}\right\rangle =\alpha_{2}A_{1}\left|e_{1}\right\rangle =\alpha_{1}\alpha_{2}\left|e_{1}\right\rangle ,
+\]
+
+\end_inset
+
+y por otra parte, tenemos 
+\begin_inset Formula 
+\[
+A_{2}A_{1}\left|e_{1}\right\rangle =A_{2}\alpha_{1}\left|e_{1}\right\rangle =\alpha_{1}A_{2}\left|e_{1}\right\rangle =\alpha_{1}\alpha_{2}\left|e_{1}\right\rangle \text{.}
+\]
+
+\end_inset
+
+Por lo tanto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{1}A_{2}\left|e_{1}\right\rangle =A_{2}A_{1}\left|e_{1}\right\rangle \implies A_{1}A_{2}=A_{2}A_{1}\text{.}
+\]
+
+\end_inset
+
+Lo cual es una contradicción, ya que habiamos supuesto que 
+\begin_inset Formula $\left[A_{1},A_{2}\right]\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+En conclusión tenemos que los eigenkets de 
+\begin_inset Formula $H$
+\end_inset
+
+ están degenerados.
+ 
+\end_layout
+
+\begin_layout Standard
+Por otra parte, si consideramos el problema de fuerza central dado por el
+ Hamiltoniano 
+\begin_inset Formula 
+\[
+H=\frac{\mathbf{p}^{2}}{2m}+V(r)\text{,}
+\]
+
+\end_inset
+
+sabemos que éste conmuta con los operadores de momento angular 
+\begin_inset Formula $L_{x},L_{y}$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{z}$
+\end_inset
+
+, sin embargo, éstos no conmutan entre sí.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+a) Calcula 
+\begin_inset Formula 
+\[
+\langle(\Delta S_{x})^{2}\rangle=\langle S_{x}^{2}\rangle-\langle S_{x}\rangle^{2}
+\]
+
+\end_inset
+
+ donde el valor esperado se toma para el estado 
+\begin_inset Formula $S_{z}+$
+\end_inset
+
+.
+ Usando tu resultado revisa la relación de incertidumbre generalizada 
+\begin_inset Formula 
+\[
+\langle\left(\Delta A\right)^{2}\rangle\langle\left(\Delta B\right)^{2}\rangle\geq\frac{1}{4}\left|\langle\left[A,B\right]\rangle\right|^{2}
+\]
+
+\end_inset
+
+ con 
+\begin_inset Formula $A\rightarrow S_{x}$
+\end_inset
+
+y 
+\begin_inset Formula $B\rightarrow S_{y}$
+\end_inset
+
+.
+ b) Revisa la relación de incertidumbre con 
+\begin_inset Formula $A\rightarrow S_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $B\rightarrow S_{y}$
+\end_inset
+
+ para el estado 
+\begin_inset Formula $S_{x}+$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{x}\text{,}S_{y}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+, en términos de los kets base 
+\begin_inset Formula $\left\{ |+\rangle,|-\rangle\right\} $
+\end_inset
+
+, están escritos como 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{y}=\frac{\hbar}{2}\left(-i|+\rangle\langle-|+i|-\rangle\langle+|\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{z}=\frac{\hbar}{2}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que el valor esperado de 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{y}$
+\end_inset
+
+ para el estado 
+\begin_inset Formula $S_{z}+$
+\end_inset
+
+, el cual escribiremos como
+\begin_inset Formula $|+\rangle$
+\end_inset
+
+, viene dado por 
+\begin_inset Formula 
+\[
+\left\langle S_{x}\right\rangle _{+}=\left\langle +\right|S_{x}\left|+\right\rangle =\left\langle +\right|\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left|+\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}\right\rangle _{+}=\frac{\hbar}{2}\left(\langle+|+\rangle\langle-|+\rangle+\langle+|-\rangle\langle+|+\rangle\right)\text{,}
+\]
+
+\end_inset
+
+pero sabemos que estos kets cumplen con 
+\begin_inset Formula $\langle+|+\rangle=1$
+\end_inset
+
+, 
+\begin_inset Formula $\langle-|-\rangle=1$
+\end_inset
+
+, y 
+\begin_inset Formula $\langle+|-\rangle=\langle-|+\rangle=0\text{.}$
+\end_inset
+
+ Con lo cual, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\left\langle S_{x}\right\rangle =0\implies\left\langle S_{x}\right\rangle ^{2}=0\text{.}\label{eq:14}
+\end{equation}
+
+\end_inset
+
+Por otra parte, para 
+\begin_inset Formula $S_{x}^{2}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+S_{x}^{2}=S_{x}S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}^{2}=\frac{\hbar^{2}}{4}\left[\left(\mathbf{|+\rangle\langle-|+\rangle\langle-|}\right)+\left(|+\rangle\langle-|-\rangle\langle+|\right)+\left(|-\rangle\langle+|+\rangle\langle-|\right)+\left(|-\rangle\langle+|-\rangle\langle+|\right)\right].
+\]
+
+\end_inset
+
+De la expresión anterior, el primer y ultimo término son cero, debido a
+ la ortogonalidad de los estados, de manera que 
+\begin_inset Formula 
+\[
+S_{x}^{2}=\frac{\hbar^{2}}{4}\left(\left|+\right\rangle \left\langle +\right|+\left|-\right\rangle \left\langle -\right|\right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, calculemos el valor esperado de la expresión anterior para el
+ estado 
+\begin_inset Formula $|+\rangle$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle +\right|S_{x}^{2}\left|+\right\rangle =\frac{\hbar^{2}}{4}\left(\left\langle +\right|\left.+\right\rangle \left\langle +\right|\left.+\right\rangle +\left\langle +\right.\left|-\right\rangle \left\langle -\right|\left.+\right\rangle \right)=\frac{\hbar^{2}}{4}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\ \left\langle S_{x}^{2}\right\rangle _{+}=\frac{\hbar^{2}}{4}\text{.}
+\]
+
+\end_inset
+
+Con lo cual 
+\begin_inset Formula 
+\begin{equation}
+\langle(\Delta S_{x})^{2}\rangle_{+}=\frac{\hbar^{2}}{4}-0\text{,}\implies\langle(\Delta S_{x})^{2}\rangle_{+}=\frac{\hbar^{2}}{4}\text{.}\label{eq:15}
+\end{equation}
+
+\end_inset
+
+Ahora bien, para revisar el resultado 
+\begin_inset Formula 
+\[
+\langle\left(\Delta S_{x}\right)^{2}\rangle\langle\left(\Delta S_{y}\right)^{2}\rangle\geq\frac{1}{4}\left|\langle\left[S_{x},S_{y}\right]\rangle\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabemos queen general, se cumple la siguiente relación 
+\begin_inset Formula 
+\[
+\left[S_{i},S_{j}\right]=i\epsilon_{ijk}S_{k}\text{,}
+\]
+
+\end_inset
+
+de manera que, en nuestro caso, tenemos 
+\begin_inset Formula 
+\[
+\left[S_{x},S_{y}\right]=iS_{z}\text{.}
+\]
+
+\end_inset
+
+Para calcular 
+\begin_inset Formula $\left(\Delta S_{y}\right)^{2}$
+\end_inset
+
+ procederemos de manera análoga que para 
+\begin_inset Formula $\left(\Delta S_{x}\right)^{2}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\left\langle +\right|S_{y}\left|+\right\rangle =\frac{\hbar}{2}\left(-i\left\langle +\right||+\rangle\langle-|\left.+\right\rangle +i\left\langle +\right||-\rangle\langle+|\left.+\right\rangle \right)\implies\left\langle S_{y}\right\rangle _{+}=0\text{.}
+\]
+
+\end_inset
+
+En donde hemos usado nuevamente las propiedades de ortogonalidad de los
+ kets base.
+ Ahora bien, construyamos 
+\begin_inset Formula $S_{y}^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{y}^{2}=S_{y}S_{y}=\frac{\hbar}{2}\left(-i|+\rangle\langle-|+i|-\rangle\langle+|\right)\frac{\hbar}{2}\left(-i|+\rangle\langle-|+i|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{y}^{2}=\frac{\hbar^{2}}{4}\left(-|+\rangle\langle-|+\rangle\langle-|+|+\rangle\langle-|-\rangle\langle+|+|-\rangle\langle+||+\rangle\langle-|-|-\rangle\langle+||-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{y}^{2}=\frac{\hbar^{2}}{4}\left(|+\rangle\langle+|+|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+en donde nuevamente se ha hecho uso de las propiedades de ortogonalidad
+ de los kets base.
+ De manera que 
+\begin_inset Formula 
+\[
+\left\langle +\right|S_{y}^{2}\left|+\right\rangle =\frac{\hbar^{2}}{4}\left(\langle+|+\rangle\langle+|+\rangle+\langle+|-\rangle\langle-|+\rangle\right)\implies\left\langle S_{y}^{2}\right\rangle _{+}=\frac{\hbar^{2}}{4}\text{.}
+\]
+
+\end_inset
+
+Con lo cual 
+\begin_inset Formula 
+\begin{equation}
+\langle(\Delta S_{y})^{2}\rangle_{+}=\frac{\hbar^{2}}{4}-0\text{,}\implies\langle(\Delta S_{y})^{2}\rangle_{+}=\frac{\hbar^{2}}{4}\text{.}\label{eq:16}
+\end{equation}
+
+\end_inset
+
+Ahora bien, para 
+\begin_inset Formula $\langle\left[S_{x},S_{y}\right]\rangle_{+}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula 
+\[
+\langle\left[S_{x},S_{y}\right]\rangle_{+}=i\langle S_{z}\rangle_{+}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle S_{z}\rangle_{+}=\frac{\hbar}{2}\left(\langle+|+\rangle\langle+|+\rangle-\langle+|-\rangle\langle-|+\rangle\right)=\frac{\hbar}{2}\text{.}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies i\langle S_{z}\rangle_{+}=i\frac{\hbar}{2}\implies\left|\langle\left[S_{x},S_{y}\right]\rangle\right|=\frac{\hbar^{2}}{4}\text{.}\label{eq:17}
+\end{equation}
+
+\end_inset
+
+Ahora bien, juntando los resultados dados en las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\frac{\hbar^{2}}{16}=\frac{\hbar^{2}}{4}\frac{\hbar^{2}}{4}\geq\frac{1}{4}\frac{\hbar^{2}}{4}=\frac{1}{4}\left(\frac{\hbar}{2}\right)^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle\left(\Delta S_{x}\right)^{2}\rangle\langle\left(\Delta S_{y}\right)^{2}\rangle\geq\frac{1}{4}\left|\langle\left[S_{x},S_{y}\right]\rangle\right|^{2}\text{.}
+\]
+
+\end_inset
+
+Para 
+\series bold
+b)
+\series default
+ basicamente tenemos que hacer el mismo procedimiento, pero ahora para un
+ estado diferente, para el estado 
+\begin_inset Formula $S_{x}+$
+\end_inset
+
+, el cual, en términos de la base 
+\begin_inset Formula $\left\{ |+\rangle,|-\rangle\right\} $
+\end_inset
+
+ esta dado por 
+\begin_inset Formula 
+\begin{equation}
+|S_{x};+\rangle=\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\text{.}\label{eq:18}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que 
+\begin_inset Formula 
+\[
+\langle S_{x};+|S_{x}|S_{x};+\rangle=\left\langle S_{x}\right\rangle _{x+}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}\right\rangle _{x+}=\frac{\hbar}{2}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+desarrollando el producto del segundo por el tercer parentesis, tenemos
+ lo siguiente
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}\right\rangle _{x+}=\frac{\hbar}{2}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\frac{1}{\sqrt{2}}|+\rangle\langle-|+\rangle+\frac{1}{\sqrt{2}}|+\rangle\langle-|-\rangle+\frac{1}{\sqrt{2}}|-\rangle\langle+|-\rangle+\frac{1}{\sqrt{2}}|-\rangle\langle+|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+simplificando y operando por la izquierda tenemos
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}\right\rangle _{x+}=\frac{\hbar}{2}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}\right\rangle _{x+}=\frac{\hbar}{4}\left(\langle+|+\rangle+\langle+|-\rangle+\langle-|+\rangle+\langle-|-\rangle\right)=\frac{\hbar}{4}2\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\ \left\langle S_{x}\right\rangle _{x+}^{2}=\frac{\hbar^{2}}{4}\text{.}
+\]
+
+\end_inset
+
+Ahora bien, para el valor esperado de 
+\begin_inset Formula $S_{x}^{2}$
+\end_inset
+
+ procedemos como de costumbre 
+\begin_inset Formula 
+\[
+\left\langle S_{x}^{2}\right\rangle _{x+}=\frac{\hbar^{2}}{4}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\left|+\right\rangle \left\langle +\right|+\left|-\right\rangle \left\langle -\right|\right)\left(\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}^{2}\right\rangle _{x+}=\frac{\hbar^{2}}{4}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\frac{1}{\sqrt{2}}\left|+\right\rangle \left\langle +\right|+\rangle+\frac{1}{\sqrt{2}}\left|-\right\rangle \left\langle -\right|+\rangle+\frac{1}{\sqrt{2}}\left|+\right\rangle \left\langle +\right|-\rangle+\frac{1}{\sqrt{2}}\left|-\right\rangle \left\langle -\right|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\left\langle S_{x}^{2}\right\rangle _{x+}=\frac{\hbar^{2}}{4}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\frac{1}{\sqrt{2}}\left|+\right\rangle +\frac{1}{\sqrt{2}}\left|-\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}^{2}\right\rangle _{x+}=\frac{\hbar^{2}}{4}\frac{1}{2}\left(\langle+|+\rangle+\langle-|+\rangle+\langle+|-\rangle+\langle-|-\rangle\right)=\frac{\hbar^{2}}{4}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\ \left\langle S_{x}^{2}\right\rangle _{x+}=\frac{\hbar^{2}}{4}\text{.}
+\]
+
+\end_inset
+
+Por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{x+}=\frac{\hbar^{2}}{4}-\frac{\hbar^{2}}{4}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que para que la igualdad se satisfaga, es necesario que 
+\begin_inset Formula $\left\langle S_{z}\right\rangle _{x+}=0$
+\end_inset
+
+.
+ En efecto, queremos verificar que 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{x+}\left\langle \left(\Delta S_{y}\right)^{2}\right\rangle _{x+}\geq\frac{1}{4}\left|\left\langle \left[S_{x},S_{y}\right]\right\rangle _{x+}\right|^{2}\text{,}
+\]
+
+\end_inset
+
+pero acabamos de ver que 
+\begin_inset Formula $\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{x+}=0$
+\end_inset
+
+, de manera que es necesario que 
+\begin_inset Formula $\left\langle \left[S_{x},S_{y}\right]\right\rangle _{x+}=0$
+\end_inset
+
+, pero sabemos que 
+\begin_inset Formula $\left\langle \left[S_{x},S_{y}\right]\right\rangle _{x+}=i\left\langle S_{z}\right\rangle _{x+}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Así que ahora calculemos 
+\begin_inset Formula $\left\langle S_{z}\right\rangle _{x+}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle S_{z}\right\rangle _{x+}=\frac{\hbar}{2}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{z}\right\rangle _{x+}=\frac{\hbar}{2}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\frac{1}{\sqrt{2}}|+\rangle\langle+|+\rangle-\frac{1}{\sqrt{2}}|-\rangle\langle-|+\rangle+\frac{1}{\sqrt{2}}|+\rangle\langle+|-\rangle-\frac{1}{\sqrt{2}}|-\rangle\langle-|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{z}\right\rangle _{x+}=\frac{\hbar}{2}\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\frac{1}{\sqrt{2}}|+\rangle-\frac{1}{\sqrt{2}}|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{z}\right\rangle _{x+}=\frac{\hbar}{4}\left(\langle+|+\rangle+\langle-|+\rangle-\langle+|-\rangle+\langle-|-\rangle\right)=\frac{\hbar}{4}\left(1-1\right)=0\text{.}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula 
+\[
+\left|\left\langle \left[S_{x},S_{y}\right]\right\rangle _{x+}\right|=0\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y en consecuencia, tenemos que se satisface la relación de incertidumbre.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

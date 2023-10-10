@@ -1,0 +1,1156 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea 6
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 12/05/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera una matriz 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ definida por 
+\begin_inset Formula 
+\[
+U=\frac{a_{0}+i\sigma\cdot\mathbf{a}}{a_{0}-i\sigma\cdot\mathbf{a}}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ es un número real y 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ es un vector tridimensional con componentes reales.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Demuestra que U es unitario y unimodular (
+\begin_inset Formula $\det U=\pm1$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+En general, una matriz unimodular unitaria 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ representa una rotación en 3 dimensiones.
+ Encuentra el eje y el ángulo de rotación apropiado para 
+\begin_inset Formula $U$
+\end_inset
+
+ en términos de 
+\begin_inset Formula $a_{0},a_{1},a_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $X=a_{0}+i\sigma\cdot\mathbf{a}$
+\end_inset
+
+ y 
+\begin_inset Formula $Y=X^{\dagger}=a_{0}-i\sigma\cdot\mathbf{a}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+U=XY^{-1}.
+\]
+
+\end_inset
+
+Para ver que es unitario, tenemos que probar que 
+\begin_inset Formula 
+\[
+UU^{\dagger}=1,
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+UU^{\dagger}=XY^{-1}\left(XY^{-1}\right)^{\dagger}=X\left(X^{\dagger}\right)^{-1}\left(X^{-1}\right)^{\dagger}X^{\dagger}=X\left(XX^{\dagger}\right)^{-1}X^{\dagger}.
+\]
+
+\end_inset
+
+Ahora bien, calculemos 
+\begin_inset Formula $a_{0}+i\sigma\cdot\mathbf{a}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\mathbf{a}=\left(a_{1},a_{2},a_{3}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma=\left(\sigma_{1},\sigma_{2},\sigma_{3}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+ son las matrices de Pauli, las cuales están dadas por 
+\begin_inset Formula 
+\[
+\sigma_{1}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right),\sigma_{2}=\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right),\sigma_{3}=\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right),
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+X=a_{0}+i\sigma\cdot\mathbf{a}=a_{0}\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right)+ia_{1}\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)+ia_{2}\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)+ia_{3}\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies X=\left(\begin{array}{cc}
+a_{0}+ia_{3} & a_{2}+ia_{1}\\
+-a_{2}+ia_{1} & a_{0}-ia_{3}
+\end{array}\right)\text{.}
+\end{equation}
+
+\end_inset
+
+Por otra parte tenemos que 
+\begin_inset Formula 
+\[
+Y=a_{0}-i\sigma\cdot\mathbf{a}=a_{0}\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right)-ia_{1}\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)-ia_{2}\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)-ia_{3}\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies Y=a_{0}\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right)-a_{1}\left(\begin{array}{cc}
+0 & i\\
+i & 0
+\end{array}\right)-a_{2}\left(\begin{array}{cc}
+0 & 1\\
+-1 & 0
+\end{array}\right)-a_{3}\left(\begin{array}{cc}
+i & 0\\
+0 & -i
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+o bien 
+\begin_inset Formula 
+\[
+Y=X^{\dagger}=\left(\begin{array}{cc}
+a_{0}-ia_{3} & -a_{2}-ia_{1}\\
+a_{2}-ia_{1} & a_{0}+ia_{3}
+\end{array}\right).
+\]
+
+\end_inset
+
+Para el producto 
+\begin_inset Formula $XX^{\dagger}$
+\end_inset
+
+, tenemos que
+\begin_inset Formula 
+\[
+XX^{\dagger}=\left(\begin{array}{cc}
+a_{0}+ia_{3} & a_{2}+ia_{1}\\
+-a_{2}+ia_{1} & a_{0}-ia_{3}
+\end{array}\right)\left(\begin{array}{cc}
+a_{0}-ia_{3} & -a_{2}-ia_{1}\\
+a_{2}-ia_{1} & a_{0}+ia_{3}
+\end{array}\right)=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2},
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\left(XX^{\dagger}\right)^{-1}=\frac{1}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}},
+\]
+
+\end_inset
+
+con lo cual, tenemos que 
+\begin_inset Formula 
+\[
+UU^{\dagger}=X\left(XX^{\dagger}\right)^{-1}X^{\dagger}=\frac{1}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}XX^{\dagger}=\frac{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}=1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore UU^{\dagger}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien, sabemos que una rotación general se puede escribir como 
+\begin_inset Formula 
+\begin{equation}
+\exp\left[-i\frac{\sigma\cdot\mathbf{n}}{2}\phi\right]=\left(\begin{array}{cc}
+\cos\left(\frac{\phi}{2}\right)-in_{z}\sin\left(\frac{\phi}{2}\right) & \left(-in_{x}-n_{y}\right)\sin\left(\frac{\phi}{2}\right)\\
+\left(-in_{x}+n_{y}\right)\sin\left(\frac{\phi}{2}\right) & \cos\left(\frac{\phi}{2}\right)+in_{z}\sin\left(\frac{\phi}{2}\right)
+\end{array}\right)\text{,}\label{eq:RotGen}
+\end{equation}
+
+\end_inset
+
+por otra parte, la representación mas general para matrice unimodulares
+ esta dada por 
+\begin_inset Formula 
+\[
+U=\left(\begin{array}{cc}
+a & b\\
+-b^{*} & a^{*}
+\end{array}\right)\ \ \ a,b\in\mathbb{C}.
+\]
+
+\end_inset
+
+Si comparamos las últimas dos expresiones, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\text{Re}\left(a\right)=\cos\left(\frac{\phi}{2}\right),\ \ \text{Im}\left(a\right)=n_{z}\sin\left(\frac{\phi}{2}\right),\label{eq:rel1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\text{Re}\left(b\right)=-n_{y}\sin\left(\frac{\phi}{2}\right),\ \ \text{Im}\left(b\right)=-n_{x}\sin\left(\frac{\phi}{2}\right).\label{eq:rel2}
+\end{equation}
+
+\end_inset
+
+En nuestro caso, tenemos que 
+\begin_inset Formula $U$
+\end_inset
+
+ esta dada por 
+\begin_inset Formula 
+\[
+U=X\left(X^{\dagger}\right)^{-1}=\frac{1}{\det\left(X^{\dagger}\right)}XX^{\star}\text{,}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+X^{\star}=\left(\begin{array}{cc}
+a_{0}+ia_{3} & a_{2}+ia_{1}\\
+-a_{2}+ia_{1} & a_{0}-ia_{3}
+\end{array}\right),\ \ \ \det\left(X^{\dagger}\right)=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+U=\frac{1}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}\left(\begin{array}{cc}
+a_{0}+ia_{3} & a_{2}+ia_{1}\\
+-a_{2}+ia_{1} & a_{0}-ia_{3}
+\end{array}\right)\left(\begin{array}{cc}
+a_{0}+ia_{3} & a_{2}+ia_{1}\\
+-a_{2}+ia_{1} & a_{0}-ia_{3}
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies U=\frac{1}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}\left(\begin{array}{cc}
+a_{0}+ia_{3} & a_{2}+ia_{1}\\
+-a_{2}+ia_{1} & a_{0}-ia_{3}
+\end{array}\right)^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies U=\frac{1}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}\left(\begin{array}{cc}
+a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}+2ia_{0}a_{3} & 2a_{0}a_{2}+2ia_{0}a_{1}\\
+-2a_{0}a_{2}+2ia_{0}a_{1} & a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}-2ia_{0}a_{3}
+\end{array}\right)=\frac{1}{\alpha^{2}}\left(\begin{array}{cc}
+a & b\\
+-b^{*} & a^{*}
+\end{array}\right).
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+\alpha^{2}=a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a=a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}+2ia_{0}a_{3}\ \ \ \&\ \ \ b=2a_{0}a_{2}+2ia_{0}a_{1},
+\]
+
+\end_inset
+
+de manera que si usamos las relacione dadas en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:rel1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:rel2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+\text{Re}\left(a\right)=\cos\left(\frac{\phi}{2}\right)\implies\frac{a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}}{\alpha^{2}}=\cos\left(\frac{\phi}{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\phi=2\cos^{-1}\left(\frac{a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}}{\alpha^{2}}\right).
+\]
+
+\end_inset
+
+Por otra parte 
+\begin_inset Formula $\sin^{2}\phi+\cos^{2}\phi=1$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+\sin\left(\frac{\phi}{2}\right)=\sqrt{1-\cos^{2}\left(\frac{\phi}{2}\right)}=\sqrt{1-\frac{a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}}{\alpha^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sin\left(\frac{\phi}{2}\right)=\sqrt{\frac{2a_{0}^{2}}{\alpha^{2}}}=\sqrt{2}\frac{a_{0}}{\alpha}.
+\]
+
+\end_inset
+
+Con lo cual tenemos las componentes del vector unitario 
+\begin_inset Formula $n_{x},n_{y}$
+\end_inset
+
+ y 
+\begin_inset Formula $n_{z}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n_{x}=-\frac{\text{Im}\left(b\right)}{\sin\left(\frac{\phi}{2}\right)}\implies n_{x}=-\frac{2a_{0}a_{1}}{\sqrt{2}\frac{a_{0}}{\alpha}}=-\sqrt{2}\alpha a_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies n_{x}=-\sqrt{2}\alpha a_{1},
+\]
+
+\end_inset
+
+para 
+\begin_inset Formula $n_{y}$
+\end_inset
+
+ se tiene 
+\begin_inset Formula 
+\[
+n_{y}=-\frac{\text{Re}\left(b\right)}{\sin\left(\frac{\phi}{2}\right)}=-\frac{2a_{0}a_{2}}{\sqrt{2}\frac{a_{0}}{\alpha}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies n_{y}=-\sqrt{2}\alpha a_{2}.
+\]
+
+\end_inset
+
+Finalmente, para 
+\begin_inset Formula $n_{z}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n_{z}=\frac{\text{Im}\left(a\right)}{\sin\left(\frac{\phi}{2}\right)}=\frac{2a_{0}a_{3}}{\sqrt{2}\frac{a_{0}}{\alpha}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies n_{z}=\sqrt{2}\alpha a_{3}.
+\]
+
+\end_inset
+
+Por lo tanto el ángulo sobre el cual es rotado esta dado por 
+\begin_inset Formula 
+\[
+\phi=2\cos^{-1}\left(\frac{a_{0}^{2}-a_{1}^{2}-a_{2}^{2}-a_{3}^{2}}{\alpha^{2}}\right),
+\]
+
+\end_inset
+
+y el vector unitario es 
+\begin_inset Formula 
+\[
+\mathbf{n}=\left(n_{x},n_{y},n_{z}\right)=\left(-\sqrt{2}\alpha a_{1},-\sqrt{2}\alpha a_{2},\sqrt{2}\alpha a_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Conidera una partícula de espín 1.
+ Evalua los elementos de matriz 
+\begin_inset Formula 
+\[
+S_{z}\left(S_{z}+\hbar\right)\left(S_{z}-\hbar\right)\ \ \ \&\ \ \ S_{x}\left(S_{x}+\hbar\right)\left(S_{x}-\hbar\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Sabemos que para partículas de espín 1, las representaciones matriciales
+ de 
+\begin_inset Formula $S_{x},S_{z}$
+\end_inset
+
+ estan dadas por 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right),S_{z}=\hbar\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+de manera que para el primer producto tenemos que 
+\begin_inset Formula 
+\[
+S_{z}\left(S_{z}+\hbar\right)\left(S_{z}-\hbar\right)=h^{3}\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right)\left(\begin{array}{ccc}
+2 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right)\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & -2
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{z}\left(S_{z}+\hbar\right)\left(S_{z}-\hbar\right)=\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+Mientras que para el segundo se tiene 
+\begin_inset Formula 
+\[
+S_{x}\left(S_{x}+\hbar\right)\left(S_{x}-\hbar\right)=\left(\frac{\hbar}{\sqrt{2}}\right)^{3}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right)\left(\begin{array}{ccc}
+\sqrt{2} & 1 & 0\\
+1 & \sqrt{2} & 1\\
+0 & 1 & \sqrt{2}
+\end{array}\right)\left(\begin{array}{ccc}
+-\sqrt{2} & 1 & 0\\
+1 & -\sqrt{2} & 1\\
+0 & 1 & -\sqrt{2}
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}\left(S_{x}+\hbar\right)\left(S_{x}-\hbar\right)=\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera una secuencia de rotaciones de Euler representadas por 
+\begin_inset Formula 
+\[
+A=\exp[-i\frac{\sigma_{3}\alpha}{2}]\exp[-i\frac{\sigma_{2}\beta}{2}]\exp[-i\frac{\sigma_{3}\gamma}{2}]=\left(\begin{array}{cc}
+\exp\left[-i\left(\alpha+\gamma\right)/2\right]\cos\left(\frac{\beta}{2}\right) & -\exp\left[-i\left(\alpha-\gamma\right)/2\right]\sin\left(\frac{\beta}{2}\right)\\
+\exp\left[i\left(\alpha+\gamma\right)/2\right]\sin\left(\frac{\beta}{2}\right) & \exp\left[i\left(\alpha+\gamma\right)/2\right]\cos\left(\frac{\beta}{2}\right)
+\end{array}\right).
+\]
+
+\end_inset
+
+Debido al grupo de propiedades de rotación, esperamos que esta secuencia
+ de operaciones sea equivalente a una única rotación alrededor de uno de
+ los ejes por un ángulo 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ encuentra 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Este problema tiene la misma estrutura que el inciso b del problema 1.
+ Sabemos que una rotación en general esta dada por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RotGen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, de manera que queremos que se cumpla
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+\cos\left(\frac{\phi}{2}\right)-in_{z}\sin\left(\frac{\phi}{2}\right) & \left(-in_{x}-n_{y}\right)\sin\left(\frac{\phi}{2}\right)\\
+\left(-in_{x}+n_{y}\right)\sin\left(\frac{\phi}{2}\right) & \cos\left(\frac{\phi}{2}\right)+in_{z}\sin\left(\frac{\phi}{2}\right)
+\end{array}\right)=\left(\begin{array}{cc}
+\exp\left[-i\left(\alpha+\gamma\right)/2\right]\cos\left(\frac{\beta}{2}\right) & -\exp\left[-i\left(\alpha-\gamma\right)/2\right]\sin\left(\frac{\beta}{2}\right)\\
+\exp\left[i\left(\alpha+\gamma\right)/2\right]\sin\left(\frac{\beta}{2}\right) & \exp\left[i\left(\alpha+\gamma\right)/2\right]\cos\left(\frac{\beta}{2}\right)
+\end{array}\right),
+\]
+
+\end_inset
+
+Si igualamos la parte real de la componente 
+\begin_inset Formula $\left(1,1\right)$
+\end_inset
+
+ de las matrices anteriores, tenemos que 
+\begin_inset Formula 
+\[
+\cos\left(\frac{\phi}{2}\right)=\cos\left(\frac{\alpha+\gamma}{2}\right)\cos\left(\frac{\beta}{2}\right)\implies\frac{\phi}{2}=\cos^{-1}\left(\cos\left(\frac{\alpha+\gamma}{2}\right)\cos\left(\frac{\beta}{2}\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\phi=2\cos^{-1}\left(\cos\left(\frac{\alpha+\gamma}{2}\right)\cos\left(\frac{\beta}{2}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un eigenestado de momento angular 
+\begin_inset Formula $\left|i,m=m_{max}=j\right\rangle $
+\end_inset
+
+ se rota un ángulo infinitesimal 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ alrededor del eje 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Sin usar la forma explícita de la función 
+\begin_inset Formula $d_{m,n}^{\left(j\right)},$
+\end_inset
+
+obten una expresión para la probabilidad de que el nuevo estado se encuentre
+ en el esyado original hasta términos de orden 
+\begin_inset Formula $\epsilon^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Una rotacion alrededor del eje 
+\begin_inset Formula $y$
+\end_inset
+
+ se representa por 
+\begin_inset Formula 
+\[
+\mathcal{D}_{y}\left(\phi\right)=\exp\left(-i\frac{J_{y}}{\hbar}\phi\right).
+\]
+
+\end_inset
+
+Si ahora hacemos una rotacion infinitesimal 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, esto nos permite representar a la exponencial como una serie de potencias,
+ de manera que 
+\begin_inset Formula 
+\[
+\mathcal{D}_{y}\left(\epsilon\right)=\exp\left(-i\frac{J_{y}}{\hbar}\epsilon\right)\approx1-\frac{iJ_{y}\epsilon}{\hbar}+\frac{J_{y}^{2}\epsilon^{2}}{2\hbar^{2}}+\cdots.
+\]
+
+\end_inset
+
+Si truncamos la serie hasta terminos de orden 2 en 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\mathcal{D}_{y}\left(\epsilon\right)\approx1-\frac{iJ_{y}\epsilon}{\hbar}+\frac{J_{y}^{2}\epsilon^{2}}{2\hbar^{2}}.
+\]
+
+\end_inset
+
+Ahora bien, para el valor esperado, tenemos que 
+\begin_inset Formula 
+\[
+\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=\left\langle i,j|\left(1-\frac{iJ_{y}\epsilon}{\hbar}+\frac{J_{y}^{2}\epsilon^{2}}{2\hbar^{2}}\right)|i,j\right\rangle ,
+\]
+
+\end_inset
+
+pero recordemos que 
+\begin_inset Formula $J_{y}=\left(J_{+}-J_{-}\right)/2i$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=\left\langle i,j|1-\frac{i\epsilon}{\hbar}\frac{1}{2i}\left(J_{+}-J_{-}\right)+\frac{\epsilon^{2}}{2\hbar^{2}}\frac{1}{4i^{2}}\left(J_{+}-J_{-}\right)^{2}|i,j\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=\left\langle i,j|i,j\right\rangle +\left\langle i,j|-\frac{\epsilon}{\hbar}\frac{1}{2}\left(J_{+}-J_{-}\right)-\frac{\epsilon^{2}}{8\hbar}\left(J_{+}-J_{-}\right)^{2}|i,j\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=1+\left\langle i,j|-\frac{\epsilon}{\hbar}\frac{1}{2}\left(J_{+}-J_{-}\right)+\frac{\epsilon^{2}}{8\hbar}\left(J_{+}-J_{-}\right)^{2}|i,j\right\rangle ,
+\]
+
+\end_inset
+
+de la expresón anterior, el para los terminos 
+\begin_inset Formula $J_{+}$
+\end_inset
+
+ tenemos que ya no pudimos subir más el ket, ya estamos en el máxmio valor
+ posible, de manera que el valor esperado este operador es cero.
+ Por otra parte, al calcular el valor esperado de 
+\begin_inset Formula $-J$
+\end_inset
+
+, tenemos que el efecto de este operador sobre un ket es el de 
+\begin_inset Quotes xld
+\end_inset
+
+bajarlo
+\begin_inset Quotes xrd
+\end_inset
+
+, de manera que al hacer el producto interno con un ket superior (el cual
+ era antes de el efecto de 
+\begin_inset Formula $J_{-}$
+\end_inset
+
+) nos da cero.
+ De manera que 
+\begin_inset Formula 
+\[
+\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=1+\frac{\epsilon^{2}}{8\hbar}\left\langle i,j|\left(J_{+}-J_{-}\right)^{2}|i,j\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=1+\frac{\epsilon^{2}}{8\hbar}\left\langle i,j|J_{+}^{2}-J_{+}J_{-}-J_{-}J_{+}+J_{-}^{2}|i,j\right\rangle .
+\]
+
+\end_inset
+
+Nuevamente, de la expresión anterior los terminos de 
+\begin_inset Formula $J_{+}^{2},J_{-}^{2}$
+\end_inset
+
+ se anulan por las propiedades de ortogonalidad de los kets y el término
+ 
+\begin_inset Formula $J_{-}J_{+}$
+\end_inset
+
+ justamente porque no podemos subir más el ket.
+ Por lo tanto 
+\begin_inset Formula 
+\[
+\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=1-\frac{\epsilon^{2}}{8\hbar}\left\langle i,j|J_{+}J_{-}|i,j\right\rangle ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=1-\frac{\epsilon^{2}}{8\hbar}\sqrt{2j\hbar}\sqrt{2j\hbar}=1-\frac{\epsilon^{2}}{4}\hbar
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle \mathcal{D}_{y}\left(\epsilon\right)\right\rangle _{m=m_{max}}=1-\frac{\epsilon^{2}}{4}j
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Prueba que 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Si el momento angular cumple con 
+\begin_inset Formula $\mathbf{L}=\mathbf{r}\times\mathbf{p}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\left[\pi,\mathbf{L}\right]=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Si 
+\begin_inset Formula $\left[J_{i},J_{j}\right]=i\hbar\epsilon_{ijk}J_{k}$
+\end_inset
+
+ se quiere preservar, entonces 
+\begin_inset Formula $\Theta\mathbf{L}\Theta^{-1}=-\mathbf{L}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ es el operador de inversión temporal.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Por definición 
+\begin_inset Formula 
+\[
+\left[\pi,\mathbf{L}\right]=\left[\pi,\mathbf{r}\times\mathbf{p}\right]=\pi\mathbf{r}\times\mathbf{p}-\mathbf{r}\times\mathbf{p}\pi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\pi,\mathbf{L}\right]=\pi\mathbf{r}\times\mathbf{p}-\mathbf{r}\times\mathbf{p}\pi,
+\]
+
+\end_inset
+
+pero sabemos que 
+\begin_inset Formula $\mathbf{r}\pi=-\pi\mathbf{r}$
+\end_inset
+
+ y que 
+\begin_inset Formula $\mathbf{p}\pi=-\pi\mathbf{p}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\left[\pi,\mathbf{L}\right]=-\mathbf{r}\pi\times\mathbf{p}-\mathbf{r}\times\left(-\pi\mathbf{p}\right)=-\mathbf{r}\times\pi\mathbf{p}-\mathbf{r}\pi\times\left(-\mathbf{p}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\pi,\mathbf{L}\right]=-\mathbf{r}\times\pi\mathbf{p}-\mathbf{r}\pi\times\left(-\mathbf{p}\right)=-\mathbf{r}\times-\mathbf{p}\pi-\left(-\pi\mathbf{r}\right)\times\left(-\mathbf{p}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\pi,\mathbf{L}\right]=\mathbf{r}\times\mathbf{p}\pi-\pi\mathbf{r}\times\mathbf{p}=-\left[\pi,\mathbf{L}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\pi,\mathbf{L}\right]=-\left[\pi,\mathbf{L}\right]\implies\left[\pi,\mathbf{L}\right]=0.
+\]
+
+\end_inset
+
+,
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

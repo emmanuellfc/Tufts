@@ -1,0 +1,1844 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Examen 2
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 24/05/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+
+\series bold
+Preguntas conceptuales.
+
+\series default
+ Responde a las siguientes preguntas.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cómo se relacionan las leyes de conservación con las simetrías en mećanica
+ cuántica?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Standard
+En física el concepto de simetría es muy importante, no solo en la mecánica
+ cuántica.
+ Sin embargo como es de esperarse hay resultados importantes de la mecánica
+ cuántica que tienen que ver con argumentos de simetría.
+ De manera general, el Teorema de Noether nos dice que si tenemos alguna
+ simetria en nuestro sistema, esto implica una ley de conservación, tal
+ es el caso de la simetria ante traslaciones lineales, la cual nos conduce
+ a la ley de conservación de momento lineal.
+ Si hay simetria ante rotacciones obtenemos la ley de conservación de momento
+ angular y si hay simetria de traslación temporal, obtenemos la conservación
+ de la energía, esto por mencionar algunas.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué es la simetría de traslación discreta y qué son las funciones de Bloch?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Standard
+La simetría de traslación discreta aparece cuando tenemos un potencial que
+ es periodico respecto a un parámetro 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Decimos que es 
+\begin_inset Formula $V$
+\end_inset
+
+ es periodico si 
+\begin_inset Formula 
+\[
+V\left(x+a\right)=V\left(x\right),\ \ \ \forall x.
+\]
+
+\end_inset
+
+Cuando tenemos un potencial de este estilo, el Hamiltoniano resulta que
+ satisface 
+\begin_inset Formula 
+\[
+\left[H,\tau\left(a\right)\right]=0,
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\tau$
+\end_inset
+
+ es el operador de traslación.
+ Y por lo tanto 
+\begin_inset Formula $\tau\left(a\right)$
+\end_inset
+
+ y el Hamiltoniano se pueden diagonalizar de manera simultanea.
+ Por otra parte, las funciones de Bloch 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+ son funciones periodicas de periodo 
+\begin_inset Formula $a$
+\end_inset
+
+ (para este caso partícular), es decir 
+\begin_inset Formula 
+\[
+u_{k}\left(x\right)=u_{k}\left(x\pm a\right),
+\]
+
+\end_inset
+
+ las cuales aparecen cuando queremos encontrar las funciones propias del
+ Hamiltoniano.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué es un operador antiunitario y por qué el operador de inversión temporal
+ debe serlo?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Standard
+Sean dos kets 
+\begin_inset Formula $|\alpha\rangle,|\beta\rangle$
+\end_inset
+
+, junto con un operador 
+\begin_inset Formula $\theta$
+\end_inset
+
+ arbitrario, y sean 
+\begin_inset Formula $c_{1},c_{2}\in\mathbb{C}$
+\end_inset
+
+.
+ Además, consideremos a los kets
+\begin_inset Formula $|\tilde{\alpha}\rangle,|\tilde{\beta}\rangle$
+\end_inset
+
+ dados por 
+\begin_inset Formula 
+\[
+|\tilde{\alpha}\rangle=\theta|\alpha\rangle\ \ \ \&\ \ \ |\tilde{\beta}\rangle=\theta|\beta\rangle.
+\]
+
+\end_inset
+
+Decimos que 
+\begin_inset Formula $\theta$
+\end_inset
+
+ es antiunitario si satisface que 
+\begin_inset Formula 
+\[
+\langle\tilde{\beta}|\tilde{\alpha}\rangle=\langle\beta|\alpha\rangle^{*},
+\]
+
+\end_inset
+
+junto con 
+\begin_inset Formula 
+\[
+\theta\left(c_{1}|\alpha\rangle+c_{2}|\beta\rangle\right)=c_{1}^{*}\theta|\alpha\rangle+c_{2}^{*}\theta|\beta\rangle.
+\]
+
+\end_inset
+
+Por otra parte, cuando queremos ver si las soluciones de la ecuación de
+ Schrödinger son invariantes temporales, es decir, permanecen invariantes
+ ante el cambio 
+\begin_inset Formula $t\rightarrow-t$
+\end_inset
+
+, vemos que éstas no son invariantes.
+ Este es el punto de partida para definir a los operadores antiunitarios.
+ Ahora bien, si el operador de inversión temporal no se considera unitario,
+ aparecen inconsistencias con el espectro de energías, incluso para los
+ casos más simples.
+ La única manera de evitar esas incosistencias es si consideramos al operador
+ de inversion temporal antiunitario.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué son los coeficientes de Clebsch-Gordan?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Standard
+Cuando estamos trabajando en problemas de momento angular que involucran
+ a más de un sistema, es posible escoger dos representaciones diferentes,
+ con las cuales obtenemos la misma información física.
+ Los coeficientes de Clebsch-Gordan nos relacionan una representación con
+ otra, es decir son un análogo a los elementos de una matriz de cambio de
+ base (representación).
+ Por ejemplo, supongamos que tenemos dos sistemas donde definimos 
+\begin_inset Formula 
+\[
+\mathbf{J=L+S}=\mathbf{L}\varotimes\mathbf{1}_{S}+\mathbf{1}_{L}\varotimes\mathbf{S}.
+\]
+
+\end_inset
+
+En general, podemos escoger como kets base los eigenkets de 
+\begin_inset Formula $\mathbf{J}^{2},J_{z},\mathbf{L}^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{S}^{2}$
+\end_inset
+
+, o bien en términos de los eigenkets de 
+\begin_inset Formula $\mathbf{L^{2}},\mathbf{S}^{2},L_{z}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+.
+ Entonces los coeficientes de Clebsch-Gordan nos relacionan ambas bases.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué enuncia el Teorema de Wigner-Eckart y por qué es importante?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+El Teorema de Wigner-Eckart dice que los elementos de matriz de un operador
+ tensorial esferico expresados en la base de los eigenestados de momento
+ angular pueden ser expresados como el producto de dos factores, uno de
+ los cuales es independiente de la orientación del momento angular y el
+ otro un factor geometrico que resultan ser los coeficientes de Clebsch-Gordan.
+ La importancia de este teorema reside en que nos dice el comportamiento
+ de operadores tensoriales se comportan es un subespacio.
+ Esto es, dado un subespacio, una componente del operador tensorial se comportar
+á de una forma que es proporcional a la misma componente del operador de
+ momento angular.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+
+\series bold
+Doble pozo rectangular simétrico.
+
+\series default
+ Considera un potencial de doble pozo rectangular simétrico 
+\begin_inset Formula 
+\[
+V=\left\{ \begin{array}{cc}
+\infty & \left|x\right|>a+b\\
+0 & a<\left|x\right|<a+b\\
+V_{0} & \left|x\right|<a
+\end{array}\right..
+\]
+
+\end_inset
+
+Suponiendo que 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ es muy alto comparado con las energías cuantizadas de los estados bajos,
+ obten una expresión aproximada de la separación de energía entre los dos
+ estados más bajos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Si suponemos que la barrera de potencial es infinitamente grande, entonce
+ recuperamos el caso en el que los niveles de energía son aquellos del caso
+ degenerado.
+ Esto es, los dos niveles más bajos son los del caso degenerado, cuyas eigenfunc
+iones propias son ondas sinusoidales con 
+\begin_inset Formula $\lambda=2b$
+\end_inset
+
+.
+ Ahora consideremos la paridad de las funciones de onda.
+ Si ahora suponemos que la barrera es de tamaño finito, consideremos las
+ combinaciones simetríca y antisimétrica dentro de la barrera.
+ Consideremos solamente la solución para 
+\begin_inset Formula $x\geq0$
+\end_inset
+
+ y sea la eigenfunción 
+\begin_inset Formula 
+\[
+u\left(x\right)=A\sin\left[k\left(x-a-b\right)\right],\ \ \ a\leq x\leq a+b,
+\]
+
+\end_inset
+
+con energía propia dada por 
+\begin_inset Formula 
+\[
+E=\frac{\hbar^{2}k^{2}}{2m}.
+\]
+
+\end_inset
+
+La función de onda escrita de esta forma claramente satisface 
+\begin_inset Formula 
+\[
+u\left(a+b\right)=0,
+\]
+
+\end_inset
+
+y es válida tanto para la parte simétrica como para la antisimétrica.
+ Ahora bien, sabemos que 
+\begin_inset Formula 
+\[
+u_{s}\left(x\right)=B\cosh\left(\omega x\right)\ \ \ \&\ \ \ u_{a}\left(x\right)=B\sinh\left(\omega x\right)\ \ \ 0\leq x\leq a
+\]
+
+\end_inset
+
+son las soluciones para la parte simétrica y antisimétrica, respectivamente,
+ con eigenenergía dada por 
+\begin_inset Formula 
+\[
+V_{0}-E=\frac{h^{2}\omega_{s,a}^{2}}{2m},
+\]
+
+\end_inset
+
+donde el subíndice indica si es para la parte simétrica o antisimétrica.
+ Por otra parte, si calculamos las derivadas de las funciones de onda, tenemos
+\begin_inset Formula 
+\[
+u^{\prime}\left(x\right)=kA\cos\left[k\left(x-a-b\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u_{s}^{\prime}\left(x\right)=-kB\sinh\left(\omega x\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u_{a}^{\prime}\left(x\right)=kB\cosh\left(\omega x\right).
+\]
+
+\end_inset
+
+Ahora bien, sabemos que la función de onda y su derivada deben ser continuas
+ en 
+\begin_inset Formula $x=a$
+\end_inset
+
+, de modo que para la parte simétrica, tenemos las siguientes relaciones
+\begin_inset Formula 
+\begin{equation}
+u\left(a\right)+u_{s}\left(a\right)=0\implies A_{s}\sin k_{s}b+B_{s}\cosh\omega_{s}a=0,\label{eq:01}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}\left(a\right)+u_{s}^{\prime}\left(a\right)=0\implies k_{s}A_{s}\cos k_{s}b-\omega_{s}B_{s}\sinh\omega_{s}a=0.\label{eq:02}
+\end{equation}
+
+\end_inset
+
+Mientras que para la parte antisimétrica 
+\begin_inset Formula 
+\begin{equation}
+u\left(a\right)+u_{a}\left(a\right)=0\implies A_{a}\sin k_{a}b+B_{a}\cosh\omega_{a}a=0,\label{eq:03}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}\left(a\right)+u_{a}^{\prime}\left(a\right)=0\implies-k_{a}A_{a}\sin k_{a}b+\omega_{a}B_{a}\sinh\omega_{a}a=0.\label{eq:04}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que 
+\begin_inset Formula $E\ll V_{0}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $V_{0}-E\approx V_{0}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+V_{0}\approx V_{0}-E=\frac{h^{2}k^{2}}{2m}\implies V_{0}\approx\frac{h^{2}k^{2}}{2m}\implies k\approx\frac{\sqrt{2mV_{0}}}{\hbar}.
+\]
+
+\end_inset
+
+Ahora bien, dado que el siguiente análisis es el mismo tanto para 
+\begin_inset Formula $\omega_{s}$
+\end_inset
+
+como para 
+\begin_inset Formula $\omega_{a}$
+\end_inset
+
+, hagamos el siguiente cambio de variable 
+\begin_inset Formula 
+\[
+\omega_{a}=\omega_{s}=\omega=\frac{\sqrt{2mV_{0}}}{\hbar}.
+\]
+
+\end_inset
+
+Ahora bien, de las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:01"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:02"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+A_{s}\sin k_{s}b=-B_{s}\cosh\omega a\ \ \ \&\ \ \ k_{s}A_{s}\cos k_{s}b=k_{s}B_{s}\sinh\omega a,
+\]
+
+\end_inset
+
+con lo cual, si dividimos la primera entre la segunda, tenemos 
+\begin_inset Formula 
+\begin{equation}
+\frac{A_{s}\sin k_{s}b}{k_{s}A_{s}\cos k_{s}b}=\frac{-B_{s}\cosh\omega a}{\omega B_{s}\sinh\omega a}\implies\frac{1}{k_{s}}\tan\left(k_{s}b\right)=-\frac{1}{\omega}\coth\left(\kappa b\right).\label{eq:05}
+\end{equation}
+
+\end_inset
+
+Considerando ahora las ecuaciones dadas en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:03"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:04"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+A_{a}\sin k_{a}b=-B_{a}\cosh\omega a\ \ \ \&\ \ \ k_{a}A_{a}\cos k_{a}b=\omega B_{a}\sinh\omega a,
+\]
+
+\end_inset
+
+nuevamente, si dividimos la primera entre la segunda, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\frac{A_{a}\sin k_{a}b}{k_{a}A_{a}\cos k_{a}b}=\frac{-B_{a}\sinh\omega a}{\omega B_{a}\cosh\omega a}\implies\frac{1}{k_{a}}\tan\left(k_{a}b\right)=-\frac{1}{\omega}\tanh\left(\kappa a\right).\label{eq:06}
+\end{equation}
+
+\end_inset
+
+Dado que esperamos que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ sea solo un poco mas grande que 
+\begin_inset Formula $2b$
+\end_inset
+
+, propongamos 
+\begin_inset Formula 
+\[
+\lambda=\left(1+\epsilon\right)2b\implies kb=\frac{2\pi b}{\lambda}=\frac{2\pi b}{\left(1+\epsilon\right)2b},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies kb=\frac{\pi}{\left(1+\epsilon\right)}.
+\]
+
+\end_inset
+
+Si ahora aproximamos el término 
+\begin_inset Formula $\left(1+\epsilon\right)$
+\end_inset
+
+ a primer orden, tenemos que 
+\begin_inset Formula 
+\[
+kb\approx\pi\left(1-\epsilon\right),
+\]
+
+\end_inset
+
+de modo que 
+\begin_inset Formula 
+\[
+\tan\left(kb\right)=\frac{\sin\left(kb\right)}{\cos\left(kb\right)}=kb-\pi,
+\]
+
+\end_inset
+
+por lo tanto la ecuación dada en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:05"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se aproxima como 
+\begin_inset Formula 
+\begin{equation}
+\frac{k_{s}b-\pi}{k_{s}}=-\frac{1}{\omega}\coth\left(\kappa b\right),\label{eq:07}
+\end{equation}
+
+\end_inset
+
+mientras que para la ecuación dada en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:06"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se tiene que 
+\begin_inset Formula 
+\begin{equation}
+\frac{k_{a}b-\pi}{k_{a}}=-\frac{1}{\omega}\tanh\left(\kappa b\right).\label{eq:08}
+\end{equation}
+
+\end_inset
+
+De la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:07"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ tenemos que 
+\begin_inset Formula 
+\[
+b-\frac{\pi}{k_{s}}=-\frac{1}{\omega}\coth\left(\kappa b\right)\implies\frac{\pi}{k_{s}}=b+\frac{1}{\omega}\coth\left(\kappa b\right)\implies k_{s}=\frac{\pi}{b+\frac{1}{\omega}\coth\left(\kappa b\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies k_{s}=\frac{\pi\omega}{\left(\omega b+\coth\left(\kappa b\right)\right)}.
+\]
+
+\end_inset
+
+Y de manera análoga para 
+\begin_inset Formula $k_{a}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+k_{a}=\frac{\pi\omega}{\left(\omega b+\tanh\left(\kappa b\right)\right)}.
+\]
+
+\end_inset
+
+De modo que las energías quedan escritas como 
+\begin_inset Formula 
+\[
+E_{S}=\frac{\hbar^{2}k_{s}^{2}}{2m}=\frac{\hbar^{2}\pi^{2}\omega^{2}}{2m}\frac{1}{\left(\omega b+\coth\left(\kappa b\right)\right)^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{a}=\frac{\hbar^{2}k_{a}^{2}}{2m}=\frac{\hbar^{2}\pi^{2}\omega^{2}}{2m}\frac{1}{\left(\omega b+\tanh\left(\kappa b\right)\right)^{2}}.
+\]
+
+\end_inset
+
+Si ahora definimos a 
+\begin_inset Formula $\Delta E=E_{a}-E_{s}$
+\end_inset
+
+, entonces tenemos que 
+\begin_inset Formula 
+\[
+\Delta E=\frac{\hbar^{2}\pi^{2}\omega^{2}}{2m}\left[\frac{1}{\left(\omega b+\tanh\left(\kappa b\right)\right)^{2}}-\frac{1}{\left(\omega b+\coth\left(\kappa b\right)\right)^{2}}\right],
+\]
+
+\end_inset
+
+la cual corresponde a la separación entre energías para los estados más
+ bajos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+
+\series bold
+Cálculo de coeficientes de Clebsch-Gordan.
+
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Demostrar la regla de selección tal que 
+\begin_inset Formula 
+\[
+\langle j_{1}j_{2};00|j_{1}j_{2};j0\rangle=0,
+\]
+
+\end_inset
+
+cuando 
+\begin_inset Formula $j_{1}+j_{2}-j$
+\end_inset
+
+ es un número impar.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Mostrar que 
+\begin_inset Formula 
+\[
+\langle j1;j0|j1;jj\rangle=\sqrt{\frac{j}{j+1}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Mostrar que 
+\begin_inset Formula 
+\[
+\langle j0;m0|j0;jm\rangle=\frac{1}{\sqrt{2j+1}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Mostrar que 
+\begin_inset Formula 
+\[
+\langle jj;m,-m|jj;00\rangle=\frac{\left(-1\right)^{j-m}}{\sqrt{2j+1}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+La manera usual en la que se construyen los coeficientes de Clebsch-Gordan
+ 
+\begin_inset Formula $|j_{1}j_{2};jm\rangle$
+\end_inset
+
+ es aplicando el operador 
+\begin_inset Formula $J_{-}$
+\end_inset
+
+ a los kets 
+\begin_inset Formula $|j_{1}j_{2};jj\rangle$
+\end_inset
+
+.
+ Aunque tambien es posible comenzar con los kets 
+\begin_inset Formula $|j_{1}j_{2};j-j\rangle$
+\end_inset
+
+ y aplicarle el operador 
+\begin_inset Formula $J_{+}$
+\end_inset
+
+, el razonamiento es el mismo y se encuentra que para kets 
+\begin_inset Formula $|j_{1}j_{2};j-m\rangle$
+\end_inset
+
+ tienen los mismos coeficientes de expansión que 
+\begin_inset Formula $|j_{1}j_{2};-m_{1}-m_{2}\rangle$
+\end_inset
+
+ justo como en el caso anterior.
+ La única diferencia aparece esta relacionada con las convenciones de fase
+ para los kets 
+\begin_inset Formula $|j_{1}j_{2};jm\rangle$
+\end_inset
+
+.
+ Dado que se quiere que 
+\begin_inset Formula $\langle j_{1}j_{2};-j_{1}-j+j_{1}|j_{1}j_{2};j-j\rangle$
+\end_inset
+
+ sea real y positivo, de manera que se tiene que cumplir la siguiente relación
+ 
+\begin_inset Formula 
+\[
+\langle j_{2}j_{1};-m_{1}m_{2}|j_{1}j_{1};j-m\rangle=\left(-1\right)^{j_{1}+j_{2}-j}\langle j_{2}j_{1};m_{1}m_{2}|j_{1}j_{1};jm\rangle.
+\]
+
+\end_inset
+
+Ahora bien, si de la ecuación anterior, tomamos que 
+\begin_inset Formula $m_{1}=m_{2}=0\implies m=0$
+\end_inset
+
+, con lo cual 
+\begin_inset Formula 
+\[
+\langle j_{2}j_{1};00|j_{1}j_{1};j0\rangle=\left(-1\right)^{j_{1}+j_{2}-j}\langle j_{2}j_{1};00|j_{1}j_{1};j0\rangle,
+\]
+
+\end_inset
+
+recordemos que los coeficientes deben ser reales y positivos, de manera
+ que aquellos para los cuales 
+\begin_inset Formula $\left(-1\right)^{j_{1}+j_{2}-j}$
+\end_inset
+
+ sea negativo, por construcción son cero, y lo anterior pasa siempre que
+ 
+\begin_inset Formula $j_{1}+j_{2}-j$
+\end_inset
+
+ es impar.
+\end_layout
+
+\begin_layout Enumerate
+Una de las relaciones de recurrencia para los simbolos de Clebsch-Gordan
+ nos dice que 
+\begin_inset Formula 
+\[
+\sqrt{j\left(j+1\right)-m\left(m-1\right)}\langle j_{1}j_{2};m_{1}m_{2}|jm\rangle=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}+1\right)}\langle j_{1}j_{2};m_{1}+1m_{2}|jm\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sqrt{j_{2}\left(j_{2}+1\right)-m_{2}\left(m_{2}+1\right)}\langle j_{1}j_{2};m_{1}m_{2}+1|jm\rangle.
+\]
+
+\end_inset
+
+Si en la expresión anterior, hacemos 
+\begin_inset Formula $j_{1}=j,j_{2}=1,m_{1}=j,m_{2}=0$
+\end_inset
+
+ y 
+\begin_inset Formula $m=j$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\sqrt{2j}\langle j1;j0|jj\rangle=\sqrt{2}\langle j1;j1|jj\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sqrt{j}\langle j1;j0|jj\rangle=\langle j1;j1|jj\rangle.
+\]
+
+\end_inset
+
+La ecuación anterior es un caso particular de las relaciones de recurrencia,
+ de modo que todos los coeficientes tienen la misma estructura.
+ Si ahora usamos las relaciones de ortogonalidad para los coeficientes,
+ tenemos que se debe cumplir
+\begin_inset Formula 
+\[
+\sum_{j}\left(\frac{\langle j1;j1|jj\rangle}{\sqrt{j}}\right)^{2}=1
+\]
+
+\end_inset
+
+, pero
+\begin_inset Formula 
+\[
+\sum_{j}\left(\frac{\langle j1;j1|jj\rangle}{\sqrt{j}}\right)^{2}=\left(j+1\right)\left(\frac{\langle j1;j1|jj\rangle}{\sqrt{j}}\right)^{2},
+\]
+
+\end_inset
+
+de modo que 
+\begin_inset Formula 
+\[
+\langle j1;j0|jj\rangle=\sqrt{\frac{j}{j+1}},
+\]
+
+\end_inset
+
+justo como se queria demostrar.
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien, para esta demostración, hacemos uso de la siguiente relación
+ de recursión para los simbolos de Clebsch-Gordan 
+\begin_inset Formula 
+\[
+\sqrt{j\left(j+1\right)-m\left(m+1\right)}\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};jm\rangle=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}-1\right)}\langle j_{1}j_{2};m_{1}-1m_{2}|j_{1}j_{2};jm\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sqrt{j_{2}\left(j_{2}+1\right)-m_{2}\left(m_{2}-1\right)}\langle j_{1}j_{2};m_{1}m_{2}-2|j_{1}j_{2};jm\rangle.
+\]
+
+\end_inset
+
+Si hacemos que 
+\begin_inset Formula $j_{2}=m_{2}=0$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\sqrt{j\left(j+1\right)-m\left(m+1\right)}\langle j_{1}0;m_{1}0|j_{1}0;jm\rangle=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}-1\right)}\langle j_{1}0;m_{1}-10|j_{1}0;jm\rangle,
+\]
+
+\end_inset
+
+si ahora hacemos que 
+\begin_inset Formula $j_{1}=j$
+\end_inset
+
+ y 
+\begin_inset Formula $m_{1}=m$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\sqrt{j\left(j+1\right)-m\left(m+1\right)}\langle j0;m0|j0;jm\rangle=\sqrt{j\left(j+1\right)-m\left(m-1\right)}\langle j0;m-10|j0;jm\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle j0;m0|j0;jm\rangle=\langle j0;m-10|j0;jm\rangle.
+\]
+
+\end_inset
+
+De la relación anterior, se sigue que todos los coeficientes de Clebsch-Gordan
+ tienen esa forma y son iguales, de modo que, si usamos la ortogonalidad
+ de éstos, tenemos que 
+\begin_inset Formula 
+\[
+\sum_{j}\langle j0;m0|j0;jm\rangle^{2}=1,
+\]
+
+\end_inset
+
+pero como todos son iguales y la suma va de 
+\begin_inset Formula $-j$
+\end_inset
+
+ a 
+\begin_inset Formula $j$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\sum_{j}\langle j0;m0|j0;jm\rangle^{2}=\left(2j+1\right)\langle j0;m0|j0;jm\rangle^{2}=1,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle j0;m0|j0;jm\rangle^{2}=\frac{1}{\left(2j+1\right)}.
+\]
+
+\end_inset
+
+Y por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\langle j0;m0|j0;jm\rangle=\frac{1}{\left(2j+1\right)},
+\]
+
+\end_inset
+
+justo como se quería demostrar.
+\end_layout
+
+\begin_layout Enumerate
+Las relaciones de recurrencia para los coeficientes de Clebsch-Gordan nos
+ dicen que 
+\begin_inset Formula 
+\[
+\sqrt{\left(j\mp m\right)\left(j\pm m+1\right)}\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};j,m\pm1\rangle=\sqrt{\left(j_{1}\pm m_{1}+1\right)\left(j_{1}\pm m_{1}\right)}\langle j_{1}j_{2};m\mp1,m_{2}|j_{1}j_{2};jm\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sqrt{\left(j_{2}\mp m_{2}+1\right)\left(j_{2}\pm m_{2}\right)}\langle j_{1}j_{2};m1,m_{2}\mp1|j_{1}j_{2};jm\rangle.
+\]
+
+\end_inset
+
+Una forma más 
+\begin_inset Quotes xld
+\end_inset
+
+natural
+\begin_inset Quotes xrd
+\end_inset
+
+, de escribir las raices es la siguiente 
+\begin_inset Formula 
+\[
+\sqrt{\left(j\mp m\right)\left(j\pm m+1\right)}=\sqrt{j^{2}\pm jm+j\mp mj-m^{2}\mp m}=\sqrt{j\left(j+1\right)-m\left(m\pm1\right)},
+\]
+
+\end_inset
+
+y como las demás raíces tienen la misma estructura, se sigue que podemos
+ escribir la relación de recurrencia como 
+\begin_inset Formula 
+\[
+\sqrt{j\left(j+1\right)-m\left(m\pm1\right)}\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};j,m\pm1\rangle=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}\pm1\right)}\langle j_{1}j_{2};m\mp1,m_{2}|j_{1}j_{2};jm\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sqrt{j_{2}\left(j_{2}+1\right)-m_{2}\left(m_{2}\pm1\right)}\langle j_{1}j_{2};m1,m_{2}\mp1|j_{1}j_{2};jm\rangle
+\]
+
+\end_inset
+
+Si ahora tomamos la relación de recurrencia para 
+\begin_inset Formula $\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};j,m+1\rangle$
+\end_inset
+
+, esta tiene la forma 
+\begin_inset Formula 
+\begin{equation}
+\sqrt{j\left(j+1\right)-m\left(m+1\right)}\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};j,m+1\rangle=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}-1\right)}\langle j_{1}j_{2};m-1,m_{2}|j_{1}j_{2};jm\rangle
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sqrt{j_{2}\left(j_{2}+1\right)-m_{2}\left(m_{2}\pm1\right)}\langle j_{1}j_{2};m1,m_{2}-1|j_{1}j_{2};jm\rangle.
+\]
+
+\end_inset
+
+Si ahora hacemos 
+\begin_inset Formula $m=j$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+0=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}-1\right)}\langle j_{1}j_{2};m-1,m_{2}|j_{1}j_{2};jj\rangle+\sqrt{j_{2}\left(j_{2}+1\right)-m_{2}\left(m_{2}\pm1\right)}\langle j_{1}j_{2};m1,m_{2}-1|j_{1}j_{2};jj\rangle,
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\begin{equation}
+\langle j_{1}j_{2};m_{1}-1,m_{2}|j_{1}j_{2};jj\rangle=-\frac{\sqrt{j_{2}\left(j_{2}+1\right)-m_{2}\left(m_{2}\pm1\right)}}{\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}-1\right)}}\langle j_{1}j_{2};m_{1},m_{2}-1|j_{1}j_{2};jj\rangle.\label{eq:09}
+\end{equation}
+
+\end_inset
+
+El radical del lado derecho de la ecuación, nos dice que la relación nunca
+ es cero ni infinito, esto es así debido a los posibles valores que pueden
+ tomar las 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ y las 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+ Por lo tanto la ecuación anterior implica que si 
+\begin_inset Formula $\langle j_{1}j_{2};j_{1},j-j_{1}|j_{1}j_{2};jj\rangle$
+\end_inset
+
+ fuera cero, entonces 
+\begin_inset Formula $\langle j_{1}j_{2};j_{1}-1,j-j_{1}+1|j_{1}j_{2};jj\rangle$
+\end_inset
+
+ tambien seria cero.
+ Pero esto es imposible dado que el ket 
+\begin_inset Formula $|j_{1}j_{2},jj\rangle$
+\end_inset
+
+ esta normalizado y no puede ser cero.
+ Por lo tanto, todos los coeficientes 
+\begin_inset Formula $\langle j_{1}j_{2};m_{1},J-m_{1}|j_{1}j_{2};jj\rangle$
+\end_inset
+
+ con 
+\begin_inset Formula $j_{1}\geq m_{1}\geq j-j_{2}$
+\end_inset
+
+ son diferentes de cero.
+ Ahora bien, de manera partícular, el coeficiente 
+\begin_inset Formula $\langle j_{1}j_{2};j_{1},j-j_{1}|j_{1}j_{2};jj\rangle$
+\end_inset
+
+, en el cual 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ toma su valor máximo, no es cero.
+ Para fijar la fase del ket 
+\begin_inset Formula $|j_{1}j_{2},jj\rangle$
+\end_inset
+
+ es necesario que este coeficiente satisfaga la siguiente condición 
+\begin_inset Formula 
+\[
+\langle j_{1}j_{2};j_{1},j-j_{1}|j_{1}j_{2};jj\rangle\in\mathbb{R}^{+},
+\]
+
+\end_inset
+
+es decir, sea real y positivo.
+ Por lo tanto la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:09"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implica que los coeficientes 
+\begin_inset Formula 
+\[
+\langle j_{1}j_{2};m_{1},j-m_{1}|j_{1}j_{2};jj\rangle
+\]
+
+\end_inset
+
+son reales, y el signo de cada uno esta dado por 
+\begin_inset Formula $\left(-1\right)^{j_{1}-m_{1}}$
+\end_inset
+
+.
+ Si ahora consideramos la relación de recurrencia para 
+\begin_inset Formula $\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};j,m-1\rangle$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\sqrt{j\left(j+1\right)-m\left(m-1\right)}\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};j,m-1\rangle=\sqrt{j_{1}\left(j_{1}+1\right)-m_{1}\left(m_{1}+1\right)}\langle j_{1}j_{2};m_{1}+1,m_{2}|j_{1}j_{2};jm\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\sqrt{\left(j_{2}+m_{2}+1\right)\left(j_{2}+m_{2}\right)}\langle j_{1}j_{2};m1,m_{2}+1|j_{1}j_{2};jm\rangle
+\]
+
+\end_inset
+
+y si hacemos que 
+\begin_inset Formula $j_{1}=j_{2}=j,m_{1}=m,m_{2}=-m-1$
+\end_inset
+
+ y 
+\begin_inset Formula $j=m=0$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+0=\sqrt{j\left(j+1\right)-m\left(m+1\right)}\langle jj;m+1,-m-1|j_{1}j_{2};00\rangle+\sqrt{j\left(j+1\right)-\left(-m-1\right)\left(-m-1\pm1\right)}\langle jj;m,-m|jj;00\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle jj;m+1,-\left(m+1\right)|j_{1}j_{2};00\rangle=-\langle jj;m,-m|jj;00\rangle.
+\]
+
+\end_inset
+
+La relación anterior quiere decir que todos los simbolos de Clebsch-Gordan
+ son de la misma forma que 
+\begin_inset Formula $\langle jj;m,-m|jj;00\rangle$
+\end_inset
+
+ e iguales en modulo.
+ Por la discusión anterior, sabemos que los coeficientes cambian de signo
+ cuando 
+\begin_inset Formula $m$
+\end_inset
+
+ cambia, de manera que el signo esta dado por 
+\begin_inset Formula $\left(-1\right)^{j-m}$
+\end_inset
+
+.
+ Si ahora consideramos las relaciones de ortogonalidad, tenemos que 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\langle jj;m,-m|jj;00\rangle^{2}=1,
+\]
+
+\end_inset
+
+pero como todos tienen la misma forma, tenemos una suma de la siguiente
+ forma 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\alpha=\left(2j+1\right)\alpha,
+\]
+
+\end_inset
+
+ya que estamos de 
+\begin_inset Formula $-j$
+\end_inset
+
+ a 
+\begin_inset Formula $j$
+\end_inset
+
+ hay 
+\begin_inset Formula $2j+1$
+\end_inset
+
+ pasos, por lo tanto 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\langle jj;m,-m|jj;00\rangle^{2}=\left(2j+1\right)\langle jj;m,-m|jj;00\rangle^{2}=1,
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\implies\langle jj;m,-m|jj;00\rangle^{2}=\frac{1}{\left(2j+1\right)},
+\]
+
+\end_inset
+
+si ahora consideramos el signo de cada uno de los coeficientes, tenemos
+ que 
+\begin_inset Formula 
+\[
+\langle jj;m,-m|jj;00\rangle=\frac{\left(-1\right)^{j-m}}{\sqrt{2j+1}},
+\]
+
+\end_inset
+
+justo como se queria demostrar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+
+\series bold
+Interacción Zeeman.
+
+\series default
+ Como una aplicación del teorema de proyección, considera la interacción
+ Zeeman debida al momento dipolar magnético en el átomo de hidrogeno
+\begin_inset Formula 
+\[
+H_{int}=-\overrightarrow{\mu}\cdot\mathbf{B},
+\]
+
+\end_inset
+
+donde el operador de momento dipolar magnético es 
+\begin_inset Formula 
+\[
+\overrightarrow{\mu}=-\mu_{B}\left(g_{l}\mathbf{L}+g_{s}\mathbf{S}\right),
+\]
+
+\end_inset
+
+con 
+\begin_inset Formula $g_{l}=1$
+\end_inset
+
+ y 
+\begin_inset Formula $g_{s}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Si la acción del anterior Hamiltoniano es pequeña comparada con la interacción
+ de estructura fina e ignorando la estructura hiperfina, usa el teorema
+ de proyección para mostrar que en un estado (n, l, j), el momento magnético
+ tiene la forma 
+\begin_inset Formula 
+\[
+\overrightarrow{\mu}=-g_{J}\mu_{B}\mathbf{J},
+\]
+
+\end_inset
+
+donde
+\begin_inset Formula 
+\[
+g_{J}=\frac{3}{2}+\frac{S\left(S+1\right)-L\left(L+1\right)}{2J\left(J+1\right)},
+\]
+
+\end_inset
+
+se conoce como el factor 
+\begin_inset Formula $g$
+\end_inset
+
+ de Landé.
+\end_layout
+
+\begin_layout Enumerate
+Estimar la intensidad del campo magnético para la cual la interacción de
+ Zeeman se vuelve del orden de la separación debida a la estructura fina
+ entre los estados 
+\begin_inset Formula $2p_{1/2}$
+\end_inset
+
+ y 
+\begin_inset Formula $2p_{3/2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos que 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ apunta en la dirección de 
+\begin_inset Formula $z$
+\end_inset
+
+, de modo que 
+\begin_inset Formula 
+\[
+H_{int}=-\mu_{B}\left(g_{l}\mathbf{L}+g_{s}\mathbf{S}\right)\cdot\mathbf{B}=-\mu_{B}B\left(L_{z}+2S_{z}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies H_{int}=-\mu_{B}\left(\mathbf{L}\cdot\mathbf{B}+2\mathbf{S}\cdot\mathbf{B}\right).\label{eq:11}
+\end{equation}
+
+\end_inset
+
+Para calcular el efecto del campo magnetico sobre los niveles de energía
+ del átomo, solo consideraremos los elementos de la matriz 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+ dentro del subespacio 
+\begin_inset Formula $\mathcal{E}\left(E_{0},L,S,J\right)$
+\end_inset
+
+, dentro del cual se tiene (en virtud del teorema de proyección) 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{L}=\frac{\langle\mathbf{L}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}}{J\left(J+1\right)\hbar^{2}}\mathbf{J}\ \ \ \&\ \ \ \mathbf{S}=\frac{\langle\mathbf{S}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}}{J\left(J+1\right)\hbar^{2}}\mathbf{J},\label{eq:12}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\langle\mathbf{L}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}$
+\end_inset
+
+ y 
+\begin_inset Formula $\langle\mathbf{L}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}$
+\end_inset
+
+ denotan los valores promedios de los operadores 
+\begin_inset Formula $\mathbf{L}\cdot\mathbf{J}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{S}\cdot\mathbf{J}$
+\end_inset
+
+ para los estados del sistema que pertenecen al subespacio 
+\begin_inset Formula $\mathcal{E}\left(E_{0},L,S,J\right)$
+\end_inset
+
+.
+ Recordemos que 
+\begin_inset Formula $\mathbf{J}=\mathbf{L}+\mathbf{S}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\mathbf{L}\cdot\mathbf{J}=\mathbf{L}\cdot\left(\mathbb{\mathbf{L}+\mathbf{S}}\right)=\mathbf{L}^{2}+\frac{1}{2}\left(\mathbf{J}^{2}-\mathbf{L}^{2}-\mathbf{S}^{2}\right),
+\]
+
+\end_inset
+
+junto con 
+\begin_inset Formula 
+\[
+\mathbf{S}\cdot\mathbf{J}=\mathbf{L}\cdot\left(\mathbb{\mathbf{L}+\mathbf{S}}\right)=\mathbf{S}^{2}+\frac{1}{2}\left(\mathbf{J}^{2}-\mathbf{L}^{2}-\mathbf{S}^{2}\right),
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\begin{equation}
+\langle\mathbf{L}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}=L\left(L+1\right)\hbar^{2}+\frac{\hbar^{2}}{2}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right],\label{eq:13}
+\end{equation}
+
+\end_inset
+
+junto con 
+\begin_inset Formula 
+\begin{equation}
+\langle\mathbf{S}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}=S\left(L+1\right)\hbar^{2}+\frac{\hbar^{2}}{2}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right].\label{eq:14}
+\end{equation}
+
+\end_inset
+
+Si ahora sustituimos la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ en la primera de las ecuaciones dadas en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\mathbf{L}=\frac{\langle\mathbf{L}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}}{J\left(J+1\right)\hbar^{2}}\mathbf{J}=\frac{\mathbf{J}}{J\left(J+1\right)\hbar^{2}}\left(L\left(L+1\right)\hbar^{2}+\frac{\hbar^{2}}{2}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies\mathbf{L}=\left(\frac{L\left(L+1\right)}{J\left(J+1\right)}+\frac{1}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)\mathbf{J}.\label{eq:15}
+\end{equation}
+
+\end_inset
+
+Si ahora sustituimos la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ en la segunda de las ecuaciones dadas en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\mathbf{S}=\frac{\langle\mathbf{S}\cdot\mathbf{J}\rangle_{E_{0},L,S,J}}{J\left(J+1\right)\hbar^{2}}\mathbf{J}=\frac{\mathbf{J}}{J\left(J+1\right)\hbar^{2}}\left(S\left(L+1\right)\hbar^{2}+\frac{\hbar^{2}}{2}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{L}=\left(\frac{S\left(L+1\right)}{J\left(J+1\right)}+\frac{1}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)\mathbf{J}.\label{eq:16}
+\end{equation}
+
+\end_inset
+
+Si ahora multiplicamos las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{L}\cdot\mathbf{B}=\left(\frac{L\left(L+1\right)}{J\left(J+1\right)}+\frac{1}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)BJ_{z},\label{eq:17}
+\end{equation}
+
+\end_inset
+
+junto con 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{S}\cdot\mathbf{B}=\left(\frac{S\left(L+1\right)}{J\left(J+1\right)}+\frac{1}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)BJ_{z}.\label{eq:18}
+\end{equation}
+
+\end_inset
+
+Si ahora sustituimos las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\frac{H_{int}}{-\mu_{B}}=\left(\mathbf{L}\cdot\mathbf{B}+2\mathbf{S}\cdot\mathbf{B}\right)=\left(\frac{L\left(L+1\right)}{J\left(J+1\right)}+\frac{1}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)BJ_{z}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++2\left(\frac{S\left(L+1\right)}{J\left(J+1\right)}+\frac{1}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)BJ_{z},
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\frac{H_{int}}{-\mu_{B}}=\left(\frac{L\left(L+1\right)}{J\left(J+1\right)}+2\frac{S\left(L+1\right)}{J\left(J+1\right)}\right)BL_{z}+\left(\frac{3}{2J\left(J+1\right)}\left[J\left(J+1\right)-L\left(L+1\right)-S\left(S+1\right)\right]\right)BJ_{z},
+\]
+
+\end_inset
+
+agrupando terminos semejantes
+\begin_inset Formula 
+\[
+\implies\frac{H_{int}}{-\mu_{B}}=\left(\frac{L\left(L+1\right)}{J\left(J+1\right)}+2\frac{S\left(L+1\right)}{J\left(J+1\right)}\right)BL_{z}+\left(\frac{3}{2}\left[1-\frac{L\left(L+1\right)}{J\left(J+1\right)}-\frac{S\left(S+1\right)}{J\left(J+1\right)}\right]\right)BJ_{z},
+\]
+
+\end_inset
+
+desarrollando un poco
+\begin_inset Formula 
+\[
+\implies\frac{H_{int}}{-\mu_{B}}=\left(\frac{3}{2}+\frac{L\left(L+1\right)}{J\left(J+1\right)}\left(1-\frac{3}{2}\right)+\frac{S\left(L+1\right)}{J\left(J+1\right)}\left(2-\frac{3}{2}\right)\right)BJ_{z},
+\]
+
+\end_inset
+
+ahora agrupando nuevamente por términos semejantes
+\begin_inset Formula 
+\[
+\implies\frac{H_{int}}{-\mu_{B}BJ_{z}}=\frac{3}{2}+\frac{L\left(L+1\right)}{J\left(J+1\right)}\left(-\frac{1}{2}\right)+\frac{S\left(L+1\right)}{J\left(J+1\right)}\left(\frac{1}{2}\right)=\frac{3}{2}+\frac{1}{2}\left(\frac{S\left(L+1\right)}{J\left(J+1\right)}-\frac{L\left(L+1\right)}{J\left(J+1\right)}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{H_{int}}{-\mu_{B}BJ_{z}}=\frac{3}{2}+\frac{1}{2}\left(\frac{S\left(L+1\right)J\left(J+1\right)-J\left(J+1\right)L\left(L+1\right)}{J^{2}\left(J+1\right)^{2}}\right),
+\]
+
+\end_inset
+
+que finalmente, da como resultado 
+\begin_inset Formula 
+\[
+\frac{H_{int}}{-\mu_{B}BJ_{z}}=\frac{3}{2}+\frac{S\left(L+1\right)-L\left(L+1\right)}{2J\left(J+1\right)}.
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+H_{int}=-\mu_{B}\left(\frac{3}{2}+\frac{S\left(L+1\right)-L\left(L+1\right)}{2J\left(J+1\right)}\right)\mathbf{J}\cdot\mathbf{B},
+\]
+
+\end_inset
+
+si ahora definimos a 
+\begin_inset Formula 
+\[
+g=\frac{3}{2}+\frac{S\left(L+1\right)-L\left(L+1\right)}{2J\left(J+1\right)},
+\]
+
+\end_inset
+
+vemos que podemos hacer 
+\begin_inset Formula 
+\[
+\overrightarrow{\mu}=-g_{j}\mu_{B}\mathbf{J},
+\]
+
+\end_inset
+
+justo como se pedia.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

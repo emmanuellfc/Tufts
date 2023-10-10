@@ -1,0 +1,2527 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Examen 1
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 26/04/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+
+\series bold
+Preguntas conceptuales.
+
+\series default
+ Responde a las siguientes preguntas.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Enuncia los postulados de la mecánica cuántica.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Enumerate
+A cada sistema físico le corresponde un espacio de Hilbert.
+ Toda la información fisicamente accesible está almacenada en vectores de
+ estado, los cuales son elementos del espacio de Hilbert.
+ Y además, un estado puro es representado por un vector unitario en el espacio
+ de Hilbert.
+\end_layout
+
+\begin_layout Enumerate
+Los observables físicos estan representados por operadores hermitianos en
+ el espacio de Hilbert.
+ Y los eigenvalores de tales operadores corresponden a posibles resultados
+ de cantidades fisicamente medibles.
+\end_layout
+
+\begin_layout Enumerate
+Dado un sistema de muchas partículas, el espacio de Hilbert de todo el sistema
+ se obtiene mediante el producto tensorial de cada espacio de Hilbert asociado
+ a cada una de las partículas.
+\end_layout
+
+\begin_layout Enumerate
+La ecuación de Schrödinger gobierna la evolución dinámica del estado del
+ sistema, y está ultima (la evolución), resulta ser determinista, unitaria
+ y lineal.
+\end_layout
+
+\begin_layout Enumerate
+Al efectuar la medición de algún obervable físico, este acto tiene consecuencias
+ sobre el vector de estado (colapso).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuál es la expresión general de la superposicipon cuántica para un estado
+ cuántico arbitrario en la base de un operador arbitrario?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ un espacio de Hilbert, el cual representa a un sistema cuántico arbitrario.
+ Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ un operador arbitrario del espacio de Hilbert, y sea 
+\begin_inset Formula $\left\{ \left|a\right\rangle \right\} $
+\end_inset
+
+, la base formadada por el conjunto de eigenkets de 
+\begin_inset Formula $A$
+\end_inset
+
+, la cual además, suponemos que es completa.
+\end_layout
+
+\begin_layout Standard
+Dado un estado cuántico arbitrario 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+, la represetación de éste en la base de 
+\begin_inset Formula $A$
+\end_inset
+
+ está dada por 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =\sum_{a}C_{a}\left|a\right\rangle =\sum_{a}\left\langle a|\alpha\right\rangle \left|a\right\rangle \text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué es la incompatibilidad entre observables y cómo se enuncia el principio
+ de incertidumbre entre dos operadores?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Standard
+Dados dos obervables físicos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, decimos que son incompatibles si 
+\begin_inset Formula 
+\[
+\left[A,B\right]\neq0\text{,}
+\]
+
+\end_inset
+
+es decir, son incompatibles cuando no conmutan entre sí.
+ Sin embargo, desde el punto de vista físico, la incompatibilidad entre
+ observables tiene implicaciones profundas en la medición de cantidades
+ fisicas.
+ Físicamente, el que dos operadores sean incomatibles quiere decir que la
+ medición de una de las cantidades físicas representadas por ese operador
+ afecta a las del otro.
+\end_layout
+
+\begin_layout Standard
+Ahora bien, el principio de incertidumbre para los operadores 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, es 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta A\right)^{2}\right\rangle \left\langle \left(\Delta B\right)^{2}\right\rangle \geq\frac{1}{4}\left|\left\langle \left[A,B\right]\right\rangle \right|^{2}\text{,}
+\]
+
+\end_inset
+
+donde los valores esperados son tomados respecto a un vector de estado arbitrari
+o.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuáles son las diferencias entre las representaciones de Schrödinger y
+ la de Heisenberg?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Enumerate
+En la representación de Schrödinger lo que evoluciona y cambia con el tiempo
+ son los kets de estado, mientras que en la Heisenberg éstos permanecen
+ estacionarios.
+\end_layout
+
+\begin_layout Enumerate
+En la representación de Schrödinger los operadores permanecen estacionarios,
+ mientras que en la de Heisenberg, éstos son los que evolucionan y cambian
+ con el tiempo.
+\end_layout
+
+\begin_layout Enumerate
+En la representación de Schrödinger los kets base son estacionarios, mientras
+ que en la de Heisenberg, éstos se mueven en la dirección opuesta (hacia
+ atras en el tiempo).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué significado físico tiene el propagador en la mecánica cuántica?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Sol.
+
+\series default
+ Supogamos que tenemos un operador 
+\begin_inset Formula $A$
+\end_inset
+
+ que conmuta con el Hamiltoniano.
+ En terminos de los eigenkets de 
+\begin_inset Formula $A$
+\end_inset
+
+, el operador propagador esta dado por 
+\begin_inset Formula 
+\[
+K\left(\mathbf{x}^{\prime\prime},t;\mathbf{x}^{\prime},t_{0}\right)=\sum_{a^{\prime}}\left\langle \mathbf{x}^{\prime\prime}|a^{\prime}\right\rangle \left\langle a^{\prime}|\mathbf{x}^{\prime}\right\rangle \exp\left[\frac{-iE_{a^{\prime}}\left(t-t_{0}\right)}{\hbar}\right]\text{.}
+\]
+
+\end_inset
+
+Si pensamos al propagador como una función de 
+\begin_inset Formula $\mathbf{x}^{\prime\prime}$
+\end_inset
+
+, éste es la función de onda al tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+ de una partícula que estuvo localizada en la posición 
+\begin_inset Formula $\mathbf{x}^{\prime}$
+\end_inset
+
+ en un tiempo anterior 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Pozo unidimensional infinito.
+ Conssidera una partítula de masa 
+\begin_inset Formula $m$
+\end_inset
+
+ bajo la acción del siguiente potencial: 
+\begin_inset Formula 
+\begin{equation}
+V\left(r\right)=\left\{ \begin{array}{cc}
+0 & 0\leq x\leq a\\
++\infty & x<0\ \ \&\ \ x>a
+\end{array}\right.\text{.}\label{eq:01}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Encuentra los eigenestados 
+\begin_inset Formula $\left|\phi_{n}\right\rangle $
+\end_inset
+
+ y eigenvalores 
+\begin_inset Formula $E_{n}$
+\end_inset
+
+ del sistema.
+\end_layout
+
+\begin_layout Enumerate
+Si el estado inicial del sistema es 
+\begin_inset Formula $\left|\psi\left(0\right)\right\rangle =a_{1}\left|\phi_{1}\right\rangle +a_{2}\left|\phi_{2}\right\rangle +a_{3}\left|\phi_{3}\right\rangle +a_{4}\left|\phi_{4}\right\rangle $
+\end_inset
+
+.
+ ¿Cuál es la probabilidad de encontrar un valor de energía menor a 
+\begin_inset Formula $E=\frac{3\pi^{2}\hbar^{2}}{ma^{2}}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es el valor medio y la desviación cuadrática media de la energía de
+ la partícula en el estado 
+\begin_inset Formula $\left|\psi\left(0\right)\right\rangle $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Calcula el vector de estado al tiempo t: 
+\begin_inset Formula $\left|\psi\left(t\right)\right\rangle $
+\end_inset
+
+.
+ ¿Los resultados que encontraste en los incisos b) y c) permanecen válidos
+ al tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Cuando la energía es medida, se encuentra el resultado 
+\begin_inset Formula $E=\frac{8\pi^{2}\hbar^{2}}{ma^{2}}$
+\end_inset
+
+.
+ Después de la medición, ¿cuál es el estado del sistema? ¿Cuál es el resultado
+ si se mide de nuevo la energía?
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+El problema que tenemos que resolver esta dado por la ecuación 
+\begin_inset Formula 
+\begin{equation}
+H\left|\phi\right\rangle =E\left|\phi\right\rangle \text{,}\label{eq:02}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $H$
+\end_inset
+
+ esta dado por 
+\begin_inset Formula $H=\frac{p^{2}}{2m}+V$
+\end_inset
+
+, y el cual se traduce en resolver la ecuación diferencial 
+\begin_inset Formula 
+\[
+\frac{-\hbar^{2}}{2m}\frac{\partial^{2}\phi\left(x\right)}{\partial x^{2}}=E\phi\left(x\right)\iff\frac{\partial^{2}\phi\left(x\right)}{\partial x^{2}}=-k^{2}\phi\left(x\right);\ \ \ k^{2}=\frac{2m}{\hbar^{2}}E
+\]
+
+\end_inset
+
+ cuya solución esta dada por 
+\begin_inset Formula 
+\[
+\phi\left(x\right)=A\sin\left(kx\right)+B\cos\left(kx\right)\text{.}
+\]
+
+\end_inset
+
+Usando las condicione de frontera, tenemos que 
+\begin_inset Formula 
+\[
+B=0\ \ \ \&\ \ \ k_{n}=\frac{n\pi}{a},
+\]
+
+\end_inset
+
+con lo cual
+\begin_inset Formula 
+\[
+\phi_{n}\left(x\right)=A\sin\left(\frac{n\pi}{a}x\right),\ \ \ E_{n}=\frac{n^{2}\pi^{2}\hbar^{2}}{2ma^{2}}\text{,}
+\]
+
+\end_inset
+
+sin embargo, falta por calcular 
+\begin_inset Formula $A$
+\end_inset
+
+, la cual se obtiene de la condicion de normalización de la función de onda.
+ Por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\left|\phi_{n}\right\rangle =\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi}{a}x\right),\ \ \ E_{n}=\frac{n^{2}\pi^{2}\hbar^{2}}{2ma^{2}}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien, el estado 
+\begin_inset Formula $\left|\psi\left(0\right)\right\rangle $
+\end_inset
+
+ queda escrito como 
+\begin_inset Formula 
+\[
+\left|\psi\left(0\right)\right\rangle =a_{1}\sqrt{\frac{2}{a}}\sin\left(\frac{\pi}{a}x\right)+a_{2}\sqrt{\frac{2}{a}}\sin\left(\frac{2\pi}{a}x\right)+a_{3}\sqrt{\frac{2}{a}}\sin\left(\frac{3\pi}{a}x\right)+a_{4}\sqrt{\frac{2}{a}}\sin\left(\frac{4\pi}{a}x\right)\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos cuando efectuamos una medición sobre el sistema,
+ el cual, en principio se asume como una superposición de estados cuánticos,
+ colapsa en alguno de los eigenestados del sustema, y esto lo hace con una
+ probabilidad dada por 
+\begin_inset Formula 
+\[
+a^{\prime}=\left|\left\langle a^{\prime}|\alpha\right\rangle \right|^{2}\text{,}
+\]
+
+\end_inset
+
+en donde el ket 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+ representa un estado arbitrario del sistema, el cual además esta normalizado.
+ Por tanto,la probabilidad de que al medir la energía del sistema, encontremos
+ una energía menor a 
+\begin_inset Formula $E=\frac{3\pi^{2}\hbar^{2}}{ma^{2}}$
+\end_inset
+
+, viene dada por la probabilidad de proyectar nuestro estado 
+\begin_inset Formula $\left|\psi\left(0\right)\right\rangle $
+\end_inset
+
+ sobre algun eigenket de energía menor a la considerada en este problema.
+ Las cuales en este caso en partícular, serian las de los estados 
+\begin_inset Formula $\left|\phi_{1}\right\rangle $
+\end_inset
+
+ y 
+\begin_inset Formula $\left|\phi_{2}\right\rangle $
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula 
+\[
+P_{1}=\left|\left\langle \phi_{1}|\psi\left(0\right)\right\rangle \right|^{2}=\frac{1}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+a_{4}^{2}}}\left|\left\langle \phi_{1}\right|\left(a_{1}\left|\phi_{1}\right\rangle +a_{2}\left|\phi_{2}\right\rangle +a_{3}\left|\phi_{3}\right\rangle +a_{4}\left|\phi_{4}\right\rangle \right)\right|^{2}=\frac{\left|a_{1}\right|^{2}}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+a_{4}^{2}}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore P_{1}=\frac{\left|a_{1}\right|^{2}}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+a_{4}^{2}}}
+\]
+
+\end_inset
+
+lo anterior es justamente así por las propiedades de ortogonalidad de los
+ ket base.
+ Mientras que para el otro estado, tenemos 
+\begin_inset Formula 
+\[
+P_{2}=\left|\left\langle \phi_{2}|\psi\left(0\right)\right\rangle \right|^{2}=\frac{1}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+a_{4}^{2}}}\left|\left\langle \phi_{2}\right|\left(a_{1}\left|\phi_{1}\right\rangle +a_{2}\left|\phi_{2}\right\rangle +a_{3}\left|\phi_{3}\right\rangle +a_{4}\left|\phi_{4}\right\rangle \right)\right|^{2}=\frac{\left|a_{2}\right|^{2}}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+a_{4}^{2}}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P_{2}=\frac{\left|a_{2}\right|^{2}}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+a_{4}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para el valor medio y la desviación cuadrática media de la energía, tenemo
+ que calcular 
+\begin_inset Formula 
+\[
+\left\langle \psi\left(0\right)\right|H\left|\psi\left(0\right)\right\rangle =\left(a_{1}\left\langle \phi_{1}\right|+a_{2}\left\langle \phi_{2}\right|+a_{3}\left\langle \phi_{3}\right|+a_{4}\left\langle \phi_{4}\right|\right)H\left(a_{1}\left|\phi_{1}\right\rangle +a_{2}\left|\phi_{2}\right\rangle +a_{3}\left|\phi_{3}\right\rangle +a_{4}\left|\phi_{4}\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \psi\left(0\right)\right|H\left|\psi\left(0\right)\right\rangle =a_{1}E_{1}\left\langle \phi_{1}|\phi_{1}\right\rangle +a_{2}E_{2}\left\langle \phi_{2}|\phi_{2}\right\rangle +a_{3}E_{3}\left\langle \phi_{3}|\phi_{3}\right\rangle +a_{4}E_{4}\left\langle \phi_{4}|\phi_{4}\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle H\right\rangle _{\phi_{0}}=a_{1}E_{1}+a_{2}E_{2}+a_{3}E_{3}+a_{4}E_{4}=a_{1}\frac{\pi^{2}\hbar^{2}}{2ma^{2}}+a_{2}\frac{4\pi^{2}\hbar^{2}}{2ma^{2}}+a_{3}\frac{9\pi^{2}\hbar^{2}}{2ma^{2}}+a_{4}\frac{16\pi^{2}\hbar^{2}}{2ma^{2}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle H\right\rangle _{\phi_{0}}=\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\left(a_{1}+4a_{2}+9a_{3}+16a_{4}\right)\text{.}
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $\left\langle H^{2}\right\rangle _{\phi_{0}}$
+\end_inset
+
+ es practicamente el mismo procedimiento 
+\begin_inset Formula 
+\[
+\left\langle H^{2}\right\rangle _{\phi_{0}}=a_{1}E_{1}^{2}+a_{2}E_{2}^{2}+a_{3}E_{3}^{2}+a_{4}E_{4}^{2}=a_{1}\left(\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}+a_{2}\left(\frac{4\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}+a_{3}\left(\frac{9\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}+a_{4}\left(\frac{16\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle H^{2}\right\rangle _{\phi_{0}}=\left(\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}\left(a_{1}+16a_{2}+81a_{3}+256a_{4}\right)\text{,}
+\]
+
+\end_inset
+
+ y por lo tanto, la desviación cuadrática media es 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta H\right)^{2}\right\rangle _{\phi_{0}}=\left\langle H^{2}\right\rangle _{\phi_{0}}-\left\langle H\right\rangle _{\phi_{0}}^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \left(\Delta H\right)^{2}\right\rangle _{\phi_{0}}=\left(\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}\left(a_{1}+16a_{2}+81a_{3}+256a_{4}\right)-\left(\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}\left(a_{1}+4a_{2}+9a_{3}+16a_{4}\right)^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \left(\Delta H\right)^{2}\right\rangle _{\phi_{0}}=\left(\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}\left(a_{1}+16a_{2}+81a_{3}+256a_{4}-\left(a_{1}+4a_{2}+9a_{3}+16a_{4}\right)^{2}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle \left(\Delta H\right)^{2}\right\rangle _{\phi_{0}}=\left(\frac{\pi^{2}\hbar^{2}}{2ma^{2}}\right)^{2}\left[\right.-a_{1}^{2}-16a_{2}^{2}+81a_{3}-81a_{3}^{2}+256a_{4}-288a_{3}a_{4}-256a_{4}^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-8a_{2}\left(-2+9a_{3}+16a_{4}\right)-a_{1}\left(1+8a_{2}+18a_{3}+32a_{4}\right)\left.\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si ahora consideramos la evolución temporal del sistema, tenemos que hacer
+ 
+\begin_inset Formula 
+\[
+\left|\psi\left(t\right)\right\rangle =\mathcal{U}\left(t,t_{0}=0\right)\left|\psi\left(0\right)\right\rangle =\exp\left(\frac{-iHt}{\hbar}\right)\left|\psi\left(0\right)\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\psi\left(t\right)\right\rangle =\exp\left(\frac{-iHt}{\hbar}\right)\left(a_{1}\left|\phi_{1}\right\rangle +a_{2}\left|\phi_{2}\right\rangle +a_{3}\left|\phi_{3}\right\rangle +a_{4}\left|\phi_{4}\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\psi\left(t\right)\right\rangle =a_{1}\exp\left(\frac{-iHt}{\hbar}\right)\left|\phi_{1}\right\rangle +a_{2}\exp\left(\frac{-iHt}{\hbar}\right)\left|\phi_{2}\right\rangle +a_{3}\exp\left(\frac{-iHt}{\hbar}\right)\left|\phi_{3}\right\rangle +a_{4}\exp\left(\frac{-iHt}{\hbar}\right)\left|\phi_{4}\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\psi\left(t\right)\right\rangle =a_{1}\exp\left(\frac{-iE_{1}t}{\hbar}\right)\left|\phi_{1}\right\rangle +a_{2}\exp\left(\frac{-iE_{2}t}{\hbar}\right)\left|\phi_{2}\right\rangle +a_{3}\exp\left(\frac{-iE_{3}t}{\hbar}\right)\left|\phi_{3}\right\rangle +a_{4}\exp\left(\frac{-iE_{4}t}{\hbar}\right)\left|\phi_{4}\right\rangle .
+\]
+
+\end_inset
+
+Por lo tanto, tenemos que 
+\begin_inset Formula $\left|\psi\left(t\right)\right\rangle $
+\end_inset
+
+ está dado por
+\begin_inset Formula 
+\[
+\left|\psi\left(t\right)\right\rangle =a_{1}\sqrt{\frac{2}{a}}\exp\left(\frac{-i\pi^{2}\hbar t}{2ma^{2}}\right)\sin\left(\frac{\pi}{a}x\right)+a_{2}\sqrt{\frac{2}{a}}\exp\left(\frac{-i4\pi^{2}\hbar t}{2ma^{2}}\right)\sin\left(\frac{2\pi}{a}x\right)+
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++a_{3}\sqrt{\frac{2}{a}}\exp\left(\frac{-i9\pi^{2}\hbar t}{2ma^{2}}\right)\sin\left(\frac{3\pi}{a}x\right)+a_{4}\sqrt{\frac{2}{a}}\exp\left(\frac{-i16\pi^{2}\hbar t}{2ma^{2}}\right)\sin\left(\frac{4\pi}{a}x\right)\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos que los valores esperados no dependen de la evolución
+ temporal, de manera que sí, las mediciones (cálculos) hechas de los incisos
+ anteriores sigues siendo válidos aún cuando el sistema ha evolucionado
+ en el tiempo.
+\end_layout
+
+\begin_layout Enumerate
+Veamós si la energía medida corresponde a un eigenestado.
+ De manera general, las eigenenergías estan dadas por 
+\begin_inset Formula 
+\[
+E_{n}=\frac{n^{2}\pi^{2}\hbar^{2}}{2ma^{2}}\text{,}
+\]
+
+\end_inset
+
+mientras que nosotros tenemos 
+\begin_inset Formula 
+\[
+E=\frac{8\pi^{2}\hbar^{2}}{ma^{2}}\text{,}
+\]
+
+\end_inset
+
+de manera que para ver si es o no eigenenergía, tenemos que resolver 
+\begin_inset Formula 
+\[
+\frac{n^{2}}{2}=8\iff n^{2}=\sqrt{16}\iff n=4\text{,}
+\]
+
+\end_inset
+
+el resultado anterior quiere decir que efectivamente, la medición nos dio
+ un eigenestado de energía, de tal manera que sí medimos nuevamente la energía
+ obtendremos el mismo resultado, ya que la función de onda colapso a un
+ eigenestado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+
+\series bold
+Molécula triátomica.
+
+\series default
+ Considera un electrón formado por tres átomos equidistantes.
+ Usamos ∣φA⟩, ∣φB ⟩ y ∣φC ⟩ para denotar los tres estados ortonormales del
+ electrón que corresponden a las tres funciones de onda que representan
+ la localización alrededor de los núcleos atómicos A, B y C, respectivamente.
+ En este caso, nos estamos confinando a un subespacio de estados que es
+ generado sólo por los estados ∣φA ⟩, ∣φB ⟩ y ∣φC ⟩.
+ Cuando negamos la posibilidad de que el electrón salte de un núcleo atómico
+ a otro, su energı́a está descrita por el Hamiltoniano Ĥ0 cuyos eigenestados
+ son los estados ∣φA⟩, ∣φB ⟩ y ∣φC ⟩, todos con energı́a E0.
+ El acoplamiento entre los estados ∣φA⟩, ∣φB ⟩ y ∣φC ⟩ está descrito por
+ un Hamiltoniano adicional ĤI definido por: 
+\begin_inset Formula 
+\begin{equation}
+\hat{H}_{I}\left|\phi_{A}\right\rangle =-a\left|\phi_{B}\right\rangle \text{,}\label{eq:03}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\hat{H}_{I}\left|\phi_{B}\right\rangle =-a\left|\phi_{A}\right\rangle -a\left|\phi_{C}\right\rangle \text{,}\label{eq:04}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\hat{H}_{I}\left|\phi_{C}\right\rangle =-a\left|\phi_{B}\right\rangle \text{,}\label{eq:05}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $a$
+\end_inset
+
+ es una constante real positiva.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcula los eigenestados y eigenenergı́as del Hamiltoniano 
+\begin_inset Formula $Ĥ=Ĥ_{0}+Ĥ_{I}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Si el electrón se encuentra en el estado 
+\begin_inset Formula $\left|\phi_{A}\right\rangle $
+\end_inset
+
+ al tiempo 
+\begin_inset Formula $t=0$
+\end_inset
+
+, discute cualitativamente la localización del electrón a tiempos subsecuentes
+ 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ ¿Hay algún valor de 
+\begin_inset Formula $t$
+\end_inset
+
+ para el cual esté perfectamente localizado en alguno de los átomos 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ o 
+\begin_inset Formula $C$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\hat{D}$
+\end_inset
+
+ la observable cuyos eigenestados son 
+\begin_inset Formula $\left|\phi_{A}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left|\phi_{B}\right\rangle $
+\end_inset
+
+ y 
+\begin_inset Formula $\left|\phi_{C}\right\rangle $
+\end_inset
+
+ con eigenvalores respectivos 
+\begin_inset Formula $−d$
+\end_inset
+
+, 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $D$
+\end_inset
+
+ es medida al tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+, ¿Qué valores pueden encontrarse y con qué probabilidades? 
+\end_layout
+
+\begin_layout Enumerate
+Cuando el estado inicial del electrón es arbitrario, ¿cuáles son las frecuencias
+ de Bohr (las diferencias entre las eigenenergı́as del sistema) que pueden
+ aparecer en la evolución de 
+\begin_inset Formula $\left\langle \hat{D}\right\rangle $
+\end_inset
+
+? Brinda una interpretación fı́sica del operador 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Si se usan ondas electromagnéticas para excitar al electrón, ¿qué frecuencias
+ puede absorber y emitir en la molécula ? 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Tenemos que resolver el problema de eigenvalores dado por 
+\begin_inset Formula 
+\[
+H\left|\alpha\right\rangle =\lambda\left|\alpha\right\rangle \text{,}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $H$
+\end_inset
+
+ está dado por 
+\begin_inset Formula $Ĥ=Ĥ_{0}+Ĥ_{I}$
+\end_inset
+
+, y en general, 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =\sum_{i}C_{i}\left|\phi_{i}\right\rangle \text{,}C_{i}=\left\langle \phi_{i}|\alpha\right\rangle \ \ \ i=A,B,C\text{.}
+\]
+
+\end_inset
+
+Como primer paso, escribamos al operador 
+\begin_inset Formula $H$
+\end_inset
+
+ en términos matriciales, para lo cual, hagamos las siguientes identificaciones
+ 
+\begin_inset Formula 
+\[
+\left|\phi_{A}\right\rangle =\left(\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right),\left|\phi_{B}\right\rangle =\left(\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right),\left|\phi_{C}\right\rangle =\left(\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+Podemos hacer lo anterior porque nos estamos restringiendo a un subespacio
+ generado por los tres estados 
+\begin_inset Formula $\left|\phi_{A}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left|\phi_{B}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left|\phi_{C}\right\rangle $
+\end_inset
+
+.
+ Por otra parte, tenemos que 
+\begin_inset Formula 
+\[
+H_{0}\left|\phi_{i}\right\rangle =E_{0}\left|\phi_{i}\right\rangle \ \ \ \forall i=A,B,C\text{,}
+\]
+
+\end_inset
+
+de manera que la representación matricial de 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ está dada por 
+\begin_inset Formula 
+\begin{equation}
+H_{0}=\left(\begin{array}{ccc}
+E_{0} & 0 & 0\\
+0 & E_{0} & 0\\
+0 & 0 & E_{0}
+\end{array}\right)\text{.}\label{eq:06}
+\end{equation}
+
+\end_inset
+
+Ahora bien, si nos fijamos en las relaciones dadas por las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:03"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:04"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:05"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, tenemos las siguientes relaciones 
+\begin_inset Formula 
+\[
+H_{I}\left(\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+-a\\
+0
+\end{array}\right),\ \ \ H_{I}\left(\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right)=\left(\begin{array}{c}
+-a\\
+0\\
+-a
+\end{array}\right),\ \ \ H_{I}\left(\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+-a\\
+0
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+lo cual nos conduce a la representación matricial de 
+\begin_inset Formula $H_{I}$
+\end_inset
+
+, la cual esta dada por 
+\begin_inset Formula 
+\begin{equation}
+H_{I}=\left(\begin{array}{ccc}
+0 & -a & 0\\
+-a & 0 & -a\\
+0 & -a & 0
+\end{array}\right)\text{,}\label{eq:07}
+\end{equation}
+
+\end_inset
+
+y por lo tanto, la representación matricial de 
+\begin_inset Formula $H$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{equation}
+H=\left(\begin{array}{ccc}
+E_{0} & -a & 0\\
+-a & E_{0} & -a\\
+0 & -a & E_{0}
+\end{array}\right)\text{.}\label{eq:08}
+\end{equation}
+
+\end_inset
+
+Ahora encontremos los valores y vectores propios de la ecuación anterior.
+ Para los eigenvalores, tenemos que resolver 
+\begin_inset Formula 
+\[
+\det\left(H-\lambda\mathbb{I}\right)=0\text{,}
+\]
+
+\end_inset
+
+el cual se traduce en 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{ccc}
+E_{0}-\lambda & -a & 0\\
+-a & E_{0}-\lambda & -a\\
+0 & -a & E_{0}-\lambda
+\end{array}\right)=0\iff\left(E_{0}-\lambda\right)^{3}=2a^{2}\left(E_{0}-\lambda\right)\text{,}
+\]
+
+\end_inset
+
+lo que implica que 
+\begin_inset Formula $\lambda_{1}=E_{0}$
+\end_inset
+
+, mientras que para los otros dos valores propios tenemos que resolver 
+\begin_inset Formula 
+\[
+\left(E_{0}-\lambda\right)^{2}=2a^{2}\implies\lambda_{2,3}=E_{0}\pm\sqrt{2}a\text{,}
+\]
+
+\end_inset
+
+y por lo tanto, los eigenvalores están dados por 
+\begin_inset Formula 
+\begin{equation}
+\lambda=\left\{ E_{0},E_{0}+\sqrt{2}a,E_{0}-\sqrt{2}a\right\} \text{.}\label{eq:09}
+\end{equation}
+
+\end_inset
+
+Ahora bien, para los vectores propios tenemos que resolver el sistema 
+\begin_inset Formula 
+\[
+\left(H-\lambda_{i}\mathbb{I}\right)\mathbf{x}=\mathbf{0},\ \ \ \forall i=1,2,3\text{.}
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $\lambda_{1}=E_{0}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\left(H-\lambda_{1}\mathbb{I}\right)\mathbf{x}=\mathbf{0}\iff\left(\begin{array}{ccc}
+E_{0}-E_{0} & -a & 0\\
+-a & E_{0}-E_{0} & -a\\
+0 & -a & E_{0}-E_{0}
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+dando como resultado el vector propio 
+\begin_inset Formula $\left(1,0,-1\right)^{T}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $\lambda_{2}=E_{0}+\sqrt{2}a$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\left(H-\lambda_{2}\mathbb{I}\right)\mathbf{x}=\mathbf{0}\iff\left(\begin{array}{ccc}
+E_{0}-E_{0}-\sqrt{2}a & -a & 0\\
+-a & E_{0}-E_{0}-\sqrt{2}a & -a\\
+0 & -a & E_{0}-E_{0}-\sqrt{2}a
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+el cual nos conduce al vector propio 
+\begin_inset Formula $\left(1,-\sqrt{2},1\right)^{T}$
+\end_inset
+
+.
+ Finalmente, para 
+\begin_inset Formula $\lambda_{3}=E_{0}-\sqrt{2}a$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\left(H-\lambda_{3}\mathbb{I}\right)\mathbf{x}=\mathbf{0}\iff\left(\begin{array}{ccc}
+E_{0}-E_{0}+\sqrt{2}a & -a & 0\\
+-a & E_{0}-E_{0}+\sqrt{2}a & -a\\
+0 & -a & E_{0}-E_{0}+\sqrt{2}a
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+cuyo valor propio es 
+\begin_inset Formula $\left(1,\sqrt{2},1\right)^{T}$
+\end_inset
+
+.
+ Por lo tanto, los vectores propios estan dados por 
+\begin_inset Formula 
+\[
+\lambda_{1}\rightarrow\left(\begin{array}{c}
+1\\
+0\\
+-1
+\end{array}\right),\lambda_{2}\rightarrow\left(\begin{array}{c}
+1\\
+-\sqrt{2}\\
+1
+\end{array}\right),\lambda_{3}\rightarrow\left(\begin{array}{c}
+1\\
+\sqrt{2}\\
+1
+\end{array}\right).
+\]
+
+\end_inset
+
+Escribiendo los eigenkets de 
+\begin_inset Formula $H$
+\end_inset
+
+ en términos de la base 
+\begin_inset Formula $\left\{ \left|\phi_{A}\right\rangle ,\left|\phi_{B}\right\rangle ,\left|\phi_{C}\right\rangle \right\} $
+\end_inset
+
+ y haciendo algunos cambios de notación, tenemos que los respectivos eigenvalore
+s y eigenkets del operador 
+\begin_inset Formula $H$
+\end_inset
+
+ están dados por 
+\begin_inset Formula 
+\begin{equation}
+E_{1}=E_{0}\rightarrow\left|h_{1}\right\rangle =\left|\phi_{A}\right\rangle -\left|\phi_{C}\right\rangle ,\label{eq:h1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+E_{2}=E_{0}+\sqrt{2}a\rightarrow\left|h_{2}\right\rangle =\left|\phi_{A}\right\rangle -\ensuremath{\sqrt{2}}\left|\phi_{B}\right\rangle +\left|\phi_{C}\right\rangle ,\label{eq:h2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+E_{3}=E_{0}-\sqrt{2}a\rightarrow\left|h_{3}\right\rangle =\left|\phi_{A}\right\rangle +\ensuremath{\sqrt{2}}\left|\phi_{B}\right\rangle +\left|\phi_{C}\right\rangle \text{,}\label{eq:h3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore H\left|h_{i}\right\rangle =h_{i}\left|h_{1}\right\rangle \text{,}\ \ \ \forall i=1,2,3\label{eq:HKets}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien para describir el estado del sistema a tiempos posteriores, es
+ necesario saber cómo es que actua el operador de evolución sobre los kets
+ base.
+ Hasta el momento he calculado los eigenkets de 
+\begin_inset Formula $H$
+\end_inset
+
+ en términos de la base 
+\begin_inset Formula $\left\{ \left|\phi_{A}\right\rangle ,\left|\phi_{B}\right\rangle ,\left|\phi_{C}\right\rangle \right\} $
+\end_inset
+
+, sin embargo, nada nos impide expresar a la base anterior en terminos de
+ los eigenkets de 
+\begin_inset Formula $H$
+\end_inset
+
+, lo único que tenemos que hacer es resolver el sistema de ecuaciones dado
+ en las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:h1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:h2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:h3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ para 
+\begin_inset Formula $\left\{ \left|\phi_{A}\right\rangle ,\left|\phi_{B}\right\rangle ,\left|\phi_{C}\right\rangle \right\} $
+\end_inset
+
+, lo cual nos da como resultado 
+\begin_inset Formula 
+\[
+\left|\phi_{A}\right\rangle =\frac{1}{2}\left|h_{1}\right\rangle +\frac{1}{4}\left(\left|h_{2}\right\rangle +\left|h_{3}\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\phi_{B}\right\rangle =\frac{1}{2\sqrt{2}}\left(-\left|h_{2}\right\rangle +\left|h_{3}\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\phi_{C}\right\rangle =-\frac{1}{2}\left|h_{1}\right\rangle +\frac{1}{4}\left(\left|h_{2}\right\rangle +\left|h_{3}\right\rangle \right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, dado que el Hamiltoniano no depende explicitamente del tiempo,
+ tenemos que el operador de evolución por definición esta dado por 
+\begin_inset Formula 
+\[
+\mathcal{U}\left(t,t=0\right)=\exp\left(\frac{-iH\left(t-t_{0}\right)}{\hbar}\right)\text{.}
+\]
+
+\end_inset
+
+Si lo escribimos en términos de la base 
+\begin_inset Formula $\left\{ \left|h_{1}\right\rangle ,\left|h_{2}\right\rangle ,\left|h_{3}\right\rangle \right\} $
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\exp\left(\frac{-iHt}{\hbar}\right)=\sum_{i=0}^{3}\left|h_{i}\right\rangle \exp\left(\frac{-iE_{i}\left(t-t_{0}\right)}{\hbar}\right)\left\langle h_{i}\right|\text{.}
+\]
+
+\end_inset
+
+Por lo tanto, si al tiempo 
+\begin_inset Formula $t=0$
+\end_inset
+
+, el sistema está en el estado 
+\begin_inset Formula $\left|\phi_{A},t_{0}=0\right\rangle =\left|\phi_{A}\right\rangle $
+\end_inset
+
+ , tenemos que 
+\begin_inset Formula 
+\[
+\left|\phi_{A},t_{0}=0;t\right\rangle =\exp\left(\frac{-iHt}{\hbar}\right)\left|\phi_{A},t_{0}=0\right\rangle =\sum_{i=0}^{3}\left|h_{i}\right\rangle \exp\left(\frac{-iE_{i}t}{\hbar}\right)\left\langle h_{i}|\phi_{A},t_{0}=0\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left|\phi_{A},t_{0}=0;t\right\rangle =\sum_{i=0}^{3}\left|h_{i}\right\rangle \exp\left(\frac{-iE_{i}t}{\hbar}\right)\phi_{i}\text{,}\label{eq:14}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\left\langle h_{i}|\phi_{A}\right\rangle =\phi_{i}$
+\end_inset
+
+.
+ Explícitamente tenemos que 
+\begin_inset Formula 
+\[
+\left|\phi_{A},t_{0}=0;t\right\rangle =\frac{1}{2}\exp\left(\frac{-iE_{0}t}{\hbar}\right)\left|h_{1}\right\rangle +\frac{1}{4}\exp\left(\frac{-i\left(E_{0}+\sqrt{2}a\right)t}{\hbar}\right)\left|h_{2}\right\rangle +\frac{1}{4}\exp\left(\frac{-i\left(E_{0}-\sqrt{2}a\right)t}{\hbar}\right)\left|h_{3}\right\rangle \text{.}
+\]
+
+\end_inset
+
+De la expresión anterior vemos que, en general para ningun tiempo 
+\begin_inset Formula $t\neq$
+\end_inset
+
+ el sistema se encuentra perfectamente localizado en álguno de los átomos
+ 
+\begin_inset Formula $A,B$
+\end_inset
+
+ o 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El operador 
+\begin_inset Formula $D$
+\end_inset
+
+ cumple con la ecuación de eigenvalores 
+\begin_inset Formula 
+\[
+D\left|\phi_{i}\right\rangle =d_{i}\left|\phi_{i}\right\rangle \text{,}\ \ \ \forall i=A,B,C\ \ \&\ \ d_{1}=-d,d_{2}=0,d_{3}=d\text{,}
+\]
+
+\end_inset
+
+pero si escribimos a los kets 
+\begin_inset Formula $\left|\phi_{i}\right\rangle $
+\end_inset
+
+, en términos de la base 
+\begin_inset Formula $\left\{ \left|h_{1}\right\rangle ,\left|h_{2}\right\rangle ,\left|h_{3}\right\rangle \right\} $
+\end_inset
+
+, la ecuación anterior, se transforma en 
+\begin_inset Formula 
+\[
+\sum_{i}D\left|h_{i}\right\rangle \phi_{i}=\sum_{i}d_{i}\left|h_{i}\right\rangle \phi_{i}\text{,}
+\]
+
+\end_inset
+
+por ortogonalidad, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+D\left|h_{i}\right\rangle \phi_{i}=d_{i}\phi_{i}\left|h_{i}\right\rangle \text{.}
+\end{equation}
+
+\end_inset
+
+La ecuación anterior, nos dice cómo actua el operador 
+\begin_inset Formula $D$
+\end_inset
+
+ sobre los kets base 
+\begin_inset Formula $\left\{ \left|h_{1}\right\rangle ,\left|h_{2}\right\rangle ,\left|h_{3}\right\rangle \right\} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Por otra parte, si 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+ es un estado arbitrario del sistema que estamos estudiando, tenemos que
+ 
+\begin_inset Formula 
+\[
+\left\langle \alpha|D|\alpha\right\rangle =\sum_{m}\phi_{m}^{*}\left\langle h_{m}\right|\exp\left(\frac{iE_{m}t}{\hbar}\right)D\sum_{n}\phi_{n}\exp\left(\frac{-iE_{n}t}{\hbar}\right)\left|h_{n}\right\rangle =\sum_{m}\sum\phi_{m}^{*}\phi_{n}\left\langle h_{m}\right|D\left|h_{n}\right\rangle \exp\left(\frac{i\left(E_{m}-E_{n}\right)t}{\hbar}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left\langle \alpha|D|\alpha\right\rangle =\sum_{m}\sum\phi_{m}^{*}\phi_{n}\left\langle h_{m}\right|D\left|h_{n}\right\rangle \exp\left(\frac{i\left(E_{m}-E_{n}\right)t}{\hbar}\right)\text{,}
+\end{equation}
+
+\end_inset
+
+donde las frecuencias de Bohr están dadas por 
+\begin_inset Formula 
+\begin{equation}
+\omega_{m,n}=\frac{E_{m}-E_{n}}{\hbar}\text{.}
+\end{equation}
+
+\end_inset
+
+Las cuales, explicitamente están dadas por 
+\begin_inset Formula 
+\[
+\omega_{1,2}=\frac{E_{1}-E_{2}}{\hbar}=\frac{-\sqrt{2}a}{\hbar}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{1,3}=\frac{E_{1}-E_{3}}{\hbar}=\frac{\sqrt{2}a}{\hbar}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{2,1}=\frac{E_{2}-E_{1}}{\hbar}=\frac{\sqrt{2}a}{\hbar}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{2,3}=\frac{E_{2}-E_{3}}{\hbar}=\frac{2\sqrt{2}a}{\hbar}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{3,1}=\frac{E_{3}-E_{1}}{\hbar}=\frac{-\sqrt{2}a}{\hbar}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{3,2}=\frac{E_{3}-E_{2}}{\hbar}=-\frac{2\sqrt{2}a}{\hbar}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Polarizador y analizador de átomos.
+ Considera un dispositivo experimental como se muestra en la figura: un
+ haz de átomos de espı́n 
+\begin_inset Formula $1/2$
+\end_inset
+
+ sale de un horno 
+\begin_inset Formula $E_{1}$
+\end_inset
+
+ , es colimado en 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ y pasa a través de uno de los aparatos 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ que sirve como “polarizador” en una dirección que hace un ángulo 
+\begin_inset Formula $θ$
+\end_inset
+
+ con el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ en el plano 
+\begin_inset Formula $xz$
+\end_inset
+
+, y luego pasa a través de otro aparato 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ , el “analizador”, que mide la componente 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ del espı́n.
+ Asumimos que entre el polarizador y el analizador, un campo magnético 
+\begin_inset Formula $\mathbf{B}_{0}$
+\end_inset
+
+ es aplicado de manera uniforme al eje 
+\begin_inset Formula $x$
+\end_inset
+
+ sobre una distancia 
+\begin_inset Formula $L$
+\end_inset
+
+ del haz atómico.
+ Llamamos v a la velocidad de los átomos y 
+\begin_inset Formula $T=L/v$
+\end_inset
+
+ al tiempo durante el cual se encuentran bajo la acción del campo aplicado
+ 
+\begin_inset Formula $\mathbf{B}_{0}$
+\end_inset
+
+.
+ Además, definimos 
+\begin_inset Formula $ω_{0}=−γB_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es el vector de estado 
+\begin_inset Formula $\left|\psi_{1}\right\rangle $
+\end_inset
+
+ del espı́n en el momento en el que entra al analizador.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Muestra que cuando la medición ocurre en el analizador hay una probabilidad
+ igual a 
+\begin_inset Formula $\frac{1}{2}\left(1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)$
+\end_inset
+
+ de encontrar el estado con 
+\begin_inset Formula $\hbar/2$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{2}\left(1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)$
+\end_inset
+
+ de encontrar el estado con 
+\begin_inset Formula $-\hbar/2$
+\end_inset
+
+.
+ Brinda una interpretación fı́sica de este resultado.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Muestra que la matriz de densidad 
+\begin_inset Formula $ρ_{1}$
+\end_inset
+
+ de una partı́cula que entra en el analizador está dada, en la base de 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ por: 
+\begin_inset Formula 
+\begin{equation}
+\rho=\frac{1}{2}\left(\begin{array}{cc}
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & 1+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+1-i\cos\left(\theta\right)\sin\left(\omega_{0}T\right) & 1-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Calcula 
+\begin_inset Formula $Tr\left(\rho_{1}S_{z}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $Tr\left(\rho_{1}S_{x}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Tr\left(\rho_{1}S_{y}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Asume que la velocidad de los átomos es una variable aleatoria y que en
+ consecuencia el tiempo 
+\begin_inset Formula $T$
+\end_inset
+
+ se conoce con cierta incertidumbre 
+\begin_inset Formula $∆T$
+\end_inset
+
+ .
+ Además, asume que el campo B es lo suficientemente fuerte como para que
+ 
+\begin_inset Formula $ω_{0}∆T≫1$
+\end_inset
+
+.
+ Los posibles valores del producto de 
+\begin_inset Formula $ω_{0}T$
+\end_inset
+
+ son entonces (módulo 
+\begin_inset Formula $2π$
+\end_inset
+
+) todos los valores entre 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $2π$
+\end_inset
+
+ y todos son igualmente probables.
+ En este caso, ¿cuál es el operador de densidad 
+\begin_inset Formula $\rho_{2}$
+\end_inset
+
+ de un átomo en el momento que entra en el analizador? ¿Es 
+\begin_inset Formula $\rho_{2}$
+\end_inset
+
+ un estado puro? 
+\end_layout
+
+\begin_layout Enumerate
+Calcula 
+\begin_inset Formula $Tr\left(\rho_{2}S_{z}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $Tr\left(\rho_{2}S_{x}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Tr\left(\rho_{2}S_{y}\right)$
+\end_inset
+
+.
+ ¿Cuál es tu interpretación? En qué caso el operador de espı́n describe
+ un espı́n completamente polarizado? En qué caso se describe un espı́n completam
+ente no polarizado? 
+\end_layout
+
+\begin_layout Enumerate
+Describe cualitativamente el fenómeno observado en la salida del analizador
+ cuando 
+\begin_inset Formula $ω_{0}$
+\end_inset
+
+ varı́a de cero a un valor donde la condición 
+\begin_inset Formula $ω_{0}∆T≫1$
+\end_inset
+
+ se satisface.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Basicamente tenemos dos momentos importantes a considerar en el experimento.
+ Por una parte, cuando el haz de átomos pasa por el polarizador y después
+ cuando para por el analizador.
+ El punto más escencial de este problema es la aplicación del campo magnetico
+ uniforme 
+\begin_inset Formula $\mathbf{B}_{0}$
+\end_inset
+
+ a lo largo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ a lo largo de una distancia 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ Cuando pasa por el polarizador, el vector de estado esta dado, de manera
+ general por 
+\begin_inset Formula 
+\begin{equation}
+\left|\psi,t_{0}=0\right\rangle =\cos\left(\frac{\theta}{2}\right)\left|+\right\rangle \text{+}\sin\left(\frac{\theta}{2}\right)\exp\left(i\alpha\right)\left|-\right\rangle \text{,}\label{eq:18}
+\end{equation}
+
+\end_inset
+
+el cual esta representado en la base de 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+.
+ Cuando el haz de átomos viaja en la zona donde esta el campo magnetico
+ 
+\begin_inset Formula $\mathbf{B}_{0}$
+\end_inset
+
+, tenemos que resolver un problema de evolución temporal para el ket 
+\begin_inset Formula $\left|\psi,t_{0}=0\right\rangle $
+\end_inset
+
+, cuyo Hamiltoniano, está dado por 
+\begin_inset Formula 
+\[
+H=\omega_{0}S_{n},\ \ \ S_{x}=\mathbf{S}\cdot\hat{\mathbf{x}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\omega_{0}S_{x}\text{,}
+\]
+
+\end_inset
+
+ y cuya ecuación de eigenvalores está dada por 
+\begin_inset Formula 
+\[
+H\left|\alpha\right\rangle =E\left|\alpha\right\rangle \iff\omega S_{x}\left|S_{x};\pm\right\rangle =\pm\omega_{0}\frac{\hbar}{2}\left|S_{x}\pm\right\rangle \text{,}
+\]
+
+\end_inset
+
+de manera que el operador de volución temporal está dado por 
+\begin_inset Formula 
+\[
+\mathcal{U}\left(t,0\right)=\exp\left(\frac{-i\omega_{0}S_{x}t}{\hbar}\right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, para resolver el problema de evolución temporal, tenemos que
+ aplicar el operador anterior al ket de estado dado por la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Sin embargo, lo que debemos de hacer primero es expresar esa misma ecuación
+ en terminos de la base de 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+, esto es así porque en esa base sí sabemos el efecto del operador de evolución
+ temporal sobre los kets.
+ Sabemos que la base de 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ esta dada por 
+\begin_inset Formula 
+\[
+\left|S_{x};\pm\right\rangle =\frac{1}{\sqrt{2}}\left|+\right\rangle \pm\frac{1}{\sqrt{2}}\left|+\right\rangle \text{.}
+\]
+
+\end_inset
+
+Si ahora invertimos las ecuaciones, tenemos que 
+\begin_inset Formula 
+\[
+\left|\pm\right\rangle =\frac{1}{\sqrt{2}}\left|S_{x};+\right\rangle \pm\frac{1}{\sqrt{2}}\left|S_{x};-\right\rangle \text{,}
+\]
+
+\end_inset
+
+con lo cual tenemos que el ket dado por la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ toma la forma 
+\begin_inset Formula 
+\[
+\left|\psi,t_{0}=0\right\rangle =\cos\left(\frac{\theta}{2}\right)\left(\frac{1}{\sqrt{2}}\left|S_{x};+\right\rangle +\frac{1}{\sqrt{2}}\left|S_{x};-\right\rangle \right)\text{+}\sin\left(\frac{\theta}{2}\right)\left(\frac{1}{\sqrt{2}}\left|S_{x};+\right\rangle -\frac{1}{\sqrt{2}}\left|S_{x};-\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\psi,t_{0}=0\right\rangle =\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\left|S_{x};+\right\rangle \text{+}\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\left|S_{x};-\right\rangle \text{.}
+\]
+
+\end_inset
+
+Por lo tanto, el operador de evolución temporal, aplicado al ket anterior
+ nos da 
+\begin_inset Formula 
+\[
+\left|\psi;t\right\rangle =\mathcal{U}\left(t,0\right)\left|\psi,t_{0}=0\right\rangle =\exp\left(\frac{-i\omega_{0}S_{x}t}{\hbar}\right)\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\left|S_{x};+\right\rangle +
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\exp\left(\frac{-i\omega_{0}S_{x}t}{\hbar}\right)\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\left|S_{x};-\right\rangle \text{,}
+\]
+
+\end_inset
+
+pero ya sabemos cuál es el efecto del operador de evolución temporal sobre
+ los kets base, de manera que 
+\begin_inset Formula 
+\[
+\implies\left|\psi;t\right\rangle =\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}t}{\hbar}\right)\left|S_{x};+\right\rangle +
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}t}{\hbar}\right)\left|S_{x};-\right\rangle 
+\]
+
+\end_inset
+
+De manera que para saber el vector de estado al momento de entrar al analizador,
+ basta con evaluar la expresión anterior al tiempo 
+\begin_inset Formula $T$
+\end_inset
+
+, el cual es el tiempo que estuvo bajo la influencia del campo magnetico.
+ Esto es 
+\begin_inset Formula 
+\[
+\left|\psi;T\right\rangle =\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}T}{2}\right)\left|S_{x};+\right\rangle +
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}T}{2}\right)\left|S_{x};-\right\rangle \text{.}
+\]
+
+\end_inset
+
+Por comodidad en los cáclulos siguientes, expresemos el ket anterior en
+ terminos de la base de 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left|\psi;T\right\rangle =\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}T}{2}\right)\left(\frac{1}{\sqrt{2}}\left|+\right\rangle +\frac{1}{\sqrt{2}}\left|-\right\rangle \right)\text{+}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\sqrt{2}}\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}T}{2}\right)\left(\frac{1}{\sqrt{2}}\left|+\right\rangle -\frac{1}{\sqrt{2}}\left|-\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\psi;T\right\rangle =\frac{1}{2}\left(\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}T}{2}\right)+\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\left|+\right\rangle +
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(\left(\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{-i\omega_{0}T}{2}\right)-\left(\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)\right)\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\left|-\right\rangle \text{.}
+\]
+
+\end_inset
+
+Si ahora definimos 
+\begin_inset Formula $\eta_{1}=\cos\left(\frac{\theta}{2}\right)+\sin\left(\frac{\theta}{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\eta_{2}=\cos\left(\frac{\theta}{2}\right)-\sin\left(\frac{\theta}{2}\right)$
+\end_inset
+
+, tenemos que la ecuación anterior se reescribe como 
+\begin_inset Formula 
+\[
+\left|\psi;T\right\rangle =\frac{1}{2}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)+\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\left|+\right\rangle +\frac{1}{2}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)-\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\left|-\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Recordemos que el analizador, lo que hace es determinar la componente de
+ espín 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+, de manera de encontrar al estado con 
+\begin_inset Formula $\frac{\hbar}{2}$
+\end_inset
+
+ viene dada por la expresión 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(\frac{\hbar}{2}\right)=\left|\left\langle +|\psi;T\right\rangle \right|^{2}\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\left|\left\langle +|\psi;T\right\rangle \right|^{2}=\left|\frac{1}{2}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)+\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\right|^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(\frac{\hbar}{2}\right)=\frac{1}{4}\left(\eta_{1}^{2}+\eta_{2}^{2}+\eta_{1}\eta_{2}\left(\exp\left(-i\omega_{0}T\right)+\exp\left(i\omega_{0}T\right)\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(\frac{\hbar}{2}\right)=\frac{1}{4}\left(\eta_{1}^{2}+\eta_{2}^{2}+\eta_{1}\eta_{2}\cos\left(\omega_{0}T\right)\right)\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $\eta_{1}^{2}+\eta_{2}^{2}=2$
+\end_inset
+
+ y 
+\begin_inset Formula $\eta_{1}\eta_{2}=2\cos\left(\theta\right)$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(\frac{\hbar}{2}\right)=\frac{1}{4}\left(2+2\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\mathcal{P}\left(\frac{\hbar}{2}\right)=\frac{1}{2}\left(1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)\text{.}
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $\mathcal{P}\left(-\frac{\hbar}{2}\right)$
+\end_inset
+
+ el procedimiento es el mismo, de manera que 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(-\frac{\hbar}{2}\right)=\left|\left\langle -|\psi;T\right\rangle \right|^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(-\frac{\hbar}{2}\right)=\left|\frac{1}{2}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)-\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\right|^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(-\frac{\hbar}{2}\right)=\frac{1}{4}\left(\eta_{1}^{2}+\eta_{2}^{2}-\eta_{1}\eta_{2}\left(\exp\left(-i\omega_{0}T\right)+\exp\left(i\omega_{0}T\right)\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(-\frac{\hbar}{2}\right)=\frac{1}{4}\left(2-2\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\mathcal{P}\left(-\frac{\hbar}{2}\right)=\frac{1}{2}\left(1-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para esta parte, por definición, tenemos que el operador de densidad esta
+ dado por 
+\begin_inset Formula 
+\[
+\rho=\text{\left|\psi;T\right\rangle }\left\langle \psi;T\right|.
+\]
+
+\end_inset
+
+Antes de escribir al operador en la base de 
+\begin_inset Formula $S_{z},$
+\end_inset
+
+hagamos los siguientes cambios de variable 
+\begin_inset Formula 
+\[
+\alpha=\frac{1}{2}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)+\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\beta=\frac{1}{2}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)-\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, el operador de densidad, escrito en la base de 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ está dado por 
+\begin_inset Formula 
+\[
+\rho=\left(\alpha\left|+\right\rangle +\beta\left|-\right\rangle \right)\left(\alpha^{*}\left\langle +\right|+\beta^{*}\left\langle -\right|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\rho=\alpha\alpha^{*}\left|+\right\rangle \left\langle +\right|+\alpha\beta^{*}\left|+\right\rangle \left\langle -\right|+\beta\alpha^{*}\left|-\right\rangle \left\langle +\right|+\beta\beta^{*}\left|-\right\rangle \left\langle -\right|\text{,}
+\]
+
+\end_inset
+
+o en forma matricial 
+\begin_inset Formula 
+\[
+\rho=\left(\begin{array}{cc}
+\alpha\alpha^{*} & \alpha\beta^{*}\\
+\beta\alpha^{*} & \beta\beta^{*}
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+Notemos que 
+\begin_inset Formula $\mathcal{P}\left(\frac{\hbar}{2}\right)=\alpha\alpha^{*}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{P}\left(-\frac{\hbar}{2}\right)=\beta\beta^{*}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\rho=\left(\begin{array}{cc}
+\frac{1}{2}\left(1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right) & \alpha\beta^{*}\\
+\beta\alpha^{*} & \frac{1}{2}\left(1-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+si ahora trabajamos con los productos, 
+\begin_inset Formula $\alpha\beta^{*}$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta\alpha^{*}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\alpha\beta^{*}=\frac{1}{4}\left(\eta_{1}\exp\left(\frac{-i\omega_{0}T}{2}\right)+\eta_{2}\exp\left(\frac{i\omega_{0}T}{2}\right)\right)\left(\eta_{1}\exp\left(\frac{i\omega_{0}T}{2}\right)-\eta_{2}\exp\left(\frac{-i\omega_{0}T}{2}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\alpha\beta^{*}=\frac{1}{4}\left(\eta_{1}^{2}+\eta_{2}^{2}-\eta_{1}\eta_{2}\left(\exp\left(i\omega_{0}T\right)-\exp\left(-i\omega_{0}T\right)\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\alpha\beta^{*}=\frac{1}{4}\left(2-2\cos\left(\theta\right)\left(-i\sin\left(\omega_{0}T\right)\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\alpha\beta^{*}=\frac{1}{2}\left(1+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\right)\text{.}
+\]
+
+\end_inset
+
+Por otra parte, es claro que 
+\begin_inset Formula $\beta\alpha^{*}=\left(\alpha\beta^{*}\right)^{*}$
+\end_inset
+
+, ya que estos conmutan entre sí, de manera que 
+\begin_inset Formula 
+\[
+\beta\alpha^{*}=\frac{1}{2}\left(1-i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\right)\text{.}
+\]
+
+\end_inset
+
+Si reunimos todos los resultados, tenemos que 
+\begin_inset Formula 
+\[
+\rho=\left(\begin{array}{cc}
+\frac{1}{2}\left(1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right) & \frac{1}{2}\left(1+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\right)\\
+\frac{1}{2}\left(1-i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\right) & \frac{1}{2}\left(1-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\right)
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+o bien
+\begin_inset Formula 
+\[
+\rho=\frac{1}{2}\left(\begin{array}{cc}
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & 1+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+1-i\cos\left(\theta\right)\sin\left(\omega_{0}T\right) & 1-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+justo como queriamos demostrar.
+\end_layout
+
+\begin_layout Enumerate
+Sabemos que 
+\begin_inset Formula $S_{x},S_{y}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ están dadas por 
+\begin_inset Formula 
+\[
+S_{x}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right),\ S_{y}=\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right),\ S_{z}=\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, para 
+\begin_inset Formula $Tr\left(\rho_{1}S_{z}\right)$
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+Tr\left(\rho_{1}S_{z}\right)=Tr\left(\left(\begin{array}{cc}
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & \sin\left(\theta\right)+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+\sin\left(\theta\right)-i\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & 1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies Tr\left(\rho_{1}S_{z}\right)=Tr\left(\left(\begin{array}{cc}
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & -\sin\left(\theta\right)-i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+\sin\left(\theta\right)-i\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & -1-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore Tr\left(\rho_{1}S_{z}\right)=0\text{.}
+\end{equation}
+
+\end_inset
+
+Para 
+\begin_inset Formula $Tr\left(\rho_{1}S_{x}\right)$
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+Tr\left(\rho_{1}S_{x}\right)=Tr\left(\left(\begin{array}{cc}
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & \sin\left(\theta\right)+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+\sin\left(\theta\right)-i\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & 1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies Tr\left(\rho_{1}S_{x}\right)=Tr\left(\begin{array}{cc}
+\sin\left(\theta\right)+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right) & 1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)\\
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & \sin\left(\theta\right)-i\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore Tr\left(\rho_{1}S_{x}\right)=2\sin\left(\theta\right)\text{.}
+\end{equation}
+
+\end_inset
+
+Finalmente, para 
+\begin_inset Formula $Tr\left(\rho_{1}S_{y}\right)$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+Tr\left(\rho_{1}S_{y}\right)=Tr\left(\left(\begin{array}{cc}
+1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & \sin\left(\theta\right)+i\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+\sin\left(\theta\right)-i\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & 1+\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies Tr\left(\rho_{1}S_{y}\right)=Tr\left(\begin{array}{cc}
+i\sin\left(\theta\right)-\cos\left(\theta\right)\sin\left(\omega_{0}T\right) & -i\sin\left(\theta\right)+\cos\left(\theta\right)\sin\left(\omega_{0}T\right)\\
+i+i\cos\left(\theta\right)\cos\left(\omega_{0}T\right) & -i\sin\left(\theta\right)-\cos\left(\theta\right)\cos\left(\omega_{0}T\right)
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore Tr\left(\rho_{1}S_{y}\right)=-2\cos\left(\theta\right)\sin\left(\omega_{0}T\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
