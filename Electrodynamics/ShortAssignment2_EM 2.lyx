@@ -255,29 +255,39 @@ Solution.
 \series bold
 a)
 \series default
- From the theoryt of differential calculus, we all know that if we want
- to find the extremal points of a function we should compute the derivate
- and the derivative at the point in question shhould vanish.
- And even more, if we perform its second derivative we can obtain information
- about the point, i.e., if it's a maximum, minimum or an inflection point.
- Now, that's the case for functions of one variable, and for functions of
- several variables, the line of tought it's the same but we have to generalize
- the previous ideas.
- Now, let's write in mathematical terms, the things that I've just explained.
+ First, let's prove that the field is zero in the origin 
+\begin_inset Formula $ $
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-On the other hand, we can use the Gauss function to prove that the centroid
- of the equilateral triangle is an unstable point, which in fact is a consequenc
-e of the Earnshaw theorem which states that a collection of point charges
- (or magnets) cannot be maintained in a stable equilibrium solely by the
- electrostatic (or magnetic) interactions, i.e., in order to matain such a
- equilibrium configuration another forces must enter into the game.
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-For the problem at hand, we are goint to have that the total potential will
- be the artimetic sum of each individual potential, i.e., 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 V_{T}=V_{1}+V_{2}+V_{3},\label{eq:TotalPotential}

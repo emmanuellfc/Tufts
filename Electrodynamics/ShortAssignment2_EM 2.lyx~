@@ -146,7 +146,7 @@ Coulomb's Law states the force between two point particles.
  In math, we have 
 \begin_inset Formula 
 \[
-\overrightarrow{F}=\frac{1}{4\pi\epsilon_{0}}\frac{q_{0}q}{r^{2}}\overrightarrow{r}\implies\exists\overrightarrow{E=}\frac{1}{4\pi\epsilon_{0}}\frac{q}{r^{2}}\overrightarrow{r},
+\overrightarrow{F}=\frac{1}{4\pi\epsilon_{0}}\frac{q_{0}q}{r^{2}}\overrightarrow{r}\implies\exists\overrightarrow{E}=\frac{1}{4\pi\epsilon_{0}}\frac{q}{r^{2}}\overrightarrow{r},
 \]
 
 \end_inset
