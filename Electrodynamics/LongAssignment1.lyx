@@ -238,7 +238,7 @@ The two approaches have been formulated in similar terms and can now be
  compared.
  In 1970, Barnett et al.
  obtained a limit of 
-\begin_inset Formula $|e|<1.3\times10^{-13}$
+\begin_inset Formula $|\epsilon|<1.3\times10^{-13}$
 \end_inset
 
  using the generic deviation approach.
@@ -1413,7 +1413,7 @@ For this final question we have to compare the two approximations, and one
 and on another 
 \begin_inset Formula 
 \[
-\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\ln\left(\frac{R-r}{R+r}\right)+\ln\left(\frac{4R^{2}}{R^{2}-r^{2}}\right)\right],
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\frac{R}{r}\ln\left(\frac{R-r}{R+r}\right)+\ln\left(\frac{4R^{2}}{R^{2}-r^{2}}\right)\right],
 \]
 
 \end_inset
@@ -1433,7 +1433,7 @@ and now, if we have that
 and on the other hand, for the second approximation we have that 
 \begin_inset Formula 
 \[
-\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\ln\left(\frac{R}{5R}\right)+\ln\left(\frac{4R^{2}}{\frac{5}{9}R^{2}}\right)\right]=\frac{\epsilon}{2}\left[\ln\left(\frac{R}{5R}\right)+\ln\left(\frac{36R}{5R}\right)\right]=\frac{}{}
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\frac{3}{2}\ln\left(\frac{R}{5R}\right)+\ln\left(\frac{4R^{2}}{\frac{5}{9}R^{2}}\right)\right]=\frac{\epsilon}{2}\left[\ln\left(\frac{R}{5R}\right)+\ln\left(\frac{36R}{5R}\right)\right]
 \]
 
 \end_inset
@@ -1441,7 +1441,63 @@ and on the other hand, for the second approximation we have that
 
 \begin_inset Formula 
 \[
-\implies\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right].
+\implies\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right],
+\]
+
+\end_inset
+
+then if we compare the two expressions for the potential, we have that 
+\begin_inset Formula 
+\[
+-\frac{1}{6\lambda^{2}}\left(\frac{5}{9}R^{2}\right)=\frac{\epsilon}{2}\left[\frac{3}{2}\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right],
+\]
+
+\end_inset
+
+and if we solve for 
+\begin_inset Formula $1/\lambda$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+-\frac{1}{6\lambda^{2}}=\frac{\epsilon}{2}\frac{\left[\frac{3}{2}\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right]}{\left(\frac{5}{9}R^{2}\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\frac{1}{\lambda}\right)^{2}=-\frac{3\epsilon\left[\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right]}{\left(\frac{5}{9}R^{2}\right)}=-3\epsilon\left(\frac{-0.440076}{5/9R^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\frac{1}{\lambda}\right)^{2}=\frac{2.37641}{\left(0.6\right)^{2}}\epsilon,
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\epsilon<1.3\times10^{-13}$
+\end_inset
+
+, then, we have that 
+\begin_inset Formula 
+\[
+\frac{1}{\lambda}=\sqrt{\left(\frac{2.38}{\left(0.6\right)^{2}}\right)\left(1.3\times10^{-13}\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{1}{\lambda}=9.27062\times10^{-7}m^{-1}.
 \]
 
 \end_inset
