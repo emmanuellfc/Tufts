@@ -140,7 +140,7 @@ In principle, this file can be redistributed and/or modified under the terms
 \begin_layout Title
 Liquid crystals, active matter and the finite element method.
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Active Nematics
@@ -234,7 +234,7 @@ InstituteMark
 
 
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 JEF
@@ -338,7 +338,7 @@ Keep it simple, no one is interested in your street address.
 
 
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Tufts University
@@ -378,7 +378,7 @@ Not really informative to the audience, more for people (including yourself)
 
 
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 PHY 107 2023
@@ -556,7 +556,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Structuring a talk is a difficult task and the following structure may not
@@ -611,7 +611,7 @@ Motivation
 \begin_layout Subsection
 Challenges in the soft condensed matter
 \begin_inset Argument 2
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Basic Problem
@@ -627,8 +627,7 @@ Basic Problem
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
- Use Uppercase Letters.
+What are the current challenges?.
 \end_layout
 
 \end_inset
@@ -655,7 +654,7 @@ A title should summarize the slide in an understandable fashion for anyone
 \end_layout
 
 \begin_layout Itemize
-Use Itemize a lot.
+Molecular Self-Assembly.
 \end_layout
 
 \begin_deeper
@@ -665,7 +664,7 @@ Use Itemize a lot.
 
 \end_deeper
 \begin_layout Itemize
-Use very short sentences or short phrases.
+Colloidal Phase Behavior.
 \end_layout
 
 \begin_deeper
@@ -675,7 +674,27 @@ Use very short sentences or short phrases.
 
 \end_deeper
 \begin_layout Itemize
-These overlays are created using the Pause style.
+Flow and Rheology; Glasses and Jamming.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Active Matter and Biological Soft Matter.
+\end_layout
+
+\begin_deeper
+\begin_layout Pause
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Designer Soft Matter.
 \end_layout
 
 \end_deeper
@@ -751,12 +770,13 @@ This is shown second.
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
+\begin_layout Subsection
+Liquid Crystal and Active Nematics Theory
+\begin_inset Argument 2
+status collapsed
 
 \begin_layout Plain Layout
-Make Titles Informative.
+Basic Theory
 \end_layout
 
 \end_inset
@@ -764,7 +784,19 @@ Make Titles Informative.
 
 \end_layout
 
-\begin_deeper
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Liquid Crystals
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Block
 \begin_inset Argument 1
 status open
@@ -784,6 +816,7 @@ status open
 Untitled block.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 Shown on all slides.
 \end_layout
@@ -831,7 +864,7 @@ Some Example Block Title
 \end_deeper
 \end_deeper
 \begin_layout Subsection
-Previous Work
+Toy Model: Navier-Stokes Equation.
 \end_layout
 
 \begin_layout Frame
@@ -953,7 +986,17 @@ Make Titles Informative.
 5cm
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Passive Nematics
+\end_layout
+
+\end_inset
+
+
 \begin_inset Argument 1
 status open
 
@@ -964,9 +1007,15 @@ status open
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 In left column.
 \end_layout
 
+\end_deeper
 \begin_layout Column
 5cm
 \end_layout
