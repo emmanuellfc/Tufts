@@ -605,7 +605,7 @@ If you omit details that are vital to the proof/implementation, just say
 
 \end_deeper
 \begin_layout Section
-Motivation
+Motivation and Basic LC Theory
 \end_layout
 
 \begin_layout Subsection
@@ -640,7 +640,7 @@ What are the current challenges?.
 Frame subtitles are optional.
  Use upper- or lowercase letters.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 A title should summarize the slide in an understandable fashion for anyone
@@ -712,7 +712,7 @@ Designer Soft Matter.
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
+Crash Course on LC Theory.
  
 \end_layout
 
@@ -733,21 +733,7 @@ status open
 
 \end_inset
 
-You can also use overlay specifications to create overlays.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Argument item:2
-status open
-
-\begin_layout Plain Layout
-
-3-
-\end_layout
-
-\end_inset
-
-This allows you to present things in any order.
+Intermedium state of matter between solid crystal and liquid.
 \end_layout
 
 \begin_layout Itemize
@@ -761,7 +747,25 @@ status open
 
 \end_inset
 
-This is shown second.
+Symmetries-Tensor Order Parameter 
+\begin_inset Formula $Q_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+3-
+\end_layout
+
+\end_inset
+
+Types of Order Paramaters
 \end_layout
 
 \end_deeper
@@ -772,8 +776,71 @@ This is shown second.
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Crash Course on LC Theory 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+1-
+\end_layout
+
+\end_inset
+
+Molecular theories and Mean Field Theories 
+\begin_inset Formula $\implies$
+\end_inset
+
+ Landau - de Gennes Theory
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Free Energy consistent with the symmetries and scalar.
+\end_layout
+
+\begin_layout Itemize
+Generalized Elasticity and Free energy.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+2-
+\end_layout
+
+\end_inset
+
+Cool Stuff in those systems:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Topological Defects.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Subsection
-Liquid Crystal and Active Nematics Theory
+Active Nematics
 \begin_inset Argument 2
 status collapsed
 
@@ -791,7 +858,7 @@ Basic Theory
 status open
 
 \begin_layout Plain Layout
-Liquid Crystals
+Active Matter
 \end_layout
 
 \end_inset
@@ -799,8 +866,9 @@ Liquid Crystals
 
 \end_layout
 
-\begin_layout Block
-\begin_inset Argument 1
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:2
 status open
 
 \begin_layout Plain Layout
@@ -811,21 +879,12 @@ status open
 \end_inset
 
 
+\series bold
+Non-equilibrium Thermodynamics/Statistical Mechanics.
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
-Untitled block.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Shown on all slides.
-\end_layout
-
-\end_deeper
-\begin_layout ExampleBlock
-\begin_inset Argument 1
+\begin_inset Argument item:2
 status open
 
 \begin_layout Plain Layout
@@ -835,38 +894,86 @@ status open
 
 \end_inset
 
+Free energy doens't make any sense, right?
+\end_layout
 
-\begin_inset Argument 2
+\begin_layout Itemize
+\begin_inset Argument item:2
 status open
 
 \begin_layout Plain Layout
-Some Example Block Title
+
+3-
 \end_layout
 
 \end_inset
 
-
+Types of active matter
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $e^{i\pi}=-1$
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+4-
+\end_layout
+
 \end_inset
 
-.
+Polar active fluids.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $e^{i\pi/2}=i$
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+5-
+\end_layout
+
 \end_inset
 
-.
+
+\series bold
+Active nematics.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+6-
+\end_layout
+
+\end_inset
+
+Scalar active matter.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:2
+status open
+
+\begin_layout Plain Layout
+
+7-
+\end_layout
+
+\end_inset
+
+Quiral active fluids.
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Subsection
-Toy Model: Navier-Stokes Equation.
+Navier-Stokes and FEM
 \end_layout
 
 \begin_layout Frame
@@ -874,7 +981,7 @@ Toy Model: Navier-Stokes Equation.
 status open
 
 \begin_layout Plain Layout
-Make Titles Informative.
+Navier-Stokes Equations.
  
 \end_layout
 
@@ -884,8 +991,34 @@ Make Titles Informative.
 \end_layout
 
 \begin_deeper
-\begin_layout Example
-\begin_inset Argument 1
+\begin_layout Enumerate
+Very specific PDE system.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Crash Course on FEM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:2
 status open
 
 \begin_layout Plain Layout
@@ -895,19 +1028,25 @@ status open
 
 \end_inset
 
-On first slide.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
+Molecular theories and Mean Field Theories 
+\begin_inset Formula $\implies$
 \end_inset
 
-
+ Landau - de Gennes Theory
 \end_layout
 
-\begin_layout Example
-\begin_inset Argument 1
+\begin_deeper
+\begin_layout Itemize
+Free Energy consistent with the symmetries and scalar.
+\end_layout
+
+\begin_layout Itemize
+Generalized Elasticity and Free energy.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:2
 status open
 
 \begin_layout Plain Layout
@@ -917,16 +1056,22 @@ status open
 
 \end_inset
 
-On second slide.
+Cool Stuff in those systems:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Topological Defects.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 Our Results/Contribution
 \end_layout
 
 \begin_layout Subsection
-Main Results
+Method IQCS
 \end_layout
 
 \begin_layout Frame
