@@ -684,6 +684,8 @@ Flow and Rheology; Glasses and Jamming.
 
 \end_deeper
 \begin_layout Itemize
+
+\series bold
 Active Matter and Biological Soft Matter.
 \end_layout
 
@@ -1301,7 +1303,7 @@ literal "true"
 S.
  Someone.
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1336,6 +1338,47 @@ Journal on This and That
 \emph default
 .
  2(1):50–100, 2000.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Someone2002-1"
+literal "true"
+
+\end_inset
+
+Van der Gucht, Jasper.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newblock
+\end_layout
+
+\end_inset
+
+"Grand challenges in soft matter physics.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newblock
+\end_layout
+
+\end_inset
+
+Frontiers in Physics 6 (2018): 87.
 \end_layout
 
 \end_deeper

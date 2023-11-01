@@ -259,12 +259,159 @@ but
 
 \begin_inset Formula 
 \[
-\therefore\mathbf{\dot{z}}=\mathbf{J}\frac{\partial H\left(\mathbf{z},t\right)}{\partial\mathbf{z}}
+\therefore\mathbf{\dot{z}}=\mathbf{J}\frac{\partial H\left(\mathbf{z},t\right)}{\partial\mathbf{z}},
+\]
+
+\end_inset
+
+and this completes the proof.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(Problem 8.15)
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution.
+ 
+\series default
+The Lagrangian is given by 
+\begin_inset Formula 
+\[
+L=\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}},
+\]
+
+\end_inset
+
+then the conjugate momenta are given by 
+\begin_inset Formula 
+\[
+p_{1}=\frac{\partial L}{\partial\dot{q}_{1}}=2\dot{q_{1}}+k_{2}\dot{q}_{2},
 \]
 
 \end_inset
 
 
+\begin_inset Formula 
+\[
+\implies\dot{q_{1}}=\frac{1}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{2}=\frac{\partial L}{\partial\dot{q}_{2}}=\frac{2\dot{q}_{2}}{a+bq_{1}^{2}}+k_{2}\dot{q}_{1},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right),
+\]
+
+\end_inset
+
+but, we can introduce 
+\begin_inset Formula $\dot{q}_{1}$
+\end_inset
+
+ in terms of the canonical momenta in the previous expression, then
+\begin_inset Formula 
+\[
+\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right)\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}+\frac{k_{2}^{2}}{2}\dot{q}_{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}\right)+\frac{a+bq_{1}^{2}}{2}\left(\frac{k_{2}^{2}}{2}\dot{q}_{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{q_{2}}\left[1-\frac{k_{2}^{2}\left(a+bq_{1}^{2}\right)}{4}\right]=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{q_{2}}=\frac{1}{1-\frac{k_{2}^{2}\left(a+bq_{1}^{2}\right)}{4}}\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+hen, the Hamiltonian is given by 
+\begin_inset Formula 
+\[
+H=\dot{q_{1}}p_{1}+\dot{q_{2}}p_{2}-L,
+\]
+
+\end_inset
+
+but first, let's write the Lagrangian in terms of the canonical momenta
+ 
+\begin_inset Formula 
+\[
+L=\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{1}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right)p_{1}+\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right)p_{2}-\left[\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{1}{2}\left(p_{1}^{2}-k_{2}\dot{q}_{2}\right)p_{1}+\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right)p_{2}-\left[\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -273,7 +420,345 @@ but
 
 \end_deeper
 \begin_layout Enumerate
-(Problem 1.20) 
+
+\series bold
+(Problem 8.27)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution.
+
+\series default
+ The
+\series bold
+ 
+\series default
+Lagrangian is given by 
+\begin_inset Formula 
+\[
+L=\frac{m}{2}\left(\dot{q}^{2}\sin^{2}\left(\omega t\right)+\omega\dot{q}q\sin\left(2\omega t\right)+q^{2}\omega^{2}\right).
+\]
+
+\end_inset
+
+Before doing any calculations, let's make the following change of variables
+ 
+\begin_inset Formula 
+\[
+\alpha=\sin^{2}\left(\omega t\right),\hspace{1em}\beta=\omega\sin\left(2\omega t\right),\hspace{1em}\gamma=\omega^{2},
+\]
+
+\end_inset
+
+then the Lagrangian can be written as 
+\begin_inset Formula 
+\[
+L=\frac{m}{2}\left(\alpha\dot{q}^{2}+\beta\dot{q}q+\gamma\omega^{2}\right).
+\]
+
+\end_inset
+
+And now, let's move on to the construction of the Hamiltonian: 
+\begin_inset Formula 
+\[
+p=\frac{\partial L}{\partial\dot{q}}=m\alpha\dot{q}+\frac{m}{2}\beta q,\implies\dot{q}=\frac{1}{m\alpha}\left(p-\frac{m\beta}{2}q\right),
+\]
+
+\end_inset
+
+then, the Hamiltonian, defined by 
+\begin_inset Formula 
+\[
+H=p\dot{q}-L,
+\]
+
+\end_inset
+
+becomes 
+\begin_inset Formula 
+\[
+H=\frac{p}{m\alpha}\left(p-\frac{m\beta}{2}q\right)-\frac{m}{2}\left[\alpha\left(\frac{1}{m\alpha}\left(p-\frac{m\beta}{2}q\right)\right)^{2}+\frac{\beta}{m\alpha}\left(p-\frac{m\beta}{2}q\right)q+\gamma q^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{1}{m\alpha}\left(p^{2}-\frac{m\beta}{2}pq\right)-\frac{m}{2}\left[\frac{1}{m^{2}\alpha}\left(p^{2}-m\beta pq+\frac{m^{2}\beta^{2}}{4}q^{2}\right)+\frac{\beta}{m\alpha}\left(pq-\frac{m\beta}{2}q^{2}\right)+\gamma q^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{1}{m\alpha}\left(p^{2}-\frac{m\beta}{2}pq\right)-\left[\frac{1}{2m\alpha}\left(p^{2}-m\beta pq+\frac{m^{2}\beta^{2}}{4}q^{2}\right)+\frac{\beta}{2\alpha}\left(pq-\frac{m\beta}{2}q^{2}\right)+\frac{m\gamma}{2}q^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{p^{2}}{2m\alpha}-\left[\frac{m\beta^{2}}{8\alpha}q^{2}+\frac{\beta}{2\alpha}pq-\frac{m\beta^{2}}{4\alpha}q^{2}+\frac{m\gamma}{2}q^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{p^{2}}{2m\alpha}-\left[-\frac{m\beta^{2}}{8\alpha}q^{2}+\frac{\beta}{2\alpha}pq+\frac{m\gamma}{2}q^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{p^{2}}{2m\alpha}+\frac{m\beta^{2}}{8\alpha}q^{2}-\frac{\beta}{2\alpha}pq-\frac{m\gamma}{2}q^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{1}{2m\alpha}\left(p^{2}+\frac{1}{4}m^{2}\beta^{2}q^{2}-m\beta pq\right)-\frac{m\omega^{2}}{2}q^{2},
+\]
+
+\end_inset
+
+then we have that 
+\begin_inset Formula 
+\[
+H=\frac{1}{2m\alpha}\left(p-\frac{1}{2}m\beta pq\right)^{2}-\frac{m\gamma}{2}q^{2},
+\]
+
+\end_inset
+
+and finally, going back to the original variables, i.e, insertng the expressions
+ for 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+H=\frac{1}{2m\sin^{2}\left(\omega t\right)}\left(p-\frac{m\omega}{2}\sin\left(2\omega t\right)q\right)^{2}-\frac{m\omega^{2}}{2}p^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, for part 
+\series bold
+b)
+\series default
+, if we make the following change of coordinates 
+\begin_inset Formula $Q=q\sin\left(\omega t\right)$
+\end_inset
+
+, then we have that 
+\begin_inset Formula 
+\[
+\dot{Q}=\frac{d}{dt}\left(q\sin\left(\omega t\right)\right)=\dot{q}\sin\left(\omega t\right)+\omega q\cos\left(\omega t\right),
+\]
+
+\end_inset
+
+now, with this information 
+\begin_inset Formula 
+\[
+\left(\dot{Q}\right)^{2}=\left(\dot{q}\sin\left(\omega t\right)+\omega q\cos\left(\omega t\right)\right)^{2}=\dot{q}^{2}\sin^{2}\left(\omega t\right)+2\omega\dot{q}q\sin\left(\omega t\right)\cos\left(\omega t\right)+\omega^{2}q^{2}\cos^{2}\left(\omega t\right),
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $2\cos\left(\omega t\right)\sin\left(\omega t\right)=\sin\left(2\omega t\right)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\left(\dot{Q}\right)^{2}=\dot{q}^{2}\sin^{2}\left(\omega t\right)+\omega\dot{q}q\sin\left(2\omega t\right)+\omega^{2}q^{2}\cos^{2}\left(\omega t\right),
+\]
+
+\end_inset
+
+and on the other hand, 
+\begin_inset Formula 
+\[
+\omega^{2}Q^{2}=\omega^{2}q^{2}\sin^{2}\left(\omega t\right),
+\]
+
+\end_inset
+
+then, if we make the sum 
+\begin_inset Formula $\left(\dot{Q}\right)^{2}+\omega^{2}Q^{2}$
+\end_inset
+
+ we end up with 
+\begin_inset Formula 
+\[
+\left(\dot{Q}\right)^{2}+\omega^{2}Q^{2}=\dot{q}^{2}\sin^{2}\left(\omega t\right)+\omega\dot{q}q\sin\left(2\omega t\right)+\omega^{2}q^{2}\cos^{2}\left(\omega t\right)+\omega^{2}q^{2}\sin^{2}\left(\omega t\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\dot{Q}\right)^{2}+\omega^{2}Q^{2}=\dot{q}^{2}\sin^{2}\left(\omega t\right)+\omega\dot{q}q\sin\left(2\omega t\right)+\omega^{2}q^{2},
+\]
+
+\end_inset
+
+and from the previous expression is easy to make the following connection
+\begin_inset Formula 
+\[
+L=\frac{m}{2}\left[\left(\dot{Q}\right)^{2}+\omega^{2}Q^{2}\right],
+\]
+
+\end_inset
+
+therefore, we see that the Lagrangian is no loger time dependent explicitly.
+ 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+(Problem 8.30) 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution.
+ 
+\series default
+The Lagrangian in Weber's electrodynamics is given by 
+\begin_inset Formula 
+\[
+L=\frac{1}{2}m\dot{r}^{2}+\frac{1}{2}mr\dot{\theta}^{2}-\frac{1}{r}-\frac{\dot{r}^{2}}{c^{2}r},
+\]
+
+\end_inset
+
+which we can write as 
+\begin_inset Formula 
+\[
+L=\left(\frac{mc^{2}r-2}{2c^{2}r}\right)\dot{r}^{2}+\frac{1}{2}mr\dot{\theta}^{2}-\frac{1}{r},
+\]
+
+\end_inset
+
+in which we've just factorized some terms.
+ Then, we can calculate the canonical conjuate momentum for 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ as follows 
+\begin_inset Formula 
+\[
+p_{r}=\frac{\partial L}{\partial\dot{r}}=\left(\frac{mc^{2}r-2}{c^{2}r}\right)\dot{r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{r}=\left(\frac{c^{2}r}{mc^{2}r-2}\right)p_{r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{\theta}=\frac{\partial L}{\partial\dot{\theta}}=mr\dot{\theta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{\theta}=\frac{p_{\theta}}{mr}.
+\]
+
+\end_inset
+
+On the other hand the Hamiltonian is defined by
+\begin_inset Formula 
+\[
+H=p_{r}\dot{r}+p_{\theta}\dot{\theta}-L,
+\]
+
+\end_inset
+
+then with the information at hand, the Hamiltoninan becomes 
+\begin_inset Formula 
+\[
+H=p_{r}\left(\frac{c^{2}r}{mc^{2}r-2}\right)p_{r}+p_{\theta}\frac{p_{\theta}}{mr}-\left(\frac{mc^{2}r-2}{c^{2}r}\right)\left(\left(\frac{c^{2}r}{mc^{2}r-2}\right)p_{r}\right)^{2}-\frac{1}{2}mr\left(\frac{p_{\theta}}{mr}\right)^{2}-\frac{1}{r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\left(\frac{c^{2}r}{mc^{2}r-2}\right)p_{r}^{2}+\frac{p_{\theta}^{2}}{mr}-\frac{1}{2}\left(\frac{c^{2}r}{mc^{2}r-2}\right)p_{r}^{2}-\frac{1}{2}\frac{p_{\theta}^{2}}{mr}-\frac{1}{r},
+\]
+
+\end_inset
+
+therefore, we have that the Hamiltonian in the Weber's electrodynamics is
+ given by
+\begin_inset Formula 
+\[
+\therefore H=\frac{1}{2}\left(\frac{c^{2}r}{mc^{2}r-2}\right)p_{r}^{2}+\frac{1}{2}\frac{p_{\theta}^{2}}{mr}-\frac{1}{r}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 8.34) 
 \end_layout
 
 \begin_deeper
@@ -292,7 +777,9 @@ Solution.
 
 \end_deeper
 \begin_layout Enumerate
-(Problem 1.21)
+
+\series bold
+(Problem 8.35)
 \end_layout
 
 \begin_deeper
@@ -300,63 +787,189 @@ Solution.
 
 \series bold
 Solution.
-\end_layout
+ 
+\series default
+The Lagrangian is given by 
+\begin_inset Formula 
+\[
+L=\frac{1}{2}m\left(\dot{x}^{2}-\omega^{2}x^{2}\right)\exp\left(\gamma t\right).
+\]
 
-\begin_layout Standard
-\begin_inset Newpage pagebreak
 \end_inset
 
 
 \end_layout
 
-\end_deeper
 \begin_layout Enumerate
-(Problem 1.22) 
-\end_layout
+Let's find the equations of motion, and for that, let's obtain the Euler-Lagrang
+e equation 
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial\dot{x}}=m\dot{x}\exp\left(\gamma t\right),
+\]
 
-\begin_deeper
-\begin_layout Standard
-
-\series bold
-Solution.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
 \end_inset
 
 
-\end_layout
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial L}{\partial\dot{x}}=m\ddot{x}\exp\left(\gamma t\right)+m\gamma\dot{x}\exp\left(\gamma t\right),
+\]
 
-\end_deeper
-\begin_layout Enumerate
-(Problem 2.13) 
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Standard
+and, on the other hand, 
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial x}=m\omega^{2}x\exp\left(\gamma t\right),
+\]
 
-\series bold
-Solution.
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\begin_inset Newpage pagebreak
+then the Euler-Lagrange equation is 
+\begin_inset Formula 
+\[
+m\omega^{2}x\exp\left(\gamma t\right)-m\ddot{x}\exp\left(\gamma t\right)-m\gamma\dot{x}\exp\left(\gamma t\right)=0,
+\]
+
 \end_inset
 
 
-\end_layout
+\begin_inset Formula 
+\[
+\implies m\exp\left(\gamma t\right)\left(\omega^{2}x-\ddot{x}-\gamma\dot{x}\right)=0,
+\]
 
-\end_deeper
-\begin_layout Enumerate
-Problem 
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Standard
 
-\series bold
-Solution.
+\begin_inset Formula 
+\[
+\iff\ddot{x}+\gamma\dot{x}-\omega^{2}x=0,
+\]
+
+\end_inset
+
+which is the equation for a damped oscillator.
+ Now, in order to solve the equation, let's try with this proposed solution
+ 
+\begin_inset Formula 
+\[
+x=\exp\left(\alpha t\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\alpha^{2}+\gamma\alpha-\omega^{2}\right)\exp\left(\alpha t\right)=0,
+\]
+
+\end_inset
+
+now, if we solve for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+\alpha=\frac{-\gamma\pm\sqrt{\gamma^{2}+4\omega^{2}}}{2},
+\]
+
+\end_inset
+
+now, if we make the following change of variable 
+\begin_inset Formula 
+\[
+\alpha_{1}=\frac{-\gamma+\sqrt{\gamma^{2}+4\omega^{2}}}{2},\hspace{1em}\alpha_{2}=-\frac{\gamma+\sqrt{\gamma^{2}+4\omega^{2}}}{2}
+\]
+
+\end_inset
+
+then the equation of motion becomes 
+\begin_inset Formula 
+\[
+x\left(t\right)=\zeta_{1}\exp\left[\alpha_{1}t\right]+\zeta_{2}\exp\left[\alpha_{2}t\right].
+\]
+
+\end_inset
+
+Now, let's construc the Hamiltonian, and for this we have 
+\begin_inset Formula 
+\[
+p_{x}=\frac{\partial L}{\partial\dot{x}}=m\dot{x}\exp\left(\gamma t\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x}=\frac{p_{x}}{m}\exp\left(-\gamma t\right),
+\]
+
+\end_inset
+
+then the Hamiltonian
+\begin_inset Formula 
+\[
+H=p_{x}\dot{x}-L,
+\]
+
+\end_inset
+
+becomes 
+\begin_inset Formula 
+\[
+H=p_{x}\frac{p_{x}}{m}\exp\left(-\gamma t\right)-\left(\frac{1}{2}m\left(\left(\frac{p_{x}}{m}\exp\left(-\gamma t\right)\right)^{2}-\omega^{2}x^{2}\right)\exp\left(\gamma t\right)\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{p_{x}^{2}}{2m}\exp\left(-\gamma t\right)-\frac{p_{x}^{2}}{2m}\exp\left(-\gamma t\right)+\frac{1}{2}m\omega^{2}x^{2}\exp\left(\gamma t\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{p_{x}^{2}}{2m}\exp\left(-\gamma t\right)+\frac{1}{2}m\omega^{2}x^{2}\exp\left(\gamma t\right).
+\]
+
+\end_inset
+
+Now, using the solution derived from the Euler-Lagrange equations, with
+ the additional information (initial conditions) 
+\begin_inset Formula 
+\[
+x\left(0\right)=0,\hspace{1em}\dot{x}=0,
+\]
+
+\end_inset
+
+we have the following equations
+\begin_inset Formula 
+\[
+\zeta_{1}+\zeta_{2}=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{1}\zeta_{1}+\alpha_{2}\zeta_{2}=0,
+\]
+
+\end_inset
+
+then, solving the system, we have 
 \end_layout
 
 \end_deeper
