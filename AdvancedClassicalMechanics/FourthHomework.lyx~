@@ -275,9 +275,151 @@ and this completes the proof.
 \begin_layout Enumerate
 
 \series bold
-(Problem 8.15)
-\series default
+(Problem 8.14
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution.
  
+\series default
+The Lagrangian is given by 
+\begin_inset Formula 
+\[
+L=a\dot{x}^{2}+b\frac{\dot{y}}{x}+c\dot{x}\dot{y}+fy^{2}\dot{x}\dot{z}+g\dot{y}-k\sqrt{x^{2}+y^{2}},
+\]
+
+\end_inset
+
+and because of the form of the previous expression, we can see that 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+ is conserved, because there's no dependence of 
+\begin_inset Formula $z$
+\end_inset
+
+ in the Lagrangian.
+ Now, let's calculate the canonical momenta, which are defined by 
+\begin_inset Formula 
+\[
+p_{x}=\frac{\partial L}{\partial\dot{x}},p_{y}=\frac{\partial L}{\partial\dot{y}},p_{z}=\frac{\partial L}{\partial\dot{z}},
+\]
+
+\end_inset
+
+then we have that 
+\begin_inset Formula 
+\[
+p_{x}=2a\dot{x}+c\dot{y}+fy^{2}\dot{z},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{y}=\frac{b}{x}+c\dot{x}+g,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{z}=fy^{2}\dot{x},
+\]
+
+\end_inset
+
+Now, the Hamiltonian is defined by 
+\begin_inset Formula 
+\[
+H=\dot{x}p_{x}+\dot{y}p_{y}+\dot{z}p_{z}-L,
+\]
+
+\end_inset
+
+then, we have that 
+\begin_inset Formula 
+\[
+H=2a\dot{x}^{2}+c\dot{x}\dot{y}+fy^{2}\dot{x}\dot{z}+\frac{b}{x}\dot{y}+c\dot{x}\dot{y}+g\dot{y}+fy^{2}\dot{x}\dot{z}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-a\dot{x}^{2}-b\frac{\dot{y}}{x}-c\dot{x}\dot{y}-fy^{2}\dot{x}\dot{z}-g\dot{y}+k\sqrt{x^{2}+y^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=a\dot{x}^{2}+\left(c\dot{y}+fy^{2}\dot{z}\right)\dot{x}+k\sqrt{x^{2}+y^{2}},
+\]
+
+\end_inset
+
+but from the 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+ equations we have that 
+\begin_inset Formula 
+\[
+\dot{x}=\frac{p_{z}}{fy^{2}},\hspace{1em}\dot{y}=\frac{1}{c}\left[p_{x}-\frac{2ap_{z}}{fy^{2}}-fy^{2}\dot{z}\right],
+\]
+
+\end_inset
+
+and with this information, the Hamiltonian becomes 
+\begin_inset Formula 
+\[
+H=\frac{ap_{z}^{2}}{f^{2}y^{4}}+\left(p_{x}-\frac{2ap_{z}}{fy^{2}}-fy^{2}\dot{z}+fy^{2}\dot{z}\right)\frac{p_{z}}{fy^{2}}+k\sqrt{x^{2}+y^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=a\frac{p_{z}^{2}}{f^{2}y^{4}}+\frac{p_{x}p_{z}}{fy^{2}}-\frac{2ap_{z}^{2}}{f^{2}y^{4}}+k\sqrt{x^{2}+y^{2}},
+\]
+
+\end_inset
+
+therefore, the Hamiltonian will be
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore H=-\frac{ap_{z}^{2}}{f^{2}y^{4}}+\frac{p_{x}p_{z}}{fy^{2}}+k\sqrt{x^{2}+y^{2}}.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 8.15)
 \end_layout
 
 \begin_deeper
@@ -306,7 +448,7 @@ p_{1}=\frac{\partial L}{\partial\dot{q}_{1}}=2\dot{q_{1}}+k_{2}\dot{q}_{2},
 
 \begin_inset Formula 
 \[
-\implies\dot{q_{1}}=\frac{1}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right),
+\implies p_{1}=2\dot{q_{1}}+k_{2}\dot{q}_{2}
 \]
 
 \end_inset
@@ -322,72 +464,64 @@ p_{2}=\frac{\partial L}{\partial\dot{q}_{2}}=\frac{2\dot{q}_{2}}{a+bq_{1}^{2}}+k
 
 \begin_inset Formula 
 \[
+\implies p_{2}=\frac{2\dot{q}_{2}}{a+bq_{1}^{2}}+k_{2}\dot{q}_{1}.
+\]
+
+\end_inset
+
+Now, the Hamiltonian is defined by 
+\begin_inset Formula 
+\[
+H=\dot{q}_{1}p_{1}+\dot{q}_{2}p_{2}-L,
+\]
+
+\end_inset
+
+and with this information, then the Hamiltonian can be written as 
+\begin_inset Formula 
+\[
+H=\dot{q}_{1}\left(2\dot{q_{1}}+k_{2}\dot{q}_{2}\right)+\dot{q}_{2}\left(\frac{2\dot{q}_{2}}{a+bq_{1}^{2}}+k_{2}\dot{q}_{1}\right)-\left(\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=2\dot{q_{1}}^{2}+k_{2}\dot{q}_{1}\dot{q}_{2}+\frac{2\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{2}\dot{q}_{1}\dot{q}_{2}-\dot{q}_{1}^{2}-\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}-k_{1}q_{1}^{2}-k_{2}\dot{q_{1}}\dot{q_{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\dot{q_{1}}^{2}+k_{2}\dot{q}_{1}\dot{q}_{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}-k_{1}q_{1}^{2},
+\]
+
+\end_inset
+
+but, from the momentum equations we konw that
+\begin_inset Formula 
+\[
+\implies\dot{q_{1}}=\frac{1}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
 \implies\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right),
 \]
 
 \end_inset
 
-but, we can introduce 
-\begin_inset Formula $\dot{q}_{1}$
-\end_inset
-
- in terms of the canonical momenta in the previous expression, then
-\begin_inset Formula 
-\[
-\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right)\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\implies\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}+\frac{k_{2}^{2}}{2}\dot{q}_{2}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\implies\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}\right)+\frac{a+bq_{1}^{2}}{2}\left(\frac{k_{2}^{2}}{2}\dot{q}_{2}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\implies\dot{q_{2}}\left[1-\frac{k_{2}^{2}\left(a+bq_{1}^{2}\right)}{4}\right]=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\implies\dot{q_{2}}=\frac{1}{1-\frac{k_{2}^{2}\left(a+bq_{1}^{2}\right)}{4}}\frac{a+bq_{1}^{2}}{2}\left(p_{2}-\frac{k_{2}}{2}p_{1}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-hen, the Hamiltonian is given by 
-\begin_inset Formula 
-\[
-H=\dot{q_{1}}p_{1}+\dot{q_{2}}p_{2}-L,
-\]
-
-\end_inset
-
-but first, let's write the Lagrangian in terms of the canonical momenta
+but because the system is coupled, we can write the previous equations as
  
 \begin_inset Formula 
 \[
-L=\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}
+\dot{q_{1}}=\frac{1}{2}\left(p_{1}-\frac{k_{2}\left(a+bq_{1}^{2}\right)}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right)\right),
 \]
 
 \end_inset
@@ -395,15 +529,15 @@ L=\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{
 
 \begin_inset Formula 
 \[
-\implies H=\frac{1}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right)p_{1}+\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right)p_{2}-\left[\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}\right],
+\dot{q_{2}}=\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right)
 \]
 
 \end_inset
 
-
+then the Hamiltonian becomes 
 \begin_inset Formula 
 \[
-\implies H=\frac{1}{2}\left(p_{1}^{2}-k_{2}\dot{q}_{2}\right)p_{1}+\frac{a+bq_{1}^{2}}{2}\left(p_{2}-k_{2}\dot{q}_{1}\right)p_{2}-\left[\dot{q}_{1}^{2}+\frac{\dot{q}_{2}^{2}}{a+bq_{1}^{2}}+k_{1}q_{1}^{2}+k_{2}\dot{q_{1}}\dot{q_{2}}\right]
+H=\frac{1}{2}\left(p_{1}-k_{2}\dot{q}_{2}\right)^{2}+\frac{k_{2}\left(a+bq_{1}^{2}\right)}{4}\left(p_{1}-k_{2}\dot{q}_{2}\right)\left(p_{2}-k_{2}\dot{q}_{1}\right)+\frac{1}{a+bq_{1}^{2}}\left[\left(\frac{a+bq_{1}^{2}}{2}\right)\left(p_{2}-k_{2}\dot{q}_{1}\right)\right]^{2}-k_{2}q_{1}^{2}
 \]
 
 \end_inset
