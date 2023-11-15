@@ -688,15 +688,7 @@ then
 
 but, because of the antisymmetry of the epsilon tensor, we have that the
  first two terms are zero and the temr in the parenthesis is also equal
- to zero, then 
-\begin_inset Formula 
-\[
-\left[u,L_{i}\right]=0.
-\]
-
-\end_inset
-
-
+ to zero, then
 \end_layout
 
 \begin_layout Standard
