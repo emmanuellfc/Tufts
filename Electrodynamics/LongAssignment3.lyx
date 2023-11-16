@@ -10,6 +10,10 @@
 theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-extended
+graphicboxes
+endnotes
+pdfcomment
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -239,6 +243,16 @@ The center of the larger sphere is now shifted by a small displacement
 \begin_inset Formula 
 \[
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 

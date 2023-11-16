@@ -135,8 +135,11 @@ A capacitor is made of two concentric conducting spherical shells of radii
 \begin_inset Formula $a<b$
 \end_inset
 
-, that are maintained at a potential difference V0 , with the external shell
- being grounded.
+, that are maintained at a potential difference 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ , with the external shell being grounded.
  The origin of the coordinate system is the center of the two spheres.
  
 \end_layout
@@ -144,39 +147,102 @@ A capacitor is made of two concentric conducting spherical shells of radii
 \begin_layout Enumerate
 Using Laplace equation, find the potential for any point in the region between
  the two conducting shells.
- Express your answer in terms of V 0 , a, b and the coordinates you choose.
+ Express your answer in terms of 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ , 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+ and the coordinates you choose.
  Don’t forget to justify your assumption.
  
 \end_layout
 
 \begin_layout Enumerate
-Assuming that b=2a, find the electric field in the region between the two
- shells.
+Assuming that 
+\series bold
+
+\begin_inset Formula $b=2a$
+\end_inset
+
+
+\series default
+, find the electric field in the region between the two shells.
  
 \end_layout
 
 \begin_layout Enumerate
 Using general boundary conditions, find the total charge induced on each
  shell.
- Verify your answer using Green’s reciprocity, and assume b=2a.
+ Verify your answer using Green’s reciprocity, and assume 
+\begin_inset Formula $b=2a$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Enumerate
-Calculate the capacitance of this system if a=10 cm.
+Calculate the capacitance of this system if 
+\begin_inset Formula $a=10$
+\end_inset
+
+ cm.
  Give both the formula and the numerical value.
- Use the general formula Qi =Cij V j (p140 in Zangwill) and b=2a.
+ Use the general formula 
+\begin_inset Formula $Q_{i}=C_{ij}V_{j}$
+\end_inset
+
+ (p140 in Zangwill) and 
+\series bold
+
+\begin_inset Formula $b=2a$
+\end_inset
+
+
+\series default
+.
  
 \end_layout
 
 \begin_layout Enumerate
-The center of the larger sphere is now shifted by a small displacement 𝑠⃗
- along the z-axis: 𝑠⃗ = 𝑠𝑧̂ , with 𝑠 ≪ 𝑎.
- Assuming that the potential difference V0 ’ between the two spheres is
- maintained constant by a battery (|V0 ’| = |V0 |= |Vb –Va |), show that
- the distortion in the electric field between the conductors created by
- this displacement will induce a charge on the surface of the inner shell
- that is given by
+The center of the larger sphere is now shifted by a small displacement 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ along the z-axis: 
+\begin_inset Formula $\mathbf{s}=s\hat{\mathbf{z}}$
+\end_inset
+
+, with 
+\begin_inset Formula $𝑠≪𝑎$
+\end_inset
+
+.
+ Assuming that the potential difference 
+\begin_inset Formula $V_{0}^{\prime}$
+\end_inset
+
+  between the two spheres is maintained constant by a battery 
+\begin_inset Formula $\left(\left|V_{0}^{\prime}\right|=\left|V_{0}\right|=\left|V_{b}-V_{a}\right|\right)$
+\end_inset
+
+, show that the distortion in the electric field between the conductors
+ created by this displacement will induce a charge on the surface of the
+ inner shell that is given by
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
