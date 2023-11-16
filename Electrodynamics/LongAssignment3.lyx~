@@ -5,11 +5,19 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{external}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
 eqs-within-sections
 figs-within-sections
+theorems-ams-extended
+graphicboxes
+endnotes
+pdfcomment
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -122,6 +130,8 @@ Month and Day, 2023
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
 A capacitor is made of two concentric conducting spherical shells of radii
  
 \begin_inset Formula $a$
@@ -145,6 +155,8 @@ A capacitor is made of two concentric conducting spherical shells of radii
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
 Using Laplace equation, find the potential for any point in the region between
  the two conducting shells.
  Express your answer in terms of 
@@ -165,6 +177,8 @@ Using Laplace equation, find the potential for any point in the region between
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
 Assuming that 
 \series bold
 
@@ -178,6 +192,8 @@ Assuming that
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
 Using general boundary conditions, find the total charge induced on each
  shell.
  Verify your answer using Green’s reciprocity, and assume 
@@ -189,6 +205,8 @@ Using general boundary conditions, find the total charge induced on each
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
 Calculate the capacitance of this system if 
 \begin_inset Formula $a=10$
 \end_inset
@@ -212,6 +230,8 @@ Calculate the capacitance of this system if
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
 The center of the larger sphere is now shifted by a small displacement 
 \begin_inset Formula $\mathbf{s}$
 \end_inset
@@ -238,11 +258,193 @@ The center of the larger sphere is now shifted by a small displacement
  inner shell that is given by
 \begin_inset Formula 
 \[
+\sigma\left(\theta\right)=\epsilon_{0}\frac{abV_{0}}{b-a}\left[\frac{1}{a^{2}}-\frac{3s}{b^{3}-a^{3}}\cos\theta\right]
 \]
 
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\series bold
+Sol.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Laplace equation is a linear PDE, thus, the superposition principle holds.
+ Now, with this in mind, we can transform the problem as the sum/superposition
+ of the following two problems:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+For the inner shell, we want to find the potential outside the sphere, assuming
+ that the potential on the sphere is given by 
+\begin_inset Formula $V_{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+For the outer shell, we want to find the potential inside the sphere, assuming
+ the potential is 
+\begin_inset Formula $V_{b}$
+\end_inset
+
+ on the surface.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+\begin_inset CommandInset include
+LatexCommand input
+filename "/Users/emmanuelflores/Downloads/Figure.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+Now, with this in mind let's move on with the calculations.
+ Because we have spherical symmetry is convenient to write the Laplacian
+ operator in spherical coordinates, which is given by 
+\begin_inset Formula 
+\[
+\nabla^{2}\square=\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}\frac{\partial\square}{\partial r}\right)+\frac{1}{r^{2}\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\square}{\partial\theta}\right)+\frac{1}{r^{2}\sin^{2}\theta}\frac{\partial^{2}\square}{\partial\varphi^{2}},
+\]
+
+\end_inset
+
+now, because of the symmetry, is clear that the solution doesn't depend
+ on the 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ variable, i.e, we have asymuthal symmetry, and in this case the previous
+ operator reduces to 
+\begin_inset Formula 
+\[
+\nabla^{2}\square=\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}\frac{\partial\square}{\partial r}\right)+\frac{1}{r^{2}\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\square}{\partial\theta}\right),
+\]
+
+\end_inset
+
+now, the problem we want to solve is given by the following PDE 
+\begin_inset Formula $\nabla^{2}V=0$
+\end_inset
+
+, where 
+\begin_inset Formula $V=V\left(r,\theta\right)$
+\end_inset
+
+, which can be written as
+\begin_inset Formula 
+\[
+\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}\frac{\partial V}{\partial r}\right)+\frac{1}{r^{2}\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial V}{\partial\theta}\right)=0,
+\]
+
+\end_inset
+
+now, using separation or variables, we can decompose the previous equation
+ into to ODE, one for each variable, and then solve them separately, which
+ will give us the following general solution 
+\begin_inset Formula 
+\[
+V\left(r,\theta\right)=\sum_{l=0}^{\infty}\left(\alpha_{l}r^{l}+\frac{\beta_{l}}{r^{l+1}}\right)P_{l}\left(\cos\theta\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{l},\beta_{l}$
+\end_inset
+
+ are determined by the boundary conditions.
+ Now, for the first problem, we have the following boundary condition 
+\begin_inset Formula 
+\[
+V\left(a,\theta\right)=V_{a},
+\]
+
+\end_inset
+
+and using the general solution we can see that the term with 
+\begin_inset Formula $\alpha_{l}$
+\end_inset
+
+ must vanish, and here's the reason, if 
+\begin_inset Formula $\alpha_{l}\neq0$
+\end_inset
+
+ then this implies that the potential will not go to zero as 
+\begin_inset Formula $r\rightarrow0$
+\end_inset
+
+, which is not physically admisible, then 
+\begin_inset Formula $\alpha_{l}=0,\forall l$
+\end_inset
+
+, thus the solution will be 
+\begin_inset Formula 
+\[
+V\left(r,\theta\right)=\sum_{l=0}^{\infty}\frac{\beta_{l}}{r^{l+1}}P_{l}\left(\cos\theta\right),
+\]
+
+\end_inset
+
+and using the boundary condition we have 
+\begin_inset Formula 
+\[
+V\left(a,\theta\right)=\sum_{l=0}^{\infty}\frac{\beta_{l}}{a^{l+1}}P_{l}\left(\cos\theta\right)=V_{a},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+For this case we have...
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Now using Green's reciproity we have
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Now, let's calculate the capacitance...
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Finally...
 \end_layout
 
 \end_body
