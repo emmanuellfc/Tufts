@@ -1,0 +1,1117 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fontsize{15pt}{0pt}
+\backslash
+selectfont
+\end_layout
+
+\end_inset
+
+ Quantum Theory 1
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+PHY 0163 - Quantum Theory 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Tufts University
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Graduate School of Arts and Sciences
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Midterm Evaluation
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename A&S_Hori_BK+BL.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+November 21th, 2023.
+\end_layout
+
+\begin_layout Enumerate
+A particle is confined to a one dimensional infinite square well 
+\begin_inset Formula 
+\[
+V\left(x\right)=\begin{cases}
+\begin{array}{c}
+0\\
+\infty
+\end{array} & \begin{array}{c}
+0<x<L\\
+\text{otherwise}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What are the energy eigenvalues and the corresponding time independent wave
+ functions?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The Schrodinger equation for this potential is given by 
+\begin_inset Formula 
+\[
+-\left(\frac{\hbar^{2}}{2m}\right)\frac{d^{2}\psi}{dx^{2}}+V\left(x\right)\psi=E\psi,
+\]
+
+\end_inset
+
+but, in the region of interest, we have that the potential is zero, then
+ 
+\begin_inset Formula 
+\[
+\frac{d^{2}\psi}{dx^{2}}+\frac{2m}{\hbar^{2}}E\psi=0,
+\]
+
+\end_inset
+
+thus, let's propose this expression as the solution of the previous ODE,
+ 
+\begin_inset Formula 
+\[
+\psi=A\sin\left(\alpha x\right),
+\]
+
+\end_inset
+
+inserting that expression into the ODE, we have 
+\begin_inset Formula 
+\[
+-A\alpha^{2}\sin\left(\alpha x\right)+A\frac{2m}{\hbar^{2}}E\sin\left(\alpha x\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\left(-\alpha^{2}+\frac{2m}{\hbar^{2}}E\right)\sin\left(\alpha x\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies E=\alpha^{2}\frac{\hbar^{2}}{2m},
+\]
+
+\end_inset
+
+and, using the boundary conditions, we have that 
+\begin_inset Formula 
+\[
+\sin\left(\alpha L\right)=0,\iff\alpha L=n\pi\iff\alpha=\frac{n\pi}{L},
+\]
+
+\end_inset
+
+thus, the energy will be given by 
+\begin_inset Formula 
+\[
+E_{n}=\frac{\hbar^{2}\pi^{2}n^{2}}{2mL}.
+\]
+
+\end_inset
+
+On the other, hand, for the constant 
+\begin_inset Formula $A$
+\end_inset
+
+ we need to normalize the wave function, thus 
+\begin_inset Formula 
+\[
+1=\int_{0}^{L}A^{2}\sin^{2}\left(\frac{n\pi x}{L}\right)=A^{2}\int_{0}^{L}\sin^{2}\left(\frac{n\pi x}{L}\right),
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula 
+\[
+\int_{0}^{L}\sin^{2}\left(\frac{n\pi x}{L}\right)=\left.\left[\frac{x}{2}-\frac{L}{4n\pi}\sin\left(\frac{2n\pi x}{L}\right)\right]\right|_{0}^{L}=\frac{L}{2},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+1=A^{2}\frac{L}{2}\iff A=\sqrt{\frac{2}{L}},
+\]
+
+\end_inset
+
+and then, the wave function will be 
+\begin_inset Formula 
+\[
+\psi\left(x\right)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right),
+\]
+
+\end_inset
+
+with energies 
+\begin_inset Formula 
+\[
+E_{n}=\frac{\hbar^{2}\pi^{2}n^{2}}{2mL}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is the dispersion of position 
+\begin_inset Formula $x$
+\end_inset
+
+ and momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ for an eigenstate of energy 
+\begin_inset Formula $E$
+\end_inset
+
+? Do the results satisfy the Heisenberg Uncertainty Principle?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The dispersion of any observable 
+\begin_inset Formula $A$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta A\right)^{2}\right\rangle =\left\langle A^{2}\right\rangle -\left\langle A\right\rangle ^{2},
+\]
+
+\end_inset
+
+thus, the dispersion in 
+\begin_inset Formula $x$
+\end_inset
+
+ will be given by 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle =\left\langle x^{2}\right\rangle -\left\langle x\right\rangle ^{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle =\int_{0}^{L}dx\left[x\left(\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right)\right)^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle x^{2}\right\rangle =\int_{0}^{L}dx\left[x^{2}\left(\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right)\right)^{2}\right],
+\]
+
+\end_inset
+
+then, for 
+\begin_inset Formula $\left\langle x\right\rangle $
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle =\left.\frac{2}{L}\left(-\frac{L^{2}\cos\left(\frac{2\pi nx}{L}\right)}{8\pi^{2}n^{2}}-\frac{Lx\sin\left(\frac{2\pi nx}{L}\right)}{4\pi n}+\frac{x^{2}}{4}\right)\right|_{0}^{L},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle =-\frac{L\left(-2\pi^{2}n^{2}\right)}{4\pi^{2}n^{2}}=\frac{L}{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle x\right\rangle =\frac{L}{2},
+\]
+
+\end_inset
+
+and following the same approach, for 
+\begin_inset Formula $\left\langle x^{2}\right\rangle $
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+\left\langle x^{2}\right\rangle =\left.\frac{2}{L}\left[-\frac{L^{2}x\cos\left(\frac{2\pi nx}{L}\right)}{4\pi^{2}n^{2}}-\frac{L\left(2\pi^{2}n^{2}x^{2}-L^{2}\right)\sin\left(\frac{2\pi nx}{L}\right)}{8\pi^{3}n^{3}}+\frac{x^{3}}{6}\right]\right|_{0}^{L},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x^{2}\right\rangle =\frac{L^{2}\left(4\pi^{3}n^{3}-6\pi n\cos(2\pi n)\right)}{12\pi^{3}n^{3}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x^{2}\right\rangle =\frac{L^{2}\left(4\pi^{3}n^{3}-6\pi n\right)}{12\pi^{3}n^{3}}=L^{2}\left(\frac{4\pi^{3}n^{3}}{12\pi^{3}n^{3}}-\frac{6\pi n}{12\pi^{3}n^{3}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x^{2}\right\rangle =\frac{L^{2}\left(4\pi^{3}n^{3}-6\pi n\right)}{12\pi^{3}n^{3}}=L^{2}\left(\frac{1}{3}-\frac{1}{2\pi^{2}n^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle x^{2}\right\rangle =L^{2}\left(\frac{1}{3}-\frac{1}{2\pi^{2}n^{2}}\right),
+\]
+
+\end_inset
+
+and therefore, the dispersion of 
+\begin_inset Formula $x$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle =L^{2}\left(\frac{1}{3}-\frac{1}{2\pi^{2}n^{2}}\right)-\frac{L^{2}}{4},
+\]
+
+\end_inset
+
+playing a little bit with the math, we have 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle =\frac{L^{2}}{2}\left(\frac{2}{3}-\frac{1}{\pi^{2}n^{2}}-\frac{1}{2}\right)-\frac{L^{2}}{2}
+\]
+
+\end_inset
+
+and, in addition, we know that 
+\begin_inset Formula 
+\[
+p\rightarrow-i\hbar\partial_{x},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What linear combination of Energy eigenstates at time 
+\begin_inset Formula $0$
+\end_inset
+
+, y 
+\begin_inset Formula $\psi_{E}\left(x,0\right)$
+\end_inset
+
+ will form a wave packet that has a triangular shape 
+\begin_inset Formula 
+\[
+\psi\left(x,0\right)=\begin{cases}
+\begin{array}{c}
+2x/L\\
+2-2x/L
+\end{array} & \begin{array}{c}
+0<x<L/2\\
+L/2<x<L
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+How will that wave packet shape change in time for several cycles at the
+ ground state frequency (Lowest E/h )?
+\end_layout
+
+\begin_layout Enumerate
+If the particle is an electron, for what value of 
+\begin_inset Formula $L$
+\end_inset
+
+ (in metric units) will the ground state velocity equal the speed of light,
+ 
+\begin_inset Formula $c$
+\end_inset
+
+? Consider the same question for a proton.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula 
+\[
+J_{\pm}=\hbar a_{\pm}^{\dagger}a_{\mp},\hspace{1em}J_{z}=\frac{\hbar}{2}\left(a_{+}^{\dagger}a_{+}-a_{-}^{\dagger}a_{-}\right),\hspace{1em}N=a_{+}^{\dagger}a_{+}+a_{-}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a_{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{\mp}$
+\end_inset
+
+ are the anhilation and creation operators of two independent simple harmonic
+ oscillators satisfying the usual simple harmonic oscillator computation
+ relations, prove 
+\begin_inset Formula 
+\[
+\left[J_{z},J_{\pm}\right]=\pm\hbar J_{\pm},\hspace{1em}\left[\mathbf{J}^{2},J_{z}\right]=0,\hspace{1em}\mathbf{J}^{2}=\left(\frac{\hbar^{2}}{2}\right)N\left[\left(\frac{N}{2}\right)+1\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We know the number operator is given by 
+\begin_inset Formula 
+\[
+N_{+}=a_{+}^{\dagger}a_{+},\hspace{1em}N_{-}=a_{-}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+then, we can rewrite 
+\begin_inset Formula $J_{z}$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\[
+J_{z}=\frac{\hbar}{2}\left(a_{+}^{\dagger}a_{+}-a_{-}^{\dagger}a_{-}\right)=\frac{\hbar}{2}\left(N_{+}-N_{-}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies J_{z}=\frac{\hbar}{2}\left(N_{+}-N_{-}\right),
+\]
+
+\end_inset
+
+and we can do the same for 
+\begin_inset Formula $N$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+N=a_{+}^{\dagger}a_{+}+a_{-}^{\dagger}a_{-}=N_{+}+N_{-},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies N=N_{+}+N_{-}.
+\]
+
+\end_inset
+
+Now, with this information, let's prove 
+\begin_inset Formula 
+\[
+\left[J_{z},J_{\pm}\right]=\pm J_{\pm},
+\]
+
+\end_inset
+
+and let's start with 
+\begin_inset Formula $J_{+}$
+\end_inset
+
+: by definition
+\begin_inset Formula 
+\[
+\left[J_{z},J_{+}\right]=\left[J_{z},\hbar a_{+}^{\dagger}a_{-}\right]=\frac{\hbar^{2}}{2}\left[N_{+}-N_{-},a_{+}^{\dagger}a_{-}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=\frac{\hbar^{2}}{2}\left[N_{+},a_{+}^{\dagger}a_{-}\right]-\frac{\hbar^{2}}{2}\left[N_{-},a_{+}^{\dagger}a_{-}\right],
+\]
+
+\end_inset
+
+in which I've used the linearity of the commutator.
+ Moving on with the proof, we know that the number operator 
+\begin_inset Formula $N_{+}$
+\end_inset
+
+ satisfies the following properties 
+\begin_inset Formula 
+\[
+\left[N_{+},a_{+}\right]=-a_{+},\hspace{1em}\left[N_{+},a_{+}^{\dagger}\right]=a_{+}^{\dagger},
+\]
+
+\end_inset
+
+and the same for 
+\begin_inset Formula $N_{-}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[N_{-},a_{-}\right]=-a,\hspace{1em}\left[N_{-},a_{-}^{\dagger}\right]=a_{-}^{\dagger}.
+\]
+
+\end_inset
+
+On the other hand, for any operators 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\[
+\left[X,YZ\right]=XYZ-YZX=XYZ-YXZ+YXZ-YZX=\left[X,Y\right]Z+Y\left[X,Z\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies\left[X,YZ\right]=\left[X,Y\right]Z+Y\left[X,Z\right],\label{eq:PropXYZ}
+\end{equation}
+
+\end_inset
+
+thus, if we aplly the previous relation to the commutators 
+\begin_inset Formula $\left[N_{+},a_{+}^{\dagger}a_{-}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[N_{-},a_{+}^{\dagger}a_{-}\right]$
+\end_inset
+
+ we have that
+\begin_inset Formula 
+\[
+\left[N_{+},a_{+}^{\dagger}a_{-}\right]=\left[N_{+},a_{+}^{\dagger}\right]a_{-}+a_{+}^{\dagger}\left[N_{+},a_{-}\right]=a_{+}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[N_{+},a_{+}^{\dagger}a_{-}\right]=a_{+}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+and the same holds for 
+\begin_inset Formula 
+\[
+\left[N_{-},a_{+}^{\dagger}a_{-}\right]=\left[N_{-},a_{+}^{\dagger}\right]a_{-}+a_{+}^{\dagger}\left[N_{-},a_{-}\right]=-a_{+}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[N_{-},a_{+}^{\dagger}a_{-}\right]=-a_{+}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+because 
+\begin_inset Formula $N_{+}$
+\end_inset
+
+ is independent from any 
+\begin_inset Formula $a_{-},a_{-}^{\dagger}$
+\end_inset
+
+ and the same fort 
+\begin_inset Formula $N_{-}$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{+},a_{+}^{\dagger}$
+\end_inset
+
+.
+ Then, with this result, we have that the commutator 
+\begin_inset Formula $\left[J_{z},J_{+}\right]$
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula 
+\[
+\left[J_{z},J_{+}\right]=\frac{\hbar^{2}}{2}a_{+}^{\dagger}a_{-}-\frac{\hbar^{2}}{2}\left(-a_{+}^{\dagger}a_{-}\right)=\frac{\hbar^{2}}{2}a_{+}^{\dagger}a_{-}+\frac{\hbar^{2}}{2}\left(a_{+}^{\dagger}a_{-}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=\hbar^{2}a_{+}^{\dagger}a_{-}=\hbar\left(\hbar a_{+}^{\dagger}a_{-}\right)=\hbar J_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left[J_{z},J_{+}\right]=\hbar J_{+}.
+\]
+
+\end_inset
+
+Now, let's move with 
+\begin_inset Formula $\left[J_{z},J_{+}\right]$
+\end_inset
+
+, and following the same procedure as before, we can write the commutator
+ as 
+\begin_inset Formula 
+\[
+\left[J_{z},J_{+}\right]=\left[J_{z},\hbar a_{-}^{\dagger}a_{+}\right]=\frac{\hbar^{2}}{2}\left[N_{+}-N_{-},a_{-}^{\dagger}a_{+}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=\frac{\hbar^{2}}{2}\left[N_{+},a_{-}^{\dagger}a_{+}\right]-\frac{\hbar^{2}}{2}\left[N_{-},a_{-}^{\dagger}a_{+}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=\frac{\hbar^{2}}{2}\left[N_{+},a_{-}^{\dagger}\right]a_{+}+\frac{\hbar^{2}}{2}a_{-}^{\dagger}\left[N_{+},a_{+}\right]-\frac{\hbar^{2}}{2}\left[N_{-},a_{-}^{\dagger}\right]a_{+}-\frac{\hbar^{2}}{2}a_{-}^{\dagger}\left[N_{-},a_{+}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=\frac{\hbar^{2}}{2}a_{-}^{\dagger}\left[N_{+},a_{+}\right]-\frac{\hbar^{2}}{2}\left[N_{-},a_{-}^{\dagger}\right]a_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=-\frac{\hbar^{2}}{2}a_{-}^{\dagger}a_{+}-\frac{\hbar^{2}}{2}a_{-}^{\dagger}a_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[J_{z},J_{+}\right]=-\hbar^{2}a_{-}^{\dagger}a_{+}=-\hbar\left(\hbar a_{-}^{\dagger}a_{+}\right)=-\hbar J_{-},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left[J_{z},J_{+}\right]=-\hbar J_{-},
+\]
+
+\end_inset
+
+and finally, we can group the two previous expressions as 
+\begin_inset Formula 
+\begin{equation}
+\left[J_{z},J_{\pm}\right]=\pm\hbar J_{\pm}.\label{eq:Problem2PartA}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, let's move on, in this part we're going to prove that 
+\begin_inset Formula 
+\[
+\left[\mathbf{J}^{2},J_{z}\right]=0,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{J}^{2}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=J_{z}^{2}+\frac{1}{2}\left(J_{+}J_{-}+J_{-}J_{+}\right),
+\]
+
+\end_inset
+
+then let's begin.
+ By definition 
+\begin_inset Formula 
+\[
+\left[\mathbf{J}^{2},J_{z}\right]=\left[\left(J_{z}^{2}+\frac{1}{2}\left(J_{+}J_{-}+J_{-}J_{+}\right)\right),J_{z}\right]=\left[J_{z}^{2},J_{z}\right]+\left[\frac{1}{2}\left(J_{+}J_{-}+J_{-}J_{+}\right),J_{z}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\mathbf{J}^{2},J_{z}\right]=\left[J_{z}^{2},J_{z}\right]+\left[\frac{1}{2}\left(J_{+}J_{-}+J_{-}J_{+}\right),J_{z}\right]
+\]
+
+\end_inset
+
+but clearly, the commutator 
+\begin_inset Formula $\left[J_{z}^{2},J_{z}\right]$
+\end_inset
+
+ is equal to zero, then
+\begin_inset Formula 
+\[
+\left[\mathbf{J}^{2},J_{z}\right]=\left[\frac{1}{2}\left(J_{+}J_{-}+J_{-}J_{+}\right),J_{z}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\mathbf{J}^{2},J_{z}\right]=\frac{1}{2}\left[J_{+}J_{-},J_{z}\right]+\frac{1}{2}\left[J_{-}J_{+},J_{z}\right],
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+\left[\mathbf{J}^{2},J_{z}\right]=-\frac{1}{2}\left[J_{z},J_{+}J_{-}\right]-\frac{1}{2}\left[J_{z},J_{-}J_{+}\right]
+\]
+
+\end_inset
+
+and using the property given by equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PropXYZ"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+we have 
+\begin_inset Formula 
+\[
+\left[\mathbf{J}^{2},J_{z}\right]=-\frac{1}{2}\left[J_{z},J_{+}\right]J_{-}-\frac{1}{2}J_{+}\left[J_{z},J_{-}\right]-\frac{1}{2}\left[J_{z},J_{-}\right]J_{+}-\frac{1}{2}J_{-}\left[J_{z},J_{+}\right],
+\]
+
+\end_inset
+
+and now, we can use the previous result, the one given by equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Problem2PartA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\left[\mathbf{J}^{2},J_{z}\right]=-\frac{1}{2}\hbar J_{+}J_{-}-\frac{1}{2}J_{+}\left(-\hbar J_{-}\right)-\frac{1}{2}\left(-\hbar J_{-}\right)J_{+}-\frac{1}{2}\hbar J_{-}J_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[\mathbf{J}^{2},J_{z}\right]=-\frac{\hbar}{2}J_{+}J_{-}+\frac{\hbar}{2}J_{+}\left(J_{-}\right)+\frac{\hbar}{2}J_{-}J_{+}-\frac{\hbar}{2}J_{-}J_{+}=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left[\mathbf{J}^{2},J_{z}\right]=0.\label{eq:Prob2PartB}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Finally, let's prove 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=\left(\frac{\hbar^{2}}{2}\right)N\left[\left(\frac{N}{2}\right)+1\right].
+\]
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $\mathbf{J}^{2}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=J_{z}^{2}+\frac{1}{2}\left(J_{+}J_{-}+J_{-}J_{+}\right),
+\]
+
+\end_inset
+
+but we know that
+\begin_inset Formula 
+\[
+J_{z}=\frac{\hbar}{2}\left(a_{+}^{\dagger}a_{+}-a_{-}^{\dagger}a_{-}\right),\hspace{1em}N=a_{+}^{\dagger}a_{+}+a_{-}^{\dagger}a_{-},
+\]
+
+\end_inset
+
+thus
+\begin_inset Formula 
+\[
+J_{z}^{2}=\frac{\hbar^{2}}{4}\left(a_{+}^{\dagger}a_{+}-a_{-}^{\dagger}a_{-}\right)^{2}=\frac{\hbar^{2}}{4}\left(N_{+}^{2}-N_{+}N_{-}-N_{-}N_{+}+N_{-}^{2}\right),
+\]
+
+\end_inset
+
+and in addition, we know that 
+\begin_inset Formula 
+\[
+\left[a,a^{\dagger}\right]=1\implies aa^{\dagger}=1+a^{\dagger}a=1+N,
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+J_{+}J_{-}=\hbar^{2}a_{+}^{\dagger}a_{-}a_{-}^{\dagger}a_{+}=\hbar^{2}a_{+}^{\dagger}a_{+}a_{-}a_{-}^{\dagger}=\hbar^{2}N_{+}\left(1+N_{-}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies J_{+}J_{-}=\hbar^{2}N_{+}+\hbar^{2}N_{+}N_{-},
+\]
+
+\end_inset
+
+and the same goes for 
+\begin_inset Formula 
+\[
+J_{-}J_{+}=\hbar^{2}N_{-}+\hbar^{2}N_{-}N_{+},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+J_{+}J_{-}+J_{-}J_{+}=\hbar^{2}N_{+}+\hbar^{2}N_{+}N_{-}+\hbar^{2}N_{-}+\hbar^{2}N_{-}N_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies J_{+}J_{-}+J_{-}J_{+}=\hbar^{2}\left(N_{+}+N_{-}\right)+\hbar^{2}N_{+}N_{-}+\hbar^{2}N_{-}N_{+},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=\frac{\hbar^{2}}{4}\left(N_{+}^{2}-N_{+}N_{-}-N_{-}N_{+}+N_{-}^{2}\right)+\frac{\hbar^{2}}{2}\left(N_{+}+N_{-}\right)+\frac{\hbar^{2}}{2}N_{+}N_{-}+\frac{\hbar^{2}}{2}N_{-}N_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{J}^{2}=\frac{\hbar^{2}}{4}\left(N_{+}^{2}+N_{-}^{2}\right)+\frac{\hbar^{2}}{2}\left(N_{+}+N_{-}\right)+\frac{\hbar^{2}}{2}N_{+}N_{-}-\frac{\hbar^{2}}{4}N_{+}N_{-}+\frac{\hbar^{2}}{2}N_{-}N_{+}-\frac{\hbar^{2}}{4}N_{-}N_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{J}^{2}=\frac{\hbar^{2}}{4}\left(N_{+}^{2}+N_{-}^{2}\right)+\frac{\hbar^{2}}{2}\left(N_{+}+N_{-}\right)+\frac{\hbar^{2}}{4}N_{+}N_{-}+\frac{\hbar^{2}}{4}N_{-}N_{+},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{J}^{2}=\frac{\hbar^{2}}{4}\left(N_{+}^{2}+N_{-}^{2}+N_{+}N_{-}+N_{-}N_{+}\right)+\frac{\hbar^{2}}{2}\left(N_{+}+N_{-}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{J}^{2}=\frac{\hbar^{2}}{4}N^{2}+\frac{\hbar^{2}}{2}N,
+\]
+
+\end_inset
+
+and from we have
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=\left(\frac{\hbar^{2}}{2}\right)N\left[\left(\frac{N}{2}\right)+1\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The rotation operator, for an infinitesimal rotation is defined as 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{n}},d\phi\right)=1-i\left(\frac{\mathbf{J}\cdot\hat{\mathbf{n}}}{\hbar}\right)d\phi,
+\]
+
+\end_inset
+
+and for a finite rotation, is defined by
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\lim_{n\rightarrow\infty}\left[1-i\left(\frac{\mathbf{J}\cdot\hat{\mathbf{n}}}{\hbar}\right)\left(\frac{\phi}{n}\right)\right]^{n},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\exp\left[-i\left(\frac{\mathbf{J}\cdot\hat{\mathbf{n}}}{\hbar}\phi\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
