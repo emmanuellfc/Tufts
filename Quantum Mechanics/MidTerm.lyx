@@ -168,6 +168,7 @@ November 21th, 2023.
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 A particle is confined to a one dimensional infinite square well 
 \begin_inset Formula 
 \[
@@ -188,12 +189,14 @@ V\left(x\right)=\begin{cases}
 
 \begin_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 What are the energy eigenvalues and the corresponding time independent wave
  functions?
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
+\paragraph_spacing onehalf
 The Schrodinger equation for this potential is given by 
 \begin_inset Formula 
 \[
@@ -309,6 +312,7 @@ E_{n}=\frac{\hbar^{2}\pi^{2}n^{2}}{2mL}.
 
 \end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 What is the dispersion of position 
 \begin_inset Formula $x$
 \end_inset
@@ -326,6 +330,7 @@ What is the dispersion of position
 
 \begin_deeper
 \begin_layout Standard
+\paragraph_spacing onehalf
 The dispersion of any observable 
 \begin_inset Formula $A$
 \end_inset
@@ -531,6 +536,7 @@ on the other, hand, for
 
 \end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 What linear combination of Energy eigenstates at time 
 \begin_inset Formula $0$
 \end_inset
@@ -544,8 +550,8 @@ What linear combination of Energy eigenstates at time
 \[
 \psi\left(x,0\right)=\begin{cases}
 \begin{array}{c}
-2x/L\\
-2-2x/L
+\frac{2x}{L}\\
+\frac{2}{L}\left(L-x\right)
 \end{array} & \begin{array}{c}
 0<x<L/2\\
 L/2<x<L
@@ -557,12 +563,189 @@ L/2<x<L
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing onehalf
+For this part, we need to express the fgiven function 
+\begin_inset Formula $\psi\left(x,0\right)$
+\end_inset
+
+ as a sum of sine functions, which could be done by means of the Fourier
+ series, thus we want an expansion of the form 
+\begin_inset Formula 
+\[
+f\left(x\right)=\frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n}\cos\left(\frac{n\pi x}{l}\right)+b_{n}\sin\left(\frac{n\pi x}{l}\right)\right),
+\]
+
+\end_inset
+
+where the coeficients 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\[
+a_{n}=\frac{1}{l}\int_{-l}^{l}f\left(x\right)\cos\left(\frac{n\pi x}{l}\right)dx,n=0,1,2,3\dots,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b_{n}=\frac{1}{l}\int_{-l}^{l}f\left(x\right)\sin\left(\frac{n\pi x}{l}\right)dx,n=1,2,\dots,
+\]
+
+\end_inset
+
+and even more, if the function 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ is even, then 
+\begin_inset Formula 
+\[
+a_{n}=\frac{2}{l}\int_{0}^{l}f\left(x\right)\cos\left(\frac{n\pi x}{l}\right)dx,n=0,1,2,3\dots,\hspace{1em}b_{n}=0,\forall n,
+\]
+
+\end_inset
+
+on the other hand, if the function is odd, then the coefficients are given
+ by 
+\begin_inset Formula 
+\[
+a_{n}=0,\forall n,\hspace{1em}b_{n}=\frac{2}{l}\int_{0}^{l}f\left(x\right)\sin\left(\frac{n\pi x}{l}\right)dx,n=1,2,\dots,
+\]
+
+\end_inset
+
+and now, with this information at hand, because the given function is odd,
+ then all the coeficcients 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ are equal to zero, an then we just need to compute the 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ coefficients, which are given by 
+\begin_inset Formula 
+\[
+b_{n}=\frac{2}{L}\int_{0}^{L}f\left(x\right)\sin\left(\frac{n\pi x}{L}\right)dx=\frac{2}{L}\int_{0}^{L/2}\frac{2x}{L}\sin\left(\frac{n\pi x}{L}\right)dx+\frac{2}{L}\int_{L/2}^{L}\frac{2}{L}\left(L-x\right)\sin\left(\frac{n\pi x}{L}\right)dx,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies b_{n}=\frac{2}{L}\left(\frac{2}{L}\int_{0}^{L/2}x\sin\left(\frac{n\pi x}{L}\right)dx+\frac{2}{L}\int_{L/2}^{L}\left(L-x\right)\sin\left(\frac{n\pi x}{L}\right)dx\right),
+\]
+
+\end_inset
+
+now, if we make the change 
+\begin_inset Formula $\frac{n\pi x}{L}=t$
+\end_inset
+
+, the previous equations transforms into 
+\begin_inset Formula 
+\[
+b_{n}=\frac{2}{L}\left(\frac{2L}{\pi^{2}}\int_{0}^{\pi/2}t\sin\left(nt\right)dt+\frac{2L}{\pi^{2}}\int_{\pi/2}^{\pi}\left(\pi-t\right)\sin\left(nt\right)dt\right),
+\]
+
+\end_inset
+
+then, for the first integral we have 
+\begin_inset Formula 
+\[
+\frac{2L}{\pi^{2}}\int_{0}^{\pi/2}t\sin\left(nt\right)dt=\frac{2L}{\pi^{2}}\left.\left(-\frac{t\cos\left(nt\right)}{n}\right)\right|_{t=0}^{t=\pi/2}+\frac{2L}{\pi^{2}n}\int_{0}^{\pi/2}\cos\left(nt\right)dt,
+\]
+
+\end_inset
+
+while for the second, we have 
+\begin_inset Formula 
+\[
+\frac{2L}{\pi^{2}}\int_{\pi/2}^{\pi}\left(\pi-t\right)\sin\left(nt\right)dt=\frac{2L}{\pi^{2}}\left.\left(-\frac{\left(\pi-t\right)\cos\left(nt\right)}{n}\right)\right|_{t=\pi/2}^{t=\pi}-\frac{2L}{\pi^{2}}\int_{\pi/2}^{\pi}\cos\left(nt\right)dt,
+\]
+
+\end_inset
+
+and, as we can see, some of the terms, cancel leaving us with 
+\begin_inset Formula 
+\[
+b_{n}=\frac{2}{L}\left(\frac{4L}{\pi^{2}n^{2}}\sin\left(\frac{\pi n}{2}\right)\right)=\frac{8}{\pi^{2}n^{2}}\sin\left(\frac{\pi n}{2}\right),
+\]
+
+\end_inset
+
+then, the Fourier expansion for this function is 
+\begin_inset Formula 
+\[
+\psi\left(x,0\right)=\frac{8}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{n^{2}}\sin\left(\frac{\pi n}{2}\right)\sin\left(\frac{n\pi x}{l}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 How will that wave packet shape change in time for several cycles at the
  ground state frequency (Lowest E/h )?
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+The general solution, i.e, the time dependent wave function, is given by
+ 
+\begin_inset Formula 
+\[
+\psi\left(x,t\right)=\sum_{k=1}^{\infty}c_{k}\psi_{k}\left(x\right)\exp\left[-i\frac{E_{k}t}{\hbar}\right],
+\]
+
+\end_inset
+
+where the 
+\begin_inset Formula $\psi_{n}\left(x\right)$
+\end_inset
+
+ are the wave functions for the time-independent problem.
+ Now, in this problem, we want to study the behaviour of the wave package
+ within the first allowed energy, thus, we have 
+\begin_inset Formula 
+\[
+\psi\left(x,0\right)=\frac{8}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{n^{2}}\sin\left(\frac{\pi n}{2}\right)\sin\left(\frac{n\pi x}{l}\right)\exp\left[-i\frac{E_{1}t}{\hbar}\right],
+\]
+
+\end_inset
+
+or more explicitly, using 
+\begin_inset Formula $E_{1}=\frac{\hbar^{2}\pi^{2}}{2mL}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\psi\left(x,0\right)=\frac{8}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{n^{2}}\sin\left(\frac{\pi n}{2}\right)\sin\left(\frac{n\pi x}{l}\right)\exp\left[-i\frac{\hbar^{2}\pi^{2}}{2mL}t\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 If the particle is an electron, for what value of 
 \begin_inset Formula $L$
 \end_inset
@@ -578,6 +761,7 @@ If the particle is an electron, for what value of
 
 \begin_deeper
 \begin_layout Standard
+\paragraph_spacing onehalf
 In the gound state, i.e., 
 \begin_inset Formula $n=1$
 \end_inset
@@ -629,7 +813,7 @@ now, in metric units,
 , then, for the electron we have 
 \begin_inset Formula 
 \[
-L_{e}=2.904965060387787\times10^{-23},
+L_{e}=2.904965060387787\times10^{-23}\text{m},
 \]
 
 \end_inset
@@ -637,7 +821,7 @@ L_{e}=2.904965060387787\times10^{-23},
 and for the proton 
 \begin_inset Formula 
 \[
-L_{p}=8.617599344270647\times10^{-30}.
+L_{p}=8.617599344270647\times10^{-30}\text{m}.
 \]
 
 \end_inset
@@ -648,6 +832,7 @@ L_{p}=8.617599344270647\times10^{-30}.
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Let 
 \begin_inset Formula 
 \[
@@ -679,6 +864,7 @@ where
 
 \begin_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 We know the number operator is given by 
 \begin_inset Formula 
 \[
@@ -958,6 +1144,7 @@ and finally, we can group the two previous expressions as
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Now, let's move on, in this part we're going to prove that 
 \begin_inset Formula 
 \[
@@ -1079,6 +1266,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Finally, let's prove 
 \begin_inset Formula 
 \[
@@ -1216,11 +1404,13 @@ and from we have
 
 \end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Problem 1.24.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Prove that 
 \begin_inset Formula $(1/\sqrt{2})(1+i\sigma_{x})$
 \end_inset
@@ -1240,6 +1430,7 @@ Prove that
 
 \begin_deeper
 \begin_layout Standard
+\paragraph_spacing onehalf
 We know that 
 \begin_inset Formula $\sigma_{x}$
 \end_inset
@@ -1403,6 +1594,7 @@ and therefore, we just prove that
 
 \end_deeper
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Construct the matrix representation of 
 \begin_inset Formula $S_{z}$
 \end_inset
@@ -1416,6 +1608,7 @@ Construct the matrix representation of
 
 \begin_deeper
 \begin_layout Standard
+\paragraph_spacing onehalf
 Now, instead of representing the represent the operators 
 \begin_inset Formula $S_{x},S_{y}$
 \end_inset
@@ -1487,5 +1680,39 @@ S_{z}=\left(\frac{\hbar}{2}\right)\left(\left|+\right\rangle \left\langle -\righ
 
 \end_deeper
 \end_deeper
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Sakurai, Jun John, and Eugene D.
+ Commins.
+ "Modern quantum mechanics, revised edition." (1995): 93-95.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Shankar, Ramamurti.
+ Principles of quantum mechanics.
+ Springer Science & Business Media, 2012.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Tolstov, Georgi P.. Fourier Series. United Kingdom: Dover Publications, 1976.
+\end_layout
+
 \end_body
 \end_document
