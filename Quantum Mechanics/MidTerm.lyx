@@ -576,6 +576,76 @@ If the particle is an electron, for what value of
  
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+In the gound state, i.e., 
+\begin_inset Formula $n=1$
+\end_inset
+
+, the energy is given by 
+\begin_inset Formula 
+\[
+E_{1}=\frac{\hbar^{2}\pi^{2}}{2mL},
+\]
+
+\end_inset
+
+then using 
+\begin_inset Formula $E_{1}=mc^{2}$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+mc^{2}=\frac{\hbar^{2}\pi^{2}}{2mL},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies L=\frac{\hbar^{2}\pi^{2}}{2m^{2}c^{2}},
+\]
+
+\end_inset
+
+now, in metric units, 
+\begin_inset Formula $m_{e}=9.10938\times10^{-31}\text{Kg}$
+\end_inset
+
+, 
+\begin_inset Formula $m_{p}=1.6725×10^{-27}\text{Kg}$
+\end_inset
+
+, 
+\begin_inset Formula $c=2.998\times10^{8}\text{m/s}$
+\end_inset
+
+, 
+\begin_inset Formula $\hbar=6.62607015×10^{-34}$
+\end_inset
+
+, then, for the electron we have 
+\begin_inset Formula 
+\[
+L_{e}=2.904965060387787\times10^{-23},
+\]
+
+\end_inset
+
+and for the proton 
+\begin_inset Formula 
+\[
+L_{p}=8.617599344270647\times10^{-30}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Let 
@@ -1146,18 +1216,163 @@ and from we have
 
 \end_deeper
 \begin_layout Enumerate
-The rotation operator, for an infinitesimal rotation is defined as 
+Problem 1.24.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $(1/\sqrt{2})(1+i\sigma_{x})$
+\end_inset
+
+, acting on a two-component spinor can be regarded as the matrix representation
+ of the rotation operator about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis by angle 
+\begin_inset Formula $-\pi/2$
+\end_inset
+
+.
+ (The minus sign signifies that the rotation is clockwise.)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We know that 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+ is given by 
 \begin_inset Formula 
 \[
-\mathcal{D}\left(\hat{\mathbf{n}},d\phi\right)=1-i\left(\frac{\mathbf{J}\cdot\hat{\mathbf{n}}}{\hbar}\right)d\phi,
+\sigma_{x}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right),
 \]
 
 \end_inset
 
-and for a finite rotation, is defined by
+then, let's operate 
+\begin_inset Formula $(1/\sqrt{2})(1+i\sigma_{x})$
+\end_inset
+
+ on the spinor representation of 
+\begin_inset Formula $\left|+\right\rangle $
+\end_inset
+
+
 \begin_inset Formula 
 \[
-\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\lim_{n\rightarrow\infty}\left[1-i\left(\frac{\mathbf{J}\cdot\hat{\mathbf{n}}}{\hbar}\right)\left(\frac{\phi}{n}\right)\right]^{n},
+\frac{1}{\sqrt{2}}\left[\left(\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right)+i\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)\right]\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)=\frac{1}{\sqrt{2}}\left(\begin{array}{cc}
+1 & i\\
+i & 1
+\end{array}\right)\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+1\\
+i
+\end{array}\right),
+\]
+
+\end_inset
+
+on the other hand, the rotation operator, for a finite rotation, is given
+ by 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\exp\left(\frac{-i\mathbf{S}\cdot\hat{\mathbf{n}}\phi}{\hbar}\right),
+\]
+
+\end_inset
+
+which can be represented in terms of the Pauli matrices as 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\exp\left(\frac{-i\sigma\cdot\hat{\mathbf{n}}\phi}{\hbar}\right),
+\]
+
+\end_inset
+
+then, if we use 
+\begin_inset Formula 
+\[
+\left(\sigma\cdot\hat{\mathbf{n}}\right)^{n}=\begin{cases}
+\begin{array}{c}
+1\\
+\sigma\cdot\hat{\mathbf{n}}
+\end{array} & \begin{array}{c}
+n\text{ even}\\
+n\text{ odd}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+then, we can Taylor expand the exponential, and that will give us
+\begin_inset Formula 
+\[
+\exp\left(\frac{-i\sigma\cdot\hat{\mathbf{n}}\phi}{\hbar}\right)=\mathbf{1}\cos\left(\frac{\phi}{2}\right)-i\sigma\cdot\hat{\mathbf{n}}\sin\left(\frac{\phi}{2}\right),
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\mathbf{1}\cos\left(\frac{\phi}{2}\right)-i\sigma\cdot\hat{\mathbf{n}}\sin\left(\frac{\phi}{2}\right),
+\]
+
+\end_inset
+
+and if we use 
+\begin_inset Formula $\sigma\cdot\hat{\mathbf{n}}=\sigma_{x}$
+\end_inset
+
+, with 
+\begin_inset Formula $\phi=-\pi/2$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{x}},\phi\right)=\mathbf{1}\cos\left(\frac{-\pi}{4}\right)-i\sigma_{x}\sin\left(\frac{-\pi}{4}\right),
+\]
+
+\end_inset
+
+but, using the parity of the trigonometric functions, we have that 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{x}},\frac{\pi}{4}\right)=\mathbf{1}\cos\left(\frac{\pi}{4}\right)+i\sigma_{x}\sin\left(\frac{\pi}{4}\right),
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+\sin\left(\frac{\pi}{4}\right)=\cos\left(\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(\hat{\mathbf{x}},\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}}\mathbf{1}+i\frac{1}{\sqrt{2}}\sigma_{x},
 \]
 
 \end_inset
@@ -1165,7 +1380,104 @@ and for a finite rotation, is defined by
 
 \begin_inset Formula 
 \[
-\implies\mathcal{D}\left(\hat{\mathbf{n}},\phi\right)=\exp\left[-i\left(\frac{\mathbf{J}\cdot\hat{\mathbf{n}}}{\hbar}\phi\right)\right]
+\therefore\mathcal{D}\left(\hat{\mathbf{x}},\frac{\pi}{4}\right)=\frac{1}{\sqrt{2}}\left(\mathbf{1}+i\sigma_{x}\right),
+\]
+
+\end_inset
+
+and therefore, we just prove that 
+\begin_inset Formula $(1/\sqrt{2})(1+i\sigma_{x})$
+\end_inset
+
+, acting on a two-component spinor can be regarded as the matrix representation
+ of the rotation operator about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis by angle 
+\begin_inset Formula $-\pi/2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Construct the matrix representation of 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ when the eigenkets of 
+\begin_inset Formula $S_{y}$
+\end_inset
+
+ are used as base vectors.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Now, instead of representing the represent the operators 
+\begin_inset Formula $S_{x},S_{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ in the 
+\begin_inset Formula $z$
+\end_inset
+
+ basis, we want to represent it in the 
+\begin_inset Formula $x$
+\end_inset
+
+ basis, and because we are using the 
+\begin_inset Formula $x$
+\end_inset
+
+-basis then, we expect that 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ will be diagonal.
+ On the other, hand, we know that 
+\begin_inset Formula 
+\[
+\left[S_{i},S_{j}\right]=i\epsilon_{ijk}\hbar S_{k},
+\]
+
+\end_inset
+
+thus, any change in the representation will also have to follow the previous
+ equation, then if we make the permutation 
+\begin_inset Formula 
+\[
+S_{x}\rightarrow S_{z},\hspace{1em}S_{z}\rightarrow S_{y},\hspace{1em}S_{y}\rightarrow S_{x},
+\]
+
+\end_inset
+
+the commutation relation will hold, then 
+\begin_inset Formula 
+\[
+S_{x}=\left(\frac{\hbar}{2}\right)\left(\left|+\right\rangle \left\langle +\right|-\left|-\right\rangle \left\langle -\right|\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{y}=\left(\frac{\hbar}{2}\right)\left(-\left|+\right\rangle \left\langle -\right|+\left|-\right\rangle \left\langle +\right|\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{z}=\left(\frac{\hbar}{2}\right)\left(\left|+\right\rangle \left\langle -\right|+\left|-\right\rangle \left\langle +\right|\right).
 \]
 
 \end_inset
@@ -1173,5 +1485,7 @@ and for a finite rotation, is defined by
 
 \end_layout
 
+\end_deeper
+\end_deeper
 \end_body
 \end_document
