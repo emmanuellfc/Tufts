@@ -447,5 +447,686 @@ Now, let's calculate the capacitance...
 Finally...
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+For this part of the problem, we have the configuration given by the following
+ figure:
+\begin_inset CommandInset include
+LatexCommand input
+filename "LA3P4.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And as the problem suggest, first, we're going to prove that 
+\begin_inset Formula 
+\[
+r_{2}\approx b+s\cos\theta,
+\]
+
+\end_inset
+
+and, in order to prove that, we are going to use the law of cosines, which
+ states the following 
+\begin_inset Formula 
+\[
+\alpha_{3}^{2}=\alpha_{1}^{2}+\alpha_{2}^{2}-2\alpha_{1}\alpha_{2}\cos\gamma,
+\]
+
+\end_inset
+
+but in this case 
+\begin_inset Formula $\alpha_{1}=s$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{2}=r_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{3}=b$
+\end_inset
+
+, and 
+\begin_inset Formula $\gamma=\theta$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+b^{2}=s^{2}+r_{2}^{2}-2sr_{2}\cos\theta,
+\]
+
+\end_inset
+
+but because 
+\begin_inset Formula $s\ll r_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{1}<r_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $s\ll r_{2}$
+\end_inset
+
+, and this implies 
+\begin_inset Formula 
+\[
+b^{2}\approx r_{2}^{2}-2sr_{2}\cos\theta,
+\]
+
+\end_inset
+
+and now, let's play a little bit with the math and write the rhs of the
+ previous equation as 
+\begin_inset Formula 
+\[
+b^{2}\approx r_{2}^{2}\left(1-\frac{2s}{r_{2}}\cos\theta\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies b\approx r_{2}\sqrt{1-\frac{2s}{r_{2}}\cos\theta},
+\]
+
+\end_inset
+
+and, if we rename 
+\begin_inset Formula $x=\frac{2s}{r_{2}}\cos\theta$
+\end_inset
+
+, we can Taylor expand the root as follows 
+\begin_inset Formula 
+\[
+\sqrt{1-x}\approx1-\frac{x}{2}+\mathcal{O}\left(x^{2}\right),
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+b\approx r_{2}\left(1-\frac{x}{2}\right)=r_{2}\left[1-\frac{1}{2}\left(\frac{2s}{r_{2}}\cos\theta\right)\right]=r_{2}\left[1-\frac{s}{r_{2}}\cos\theta\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies b\approx r_{2}\left[1-\frac{s}{r_{2}}\cos\theta\right]=r_{2}-s\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore r_{2}\approx b+s\cos\theta.
+\]
+
+\end_inset
+
+Now, let's move to the potential part: for the inner sphere, the potential
+ outside goes as 
+\begin_inset Formula $1/r$
+\end_inset
+
+, and if the spheres were concentric, then, we know that the contribution
+ to the total potential for the external sphere will be constant, but a
+ constant given by 
+\begin_inset Formula 
+\[
+V_{2}\sim\frac{1}{b},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $b$
+\end_inset
+
+ is the radius of the sphere, then, using the previos result we can state
+ that 
+\begin_inset Formula 
+\[
+V_{2}\sim\frac{1}{r_{2}-s\cos\theta},
+\]
+
+\end_inset
+
+and again, if we play a little bit with the math 
+\begin_inset Formula 
+\[
+V_{2}\sim\frac{1}{r_{2}}\frac{1}{\left(1-\frac{s}{r_{2}}\cos\theta\right)},
+\]
+
+\end_inset
+
+and if we rename 
+\begin_inset Formula $x=\frac{s}{r_{2}}\cos\theta$
+\end_inset
+
+, then we can Taylor expand as follows 
+\begin_inset Formula 
+\[
+\frac{1}{1-x}\approx1+x+\mathcal{O}\left(x^{2}\right),
+\]
+
+\end_inset
+
+then, 
+\begin_inset Formula 
+\[
+V_{2}\sim\frac{1}{r_{2}}\left(1+\frac{s}{r_{2}}\cos\theta\right).
+\]
+
+\end_inset
+
+Now, let's put all the information together:
+\end_layout
+
+\begin_layout Enumerate
+For the inner shell the potential is given by 
+\begin_inset Formula 
+\[
+V_{1}=c_{1}+\frac{c_{2}}{r},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a,b$
+\end_inset
+
+ are determined by the boundary conditions.
+\end_layout
+
+\begin_layout Enumerate
+For the outer shell, the potential is given by 
+\begin_inset Formula 
+\[
+V_{2}=\frac{c_{3}}{r}+c_{4}\frac{s}{r^{2}}\cos\theta,
+\]
+
+\end_inset
+
+but, as we can see when we add the two potentials we'll have two terms that
+ go as 
+\begin_inset Formula $1/r$
+\end_inset
+
+ and therefore, we can incorporate with just one constant.
+ But we need two linearly independent solutions, because the PDE that this
+ functions satisfy is of second order, then in order to have two solutions,
+ we need another solution linearly independent, and, as the problem suggest,
+ we can see that if we use 
+\begin_inset Formula 
+\[
+V_{2}=c_{3}rs\cos\theta+c_{4}\frac{s}{r^{2}}\cos\theta,
+\]
+
+\end_inset
+
+then we have a complete solution.
+\end_layout
+
+\begin_layout Standard
+And with this information, then, the complete solution is given by 
+\begin_inset Formula 
+\[
+V=c_{1}+\frac{c_{2}}{r}+c_{3}rs\cos\theta+c_{4}\frac{s}{r^{2}}\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore V=c_{1}+\frac{c_{2}}{r}+s\cos\theta\left(c_{3}r+\frac{c_{4}}{r^{2}}\right).\label{eq:V}
+\end{equation}
+
+\end_inset
+
+Then, the next step is to determine the constants 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and for that we need, to use the boundary conditions, i.e.
+ 
+\begin_inset Formula 
+\[
+V\left(r_{1},\theta\right)=V_{a},\hspace{1em}V\left(r_{2},\theta\right)=V_{b},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\begin{equation}
+V_{a}=V\left(r_{1},\theta\right)=c_{1}+\frac{c_{2}}{a}+s\cos\theta\left(c_{3}a+\frac{c_{4}}{a^{2}}\right),\label{eq:Va}
+\end{equation}
+
+\end_inset
+
+and for the other condition 
+\begin_inset Formula 
+\[
+V_{b}=V\left(r_{2},\theta\right)=c_{1}+\frac{c_{2}}{b+s\cos\theta}+s\cos\theta\left[c_{3}\left(b+s\cos\theta\right)+\frac{c_{4}}{\left(b+s\cos\theta\right)^{2}}\right],
+\]
+
+\end_inset
+
+but, because 
+\begin_inset Formula $s\ll b$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+V_{b}=c_{1}+\frac{c_{2}}{b+s\cos\theta}+c_{3}\left(bs\cos\theta+s^{2}\cos^{2}\theta\right)+\frac{c_{4}s\cos\theta}{\left(b+s\cos\theta\right)^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V_{b}\approx c_{1}+\frac{c_{2}}{b+s\cos\theta}+c_{3}bs\cos\theta+\frac{c_{4}s\cos\theta}{\left(b+s\cos\theta\right)^{2}},
+\]
+
+\end_inset
+
+in which I've droped the terms with 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+, and on the other hand, we can rewrite 
+\begin_inset Formula 
+\[
+\frac{1}{b+s\cos\theta}=\frac{1}{b\left(1+x\right)},\hspace{1em}x=\frac{s}{b}\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\left(b+s\cos\theta\right)^{2}}=\frac{1}{b^{2}\left(1+x\right)^{2}},\hspace{1em}x=\frac{s}{b}\cos\theta,
+\]
+
+\end_inset
+
+and then, we can Taylor expand using 
+\begin_inset Formula 
+\[
+\frac{1}{1+x}\approx1-x+\mathcal{Q}\left(x^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\left(1+x\right)^{2}}\approx1-2x+\mathcal{Q}\left(x^{2}\right),
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+\frac{1}{b\left(1+x\right)}\approx\frac{1}{b}\left(1-\frac{s}{b}\cos\theta\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{b^{2}\left(1+x\right)^{2}}\approx\frac{1}{b^{2}}\left(1-\frac{2s}{b}\cos\theta\right),
+\]
+
+\end_inset
+
+and then, the expression for 
+\begin_inset Formula $V_{b}$
+\end_inset
+
+ becomes 
+\begin_inset Formula 
+\[
+V_{b}\approx c_{1}+\frac{c_{2}}{b}\left(1-\frac{s}{b}\cos\theta\right)+c_{3}bs\cos\theta+\frac{c_{4}s\cos\theta}{b^{2}}\left(1-\frac{2s}{b}\cos\theta\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V_{b}\approx c_{1}+\frac{c_{2}}{b}-c_{2}\frac{s}{b^{2}}\cos\theta+c_{3}bs\cos\theta+\frac{c_{4}s\cos\theta}{b^{2}}-2c_{4}\frac{c_{4}s^{2}\cos^{2}\theta}{b^{3}},
+\]
+
+\end_inset
+
+and, again, if we drop terms with 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\[
+V_{b}\approx c_{1}+\frac{c_{2}}{b}-c_{2}\frac{s}{b^{2}}\cos\theta+c_{3}bs\cos\theta+\frac{c_{4}s\cos\theta}{b^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies V_{b}\approx c_{1}+\frac{c_{2}}{b}+s\cos\theta\left(c_{3}b+\frac{c_{4}}{b^{2}}-\frac{c_{2}}{b^{2}}\right).\label{eq:Vb}
+\end{equation}
+
+\end_inset
+
+Now, with this information we're ready to find the constants 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, and for that first, we need to realize that both 
+\begin_inset Formula $V_{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{b}$
+\end_inset
+
+ are constante, i.e, indepdent of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, thus in the equations 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Va"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Vb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the terms inside the parenthesis must vanish, ans this give us
+\begin_inset Formula 
+\[
+c_{3}r+\frac{c_{4}}{r^{2}}=0\implies c_{3}=-\frac{c_{4}}{a^{3}},
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula 
+\[
+c_{3}b+\frac{c_{4}}{b^{2}}-\frac{c_{2}}{b^{2}}=0\implies c_{4}-c_{2}=-c_{3}b^{3},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $c_{4}=-c_{3}a^{3}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+-c_{3}a^{3}-c_{2}=-c_{3}b^{3}\implies c_{2}=c_{3}\left(b^{3}-a^{3}\right),
+\]
+
+\end_inset
+
+and then we have 
+\begin_inset Formula 
+\begin{equation}
+c_{2}=c_{3}\left(b^{3}-a^{3}\right),\hspace{1em}c_{3}=-\frac{c_{4}}{a^{3}}.\label{eq:C2-C3}
+\end{equation}
+
+\end_inset
+
+Now, let's perform 
+\begin_inset Formula $V_{a}-V_{b}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{a}-V_{b}=c_{1}+\frac{c_{2}}{a}-\left(c_{1}+\frac{c_{2}}{b}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V_{a}-V_{b}=\frac{c_{2}}{a}-\frac{c_{2}}{b}=c_{2}\left(\frac{1}{a}-\frac{1}{b}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V_{a}-V_{b}=c_{2}\frac{b-a}{ba},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore c_{2}=\frac{ba}{b-a}\left(V_{a}-V_{b}\right),
+\]
+
+\end_inset
+
+but using the relations in the equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:C2-C3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+\frac{ba}{b-a}\left(V_{a}-V_{b}\right)=c_{3}\left(b^{3}-a^{3}\right)\implies\frac{ba}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\left(V_{a}-V_{b}\right)=c_{3},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore c_{3}=\frac{ba}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\left(V_{a}-V_{b}\right),
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\frac{ba}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\left(V_{a}-V_{b}\right)=-\frac{c_{4}}{a^{3}}\implies\frac{ba^{4}}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\left(V_{a}-V_{b}\right)=-c_{4},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore c_{4}=-\frac{ba^{4}}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\left(V_{a}-V_{b}\right),
+\]
+
+\end_inset
+
+thus, the constants 
+\begin_inset Formula $c_{2},c_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{4}$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\begin{equation}
+c_{2}=\frac{ba\left(V_{a}-V_{b}\right)}{b-a},\hspace{1em}c_{3}=\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)},\hspace{1em}c_{4}=-\frac{ba^{4}\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\label{eq:C1-C3}
+\end{equation}
+
+\end_inset
+
+And now, in order to calculate the charge on the surface of the inner shell
+ we know that 
+\begin_inset Formula 
+\[
+\sigma\left(\theta\right)=\left.-\epsilon_{0}\frac{\partial V}{\partial r}\right|_{a},
+\]
+
+\end_inset
+
+then, taking the derivative with respect to 
+\begin_inset Formula $r$
+\end_inset
+
+ to the equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:V"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\frac{\partial V}{\partial r}=\frac{\partial}{\partial r}\left[c_{1}+\frac{c_{2}}{r}+s\cos\theta\left(c_{3}r+\frac{c_{4}}{r^{2}}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial V}{\partial r}=-\frac{c_{2}}{r^{2}}+c_{3}s\cos\theta-2\frac{c_{4}}{r^{3}}s\cos\theta,
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\left.\frac{\partial V}{\partial r}\right|_{a}=-\frac{c_{2}}{a^{2}}+c_{3}s\cos\theta-2\frac{c_{4}}{a^{3}}s\cos\theta,
+\]
+
+\end_inset
+
+and using the expressions for the constants 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ given in equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:C1-C3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+\left.\frac{\partial V}{\partial r}\right|_{a}=-\frac{1}{a^{2}}\left[\frac{ba\left(V_{a}-V_{b}\right)}{b-a}\right]+\left[\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]s\cos\theta-\frac{2}{a^{3}}\left[-\frac{ba^{4}\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]s\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left.\frac{\partial V}{\partial r}\right|_{a}=-\frac{1}{a^{2}}\left[\frac{ba\left(V_{a}-V_{b}\right)}{b-a}\right]+\left[\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]s\cos\theta-2\left[-\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]s\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left.\frac{\partial V}{\partial r}\right|_{a}=-\frac{1}{a^{2}}\left[\frac{ba\left(V_{a}-V_{b}\right)}{b-a}\right]+\left\{ \left[\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]+2\left[\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]\right\} s\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left.\frac{\partial V}{\partial r}\right|_{a}=\frac{ba\left(V_{a}-V_{b}\right)}{b-a}\left[-\frac{1}{a^{2}}+\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left.\frac{\partial V}{\partial r}\right|_{a}=\frac{ba\left(V_{b}-V_{a}\right)}{b-a}\left[\frac{1}{a^{2}}-\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
+\]
+
+\end_inset
+
+and defining 
+\begin_inset Formula $V_{0}=V_{b}-V_{a}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\left.\frac{\partial V}{\partial r}\right|_{a}=-\frac{baV_{0}}{b-a}\left[\frac{1}{a^{2}}-\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
+\]
+
+\end_inset
+
+and finnaly, the charge will be given by 
+\begin_inset Formula 
+\[
+\sigma\left(\theta\right)=\epsilon_{0}\frac{baV_{0}}{b-a}\left[\frac{1}{a^{2}}-\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
+\]
+
+\end_inset
+
+just as we wanted to prove.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

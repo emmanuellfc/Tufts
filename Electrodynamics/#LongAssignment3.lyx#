@@ -1091,40 +1091,12 @@ noprefix "false"
 
 \begin_inset Formula 
 \[
-\implies\left.\frac{\partial V}{\partial r}\right|_{a}=\frac{ba\left(V_{a}-V_{b}\right)}{b-a}\left[-\frac{1}{a^{2}}+\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
+\implies\left.\frac{\partial V}{\partial r}\right|_{a}=\frac{ba\left(V_{a}-V_{b}\right)}{b-a}\left[-\frac{1}{a^{2}}\left[\right]+\left\{ \left[\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]+3\left[\frac{ba\left(V_{a}-V_{b}\right)}{\left(b-a\right)\left(b^{3}-a^{3}\right)}\right]\right\} s\cos\theta\right],
 \]
 
 \end_inset
 
 
-\begin_inset Formula 
-\[
-\implies\left.\frac{\partial V}{\partial r}\right|_{a}=\frac{ba\left(V_{b}-V_{a}\right)}{b-a}\left[\frac{1}{a^{2}}-\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
-\]
-
-\end_inset
-
-and defining 
-\begin_inset Formula $V_{0}=V_{b}-V_{a}$
-\end_inset
-
-, we have 
-\begin_inset Formula 
-\[
-\left.\frac{\partial V}{\partial r}\right|_{a}=-\frac{baV_{0}}{b-a}\left[\frac{1}{a^{2}}-\frac{3s\cos\theta}{\left(b^{3}-a^{3}\right)}\right],
-\]
-
-\end_inset
-
-and finnaly, the charge will be given by 
-\begin_inset Formula 
-\[
-\sigma\left(\theta\right)=\epsilon_{0}\frac{baV_{0}}{b-a}\left[\frac{1}{a^{2}}-\frac{3s}{\left(b^{3}-a^{3}\right)}\cos\theta\right],
-\]
-
-\end_inset
-
-just as we wanted to prove.
 \end_layout
 
 \end_deeper
