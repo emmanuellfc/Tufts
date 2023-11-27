@@ -636,7 +636,7 @@ For the inner shell
 thus, the charge will be 
 \begin_inset Formula 
 \[
-Q=\int-\epsilon_{0}\frac{2V_{0}}{a}dS\implies Q=-\frac{2\epsilon_{0}V_{0}}{a}\int dS,
+Q_{a}=\int-\epsilon_{0}\frac{2V_{0}}{a}dS\implies Q_{a}=-\frac{2\epsilon_{0}V_{0}}{a}\int dS,
 \]
 
 \end_inset
@@ -656,7 +656,7 @@ in this case
 , then the total charge becomes 
 \begin_inset Formula 
 \[
-Q=-\frac{8\pi\epsilon_{0}V_{0}}{a}a^{2},
+Q_{a}=-\frac{8\pi\epsilon_{0}V_{0}}{a}a^{2},
 \]
 
 \end_inset
@@ -664,7 +664,40 @@ Q=-\frac{8\pi\epsilon_{0}V_{0}}{a}a^{2},
 
 \begin_inset Formula 
 \[
-\therefore Q=-8a\pi\epsilon_{0}V_{0},
+\therefore Q_{a}=-8a\pi\epsilon_{0}V_{0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, for the exterior shell, we need to perform the same computation, but
+ with 
+\begin_inset Formula $r=2a$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\sigma_{b}=-\epsilon_{0}\frac{2aV_{0}}{\left(2a\right)^{2}}=-\epsilon_{0}\frac{V_{0}}{2a},
+\]
+
+\end_inset
+
+then, the charge will be 
+\begin_inset Formula 
+\[
+Q_{b}=-\epsilon_{0}\frac{V_{0}}{2a}\left(4\pi a^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore Q_{b}=-2a\pi\epsilon_{0}V_{0}.
 \]
 
 \end_inset

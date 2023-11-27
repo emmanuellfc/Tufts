@@ -709,7 +709,15 @@ Q_{b}=-\epsilon_{0}\frac{V_{0}}{2a}\left(4\pi a^{2}\right),
 \begin_layout Enumerate
 \paragraph_spacing onehalf
 \noindent
-Now, let's calculate the capacitance...
+Now, let's calculate the capacitance, which we know is defined by 
+\begin_inset Formula 
+\[
+C=\frac{Q}{V_{1}-V_{2}},
+\]
+
+\end_inset
+
+where the index 1 and 2 refers to thw objects in the configuration.
 \end_layout
 
 \begin_layout Enumerate
