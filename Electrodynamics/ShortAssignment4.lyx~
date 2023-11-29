@@ -169,6 +169,21 @@ And finnaly, there's no flow of electric charge: Faraday observed that there
  pail.
 \end_layout
 
+\begin_layout Standard
+
+\color blue
+Ans: He compared the amount of electricity stored in Leyden bottles having
+ different materials between the two conductors.
+ He found that 
+\begin_inset Formula $C_{\text{air}}<C_{\text{glass}}<C_{\text{sulfur}}$
+\end_inset
+
+.
+ The nature of the dielectric therefore impacts the amount of charges that
+ can be accumulated on each conductor and the potential difference between
+ the conductors.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 \paragraph_spacing onehalf
@@ -178,6 +193,45 @@ Explain how he argued that these results must be interpreted as an induced
  
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+But, Faraday knew that the capacity 
+\series bold
+
+\begin_inset Formula $C$
+\end_inset
+
+
+\series default
+ increases as the distance between conductor gets reduced, therefore, if
+ we add more insulators this is equivalent of bringing plates closer, i.e.
+ bring opposite charges closer.
+ But insulators are made of particles with a positive and a negative ends,
+ then the electric field in the capacitor induces a polarization of these
+ particles in a way that increases the capacitance.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Ans: Faraday knew that in the air, the capacitance increases when the distance
+ between the conducting plates decreased.
+ Adding insulators is equivalent to bringing the plates closer.
+ The resulting increase in capacitance means a reduction of potential difference
+ between the capacitor plates, which is equivalent to an effective reduction
+ of charges in the vicinity of each plate.
+ Since no charges are transferred from one plate to another, it means that
+ some charges get induced in the insulator close to the capacitor plates
+ with opposite sign.
+ Faraday concluded that the electric field induced a redistribution of charges
+ inside the insulator in a way to oppose to the external 
+\begin_inset Formula $E$
+\end_inset
+
+-field.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \paragraph_spacing onehalf
@@ -203,10 +257,10 @@ What is the difference between the strong and the weak polarization modeling?
 First of all, let's recall what does it mean to model polarization in terms
  of stretches and molecular rotations.
  For example, if we have an atom, we know that in the nuclei we have a positive
- charge whereas in surroundings we have an electron cloud, then, if we apply
- an external electromagnetic field, we have the effect of a net dipole in
- the atom, and if we think in the atom as a sphere, this external field
- will have the effect of deform this sphere into a paraboloid.
+ charge whereas in the surroundings we have an electron cloud, then, if
+ we apply an external electromagnetic field, we have the effect of a net
+ dipole in the atom, and if we think in the atom as a sphere, this external
+ field will have the effect of deform this sphere into a paraboloid.
  On the other hand, some molecules have a permanent dipole moment, therefore,
  if a uniform external field is applied, then no induced there will not
  be an indudec polarization, because the material is already polarized,
@@ -235,6 +289,37 @@ On the other hand, with the strong polarization model, we're trying to provide
  an empirically adequate description of polarization phenomena using a more
  fundamental (non-effective) theory, in some sense, we're trying to derive
  this phenomena from first principles.
+\end_layout
+
+\begin_layout Standard
+Ans: The strong version of the semi-classical model of polarization consists
+ in claiming that it provides an empirically adequate description of the
+ polarization phenomena, up to some level of averaging approximation, that
+ occurs at the microscopic scale, and that this more fundamental theory
+ can be used to make adequate predictions for the relationship between 
+\begin_inset Formula $\mathbf{𝑃}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{𝐸}$
+\end_inset
+
+.
+ (i.e.
+ to calculate a).
+ The weak version consists in assuming that this model does not claim to
+ provide a proper description of the polarization reality, but is nevertheless
+ a useful tool to determine which observable quantities can be used to control
+ polarization or to produce special relationship between 
+\begin_inset Formula $\mathbf{𝑃}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{𝐸}$
+\end_inset
+
+, the details of which will be measured in dedicated experiments (i.e.
+ to provide a strategy to measure a).
 \end_layout
 
 \end_deeper
@@ -277,7 +362,13 @@ On the other hand, this is an effective theory, which means that is only
  valid at a large scale (mesoscopic), and is really important, as I said
  earlier, we should always try to keep in mind the range of validity/aplicabilit
 y of our theory.
- En even more, because it's a phenomenological theory, this implies that
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+An even more, because it's a phenomenological theory, this implies that
  there are some numerical values, or parameter that should be given to the
  theory in order to make it work, and another way of say it is that this
  parameters cannot be derived from first principles using this thory.
