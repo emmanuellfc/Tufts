@@ -119,7 +119,7 @@ J.
 \end_layout
 
 \begin_layout Date
-November 15th, 2023
+November 29th, 2023
 \end_layout
 
 \begin_layout Enumerate
@@ -292,6 +292,8 @@ On the other hand, with the strong polarization model, we're trying to provide
 \end_layout
 
 \begin_layout Standard
+
+\color blue
 Ans: The strong version of the semi-classical model of polarization consists
  in claiming that it provides an empirically adequate description of the
  polarization phenomena, up to some level of averaging approximation, that
@@ -306,7 +308,11 @@ Ans: The strong version of the semi-classical model of polarization consists
 
 .
  (i.e.
- to calculate a).
+ to calculate 
+\begin_inset Formula $\alpha$
+\end_inset
+
+).
  The weak version consists in assuming that this model does not claim to
  provide a proper description of the polarization reality, but is nevertheless
  a useful tool to determine which observable quantities can be used to control
@@ -319,7 +325,11 @@ Ans: The strong version of the semi-classical model of polarization consists
 \end_inset
 
 , the details of which will be measured in dedicated experiments (i.e.
- to provide a strategy to measure a).
+ to provide a strategy to measure 
+\begin_inset Formula $\alpha$
+\end_inset
+
+).
 \end_layout
 
 \end_deeper

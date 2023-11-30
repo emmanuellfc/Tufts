@@ -119,7 +119,7 @@ J.
 \end_layout
 
 \begin_layout Date
-November 1st, 2023
+November 29th, 2023
 \end_layout
 
 \begin_layout Standard
@@ -344,7 +344,19 @@ where
 \end_inset
 
 Now, let's focus on the interaction energy, but before, let's plot a figure
- of the problem at hand 
+ of the problem at hand, and we choose of fix the observation point in the
+ 
+\begin_inset Formula $z$
+\end_inset
+
+ axis, the reason for that is because we want calculations easier, and even
+ mote, there's no loss in generality because as usual, we can always perform
+ a rotation about the axis, and then generalize our result to points outside
+ the 
+\begin_inset Formula $z$
+\end_inset
+
+ axis 
 \begin_inset Float figure
 wide false
 sideways false
@@ -1179,12 +1191,16 @@ in which I've renamed the variable
 \series default
  Now, for this part, we're still using Green's reciprocity relation, but
  in this case we're going to consider the same situations, but with the
- following modification: instead of consider a point charge outside the
- conductor, we are going to consider a dipole, i.e., we're assuming the following
- form of the charge density, 
+ following modification: 
+\series bold
+instead of consider a point charge outside the conductor, we are going to
+ consider a dipole, i.e., we're assuming the following form of the charge
+ density, 
 \begin_inset Formula $\rho\left(r^{\prime}\right)=-\mathbf{p}\cdot\nabla\delta\left(\mathbf{r}^{\prime}-\mathbf{r}_{0}\right)$
 \end_inset
 
+
+\series default
 .
  Then, using Green's reciprocity we have that, 
 \begin_inset Formula 

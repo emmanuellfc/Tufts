@@ -123,12 +123,14 @@ November 1st, 2023
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 Statement of the problem.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 Consider a spherical conductor of radius 
 \begin_inset Formula $R$
 \end_inset
@@ -151,6 +153,7 @@ Consider a spherical conductor of radius
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Show that the total electrostatic energy of the conducting sphere is given
  by:
 \begin_inset Formula 
@@ -173,6 +176,7 @@ where the
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 Use Thomson’s theorem and the above formula for 
 \begin_inset Formula $U\left(\sigma_{l}\right)$
 \end_inset
@@ -186,6 +190,7 @@ Use Thomson’s theorem and the above formula for
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 A net charge 
 \begin_inset Formula $Q$
 \end_inset
@@ -211,6 +216,7 @@ A net charge
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing onehalf
 What would be the total charge 
 \begin_inset Formula $Q_{1}$
 \end_inset
@@ -231,12 +237,14 @@ What would be the total charge
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 Solutions.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 1.
@@ -336,7 +344,19 @@ where
 \end_inset
 
 Now, let's focus on the interaction energy, but before, let's plot a figure
- of the problem at hand 
+ of the problem at hand, and we choose of fix the observation point in the
+ 
+\begin_inset Formula $z$
+\end_inset
+
+ axis, the reason for that is because we want calculations easier, and even
+ mote, there's no loss in generality because as usual, we can always perform
+ a rotation about the axis, and then generalize our result to points outside
+ the 
+\begin_inset Formula $z$
+\end_inset
+
+ axis 
 \begin_inset Float figure
 wide false
 sideways false
@@ -873,10 +893,28 @@ U_{E}=\frac{1}{\epsilon_{0}}\sum_{l=0}^{\infty}\frac{\sigma_{l}}{2l+1}\left(\fra
 
 \end_inset
 
-just as we wanted.
+and an important point is that in the previous expression we can drop the
+ term with 
+\begin_inset Formula $l=0$
+\end_inset
+
+, this is because the conducting sphere is neutral and the term 
+\begin_inset Formula $\sigma_{0}=0$
+\end_inset
+
+, thus we have
+\begin_inset Formula 
+\[
+U_{E}=\frac{1}{\epsilon_{0}}\sum_{l=1}^{\infty}\frac{\sigma_{l}}{2l+1}\left(\frac{R^{3}\sigma_{l}}{2}\frac{4\pi}{2l+1}+q\frac{R^{l+2}}{r^{l+1}}\right)
+\]
+
+\end_inset
+
+ just as we wanted.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 2.
@@ -999,6 +1037,7 @@ but in order to make the expression more symmetrical let's write
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 3.
@@ -1047,6 +1086,7 @@ which says that the potential energy of the charge distribution
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 Situation 1: The conductor is grounded and there's a point charge close
@@ -1054,6 +1094,7 @@ Situation 1: The conductor is grounded and there's a point charge close
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 Situation 2: The conductor is charged and isolated with no point charge
@@ -1061,6 +1102,7 @@ Situation 2: The conductor is charged and isolated with no point charge
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 Now, in the situation 1, we have that all the charge of the conductor is
  on its surface, which means we can express the total charge as 
 \begin_inset Formula 
@@ -1141,6 +1183,7 @@ in which I've renamed the variable
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 
 \series bold
 4.
@@ -1148,12 +1191,16 @@ in which I've renamed the variable
 \series default
  Now, for this part, we're still using Green's reciprocity relation, but
  in this case we're going to consider the same situations, but with the
- following modification: instead of consider a point charge outside the
- conductor, we are going to consider a dipole, i.e., we're assuming the following
- form of the charge density, 
+ following modification: 
+\series bold
+instead of consider a point charge outside the conductor, we are going to
+ consider a dipole, i.e., we're assuming the following form of the charge
+ density, 
 \begin_inset Formula $\rho\left(r^{\prime}\right)=-\mathbf{p}\cdot\nabla\delta\left(\mathbf{r}^{\prime}-\mathbf{r}_{0}\right)$
 \end_inset
 
+
+\series default
 .
  Then, using Green's reciprocity we have that, 
 \begin_inset Formula 
