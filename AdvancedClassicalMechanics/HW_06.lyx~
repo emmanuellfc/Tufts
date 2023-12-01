@@ -137,7 +137,219 @@ December 1st, 2023
 Solution.
 
 \series default
- 
+ Let's start writing the Lagrangian in cartesian coordinates 
+\begin_inset Formula 
+\[
+L=\frac{m}{2}\left(\dot{x}^{2}+\dot{y}^{2}\right)+\frac{q}{c}\left(\dot{\mathbf{x}}\cdot\mathbf{A}\right)-\frac{k}{2}\left(x^{2}+y^{2}\right),
+\]
+
+\end_inset
+
+and with this set of coordinates, we have that 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ can be writen as 
+\begin_inset Formula 
+\[
+\mathbf{A}=\frac{1}{2}B\left(-y\mathbf{e}_{1}+x\mathbf{e}_{2}\right),
+\]
+
+\end_inset
+
+and then, 
+\begin_inset Formula 
+\[
+\dot{\mathbf{x}}\cdot\mathbf{A}=\frac{B}{2}\left(-y\dot{x}+x\dot{y}\right),
+\]
+
+\end_inset
+
+thus, the Lagrangian becomes 
+\begin_inset Formula 
+\[
+L=\frac{m}{2}\left(\dot{x}^{2}+\dot{y}^{2}\right)+\frac{qB}{2c}\left(-y\dot{x}+x\dot{y}\right)-\frac{k}{2}\left(x^{2}+y^{2}\right),
+\]
+
+\end_inset
+
+now, let's make a change to polar coordinates, i.e., 
+\begin_inset Formula 
+\[
+x=r\cos\theta,\hspace{1em}y=r\sin\theta,
+\]
+
+\end_inset
+
+then the Lagrangian is 
+\begin_inset Formula 
+\[
+L=\frac{m}{2}\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right)+\frac{qB}{2c}r^{2}\dot{\theta}-\frac{k}{2}r^{2},
+\]
+
+\end_inset
+
+and with this we can obtain the Hamiltonian, but first we need the canonical
+ momenta, which are given by 
+\begin_inset Formula 
+\[
+p_{r}=\frac{\partial L}{\partial\dot{r}}=m\dot{r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{\theta}=\frac{\partial L}{\partial\dot{\theta}}=mr^{2}\dot{\theta}+\frac{qB}{2c}r^{2},
+\]
+
+\end_inset
+
+then, by the definition of the Hamiltonian 
+\begin_inset Formula 
+\[
+H=p_{r}\dot{r}+p_{\theta}\dot{\theta}-L,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{m}{2}\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right)+\frac{1}{2}kr^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{1}{2m}p_{r}^{2}+\frac{1}{2mr^{2}}\left(p_{\theta}-\frac{qB}{2c}r^{2}\right)^{2}+\frac{1}{2}kr^{2},
+\]
+
+\end_inset
+
+and with this informarion we have that the Hamilton-Jacobi equation is given
+ by 
+\begin_inset Formula 
+\[
+\frac{1}{2m}\left(\frac{\partial S}{\partial r}\right)^{2}+\frac{1}{2mr^{2}}\left(\frac{\partial S}{\partial\theta}-\frac{qB}{2c}r^{2}\right)^{2}+\frac{1}{2}kr^{2}-\frac{\partial S}{\partial t}=0,
+\]
+
+\end_inset
+
+but because 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is cyclic, then the solution of the previous equation must have the following
+ form 
+\begin_inset Formula 
+\[
+S\left(r,\theta,E,\alpha,t\right)=f\left(r,E,\alpha\right)+\alpha\theta-Et,
+\]
+
+\end_inset
+
+then, the Hamilton-Jacobi eqution transforms into 
+\begin_inset Formula 
+\[
+\frac{1}{2m}\left(\frac{\partial f}{\partial r}\right)^{2}+\frac{1}{2mr^{2}}\left(\alpha-\frac{qB}{2c}r^{2}\right)^{2}+\frac{1}{2}kr^{2}=E,
+\]
+
+\end_inset
+
+if we assume that 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, this simplifies the calculations, thus 
+\begin_inset Formula 
+\[
+\frac{1}{2m}\left(\frac{\partial f}{\partial r}\right)^{2}+\frac{1}{2mr^{2}}\left(\frac{qB}{2c}r^{2}\right)^{2}+\frac{1}{2}kr^{2}=E,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{1}{2m}\left(\frac{\partial f}{\partial r}\right)^{2}=E-\frac{1}{2mr^{2}}\left(\frac{qB}{2c}r^{2}\right)^{2}-\frac{1}{2}kr^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\frac{\partial f}{\partial r}\right)^{2}=2mE-\frac{1}{r^{2}}\left(\frac{qB}{2c}r^{2}\right)^{2}-mkr^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial f}{\partial r}=\sqrt{2mE-\left(\frac{qB}{2c}\right)^{2}r^{2}-mkr^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial f}{\partial r}=\sqrt{2mE-\left(\left(\frac{qB}{2c}\right)^{2}+mk\right)r^{2}}=\sqrt{2mE-m^{2}\left(\left(\frac{qB}{2m^{2}c}\right)^{2}+\frac{k}{m}\right)r^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial f}{\partial r}=\sqrt{2mE-m^{2}\left(\omega_{0}^{2}+\omega_{B}^{2}\right)r^{2}},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega_{B}^{2}=\left(\frac{qB}{2m^{2}c}\right)^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\omega_{0}^{2}=k/m$
+\end_inset
+
+, then the equation for 
+\begin_inset Formula $f$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+f=\int_{0}^{r}dr\sqrt{2mE-m^{2}\left(\omega_{0}^{2}+\omega_{B}^{2}\right)r^{2}},
+\]
+
+\end_inset
+
+moreover, if we define 
+\begin_inset Formula $\omega=\sqrt{\omega_{0}^{2}+\omega_{B}^{2}}$
+\end_inset
+
+, then the previous equation can be writen as 
+\begin_inset Formula 
+\[
+f=\int_{0}^{r}dr\sqrt{2mE-m^{2}\omega^{2}r^{2}}
+\]
+
+\end_inset
+
+thus, as we can see, the problem reduces to a normal harmonic oscillator,
+ with the frequency given by our new 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -348,6 +560,157 @@ and its important to say that this expression is valid as long as the motion
 \series bold
 Solution.
  
+\series default
+If we suppose that 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ is the velocity of the center of mass, 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ is the velocity of the target particle in the laboratory system, and 
+\begin_inset Formula $\mathbf{v}_{2}^{\prime}$
+\end_inset
+
+ is the velocity of the target particle in the center of mass system then,
+ we have 
+\begin_inset Formula 
+\[
+\mathbf{v}_{2}=\mathbf{V}+\mathbf{v}_{2}^{\prime},
+\]
+
+\end_inset
+
+and using the relations of the angles 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+v_{2}\sin\theta=v_{2}^{\prime}\sin\Theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v_{2}\cos\theta=V-v_{2}^{\prime}\cos\theta,
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+\tan\phi=-\frac{\sin\Phi}{\cos\Phi-\left(V/v_{2}^{\prime}\right)},
+\]
+
+\end_inset
+
+and now, we know that he magnitude of the velocity of the center of mass
+ V is related to the speed of m1 before the collision, and the relation
+ is given by the equation 
+\begin_inset Formula $V=μv_{0}/m_{2}$
+\end_inset
+
+and then, this implies 
+\begin_inset Formula 
+\[
+\frac{V}{v_{2}^{\prime}}=\frac{v_{0}}{v},
+\]
+
+\end_inset
+
+moreover, for inelastic scattering, we know that this value can be determined
+ by the this ratio is determined by the 
+\begin_inset Formula $Q$
+\end_inset
+
+ value of the inelastic collision, but for elastic collisions this ratio
+ is 
+\begin_inset Formula $1$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+\tan\phi=-\frac{\sin\Phi}{\cos\Phi-1}=-\frac{2\sin\frac{\Theta}{2}\cos\frac{\Theta}{2}}{2\sin^{2}\frac{\Theta}{2}}=-\frac{1}{\tan\frac{\Theta}{2}}=\tan\left(\frac{\pi}{2}-\frac{\Theta}{2}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D372.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+[Fig 3.25 from Goldstein] Scattering of two particles as viewed in the center
+ of mass system.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename D37.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+[Fig 3.26 from Goldstein] The relations between the velocities in the center
+ of mass and laboratory coordinates.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -732,7 +1095,370 @@ just as we wanted.
 \series bold
 Solution.
  
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a)
 \series default
+ If we suppose that the motion of the particle is such that we have a circle
+ with center in the origin, and the radius of the circle described by the
+ motion is 
+\begin_inset Formula $R$
+\end_inset
+
+, then, the radial motion is given by the following expression 
+\begin_inset Formula 
+\[
+r\left(\theta\right)=\sqrt{2}R\left(1+\cos2\theta\right)^{1/2},
+\]
+
+\end_inset
+
+and with this, we can obtain the variable 
+\begin_inset Formula 
+\[
+u=\frac{1}{r}=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{1/2}},
+\]
+
+\end_inset
+
+and we know that we can represent the equation of th orbit using 
+\begin_inset Formula $u$
+\end_inset
+
+, and this equation is given by 
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{d\theta^{2}}+u=-\frac{m}{l^{2}}\frac{d}{du}V\left(\frac{1}{u}\right),
+\]
+
+\end_inset
+
+and then our goal is to show that from 
+\begin_inset Formula $V$
+\end_inset
+
+goes to 
+\begin_inset Formula $u^{4}$
+\end_inset
+
+ and with that we know that the force will go as 
+\begin_inset Formula $1/r^{5}$
+\end_inset
+
+.
+ Let's move on and let's take the derivative 
+\begin_inset Formula 
+\[
+\frac{du}{d\theta}=\frac{1}{\sqrt{2}R}\left[-\frac{1}{2}\frac{1}{\left(1+\cos2\theta\right)^{3/2}}\left(-2\sin2\theta\right)\right]=\frac{1}{\sqrt{2}R}\frac{\sin2\theta}{\left(1+\cos2\theta\right)^{3/2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{du}{d\theta}=\frac{1}{\sqrt{2}R}\frac{\sin2\theta}{\left(1+\cos2\theta\right)^{3/2}},
+\]
+
+\end_inset
+
+and taking the derivative again, we have, by the product rule 
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{d\theta^{2}}=\frac{1}{\sqrt{2}R}\left[\frac{2\cos2\theta}{\left(1+\cos2\theta\right)^{3/2}}+\frac{3\sin^{2}2\theta}{\left(1+\cos2\theta\right)^{5/2}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[2\cos2\theta\left(1+\cos2\theta\right)+3\sin^{2}2\theta\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[2\cos2\theta+2\cos^{2}2\theta+3\sin^{2}2\theta\right],
+\]
+
+\end_inset
+
+thus, with this information, we have 
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{d\theta^{2}}+u=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[2\cos2\theta+2\cos^{2}2\theta+3\sin^{2}2\theta\right]+\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{1/2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}+u=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[\left(2\cos2\theta+2\cos^{2}2\theta+3\sin^{2}2\theta\right)+\left(1+\cos2\theta\right)^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}+u=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[2\cos2\theta+2\cos^{2}2\theta+3\sin^{2}2\theta+1+2\cos2\theta+\cos^{2}\theta\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}+u=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[4\cos2\theta+3\left(\cos^{2}2\theta+\sin^{2}2\theta\right)+1\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}+u=\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[4\cos2\theta+4\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}+u=\frac{4}{\sqrt{2}R\left(1+\cos2\theta\right)^{5/2}}\left[1+\cos2\theta\right]=\frac{4}{\sqrt{2}R\left(1+\cos2\theta\right)^{3/2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d^{2}u}{d\theta^{2}}+u=\frac{4}{\sqrt{2}R\left(1+\cos2\theta\right)^{3/2}},
+\]
+
+\end_inset
+
+but because 
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{2}R\left(1+\cos2\theta\right)^{1/2}}=u\implies\frac{1}{2^{3/2}R^{3}\left(1+\cos2\theta\right)^{3/2}}=u^{3}\implies\frac{1}{2^{1/2}R\left(1+\cos2\theta\right)^{3/2}}=8R^{2}u^{3},
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{d\theta^{2}}+u=8R^{2}u^{3},
+\]
+
+\end_inset
+
+but from the differential equation of the orbit we know that the rhs of
+ the previous equation can be writen as 
+\begin_inset Formula 
+\[
+8R^{2}u^{3}=-\frac{m}{l^{2}}\frac{d}{du}V\left(\frac{1}{u}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{du}V\left(\frac{1}{u}\right)=-8\frac{l^{2}}{m}R^{2}u^{3}\implies V\left(\frac{1}{u}\right)=-8\frac{l^{2}}{m}R^{2}\int duu^{3}=-\frac{2l^{2}R^{2}}{m}u^{4},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V\left(\frac{1}{u}\right)=-\frac{2l^{2}R^{2}}{m}u^{4},
+\]
+
+\end_inset
+
+and going back to the 
+\begin_inset Formula $r$
+\end_inset
+
+ variable, we have 
+\begin_inset Formula 
+\[
+V\left(r\right)=-\frac{2l^{2}R^{2}}{mr^{4}},
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+f=-\frac{dV}{dr}=-\frac{8l^{2}R^{2}}{mr^{5}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore f=-\frac{8l^{2}R^{2}}{mr^{5}},
+\]
+
+\end_inset
+
+and thus, the force goes as 
+\begin_inset Formula $1/r^{5}$
+\end_inset
+
+ as stated.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b)
+\series default
+ The kinetic energy is given by 
+\begin_inset Formula 
+\[
+T=\frac{m}{2}\left[\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right],
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+r=\sqrt{2}R\left(1+\cos2\theta\right)^{1/2}\implies\dot{r}^{2}=2R^{2}\frac{\sin^{2}2\theta}{1+\cos2\theta}\dot{\theta}^{2},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+T=\frac{m}{2}\left[2R^{2}\frac{\sin^{2}2\theta}{1+\cos2\theta}\dot{\theta}^{2}+2R^{2}\left(1+\cos2\theta\right)\dot{\theta}^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T=mR^{2}\dot{\theta}^{2}\left[\frac{\sin^{2}2\theta}{1+\cos2\theta}+1+\cos2\theta\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T=mR^{2}\dot{\theta}^{2}\left[\frac{\sin^{2}2\theta}{1+\cos2\theta}+\frac{\left(1+\cos2\theta\right)^{2}}{1+\cos2\theta}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T=mR^{2}\dot{\theta}^{2}\left[\frac{\sin^{2}2\theta+1+2\cos2\theta+\cos^{2}2\theta}{1+\cos2\theta}\right]=mR^{2}\dot{\theta}^{2}\left[\frac{2+2\cos2\theta}{1+\cos2\theta}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T=2mR^{2}\dot{\theta}^{2},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $l=mr^{2}\dot{\theta}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+T=\frac{2l^{2}R^{2}}{mr^{4}},
+\]
+
+\end_inset
+
+then, the total energy is 
+\begin_inset Formula 
+\[
+T+V=\frac{2l^{2}R^{2}}{mr^{4}}-\frac{2l^{2}R^{2}}{mr^{4}}=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore T+V=0,
+\]
+
+\end_inset
+
+as stated.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) 
+\series default
+Finally, if we suppose the particle starts its motion from the point 
+\begin_inset Formula $\left(2R,0\right)$
+\end_inset
+
+, then we can calulate the preiod as follows 
+\begin_inset Formula 
+\[
+\tau=2\int_{0}^{2\pi}\frac{dt}{d\theta}d\theta=2\int_{0}^{2\pi}\frac{d\theta}{\dot{\theta}},
+\]
+
+\end_inset
+
+and using 
+\begin_inset Formula $l=mr^{2}\dot{\theta}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\tau=\frac{2m}{l}\int_{0}^{2\pi}r^{2}d\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\tau=\frac{4R^{2}m}{l}\int_{0}^{2\pi}\left(1+\cos2\theta\right)d\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\tau=\frac{8\pi R^{2}m}{l}.
+\]
+
+\end_inset
+
 
 \begin_inset Newpage pagebreak
 \end_inset
@@ -1337,7 +2063,7 @@ and if now we use the numbers given, we have that
 
 \begin_inset Formula 
 \[
-\implies\frac{h}{ka}=7.1\times10^{-8}
+\implies\frac{h}{ka}=7.1\times10^{-8}.
 \]
 
 \end_inset

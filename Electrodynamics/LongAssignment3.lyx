@@ -126,7 +126,7 @@ Jose Emmanuel Flores
 \end_layout
 
 \begin_layout Date
-Month and Day, 2023
+December 1st, 2023
 \end_layout
 
 \begin_layout Standard
@@ -673,36 +673,8 @@ Q_{a}=-\frac{8\pi\epsilon_{0}V_{0}}{a}a^{2},
 \end_layout
 
 \begin_layout Enumerate
-Now, for the exterior shell, we need to perform the same computation, but
- with 
-\begin_inset Formula $r=2a$
-\end_inset
-
-, thus 
-\begin_inset Formula 
-\[
-\sigma_{b}=-\epsilon_{0}\frac{2aV_{0}}{\left(2a\right)^{2}}=-\epsilon_{0}\frac{V_{0}}{2a},
-\]
-
-\end_inset
-
-then, the charge will be 
-\begin_inset Formula 
-\[
-Q_{b}=-\epsilon_{0}\frac{V_{0}}{2a}\left(4\pi a^{2}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\therefore Q_{b}=-2a\pi\epsilon_{0}V_{0}.
-\]
-
-\end_inset
-
-
+Now, for the exterior shell, we couls perform the same computation, but
+ because is grounded we don't need to do that, there's no charge in it.
 \end_layout
 
 \end_deeper
@@ -718,6 +690,43 @@ C=\frac{Q}{V_{1}-V_{2}},
 \end_inset
 
 where the index 1 and 2 refers to thw objects in the configuration.
+ Then we have 
+\begin_inset Formula 
+\[
+C=\left.\frac{-8a\pi\epsilon_{0}V_{0}}{\frac{aV_{0}}{a-b}\left(1-\frac{b}{r}\right)}\right|_{a},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $b=2a$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+C=\frac{-8a\pi\epsilon_{0}V_{0}}{\frac{aV_{0}}{a-2a}\left(1-\frac{2a}{a}\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies C=\frac{-8a\pi\epsilon_{0}V_{0}}{-\frac{V_{0}}{2}\left(-1\right)}=16\pi a\epsilon_{0},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies C=16\pi a\epsilon_{0}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
