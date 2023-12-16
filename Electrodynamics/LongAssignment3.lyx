@@ -312,12 +312,6 @@ For the outer shell, we want to find the potential inside the sphere, assuming
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-\begin_inset CommandInset include
-LatexCommand input
-filename "/Users/emmanuelflores/Downloads/Figure.tex"
-
-\end_inset
-
 
 \end_layout
 
