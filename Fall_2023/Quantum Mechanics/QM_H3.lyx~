@@ -1,0 +1,358 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fontsize{15pt}{0pt}
+\backslash
+selectfont
+\end_layout
+
+\end_inset
+
+ Quantum Theory 1
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+PHY 0163 - Quantum Theory 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Tufts University
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Graduate School of Arts and Sciences
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Homework 3
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename A&S_Hori_BK+BL.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+Dec 11th, 2023
+\end_layout
+
+\begin_layout Problem
+(2.9) Let 
+\begin_inset Formula $|a^{\prime}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $|a^{\prime\prime}\rangle$
+\end_inset
+
+ be eigenstates of a Hermitian operator A with eigenvalues 
+\begin_inset Formula $a'$
+\end_inset
+
+ and 
+\begin_inset Formula $a^{\prime\prime}$
+\end_inset
+
+, respectively (
+\begin_inset Formula $a'\neq a^{\prime\prime}$
+\end_inset
+
+).
+ The Hamiltonian operator is given by 
+\begin_inset Formula 
+\[
+H=\left|a^{\prime}\right\rangle \delta\left\langle a^{\prime\prime}\right|+\left|a^{\prime\prime}\right\rangle \delta\left\langle a^{\prime}\right|
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is just a real number.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(a) Clearly, 
+\begin_inset Formula $|a^{\prime}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $|a^{\prime\prime}\rangle$
+\end_inset
+
+ are not eigenstates of the Hamiltonian.
+ Write down the eigenstates of the Hamiltonian.
+ What are their energy eigenvalues? 
+\end_layout
+
+\begin_layout Standard
+(b) Suppose the system is known to be in state 
+\begin_inset Formula $|a^{\prime}\rangle$
+\end_inset
+
+ at 
+\begin_inset Formula $t=0$
+\end_inset
+
+.
+ Write down the state vector in the Schrodinger picture for t > 0.
+ 
+\end_layout
+
+\begin_layout Standard
+(c) What is the probability for finding the system in 
+\begin_inset Formula $|a^{\prime\prime}\rangle$
+\end_inset
+
+ for t > 0 if the system is known to be in state 
+\begin_inset Formula $|a^{\prime}\rangle$
+\end_inset
+
+ at t = 0? 
+\end_layout
+
+\begin_layout Standard
+(d) Can you think of a physical situation corresponding to this problem?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(2.10)
+\series default
+ A box containing a particle is divided into a right and a left compartment
+ by a thin partition.
+ If the particle is known to be on the right (left) side with certainty,
+ the state is represented by the position eigenket 
+\begin_inset Formula $\left|R\right\rangle $
+\end_inset
+
+) (
+\begin_inset Formula $\left|L\right\rangle $
+\end_inset
+
+), where we have neglected spatial variations within each half of the box.
+ The most general state vector can then be written as
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =\left|R\right\rangle \left\langle R\right.\left|\alpha\right\rangle +\left|L\right\rangle \left\langle L\right.\left|\alpha\right\rangle ,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\left\langle R\right.\left|\alpha\right\rangle $
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle R\right.\left|\alpha\right\rangle $
+\end_inset
+
+ can be regarded as "wave functions." The particle can tunnel through the
+ partition; this tunneling effect is characterized by the Hamiltonian 
+\begin_inset Formula 
+\[
+H=\Delta\left(\left|L\right\rangle \left\langle R\right|+\left|R\right\rangle \left\langle L\right|\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(2.12) Consider a particle subject to a one-dimensional simple harmonic oscillato
+r potential.
+ Suppose that at t = 0 the state vector is given by
+\end_layout
+
+\begin_layout Problem
+Obtain a simple expression for the probability that the state is found in
+ the ground state at t = 0.
+ Does this probability change for t > 0?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+2.13, Write down the wave function (in coordinate space) for the state specified
+ in Problem 2.12 at t = 0.
+ You may use
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+2.16 Consider a function, known as the correlation function, defined by 
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+where x(t) is the position operator in the Heisenberg picture.
+ Evaluate the correlation function explicitly for the ground state of a
+ one-dimensional simple harmonic oscillator.
+\end_layout
+
+\end_body
+\end_document

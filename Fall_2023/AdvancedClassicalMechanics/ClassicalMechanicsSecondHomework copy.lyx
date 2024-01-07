@@ -1,0 +1,2498 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+Advanced Classical Mechanics
+\begin_inset Newline linebreak
+\end_inset
+
+Tufts University
+\begin_inset Newline linebreak
+\end_inset
+
+Graduate School of Arts and Sciences
+\begin_inset Newline linebreak
+\end_inset
+
+Homework 2
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename Lockups/A&S_Hori_BK+BL.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Jose Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+October 4th, 2023
+\end_layout
+
+\begin_layout Enumerate
+(Derivation 1.10) Prove that the Lagrange equations are invariant under point-lik
+e transformations.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Solution.
+ Let's suppose that we have a set of generalized coordinates given by 
+\begin_inset Formula $\{q_{i}\}$
+\end_inset
+
+, where 
+\begin_inset Formula $i=1,\dots,n$
+\end_inset
+
+, therefore, we know that for this set of coordinates, the Euler-Lagrange
+ equations are valid, i.e.
+ 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{q_{i}}}-\frac{\partial\mathcal{L}}{\partial q_{i}}=0.
+\]
+
+\end_inset
+
+But now, let's suppose that we have another set of generalized coordinates
+ given by 
+\begin_inset Formula $\{s_{i}\}$
+\end_inset
+
+, where 
+\begin_inset Formula $i=1,\dots,n$
+\end_inset
+
+, and even more, let's assume that we have the following relationship between
+ the generalized coordinates 
+\begin_inset Formula 
+\[
+q_{i}=q_{i}\left(\{s_{i}\},t\right),\forall i.
+\]
+
+\end_inset
+
+Now, let's prove that for this new set of generalized coordinates the Euler-Lagr
+ange equations are also valid.
+\end_layout
+
+\begin_layout Standard
+Let's begin by noticing the following 
+\begin_inset Formula 
+\[
+dq_{i}=\sum_{j}\frac{\partial q_{i}}{\partial s_{j}}ds_{i}+\frac{\partial q_{i}}{\partial t}dt,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dq_{i}}{dt}=\sum_{j}\frac{\partial q_{i}}{\partial s_{j}}\frac{ds_{i}}{dt}+\frac{\partial q_{i}}{\partial t},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\dot{q}_{i}=\sum_{j}\frac{\partial q_{i}}{\partial s_{j}}\dot{s}_{i}+\frac{\partial q_{i}}{\partial t}.
+\]
+
+\end_inset
+
+Now we must remember that the Lagrangian its a function of 
+\begin_inset Formula $q_{i},\dot{q}_{i},t$
+\end_inset
+
+, and with this, let's perform the following the derivative 
+\begin_inset Formula $\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}$
+\end_inset
+
+, then we have 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}=\sum_{j}\left(\frac{\partial\mathcal{L}}{\partial q_{j}}\frac{\partial q_{j}}{\partial\dot{s}_{i}}+\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\frac{\partial\dot{q}_{j}}{\partial\dot{s}_{i}}\right),
+\]
+
+\end_inset
+
+but, we know that 
+\begin_inset Formula $q_{j}\neq q_{j}(\dot{s}_{i})$
+\end_inset
+
+, and the 
+\begin_inset Formula $\frac{\partial\dot{q}_{j}}{\partial\dot{s}_{i}}=\frac{\partial q_{j}}{\partial s_{i}}$
+\end_inset
+
+ therefore, the previous expression transforms into 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}=\sum_{j}\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\frac{\partial q_{j}}{\partial s_{i}},
+\]
+
+\end_inset
+
+now, taking the time derivative of the previous equation
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}=\sum_{j}\frac{d}{dt}\left(\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\frac{\partial q_{j}}{\partial s_{i}}\right)=\sum_{j}\left(\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\right)\frac{\partial q_{j}}{\partial s_{i}}+\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\left(\frac{d}{dt}\frac{\partial q_{j}}{\partial s_{i}}\right),
+\]
+
+\end_inset
+
+but because 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ in the coordinates 
+\begin_inset Formula $\{q_{i}\}$
+\end_inset
+
+ follows Euler-Lagrange equation, we have that we can express the previous
+ equation as 
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}=\sum_{j}\left(\frac{\partial\mathcal{L}}{\partial q_{i}}\right)\frac{\partial q_{j}}{\partial s_{i}}+\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\left(\frac{d}{dt}\frac{\partial q_{j}}{\partial s_{i}}\right).
+\end{equation}
+
+\end_inset
+
+And now, let's calculate the derivative 
+\begin_inset Formula $\frac{d}{dt}\frac{\partial q_{j}}{\partial s_{i}}$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial q_{j}}{\partial s_{i}}=\sum_{k}\frac{\partial}{\partial q_{k}}\frac{\partial q_{j}}{\partial s_{i}}+\frac{\partial^{2}q_{j}}{\partial t\partial s_{i}}=\sum_{k}\frac{\partial}{\partial s_{i}}\frac{\partial q_{j}}{\partial q_{k}}+\frac{\partial^{2}q_{j}}{\partial s_{i}\partial t},
+\]
+
+\end_inset
+
+in the previous expression I've been changed the order of the partial derivative
+s, then, following with the calculation, we have 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial q_{j}}{\partial s_{i}}=\frac{\partial}{\partial s_{i}}\left(\sum_{k}\frac{\partial q_{j}}{\partial q_{k}}+\frac{\partial q_{j}}{\partial\partial t}\right)=\frac{\partial\dot{q}_{k}}{\partial s_{i}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{d}{dt}\frac{\partial q_{j}}{\partial s_{i}}=\frac{\partial\dot{q}_{k}}{\partial s_{i}},
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}=\sum_{j}\frac{\partial\mathcal{L}}{\partial q_{i}}\frac{\partial q_{j}}{\partial s_{i}}+\frac{\partial\mathcal{L}}{\partial\dot{q}_{j}}\frac{\partial\dot{q}_{k}}{\partial s_{i}}=\frac{\partial\mathcal{L}}{\partial s_{i}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}_{i}}=\frac{\partial\mathcal{L}}{\partial s_{i}},
+\]
+
+\end_inset
+
+therefore, we end with the Euler-Lagrange equations for the new system of
+ generalized coordinates.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 1.14) Two points of mass 
+\begin_inset Formula $m$
+\end_inset
+
+ are joined by a rigid weightless rod of lenght 
+\begin_inset Formula $l$
+\end_inset
+
+, the center of which is constrain to move on a circle of radius 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Express the kinetic energy in generalized coordinates.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For this problem, we are going to use the help of the following diagram:
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Problem114.png
+	scale 15
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+And from the figure, it follows that we're analizing the movement in 3D.
+ But firts, let's focus on the view from above, wich corresponds to the
+ a) part in the previous figure, and from that it follows that the movement
+ of each one of the masses in the rod is given by 
+\begin_inset Formula 
+\[
+x_{1}=a\cos\alpha+\frac{l}{2}\cos\beta,y_{1}=a\sin\alpha+\frac{l}{2}\sin\beta,
+\]
+
+\end_inset
+
+and, for the 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ we havesomething very similar
+\begin_inset Formula 
+\[
+x_{2}=a\cos\alpha-\frac{l}{2}\cos\beta,y_{2}=a\sin\alpha-\frac{l}{2}\sin\beta,
+\]
+
+\end_inset
+
+and from the b) view, we can see that the 
+\begin_inset Formula $z$
+\end_inset
+
+ component for both masses as 
+\begin_inset Formula 
+\[
+z_{1}=\frac{l}{2}\sin\gamma,z_{2}=-\frac{l}{2}\sin\gamma.
+\]
+
+\end_inset
+
+We also know that the kinetic energy is given by 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m_{1}\left(\dot{x}_{1}^{2}+\dot{y_{1}}^{2}+\dot{z_{1}}^{2}\right)+\frac{1}{2}m_{2}\left(\dot{x}_{2}^{2}+\dot{y}_{2}^{2}+\dot{z}_{2}^{2}\right),
+\]
+
+\end_inset
+
+so, let's calculate the derivatives.
+ Let's start with the mass 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{x_{1}}=-a\sin\alpha\dot{\alpha}-\frac{l}{2}\sin\beta\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x_{1}}^{2}=a^{2}\sin^{2}\alpha\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\sin^{2}\beta\dot{\beta}^{2}+la\sin\alpha\sin\beta\dot{\alpha}\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y_{1}}=a\cos\alpha\dot{\alpha}+\frac{l}{2}\cos\beta\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{y_{1}}^{2}=a^{2}\cos^{2}\alpha\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\cos^{2}\beta\dot{\beta}^{2}+la\cos\alpha\cos\beta\dot{\alpha}\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{z_{1}}=\frac{l}{2}\cos\gamma\dot{\gamma},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{z_{1}}^{2}=\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2},
+\]
+
+\end_inset
+
+then, the energy for this particle will be 
+\begin_inset Formula 
+\[
+T_{1}=\frac{1}{2}m_{1}\left(a^{2}\dot{\alpha}^{2}\left(\sin^{2}\alpha+\cos^{2}\alpha\right)+\left(\frac{l}{2}\right)^{2}\dot{\beta}^{2}\left(\sin^{2}\beta+\cos^{2}\beta\right)+la\dot{\alpha}\dot{\beta}\left(\sin\alpha\sin\beta+\cos\alpha\cos\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right),
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula $\cos^{2}a+\sin^{2}b=1$
+\end_inset
+
+, and 
+\begin_inset Formula $\cos a\cos b+\sin a\sin b=\cos\left(a-b\right)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\implies T_{1}=\frac{1}{2}m_{1}\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta}^{2}+la\dot{\alpha}\dot{\beta}\cos\left(\alpha-\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right).
+\]
+
+\end_inset
+
+Now, let's move to the calculations for the 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ particle 
+\begin_inset Formula 
+\[
+\dot{x}_{2}=-a\sin\alpha\dot{\alpha}+\frac{l}{2}\sin\beta\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x}_{2}^{2}=a^{2}\sin^{2}\alpha\dot{\alpha}+\left(\frac{l}{2}\right)^{2}\sin^{2}\beta\dot{\beta{}^{2}}-la\sin\alpha\sin\beta\dot{\alpha}\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y}_{2}=a\cos\alpha\dot{\alpha}-\frac{l}{2}\cos\beta\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{y}_{2}^{2}=a^{2}\cos^{2}\alpha\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\cos^{2}\beta\dot{\beta}^{2}-la\cos\alpha\cos\beta\dot{\alpha}\dot{\beta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{z_{2}}=-\frac{l}{2}\cos\gamma\dot{\gamma},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{z_{2}}=\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2},
+\]
+
+\end_inset
+
+and then, the kinetic energy will be 
+\begin_inset Formula 
+\[
+T_{2}=\frac{1}{2}m_{2}\left(a^{2}\dot{\alpha}^{2}\left(\sin^{2}\alpha+\cos^{2}\alpha\right)+\left(\frac{l}{2}\right)^{2}\dot{\beta{}^{2}}\left(\sin^{2}\beta+\cos^{2}\beta\right)-la\dot{\alpha}\dot{\beta}\left(\sin\alpha\sin\beta+\cos\alpha\cos\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right),
+\]
+
+\end_inset
+
+and we can perform the same simplifications as for the particle 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+, then we have 
+\begin_inset Formula 
+\[
+\implies T_{2}=\frac{1}{2}m_{2}\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta{}^{2}}-la\dot{\alpha}\dot{\beta}\cos\left(\alpha-\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right),
+\]
+
+\end_inset
+
+then, the total energy will be 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m_{1}\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta}^{2}+la\dot{\alpha}\dot{\beta}\cos\left(\alpha-\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\frac{1}{2}m_{2}\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta{}^{2}}-la\dot{\alpha}\dot{\beta}\cos\left(\alpha-\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right)
+\]
+
+\end_inset
+
+But we have that the two masses are equal, then this implies that the total
+ kinetic energy will be 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta}^{2}+la\dot{\alpha}\dot{\beta}\cos\left(\alpha-\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\frac{1}{2}m\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta{}^{2}}-la\dot{\alpha}\dot{\beta}\cos\left(\alpha-\beta\right)+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T=m\left(a^{2}\dot{\alpha}^{2}+\left(\frac{l}{2}\right)^{2}\dot{\beta}^{2}+\left(\frac{l}{2}\right)^{2}\cos^{2}\gamma\dot{\gamma}^{2}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 1.19) Obtain the Lagrangian equations of motion for a spherical
+ pendulum, i.e., a mass point suspended by a rigid weightless rod.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For this problem we are going to use spherical coordinates as our generalized
+ coordinates, with the restriction that the lenght, of the rodcan't change,
+ which therefore reduces the degrees of freedom.
+ Thus, we can analize the motion of the system by just looking at the two
+ angles.
+ Here I present a figure of the problem at hand.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Problem119.png
+	scale 15
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spherical pendulum.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Now, we know that we can express the cartesian coordinates in terms of the
+ spherical ones, by the following tranformation 
+\begin_inset Formula 
+\[
+x=r\sin\theta\cos\phi,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y=r\sin\theta\sin\phi,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=r\cos\theta,
+\]
+
+\end_inset
+
+and then it's time derivatives will be, for 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\dot{x}=r\frac{d}{dt}\left(\sin\theta\cos\phi\right)=r\left(\cos\theta\cos\phi\dot{\theta}-\sin\theta\sin\phi\dot{\phi}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x}=r\left(\cos\theta\cos\phi\dot{\theta}-\sin\theta\sin\phi\dot{\phi}\right),
+\]
+
+\end_inset
+
+now, for 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\dot{y}=r\frac{d}{dt}\left(\sin\theta\sin\phi\right)=r\left(\cos\theta\sin\phi\dot{\theta}+\sin\theta\cos\phi\dot{\phi}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{y}=r\left(\cos\theta\sin\phi\dot{\theta}+\sin\theta\cos\phi\dot{\phi}\right),
+\]
+
+\end_inset
+
+and finally, for 
+\begin_inset Formula $z$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{z}=r\frac{d}{dt}\left(\cos\theta\right)=-r\sin\theta\dot{\theta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{z}=-r\sin\theta\dot{\theta}
+\]
+
+\end_inset
+
+Now, we also know that the kinetic energy is given by 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m\left(\dot{x}^{2}+\dot{y}^{2}+\dot{z}^{2}\right),
+\]
+
+\end_inset
+
+and usign the previous expressions for 
+\begin_inset Formula $\dot{x},\dot{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\dot{z}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\dot{x}^{2}=r^{2}\left(\cos^{2}\theta\cos^{2}\phi\dot{\theta}^{2}+\sin^{2}\theta\sin^{2}\phi\dot{\phi}^{2}-2\cos\theta\cos\phi\sin\theta\sin\phi\dot{\theta}\dot{\phi}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y}^{2}=r^{2}\left(\cos^{2}\theta\sin^{2}\phi\dot{\theta}^{2}+\sin^{2}\theta\cos^{2}\phi\dot{\phi}^{2}+2\cos\theta\sin\phi\sin\theta\cos\phi\dot{\theta}\dot{\phi}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{z}^{2}=r^{2}\sin^{2}\theta\dot{\theta}^{2},
+\]
+
+\end_inset
+
+if, we now, sum the three previous equations, we have 
+\begin_inset Formula 
+\[
+\dot{x}^{2}+\dot{y}^{2}+\dot{z}^{2}=r^{2}\left(\cos^{2}\theta\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}+\sin^{2}\theta\dot{\theta}^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x}^{2}+\dot{y}^{2}+\dot{z}^{2}=r^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right),
+\]
+
+\end_inset
+
+and therefore, the kinetic energy, will be 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}mr^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right).
+\]
+
+\end_inset
+
+On the other hand, the potential energy will be 
+\begin_inset Formula 
+\[
+V=mgz=mgr\left(1-\cos\theta\right),
+\]
+
+\end_inset
+
+and with this at hand, the Lagrangian will be 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}=\frac{1}{2}mr^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right)+mgr\cos\theta,
+\end{equation}
+
+\end_inset
+
+in which I've drop a constant term.
+ Now, we know the lenght is fixed, but to make this even clear, let's change
+ the variable 
+\begin_inset Formula $r\rightarrow l$
+\end_inset
+
+, then we have 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}=\frac{1}{2}ml^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right)+mgl\cos\theta,
+\end{equation}
+
+\end_inset
+
+and we also know that the Euler-Lagrange equation for this system are given
+ by 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}-\frac{\partial\mathcal{L}}{\partial\theta}=0,\text{ and }\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\phi}}-\frac{\partial\mathcal{L}}{\partial\phi}=0.
+\]
+
+\end_inset
+
+Then, performing the calculations, we have 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=\frac{d}{dt}\frac{\partial}{\partial\dot{\theta}}\left(\frac{1}{2}ml^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right)+mgl\cos\theta\right)=\frac{d}{dt}\left(ml\dot{\theta}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=ml\ddot{\theta},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\theta}=\frac{\partial}{\partial\theta}\left(\frac{1}{2}ml^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right)+mgl\cos\theta\right)=ml^{2}\sin\theta\cos\theta\dot{\phi}^{2}-mgl\sin\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial\mathcal{L}}{\partial\theta}=ml^{2}\sin\theta\cos\theta\dot{\phi}^{2}-mgl\sin\theta,
+\]
+
+\end_inset
+
+then, we have the following equation of motion for the coordinate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+ml\ddot{\theta}-ml^{2}\sin\theta\cos\theta\dot{\phi}^{2}+mgl\sin\theta=0.
+\end{equation}
+
+\end_inset
+
+On the other hand, for the 
+\begin_inset Formula $\phi$
+\end_inset
+
+ variable, from the Lagrangian, we can see that there's no depedence on
+ the variable 
+\begin_inset Formula $\phi$
+\end_inset
+
+, only on the variable 
+\begin_inset Formula $\dot{\phi}$
+\end_inset
+
+, therefore, we have that 
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=0\implies\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=\alpha,
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ a constant, but still we've to perform the derivative 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=\frac{\partial}{\partial\dot{\phi}}\left(\frac{1}{2}mr^{2}\left(\dot{\theta}^{2}+\sin^{2}\theta\dot{\phi}^{2}\right)+mgr\cos\theta\right)=mr^{2}\sin^{2}\theta\dot{\phi},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=mr^{2}\sin^{2}\theta\dot{\phi},
+\]
+
+\end_inset
+
+and finally, our equations of motion will be 
+\begin_inset Formula 
+\begin{equation}
+ml\ddot{\theta}-ml^{2}\sin\theta\cos\theta\dot{\phi}^{2}+mgl\sin\theta=0,
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+mr^{2}\sin^{2}\theta\dot{\phi}=\alpha.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 1.20) A particle of mass 
+\begin_inset Formula $m$
+\end_inset
+
+ moves in one dimension such that the Lagrangian is given by 
+\begin_inset Formula 
+\begin{equation}
+L=\frac{m^{2}\dot{x}^{4}}{12}+m\dot{x}^{2}V\left(x\right)-V^{2}\left(x\right),\label{eq:Lagrangian}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $V$
+\end_inset
+
+ is some differentiable function of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Find the equation of motion for 
+\begin_inset Formula $x\left(t\right)$
+\end_inset
+
+ and describe the physical nature of the system on the basis of this equation.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution.
+\end_layout
+
+\begin_layout Standard
+Lets begin by writing the Euler-Lagrange equation considering only one degree
+ of freedom 
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial x}-\frac{d}{dt}\frac{\partial L}{\partial\dot{x}}=0,
+\]
+
+\end_inset
+
+then, pluging the Lagrangian given in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Lagrangian"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial x}=\frac{\partial}{\partial x}\left(m\dot{x}^{2}V\left(x\right)-V^{2}\left(x\right)\right)=m\dot{x}^{2}\frac{dV}{dx}-2V\frac{dV}{dx},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial L}{\partial x}=m\dot{x}^{2}\frac{dV}{dx}-2V\frac{dV}{dx},
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial\dot{x}}=\frac{\partial}{\partial\dot{x}}\left(\frac{m^{2}\dot{x}^{4}}{12}+m\dot{x}^{2}V\right)=\frac{m^{2}\dot{x}^{3}}{3}+2m\dot{x}V,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial L}{\partial\dot{x}}=\frac{d}{dt}\left(\frac{m^{2}\dot{x}^{3}}{3}+2m\dot{x}V\right)=m^{2}\dot{x}^{2}\ddot{x}+2m\ddot{x}V+2m\dot{x}\frac{dV}{dx}\frac{dx}{dt},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{d}{dt}\frac{\partial L}{\partial\dot{x}}=m^{2}\dot{x}^{2}\ddot{x}+2m\dot{x}^{2}\frac{dV}{dx}+2m\ddot{x}V,
+\]
+
+\end_inset
+
+thus, the Euler-Lagrange equation for this system it's given by 
+\begin_inset Formula 
+\[
+m^{2}\dot{x}^{2}\ddot{x}+2m\dot{x}^{2}\frac{dV}{dx}+2m\ddot{x}V-m\dot{x}^{2}\frac{dV}{dx}+2V\frac{dV}{dx}=0,
+\]
+
+\end_inset
+
+and now, let's simplify the previous expression 
+\begin_inset Formula 
+\[
+m\dot{x}^{2}\left(m\ddot{x}+2\frac{dV}{dx}-\frac{dV}{dx}\right)+\left(2m\ddot{x}V+2\frac{dV}{dx}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies m\dot{x}^{2}\left(m\ddot{x}+\frac{dV}{dx}\right)+2V\left(m\ddot{x}+\frac{dV}{dx}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(m\dot{x}^{2}+2V\right)\left(m\ddot{x}+\frac{dV}{dx}\right)=0,
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula $T=\frac{m}{2}\dot{x}^{2}$
+\end_inset
+
+, and if the system is conservative, then it follows that the force can
+ be obtained via the gradient, or in this case 
+\begin_inset Formula $F=-\frac{dV}{dx}$
+\end_inset
+
+, therefore, if we plug this information in the previous equation, we have
+ that 
+\begin_inset Formula 
+\[
+\implies\left(2T+2V\right)\left(m\ddot{x}-F\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left(T+V\right)\left(m\ddot{x}-F\right)=0.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 1.21) Two mass points of mass 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ are connected by a string passing through a hole in a smooth table so that
+ 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ rests on the table surface and 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ hangs suspended.
+ Assuming 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ moves in a vertical line, what are the generalized coordinates for the
+ system? Write the Lagrange equations for the system and if possible, discuss
+ the physical significance any of them might have.
+ Reduce the problem to a second-orer differential equation and obtain a
+ first integral.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+First of all let's write a diagram of the problem, which is given in the
+ following figure 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Problem121.png
+	scale 25
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagram of Problem 1.21.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Now, for this problem, we have one constraint, which is the lenght of the
+ string, and because of this constraint the number of degrees of fredom
+ will reduce.
+ Moreover, because the mass falling down, respect to the table, is just
+ able to move in the vertical direction, i.e., we just need one coordinate
+ to describe its motion.
+\end_layout
+
+\begin_layout Standard
+For the motion of the mass 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ we are going to use polar coordinates, i.e.
+ 
+\begin_inset Formula $\{r,\theta\}$
+\end_inset
+
+, but because the masses are connected, via the following equation 
+\begin_inset Formula 
+\[
+l=r+s,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $r$
+\end_inset
+
+ is the coordinate of the particle on the table, 
+\begin_inset Formula $s$
+\end_inset
+
+ is the coordinate for the particle 
+\begin_inset Quotes eld
+\end_inset
+
+falling
+\begin_inset Quotes erd
+\end_inset
+
+ down, and 
+\begin_inset Formula $l$
+\end_inset
+
+ the lenght os the string.
+\end_layout
+
+\begin_layout Standard
+Then, we have the following set of generalized coordinates for the system
+ 
+\begin_inset Formula 
+\[
+m_{1}:\rightarrow x=\left(l-s\right)\cos\theta,\hspace{1em}y=\left(l-s\right)\sin\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m_{2}:\rightarrow s=s.
+\]
+
+\end_inset
+
+But as I mention before, the radial coordinate of the particle 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ is not free, instead, it's related to the coordinate for 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, and therefore, we can express it in terms of 
+\begin_inset Formula $s$
+\end_inset
+
+ thus, the coordinates for 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ end up being 
+\begin_inset Formula 
+\[
+m_{1}:\rightarrow x=\left(l-s\right)\cos\theta,\hspace{1em}y=\left(l-s\right)\sin\theta.
+\]
+
+\end_inset
+
+And even more, we know that the kinetic energy, in terms of polar coordinates
+ can be written as 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right),
+\]
+
+\end_inset
+
+therefore, for this problem we will have, for the particle 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{1}=\frac{1}{2}m_{1}\left(\dot{s}^{2}+\left(l-s\right)^{2}\dot{\theta}^{2}\right),
+\]
+
+\end_inset
+
+whereas, for the mass 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, we just have 
+\begin_inset Formula 
+\[
+T_{2}=\frac{1}{2}m_{2}\dot{s}^{2},
+\]
+
+\end_inset
+
+therefore, the total kinetic energy will be 
+\begin_inset Formula 
+\[
+T=T_{1}+T_{2}=\frac{1}{2}m_{1}\left(\dot{s}^{2}+\left(l-s\right)^{2}\dot{\theta}^{2}\right)+\frac{1}{2}m_{2}\dot{s}^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore T=\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{1}{2}m_{1}\left(l-s\right)^{2}\dot{\theta}^{2}.
+\]
+
+\end_inset
+
+And, for the potetial energy, we just have 
+\begin_inset Formula 
+\[
+V=-m_{2}gs,
+\]
+
+\end_inset
+
+thus, the Lagrangian will be 
+\begin_inset Formula 
+\[
+\mathcal{L}=T-V,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\mathcal{L}=\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{1}{2}m_{1}\left(l-s\right)^{2}\dot{\theta}^{2}+m_{2}gs.
+\]
+
+\end_inset
+
+Now, we have that the Euler-Lagrange equations for this system will be 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}}-\frac{\partial\mathcal{L}}{\partial s}=0,\hspace{1em}\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}-\frac{\partial\mathcal{L}}{\partial\theta}=0.
+\]
+
+\end_inset
+
+So, let's perform the calculations 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}}=\frac{d}{dt}\left(\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{1}{2}m_{1}\left(l-s\right)^{2}\dot{\theta}^{2}+m_{2}gs\right)=\frac{d}{dt}\left(\left(m_{1}+m_{2}\right)\dot{s}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{s}}=\left(m_{1}+m_{2}\right)\ddot{s},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial s}=\frac{\partial}{\partial s}\left(\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{1}{2}m_{1}\left(l-s\right)^{2}\dot{\theta}^{2}+m_{2}gs\right)=-m_{1}\left(l-s\right)\dot{\theta}^{2}+m_{2}g,
+\]
+
+\end_inset
+
+thus, we have 
+\begin_inset Formula 
+\begin{equation}
+\left(m_{1}+m_{2}\right)\ddot{s}+m_{1}\left(l-s\right)\dot{\theta}^{2}-m_{2}g=0,\label{eq:SEquation}
+\end{equation}
+
+\end_inset
+
+whilr for the 
+\begin_inset Formula $\theta$
+\end_inset
+
+ coordinate, we have that there is no dependence of the Lagrangian with
+ respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+, just with respect to 
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+, therefore, we have that 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial}{\partial\dot{\theta}}\left(\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{1}{2}m_{1}\left(l-s\right)^{2}\dot{\theta}^{2}+m_{2}gs\right)=\frac{d}{dt}\left(m_{1}\left(l-s\right)^{2}\dot{\theta}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies m_{1}\left(l-s\right)^{2}\dot{\theta}=\alpha,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ it's just a constant, and this also implies 
+\begin_inset Formula 
+\[
+\dot{\theta}=\frac{\alpha}{m_{1}\left(l-s\right)^{2}},
+\]
+
+\end_inset
+
+.
+ And with this information at hand, we can write the equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SEquation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\left(m_{1}+m_{2}\right)\ddot{s}+m_{1}\left(l-s\right)\left(\frac{\alpha}{m_{1}\left(l-s\right)^{2}}\right)^{2}-m_{2}g=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(m_{1}+m_{2}\right)\ddot{s}+\frac{\alpha^{2}}{m_{1}\left(l-s\right)^{3}}-m_{2}g=0,
+\]
+
+\end_inset
+
+if we now multiply the previous equation by 
+\begin_inset Formula $\dot{s}$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+\implies\left(m_{1}+m_{2}\right)\ddot{s}\dot{s}+\frac{\alpha^{2}\dot{s}}{m_{1}\left(l-s\right)^{3}}-m_{2}g\dot{s}=0,
+\]
+
+\end_inset
+
+which can be integrated
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{\alpha^{2}}{m_{1}\left(l-s\right)^{2}}-m_{2}gs=\beta,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ it's just a constant, and moreover, if we plug the expression for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in the previous equation, we have that 
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+\frac{\left(m_{1}\left(l-s\right)^{2}\dot{\theta}\right)^{2}}{m_{1}\left(l-s\right)^{2}}-m_{2}gs=\beta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{1}{2}\left(m_{1}+m_{2}\right)\dot{s}^{2}+m_{1}\left(l-s\right)^{2}\dot{\theta}^{2}-m_{2}gs=\beta,
+\]
+
+\end_inset
+
+butm the left hand side of the previous equiation it's just the total energy,
+ therefore, we have 
+\begin_inset Formula 
+\[
+T+V=\beta,
+\]
+
+\end_inset
+
+i.e., the energy is conserved.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 1.22) Obtain the Lagrangian equations of motion for a double pendulum.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For this problem we can use the angles of the two angles as generalized
+ coordinates, as shown in the figure 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Problem122.png
+	scale 35
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagram of Problem 1.22.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Then, we can express the cartesian coordinates of the positions of the masses
+ in terms of these angles.
+ So, let's do that, for the mass 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+, let's suppose lenght 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ fixed, and for this, the motion will be described by the angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and in the coordinates 
+\begin_inset Formula $x,y$
+\end_inset
+
+ we have that
+\begin_inset Formula 
+\[
+x_{1}=l_{1}\sin\theta,\hspace{1em}\hspace{1em}y_{1}=-l_{1}\cos\theta,
+\]
+
+\end_inset
+
+whereas for the second pendulum, we're going to assume the lengh it's fixed
+ to be 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+ and the coordinates will be
+\begin_inset Formula 
+\[
+x_{2}=x_{1}+l_{2}\sin\phi,\hspace{1em}\hspace{1em}y_{2}=y_{1}-l_{2}\cos\phi,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies x_{2}=l_{1}\sin\theta+l_{2}\sin\phi,\hspace{1em}\hspace{1em}y_{2}=-l_{1}\cos\theta-l_{2}\cos\phi.
+\]
+
+\end_inset
+
+And with this at hand, we can calculate the kinetic energy for each one
+ of the masses, thus, for 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+T_{1}=\frac{1}{2}m_{1}\left(\dot{x}_{1}^{2}+\dot{y}_{1}^{2}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\dot{x}_{1}=l_{1}\cos\theta\dot{\theta},\hspace{1em}\hspace{1em}\dot{y}_{1}=l_{1}\sin\theta\dot{\theta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x}_{1}^{2}+\dot{y}_{1}^{2}=l_{1}^{2}\dot{\theta}^{2},
+\]
+
+\end_inset
+
+and then, the kinetic energy will be 
+\begin_inset Formula 
+\begin{equation}
+T_{1}=\frac{1}{2}m_{1}l_{1}^{2}\dot{\theta}^{2}.
+\end{equation}
+
+\end_inset
+
+Now, for the mass 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+T_{2}=\frac{1}{2}m_{2}\left(\dot{x}_{2}^{2}+\dot{y}_{2}^{2}\right),
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula 
+\[
+\dot{x}_{2}=l_{1}\cos\theta\dot{\theta}+l_{2}\cos\phi\dot{\phi},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y}_{2}=l_{1}\sin\theta\dot{\theta}+l_{2}\sin\phi\dot{\phi},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\dot{x}_{2}^{2}+\dot{y}_{2}^{2}=l_{1}^{2}\cos^{2}\theta\dot{\theta}^{2}+l_{2}^{2}\cos^{2}\phi\dot{\phi}^{2}+2l_{1}l_{2}\cos\theta\cos\phi\dot{\theta}\dot{\phi}+l_{1}^{2}\sin^{2}\theta\dot{\theta}^{2}+l_{2}^{2}\sin^{2}\phi\dot{\phi}^{2}+2l_{1}l_{2}\sin\theta\sin\phi\dot{\theta}\dot{\phi},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{x}_{2}^{2}+\dot{y}_{2}^{2}=l_{1}^{2}\dot{\theta}^{2}\left(\cos^{2}\theta+\sin^{2}\theta\right)+l_{2}^{2}\dot{\phi}^{2}\left(\cos^{2}\phi+\sin^{2}\phi\right)+2l_{1}l_{2}\dot{\theta}\dot{\phi}\left(\cos\theta\cos\phi+\sin\theta\sin\phi\right),
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula $\cos^{2}a+\sin^{2}b=1$
+\end_inset
+
+, and 
+\begin_inset Formula $\cos a\cos b+\sin a\sin b=\cos\left(a-b\right)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\dot{x}_{2}^{2}+\dot{y}_{2}^{2}=l_{1}^{2}\dot{\theta}^{2}+l_{2}^{2}\dot{\phi}^{2}+2l_{1}l_{2}\dot{\theta}\dot{\phi}\cos\left(\theta-\phi\right),
+\]
+
+\end_inset
+
+then, the kinetic energy for this particle will be 
+\begin_inset Formula 
+\[
+T_{2}=\frac{1}{2}m_{2}\left(l_{1}^{2}\dot{\theta}^{2}+l_{2}^{2}\dot{\phi}^{2}+2l_{1}l_{2}\dot{\theta}\dot{\phi}\cos\left(\theta-\phi\right)\right),
+\]
+
+\end_inset
+
+and therefore the kinetic energy of the system will be 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m_{1}l_{1}^{2}\dot{\theta}^{2}+\frac{1}{2}m_{2}\left(l_{1}^{2}\dot{\theta}^{2}+l_{2}^{2}\dot{\phi}^{2}+2l_{1}l_{2}\dot{\theta}\dot{\phi}\cos\left(\theta-\phi\right)\right).
+\]
+
+\end_inset
+
+And, the potential energy for the system will be 
+\begin_inset Formula 
+\[
+V=V_{1}+V_{2},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is the potential energy for the mass 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, and for each one, we have 
+\begin_inset Formula 
+\[
+V_{1}=m_{1}gl_{1}\left(1-\cos\theta\right),
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+V_{2}=m_{2}g\left[l_{1}\left(1-\cos\theta\right)+l_{2}\left(1-\cos\phi\right)\right],
+\]
+
+\end_inset
+
+and then, the total potential will be 
+\begin_inset Formula 
+\[
+V=g\left\{ m_{1}l_{1}\left(1-\cos\theta\right)+m_{2}\left[l_{1}\left(1-\cos\theta\right)+l_{2}\left(1-\cos\phi\right)\right]\right\} ,
+\]
+
+\end_inset
+
+and then, the Lagrangian is given by 
+\begin_inset Formula 
+\[
+\mathcal{L}=\frac{1}{2}m_{1}l_{1}^{2}\dot{\theta}^{2}+\frac{1}{2}m_{2}\left(l_{1}^{2}\dot{\theta}^{2}+l_{2}^{2}\dot{\phi}^{2}+2l_{1}l_{2}\dot{\theta}\dot{\phi}\cos\left(\theta-\phi\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-g\left\{ m_{1}l_{1}\left(1-\cos\theta\right)+m_{2}\left[l_{1}\left(1-\cos\theta\right)+l_{2}\left(1-\cos\phi\right)\right]\right\} ,
+\]
+
+\end_inset
+
+and in this case, the Euler-Lagrange equations will be 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}-\frac{\partial\mathcal{L}}{\partial\theta}=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\phi}}-\frac{\partial\mathcal{L}}{\partial\phi}=0.
+\]
+
+\end_inset
+
+Now, let's performd the derivatives, for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=\frac{d}{dt}\left(m_{1}l_{1}^{2}\dot{\theta}+m_{2}l_{1}^{2}\dot{\theta}+2l_{1}l_{2}\dot{\phi}\cos\left(\theta-\phi\right)\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=m_{1}l_{1}^{2}\ddot{\theta}+m_{2}l_{1}^{2}\ddot{\theta}+2l_{1}l_{2}\ddot{\phi}\cos\left(\theta-\phi\right)-2l_{1}l_{2}\dot{\phi}\left(\dot{\theta}-\dot{\phi}\right)\sin\left(\theta-\phi\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=\left(m_{1}+m_{2}\right)l_{1}^{2}\ddot{\theta}++2l_{1}l_{2}\ddot{\phi}\cos\left(\theta-\phi\right)-2l_{1}l_{2}\dot{\phi}\left(\dot{\theta}-\dot{\phi}\right)\sin\left(\theta-\phi\right),
+\]
+
+\end_inset
+
+and for the other derivative we have 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\theta}=-l_{1}l_{2}\dot{\theta}\dot{\phi}\sin\left(\theta-\phi\right)-m_{1}gl_{1}\sin\theta-m_{2}gl_{2}\sin\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial\mathcal{L}}{\partial\theta}=-l_{1}l_{2}\dot{\theta}\dot{\phi}\sin\left(\theta-\phi\right)-\left(m_{1}l_{1}+m_{2}l_{2}\right)g\sin\theta.
+\]
+
+\end_inset
+
+Theferore, we have that the Euler-Lagrange equation for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\left(m_{1}+m_{2}\right)l_{1}^{2}\ddot{\theta}++2l_{1}l_{2}\ddot{\phi}\cos\left(\theta-\phi\right)-2l_{1}l_{2}\dot{\phi}\left(\dot{\theta}-\dot{\phi}\right)\sin\left(\theta-\phi\right)+l_{1}l_{2}\dot{\theta}\dot{\phi}\sin\left(\theta-\phi\right)+\left(m_{1}l_{1}+m_{2}l_{2}\right)g\sin\theta=0.
+\]
+
+\end_inset
+
+Now let's move on to the 
+\begin_inset Formula $\phi$
+\end_inset
+
+ coordinate, and calculate 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=\frac{d}{dt}\left(m_{2}l_{2}^{2}\dot{\phi}+m_{2}l_{1}l_{2}\dot{\theta}\cos\left(\theta-\phi\right)\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=m_{2}l_{2}^{2}\ddot{\phi}+m_{2}l_{1}l_{2}\ddot{\theta}\cos\left(\theta-\phi\right)+m_{2}l_{1}l_{2}\dot{\theta}\dot{\phi}\sin\left(\theta-\phi\right),
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\phi}=m_{2}l_{1}l_{2}\dot{\theta}\dot{\phi}\cos\left(\theta-\phi\right)+m_{2}gl_{2}\sin\theta,
+\]
+
+\end_inset
+
+and finally, the Euler-Lagrange equations for the coordinate 
+\begin_inset Formula $\phi$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\[
+m_{2}l_{2}^{2}\ddot{\phi}+m_{2}l_{1}l_{2}\ddot{\theta}\cos\left(\theta-\phi\right)+m_{2}l_{1}l_{2}\dot{\theta}\dot{\phi}\sin\left(\theta-\phi\right)-m_{2}l_{1}l_{2}\dot{\theta}\dot{\phi}\cos\left(\theta-\phi\right)-m_{2}gl_{2}\sin\theta=0.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Problem 2.13) A heavy particle is placed at the top of a vertical hoop.
+ Calculate the reaction of the hoop on the particle by means of the Lagrange's
+ undetermined multipliers and Lagrande's equations.
+ Find the height at which the particle falls of.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For this problem let's use polar coordinates as generalized coordinates,
+ and moreover, because of the nature of the problem, we can use lagrange
+ undefined multipliers, which, of course, modifiy the Euler-Lagrange equations.
+ So let'a begin, by definition, the Lagrangian is given by 
+\begin_inset Formula 
+\[
+\mathcal{L}=T-V,
+\]
+
+\end_inset
+
+but in this case, as stated before, we can use polar coordinates, with the
+ transformation from cartesian to polar given by 
+\begin_inset Formula 
+\[
+x=r\cos\theta,y=r\sin\theta,
+\]
+
+\end_inset
+
+with the equation above, we can find the kinetec energy as follows 
+\begin_inset Formula 
+\[
+T=\frac{1}{2}m\left(\dot{x}^{2}+\dot{y}^{2}\right)=\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T=\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right),
+\]
+
+\end_inset
+
+now, for the potential energy, we can see that it'll be given by the following
+ expression 
+\begin_inset Formula 
+\[
+V=mgr\cos\theta,
+\]
+
+\end_inset
+
+therefore, the Lagrangian will be 
+\begin_inset Formula 
+\[
+\mathcal{L}=\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right)-mgr\cos\theta,
+\]
+
+\end_inset
+
+but, we also have the restriction giving by the fact that the particle is
+ placed at the hoop, for now, let's assume that the particle is constrained
+ to allways be moving on the surface of the hoop, and then the constraint,
+ can be written as 
+\begin_inset Formula 
+\begin{equation}
+g=R-r,\label{eq:ConstraintP213}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $R$
+\end_inset
+
+ is the radius of the hoop and 
+\begin_inset Formula $r$
+\end_inset
+
+ is the coordinate of the particle.
+ Now, in order to consider the constraint we have to modify the Euler-Lagrange
+ equations as follows 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{r}}-\frac{\partial\mathcal{L}}{\partial r}=\lambda\frac{\partial g}{\partial r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}-\frac{\partial\mathcal{L}}{\partial\theta}=\lambda\frac{\partial g}{\partial\theta},
+\]
+
+\end_inset
+
+but, as we can see from equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ConstraintP213"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, there is no dependece on the variable 
+\begin_inset Formula $\theta$
+\end_inset
+
+, therefore, the Euler-Lagrage equations simplify to 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{r}}-\frac{\partial\mathcal{L}}{\partial r}=\lambda\frac{\partial g}{\partial r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}-\frac{\partial\mathcal{L}}{\partial\theta}=0,
+\]
+
+\end_inset
+
+now lets work with Euler Lagrange equation for 
+\begin_inset Formula $r$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{r}}=\frac{d}{dt}\left(\frac{\partial}{\partial\dot{r}}\left(\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right)-mgr\cos\theta\right)\right)=\frac{d}{dt}\left(m\dot{r}\right)=m\ddot{r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{r}}=m\ddot{r},
+\]
+
+\end_inset
+
+on the other hand, for the other derivative, we have 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial r}=\frac{\partial}{\partial r}\left(\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right)-mgr\cos\theta\right)=mr\dot{\theta}^{2}-mgcos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial\mathcal{L}}{\partial r}=mr\dot{\theta}^{2}-mgcos\theta,
+\]
+
+\end_inset
+
+therefore, the Lagrangian for the 
+\begin_inset Formula $r$
+\end_inset
+
+ coodinate becomes 
+\begin_inset Formula 
+\[
+m\ddot{r}-mr\dot{\theta}^{2}+mgcos\theta=\lambda,
+\]
+
+\end_inset
+
+but because the particle is contraint to move in the surface of the hoop,
+ we have that 
+\begin_inset Formula $r=R$
+\end_inset
+
+, and also it's time derivatives would be equal to zero, therefore, we have
+ that the last equation reduces to 
+\begin_inset Formula 
+\begin{equation}
+-mR\dot{\theta}^{2}+mgcos\theta=\lambda,\label{eq:rEquationP213}
+\end{equation}
+
+\end_inset
+
+and following the same line of though, for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}}=\frac{d}{dt}\left(\frac{\partial}{\partial\dot{\theta}}\left(\frac{1}{2}m\left(\dot{r}^{2}+r^{2}\dot{\theta}^{2}\right)-mgr\cos\theta\right)\right)=2mr\dot{r}\dot{\theta}+mr^{2}\ddot{\theta},
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula 
+\[
+\frac{\partial\mathcal{L}}{\partial\theta}=mgr\sin\theta,
+\]
+
+\end_inset
+
+and therefore, for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\[
+2mr\dot{r}\dot{\theta}+mr^{2}\ddot{\theta}-mgr\sin\theta=0,
+\]
+
+\end_inset
+
+and as before, considering the constraint equations, 
+\begin_inset Formula $r=R$
+\end_inset
+
+, and also the time derivatives of 
+\begin_inset Formula $r$
+\end_inset
+
+ will be equal to zero, thus, we have that 
+\begin_inset Formula 
+\begin{equation}
+mR^{2}\ddot{\theta}-mgR\sin\theta=0.\label{eq:OEquationP213}
+\end{equation}
+
+\end_inset
+
+Now, let's focus on the previous equation, and rewrite in the following
+ way 
+\begin_inset Formula 
+\[
+\ddot{\theta}=\frac{g}{R}\sin\theta,
+\]
+
+\end_inset
+
+and now, let's use the chain rule to rewrite the left hand side of the above
+ equation as a derivative of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+\ddot{\theta}=\frac{d}{dt}\dot{\theta}=\frac{d\dot{\theta}}{d\theta}\frac{d\theta}{dt}=\frac{d\dot{\theta}}{d\theta}\dot{\theta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\ddot{\theta}=\frac{d\dot{\theta}}{d\theta}\dot{\theta},
+\]
+
+\end_inset
+
+and therefore, we have that 
+\begin_inset Formula 
+\[
+\frac{d\dot{\theta}}{d\theta}\dot{\theta}=\frac{g}{R}\sin\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{\theta}d\dot{\theta}=\frac{g}{R}\sin\theta d\theta,
+\]
+
+\end_inset
+
+therefore, we can integrate the previous equation asuming that 
+\begin_inset Formula $\dot{\theta}=0$
+\end_inset
+
+ at 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\int_{0}^{\dot{\theta}}\dot{\theta}d\dot{\theta}=\int_{0}^{\theta}\frac{g}{R}\sin\theta d\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\dot{\theta}^{2}=\frac{2g}{R}\left(1-\cos\theta\right).
+\]
+
+\end_inset
+
+Now, if we insert the previous equation into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:rEquationP213"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+-mR\frac{2g}{R}\left(1-\cos\theta\right)+mgcos\theta=\lambda,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\lambda=-2mg+2mg\cos\theta+mgcos\theta=mg\left(3\cos\theta-2\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\lambda=mg\left(3\cos\theta-2\right).
+\end{equation}
+
+\end_inset
+
+and, from the previous equation we can see that 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ when 
+\begin_inset Formula $\cos\theta=\frac{2}{3}$
+\end_inset
+
+, or 
+\begin_inset Formula $\theta=\arccos\frac{2}{3}$
+\end_inset
+
+.
+ Now, if we consider that the surface cannot hold the mass anymore at some
+ angle, then the mass will fly, when the next condition becames true 
+\begin_inset Formula 
+\[
+\theta>\arccos\frac{2}{3}\approx48^{\circ},
+\]
+
+\end_inset
+
+and therefore the height at which the particle will fly, becomes
+\begin_inset Formula 
+\[
+\frac{2}{3}R.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consider the one-dimensional power law force 
+\begin_inset Formula $F(x)=-k|x|^{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $k>0$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ is a positive integer.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What it is the corresponding potential 
+\begin_inset Formula $U\left(x\right)?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Show that the corresponding potential energy 
+\begin_inset Formula $E$
+\end_inset
+
+ is conserved.
+\end_layout
+
+\begin_layout Enumerate
+Express the turning point of the motion 
+\begin_inset Formula $|x_{max}|$
+\end_inset
+
+ in terms of the maximum instantaneous velocity 
+\begin_inset Formula $v_{max}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's begin by plotting the force law for several 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ProblemMForce.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of several power force law, 
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+, with 
+\begin_inset Formula $k=1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+We can see that because of the nature of the force, i.e., the dependence of
+ the absolute value, the force doesn't take any negative values, but because
+ it'a multiplied by the factor 
+\begin_inset Formula $-k$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ is positive, then the force will always be negative.
+ From newtonian mechanics we know that 
+\begin_inset Formula 
+\[
+\overrightarrow{F}=-\nabla U,
+\]
+
+\end_inset
+
+or, in 1D, 
+\begin_inset Formula 
+\[
+F\left(x\right)=-\frac{dU}{dx},
+\]
+
+\end_inset
+
+therefore, we can find the potential by simply taking the integral of the
+ previous expresion, this is 
+\begin_inset Formula 
+\[
+U=-\int Fdx.
+\]
+
+\end_inset
+
+On the other hand, we also know that the definition of the absolute value
+ it's given by 
+\begin_inset Formula $x$
+\end_inset
+
+ if 
+\begin_inset Formula $x>0$
+\end_inset
+
+ and 
+\begin_inset Formula $-x$
+\end_inset
+
+ if 
+\begin_inset Formula $x<0$
+\end_inset
+
+, therefore, we can split the previous integral in two parts, let's begin
+ by considering 
+\begin_inset Formula $x>0$
+\end_inset
+
+, then we have
+\begin_inset Formula 
+\[
+U=-\int\left(-k|x|^{n}\right)dx=k\int x^{n}dx=\frac{x^{n+1}}{n+1}+C,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies U=\frac{x^{n+1}}{n+1}+C,
+\]
+
+\end_inset
+
+it's important to notice that in the previous integration, we're only consdering
+ the cases in which 
+\begin_inset Formula $x>0$
+\end_inset
+
+, on the other hand, if 
+\begin_inset Formula $x<0$
+\end_inset
+
+ we can make the following change of variable 
+\begin_inset Formula $y=-x$
+\end_inset
+
+, and we also need to change the domain in which we're integrating the function,
+ but we will end with the same integral, therefore we have that the potential
+ is given by 
+\begin_inset Formula 
+\[
+U=\frac{|x|^{n+1}}{n+1}+C.
+\]
+
+\end_inset
+
+An even more, because we were able to write the force as the derivative
+ of some potential function, we know that this implies that the system is
+ conservative, i.e, the total energy is conserved.
+ And finnaly, by the conservation of the energy we can choose two points
+ in time, which will be one in which the potential energy is zero, and the
+ energy is max, and other when the velocity iz zero, which it's the turning
+ point, and the potential is max, then we have 
+\begin_inset Formula 
+\[
+\frac{1}{2}mv_{max}^{2}=\frac{|x_{max}|^{n+1}}{n+1},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|x_{max}|^{n+1}=\left(\frac{n+1}{2}\right)mv_{max}^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore|x_{max}|=\sqrt[n+1]{\left(\frac{n+1}{2}\right)mv_{max}^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

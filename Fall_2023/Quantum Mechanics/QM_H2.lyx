@@ -1,0 +1,1866 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fontsize{15pt}{0pt}
+\backslash
+selectfont
+\end_layout
+
+\end_inset
+
+ Quantum Theory 1
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+PHY 0163 - Quantum Theory 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Tufts University
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Graduate School of Arts and Sciences
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Homework 1
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename A&S_Hori_BK+BL.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+Oct 24th, 2023
+\end_layout
+
+\begin_layout Problem
+A spin 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ system is known to be in an eigenstate of 
+\begin_inset Formula $\mathbf{S}\cdot\hat{\mathbf{n}}$
+\end_inset
+
+ with eigenvalue 
+\begin_inset Formula $\hbar/2$
+\end_inset
+
+, where 
+\begin_inset Formula $\hat{\mathbf{n}}$
+\end_inset
+
+ is a unit vector lying in the 
+\begin_inset Formula $xz$
+\end_inset
+
+-plane that makes an angle 
+\begin_inset Formula $γ$
+\end_inset
+
+ with the positive 
+\begin_inset Formula $z$
+\end_inset
+
+-axis.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ is measured.
+ What is the probability of getting 
+\begin_inset Formula $\hbar/2$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+Evaluate the dispersion in 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+,that is,
+\emph on
+
+\begin_inset Formula 
+\[
+\left\langle \left(S_{x}-\left\langle S_{x}\right\rangle \right)^{2}\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\lang spanish-mexico
+Let's use the solution from the previous task with the following changes,
+ 
+\begin_inset Formula $\beta\rightarrow\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, which is the data given here.
+ So the state vector for this problem, expressed in the basis 
+\begin_inset Formula $\left\{ |+\rangle,|-\rangle\right\} $
+\end_inset
+
+ is written as 
+\begin_inset Formula 
+\[
+|\mathbf{S\cdot\hat{n}};+\rangle=\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\text{.}
+\]
+
+\end_inset
+
+Now, we know that given an arbitrary ket 
+\begin_inset Formula $\text{\ensuremath{|\alpha\rangle}}$
+\end_inset
+
+, the probability that it will collapse into some base ket 
+\begin_inset Formula $|a\rangle$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\mathcal{P}\left(|a\rangle\right)=\left|\langle a|\alpha\rangle\right|^{2}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+In our case, the probability that when measuring 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ we get 
+\begin_inset Formula $\frac{\hbar}{2}$
+\end_inset
+
+ is the probability that the ket 
+\begin_inset Formula $|\mathbf{S\cdot\hat{n}};+\rangle$
+\end_inset
+
+ colapse in 
+\begin_inset Formula $\left|S_{x};+\right\rangle $
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(S_{x};+\right)=\left|\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle \right|^{2}\text{.}
+\]
+
+\end_inset
+
+On the other hand, we know that the ket 
+\begin_inset Formula $|S_{x};+\rangle$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset Formula 
+\[
+|S_{x};+\rangle=\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle\text{.}
+\]
+
+\end_inset
+
+Which implies 
+\begin_inset Formula 
+\[
+\langle S_{x};+|=\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\text{,}
+\]
+
+\end_inset
+
+and then, we have
+\begin_inset Formula 
+\[
+\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle =\left(\frac{1}{\sqrt{2}}\langle+|+\frac{1}{\sqrt{2}}\langle-|\right)\left(\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle =\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)\langle+|+\rangle+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\langle+|-\rangle\text{+\ensuremath{\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)\langle-|+\rangle+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\langle-|-\rangle}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+Now, using the orthogonality properties of the base kets, we have to 
+\begin_inset Formula 
+\[
+\left\langle S_{x};+\right.\left|\mathbf{S\cdot\hat{n}};+\right\rangle =\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\text{.}
+\]
+
+\end_inset
+
+In such a way that 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(S_{x};+\right)=\left|\frac{1}{\sqrt{2}}\cos\left(\frac{\gamma}{2}\right)+\frac{1}{\sqrt{2}}\sin\left(\frac{\gamma}{2}\right)\right|^{2}=\frac{1}{2}\left(\cos^{2}\left(\frac{\gamma}{2}\right)+\sin^{2}\left(\frac{\gamma}{2}\right)+2\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{P}\left(S_{x};+\right)=\frac{1}{2}\left(1+2\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\right)\text{,}
+\]
+
+\end_inset
+
+but, if we use the identity 
+\begin_inset Formula $2\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)=\sin\left(\gamma\right)$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\mathcal{P}\left(S_{x};+\right)=\frac{1}{2}\left(1+\sin\left(\gamma\right)\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+Now, for 
+\series bold
+b)
+\series default
+ we know that the operator 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\left\langle \mathbf{S\cdot\hat{n}};+\right|S_{x}\left|\mathbf{S\cdot\hat{n}};+\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\text{,}
+\]
+
+\end_inset
+
+developing the product of the second parenthesis by the third, we have
+\begin_inset Formula 
+\[
+\left(\left[2\right]\right)\left(\left[3\right]\right)=\left(\cos\left(\frac{\gamma}{2}\right)|+\rangle\langle-|+\rangle+\cos\left(\frac{\gamma}{2}\right)|-\rangle\langle+|+\rangle+\sin\left(\frac{\gamma}{2}\right)|+\rangle\langle-|-\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\langle+|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\left[2\right]\right)\left(\left[3\right]\right)=\left(\cos\left(\frac{\gamma}{2}\right)|-\rangle+\sin\left(\frac{\gamma}{2}\right)|+\rangle\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+Where again, we have made use of the properties of orthogonality.
+ So that 
+\begin_inset Formula 
+\[
+\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(\cos\left(\frac{\gamma}{2}\right)|-\rangle+\sin\left(\frac{\gamma}{2}\right)|+\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(\cos^{2}\left(\frac{\gamma}{2}\right)\langle+|-\rangle+\cos\left(\frac{\gamma}{2}\right)\sin\left(\frac{\gamma}{2}\right)\langle+|+\rangle+\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\langle-|-\rangle+\sin^{2}\left(\frac{\gamma}{2}\right)\langle-|+\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\left(2\cos\left(\frac{\gamma}{2}\right)\sin\left(\frac{\gamma}{2}\right)\right)\implies\langle S_{x}\rangle_{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar}{2}\sin\left(\gamma\right)\text{.}
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula 
+\[
+\left\langle S_{x}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}^{2}=\frac{\hbar^{2}}{4}\sin^{2}\left(\gamma\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+On the other hand, for 
+\begin_inset Formula $S_{x}^{2}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+S_{x}^{2}=S_{x}S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}^{2}=\frac{\hbar^{2}}{4}\left[\left(\mathbf{|+\rangle\langle-|+\rangle\langle-|}\right)+\left(|+\rangle\langle-|-\rangle\langle+|\right)+\left(|-\rangle\langle+|+\rangle\langle-|\right)+\left(|-\rangle\langle+|-\rangle\langle+|\right)\right].
+\]
+
+\end_inset
+
+From the previous expression, the first and last terms are zero, due to
+ the orthogonality of the states, so that 
+\begin_inset Formula 
+\[
+S_{x}^{2}=\frac{\hbar^{2}}{4}\left(\left|+\right\rangle \left\langle +\right|+\left|-\right\rangle \left\langle -\right|\right)\text{.}
+\]
+
+\end_inset
+
+Therefore, the expectation value for the previous operator in the state
+ of interest is given by 
+\begin_inset Formula 
+\[
+\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(\left|+\right\rangle \left\langle +\right|+\left|-\right\rangle \left\langle -\right|\right)\left(\cos\left(\frac{\gamma}{2}\right)|+\rangle+\sin\left(\frac{\gamma}{2}\right)|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+developing the expression of the product of the second with the third parenthesi
+s, we have 
+\begin_inset Formula 
+\[
+\left(\left[2\right]\right)\left(\left[3\right]\right)=\cos\left(\frac{\gamma}{2}\right)\left|+\right\rangle \left\langle +\right|+\rangle+\sin\left(\frac{\gamma}{2}\right)\left|+\right\rangle \left\langle +\right|-\rangle+\cos\left(\frac{\gamma}{2}\right)\left|-\right\rangle \left\langle -\right|+\rangle+\sin\left(\frac{\gamma}{2}\right)\left|-\right\rangle \left\langle -\right|-\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset Formula 
+\[
+\implies\left(\left[2\right]\right)\left(\left[3\right]\right)=\cos\left(\frac{\gamma}{2}\right)\left|+\right\rangle +\sin\left(\frac{\gamma}{2}\right)\left|-\right\rangle \text{,}
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos\left(\frac{\gamma}{2}\right)\langle+|+\sin\left(\frac{\gamma}{2}\right)\langle-|\right)\left(\cos\left(\frac{\gamma}{2}\right)\left|+\right\rangle +\sin\left(\frac{\gamma}{2}\right)\left|-\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos^{2}\left(\frac{\gamma}{2}\right)\langle+|+\rangle+\cos\left(\frac{\gamma}{2}\right)\sin\left(\frac{\gamma}{2}\right)\langle+|-\rangle+\sin\left(\frac{\gamma}{2}\right)\cos\left(\frac{\gamma}{2}\right)\langle-|+\rangle+\sin^{2}\left(\frac{\gamma}{2}\right)\langle-|-\rangle\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\left(\cos^{2}\left(\frac{\gamma}{2}\right)+\sin^{2}\left(\frac{\gamma}{2}\right)\right)\text{,}\implies\left\langle S_{x}^{2}\right\rangle _{\mathbf{\mathbf{S}\cdot\hat{n}}}=\frac{\hbar^{2}}{2}\text{.}
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula 
+\[
+\langle\left(S_{x}-\langle S_{x}\rangle\right)^{2}\rangle_{\mathbf{S\cdot\hat{n}}}=\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{\mathbf{S\cdot\hat{n}}}=\frac{\hbar^{2}}{4}-\frac{\hbar^{2}}{4}\sin^{2}\left(\gamma\right)=\frac{\hbar^{2}}{4}\left(1-\sin^{2}\left(\gamma\right)\right)\text{,}
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta S_{x}\right)^{2}\right\rangle _{\mathbf{S\cdot\hat{n}}}=\frac{\hbar^{2}}{4}\cos^{2}\left(\gamma\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+A certain observable in quantum mechanics has a 3 × 3 matrix representation
+ as follows 
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the normalized eigenvectors of this observable and the corresponding
+ eigenvalues.
+ Is there any degeneracy? 
+\end_layout
+
+\begin_layout Enumerate
+Give a physical example where all this is relevant.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+For (1), we have to solve the following eigenvalue problem 
+\begin_inset Formula 
+\[
+Ax=\lambda x,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+A=\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+Now, let's solve for the eigenvalues, and for this, we have to solve the
+ following 
+\begin_inset Formula 
+\[
+\det\left(A-\lambda\mathbb{I}\right)=0,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbb{I}$
+\end_inset
+
+ is the identity matrix.
+ Thus we have 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{ccc}
+-\lambda & \frac{1}{\sqrt{2}} & 0\\
+\frac{1}{\sqrt{2}} & -\lambda & \frac{1}{\sqrt{2}}\\
+0 & \frac{1}{\sqrt{2}} & -\lambda
+\end{array}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff-\lambda\left[\lambda^{2}-\frac{1}{2}\right]-\frac{1}{\sqrt{2}}\left[\frac{-\lambda}{\sqrt{2}}\right]=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\lambda\left[\lambda^{2}-\frac{1}{2}\right]-\frac{\lambda}{2}=0,\iff\lambda\left(\lambda^{2}-1\right)=0,
+\]
+
+\end_inset
+
+and from the previous equation we have that 
+\begin_inset Formula $\lambda\in\left\{ 0,1,-1\right\} $
+\end_inset
+
+, and this implies that there's no degeneracy.
+ Moving on, for each one of the eigenvalues, we have to solve the equation
+ 
+\begin_inset Formula 
+\[
+Ax=\lambda x,\hspace{1em}\lambda\in\left\{ 0,1,-1\right\} ,
+\]
+
+\end_inset
+
+which is going to end up in solving a linear system, explicitly 
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right)\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{2}
+\end{array}\right)=\lambda\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{2}
+\end{array}\right),\hspace{1em}\lambda\in\left\{ 0,1,-1\right\} ,
+\]
+
+\end_inset
+
+and we're going to have the following eigenvectors 
+\begin_inset Formula 
+\[
+\lambda=0\implies\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{2}
+\end{array}\right)=\left(\begin{array}{c}
+-1\\
+0\\
+1
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda=1\implies\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{2}
+\end{array}\right)=\left(\begin{array}{c}
+1\\
+\sqrt{2}\\
+1
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda=0\implies\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{2}
+\end{array}\right)=\left(\begin{array}{c}
+1\\
+\sqrt{2}\\
+1
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Verify
+\begin_inset Formula 
+\begin{equation}
+\langle p\rangle=\hbar k,\hspace{1em}\langle p^{2}\rangle=\frac{\hbar^{2}}{2d^{2}}+\hbar^{2}k^{2},\label{eq:ExpectationPP2}
+\end{equation}
+
+\end_inset
+
+for the expectation value of 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+ from the Gaussian wave packet given by 
+\begin_inset Formula 
+\begin{equation}
+\langle x^{\prime}|\alpha\rangle=\left[\frac{1}{\pi^{1/4}\sqrt{d}}\right]\exp\left[ikx^{\prime}-\frac{x^{\prime2}}{2d^{2}}\right].\label{eq:GaussianPackage}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+First let's say something about the problem: for this part we have to prove
+ that the expectation value for 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+ is given by equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ExpectationPP2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and for doing so we have to use the Gaussian package given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GaussianPackage"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ which is written in the position basis.
+ Now let's move to the calculations: we're going to make use of the following
+ relationships, which we know are valid for this wave function in particular
+ 
+\begin_inset Formula 
+\[
+\langle x\rangle=0,\hspace{1em}\langle x^{2}\rangle=\frac{d^{2}}{2},
+\]
+
+\end_inset
+
+on the other hand, we also know that the momentum operator represented in
+ the position basis is given by 
+\begin_inset Formula 
+\[
+p\rightarrow-i\hbar\partial_{x}.
+\]
+
+\end_inset
+
+Now, by definition we have that for any operator 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, it's expectation value, calculated in the position basis, is given by
+\begin_inset Formula 
+\[
+\langle f(x)\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle f(x^{\prime})\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+and for this particular case, we have 
+\begin_inset Formula 
+\[
+\langle p\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle p\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+but we know the representation of 
+\begin_inset Formula $p$
+\end_inset
+
+ in this basis, thus 
+\begin_inset Formula 
+\[
+\langle p\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(-i\hbar\partial_{x^{\prime}}\right)\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+and for a 
+\begin_inset Quotes eld
+\end_inset
+
+better presentation
+\begin_inset Quotes erd
+\end_inset
+
+, I'm going to calculate the derivative on its own, and later plug it in
+ the integral, and while doing so, I'm going to do the folowing 
+\begin_inset Quotes eld
+\end_inset
+
+change of variables
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+x^{\prime}\rightarrow x,\hspace{1em}\beta=\frac{1}{\pi^{1/4}\sqrt{d}},
+\]
+
+\end_inset
+
+and with this, we have 
+\begin_inset Formula 
+\[
+i\hbar\partial_{x^{\prime}}\langle x^{\prime}|\alpha\rangle\rightarrow i\hbar\partial_{x}\langle x|\alpha\rangle,
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+i\hbar\partial_{x}\langle x|\alpha\rangle=i\hbar\partial_{x}\left(\beta\exp\left[ikx-\frac{x^{2}}{2d^{2}}\right]\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies i\hbar\partial_{x}\langle x|\alpha\rangle=i\hbar\beta\exp\left[ikx-\frac{x^{2}}{2d^{2}}\right]\partial_{x}\left(ikx-\frac{x^{2}}{2d^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies i\hbar\partial_{x}\langle x|\alpha\rangle=i\hbar\beta\exp\left[ikx-\frac{x^{2}}{2d^{2}}\right]\left(ik-\frac{x}{d^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies i\hbar\partial_{x}\langle x|\alpha\rangle=i^{2}\hbar k\beta\exp\left[ikx-\frac{x^{2}}{2d^{2}}\right]-\frac{i\hbar\beta}{d^{2}}x\exp\left[ikx-\frac{x^{2}}{2d^{2}}\right],
+\]
+
+\end_inset
+
+but using the definition given by equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GaussianPackage"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the previous equation can be written as 
+\begin_inset Formula 
+\[
+i\hbar\partial_{x}\langle x|\alpha\rangle=i^{2}\hbar k\langle x|\alpha\rangle-\frac{i\hbar}{d^{2}}x\langle x|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies-i\hbar\partial_{x}\langle x|\alpha\rangle=-i^{2}\hbar k\langle x|\alpha\rangle+\frac{i\hbar}{d^{2}}x\langle x|\alpha\rangle=\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x\right)\langle x|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore-i\hbar\partial_{x}\langle x|\alpha\rangle=\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x\right)\langle x|\alpha\rangle\label{eq:PWave}
+\end{equation}
+
+\end_inset
+
+and if we insert the previous equation into the expectation equation for
+ 
+\begin_inset Formula $p$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+\langle p\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(-i\hbar\partial_{x^{\prime}}\right)\langle x^{\prime}|\alpha\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x^{\prime}\right)\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x^{\prime}\right)\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p\rangle=-i^{2}\hbar k\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\langle x^{\prime}|\alpha\rangle+\frac{i\hbar}{d^{2}}\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle x^{\prime}\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle p\rangle=-i^{2}\hbar k\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\langle x^{\prime}|\alpha\rangle+\frac{i\hbar}{d^{2}}\langle x\rangle
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\langle x^{\prime}|\alpha\rangle=1,\hspace{1em}\langle x\rangle=0,
+\]
+
+\end_inset
+
+because the eigenfunctions are normalized, and the expectation value of
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ for this wave function in the position basis is zero, ad then we have that
+ 
+\begin_inset Formula 
+\[
+\langle p\rangle=-i^{2}\hbar k+\frac{i\hbar}{d^{2}}\left(0\right),
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $i^{2}=1$
+\end_inset
+
+, then we end with 
+\begin_inset Formula 
+\[
+\langle p\rangle=\hbar k,
+\]
+
+\end_inset
+
+just as we wanted.
+\end_layout
+
+\begin_layout Solution*
+Now, let's move to the second part, in this we have to calculate the expectation
+ value of 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, then, using the same procedure.
+ Again, we know that the momentum representation in this basis is given
+ by 
+\begin_inset Formula $p\rightarrow-i\hbar\partial_{x}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+p^{2}\rightarrow\left(-i\hbar\right)^{2}\partial_{x}^{2},
+\]
+
+\end_inset
+
+then, aplying the previous operator to the given wave function, we have
+ that 
+\begin_inset Formula 
+\[
+\left(-i\hbar\right)^{2}\partial_{x}^{2}\langle x|\alpha\rangle=\left(-i\hbar\right)^{2}\partial_{x}\left(\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x\right)\langle x|\alpha\rangle\right)=\left(-i\hbar\right)^{2}\left(\frac{i\hbar}{d^{2}}\langle x|\alpha\rangle+\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x\right)\partial_{x}\langle x|\alpha\rangle\right),
+\]
+
+\end_inset
+
+in which I've used the relationshio given in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PWave"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, then, we have that 
+\begin_inset Formula 
+\[
+\left(-i\hbar\right)^{2}\partial_{x}^{2}\langle x|\alpha\rangle=\left(-i\hbar\right)^{2}\left(\frac{i\hbar}{d^{2}}\langle x|\alpha\rangle+\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x\right)\left(-i^{2}\hbar k+\frac{i\hbar}{d^{2}}x\right)\langle x|\alpha\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(-i\hbar\right)^{2}\partial_{x}^{2}\langle x|\alpha\rangle=\left(-i\hbar\right)^{2}\left(\frac{i\hbar}{d^{2}}\langle x|\alpha\rangle+\left(\left(-i^{2}\hbar k\right)^{2}+\left(\frac{i\hbar}{d^{2}}\right)^{2}x^{2}+2\frac{i\hbar^{2}k}{d^{2}}x\right)\langle x|\alpha\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(-i\hbar\right)^{2}\partial_{x}^{2}\langle x|\alpha\rangle=\left(-i\hbar\right)^{2}\left(\frac{i\hbar}{d^{2}}\langle x|\alpha\rangle+\left(-i^{2}\hbar k\right)^{2}\langle x|\alpha\rangle+\left(\frac{i\hbar}{d^{2}}\right)^{2}x^{2}\langle x|\alpha\rangle+2\frac{i\hbar^{2}k}{d^{2}}x\langle x|\alpha\rangle\right),
+\]
+
+\end_inset
+
+then, the expectation value can be calculated by 
+\begin_inset Formula 
+\[
+\langle p^{2}\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(-i\hbar\partial_{x^{\prime}}\right)^{2}\langle x^{\prime}|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p^{2}\rangle=\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(-i\hbar\right)^{2}\left(\frac{i\hbar}{d^{2}}\langle x^{\prime}|\alpha\rangle+\left(-i^{2}\hbar k\right)^{2}\langle x^{\prime}|\alpha\rangle+\left(\frac{i\hbar}{d^{2}}\right)^{2}x^{\prime2}\langle x^{\prime}|\alpha\rangle+2\frac{i\hbar^{2}k}{d^{2}}x^{\prime}\langle x^{\prime}|\alpha\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p^{2}\rangle=\left(-i\hbar\right)^{2}\int_{-\infty}^{\infty}dx^{\prime}\langle\alpha|x^{\prime}\rangle\left(\frac{i\hbar}{d^{2}}\langle\alpha|x^{\prime}\rangle\langle x^{\prime}|\alpha\rangle+\left(-i^{2}\hbar k\right)^{2}\langle\alpha|x^{\prime}\rangle\langle x^{\prime}|\alpha\rangle+\left(\frac{i\hbar}{d^{2}}\right)^{2}\langle\alpha|x^{\prime}\rangle x^{\prime2}\langle x^{\prime}|\alpha\rangle+2\frac{i\hbar^{2}k}{d^{2}}\langle\alpha|x^{\prime}\rangle x^{\prime}\langle x^{\prime}|\alpha\rangle\right),
+\]
+
+\end_inset
+
+which is going to be
+\begin_inset Formula 
+\[
+\langle p^{2}\rangle=\frac{\hbar^{2}}{2d^{2}}+\hbar^{2}k^{2}.
+\]
+
+\end_inset
+
+Now, for the second part instead of using the position base, we're going
+ to use the momentum base, and in this representation, the wave package
+ takes the form 
+\begin_inset Formula 
+\[
+\langle p^{\prime}|\alpha\rangle=\sqrt{\frac{d}{\hbar\sqrt{\pi}}}\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{2\hbar^{2}}\right],
+\]
+
+\end_inset
+
+therefore, in this notation, the expectation value will be 
+\begin_inset Formula 
+\[
+\langle p^{\prime}\rangle=\int_{-\infty}^{\infty}dp^{\prime}\left(\sqrt{\frac{d}{\hbar\sqrt{\pi}}}\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{2\hbar^{2}}\right]\right)p^{\prime}\left(\sqrt{\frac{d}{\hbar\sqrt{\pi}}}\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{2\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p^{\prime}\rangle=\frac{d}{\hbar\sqrt{\pi}}\int_{-\infty}^{\infty}dp^{\prime}\left(p^{\prime}\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+and now, let's make the following change of variable 
+\begin_inset Formula 
+\[
+u=p^{\prime}-\hbar k\implies p^{\prime}=u+\hbar k,
+\]
+
+\end_inset
+
+then the integral becomes 
+\begin_inset Formula 
+\[
+\langle p^{\prime}\rangle=\frac{d}{\hbar\sqrt{\pi}}\int_{-\infty}^{\infty}du\left(u+\hbar k\right)\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p^{\prime}\rangle=\frac{d}{\hbar\sqrt{\pi}}\left(\int_{-\infty}^{\infty}du\left(u\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right)+\int_{-\infty}^{\infty}du\left(\hbar k\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right)\right)
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}du\left(u\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right)=0,
+\]
+
+\end_inset
+
+because the integrand is odd, then we have 
+\begin_inset Formula 
+\[
+\langle p^{\prime}\rangle=\frac{d}{\hbar\sqrt{\pi}}\left(\hbar k\int_{-\infty}^{\infty}du\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+now, let's make the following change of variable 
+\begin_inset Formula $\alpha=d^{2}/\hbar^{2}$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\langle p^{\prime}\rangle=\frac{d}{\hbar\sqrt{\pi}}\left(\hbar k\int_{-\infty}^{\infty}du\exp\left[-\alpha u^{2}\right]\right),
+\]
+
+\end_inset
+
+which is a Gaussian integral, and for which, we have that 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}du\exp\left[-\alpha u^{2}\right]=\sqrt{\frac{\pi}{\alpha}},
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+\langle p^{\prime}\rangle=\frac{d}{\hbar\sqrt{\pi}}\left(\hbar k\sqrt{\frac{\pi}{\alpha}}\right)=\left(kd\sqrt{\frac{1}{\alpha}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle p^{\prime}\rangle=kd\sqrt{\frac{\hbar^{2}}{d^{2}}}=\hbar k,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\langle p^{\prime}\rangle=\hbar k.
+\]
+
+\end_inset
+
+Now, let's move to the expectation value for 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, and again, this is given by 
+\begin_inset Formula 
+\[
+\langle\left(p^{\prime}\right)^{2}\rangle=\int_{-\infty}^{\infty}dp^{\prime}\left(\sqrt{\frac{d}{\hbar\sqrt{\pi}}}\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{2\hbar^{2}}\right]\right)\left(p^{\prime}\right)^{2}\left(\sqrt{\frac{d}{\hbar\sqrt{\pi}}}\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{2\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle\left(p^{\prime}\right)^{2}\rangle=\frac{d}{\hbar\sqrt{\pi}}\int_{-\infty}^{\infty}dp^{\prime}\left(p^{\prime}\right)^{2}\left(\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+and again, using the same change of variables, we have 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}dp^{\prime}\left(p^{\prime}\right)^{2}\left(\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{\hbar^{2}}\right]\right)=\int_{-\infty}^{\infty}du\left(u^{2}+\hbar ku+\hbar^{2}k^{2}\right)\left(\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+now, fot the second integral of the previous expression, it's an odd integrand,
+ and then, the integral will be zero, then 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}dp^{\prime}\left(p^{\prime}\right)^{2}\left(\exp\left[-\frac{d^{2}\left(p^{\prime}-\hbar k\right)^{2}}{\hbar^{2}}\right]\right)=\int_{-\infty}^{\infty}du\left(u^{2}+\hbar^{2}k^{2}\right)\left(\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right),
+\]
+
+\end_inset
+
+again, using the change of variables 
+\begin_inset Formula $\alpha=d^{2}/\hbar^{2}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}du\left(u^{2}+\hbar^{2}k^{2}\right)\left(\exp\left[-\frac{d^{2}u^{2}}{\hbar^{2}}\right]\right)=\int_{-\infty}^{\infty}du\left(u^{2}\exp\left[-\alpha u^{2}\right]\right)+\hbar^{2}k^{2}\int_{-\infty}^{\infty}du\exp\left[-\alpha u^{2}\right]
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}duu^{2}\exp\left[-\alpha u^{2}\right]=\frac{1}{2}\sqrt{\frac{\pi}{\alpha^{3}}},\hspace{1em}\int_{-\infty}^{\infty}du\exp\left[-\alpha u^{2}\right]=\sqrt{\frac{\pi}{\alpha}},
+\]
+
+\end_inset
+
+then, the expectation value becomes 
+\begin_inset Formula 
+\[
+\langle\left(p^{\prime}\right)^{2}\rangle=\frac{d}{\hbar\sqrt{\pi}}\left(\frac{1}{2}\sqrt{\frac{\pi}{\alpha^{3}}}+\hbar^{2}k^{2}\sqrt{\frac{\pi}{\alpha}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle\left(p^{\prime}\right)^{2}\rangle=\frac{d}{\hbar\sqrt{\pi}}\left[\frac{1}{2}\frac{\sqrt{\pi}}{d^{3}}\hbar^{3}+\frac{\sqrt{\pi}\hbar}{d}\hbar^{2}k^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\langle\left(p^{\prime}\right)^{2}\rangle=\frac{\hbar^{2}}{2d^{2}}+\hbar^{2}k^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+An electron is subject to a uniform, time-independent magnetic field of
+ strength 
+\begin_inset Formula $B$
+\end_inset
+
+ in the positive 
+\series bold
+z
+\series default
+-direction.
+ At 
+\begin_inset Formula $t=0$
+\end_inset
+
+ the electron is known to be in an eigenstate of 
+\begin_inset Formula $\mathbf{S}\cdot\hat{\mathbf{n}}$
+\end_inset
+
+ with eigenvalue 
+\begin_inset Formula $\hbar/2$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ is a unit vector, lying in the 
+\begin_inset Formula $xz$
+\end_inset
+
+-plane, that makes an angle 
+\begin_inset Formula $β$
+\end_inset
+
+ with the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis.Obtain the probability for finding the electron in the Sx = ̄ h/2 state
+ as a function of time.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the expectation value of Sx as a function of time.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For your own peace of mind show that your answers make good sense in the
+ extreme cases (i) β → 0 and (ii) β → π/2.
+\end_layout
+
+\begin_layout Solution*
+Using the result from the previous homework, we can represent the ket using
+ 
+\begin_inset Formula 
+\[
+|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle=\cos\left(\frac{\beta}{2}\right)|+\rangle+\sin\left(\frac{\beta}{2}\right)\exp(i\alpha)|-\rangle,
+\]
+
+\end_inset
+
+in this case, ising the inormation from the problem, we can get rid of the
+ exponential setting 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, and furthermore, I'm going to make the following change of notation 
+\begin_inset Formula $|\mathbf{S}\cdot\hat{\mathbf{n}};+\rangle\rightarrow|\alpha\rangle$
+\end_inset
+
+, then we have that 
+\begin_inset Formula 
+\[
+|\alpha\rangle=\cos\left(\frac{\beta}{2}\right)|+\rangle+\sin\left(\frac{\beta}{2}\right)|-\rangle,
+\]
+
+\end_inset
+
+and moreover, we can identify this ket as the ket at time 
+\begin_inset Formula $t=0$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+|\alpha,t_{0}=0\rangle=\cos\left(\frac{\beta}{2}\right)|+\rangle+\sin\left(\frac{\beta}{2}\right)|-\rangle.
+\]
+
+\end_inset
+
+Now, in this case we can write the Hamiltonian as 
+\begin_inset Formula 
+\[
+H=\omega S_{z},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega=eB/m_{e}c$
+\end_inset
+
+, and following the statement of the problem, this Hamiltonian is time independe
+nt and its uniform, i.e, does not change in magnitude, therefore, for this
+ case, we know that a formal solution for the time evolution operator will
+ be 
+\begin_inset Formula 
+\[
+\mathcal{U}\left(t,t_{0}\right)=\exp\left[-\frac{i}{\hbar}H\left(t-t_{0}\right)\right],
+\]
+
+\end_inset
+
+but is this case 
+\begin_inset Formula $t_{0}=0$
+\end_inset
+
+, by supposition, then, the time evolution operator will be 
+\begin_inset Formula 
+\[
+\mathcal{U}\left(t\right)=\exp\left[-\frac{i\omega}{\hbar}S_{z}t\right],
+\]
+
+\end_inset
+
+and, for the time evolution of the ket, we have to apply this operator to
+ the initial ket 
+\begin_inset Formula $|\alpha\rangle$
+\end_inset
+
+, thus we have 
+\begin_inset Formula 
+\[
+|\alpha;t\rangle=|\alpha,t_{0}=0;t\rangle=\mathcal{U}\left(t\right)|\alpha\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|\alpha;t\rangle=\cos\left(\frac{\beta}{2}\right)\mathcal{U}\left(t\right)|+\rangle+\sin\left(\frac{\beta}{2}\right)\mathcal{U}\left(t\right)|-\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|\alpha;t\rangle=\cos\left(\frac{\beta}{2}\right)\exp\left[-\frac{i\omega}{\hbar}S_{z}t\right]|+\rangle+\sin\left(\frac{\beta}{2}\right)\exp\left[-\frac{i\omega}{\hbar}S_{z}t\right]|-\rangle
+\]
+
+\end_inset
+
+but we also know that 
+\begin_inset Formula 
+\[
+H|\pm\rangle=\frac{\pm\hbar\omega}{2}|\pm\rangle,
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+|\alpha;t\rangle=\cos\left(\frac{\beta}{2}\right)\exp\left[-\frac{i\omega t}{2}\right]|+\rangle+\sin\left(\frac{\beta}{2}\right)\exp\left[\frac{i\omega t}{2}\right]|-\rangle.
+\]
+
+\end_inset
+
+Now, for the probabilty of finding 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+, in 
+\begin_inset Formula $\hbar/2$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+|S_{x},+\rangle=\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}}|-\rangle,
+\]
+
+\end_inset
+
+then the probabilty is given by 
+\begin_inset Formula 
+\[
+\left|\langle S_{x},+|\alpha;t\rangle\right|^{2}=\left|\frac{1}{\sqrt{2}}\cos\left(\frac{\beta}{2}\right)\exp\left[-\frac{i\omega t}{2}\right]+\frac{1}{\sqrt{2}}\sin\left(\frac{\beta}{2}\right)\exp\left[\frac{i\omega t}{2}\right]\right|^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\langle S_{x},+|\alpha;t\rangle\right|^{2}=\frac{1}{2}\cos^{2}\left(\frac{\beta}{2}\right)+\frac{1}{2}\sin^{2}\left(\frac{\beta}{2}\right)+\frac{1}{2}\left(\exp\left[-i\omega t\right]+\exp\left[i\omega t\right]\right)\cos\left(\frac{\beta}{2}\right)\sin\left(\frac{\beta}{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\langle S_{x},+|\alpha;t\rangle\right|^{2}=\frac{1}{2}+\frac{1}{2}\left(\exp\left[-i\omega t\right]+\exp\left[i\omega t\right]\right)\cos\left(\frac{\beta}{2}\right)\sin\left(\frac{\beta}{2}\right)
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\exp\left[i\omega t\right]=\cos\left(\omega t\right)+i\sin\left(\omega t\right)$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\left(\exp\left[-i\omega t\right]+\exp\left[i\omega t\right]\right)=\cos\left(\omega t\right)-i\sin\left(\omega t\right)+\cos\left(\omega t\right)+i\sin\left(\omega t\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\exp\left[-i\omega t\right]+\exp\left[i\omega t\right]\right)=2\cos\left(\omega t\right),
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\left|\langle S_{x},+|\alpha;t\rangle\right|^{2}=\frac{1}{2}+\cos\left(\omega t\right)\cos\left(\frac{\beta}{2}\right)\sin\left(\frac{\beta}{2}\right),
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\cos\left(\frac{\beta}{2}\right)\sin\left(\frac{\beta}{2}\right)=2\sin\left(\frac{\beta}{2}\right),$
+\end_inset
+
+ then we have 
+\begin_inset Formula 
+\[
+\left|\langle S_{x},+|\alpha;t\rangle\right|^{2}=\frac{1}{2}+\frac{1}{2}\sin\left(\beta\right)\cos\left(\omega t\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\langle S_{x},+|\alpha;t\rangle\right|^{2}=\frac{1}{2}\left(1+\sin\left(\beta\right)\cos\left(\omega t\right)\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+asdjaklsj
+\end_layout
+
+\begin_layout Problem
+Derive the neutrino oscillation probability (2.65) and use it, along with
+ the data in Figure 2.2, to estimate the values of Δm2c4 (in units of eV2)andθ.
+\end_layout
+
+\begin_layout Solution*
+We know that 
+\begin_inset Formula 
+\[
+|\nu_{e}\rangle=\cos\theta|\nu_{1}\rangle−\sin\theta|\nu_{2}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+|\nu_{\mu}\rangle=\cos\theta|\nu_{1}\rangle+\sin\theta|\nu_{2}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E=pc\left(1+\frac{m^{2}c^{2}}{2p^{2}}\right),
+\]
+
+\end_inset
+
+and now, let's apply the time evolution operator on the ket 
+\begin_inset Formula $|\nu_{e}\rangle$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+|\alpha,t\rangle=\mathcal{U}\left(t\right)|\nu_{e}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|\alpha,t\rangle=\exp\left[-i\frac{H}{\hbar}t\right]\left(\cos\theta|\nu_{1}\rangle−\sin\theta|\nu_{2}\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|\alpha,t\rangle=\cos\theta\exp\left[-i\frac{E_{1}}{\hbar}t\right]|\nu_{1}\rangle−\sin\theta\exp\left[-i\frac{E_{2}}{\hbar}t\right]|\nu_{2}\rangle,
+\]
+
+\end_inset
+
+but using the expression for the energy, the previous equation becomes 
+\begin_inset Formula 
+\[
+|\alpha,t\rangle=\cos\theta\exp\left[-\frac{i}{\hbar}pc\left(1+\frac{m_{1}^{2}c^{2}}{2p^{2}}\right)t\right]|\nu_{1}\rangle−\sin\theta\exp\left[-\frac{i}{\hbar}pc\left(1+\frac{m_{2}^{2}c^{2}}{2p^{2}}\right)t\right]|\nu_{2}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|\alpha,t\rangle=\cos\theta\exp\left[-\frac{i}{\hbar}pc\left(1+\frac{m_{1}^{2}c^{2}}{2p^{2}}\right)t\right]|\nu_{1}\rangle−\sin\theta\exp\left[-\frac{i}{\hbar}pc\left(1+\frac{m_{2}^{2}c^{2}}{2p^{2}}\right)t\right]|\nu_{2}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore|\alpha,t\rangle=\exp\left[-\frac{i}{\hbar}pct\right]\left(\cos\theta\exp\left[-\frac{im_{1}^{2}c^{3}}{2p\hbar}t\right]|\nu_{1}\rangle−\sin\theta\exp\left[-\frac{im_{2}^{2}c^{3}}{2p\hbar}t\right]|\nu_{2}\rangle\right).
+\]
+
+\end_inset
+
+Now, the probability is for observing 
+\begin_inset Formula $|\nu_{e}\rangle$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\left|\langle\nu_{e}|\alpha,t\rangle\right|^{2}=\left|\cos^{2}\theta\exp\left[-\frac{im_{1}^{2}c^{3}}{2p\hbar}t\right]+\sin^{2}\theta\exp\left[-\frac{im_{2}^{2}c^{3}}{2p\hbar}t\right]\right|^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\langle\nu_{e}|\alpha,t\rangle\right|^{2}=\left|\cos^{2}\theta+\sin^{2}\theta\exp\left[\frac{im_{1}^{2}c^{3}}{2p\hbar}t-\frac{im_{2}^{2}c^{3}}{2p\hbar}t\right]\right|^{2},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+\frac{im_{1}^{2}c^{3}}{2p\hbar}t-\frac{im_{2}^{2}c^{3}}{2p\hbar}t=\frac{i\Delta m^{2}c^{3}t}{2p\hbar},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta m^{2}=m_{1}^{2}-m_{2}^{2}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\left|\langle\nu_{e}|\alpha,t\rangle\right|^{2}=\left|\cos^{2}\theta+\sin^{2}\theta\exp\left[\frac{i\Delta m^{2}c^{3}t}{2p\hbar}\right]\right|^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\langle\nu_{e}|\alpha,t\rangle\right|^{2}=\cos^{4}\theta+\sin^{4}\theta+2\cos^{2}\theta\sin^{2}\cos\left[\frac{\Delta m^{2}c^{3}t}{2p\hbar}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\langle\nu_{e}|\alpha,t\rangle\right|^{2}=1-\sin^{2}2\theta\sin^{2}\left[\frac{\Delta m^{2}c^{3}t}{4p\hbar}\right],
+\]
+
+\end_inset
+
+defining 
+\begin_inset Formula $E=pc$
+\end_inset
+
+ and 
+\begin_inset Formula $L=ct$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\frac{\Delta m^{2}c^{3}t}{2p\hbar}=\frac{\Delta m^{2}c^{4}t}{2pc\hbar}=\frac{\Delta m^{2}c^{4}ct}{2E\hbar c}=\frac{\Delta m^{2}c^{4}L}{2E\hbar c},
+\]
+
+\end_inset
+
+therefore 
+\begin_inset Formula 
+\[
+\left|\langle\nu_{e}|\alpha,t\rangle\right|^{2}=1-\sin^{2}2\theta\sin^{2}\left[\Delta m^{2}c^{4}\frac{L}{2E\hbar c}\right].
+\]
+
+\end_inset
+
+On the other hand, the mimimun is given by 
+\begin_inset Formula $\sin^{2}\theta$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+1-\sin^{2}\theta\approx0.4\implies\theta\approx\frac{\pi}{4}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let's prove the following equation 
+\begin_inset Formula 
+\[
+\mathcal{U}\left(t,t_{0}\right)=\exp\left[-\left(\frac{i}{\hbar}\right)\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Le'ts begin with the Schrodinger equaiton for the time evolution operator
+ 
+\begin_inset Formula 
+\[
+i\hbar\partial_{t}\mathcal{U}\left(t,t_{0}\right)=H\mathcal{U}\left(t,t_{0}\right),
+\]
+
+\end_inset
+
+and let's suppose that we have a solution of the form 
+\begin_inset Formula 
+\[
+\mathcal{U}\left(t,t_{0}\right)=\exp\left[-\left(\frac{i}{\hbar}\right)\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right],
+\]
+
+\end_inset
+
+then, let's Taylor expand the exponential 
+\begin_inset Formula 
+\[
+\exp\left[-\left(\frac{i}{\hbar}\right)\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right]=1-\left(\frac{i}{\hbar}\right)\left(\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right)+\frac{1}{2!}\left[-\left(\frac{i}{\hbar}\right)\right]^{2}\left(\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right)^{2}+\dots,
+\]
+
+\end_inset
+
+but, we need to assume that the Hamiltonian at different times commute.
+ Now, n the other hand, its time derivative will be 
+\begin_inset Formula 
+\[
+\exp\left[-\left(\frac{i}{\hbar}\right)\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right]=-\left(\frac{i}{\hbar}\right)\left(\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right)+2\frac{1}{2!}\left[-\left(\frac{i}{\hbar}\right)\right]^{2}\left(\int_{t_{0}}^{t}dt^{\prime}H\left(t^{\prime}\right)\right)^{2}+\dots,
+\]
+
+\end_inset
+
+then, we have that 
+\begin_inset Formula 
+\[
+i\hbar\partial_{t}\mathcal{U}\left(t,t_{0}\right)=H\mathcal{U}\left(t,t_{0}\right),
+\]
+
+\end_inset
+
+just as we wanted.
+\end_layout
+
+\end_body
+\end_document

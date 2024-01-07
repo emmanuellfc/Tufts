@@ -1,0 +1,1517 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea 8
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 28/05/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Como probamos en clase, el teorema de proyección es un caso especial del
+ teorema de Wigner- Eckart para cuando los estados inicial y final tienen
+ el mismo momento angular.
+ El teorema dice: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dar una interpretación geométrica de este teorema en términos de una imagen
+ vectorial (es decir, con flechitas).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Prueba el teorema usando un método complementario al usado en clase con
+ los siguientes pasos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Muestra que 
+\begin_inset Formula $\langle\alpha^{\prime};jm^{\prime}|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\langle\alpha^{\prime};j\bigparallel J\bigparallel\alpha^{\prime};j\rangle\langle\alpha^{\prime};j\bigparallel V\bigparallel\alpha^{\prime};j\rangle$
+\end_inset
+
+ independientemente de m.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $\left|\langle\alpha^{\prime};j\bigparallel J\bigparallel\alpha;j\rangle\right|^{2}=\hbar^{2}j\left(j+1\right)$
+\end_inset
+
+ independientemente de α.
+\end_layout
+
+\begin_layout Enumerate
+Muestra que 
+\begin_inset Formula $\langle jm^{\prime}|1qjm\rangle=\frac{\langle jm^{\prime}|J_{q}|jm\rangle}{\sqrt{j\left(j+1\right)}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+El teorema de proyección nos dice que todos los elementos de matriz deun
+ operador vectorial 
+\begin_inset Formula $\overrightarrow{V}$
+\end_inset
+
+ restringidos a un subespacio con valor propio 
+\begin_inset Formula $j$
+\end_inset
+
+ son proporcionales a los elementos de la matriz 
+\begin_inset Formula $\overrightarrow{J}$
+\end_inset
+
+.
+ Ahora bien, de manera geometrica, pensando a 
+\begin_inset Formula $\overrightarrow{J}$
+\end_inset
+
+ como un vector en el sentido usual, tenemos que el teorema de proyección
+ nos dice que 
+\begin_inset Formula 
+\[
+\left(\overrightarrow{V}\cdot\overrightarrow{x}_{j}\right)\overrightarrow{x}_{j},\ \ \ \overrightarrow{x}_{j}=\frac{\overrightarrow{j}}{|\overrightarrow{j}|},
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\left(\overrightarrow{V}\cdot\overrightarrow{x}_{j}\right)\overrightarrow{x}_{j}=\left(\frac{\overrightarrow{V}\cdot\overrightarrow{J}}{|\overrightarrow{j}|^{2}}\right)\overrightarrow{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sabemos que 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\sum_{q}\left(-1\right)^{q}\langle\alpha^{\prime};jm|J_{q}V_{q}|\alpha;jm\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sum_{q}\left(-1\right)^{q}\langle\alpha^{\prime};jm|J_{q}\mathbb{I}V_{q}|\alpha;jm\rangle=\sum_{q}\left(-1\right)^{q}\langle\alpha^{\prime};jm|J_{q}\sum_{m^{\prime}}|\alpha^{\prime};jm^{\prime}\rangle\langle\alpha^{\prime};jm|V_{q}|\alpha;jm\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\sum_{q}\sum_{m^{\prime}}\left(-1\right)^{q}\langle\alpha^{\prime};jm|J_{q}|\alpha^{\prime};jm^{\prime}\rangle\langle\alpha^{\prime};jm|V_{q}|\alpha;jm\rangle.
+\]
+
+\end_inset
+
+Si ahora usamos el teorema de Wigner-Eckart, tenemos que 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\sum_{q}\sum_{m^{\prime}}\left(-1\right)^{q}\langle jm|1qjm^{\prime}\rangle\langle jm^{\prime}|1-qjm\rangle\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\langle\alpha^{\prime}j\bigparallel V\bigparallel\alpha^{\prime}j\rangle,
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|1-qjm\rangle=\left(-1\right)^{q}\langle1qjm^{\prime}|jm\rangle,
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\sum_{q}\sum_{m^{\prime}}\left(-1\right)^{2q}\langle jm|1qjm^{\prime}\rangle\langle1qjm^{\prime}|jm\rangle\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\langle\alpha^{\prime}j\bigparallel V\bigparallel\alpha^{\prime}j\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\sum_{q}\sum_{m^{\prime}}\langle jm|1qjm^{\prime}\rangle\langle1qjm^{\prime}|jm\rangle\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\langle\alpha^{\prime}j\bigparallel V\bigparallel\alpha^{\prime}j\rangle,
+\]
+
+\end_inset
+
+por otra parte, observemos que 
+\begin_inset Formula 
+\[
+\sum_{q}\sum_{m^{\prime}}\langle jm|1qjm^{\prime}\rangle\langle1qjm^{\prime}|jm\rangle=1,
+\]
+
+\end_inset
+
+con lo cual, tenemos que 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha;jm\rangle=\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\langle\alpha^{\prime}j\bigparallel V\bigparallel\alpha^{\prime}j\rangle.
+\]
+
+\end_inset
+
+Ahora bien, la cantidad 
+\begin_inset Formula $\overrightarrow{J}\cdot\overrightarrow{V}$
+\end_inset
+
+ es un escalar, por lo tanto, su valor esperado no depende de 
+\begin_inset Formula $m$
+\end_inset
+
+, esto es la regla de selección nos dice que los coeficientes de Clebsch-Gordan
+ son independientes de 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Ahora demostremos que 
+\begin_inset Formula 
+\[
+\left|\langle\alpha^{\prime};j\bigparallel J\bigparallel\alpha;j\rangle\right|^{2}=\hbar^{2}j\left(j+1\right),\ \ \ \forall\alpha.
+\]
+
+\end_inset
+
+Usemos el resultado anterior pero con las siguientes sustituciones 
+\begin_inset Formula $\overrightarrow{V}=\overrightarrow{J}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha^{\prime}=\alpha$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{J}|\alpha;jm\rangle=\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle,
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime};jm|\overrightarrow{J}\cdot\overrightarrow{J}|\alpha;jm\rangle=\langle\alpha^{\prime};jm|\overrightarrow{J}^{2}|\alpha;jm\rangle=j\left(j+1\right),
+\]
+
+\end_inset
+
+y 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle=\left|\langle\alpha^{\prime}j\bigparallel J\bigparallel\alpha^{\prime}j\rangle\right|^{2},
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\left|\langle\alpha^{\prime};j\bigparallel J\bigparallel\alpha;j\rangle\right|^{2}=\hbar^{2}j\left(j+1\right),\ \ \ \forall\alpha,
+\]
+
+\end_inset
+
+es decir, la cantidad anterior es independiente de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Ahora demostremos que 
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|1qjm\rangle=\frac{\langle jm^{\prime}|J_{q}|1qjm\rangle}{\hbar\sqrt{j\left(j+1\right)}}.
+\]
+
+\end_inset
+
+Por el teorema de Wigner-Eckart, tenemos que 
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|J_{q}|jm\rangle=\langle j\bigparallel J_{q}\bigparallel j\rangle\langle jm^{\prime}|1qjm\rangle,
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|1qjm\rangle=\frac{\langle jm^{\prime}|J_{q}|jm\rangle}{\langle j\bigparallel J_{q}\bigparallel j\rangle},
+\]
+
+\end_inset
+
+pero recordemos que
+\begin_inset Formula 
+\[
+\langle j\bigparallel J_{q}\bigparallel j\rangle=\sqrt{j\left(j+1\right)},
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|1qjm\rangle=\frac{\langle jm^{\prime}|J_{q}|jm\rangle}{\sqrt{j\left(j+1\right)}}.
+\]
+
+\end_inset
+
+Si ahora reunimos todos los lemas anteriores, tenemos que 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime}jm^{\prime}|V_{q}|\alpha jm\rangle=\langle\alpha^{\prime}j\bigparallel V\bigparallel\alpha j\rangle\langle jm^{\prime}|1qjm\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime}j\bigparallel V\bigparallel\alpha j\rangle=\frac{\langle\alpha^{\prime}j|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha j\rangle}{\langle j\bigparallel J\bigparallel j\rangle},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|1qjm\rangle=\frac{\langle\alpha^{\prime}jm^{\prime}|J_{q}|\alpha jm\rangle}{\langle j\bigparallel J\bigparallel j\rangle},
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime}jm^{\prime}|V_{q}|\alpha jm\rangle=\frac{\langle\alpha^{\prime}j|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha j\rangle}{\langle j\bigparallel J\bigparallel j\rangle}\frac{\langle\alpha^{\prime}jm^{\prime}|J_{q}|\alpha jm\rangle}{\langle j\bigparallel J\bigparallel j\rangle}=\frac{\langle\alpha^{\prime}j|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha j\rangle}{j\left(j+1\right)}\langle\alpha^{\prime}jm^{\prime}|J_{q}|\alpha jm\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle\alpha^{\prime}jm^{\prime}|V_{q}|\alpha jm\rangle=\frac{\langle\alpha^{\prime}j|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha j\rangle}{j\left(j+1\right)}\langle\alpha^{\prime}jm^{\prime}|J_{q}|\alpha jm\rangle,\ \ \ \forall q,
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+\langle\alpha^{\prime}jm^{\prime}|\overrightarrow{V}|\alpha jm\rangle=\frac{\langle\alpha^{\prime}j|\overrightarrow{J}\cdot\overrightarrow{V}|\alpha j\rangle}{j\left(j+1\right)}\langle\alpha^{\prime}jm^{\prime}|\overrightarrow{J}|\alpha jm\rangle,
+\]
+
+\end_inset
+
+justo como se queria demostrar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera el problema de dos estados 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Aplicar la teorı́a de perturbaciones independiente del tiempo para el caso
+ no degenerado para mostrar que la corrección a la energı́a a segundo orden
+ coincide con el resultado obtenido de aproximar la solución exacta al orden
+ más bajo que consideremos en clase.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Aplicar la teorı́a de perturbaciones a primer orden para encontrar los eigenesta
+dos del problema perturbado.
+ Encontrar también los eigenestados del problema exacto y comparar los resultado
+s.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un oscilador armónico unidimensional está sujeto a una perturbación 
+\begin_inset Formula 
+\[
+\lambda H_{1}=bx,
+\]
+
+\end_inset
+
+donde b es una constante real.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Calcula el corrimiento de energı́a del estado base al orden más bajo que
+ sea distinto de cero.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Resuelve el problema exactamente y compara con tu resultado obtenido en
+ (a).
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+La teoría de perturbaciones trata con hamiltonianos de la forma 
+\begin_inset Formula 
+\[
+H=H_{0}+H_{1},
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ es el Hamiltoniano de un problema conocido y que se puede resolver de manera
+ exacta, mientras que 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+ es un término extra.
+ Es importante decir que no se puede resolver de manera exacta el problema
+ 
+\begin_inset Formula 
+\[
+H|n\rangle=E_{n}|n\rangle,
+\]
+
+\end_inset
+
+razon por la cual suponemos que podemos 
+\begin_inset Quotes xld
+\end_inset
+
+modular
+\begin_inset Quotes xrd
+\end_inset
+
+ el tamaño del Hamiltoniano 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+, de la forma 
+\begin_inset Formula 
+\[
+H_{1}=\lambda V,\ \ \ \lambda\in[0,1].
+\]
+
+\end_inset
+
+En este caso, el Hamiltoniano sin perturar esta dado por 
+\begin_inset Formula 
+\[
+H_{0}=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2},
+\]
+
+\end_inset
+
+cuyas soluciones son conocidas.
+ Mientras que la perturbación esta dada por 
+\begin_inset Formula 
+\[
+H_{1}=\lambda V=bx,
+\]
+
+\end_inset
+
+donde consideramos a 
+\begin_inset Formula $\lambda=b$
+\end_inset
+
+ y 
+\begin_inset Formula $V=x$
+\end_inset
+
+.
+ Por otra parte, la teoría de perturbaciones nos dice que el corrimiento
+ de energía esta dado por 
+\begin_inset Formula 
+\[
+\Delta E_{n}=bV_{nn}+b^{2}\sum_{n\neq k}\frac{\left|V_{nk}\right|^{2}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}}+\dots,
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $V_{nk}=\langle n^{\left(0\right)}|V|k^{\left(0\right)}\rangle$
+\end_inset
+
+.En nuestro caso queremos saber el corrimiento de energía del estado base,
+ de manera que se tiene 
+\begin_inset Formula 
+\[
+\Delta E_{0}=bV_{00}+b^{2}\sum_{k\neq0}\frac{\left|V_{0k}\right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}}+\dots.
+\]
+
+\end_inset
+
+A primer orden tenemos que el corrimiento esta dado por 
+\begin_inset Formula 
+\[
+\Delta E_{0}=\lambda V_{00},\text{ donde }V_{00}=\langle0^{\left(0\right)}|x|0^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+pero en general, se cumple que 
+\begin_inset Formula 
+\[
+\langle0|x|x^{\prime}\rangle=0,\ \ \ \forall x^{\prime}.
+\]
+
+\end_inset
+
+De manera que el corrimiento de energía a primer orden es cero.
+ Ahora consideremos el corrimiento de energía a segundo orden en 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, el cual esta dado por 
+\begin_inset Formula 
+\[
+\Delta E_{0}^{\left(2\right)}=b^{2}\sum_{k\neq0}\frac{\left|V_{0k}\right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}}=b^{2}\sum_{k\neq0}\frac{\left|\langle0^{\left(0\right)}|x|k^{\left(0\right)}\rangle\right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}}.
+\]
+
+\end_inset
+
+Pero sabemos que para este problema, de manera general, se cumple que 
+\begin_inset Formula 
+\[
+\langle n^{\left(0\right)}|x|k^{\left(0\right)}\rangle=\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{k}\delta_{n,k-1}+\sqrt{k+1}\delta_{n,k+1}\right).
+\]
+
+\end_inset
+
+Por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\langle0^{\left(0\right)}|x|k^{\left(0\right)}\rangle=\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{k}\delta_{0,k-1}+\sqrt{k+1}\delta_{0,k+1}\right),
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\delta_{0,k+1}=0$
+\end_inset
+
+.
+ Por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\langle0^{\left(0\right)}|x|k^{\left(0\right)}\rangle=\sqrt{\frac{\hbar}{2m\omega}}\sqrt{k}\delta_{0,k-1},
+\]
+
+\end_inset
+
+con lo cual, el efecto de la 
+\begin_inset Formula $\delta$
+\end_inset
+
+ es hacer que 
+\begin_inset Formula $k=1$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\Delta E_{0}^{\left(2\right)}=b^{2}\sum_{k\neq0}\frac{\left|\sqrt{\frac{\hbar}{2m\omega}}\sqrt{k}\delta_{0,k-1}\right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}}=b^{2}\frac{\left|\sqrt{\frac{\hbar}{2m\omega}}\right|^{2}}{E_{0}^{\left(0\right)}-E_{1}^{\left(0\right)}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\Delta0=b^{2}\frac{\frac{\hbar}{2m\omega}}{E_{0}^{\left(0\right)}-E_{1}^{\left(0\right)}}
+\]
+
+\end_inset
+
+Recordemos que las eigenenergias del problema sin perturbar están dadas
+ por 
+\begin_inset Formula 
+\[
+E_{n}^{\left(0\right)}=\left(n+\frac{1}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}=\left(\frac{1}{2}-\frac{3}{2}\right)\hbar\omega=-\hbar\omega,
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+\Delta E_{0}^{\left(2\right)}=b^{2}\frac{\frac{\hbar}{2m\omega}}{-\hbar\omega}=\frac{-b^{2}}{2m\omega^{2}}.
+\]
+
+\end_inset
+
+Por lo tanto, el corrimiento de energía a segundo orden esta dado por 
+\begin_inset Formula 
+\[
+E=E_{0}^{\left(0\right)}+\Delta E_{0}^{\left(2\right)}=\frac{\hbar\omega}{2}-\frac{-b^{2}}{2m\omega^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E=\frac{\hbar\omega}{2}-\frac{-b^{2}}{2m\omega^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Por otra parte, si intentamos resolver el problema exactamente, tenemos
+ que 
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2}+bx=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}\left(x^{2}+\frac{2b}{m\omega^{2}}x\right),
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+\left(x^{2}+\frac{2b}{m\omega^{2}}x\right)=\left(x+\frac{b}{m\omega^{2}}\right)^{2}-\frac{b^{2}}{m^{2}\omega^{4}}.
+\]
+
+\end_inset
+
+Si ahora definimos 
+\begin_inset Formula 
+\[
+\bar{x}=x+\frac{b}{m\omega^{2}},
+\]
+
+\end_inset
+
+tenemos que el Hamiltoniano se transforma de la forma 
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}\bar{x}^{2}+\alpha
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+\alpha=-\frac{b^{2}}{m^{2}\omega^{4}}.
+\]
+
+\end_inset
+
+De manera que tenemos el Hamiltoniano original trasladado en 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ unidades de energía, justo como en el caso anterior.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera el problema de un oscilador armónico con una perturbación cúbica
+ 
+\begin_inset Formula $\lambda x^{3}$
+\end_inset
+
+.
+ Encuentra explı́citamente la corrección a la energı́a a segundo orden y
+ la corrección a la función de onda del estado 
+\begin_inset Formula $n$
+\end_inset
+
+, en teorı́a de perturbaciones.
+ .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Para este problema, tenemos que 
+\begin_inset Formula 
+\[
+H=H_{0}+H_{1},
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+H_{0}=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2},\ \ \ \&\ \ \ H_{1}=\lambda x^{3}
+\]
+
+\end_inset
+
+Siguiendo el espiritu del problema anterior, tenemos que la corrrección
+ de energía a segundo orden esta dado por 
+\begin_inset Formula 
+\[
+\Delta E_{n}^{\left(2\right)}=\lambda V_{nn}+\lambda^{2}\sum_{n\neq k}\frac{\left|V_{nk}\right|^{2}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}},
+\]
+
+\end_inset
+
+donde, en este caso
+\begin_inset Formula 
+\[
+V_{nn}=\langle n^{\left(0\right)}|x^{3}|n^{\left(0\right)}\rangle\ \ \ \&\ \ \ V_{nk}=\langle n^{\left(0\right)}|x^{3}|k^{\left(0\right)}\rangle.
+\]
+
+\end_inset
+
+Ahora bien, recordemos que podemos escribir al operador de posición en términos
+ de los operaciones de aniquilación y de creación de la siguiente manera
+ 
+\begin_inset Formula 
+\[
+x=\beta\left(a+a^{\dagger}\right);\ \ \ \beta=\sqrt{\frac{\hbar}{2m\omega}}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $a^{\dagger}$
+\end_inset
+
+ cumplen con 
+\begin_inset Formula 
+\[
+a|n\rangle=\sqrt{n}|n-1\rangle\ \ \ \&\ \ \ a^{\dagger}|n\rangle=\sqrt{n+1}|n+1\rangle,
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{x}{\beta}\right)^{3}=\left(a+a^{\dagger}\right)^{3}=a^{3}+a^{2}a^{\dagger}+aa^{\dagger}a+a\left(a^{\dagger}\right)^{2}+a^{\dagger}a^{2}+a^{\dagger}aa^{\dagger}+\left(a^{\dagger}\right)^{2}a+\left(a^{\dagger}\right)^{3}.\label{eq:x3}
+\end{equation}
+
+\end_inset
+
+De la ecuación anterior, se sigue que 
+\begin_inset Formula 
+\[
+V_{nn}=0,
+\]
+
+\end_inset
+
+ya que al ser el operador 
+\begin_inset Formula $x$
+\end_inset
+
+ elevado a una potencia impar no hay ningun termino en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:x3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ que cancele el efecto de los operadores de aniquilación y de creación,
+ esto es, que el resultado sea el mismo ket 
+\begin_inset Formula $|n\rangle$
+\end_inset
+
+ salvo una constante.
+ El argumento anterior junto con las relaciones de ortogonalidad de los
+ kets 
+\begin_inset Formula $|n\rangle$
+\end_inset
+
+ completa el esbozo de la demostración.
+ Por otra parte, para el termino 
+\begin_inset Formula 
+\[
+V_{nk}=\langle n^{\left(0\right)}|x^{3}|k^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+tenemos que efectuar el comportamiento de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:x3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sobre el ket 
+\begin_inset Formula $|k^{\left(0\right)}\rangle.$
+\end_inset
+
+ De manera que tenemos las siguientes relaciones 
+\begin_inset Formula 
+\[
+a^{3}|k^{\left(0\right)}\rangle=\sqrt{k\left(k-1\right)\left(k-2\right)}|k-3^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{2}a^{\dagger}|k^{\left(0\right)}\rangle=\sqrt{\left(k+1\right)\left(k+1\right)k}|k-1^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+aa^{\dagger}a|k^{\left(0\right)}\rangle=\sqrt{k^{3}}|k-1^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a\left(a^{\dagger}\right)^{2}|k^{\left(0\right)}\rangle=\sqrt{\left(k+1\right)\left(k+2\right)^{2}}|k+1^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{\dagger}a^{2}|k^{\left(0\right)}\rangle=\sqrt{k\left(k-2\right)^{2}}|k-1^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{\dagger}aa^{\dagger}|k^{\left(0\right)}\rangle=\sqrt{\left(k+1\right)^{3}}|k+1^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(a^{\dagger}\right)^{2}a|k^{\left(0\right)}\rangle=\sqrt{k^{2}\left(k+1\right)}|k+1^{\left(0\right)}\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(a^{\dagger}\right)^{3}|k^{\left(0\right)}\rangle=\sqrt{\left(k+1\right)\left(k+2\right)\left(k+3\right)}|k+3^{\left(0\right)}\rangle.
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+\left(\frac{x}{\beta}\right)^{3}=\sqrt{k\left(k-1\right)\left(k-2\right)}|k-3^{\left(0\right)}\rangle+\left(\sqrt{\left(k+1\right)\left(k+1\right)k}+\sqrt{k^{3}}+\sqrt{k\left(k-2\right)^{2}}\right)|k-1^{\left(0\right)}\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\left(\sqrt{\left(k+1\right)\left(k+2\right)^{2}}+\sqrt{\left(k+1\right)^{3}}+\sqrt{k^{2}\left(k+1\right)}\right)|k+1^{\left(0\right)}\rangle+\sqrt{\left(k+1\right)\left(k+2\right)\left(k+3\right)}|k+3^{\left(0\right)}\rangle.
+\]
+
+\end_inset
+
+Ahora bien, el producto 
+\begin_inset Formula $\langle n^{\left(0\right)}|x^{3}|k^{\left(0\right)}\rangle$
+\end_inset
+
+ involucra que calculemos el producto interno de 
+\begin_inset Formula $\langle n^{\left(0\right)}|$
+\end_inset
+
+ con 
+\begin_inset Formula $|k-3^{\left(0\right)}\rangle$
+\end_inset
+
+, 
+\begin_inset Formula $|k-1^{\left(0\right)}\rangle$
+\end_inset
+
+, 
+\begin_inset Formula $|k+1^{\left(0\right)}\rangle$
+\end_inset
+
+ y 
+\begin_inset Formula $|k+3^{\left(0\right)}\rangle$
+\end_inset
+
+.
+ Pero para esos productos, al usar las relaciones de ortonalidad de los
+ kets sin perturbar tenemos 
+\begin_inset Formula 
+\[
+\langle n^{\left(0\right)}|k-3^{\left(0\right)}\rangle=\delta_{n,k-3}\ \ ,\ \ \langle n^{\left(0\right)}|k+3^{\left(0\right)}\rangle=\delta_{n,k+3},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle n^{\left(0\right)}|k-1^{\left(0\right)}\rangle=\delta_{n,k-1}\ \ ,\ \ \langle n^{\left(0\right)}|k+1{}^{\left(0\right)}\rangle=\delta_{n,k+1}.
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula 
+\[
+V_{nk}=\beta\left(\gamma_{k+3}\delta_{n,k+3}+\gamma_{k+1}\delta_{n,k+1}+\gamma_{k-1}\delta_{n,k-1}+\gamma_{k-3}\delta_{n,k-3}\right),
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\begin{equation}
+\gamma_{k+3}=\sqrt{\left(k+1\right)\left(k+2\right)\left(k+3\right)},\label{eq:g3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\gamma_{k+1}=\sqrt{\left(k+1\right)\left(k+2\right)^{2}}+\sqrt{\left(k+1\right)^{3}}+\sqrt{k^{2}\left(k+1\right)},\label{eq:g1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\gamma_{k-1}=\sqrt{\left(k+1\right)\left(k+1\right)k}+\sqrt{k^{3}}+\sqrt{k\left(k-2\right)^{2}},\label{eq:g-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\gamma_{k-3}=\sqrt{k\left(k-1\right)\left(k-2\right)}\label{eq:g-3}
+\end{equation}
+
+\end_inset
+
+De manera que el corrimiento de energía a orden 2 esta dado por 
+\begin_inset Formula 
+\[
+\Delta E_{n}^{\left(2\right)}=+\lambda^{2}\sum_{n\neq k}\frac{\beta^{2}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}}\left(\gamma_{k+3}\delta_{n,k+3}+\gamma_{k+1}\delta_{n,k+1}+\gamma_{k-1}\delta_{n,k-1}+\gamma_{k-3}\delta_{n,k-3}\right)^{2}.
+\]
+
+\end_inset
+
+Ahora bien, para los kets, se tiene 
+\begin_inset Formula 
+\[
+|n\rangle=|n^{\left(0\right)}\rangle+\lambda\sum_{k\neq n}|k^{\left(0\right)}\rangle\frac{V_{kn}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}}+\lambda^{2}\left(\sum_{k\neq n}\sum_{l\neq n}|k^{\left(0\right)}\rangle\frac{V_{kl}V_{nl}}{\left(E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}\right)\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)}-\sum_{k\neq n}|k^{\left(0\right)}\rangle\frac{V_{nn}V_{kn}}{\left(E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}\right)^{2}}\right),
+\]
+
+\end_inset
+
+y nuevamente, por el uno de los argumentos anteriores, tenemos que 
+\begin_inset Formula $V_{nn}=0$
+\end_inset
+
+, de modo que 
+\begin_inset Formula 
+\[
+|n\rangle=|n^{\left(0\right)}\rangle+\lambda\sum_{k\neq n}|k^{\left(0\right)}\rangle\frac{V_{kn}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}}+\lambda^{2}\sum_{k\neq n}\sum_{l\neq n}|k^{\left(0\right)}\rangle\frac{V_{kl}V_{nl}}{\left(E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}\right)\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)},
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+V_{kn}=\beta\left(\gamma_{k+3}\delta_{n,k+3}+\gamma_{k+1}\delta_{n,k+1}+\gamma_{k-1}\delta_{n,k-1}+\gamma_{k-3}\delta_{n,k-3}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{kl}=\beta\left(\gamma_{k+3}\delta_{l,k+3}+\gamma_{k+1}\delta_{l,k+1}+\gamma_{k-1}\delta_{l,k-1}+\gamma_{k-3}\delta_{l,k-3}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{nl}=\beta\left(\gamma_{n+3}\delta_{l,n+3}+\gamma_{n+1}\delta_{l,n+1}+\gamma_{n-1}\delta_{l,n-1}+\gamma_{n-3}\delta_{l,n-3}\right).
+\]
+
+\end_inset
+
+En donde el subíndice 
+\begin_inset Formula $k,n$
+\end_inset
+
+ en los coeficientes 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ denota la variable respecto a la cual toman valores las raíces dadas en
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:g3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:g1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:g-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:g-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera una partı́cula sin espı́n en un pozo cuadrado bidimensional infinito.
+\begin_inset Formula 
+\[
+V=\left\{ \begin{array}{cc}
+0 & 0\leq x\leq a,0\leq y\leq a\\
+\infty & \text{de otra manera}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál son las eigenenergı́as para los tres estados más bajos? Hay alguna
+ degeneración? 
+\end_layout
+
+\begin_layout Enumerate
+Ahora añadimos el potencial
+\begin_inset Formula 
+\[
+V_{1}=\lambda xy,\ \ 0\leq x\leq a\ \ \ \&\ \ \ 0\leq y\leq a.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Tomando esto como una perturbación responde lo siguiente
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+¿Es el corrimiento de energı́a debido a la perturbación linear o a la cuadrática
+ en λ para cada uno de los tres estados? 
+\end_layout
+
+\begin_layout Itemize
+Obtiene expresiones para los corrimientos de energa de los tres niveles
+ de energa ms bajos precisamente a orden 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ (No tienes que evaluar las integrales que puedan aparecer).
+\end_layout
+
+\begin_layout Itemize
+Dibuja un diagrama de energı́a con y sin perturbación para los tres eigenestados
+ de energı́a.
+ Asegúrate de especificar cuáles eigenestados no perturbados están conectados
+ con cuáles eigenestados perturbados.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Para este problema, sabemos que la ecuación de Schrödinger es separable
+ y además se reduce al caso de una partícula en un pozo unidimensional para
+ cada una de las coordenadas, en este caso 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Para ambos problemas unidimensionales, sabemos que las eigenfunciones están
+ dadas por 
+\begin_inset Formula 
+\[
+\psi_{x}\left(x\right)=\sqrt{\frac{2}{a}}\sin\left(\frac{n_{x}\pi x}{a}\right)\ \ \ \&\ \ \ \psi_{y}\left(y\right)=\sqrt{\frac{2}{a}}\sin\left(\frac{n_{y}\pi y}{a}\right),
+\]
+
+\end_inset
+
+de modo que la solución al problema completo esta dada por 
+\begin_inset Formula 
+\[
+\psi_{n_{x},n_{y}}=\frac{2}{a}\sin\left(\frac{n_{x}\pi x}{a}\right)\sin\left(\frac{n_{y}\pi x}{a}\right),
+\]
+
+\end_inset
+
+ con las eigenenergías dadas por 
+\begin_inset Formula 
+\[
+E_{n_{x},n_{y}}=\frac{\hbar^{2}\pi^{2}}{2ma^{2}}\left(n_{x}^{2}+n_{y}^{2}\right),
+\]
+
+\end_inset
+
+ y como se puede observar, las energías, en general están degeneradas.
+ Ahora bien, para los tres estados más bajos, tenemos que 
+\begin_inset Formula 
+\[
+n_{x}=n_{y}=1,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n_{x}=1,n_{y}=1,\ \ \ \text{ó}\ \ \ n_{x}=2,n_{y}=1,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n_{x}=n_{y}=2,
+\]
+
+\end_inset
+
+y como podemos ver, para solamente para el segundo estado hay degeneración,
+ la cual es doble.
+ Ahora escribamos las funciones de onda correspondientes a cada uno de tales
+ estados 
+\begin_inset Formula 
+\[
+\psi_{1,1}=\frac{2}{a}\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{\pi y}{a}\right),\ \ \ \&\ \ \ E_{1,1}=2\left(\frac{\hbar^{2}\pi^{2}}{2ma^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{1,2}=\frac{2}{a}\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{2\pi y}{a}\right),\ \ \ \&\ \ \ E_{1,2}=5\left(\frac{\hbar^{2}\pi^{2}}{2ma^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{2,1}=\frac{2}{a}\sin\left(\frac{2\pi x}{a}\right)\sin\left(\frac{\pi y}{a}\right),\ \ \ \&\ \ \ E_{2,1}=5\left(\frac{\hbar^{2}\pi^{2}}{2ma^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{2,1}=\frac{2}{a}\sin\left(\frac{2\pi x}{a}\right)\sin\left(\frac{2\pi y}{a}\right),\ \ \ \&\ \ \ E_{2,2}=8\left(\frac{\hbar^{2}\pi^{2}}{2ma^{2}}\right).
+\]
+
+\end_inset
+
+Para los corrimientos de energía, tenemos que , para el primer y tercer
+ nivel 
+\begin_inset Formula 
+\[
+\Delta_{1}^{\left(1\right)}=\lambda\left[\frac{2}{a}\int_{0}^{2a}du\sin^{2}\left(\frac{\pi u}{a}\right)u\right]^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta_{3}^{\left(1\right)}=\lambda\left[\frac{2}{a}\int_{0}^{2a}du\sin^{2}\left(\frac{2\pi u}{a}\right)u\right]^{2}.
+\]
+
+\end_inset
+
+Vemos que ambas integrales tienen la misma forma, y si las resolvemos tenemos
+ que 
+\begin_inset Formula 
+\[
+\left[\frac{2}{a}\int_{0}^{2a}du\sin^{2}\left(\frac{\pi u}{a}\right)u\right]^{2}=\left[\frac{2}{a}\int_{0}^{2a}du\sin^{2}\left(\frac{2\pi u}{a}\right)u\right]^{2}=\frac{1}{4}a^{2},
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\Delta_{1}^{\left(1\right)}=0.25\lambda a^{2}\ \ \ \&\ \ \ \Delta_{3}^{\left(1\right)}=0.25\lambda a^{2}.
+\]
+
+\end_inset
+
+Mientras que para el segundo nivel de energía como es 2-degenerado, tenemos
+ que construir una matriz de 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ y diagonalizar.
+ Los elementos de la diagonal están dados por 
+\begin_inset Formula 
+\[
+V_{aa}=\int_{0}^{a}dxdy\psi_{1a}^{\left(0\right)}V\psi_{1a}^{\left(0\right)},
+\]
+
+\end_inset
+
+mientras que los elementos fuera de la diagonal son 
+\begin_inset Formula 
+\[
+V_{ab}=V_{ba}=\int_{0}^{a}dxdy\psi_{1a}^{\left(0\right)}V\psi_{1b}^{\left(0\right)}.
+\]
+
+\end_inset
+
+Con lo cual tenemos que 
+\begin_inset Formula 
+\[
+V_{1,1}=\int_{0}^{a}dxdy\frac{2}{a}\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{2\pi y}{a}\right)\lambda xy\frac{2}{a}\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{2\pi y}{a}\right)=\frac{4}{a^{2}}\lambda\int_{0}^{a}dxdy\sin^{2}\left(\frac{\pi x}{a}\right)\sin^{2}\left(\frac{2\pi y}{a}\right)xy,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V_{1,1}=V_{2,2}=\frac{4}{a^{2}}\lambda\left[\int_{0}^{a}\int_{0}^{a}dxdy\sin^{2}\left(\frac{\pi x}{a}\right)\sin^{2}\left(\frac{2\pi y}{a}\right)xy\right]=\frac{1}{4}\lambda a^{2},
+\]
+
+\end_inset
+
+junto con 
+\begin_inset Formula 
+\[
+V_{1,2}=V_{2,1}=\int_{0}^{a}\int_{0}^{a}dxdy\frac{2}{a}\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{2\pi y}{a}\right)\lambda xy\frac{2}{a}\sin\left(\frac{2\pi x}{a}\right)\sin\left(\frac{\pi y}{a}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{1,2}=V_{2,1}=\frac{4}{a^{2}}\lambda\int_{0}^{a}\int_{0}^{a}dxdy\sin\left(\frac{\pi x}{a}\right)\sin\left(\frac{\pi y}{a}\right)\sin\left(\frac{2\pi x}{a}\right)\sin\left(\frac{2\pi y}{a}\right)xy,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{1,2}=V_{2,1}=\frac{128}{81}\frac{\lambda a^{2}}{\pi^{4}}.
+\]
+
+\end_inset
+
+De manera que la matriz queda como 
+\begin_inset Formula 
+\[
+V=\frac{\lambda a^{2}}{4\pi^{4}}\left(\begin{array}{cc}
+\pi^{4} & \frac{1024}{81}\\
+\frac{1024}{81} & \pi^{4}
+\end{array}\right).
+\]
+
+\end_inset
+
+Si ahora diagonalizamos la matriz anterior, obtenemos que el corrimiento
+ de energía para el seguno estado viene dado por 
+\begin_inset Formula 
+\[
+\Delta_{2}^{\left(1\right)}=\lambda a^{2}\left(\frac{1}{4}\pm\frac{128}{81\pi^{4}}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

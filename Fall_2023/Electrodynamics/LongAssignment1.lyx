@@ -1,0 +1,1509 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+Electricity and Magnetism
+\begin_inset Newline linebreak
+\end_inset
+
+Tufts University
+\begin_inset Newline linebreak
+\end_inset
+
+Graduate School of Arts and Sciences
+\begin_inset Newline linebreak
+\end_inset
+
+Long Assignment 1
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename Lockups/A&S_Hori_BK+BL.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Jose Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+October 11th, 2023
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Statement of the problem.
+\end_layout
+
+\begin_layout Standard
+A small mass of the photon would be responsible for changing the Coulomb’s
+ law from its classical form to 
+\begin_inset Formula 
+\begin{equation}
+\overrightarrow{F}=\frac{1}{4\pi\epsilon_{0}}\frac{q_{1}q_{2}}{r^{2}}\left(1+\frac{r}{\lambda}\right)\exp\left(\frac{-r}{\lambda}\right)\hat{r}\label{eq:Force}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a new constant of nature proportional to the inverse of the photon mass
+ (
+\begin_inset Formula $mg^{-1}$
+\end_inset
+
+).
+ Assuming that the superposition principle still holds, this formula can
+ be easily generalized to any charge distribution 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ We will use this to reformulate Plimton & Lawton’s experiments in terms
+ of the small-photon-mass potential.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Find the potential of a point charge 
+\begin_inset Formula $q$
+\end_inset
+
+ situated at the origin of the coordinate system, if we set the reference
+ to be null at infinity, assuming this new version of Coulomb’s law.
+\end_layout
+
+\begin_layout Enumerate
+If this charge 
+\begin_inset Formula $q$
+\end_inset
+
+ is rather distributed on a conducting shell of radius 
+\begin_inset Formula $R$
+\end_inset
+
+ maintained at a constant potential value by a battery, show that the potential
+ at any point inside the shell at a distance 
+\begin_inset Formula $r<R$
+\end_inset
+
+ from the center satisfies:
+\begin_inset Formula 
+\[
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}\approx\frac{-1}{6\lambda^{2}}\left[R^{2}-r^{2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The other approach, subject of this problem, does not assume any specific
+ expression for the deviation of the electrostatic potential from Coulomb’s
+ law.
+ It is therefore more general, but less explicative.
+ It only assumes that the deviation to the Coulomb’s potential is very small,
+ i.e.
+ that:
+\begin_inset Formula 
+\[
+V\left(r\right)=kqr^{-\left(1+\epsilon\right)},\text{ with }\epsilon\ll1.
+\]
+
+\end_inset
+
+Measuring the potential difference between two concentric spherical shells,
+ the outer shell of a radius 
+\begin_inset Formula $R$
+\end_inset
+
+ being maintained at a constant potential 
+\begin_inset Formula $V(R)$
+\end_inset
+
+, and the inner shell of radius 
+\begin_inset Formula $r$
+\end_inset
+
+ being initially grounded, would test this hypothesis.
+ Show that a small deviation with respect to Coulomb’s potential would yield
+ a ratio of the potential difference to the applied voltage of:
+\begin_inset Formula 
+\[
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\ln\left(\frac{R-r}{R+r}\right)+\ln\left(\frac{4R^{2}}{R^{2}-r^{2}}\right)\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The two approaches have been formulated in similar terms and can now be
+ compared.
+ In 1970, Barnett et al.
+ obtained a limit of 
+\begin_inset Formula $|\epsilon|<1.3\times10^{-13}$
+\end_inset
+
+ using the generic deviation approach.
+ How would Barnett limit on 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ convert to a limit on 
+\begin_inset Formula $1/\lambda$
+\end_inset
+
+? To answer this, assume that the inner sphere has a radius of 60 cm, 2/3
+ of the radius of the large sphere.
+ Compare this result with the best limits on 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Discuss your comparison.
+ This comparison shows that while being very general, the second approach
+ is not the most precise way to test all possible assumptions about deviations
+ to 
+\begin_inset Formula $1/r^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solutions.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\series default
+Let's start by write the equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Force"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\overrightarrow{F}=q_{1}\overrightarrow{E},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\overrightarrow{E}=\frac{1}{4\pi\epsilon_{0}}\frac{q_{2}}{r^{2}}\left(1+\frac{r}{\lambda}\right)\exp\left(\frac{-r}{\lambda}\right)\hat{r},\label{eq:EField}
+\end{equation}
+
+\end_inset
+
+in the previous expresion let's make the following change of variables 
+\begin_inset Formula 
+\[
+q_{2}\rightarrow q,\frac{r}{\lambda}\rightarrow x\implies\frac{1}{r^{2}}=\frac{1}{\lambda^{2}x^{2}},dr=\lambda dx
+\]
+
+\end_inset
+
+then we have that the electric field given in equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EField"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula 
+\[
+\overrightarrow{E}=\frac{1}{4\pi\epsilon_{0}}\frac{q}{\lambda^{2}x^{2}}\left(1+x\right)\exp\left(-x\right)\hat{r.}
+\]
+
+\end_inset
+
+On the other hand, we know that the potential can be obtain by the following
+ expression 
+\begin_inset Formula 
+\[
+V(r)=-\int_{\mathcal{O}}^{r}\overrightarrow{E}\cdot d\overrightarrow{l},
+\]
+
+\end_inset
+
+ but because 
+\begin_inset Formula $\overrightarrow{E}$
+\end_inset
+
+ is a central force, the previous integral can be written as 
+\begin_inset Formula 
+\[
+V(r)=-\int_{\mathcal{O}}^{r}Edr,
+\]
+
+\end_inset
+
+then, we have that 
+\begin_inset Formula 
+\[
+V=-\frac{1}{4\pi\epsilon_{0}}\frac{q}{\lambda}\int_{\mathcal{O}}^{r}\frac{1}{x^{2}}\left(1+x\right)\exp\left(-x\right)dx,
+\]
+
+\end_inset
+
+then if we rename 
+\begin_inset Formula 
+\[
+\alpha=\frac{1}{4\pi\epsilon_{0}}\frac{q}{\lambda},
+\]
+
+\end_inset
+
+we have that the previous integral, can be written as 
+\begin_inset Formula 
+\[
+V=-\alpha\int\left(\frac{1}{x^{2}}+\frac{1}{x}\right)\exp\left(-x\right)dx,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+V=-\alpha\left(\int\frac{1}{x^{2}}\exp\left(-x\right)dx+\int\frac{1}{x}\exp\left(-x\right)dx\right),\label{eq:VPotential}
+\end{equation}
+
+\end_inset
+
+and the problem nos transforms in solving the following two integrals 
+\begin_inset Formula 
+\[
+\int\frac{1}{x^{2}}\exp\left(-x\right)dx\hspace{1em}\text{,}\int\frac{1}{x}\exp\left(-x\right)dx,
+\]
+
+\end_inset
+
+but now, let's focus on the first integral, 
+\begin_inset Formula 
+\begin{equation}
+\int\frac{1}{x^{2}}\exp\left(-x\right)dx,\label{eq:Intx2Exp(x)}
+\end{equation}
+
+\end_inset
+
+and the plan will be to attack it using integration by parts, and choose
+ 
+\begin_inset Formula 
+\[
+dv=\frac{1}{x^{2}}dx\implies v=-\frac{1}{x},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+u=\exp\left(-x\right)\implies du=-\exp\left(-x\right)dx,
+\]
+
+\end_inset
+
+then, we have that the equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Intx2Exp(x)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\[
+\int\frac{1}{x^{2}}\exp\left(-x\right)dx=-\frac{1}{x}\exp\left(-x\right)-\int\left(-\frac{1}{x}\right)\left(-\exp\left(-x\right)dx\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\int\frac{1}{x^{2}}\exp\left(-x\right)dx=-\frac{1}{x}\exp\left(-x\right)-\int\frac{1}{x}\exp\left(-x\right)dx.
+\]
+
+\end_inset
+
+And if we know plug this new information in the equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:VPotential"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+V=-\alpha\left(-\frac{1}{x}\exp\left(-x\right)-\int\frac{1}{x}\exp\left(-x\right)dx+\int\frac{1}{x}\exp\left(-x\right)dx\right),
+\]
+
+\end_inset
+
+and as we can see, the integrals cancel, then, we have that 
+\begin_inset Formula 
+\[
+V=\alpha\frac{1}{x}\exp\left(-x\right),
+\]
+
+\end_inset
+
+or in the original coordinates, we have that 
+\begin_inset Formula 
+\[
+V\left(r\right)=\frac{\alpha}{\left(\frac{r}{\lambda}\right)}\exp\left(-\frac{r}{\lambda}\right)=\frac{\alpha\lambda}{r}\exp\left(-\frac{r}{\lambda}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V\left(r\right)=\frac{\alpha\lambda}{r}\exp\left(-\frac{r}{\lambda}\right),
+\]
+
+\end_inset
+
+but in the previous expression we need to evaluate on the limits of integration,
+ which are the observation point 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+, which I intentionally droped from the calculation, just to make the notiation
+ a little bit cleaner.
+ Even more, because we are considering our reference point at 
+\begin_inset Formula $\infty$
+\end_inset
+
+, we have that the exponential goes to 
+\begin_inset Formula $0$
+\end_inset
+
+, and then, we have 
+\begin_inset Formula 
+\[
+V\left(r\right)=\frac{\alpha\lambda}{r}\exp\left(-\frac{r}{\lambda}\right),
+\]
+
+\end_inset
+
+and using the actual representation of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+V\left(r\right)=\frac{1}{4\pi\epsilon_{0}}\frac{q}{r}\exp\left(-\frac{r}{\lambda}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\series default
+For this part we're going to generalize the previous result to a continuous
+ distribution, in this particular case, a spherical shell, and for that,
+ we're going to use the following diagram.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Shell.png
+	scale 5
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spherical shell with constant surface density.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Therefore, we have that 
+\begin_inset Formula 
+\[
+dq=\sigma dS,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ it's a surface charge density, thus 
+\begin_inset Formula 
+\[
+dV=\frac{1}{4\pi\epsilon_{0}r}\exp\left(-\frac{r}{\lambda}\right)\sigma dS,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=\int_{S}\frac{1}{4\pi\epsilon_{0}r}\exp\left(-\frac{r}{\lambda}\right)\sigma dS,
+\]
+
+\end_inset
+
+in this case, given the geometry, we have that 
+\begin_inset Formula 
+\[
+V=\frac{\sigma}{4\pi\epsilon_{0}}\int_{S}\frac{1}{r}\exp\left(-\frac{r}{\lambda}\right)dS,
+\]
+
+\end_inset
+
+now let's write the explicit integral and also the differential surface
+ element 
+\begin_inset Formula 
+\[
+V=\frac{\sigma}{4\pi\epsilon_{0}}\int_{0}^{2\pi}\int_{0}^{\pi}\frac{1}{r}\exp\left(-\frac{r}{\lambda}\right)R^{2}\sin\theta d\theta d\phi,
+\]
+
+\end_inset
+
+but because there's no dependence of 
+\begin_inset Formula $\phi$
+\end_inset
+
+ in the integrand, that integration becomes immediate 
+\begin_inset Formula 
+\[
+V=\frac{\sigma R^{2}}{2\epsilon_{0}}\int_{0}^{\pi}\frac{1}{r}\exp\left(-\frac{r}{\lambda}\right)\sin\theta d\theta,
+\]
+
+\end_inset
+
+but given the geometry of this problem, we have that 
+\begin_inset Formula 
+\[
+r=\sqrt{R^{2}+z^{2}-2Rz\cos\theta},
+\]
+
+\end_inset
+
+therefore, we can write the integral as 
+\begin_inset Formula 
+\[
+V=\frac{\sigma R^{2}}{2\epsilon_{0}}\int_{0}^{\pi}\frac{\exp\left(-\frac{1}{\lambda}\sqrt{R^{2}+z^{2}-2Rz\cos\theta}\right)}{\sqrt{R^{2}+z^{2}-2Rz\cos\theta}}\sin\theta d\theta.
+\]
+
+\end_inset
+
+So let's try to write the previous equation in a better way, and for so,
+ let's make the following change of variable 
+\begin_inset Formula 
+\[
+u=\sqrt{R^{2}+z^{2}-2Rz\cos\theta},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{du}{d\theta}=\frac{2Rz\sin\theta}{\sqrt{R^{2}+z^{2}-2Rz\cos\theta}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies du=\frac{2Rz\sin\theta}{\sqrt{R^{2}+z^{2}-2Rz\cos\theta}}d\theta,
+\]
+
+\end_inset
+
+and then we have that 
+\begin_inset Formula 
+\[
+\frac{du}{2Rz}=\frac{\sin\theta}{\sqrt{R^{2}+z^{2}-2Rz\cos\theta}}d\theta,
+\]
+
+\end_inset
+
+therefore, the whole integral tranforms into 
+\begin_inset Formula 
+\[
+V=\frac{\sigma R^{2}}{2\epsilon_{0}}\int_{0}^{\pi}\frac{\exp\left(-\frac{1}{\lambda}\sqrt{R^{2}+z^{2}-2Rz\cos\theta}\right)}{\sqrt{R^{2}+z^{2}-2Rz\cos\theta}}\sin\theta d\theta=\frac{\sigma R^{2}}{2\epsilon_{0}}\frac{1}{2Rz}\int_{b}^{b}\exp\left(-\frac{u}{\lambda}\right)du,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore V=\frac{\sigma}{4\epsilon_{0}}\frac{R}{z}\int_{b}^{b}\exp\left(-\frac{u}{\lambda}\right)du,
+\]
+
+\end_inset
+
+and the above integral it's immediate, thus, we have 
+\begin_inset Formula 
+\[
+V=\frac{\sigma}{4\epsilon_{0}}\frac{R}{z}\left[-\lambda\exp\left(-\frac{1}{\lambda}\sqrt{R^{2}+z^{2}-2Rz\cos\theta}\right)\right]_{0}^{\pi},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=-\lambda\frac{\sigma}{4\epsilon_{0}}\frac{R}{z}\left[\exp\left(-\frac{1}{\lambda}\sqrt{R^{2}+z^{2}+2Rz}\right)-\exp\left(-\frac{1}{\lambda}\sqrt{R^{2}+z^{2}-2Rz}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=-\lambda\frac{\sigma}{4\epsilon_{0}}\frac{R}{z}\left[\exp\left(-\frac{1}{\lambda}\sqrt{\left(R+z\right)^{2}}\right)-\exp\left(-\frac{1}{\lambda}\sqrt{\left(R-z\right)^{2}}\right)\right],
+\]
+
+\end_inset
+
+and because we're considering the case in which we're inside the sphere,
+ we have that 
+\begin_inset Formula $R-z>0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\implies V\left(z\right)=-\lambda\frac{\sigma}{4\epsilon_{0}}\frac{R}{z}\left[\exp\left(-\frac{R+z}{\lambda}\right)-\exp\left(-\frac{R-z}{\lambda}\right)\right],
+\]
+
+\end_inset
+
+and before move on to more calculations let's rename make the following
+ change of variable 
+\begin_inset Formula 
+\[
+\alpha=\frac{\sigma}{4\epsilon_{0}},
+\]
+
+\end_inset
+
+therefore, the potential field becomes 
+\begin_inset Formula 
+\[
+V\left(z\right)=\alpha\frac{\lambda R}{z}\left[\exp\left(\frac{z-R}{\lambda}\right)-\exp\left(\frac{-z-R}{\lambda}\right)\right].
+\]
+
+\end_inset
+
+On the other hand, with this result we can obtain 
+\begin_inset Formula $V\left(R\right)$
+\end_inset
+
+, which will be 
+\begin_inset Formula 
+\[
+V\left(R\right)=\alpha\lambda\left[1-\exp\left(-\frac{2R}{\lambda}\right)\right].
+\]
+
+\end_inset
+
+And now, let's Taylor Expand the exponentials inside the potential field,
+ but before doing any math, let's write the first three terms of the Taylor
+ expansion for an exponential function 
+\begin_inset Formula 
+\[
+\exp\left(x\right)\approx1+x+\frac{1}{2!}x^{2}+\frac{1}{3!}x^{3}.
+\]
+
+\end_inset
+
+So, for the 
+\begin_inset Formula $\exp\left(\frac{z-R}{\lambda}\right)$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+\exp\left(\frac{z-R}{\lambda}\right)\approx1+\left(\frac{z-R}{\lambda}\right)+\frac{1}{2!}\left(\frac{z-R}{\lambda}\right)^{2}+\frac{1}{3!}\left(\frac{z-R}{\lambda}\right)^{3}+\dots,
+\]
+
+\end_inset
+
+and, for the other exponential, we have 
+\begin_inset Formula 
+\[
+\exp\left(\frac{-z-R}{\lambda}\right)\approx1+\left(\frac{-z-R}{\lambda}\right)+\frac{1}{2!}\left(\frac{-z-R}{\lambda}\right)^{2}+\frac{1}{3!}\left(\frac{-z-R}{\lambda}\right)^{3}+\dots,
+\]
+
+\end_inset
+
+and now, let's take the rest of the two previous equations, and let's do
+ it term by term separatedly 
+\begin_inset Formula 
+\[
+\left(\frac{z-R}{\lambda}\right)-\left(\frac{-z-R}{\lambda}\right)=\frac{2z}{\lambda},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{2!}\left[\left(\frac{z-R}{\lambda}\right)^{2}-\left(\frac{-z-R}{\lambda}\right)^{2}\right]=\frac{1}{2!}\left(\frac{-4zR}{\lambda^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{3!}\left[\left(\frac{z-R}{\lambda}\right)^{3}-\left(\frac{-z-R}{\lambda}\right)^{3}\right]=\frac{1}{3!}\left[\left(\frac{z-R}{\lambda}\right)^{3}+\left(\frac{z+R}{\lambda}\right)^{3}\right]=\frac{1}{3!}\left(\frac{6R^{2}z}{\lambda^{3}}+\frac{2z^{3}}{\lambda^{3}}\right),
+\]
+
+\end_inset
+
+and now, let's add the previous three equations together 
+\begin_inset Formula 
+\[
+\mathcal{O}_{3}=\frac{2z}{\lambda}+\frac{1}{2!}\left(\frac{-4zR}{\lambda^{2}}\right)+\frac{1}{3!}\left(\frac{6R^{2}z}{\lambda^{3}}+\frac{2z^{3}}{\lambda^{3}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{O}_{3}=\frac{2z}{\lambda}-\frac{2zR}{\lambda^{2}}+\frac{R^{2}z}{\lambda^{3}}+\frac{2z^{3}}{6\lambda^{3}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\implies$
+\end_inset
+
+therefore the potential field will be 
+\begin_inset Formula 
+\[
+V\left(z\right)_{\mathcal{O}_{3}}=\alpha\frac{\lambda R}{z}\left[\frac{2z}{\lambda}-\frac{2zR}{\lambda^{2}}+\frac{R^{2}z}{\lambda^{3}}+\frac{z^{3}}{3\lambda^{3}}\right]=\alpha\left[2R-\frac{2R^{2}}{\lambda}+\frac{R^{3}}{\lambda^{3}}+\frac{2Rz^{2}}{6\lambda^{3}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V\left(z\right)_{\mathcal{O}_{3}}=\alpha\left[2R-\frac{2R^{2}}{\lambda}+\frac{R^{3}}{\lambda^{2}}+\frac{2Rz^{2}}{6\lambda^{2}}\right],
+\]
+
+\end_inset
+
+on the other, hand, we can also consider an aproximation for the potential
+ 
+\begin_inset Formula $V\left(R\right)$
+\end_inset
+
+, and we have that 
+\begin_inset Formula 
+\[
+V\left(R\right)_{\mathcal{O}_{3}}=\alpha\lambda\left[1-\left(1+\left(-\frac{2R}{\lambda}\right)+\frac{1}{2!}\left(-\frac{2R}{\lambda}\right)^{2}+\frac{1}{3!}\left(-\frac{2R}{\lambda}\right)^{3}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V\left(R\right)_{\mathcal{O}_{3}}=\alpha\lambda\left[\frac{2R}{\lambda}-\frac{4R}{2\lambda^{2}}^{2}+\frac{8R^{3}}{6\lambda^{3}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore V\left(R\right)_{\mathcal{O}_{3}}=\alpha\left[2R-\frac{2R}{\lambda}^{2}+\frac{4R^{3}}{3\lambda^{2}}\right],
+\]
+
+\end_inset
+
+and with this result, we have that 
+\begin_inset Formula 
+\[
+V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}=\alpha\left[2R-\frac{2R^{2}}{\lambda}+\frac{R^{3}}{\lambda^{2}}+\frac{2Rz^{2}}{6\lambda^{2}}-2R+\frac{2R^{2}}{\lambda}-\frac{4R^{3}}{3\lambda^{2}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}=\alpha\left[-\frac{R^{3}}{3\lambda^{2}}+\frac{2Rz^{2}}{6\lambda^{2}}\right]=\alpha R\left[\frac{2z^{2}}{6\lambda^{2}}-\frac{2R^{2}}{6\lambda^{2}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}=\frac{2\alpha R}{6\lambda^{2}}\left[z^{2}-R^{2}\right],
+\]
+
+\end_inset
+
+and, with this result we have 
+\begin_inset Formula 
+\[
+\frac{V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}}{V\left(R\right)_{\mathcal{O}_{3}}}=\frac{\frac{2\alpha R}{6\lambda^{2}}\left[z^{2}-R^{2}\right]}{\alpha\left[2R-\frac{2R}{\lambda}^{2}+\frac{4R^{3}}{3\lambda^{2}}\right]}=\frac{\frac{2\alpha R}{6\lambda^{2}}\left[z^{2}-R^{2}\right]}{2\alpha R\left[1-\frac{R}{\lambda}+\frac{2R^{2}}{3\lambda^{2}}\right]},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}}{V\left(R\right)_{\mathcal{O}_{3}}}=\frac{1}{6\lambda^{2}}\frac{\left[z^{2}-R^{2}\right]}{\left[1-\frac{R}{\lambda}+\frac{2R^{2}}{3\lambda^{2}}\right]},
+\]
+
+\end_inset
+
+in the previous equation we can perform another aproximation for the denominator
+, we can perform a binomial-like expansion in order to transform the denominator
+ into the numerator, but with this we're going to have something like 
+\begin_inset Formula 
+\[
+\frac{1}{\left[1-\frac{R}{\lambda}+\frac{2R^{2}}{3\lambda^{2}}\right]}\approx1+\frac{R}{\lambda}+\mathcal{O}\left(\frac{1}{\lambda^{3}}\right),
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+\frac{V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}}{V\left(R\right)_{\mathcal{O}_{3}}}=\frac{1}{6\lambda^{2}}\left[z^{2}-R^{2}\right]\left[1+\frac{R}{\lambda}+\mathcal{O}\left(\frac{1}{\lambda^{3}}\right)\right],
+\]
+
+\end_inset
+
+but in the previous expression we have terms that behave like 
+\begin_inset Formula $1/\lambda^{3}$
+\end_inset
+
+, therefore, we drop those terms, and we keep up to order 
+\begin_inset Formula $1/\lambda^{2}$
+\end_inset
+
+, then we finnlay have 
+\begin_inset Formula 
+\[
+\frac{V\left(z\right)_{\mathcal{O}_{3}}-V\left(R\right)_{\mathcal{O}_{3}}}{V\left(R\right)_{\mathcal{O}_{3}}}=\frac{1}{6\lambda^{2}}\left[z^{2}-R^{2}\right]=-\frac{1}{6\lambda^{2}}\left[R^{2}-z^{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\frac{V(r)-V\left(R\right)}{V\left(R\right)}\approx-\frac{1}{6\lambda^{2}}\left[R^{2}-z^{2}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.
+ 
+\series default
+For this part, we should have that the potential for a point charge is given
+ as 
+\begin_inset Formula 
+\[
+V_{p}\left(r\right)=kqr^{-\left(1+\epsilon\right)},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\epsilon\ll1$
+\end_inset
+
+, and the sub index 
+\begin_inset Formula $p$
+\end_inset
+
+ s just to make even more explicit that this potential it's for a point
+ charge.
+ So the first thing is to generalize the given potential for a continous
+ distribution, in this case, let's generalize it to a spherical shell.
+ And before doing any calculation, let's use the following diagram as a
+ guide 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ConcentricShells.png
+	scale 10
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Concentric shells.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+What we're going to do is to integrate the previous expression for a surface,
+ i.e, 
+\begin_inset Formula 
+\[
+V=\int_{S}V_{p}dS,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $dS=R^{2}\sin\theta d\theta d\phi,$
+\end_inset
+
+ and we also have to consider this 
+\begin_inset Formula $dq=\sigma dS$
+\end_inset
+
+, therefore, we have 
+\begin_inset Formula 
+\[
+V=\int_{S}k\sigma r^{-\left(1+\epsilon\right)}R^{2}\sin\theta d\theta d\phi,
+\]
+
+\end_inset
+
+and from the figure we can see that 
+\begin_inset Formula 
+\[
+r^{2}=z^{2}+R^{2}-2zR\cos\theta,
+\]
+
+\end_inset
+
+therefore, we have that 
+\begin_inset Formula 
+\[
+V=k\sigma\int_{0}^{2\pi}d\phi\int_{0}^{\pi}\frac{R^{2}\sin\theta d\theta}{\left(z^{2}+R^{2}-2zR\cos\theta\right)^{\left(1+\epsilon\right)}},
+\]
+
+\end_inset
+
+and now, for this integral we're going to use the following change of variables
+ 
+\begin_inset Formula 
+\[
+u^{2}=z^{2}+R^{2}-2zR\cos\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies2udu=2zR\sin\theta d\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies udu=zR\sin\theta d\theta,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sin\theta d\theta=\frac{1}{zR}udu
+\]
+
+\end_inset
+
+and with change of variables we have that 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, implies 
+\begin_inset Formula $u=R-z$
+\end_inset
+
+, and 
+\begin_inset Formula $u=\pi$
+\end_inset
+
+, implies 
+\begin_inset Formula $u=R+z$
+\end_inset
+
+, thus, we have that 
+\begin_inset Formula 
+\[
+V=k\sigma\frac{R^{2}}{zR}\int_{0}^{2\pi}d\phi\int_{R-z}^{R+z}\frac{udu}{u^{\left(1+\epsilon\right)}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=k\sigma\frac{2\pi R}{z}\int_{R-r}^{R+r}\frac{udu}{u^{\left(1+\epsilon\right)}}=\frac{k\sigma}{zR}\frac{1}{1-\epsilon}\left(u^{\left(1-\epsilon\right)}\right)|_{R-r}^{R+r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=k\sigma\frac{2\pi R}{z}\frac{1}{1-\epsilon}\left(u^{\left(1-\epsilon\right)}\right)|_{R-r}^{R+r},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore V\left(r\right)=\frac{\alpha R}{r\left(1-\epsilon\right)}\left(\left(R+r\right)^{\left(1-\epsilon\right)}-\left(R-r\right)^{\left(1-\epsilon\right)}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha=2\pi k\sigma$
+\end_inset
+
+, and if we know evaluate 
+\begin_inset Formula $V\left(R\right)$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+V\left(R\right)=\alpha\frac{R}{R}\frac{1}{1-\epsilon}\left(\left(R+R\right)^{\left(1-\epsilon\right)}-\left(R-R\right)^{\left(1-\epsilon\right)}\right)=\frac{\alpha}{1-\epsilon}\left(2R\right)^{1-\epsilon},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V\left(R\right)=\frac{\alpha}{1-\epsilon}\left(2R\right)^{1-\epsilon}.
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}=\frac{\frac{\alpha R}{r\left(1-\epsilon\right)}\left(\left(R+r\right)^{\left(1-\epsilon\right)}-\left(R-r\right)^{\left(1-\epsilon\right)}\right)}{\frac{\alpha}{1-\epsilon}\left(2R\right)^{1-\epsilon}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{V\left(r\right)}{V\left(R\right)}=\frac{R}{r}\frac{\left(\left(R+r\right)^{\left(1-\epsilon\right)}-\left(R-r\right)^{\left(1-\epsilon\right)}\right)}{\left(2R\right)^{1-\epsilon}}.
+\]
+
+\end_inset
+
+Now, if we use the following approximation 
+\begin_inset Formula $x^{1-\epsilon}=x\left(1-\ln x\right)$
+\end_inset
+
+, then we have that 
+\begin_inset Formula 
+\[
+\left(2R\right)^{1-\epsilon}=2R\left(1-\ln2R\right),
+\]
+
+\end_inset
+
+and also 
+\begin_inset Formula 
+\[
+\left(R+r\right)^{\left(1-\epsilon\right)}=\left(R+r\right)\left(1-\epsilon\ln\left(R+r\right)\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(R-r\right)^{1-\epsilon}=\left(R-r\right)\left(1-\epsilon\ln\left(R-r\right)\right),
+\]
+
+\end_inset
+
+then we can express 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}=\frac{R}{r}\frac{\left(\left(R+r\right)\left(1-\epsilon\ln\left(R+r\right)\right)-\left(R-r\right)\left(1-\epsilon\ln\left(R-r\right)\right)\right)}{2R\left(1-\epsilon\ln2R\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{V\left(r\right)}{V\left(R\right)}=\frac{1}{2r}\frac{\left(\left(R+r\right)\left(1-\epsilon\ln\left(R+r\right)\right)-\left(R-r\right)\left(1-\epsilon\ln\left(R-r\right)\right)\right)}{\left(1-\epsilon\ln2R\right)},
+\]
+
+\end_inset
+
+now, let's play a little with the numerator of the previous equation, which,
+ for a better reading, I'm going to call it 
+\begin_inset Formula $D$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+D=R+r-R\epsilon\ln\left(R+r\right)-r\epsilon\ln\left(R+r\right)-R+r+R\epsilon\ln\left(R-r\right)-r\epsilon\ln\left(R-r\right),
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+D=2r+R\epsilon\left(\ln\left(R+r\right)-\ln\left(R-r\right)\right)-r\epsilon\left(\ln\left(R+r\right)+\ln\left(R-r\right)\right),
+\]
+
+\end_inset
+
+but using properties of the logatimic function, we can write the previous
+ equation as 
+\begin_inset Formula 
+\[
+D=2r+R\epsilon\left(\ln\frac{R+r}{R-r}\right)-r\epsilon\left(\ln\left[\left(R+r\right)\left(R-r\right)\right]\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\implies D=2r+R\epsilon\left(\ln\frac{R+r}{R-r}\right)-r\epsilon\left(\ln\left(R^{2}-r^{2}\right)\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies D=2r+R\epsilon\left(\ln\frac{R+r}{R-r}\right)+r\epsilon\left(\ln\left(R^{2}-r^{2}\right)^{-1}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore D=2r+R\epsilon\left(\ln\frac{R+r}{R-r}\right)+r\epsilon\left(\ln\frac{1}{R^{2}-r^{2}}\right)
+\]
+
+\end_inset
+
+then the expression, becomes 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}=\frac{1}{2r}\frac{2r+R\epsilon\left(\ln\frac{R+r}{R-r}\right)+r\epsilon\left(\ln\frac{1}{R^{2}-r^{2}}\right)}{\left(1-\epsilon\ln2R\right)},
+\]
+
+\end_inset
+
+and now, in order to get rid of the denominator, we're going to perform
+ the following approximation, for 
+\begin_inset Formula $x$
+\end_inset
+
+ small enough, we have 
+\begin_inset Formula 
+\[
+\frac{1}{1-x}\approx1+x,
+\]
+
+\end_inset
+
+then, we can express the denominator as 
+\begin_inset Formula 
+\[
+\frac{1}{1-\epsilon\ln2R}\approx1+\epsilon\ln2R,
+\]
+
+\end_inset
+
+therefore, we have that 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}\approx\frac{1}{2r}\left(2r+R\epsilon\left(\ln\frac{R+r}{R-r}\right)+r\epsilon\left(\ln\frac{1}{R^{2}-r^{2}}\right)\right)\left(1+\epsilon\ln2R\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{V\left(r\right)}{V\left(R\right)}\approx\left(1+\frac{R\epsilon}{2r}\left(\ln\frac{R+r}{R-r}\right)+\frac{\epsilon}{2}\left(\ln\frac{1}{R^{2}-r^{2}}\right)\right)\left(1+\epsilon\ln2R\right)
+\]
+
+\end_inset
+
+but becasue 
+\begin_inset Formula $\epsilon\ll1$
+\end_inset
+
+ we are not going to consider the terms that go as 
+\begin_inset Formula $\epsilon^{2}$
+\end_inset
+
+, then, we have that the previous expression can be written as 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}\approx1+\frac{R\epsilon}{2r}\left(\ln\frac{R+r}{R-r}\right)+\frac{\epsilon}{2}\left(\ln\frac{1}{R^{2}-r^{2}}\right)+\epsilon\ln2R,
+\]
+
+\end_inset
+
+but we can write the last term as 
+\begin_inset Formula 
+\[
+\epsilon\ln2R=\frac{\epsilon}{2}2\ln2R=\frac{\epsilon}{2}\ln\left(2R\right)^{2}=\frac{\epsilon}{2}\ln\left(4R^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\epsilon\ln2R=\frac{\epsilon}{2}\ln\left(4R^{2}\right),
+\]
+
+\end_inset
+
+therefore, we have that 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}\approx1+\frac{R\epsilon}{2r}\left(\ln\frac{R+r}{R-r}\right)+\frac{\epsilon}{2}\left(\ln\frac{1}{R^{2}-r^{2}}\right)+\frac{\epsilon}{2}\ln\left(4R^{2}\right),
+\]
+
+\end_inset
+
+and again, using the properties of the logaritmic function, we have 
+\begin_inset Formula 
+\[
+\frac{V\left(r\right)}{V\left(R\right)}\approx1+\frac{R\epsilon}{2r}\left(\ln\frac{R+r}{R-r}\right)+\frac{\epsilon}{2}\left(\ln\frac{4R^{2}}{R^{2}-r^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{V\left(r\right)}{V\left(R\right)}-1\approx\frac{\epsilon}{2}\left[\frac{R}{r}\left(\ln\frac{R+r}{R-r}\right)+\left(\ln\frac{4R^{2}}{R^{2}-r^{2}}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{V\left(r\right)-V\left(R\right)}{V\left(R\right)}\approx\frac{\epsilon}{2}\left[\frac{R}{r}\left(\ln\frac{R+r}{R-r}\right)+\left(\ln\frac{4R^{2}}{R^{2}-r^{2}}\right)\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+4.
+ 
+\series default
+For this final question we have to compare the two approximations, and one
+ way to do it is by comparing the expressions for the potentials, on one
+ hand we have 
+\begin_inset Formula 
+\[
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}\approx\frac{-1}{6\lambda^{2}}\left[R^{2}-r^{2}\right],
+\]
+
+\end_inset
+
+and on another 
+\begin_inset Formula 
+\[
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\frac{R}{r}\ln\left(\frac{R-r}{R+r}\right)+\ln\left(\frac{4R^{2}}{R^{2}-r^{2}}\right)\right],
+\]
+
+\end_inset
+
+and now, if we have that 
+\begin_inset Formula $r=\frac{2}{3}R$
+\end_inset
+
+, then, form the first equation we have 
+\begin_inset Formula 
+\[
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}\approx\frac{-1}{6\lambda^{2}}\left[R^{2}-\frac{4}{9}R^{2}\right]=-\frac{1}{6\lambda^{2}}\left(\frac{5}{9}R^{2}\right),
+\]
+
+\end_inset
+
+and on the other hand, for the second approximation we have that 
+\begin_inset Formula 
+\[
+\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\frac{3}{2}\ln\left(\frac{R}{5R}\right)+\ln\left(\frac{4R^{2}}{\frac{5}{9}R^{2}}\right)\right]=\frac{\epsilon}{2}\left[\ln\left(\frac{R}{5R}\right)+\ln\left(\frac{36R}{5R}\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{V(r)-V\left(R\right)}{V\left(R\right)}=\frac{\epsilon}{2}\left[\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right],
+\]
+
+\end_inset
+
+then if we compare the two expressions for the potential, we have that 
+\begin_inset Formula 
+\[
+-\frac{1}{6\lambda^{2}}\left(\frac{5}{9}R^{2}\right)=\frac{\epsilon}{2}\left[\frac{3}{2}\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right],
+\]
+
+\end_inset
+
+and if we solve for 
+\begin_inset Formula $1/\lambda$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+-\frac{1}{6\lambda^{2}}=\frac{\epsilon}{2}\frac{\left[\frac{3}{2}\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right]}{\left(\frac{5}{9}R^{2}\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\frac{1}{\lambda}\right)^{2}=-\frac{3\epsilon\left[\ln\left(\frac{1}{5}\right)+\ln\left(\frac{36}{5}\right)\right]}{\left(\frac{5}{9}R^{2}\right)}=-3\epsilon\left(\frac{-0.440076}{5/9R^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(\frac{1}{\lambda}\right)^{2}=\frac{2.37641}{\left(0.6\right)^{2}}\epsilon,
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\epsilon<1.3\times10^{-13}$
+\end_inset
+
+, then, we have that 
+\begin_inset Formula 
+\[
+\frac{1}{\lambda}=\sqrt{\left(\frac{2.38}{\left(0.6\right)^{2}}\right)\left(1.3\times10^{-13}\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{1}{\lambda}=9.27062\times10^{-7}m^{-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

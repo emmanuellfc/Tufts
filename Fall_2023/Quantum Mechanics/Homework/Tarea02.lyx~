@@ -1,0 +1,2130 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea 2
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 14/03/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Usando la ortonormalidad de 
+\begin_inset Formula $|+\rangle$
+\end_inset
+
+ y 
+\begin_inset Formula $|-\rangle$
+\end_inset
+
+, demuestre 
+\begin_inset Formula 
+\[
+\left[S_{i},S_{j}\right]=i\epsilon_{ijk}S_{k}\text{,}\ \ \ \ \ \left\{ S_{i},S_{j}\right\} =\frac{\hbar^{2}}{2}\delta_{ij}\text{,}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{2}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}\ \ \ S_{y}=\frac{i\hbar}{2}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}\ \ \ S_{z}=\frac{\hbar}{2}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Hagamos primero los cálculos para el conmutador.
+\end_layout
+
+\begin_layout Standard
+Por definición, tenemos 
+\begin_inset Formula $\left[S_{i},S_{j}\right]=S_{i}S_{j}-S_{j}S_{i}$
+\end_inset
+
+, así que primero calculemos 
+\begin_inset Formula $\left[S_{x},S_{y}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[S_{x},S_{y}\right]=S_{x}S_{y}-S_{y}S_{x}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[S_{x},S_{y}\right]=i\frac{\hbar^{2}}{4}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)-\frac{i\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+para el primer producto, tenemos
+\begin_inset Formula 
+\[
+\implies\left(*\right)=i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle-|+\rangle\langle-|+|+\rangle\langle-|-\rangle\langle+|-|-\rangle\langle+|+\rangle\langle-|+|-\rangle\langle+|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+usando las propiedades de ortogonalidad de los kets base 
+\begin_inset Formula 
+\[
+\implies\left(*\right)=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle+|-|-\rangle\langle-|\right].
+\]
+
+\end_inset
+
+Ahora bien, para el segundo término, tenemos 
+\begin_inset Formula 
+\[
+\left[*\right]=-i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle-|+\rangle\langle-|-|+\rangle\langle-|-\rangle\langle+|+|-\rangle\langle+|+\rangle\langle-|+|-\rangle\langle+|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[*\right]=-i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle+|+|-\rangle\langle-|\right]=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle+|-|-\rangle\langle-|\right]\text{.}
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+\left[S_{x},S_{y}\right]=\left(*\right)+\left[*\right]=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle+|-|-\rangle\langle-|\right]+i\frac{\hbar^{2}}{4}\left[|+\rangle\langle+|-|-\rangle\langle-|\right]=i\hbar\frac{\hbar}{2}\left[|+\rangle\langle+|-|-\rangle\langle-|\right]\text{,}
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\begin{equation}
+\left[S_{x},S_{y}\right]=i\hbar S_{z}\text{.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, sabemos que el conmutador satisface 
+\begin_inset Formula $\left[A,B\right]=-\left[B,A\right]$
+\end_inset
+
+, con lo cual tenemos 
+\begin_inset Formula $\left[S_{x},S_{y}\right]=-\left[S_{y},S_{x}\right]$
+\end_inset
+
+ y por lo tanto
+\begin_inset Formula 
+\begin{equation}
+\left[S_{y},S_{x}\right]=-i\hbar S_{z}\text{.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora hagamos el mismo cálculo para 
+\begin_inset Formula $\left[S_{y},S_{z}\right]=S_{y}S_{z}-S_{z}S_{y}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left[S_{y},S_{z}\right]=\frac{i\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)-\frac{i\hbar^{2}}{4}\left(|+\rangle\langle+|+|-\rangle\langle-|\right)\left(-|+\rangle\langle-|-|-\rangle\langle+|\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el primer término de la ecuación anterior, tenemos 
+\begin_inset Formula 
+\[
+\left(*\right)=\frac{i\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(*\right)=i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle-|+\rangle\langle+|+|+\rangle\langle-|-\rangle\langle-|+|-\rangle\langle+|+\rangle\langle+|-|-\rangle\langle+|-\rangle\langle-|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(*\right)=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|+|-\rangle\langle+|\right]\text{.}
+\]
+
+\end_inset
+
+Mientras que para el segundo término 
+\begin_inset Formula 
+\[
+\left[*\right]=-i\frac{\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[*\right]=-i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle+|+\rangle\langle-|+|+\rangle\langle+|-\rangle\langle+|+|-\rangle\langle-|+\rangle\langle-|-|-\rangle\langle-|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[*\right]=-i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle-|-|-\rangle\langle+|\right]=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|+|-\rangle\langle+|\right]\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces 
+\begin_inset Formula 
+\[
+\left[S_{y},S_{z}\right]=\left(*\right)+\left[*\right]=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|+|-\rangle\langle+|\right]+i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|+|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[S_{y},S_{z}\right]=i\hbar\frac{\hbar}{2}\left[|+\rangle\langle-|+|-\rangle\langle+|\right]=i\hbar S_{x}\text{,}
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\begin{equation}
+\left[S_{y},S_{z}\right]=i\hbar S_{x}
+\end{equation}
+
+\end_inset
+
+Nuevamente, por las propiedades del conmutador, tenemos 
+\begin_inset Formula 
+\begin{equation}
+\left[S_{z},S_{y}\right]=-i\hbar S_{x}\text{.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora para el conmutador 
+\begin_inset Formula $\left[S_{z},S_{x}\right]$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\left[S_{z},S_{x}\right]=S_{z}S_{x}-S_{x}S_{z}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[S_{z},S_{x}\right]=\frac{i\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)-\frac{i\hbar^{2}}{4}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y nuevamente, para el primer término de la ecuación anterior, tenemos 
+\begin_inset Formula 
+\[
+\left(*\right)=i\frac{\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(*\right)=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle+|+\rangle\langle-|+|+\rangle\langle+|-\rangle\langle+|-|-\rangle\langle-|+\rangle\langle-|-|-\rangle\langle-|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(*\right)=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|-|-\rangle\langle+|\right]
+\]
+
+\end_inset
+
+Mientras que para el segundo término, se tiene 
+\begin_inset Formula 
+\[
+\left[*\right]=-i\frac{\hbar^{2}}{4}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\implies\left[*\right]=-i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|+\rangle\langle+|-|+\rangle\langle-|-\rangle\langle-|+|-\rangle\langle+|+\rangle\langle+|-|-\rangle\langle+|-\rangle\langle-|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[*\right]=-i\frac{\hbar^{2}}{4}\left[-|+\rangle\langle-|+|-\rangle\langle+|\right]=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|-|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\left[S_{z},S_{x}\right]=\left(*\right)+\left[*\right]=i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|-|-\rangle\langle+|\right]+i\frac{\hbar^{2}}{4}\left[|+\rangle\langle-|-|-\rangle\langle+|\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[S_{z},S_{x}\right]=i\frac{\hbar^{2}}{2}\left[|+\rangle\langle-|-|-\rangle\langle+|\right]=i\hbar\frac{\hbar}{2}\left[|+\rangle\langle-|-|-\rangle\langle+|\right]=i\hbar S_{y}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left[S_{z},S_{x}\right]=i\hbar S_{y}\text{.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuevamente, por las propiedades del conmutador, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\left[S_{x},S_{y}\right]=-i\hbar S_{z}\text{.}
+\end{equation}
+
+\end_inset
+
+Ahora bien, en resumen tenemos que 
+\begin_inset Formula 
+\[
+\left[S_{x},S_{y}\right]=i\hbar S_{z}\ \ \ \&\ \ \ \left[S_{y},S_{x}\right]=-i\hbar S_{z}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[S_{y},S_{z}\right]=i\hbar S_{x}\ \ \ \&\ \ \ \left[S_{y},S_{z}\right]=-i\hbar S_{x}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[S_{z},S_{x}\right]=i\hbar S_{y}\ \ \ \&\ \ \ \left[S_{x},S_{z}\right]=-i\hbar S_{y}\text{.}
+\]
+
+\end_inset
+
+Además, es claro que 
+\begin_inset Formula $\left[S_{i},S_{j}\right]=0$
+\end_inset
+
+, siempre que 
+\begin_inset Formula $i=j$
+\end_inset
+
+.
+ De manera que si recordamos la definición del símbolo de Levi-Civitta 
+\begin_inset Formula 
+\[
+\epsilon_{ijk}=\left\{ \begin{array}{c}
+1\ \ \ ijk=xyz\ \ yzx\ \ zxy\\
+-1\ \ \ ijk=xzy\ \ yxz\ \ zyx\\
+1\ \ \ \text{cualquier otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\left[S_{i},S_{j}\right]=i\epsilon_{ijk}S_{k}\text{,}
+\end{equation}
+
+\end_inset
+
+justo como queriamos demostrar.
+\end_layout
+
+\begin_layout Standard
+Ahora bien, para el anticonmutador tenemos lo siguiente.
+ Calculemos 
+\begin_inset Formula $\left\{ S_{x},S_{x}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ S_{x},S_{x}\right\} =S_{x}S_{x}+S_{x}S_{x}=2S_{x}^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{x}\right\} =2\frac{\hbar^{2}}{4}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{x}\right\} =\frac{\hbar^{2}}{2}\left(|+\rangle\langle-|-\rangle\langle+|+|-\rangle\langle+|+\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{x}\right\} =\frac{\hbar^{2}}{2}\left(|+\rangle\langle+|+|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+usando la relación de completez 
+\begin_inset Formula $|+\rangle\langle+|+|-\rangle\langle-|=\mathbb{I}$
+\end_inset
+
+, tenemos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ S_{x},S_{x}\right\} =\frac{\hbar^{2}}{2}\mathbb{I}\text{.}\label{eq:08}
+\end{equation}
+
+\end_inset
+
+Ahora bien, para 
+\begin_inset Formula $\left\{ S_{y},S_{y}\right\} $
+\end_inset
+
+ tenemos 
+\begin_inset Formula 
+\[
+\left\{ S_{y},S_{y}\right\} =2S_{y}^{2}=2\frac{i^{2}\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{y},S_{y}\right\} =\frac{i^{2}\hbar^{2}}{2}\left(-|+\rangle\langle-|-\rangle\langle+|-|-\rangle\langle+|+\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{y},S_{y}\right\} =-\frac{\hbar^{2}}{2}\left(-|+\rangle\langle+|-|-\rangle\langle-|\right)=\frac{\hbar^{2}}{2}\left(|+\rangle\langle+|+|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+y nuevamente, usando la relación de completez de la base, tenemos 
+\begin_inset Formula 
+\begin{equation}
+\left\{ S_{y},S_{y}\right\} =\frac{\hbar^{2}}{2}\mathbb{I}\text{.}\label{eq:09}
+\end{equation}
+
+\end_inset
+
+Ahora procedamos para 
+\begin_inset Formula $\left\{ S_{z},S_{z}\right\} $
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left\{ S_{z},S_{z}\right\} =2S_{z}^{2}=2\frac{\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{z},S_{z}\right\} =2S_{z}^{2}=\frac{\hbar^{2}}{2}\left(|+\rangle\langle+|+\rangle\langle+|+|-\rangle\langle-|-\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{z},S_{z}\right\} =\frac{\hbar^{2}}{2}\left(|+\rangle\langle+|+|-\rangle\langle-|\right)=\frac{\hbar^{2}}{2}\mathbb{I}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto 
+\begin_inset Formula 
+\begin{equation}
+\left\{ S_{z},S_{z}\right\} =\frac{\hbar^{2}}{2}\mathbb{I}\text{.}\label{eq:10}
+\end{equation}
+
+\end_inset
+
+Para el anticonmutador 
+\begin_inset Formula $\left\{ S_{x},S_{y}\right\} $
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\left\{ S_{x},S_{y}\right\} =S_{x}S_{y}+S_{y}S_{x}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{y}\right\} =\frac{i\hbar^{2}}{4}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)+\frac{i\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{y}\right\} =\frac{i\hbar^{2}}{4}\left(|+\rangle\langle-|-\rangle\langle+|-|-\rangle\langle+|+\rangle\langle-|-|+\rangle\langle-|-\rangle\langle+|+|-\rangle\langle+|+\rangle\langle-|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{y}\right\} =\frac{i\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|-|+\rangle\langle+|+|-\rangle\langle-|\right)=\frac{i\hbar^{2}}{4}\left(0\right)=0\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies\left\{ S_{x},S_{y}\right\} =0\text{.}\label{eq:11}
+\end{equation}
+
+\end_inset
+
+Pero 
+\begin_inset Formula $\left\{ S_{x},S_{y}\right\} =\left\{ S_{y},S_{x}\right\} $
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula 
+\begin{equation}
+\left\{ S_{y},S_{x}\right\} =0\text{.}\label{eq:12}
+\end{equation}
+
+\end_inset
+
+Ahora bien, para 
+\begin_inset Formula $\left\{ S_{x},S_{z}\right\} $
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\left\{ S_{x},S_{z}\right\} =S_{x}S_{z}+S_{z}S_{x}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{z}\right\} =\frac{\hbar^{2}}{4}\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)+\frac{\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{z}\right\} =\frac{\hbar^{2}}{4}\left(-|+\rangle\langle-|-\rangle\langle-|+|-\rangle\langle+|+\rangle\langle+|+|+\rangle\langle+|+\rangle\langle-|-|-\rangle\langle-|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\implies\left\{ S_{x},S_{z}\right\} =\frac{\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|+|+\rangle\langle-|-|-\rangle\langle+|\right)=\frac{\hbar^{2}}{4}\left(0\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies\left\{ S_{x},S_{z}\right\} =0\text{.}\label{eq:13}
+\end{equation}
+
+\end_inset
+
+Y nuevamente, por las propiedades del anticonmutador, tenemos que 
+\begin_inset Formula 
+\begin{equation}
+\left\{ S_{z},S_{x}\right\} =0\text{.}\label{eq:14}
+\end{equation}
+
+\end_inset
+
+Finalmente, para 
+\begin_inset Formula $\left\{ S_{y},S_{z}\right\} $
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\left\{ S_{y},S_{z}\right\} =S_{y}S_{z}+S_{z}S_{y}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{y},S_{z}\right\} =i\frac{\hbar^{2}}{4}\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\left(|+\rangle\langle+|-|-\rangle\langle-|\right)+i\frac{\hbar^{2}}{4}\left(|+\rangle\langle+|-|-\rangle\langle-|\right)\left(-|+\rangle\langle-|+|-\rangle\langle+|\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{y},S_{z}\right\} =i\frac{\hbar^{2}}{4}\left(|+\rangle\langle-|-\rangle\langle-|+|-\rangle\langle+|+\rangle\langle+|-|+\rangle\langle+|+\rangle\langle-|-|-\rangle\langle-|-\rangle\langle+|\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\{ S_{y},S_{z}\right\} =i\frac{\hbar^{2}}{4}\left(|+\rangle\langle-|+|+\rangle\langle-|-\rangle\langle+|-|+\rangle\langle-|-|-\rangle\langle+|\right)=i\frac{\hbar^{2}}{4}\left(0\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies\left\{ S_{y},S_{z}\right\} =0\text{.}\label{eq:15}
+\end{equation}
+
+\end_inset
+
+Y por lo tanto 
+\begin_inset Formula 
+\begin{equation}
+\left\{ S_{z},S_{y}\right\} =0\text{.}\label{eq:16}
+\end{equation}
+
+\end_inset
+
+Ahora bien, si juntamos los resultados dados por las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:08"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:09"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ , tenemos que 
+\begin_inset Formula 
+\[
+\left\{ S_{i},S_{j}\right\} =\frac{\hbar^{2}}{2}\delta_{ij}\text{.}
+\]
+
+\end_inset
+
+justo como se queria demostrar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un sistema de dos estados se caracteriza por el Hamiltoniano 
+\begin_inset Formula 
+\[
+H=H_{11}|1\rangle\langle1|+H_{22}|2\rangle\langle2|+H_{12}\left[|1\rangle\langle2|+|2\rangle\langle1|\right]\text{,}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $H_{11}\text{,}H_{22}$
+\end_inset
+
+ y 
+\begin_inset Formula $H_{12}$
+\end_inset
+
+ son número reales con unidades de energía y 
+\begin_inset Formula $|1\rangle$
+\end_inset
+
+ y 
+\begin_inset Formula $|2\rangle$
+\end_inset
+
+son eigenkets de algún observable 
+\begin_inset Formula $\left(\neq H\right)$
+\end_inset
+
+.
+ Encuentra los autoestados de energía y sus correspondientes autovalores
+ de energía.
+ Asegurate que tu resultado tenga sentido para 
+\begin_inset Formula $H_{12}=0$
+\end_inset
+
+.
+ Puedes usar 
+\begin_inset Formula 
+\[
+\mathbf{S}\cdot\hat{\mathbf{n}}|\hat{\mathbf{n}};+\rangle=\frac{\hbar}{2}|\hat{\mathbf{n}};+\rangle\text{,}
+\]
+
+\end_inset
+
+con 
+\begin_inset Formula $|\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+ dado por 
+\begin_inset Formula 
+\[
+|\hat{\mathbf{n}};+\rangle=\cos\left(\frac{\beta}{2}\right)|+\rangle+\sin\left(\frac{\beta}{2}\right)\exp\left(i\alpha\right)|-\rangle
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\beta$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ son los ángulos polar y azimutal que definen a 
+\begin_inset Formula $\text{\ensuremath{\mathbf{\hat{n}}}}$
+\end_inset
+
+, respectivamente.
+ .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+En términos matriciales, el operador 
+\begin_inset Formula $H$
+\end_inset
+
+ esta escrito como 
+\begin_inset Formula 
+\[
+H=\left(\begin{array}{cc}
+H_{11} & H_{12}\\
+H_{21} & H_{22}
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+Ahora bien, dado que nos están diciendo que podemos usar 
+\begin_inset Formula $\mathbf{S}\cdot\hat{\mathbf{n}}|\hat{\mathbf{n}};+\rangle=\frac{\hbar}{2}|\hat{\mathbf{n}};+\rangle$
+\end_inset
+
+, intentemos escribir la matriz anterior en términos de las matrices de
+ Pauli, las cuales estan dadas por 
+\begin_inset Formula 
+\[
+\sigma_{x}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right),\ \ \sigma_{y}=\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right),\ \ \sigma_{z}=\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+Entonces, queremos que 
+\begin_inset Formula 
+\[
+H=a\mathbb{I}+b\sigma_{z}+c\sigma_{x}+d\sigma_{y}\text{,}
+\]
+
+\end_inset
+
+ es claro que 
+\begin_inset Formula $d=0$
+\end_inset
+
+, mientras que 
+\begin_inset Formula $c=H_{12}$
+\end_inset
+
+, de manera que tenemos que resolver el siguiente sistema 
+\begin_inset Formula 
+\[
+H_{11}=a+b\text{,}\ \ \&\ \ H_{22}=a-b\text{,}
+\]
+
+\end_inset
+
+de tal manera que, sumando y restando, tenemos 
+\begin_inset Formula 
+\[
+a=\frac{H_{11}+H_{22}}{2}\ \ \ \&\ \ \ b=\frac{H_{11}-H_{22}}{2}\text{.}
+\]
+
+\end_inset
+
+Con lo cual, tenemos que 
+\begin_inset Formula 
+\[
+H=a\mathbb{I}+b\sigma_{z}+c\sigma_{x}\text{,}
+\]
+
+\end_inset
+
+o bien 
+\begin_inset Formula 
+\[
+H=A+B\text{,}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{cc}
+\frac{H_{11}+H_{22}}{2} & 0\\
+0 & \frac{H_{11}+H_{22}}{2}
+\end{array}\right)\ \ \ \&\ \ \ B=\left(\begin{array}{cc}
+\frac{H_{11}-H_{22}}{2} & H_{12}\\
+H_{12} & \frac{H_{11}-H_{22}}{2}
+\end{array}\right)\text{.}
+\]
+
+\end_inset
+
+ Ahora bien, usando la siguiente propiedad 
+\begin_inset Formula 
+\[
+\det\left(A^{\prime}+B\right)=\det\left(A^{\prime}\right)+\det\left(B\right)+\det\left(A^{\prime}\right)Tr\left(\left(A^{\prime}\right)^{-1}B\right)\text{,}
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula 
+\[
+0=\det\left(A-\lambda\mathbb{I}\right)+\det\left(B\right)+\det\left(A-\lambda\mathbb{I}\right)Tr\left(\left(A-\lambda\mathbb{I}\right)^{-1}B\right)\text{,}
+\]
+
+\end_inset
+
+pero notemos que el tercer termino en la ecuación anterior es cero, ya que
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ tiene traza cero.
+ De manera que 
+\begin_inset Formula 
+\[
+0=\det\left(A-\lambda\mathbb{I}\right)+\det\left(B\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies0=\left(\frac{H_{11}+H_{22}}{2}-\lambda\right)^{2}-\left(\frac{H_{11}-H_{22}}{2}\right)^{2}-\left(H_{12}\right)^{2}\implies\left(\frac{H_{11}+H_{22}}{2}-\lambda\right)^{2}=\left(\frac{H_{11}-H_{22}}{2}\right)^{2}+\left(H_{12}\right)^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{H_{11}+H_{22}}{2}-\lambda=\sqrt{\left(\frac{H_{11}-H_{22}}{2}\right)^{2}+\left(H_{12}\right)^{2}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\lambda_{\pm}=\frac{H_{11}+H_{22}}{2}\pm\sqrt{\left(\frac{H_{11}-H_{22}}{2}\right)^{2}+\left(H_{12}\right)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que los eigenkets, deben estar dados por 
+\begin_inset Formula 
+\[
+\left|\lambda_{+}\right\rangle =\cos\left(\frac{\beta}{2}\right)\left|1\right\rangle +\sin\left(\frac{\beta}{2}\right)\left|2\right\rangle \ \ \ \&\ \ \ \left|\lambda_{-}\right\rangle =-\sin\left(\frac{\beta}{2}\right)\left|1\right\rangle +\cos\left(\frac{\beta}{2}\right)\left|2\right\rangle \text{,}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=\frac{2H_{12}}{H_{11}-H_{22}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Evalúa el producto de incertidumbre 
+\begin_inset Formula $x-p$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle \left(\Delta x\right)^{2}\right\rangle \left\langle \left(\Delta p\right)^{2}\right\rangle $
+\end_inset
+
+ para una partícula unidimensional confinada entre dos paredes rígidas.
+ Hazlo para el estado base y para los estados excitados.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+En este caso, el potencial esta dado por 
+\begin_inset Formula 
+\[
+V=\left\{ \begin{array}{cc}
+0 & 0<x<a\\
+\infty & \text{cualquier otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+Y sabemos que para este problema, las funciones de onda están dadas por
+ la siguiente expresión 
+\begin_inset Formula 
+\[
+\left\langle x\right|\left.n\right\rangle =\psi_{n}\left(x\right)=\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)\text{,}\ \ \ n\in\mathbb{N}\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos que las dispersiones de 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $p$
+\end_inset
+
+ están dadas por 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle =\left\langle x^{2}\right\rangle -\left\langle x\right\rangle ^{2}\text{, y }\left\langle \left(\Delta p\right)^{2}\right\rangle =\left\langle p^{2}\right\rangle -\left\langle p\right\rangle ^{2}\text{.}
+\]
+
+\end_inset
+
+De manera que tenemos que calcular los valores esperados para 
+\begin_inset Formula $x^{2},x,p^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Por definición 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle _{n}=\left\langle n\right|x\left|n\right\rangle =\int_{0}^{a}dx\psi_{n}^{*}\left(x\right)x\psi_{n}\left(x\right)=\int_{0}^{a}dx\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)x\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle _{n}=\frac{2}{a}\int_{0}^{a}dx\sin^{2}\left(\frac{n\pi x}{a}\right)x\text{¸}
+\]
+
+\end_inset
+
+al hacer la integral anterior, obtenemos el siguiente resultado 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle _{n}=\frac{2}{a}\left[\frac{x^{2}}{4}-\frac{a^{2}\cos\left(\frac{2n\pi x}{a}\right)}{8n^{2}\pi^{2}}-\frac{ax\sin\left(\frac{2n\pi x}{a}\right)}{4n\pi}\right]_{0}^{a}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle _{n}=\frac{1}{a}\text{\left[\frac{a^{2}}{2}-\frac{a^{2}\cos\left(2n\pi\right)}{4n\pi^{2}}-\frac{a^{2}\sin\left(2n\pi\right)}{2n\pi}+\frac{a^{2}}{4n\pi^{2}}\right],}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $\cos\left(2n\pi\right)=1$
+\end_inset
+
+ y 
+\begin_inset Formula $\sin\left(2n\pi\right)=0$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle _{n}=\frac{1}{a}\text{\left[\frac{a^{2}}{2}-\frac{a^{2}}{4n^{2}\pi^{2}}+\frac{a^{2}}{4n^{2}\pi^{2}}\right]=\ensuremath{\frac{a}{2}},}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left\langle x\right\rangle _{n}=\frac{a}{2}
+\end{equation}
+
+\end_inset
+
+Por otra parte, para 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula 
+\[
+\left\langle x^{2}\right\rangle _{n}=\int_{0}^{a}dx\psi_{n}^{*}\left(x\right)x^{2}\psi_{n}\left(x\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x^{2}\right\rangle _{n}=\int_{0}^{a}dx\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)x^{2}\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)=\frac{2}{a}\int_{0}^{a}dx\sin^{2}\left(\frac{n\pi x}{a}\right)x^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x^{2}\right\rangle _{n}=\frac{2}{a}\int_{0}^{a}dx\sin^{2}\left(\frac{n\pi x}{a}\right)x^{2}\text{.}
+\]
+
+\end_inset
+
+Haciendo la integral, obtenemos 
+\begin_inset Formula 
+\[
+\left\langle x^{2}\right\rangle _{n}=\frac{2}{a}\left[\frac{x^{3}}{6}-\frac{a^{2}x\cos\left(\frac{2n\pi x}{a}\right)}{4n^{2}\pi^{2}}-\frac{a\left(-a^{2}+2n^{2}\pi^{2}x^{2}\right)\sin\left(\frac{2n\pi x}{a}\right)}{8n^{3}\pi^{3}}\right]_{_{0}}^{a}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x^{2}\right\rangle _{n}=\frac{1}{a}\left[\frac{a^{3}}{3}-\frac{a^{3}\cos\left(2n\pi\right)}{2n^{2}\pi^{2}}\right]=\frac{a^{3}}{a}\left[\frac{1}{3}-\frac{1}{2n^{2}\pi^{2}}\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\implies\left\langle x^{2}\right\rangle _{n}=a^{2}\left[\frac{1}{3}-\frac{1}{2n^{2}\pi^{2}}\right]\text{.}
+\end{equation}
+
+\end_inset
+
+Por lo tanto, 
+\begin_inset Formula $\left\langle \left(\Delta x\right)^{2}\right\rangle $
+\end_inset
+
+ queda escrito como 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle =\left\langle x^{2}\right\rangle -\left\langle x\right\rangle ^{2}=a^{2}\left[\frac{1}{3}-\frac{1}{2n^{2}\pi^{2}}\right]-\left(\frac{a}{2}\right)^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \left(\Delta x\right)^{2}\right\rangle =a^{2}\left[\frac{1}{3}-\frac{1}{2n^{2}\pi^{2}}-\frac{1}{4}\right]\text{=a^{2}\left[\frac{1}{12}-\frac{1}{2n^{2}\pi^{2}}\right]=\ensuremath{\frac{a^{2}}{6}}\left[\frac{1}{2}-\frac{6}{2n^{2}\pi^{2}}\right]=\ensuremath{\frac{a^{2}}{6}}\left[\frac{1}{2}-\frac{3}{3n^{2}\pi^{2}}\right],}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left\langle \left(\Delta x\right)^{2}\right\rangle =\ensuremath{\frac{a^{2}}{6}}\left[\frac{1}{2}-\frac{3}{3n^{2}\pi^{2}}\right]\text{.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mientras que para 
+\begin_inset Formula $p$
+\end_inset
+
+, sabemos que esta dado por 
+\begin_inset Formula $p=\frac{\hbar}{i}\frac{d}{dx}$
+\end_inset
+
+(ya que estamos solamente en una dimensión).
+ Entonces 
+\begin_inset Formula 
+\[
+\left\langle p\right\rangle _{n}=\int_{0}^{a}dx\psi_{n}^{*}\left(x\right)\left(\frac{\hbar}{i}\frac{d}{dx}\right)\psi_{n}\left(x\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle p\right\rangle _{n}=\int_{0}^{a}dx\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)\left(\frac{\hbar}{i}\frac{d}{dx}\right)\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)=\frac{2}{a}\frac{\hbar}{i}\int_{0}^{a}dx\sin\left(\frac{n\pi x}{a}\right)\frac{d}{dx}\left(\sin\left(\frac{n\pi x}{a}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle p\right\rangle _{n}=\frac{2}{a}\frac{\hbar}{i}\int_{0}^{a}dx\sin\left(\frac{n\pi x}{a}\right)\cos\left(\frac{n\pi x}{a}\right)\text{,}
+\]
+
+\end_inset
+
+pero por la ortogonalidad de las funciones base, tenemos que la integral
+ anterior es cero.
+ Esto es 
+\begin_inset Formula 
+\begin{equation}
+\left\langle p\right\rangle _{n}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora bien, para 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+tenemos 
+\begin_inset Formula 
+\[
+\left\langle p^{2}\right\rangle _{n}=\int_{0}^{a}dx\psi_{n}^{*}\left(x\right)\left(\frac{\hbar}{i}\frac{d}{dx}\right)^{2}\psi_{n}\left(x\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle p^{2}\right\rangle _{n}=\int_{0}^{a}dx\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)\left(\frac{\hbar^{2}}{i^{2}}\frac{d^{2}}{dx^{2}}\right)\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right)=-\frac{2\hbar^{2}}{a}\int_{0}^{a}dx\sin\left(\frac{n\pi x}{a}\right)\frac{d^{2}}{dx^{2}}\left(\sin\left(\frac{n\pi x}{a}\right)\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle p^{2}\right\rangle _{n}=-\frac{2\hbar^{2}}{a}\int_{0}^{a}dx\sin\left(\frac{n\pi x}{a}\right)\left(-\sin\left(\frac{n\pi x}{a}\right)\left(\frac{n\pi}{a}\right)^{2}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle p^{2}\right\rangle _{n}=\frac{2\hbar^{2}n^{2}\pi^{2}}{a^{3}}\int_{0}^{a}dx\sin^{2}\left(\frac{n\pi x}{a}\right)\text{,}
+\]
+
+\end_inset
+
+Evaluando la integral anterior, tenemos que 
+\begin_inset Formula 
+\[
+\left\langle p^{2}\right\rangle _{n}=\frac{2\hbar^{2}n^{2}\pi^{2}}{a^{3}}\left[\frac{x}{2}-\frac{a\sin\left(\frac{2n\pi x}{a}\right)}{4n\pi}\right]_{0}^{a}=\frac{2\hbar^{2}n^{2}\pi^{2}}{a^{3}}\left[\frac{a}{2}\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle p^{2}\right\rangle _{n}=\frac{\hbar^{2}n^{2}\pi^{2}}{a^{2}}\text{,}
+\]
+
+\end_inset
+
+con lo cual, tenemos 
+\begin_inset Formula 
+\begin{equation}
+\left\langle \left(\Delta p\right)^{2}\right\rangle =\frac{\hbar^{2}n^{2}\pi^{2}}{a^{2}}\text{.}
+\end{equation}
+
+\end_inset
+
+Y por lo tanto, 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle \left\langle \left(\Delta p\right)^{2}\right\rangle =\ensuremath{\frac{a^{2}}{6}}\left[\frac{1}{2}-\frac{3}{3n^{2}\pi^{2}}\right]\frac{\hbar^{2}n^{2}\pi^{2}}{a^{2}}=\frac{\hbar^{2}n^{2}\pi^{2}}{6}\left[\frac{1}{2}-\frac{3}{3n^{2}\pi^{2}}\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\therefore\left\langle \left(\Delta x\right)^{2}\right\rangle \left\langle \left(\Delta p\right)^{2}\right\rangle =\frac{\hbar^{2}n^{2}\pi^{2}}{6}\left[\frac{1}{2}-\frac{3}{3n^{2}\pi^{2}}\right]\text{.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera un espacio ket tridimensional.
+ Si un cierto conjunto de kets ortonormales (digamos 
+\begin_inset Formula $|1\rangle\text{,}|2\rangle\text{ y }|3\rangle$
+\end_inset
+
+) son usados como una base de kets, los operadores 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ están representados por 
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{ccc}
+a & 0 & 0\\
+0 & -a & 0\\
+0 & 0 & -a
+\end{array}\right)
+\]
+
+\end_inset
+
+y
+\begin_inset Formula 
+\[
+B=\left(\begin{array}{ccc}
+b & 0 & 0\\
+0 & 0 & -ib\\
+0 & ib & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+con 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ reales.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+\begin_inset Formula $A$
+\end_inset
+
+ exhibe un espectro degenerado.
+ ¿
+\begin_inset Formula $B$
+\end_inset
+
+ también?.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Muestre que 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ conmutan.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Encuentra un nuevo conjunto de kets ortonormales que son eigenkets simultaneamen
+te para 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Especifica los autovalores de cada uno de los eigenkets.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ Calculemos el espectro de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Dado que queremos encontrar el conjunto de valore propios asociados a la
+ matriz 
+\begin_inset Formula $B$
+\end_inset
+
+, tenemos que resolver una ecuación de la forma 
+\begin_inset Formula 
+\[
+det\left(B-\lambda\mathbb{I}\right)=0\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff det\left(\left(\begin{array}{ccc}
+b & 0 & 0\\
+0 & 0 & -ib\\
+0 & ib & 0
+\end{array}\right)-\lambda\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\right)=det\left(\left(\begin{array}{ccc}
+b-\lambda & 0 & 0\\
+0 & -\lambda & -ib\\
+0 & ib & -\lambda
+\end{array}\right)\right)0\text{,}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\left(b-\lambda\right)\left[\left(-\lambda\right)\left(-\lambda\right)-\left(-ib\right)ib\right]=0\implies\left(b-\lambda\right)\left[\lambda^{2}-b^{2}\right]=0\text{,}
+\]
+
+\end_inset
+
+por lo tanto, 
+\begin_inset Formula $\lambda_{1}=b$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{2,3}=\pm b$
+\end_inset
+
+ son los valores propios, de manera que sí, el espectro de 
+\begin_inset Formula $B$
+\end_inset
+
+ es degenerado, ya que tenemos un valor propio de multiplicidad dos.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ Veámos que 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ conmutan 
+\begin_inset Formula 
+\[
+AB=\left(\begin{array}{ccc}
+a & 0 & 0\\
+0 & -a & 0\\
+0 & 0 & -a
+\end{array}\right)\left(\begin{array}{ccc}
+b & 0 & 0\\
+0 & 0 & -ib\\
+0 & ib & 0
+\end{array}\right)=\left(\begin{array}{ccc}
+ab & 0 & 0\\
+0 & 0 & iab\\
+0 & -iab & 0
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+por otra parte 
+\begin_inset Formula 
+\[
+BA=\left(\begin{array}{ccc}
+b & 0 & 0\\
+0 & 0 & -ib\\
+0 & ib & 0
+\end{array}\right)\left(\begin{array}{ccc}
+a & 0 & 0\\
+0 & -a & 0\\
+0 & 0 & -a
+\end{array}\right)=\left(\begin{array}{ccc}
+ba & 0 & 0\\
+0 & 0 & iba\\
+0 & -iba & 0
+\end{array}\right)\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ son número y éstos conmutan, de manera que 
+\begin_inset Formula 
+\[
+AB=BA\text{.}
+\]
+
+\end_inset
+
+
+\series bold
+c)
+\series default
+ Como 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son observables compatibles, los eigenkets de 
+\begin_inset Formula $A$
+\end_inset
+
+ también son eigenkets de 
+\begin_inset Formula $B$
+\end_inset
+
+ y viceversa, así que una manera de obtener un conjunto de eigenkets simultaneos
+ para 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ es encontrar los eigenkets de 
+\begin_inset Formula $B$
+\end_inset
+
+, para lo cual resolvemos la ecuación matricial 
+\begin_inset Formula 
+\[
+\left(B-\lambda_{1}\right)\mathbf{x}=\mathbf{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+12345
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+a) Verifica 
+\begin_inset Formula 
+\[
+\left[x_{i},G\left(\mathbf{p}\right)\right]=i\hbar\frac{\partial G}{\partial p_{i}}\text{,}\ \ \ \ \ \left[p_{i},F\left(\mathbf{x}\right)\right]=-i\hbar\frac{\partial F}{\partial x_{i}}\text{.}
+\]
+
+\end_inset
+
+b) Evalúa 
+\begin_inset Formula $\left[x^{2},p^{2}\right]$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ Desarrollemos en serie de Taylor 
+\begin_inset Formula $G\left(\mathbf{p}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G\left(\mathbf{p}\right)=\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}\text{,}
+\]
+
+\end_inset
+
+ de manera que 
+\begin_inset Formula 
+\[
+\left[x_{i},G\left(\mathbf{p}\right)\right]=x_{i}\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}-\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}x_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[x_{i},G\left(\mathbf{p}\right)\right]=\sum_{n=0}^{\infty}\frac{1}{n!}x_{i}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}-\frac{1}{n!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}x_{i}=\sum_{n=0}^{\infty}\frac{1}{n!}\left(x_{i}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}-\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}x_{i}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[x_{i},G\left(\mathbf{p}\right)\right]=\sum_{n=0}^{\infty}\frac{1}{n!}\left[x_{i},\left(\frac{\partial G}{\partial p_{j}}\right)^{n}p_{j}^{n}\right]=\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}\left[x_{i},p_{j}^{n}\right]\text{.}
+\]
+
+\end_inset
+
+Pero 
+\begin_inset Formula $\left[x_{i},p_{j}^{n}\right]=ni\hbar\delta_{ij}p_{j}^{n-1}$
+\end_inset
+
+, en efecto 
+\begin_inset Formula 
+\[
+\left[x_{i},p_{j}^{n}\right]=x_{i}p_{j}^{n}-p_{j}^{n}x_{i}=x_{i}p_{j}p_{j}^{n-1}-p_{j}^{n}x_{i}\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+x_{i}p_{j}=i\hbar\delta_{ij}+p_{j}x_{i}\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+\left[x_{i},p_{j}^{n}\right]=\left(i\hbar\delta_{ij}+p_{j}x_{i}\right)p_{j}^{n-1}-p_{j}^{n}x_{i}=i\hbar p_{j}^{n-1}\delta_{ij}+p_{j}x_{i}p_{j}^{n-1}-p_{j}^{n}x_{i}\text{,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\implies\left[x_{i},p_{j}^{n}\right]=i\hbar p_{j}^{n-1}\delta_{ij}+p_{j}x_{i}p_{j}p_{j}^{n-2}-p_{j}^{n}x_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[x_{i},p_{j}^{n}\right]=i\hbar p_{j}^{n-1}\delta_{ij}+p_{j}\left(i\hbar\delta_{ij}+p_{j}x_{i}\right)p_{j}^{n-2}-p_{j}^{n}x_{i}=i\hbar p_{j}^{n-1}\delta_{ij}+i\hbar p_{j}^{n-1}\delta_{ij}+p_{j}^{2}x_{i}p_{j}^{n-2}-p_{j}^{n}x_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[x_{i},p_{j}^{n}\right]=2i\hbar p_{j}^{n-1}\delta_{ij}+p_{j}^{2}x_{i}p_{j}^{n-2}-p_{j}^{n}x_{i}\text{,}
+\]
+
+\end_inset
+
+procediendo así, de manera sucesiva, tenemos 
+\begin_inset Formula 
+\[
+\left[x_{i},p_{j}^{n}\right]=ni\hbar\delta_{ij}p_{j}^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que usando el resultado anterior, tenemos que 
+\begin_inset Formula 
+\[
+\left[x_{i},G\left(\mathbf{p}\right)\right]=\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}ni\hbar\delta_{ij}p_{j}^{n-1}=i\hbar\sum_{n=0}^{\infty}\frac{1}{\left(n-1\right)!}\left(\frac{\partial G}{\partial p_{j}}\right)^{n}\delta_{ij}p_{j}^{n-1}=i\hbar\frac{\partial G\left(\mathbf{p}\right)}{\partial p_{i}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left[x_{i},G\left(\mathbf{p}\right)\right]=i\hbar\frac{\partial G\left(\mathbf{p}\right)}{\partial p_{i}}\text{.}
+\]
+
+\end_inset
+
+Ahora bien, procediendo de la misma manera para 
+\begin_inset Formula $\left[p_{i},F\left(\mathbf{x}\right)\right]=-i\hbar\frac{\partial F}{\partial x_{i}}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+F\left(\mathbf{x}\right)=\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[p_{i},F\left(\mathbf{x}\right)\right]=p_{i}\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}-\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}p_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[p_{i},F\left(\mathbf{x}\right)\right]=\sum_{n=0}^{\infty}\frac{1}{n!}p_{i}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}-\frac{1}{n!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}p_{i}=\sum_{n=0}^{\infty}\frac{1}{n!}\left(p_{i}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}-\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}p_{i}\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[p_{i},F\left(\mathbf{x}\right)\right]=\sum_{n=0}^{\infty}\frac{1}{n!}\left[p_{i},\left(\frac{\partial F}{\partial x_{j}}\right)^{n}x_{j}^{n}\right]=\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}\left[p_{i},x_{j}^{n}\right]\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $\left[p_{i},x_{j}^{n}\right]=-ni\hbar\delta_{ij}x_{j}^{n-1}$
+\end_inset
+
+.
+ En efecto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[p_{i},x_{j}^{n}\right]=p_{i}x_{j}^{n}-x_{j}^{n}p_{i}=p_{i}x_{j}x_{j}^{n-1}-x_{j}^{n}p_{i}=\left(x_{i}p_{j}-i\hbar\delta_{ij}\right)x_{j}^{n-1}-x_{j}^{n}p_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[p_{i},x_{j}^{n}\right]=-i\hbar\delta_{ij}x_{j}^{n-1}+x_{i}p_{j}x_{j}^{n-1}-x_{j}^{n}p_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[p_{i},x_{j}^{n}\right]=-i\hbar\delta_{ij}x_{j}^{n-1}+x_{i}p_{j}x_{j}x_{j}^{n-2}-x_{j}^{n}p_{i}=-i\hbar\delta_{ij}x_{j}^{n-1}+x_{i}\left(x_{i}p_{j}-i\hbar\delta_{ij}\right)x_{j}^{n-2}-x_{j}^{n}p_{i}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[p_{i},x_{j}^{n}\right]=-2i\hbar\delta_{ij}x_{j}^{n-1}+x_{i}^{2}p_{j}x_{j}^{n-2}-x_{j}^{n}p_{i}\text{,}
+\]
+
+\end_inset
+
+y nuevamente, procediendo secuencialemente, como para el caso anterior,
+ tenemos que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[p_{i},x_{j}^{n}\right]=-ni\hbar\delta_{ij}x_{j}^{n-1}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que usando el resultado anterior, tenemos 
+\begin_inset Formula 
+\[
+\left[p_{i},F\left(\mathbf{x}\right)\right]=\sum_{n=0}^{\infty}\frac{1}{n!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}\left(-ni\hbar\delta_{ij}\right)x_{j}^{n-1}=-i\hbar\sum_{n=0}^{\infty}\frac{1}{\left(n-1\right)!}\left(\frac{\partial F}{\partial x_{j}}\right)^{n}\delta_{ij}x_{j}^{n-1}=i\hbar\frac{\partial F\left(\mathbf{x}\right)}{\partial x_{i}}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left[p_{i},F\left(\mathbf{x}\right)\right]=-i\hbar\frac{\partial F\left(\mathbf{p}\right)}{\partial x_{i}}\text{.}
+\]
+
+\end_inset
+
+
+\series bold
+b)
+\series default
+ Ahora bien, calculemos 
+\begin_inset Formula $\left[x^{2},p^{2}\right]$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[x^{2},p^{2}\right]=x^{2}p^{2}-p^{2}x^{2}=x^{2}pp-ppx^{2}=\left[x^{2},p\right]p+p\left[x^{2},p\right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[x^{2},p^{2}\right]=-\left[p,x^{2}\right]p-p\left[p,x^{2}\right]=i\hbar\frac{\partial x^{2}}{\partial x}p+\text{i\ensuremath{\hbar}\ensuremath{\frac{\partial x^{2}}{\partial x}=i\hbar\left(xp+px\right)\text{,}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left[x^{2},p^{2}\right]=i\hbar\left\{ x,p\right\} \text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

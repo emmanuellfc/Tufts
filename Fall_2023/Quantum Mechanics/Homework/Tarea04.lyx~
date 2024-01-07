@@ -1,0 +1,1345 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea N
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 30/04/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Muestra que para un oscilador armónico simple unidimensional 
+\begin_inset Formula 
+\[
+\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\exp\left[\frac{-k^{2}}{2}\left\langle 0|x^{2}|0\right\rangle \right]
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $x$
+\end_inset
+
+ es el operador de posición.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+En terminos de los operadores de aniquilación y de creación, tenemos que
+ 
+\begin_inset Formula 
+\[
+x=\sqrt{\frac{\hbar}{2m\omega}}\left(a+a^{\dagger}\right)\implies x^{2}=\frac{\hbar}{2m\omega}\left(a^{2}+aa^{\dagger}+a^{\dagger}a+\left(a^{\dagger}\right)^{2}\right)\text{,}
+\]
+
+\end_inset
+
+de manera que el valor esperado en el estado base, esta dado por 
+\begin_inset Formula 
+\[
+\left\langle 0|x^{2}|0\right\rangle =\frac{\hbar}{2m\omega}\left(\left\langle 0|a^{2}|0\right\rangle +\left\langle 0|aa^{\dagger}|0\right\rangle +\left\langle 0|a^{\dagger}a|0\right\rangle +\left\langle 0|\left(a^{\dagger}\right)^{2}|0\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle 0|x^{2}|0\right\rangle =\frac{\hbar}{2m\omega}\implies\exp\left[\frac{-k^{2}}{2}\left\langle 0|x^{2}|0\right\rangle \right]=\exp\left[-\frac{\hbar k^{2}}{4m\omega}\right]\text{.}
+\]
+
+\end_inset
+
+Mientras que para la otra parte, tenemos que 
+\begin_inset Formula 
+\[
+\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\int dx^{\prime}\left\langle 0|\exp\left[ikx\right]\left|x^{\prime}\right\rangle \left\langle x^{\prime}\right|0\right\rangle =\int dx^{\prime}\exp\left[ikx^{\prime}\right]\left\langle 0\left|x^{\prime}\right\rangle \left\langle x^{\prime}\right|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\int dx^{\prime}\exp\left[ikx^{\prime}\right]\left|\left\langle x^{\prime}|0\right\rangle \right|^{2}\text{.}
+\]
+
+\end_inset
+
+Pero para el oscilador armónico, tenemos que 
+\begin_inset Formula $\left|\left\langle x^{\prime}|0\right\rangle \right|^{2}=\sqrt{\frac{m\omega}{\pi\hbar}}\exp\left[-m\omega\left(x^{\prime}\right)^{2}\right]$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\sqrt{\frac{m\omega}{\pi\hbar}}\int dx^{\prime}\exp\left[ikx^{\prime}\right]\exp\left[-m\omega\left(x^{\prime}\right)^{2}\right]\text{.}
+\]
+
+\end_inset
+
+Si ahora hacemos los siguientes cambios de variable 
+\begin_inset Formula 
+\[
+x^{\prime}=u\sqrt{\frac{\hbar}{m\omega}}\implies-u^{2}+iku\sqrt{\frac{\hbar}{m\omega}}=-\left(u-i\frac{k}{2}\sqrt{\frac{\hbar}{m\omega}}\right)-\hbar\frac{k^{2}}{4m\omega}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=u-i\frac{k}{2}\sqrt{\frac{\hbar}{m\omega}}\text{,}
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula 
+\[
+\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\sqrt{\frac{m\omega}{\pi\hbar}}\sqrt{\frac{\hbar}{m\omega}}\exp\left[\frac{-\hbar k^{2}}{4m\omega}\right]\int dz\exp\left[-z^{2}\right]=\frac{1}{\sqrt{\pi}}\exp\left[\frac{-\hbar k^{2}}{4m\omega}\right]\sqrt{\pi}\text{,}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\exp\left[\frac{-\hbar k^{2}}{4m\omega}\right]=\exp\left[\frac{-k^{2}}{2}\left\langle 0|x^{2}|0\right\rangle \right]
+\]
+
+\end_inset
+
+y por lo tanto 
+\begin_inset Formula 
+\[
+\left\langle 0|\exp\left[ikx\right]|0\right\rangle =\exp\left[\frac{-k^{2}}{2}\left\langle 0|x^{2}|0\right\rangle \right]\text{,}
+\]
+
+\end_inset
+
+justo como se queria demostrar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un estado coherente de un oscilador armónico simple unidimensional está
+ definido por ser un eigenestado del operador de aniquilación (no Hermitiano)
+ 
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\lambda\left|\lambda\right\rangle 
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es en general, un número complejo.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Demuestra que 
+\begin_inset Formula 
+\[
+\left|\lambda\right\rangle =\exp\left[-\left|\lambda\right|^{2}\right]\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle 
+\]
+
+\end_inset
+
+es un estado normalizado coherente.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Muestra la relación de incertidumbre mı́nima para tal estado.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Escribe 
+\begin_inset Formula $\left|\lambda\right\rangle $
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\lambda\right\rangle =\sum_{n=0}^{\infty}f\left(n\right)\left|n\right\rangle \text{.}
+\]
+
+\end_inset
+
+Muestra que la distribución de 
+\begin_inset Formula $\left|f\left(n\right)\right|^{2}$
+\end_inset
+
+ con respecto a 
+\begin_inset Formula $n$
+\end_inset
+
+ es de la forma de Poisson.
+ Encuentra el valor más probable de 
+\begin_inset Formula $n$
+\end_inset
+
+, por lo tanto de 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Muestra que un estado coherente se puede obtener también aplicando el operador
+ de translación 
+\begin_inset Formula $\exp\left[-ipl/\hbar\right]$
+\end_inset
+
+ (desplazamiento finito) (donde 
+\begin_inset Formula $p$
+\end_inset
+
+ es el operador momento y 
+\begin_inset Formula $l$
+\end_inset
+
+ la distancia desplazada) al estado base.
+ .
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Para demostrar que el estado dado es un estado coherente, dedemos demostrar
+ que cumple con la ecuación de eigenvalores.
+ En efecto 
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =a\exp\left[-\left|\lambda\right|^{2}\right]\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle =a\left|\lambda\right\rangle =\exp\left[-\left|\lambda\right|^{2}\right]a\left(\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+pero podemos desarrollar en serie de potencias a la exponencial de la siguiente
+ forma 
+\begin_inset Formula 
+\[
+\exp\left[\lambda a^{\dagger}\right]=\sum_{n=0}^{\infty}\frac{\lambda^{n}}{n!}\left(a^{\dagger}\right)^{n}\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]a\left(\sum_{n=0}^{\infty}\frac{\lambda^{n}}{n!}\left(a^{\dagger}\right)^{n}\left|0\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $\left(a^{\dagger}\right)^{n}\left|0\right\rangle =\sqrt{n!}\left|n\right\rangle $
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]a\left(\sum_{n=0}^{\infty}\frac{\lambda^{n}}{n!}\sqrt{n!}\left|n\right\rangle \right)=\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\left(\sum_{n=0}^{\infty}\frac{\lambda^{n}}{\sqrt{n!}}a\left|n\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $a\left|n\right\rangle =\sqrt{n}\left|n-1\right\rangle $
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]a\left(\sum_{n=0}^{\infty}\frac{\lambda^{n}}{n!}\sqrt{n!}\left|n\right\rangle \right)=\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\left(\sum_{n=0}^{\infty}\frac{\lambda^{n}}{\sqrt{n!}}\sqrt{n}\left|n-1\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies a\left|\lambda\right\rangle =\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\left(\sum_{n=0}^{\infty}\frac{\lambda\lambda^{n-1}}{\sqrt{\left(n-1\right)!}}\left|n-1\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+si ahora hacemos un cambio de variable de 
+\begin_inset Formula $m=n-1$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\exp\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\left(\sum_{m=0}^{\infty}\frac{\lambda\lambda^{m}}{\sqrt{m!}}\left|m\right\rangle \right)=\lambda\exp\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\left(\sum_{m=0}^{\infty}\frac{\lambda^{m}}{\sqrt{m!}}\left|m\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\lambda\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle 
+\]
+
+\end_inset
+
+por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+a\left|\lambda\right\rangle =\lambda\left|\lambda\right\rangle \text{,}
+\]
+
+\end_inset
+
+es decir, 
+\begin_inset Formula $\left|\lambda\right\rangle $
+\end_inset
+
+ es un estado coherente.
+ Falta corroborar que efectivamente es un estado normalizado, para lo cual
+ calculamos su norma 
+\begin_inset Formula 
+\[
+\left\langle \lambda|\lambda\right\rangle =\left\langle 0\right|\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\exp\left[\lambda^{*}a\right]\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle \lambda|\lambda\right\rangle =\left\langle 0\right|\exp\left[\lambda^{*}a\right]\exp\left[-\left|\lambda\right|^{2}\right]\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle =\exp\left[-\left|\lambda\right|^{2}\right]\left\langle 0\right|\exp\left[\lambda^{*}a\right]\exp\left[\lambda a^{\dagger}\right]\left|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \lambda|\lambda\right\rangle =\exp\left[-\left|\lambda\right|^{2}\right]\left\langle 0\right|\exp\left[\lambda^{*}\lambda\right]\left|0\right\rangle =\exp\left[-\left|\lambda\right|^{2}+\left|\lambda\right|^{2}\right]=1\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle \lambda|\lambda\right\rangle =1\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La incertidumbre minima para tal estado es de la forma 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle _{\lambda}\left\langle \left(\Delta p\right)^{2}\right\rangle _{\lambda}=\frac{1}{4}\left|\left\langle \left[x,p\right]\right\rangle _{\lambda}\right|^{2}\text{,}
+\]
+
+\end_inset
+
+donde como sabemos 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle _{\lambda}=\left\langle x^{2}\right\rangle _{\lambda}-\left\langle x\right\rangle _{\lambda}^{2}\ \ \ \&\ \ \ \left\langle \left(\Delta p\right)^{2}\right\rangle _{\lambda}=\left\langle p^{2}\right\rangle _{\lambda}-\left\langle p\right\rangle _{\lambda}^{2}\text{.}
+\]
+
+\end_inset
+
+Por otra parte, los operadores de posición y momento, estan dados por 
+\begin_inset Formula 
+\[
+x=\sqrt{\frac{\hbar}{2m\omega}}\left(a+a^{\dagger}\right)\ \ \ \&\ \ \ p=p=i\sqrt{\frac{m\hbar\omega}{2}}\left(-a+a^{\dagger}\right)\text{,}
+\]
+
+\end_inset
+
+y ademas, tenemos que 
+\begin_inset Formula $a\left|\lambda\right\rangle =\lambda\left|\lambda\right\rangle \implies\left\langle \lambda\right|a^{\dagger}=\left\langle \lambda\right|\lambda^{*}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle _{\lambda}=\sqrt{\frac{\hbar}{2m\omega}}\left\langle \lambda\right|\left(a+a^{\dagger}\right)\left|\lambda\right\rangle =\sqrt{\frac{\hbar}{2m\omega}}\left(\left\langle \lambda|a|\lambda\right\rangle +\left\langle \lambda|a^{\dagger}|\lambda\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle _{\lambda}=\sqrt{\frac{\hbar}{2m\omega}}\left(\lambda+\lambda^{*}\right)\implies\left\langle x\right\rangle _{\lambda}^{2}=\frac{\hbar}{2m\omega}\left(\lambda+\lambda^{*}\right)^{2}\text{.}
+\]
+
+\end_inset
+
+Ahora bien, para 
+\begin_inset Formula $\left\langle p\right\rangle _{\lambda}$
+\end_inset
+
+ es un resultado similar, esto es 
+\begin_inset Formula 
+\[
+\left\langle p\right\rangle _{\lambda}^{2}=\frac{m\omega\hbar}{2}\left(-\lambda+\lambda^{*}\right)^{2}\text{.}
+\]
+
+\end_inset
+
+Ahora calculemos 
+\begin_inset Formula 
+\[
+\left\langle x^{2}\right\rangle _{\lambda}=\frac{\hbar}{2m\omega}\left\langle \lambda\right|\left(a^{2}+aa^{\dagger}+a^{\dagger}a+\left(a^{\dagger}\right)^{2}\right)\left|\lambda\right\rangle =\frac{\hbar}{2m\omega}\left(\left(\lambda\right)^{2}+\left(1+\lambda^{*}\lambda\right)+\lambda^{*}\lambda+\left(\lambda^{*}\right)^{2}\right)
+\]
+
+\end_inset
+
+ya que 
+\begin_inset Formula $\left\langle \lambda\right|a^{\dagger}a\left|\lambda\right\rangle =\lambda^{*}\lambda$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\langle \lambda\right|aa^{\dagger}\left|\lambda\right\rangle =1+\lambda^{*}\lambda$
+\end_inset
+
+.
+ Mientras que para 
+\begin_inset Formula $\left\langle p^{2}\right\rangle _{\lambda}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\left\langle p^{2}\right\rangle _{\lambda}=\frac{\hbar}{2m\omega}\left\langle \lambda\right|\left(a^{2}-aa^{\dagger}-a^{\dagger}a+\left(a^{\dagger}\right)^{2}\right)\left|\lambda\right\rangle =-\frac{m\hbar\omega}{2}\left(\left(\lambda\right)^{2}-\left(1+\lambda^{*}\lambda\right)-\lambda^{*}\lambda-\left(\lambda^{*}\right)^{2}\right)\text{.}
+\]
+
+\end_inset
+
+Por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle _{\lambda}=\left\langle x^{2}\right\rangle _{\lambda}-\left\langle x\right\rangle _{\lambda}^{2}=\frac{\hbar}{2m\omega}\left(\left(\lambda\right)^{2}+\left(1+\lambda^{*}\lambda\right)+\lambda^{*}\lambda+\left(\lambda^{*}\right)^{2}\right)-\frac{\hbar}{2m\omega}\left(\lambda+\lambda^{*}\right)^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \left(\Delta x\right)^{2}\right\rangle _{\lambda}=\frac{\hbar}{2m\omega}\text{,}
+\]
+
+\end_inset
+
+y para 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta p\right)^{2}\right\rangle _{\lambda}=\left\langle p^{2}\right\rangle _{\lambda}-\left\langle p\right\rangle _{\lambda}^{2}=-\frac{m\hbar\omega}{2}\left(\left(\lambda\right)^{2}-\left(1+\lambda^{*}\lambda\right)-\lambda^{*}\lambda-\left(\lambda^{*}\right)^{2}\right)-\frac{m\hbar\omega}{2}\left(-\lambda+\lambda^{*}\right)^{2}\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \left(\Delta x\right)^{2}\right\rangle _{\lambda}=\frac{m\omega\hbar}{2}\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos que 
+\begin_inset Formula $\left[x,p\right]=i\hbar$
+\end_inset
+
+, de manera que
+\begin_inset Formula 
+\[
+\left|\left\langle \left[x,p\right]\right\rangle _{\lambda}\right|^{2}=\hbar^{2}\text{.}
+\]
+
+\end_inset
+
+En resumen, tenemos que 
+\begin_inset Formula 
+\[
+\left\langle \left(\Delta x\right)^{2}\right\rangle _{\lambda}\left\langle \left(\Delta p\right)^{2}\right\rangle _{\lambda}=\frac{\hbar^{2}}{4}\ \ \ \&\ \ \ \frac{1}{4}\left|\left\langle \left[x,p\right]\right\rangle _{\lambda}\right|^{2}=\frac{\hbar^{2}}{4}
+\]
+
+\end_inset
+
+Por lo tanto, se satisface la relación de mínima incertidumbre.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Si ahora escribimos a 
+\begin_inset Formula $\left|\lambda\right\rangle $
+\end_inset
+
+ como 
+\begin_inset Formula 
+\[
+\left|\lambda\right\rangle =\sum_{n=0}^{\infty}f\left(n\right)\left|n\right\rangle \text{,}
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula 
+\[
+\left\langle \lambda\right|=\sum_{m=0}^{\infty}f^{*}\left(m\right)\left\langle m\right|\text{,}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\left\langle \lambda|\lambda\right\rangle =\sum_{m=0}^{\infty}f^{*}\left(m\right)\left\langle m\right|\sum_{n=0}^{\infty}f\left(n\right)\left|n\right\rangle =\sum_{m=0}^{\infty}\sum_{n=0}^{\infty}f^{*}\left(m\right)f\left(n\right)\left\langle m|n\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \lambda|\lambda\right\rangle =\sum_{n=0}^{\infty}\left|f^{*}\left(n\right)\right|^{2}\text{.}
+\]
+
+\end_inset
+
+Por otra parte, tenemos que 
+\begin_inset Formula 
+\[
+\left|\lambda\right\rangle =\exp\left[-\frac{\left|\lambda\right|^{2}}{2}\right]\left(\sum_{n=0}^{\infty}\frac{\lambda^{n}}{\sqrt{n!}}\left|n\right\rangle \right)\text{,}
+\]
+
+\end_inset
+
+con lo cual 
+\begin_inset Formula 
+\[
+\left\langle \lambda|\lambda\right\rangle =\sum_{n=0}^{\infty}\sum_{m=0}^{\infty}\exp\left[-\left|\lambda\right|^{2}\right]\left(\frac{\lambda^{n}\left(\lambda^{*}\right)^{m}}{\sqrt{n!}\sqrt{m!}}\right)\left\langle m|n\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle \lambda|\lambda\right\rangle =\sum_{n=0}^{\infty}\exp\left[-\left|\lambda\right|^{2}\right]\left(\frac{\lambda^{n}\left(\lambda^{*}\right)^{n}}{\sqrt{n!}\sqrt{n!}}\right)=\sum_{n=0}^{\infty}\exp\left[-\left|\lambda\right|^{2}\right]\left(\frac{\left|\lambda\right|^{2n}}{n!}\right)\text{,}
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+\left|f^{*}\left(n\right)\right|^{2}=\frac{\left|\lambda\right|^{2n}}{n!}\exp\left[-\left|\lambda\right|^{2}\right]\text{.}
+\]
+
+\end_inset
+
+Por otra parte, la distribución de Poisson está dada por 
+\begin_inset Formula 
+\[
+P_{n}\left(x\right)=\frac{x^{n}}{n!}\exp\left[-x\right].
+\]
+
+\end_inset
+
+Como podemos observar, 
+\begin_inset Formula $\left|f^{*}\left(n\right)\right|^{2}$
+\end_inset
+
+ tiene la misma forma que la distribución de Poisson.
+\end_layout
+
+\begin_layout Enumerate
+Ahora bien, para calcular 
+\begin_inset Formula $\exp\left[-ipl/\hbar\right]$
+\end_inset
+
+ al estado base 
+\begin_inset Formula $\text{\left|0\right\rangle }$
+\end_inset
+
+, sabemos que 
+\begin_inset Formula $p=i\sqrt{\frac{m\hbar\omega}{2}}\left(-a+a^{\dagger}\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\exp\left[-ipl/\hbar\right]\left|0\right\rangle =\exp\left[\frac{l}{\hbar}\sqrt{\frac{m\hbar\omega}{2}}\left(-a+a^{\dagger}\right)\right]\left|0\right\rangle =\exp\left[\frac{l}{\hbar}\sqrt{\frac{m\hbar\omega}{2}}a^{\dagger}\right]\exp\left[-\frac{l}{\hbar}\sqrt{\frac{m\hbar\omega}{2}}a\right]\left|0\right\rangle \text{.}
+\]
+
+\end_inset
+
+Si ahora definimos 
+\begin_inset Formula $\lambda=\frac{l}{\hbar}\sqrt{\frac{m\hbar\omega}{2}}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\exp\left[-ipl/\hbar\right]\left|0\right\rangle =\exp\left[\lambda a^{\dagger}-\lambda a\right]\left|0\right\rangle \text{.}
+\]
+
+\end_inset
+
+Por otra parte, si usamos que 
+\begin_inset Formula $\exp\left[A+B\right]=\exp\left[A\right]\exp\left[B\right]\exp\left(\frac{-\left[A,B\right]}{2}\right)$
+\end_inset
+
+
+\begin_inset Formula $,$
+\end_inset
+
+ donde los operadores 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son tales que conmutan con 
+\begin_inset Formula $\left[A,B\right]$
+\end_inset
+
+.
+ Con lo cual, tenemos que 
+\begin_inset Formula 
+\[
+\exp\left[\lambda a^{\dagger}-\lambda a\right]\left|0\right\rangle =\exp\left[\lambda a^{\dagger}\right]\exp\left[-\lambda a\right]\exp\left(\frac{\lambda^{2}\left[a^{\dagger},a\right]}{2}\right)\left|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $\left[a^{\dagger},a\right]=\mathbb{-I}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\exp\left[-ipl/\hbar\right]\left|0\right\rangle =\exp\left[\lambda a^{\dagger}\right]\exp\left[-\lambda a\right]\exp\left(-\frac{\lambda^{2}}{2}\right)\left|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+y usando que 
+\begin_inset Formula 
+\[
+\exp\left[-\lambda a\right]\left|0\right\rangle =\sum_{n=0}^{\infty}\frac{\left(-\lambda\right)^{n}}{n!}a^{n}\left|0\right\rangle =\left|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula 
+\[
+\exp\left[-ipl/\hbar\right]\left|0\right\rangle =\exp\left[\lambda a^{\dagger}\right]\exp\left(-\frac{\lambda^{2}}{2}\right)\left|0\right\rangle \text{,}
+\]
+
+\end_inset
+
+justo como se quería demostrar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Una partı́cula en una dimensión ligada a un centro fijo por un potencial
+ función-
+\begin_inset Formula $\delta$
+\end_inset
+
+ de la forma 
+\begin_inset Formula 
+\[
+V\left(x\right)=-v_{0}\delta\left(x\right)
+\]
+
+\end_inset
+
+con 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ real positivo.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Encuentra la función de onda y la energı́a ligada del estado base.
+ ¿Existen estados excitados? 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+En 
+\begin_inset Formula $t=0$
+\end_inset
+
+, el potencial es repentinamente apagado, esto es, 
+\begin_inset Formula $V=0$
+\end_inset
+
+ para 
+\begin_inset Formula $t>0$
+\end_inset
+
+.
+ Encuentra la función de onda para 
+\begin_inset Formula $t>0$
+\end_inset
+
+ (sé cuantitativo pero no intentes evaluar la integral que podrı́a aparecer).
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+La ecuación de Schrödinger para este problema esta dada por 
+\begin_inset Formula 
+\[
+-\frac{\hbar^{2}}{2m}\frac{d^{2}u}{dx^{2}}-\delta\left(x\right)v_{0}u=-Eu\text{.}
+\]
+
+\end_inset
+
+Es claro que debemos tener cuidado en el punto 
+\begin_inset Formula $x=0$
+\end_inset
+
+, de momento dividamos el problema en tres regiones 
+\begin_inset Formula $x<0$
+\end_inset
+
+, 
+\begin_inset Formula $x>0$
+\end_inset
+
+ y 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $x<0$
+\end_inset
+
+, y 
+\begin_inset Formula $x>0$
+\end_inset
+
+, tenemos la misma ecuación, la cual resulta ser 
+\begin_inset Formula 
+\[
+-\frac{\hbar^{2}}{2m}\frac{d^{2}u}{dx^{2}}=-Eu\implies\frac{d^{2}u}{dx^{2}}=\frac{2mE}{\hbar^{2}}u\implies u\left(x\right)=A\exp\left[\frac{\sqrt{2mE}}{\hbar}x\right]\text{.}
+\]
+
+\end_inset
+
+Donde 
+\begin_inset Formula $A$
+\end_inset
+
+ es una constante de normalización.
+ Ahora bien, la solución en las dos regiones esta dada por, 
+\begin_inset Formula 
+\[
+u\left(x\right)=\left\{ \begin{array}{cc}
+A\exp\left[\frac{\sqrt{2mE}}{\hbar}x\right] & x<0\\
+A\exp\left[-\frac{\sqrt{2mE}}{\hbar}\left|x\right|\right] & x>0
+\end{array}\right.\text{.}
+\]
+
+\end_inset
+
+De las ecuaciones anteriores, tenemos que 
+\begin_inset Formula 
+\[
+\frac{du}{dx}=\mp\frac{\sqrt{2mE}}{\hbar}u\left(x\right)\text{.}
+\]
+
+\end_inset
+
+Ahora veámos qué es lo que pasa cerca del punto 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ Para lo cual integremos la ecuación de Schrödinger, es decir 
+\begin_inset Formula 
+\[
+\int_{-\epsilon}^{\epsilon}dx\left(-\frac{\hbar^{2}}{2m}\frac{d^{2}u}{dx^{2}}-\delta\left(x\right)v_{0}u\right)=-\frac{\hbar^{2}}{2m}\left.\frac{du}{dx}\right|_{-\epsilon}^{\epsilon}-v_{0}u\left(0\right)\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\lim_{\epsilon\rightarrow0}\left(-\frac{\hbar^{2}}{2m}\left.\frac{du}{dx}\right|_{-\epsilon}^{\epsilon}\right)-v_{0}u\left(0\right)=\lim_{\epsilon\rightarrow0}\left(-\frac{\hbar^{2}}{2m}\frac{\sqrt{2mE}}{\hbar}\left(-u\left(\epsilon\right)-u\left(-\epsilon\right)\right)\right)-v_{0}u\left(0\right)=0\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\frac{\hbar^{2}}{m}\frac{\sqrt{2mE}}{\hbar}u\left(0\right)-v_{0}u\left(0\right)=0\iff\frac{\hbar^{2}}{m}\frac{\sqrt{2mE}}{\hbar}-v_{0}=0\text{,}
+\]
+
+\end_inset
+
+de la última cadena de implicaciones, tenemos que 
+\begin_inset Formula 
+\[
+E=\frac{mv_{0}^{2}}{2\hbar^{2}}\text{,}
+\]
+
+\end_inset
+
+la cual es la energía de estado base y además es la única.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+El propagador en el espacio de momento análogo a 
+\begin_inset Formula $\left\langle x^{\prime\prime},t;x^{\prime},t_{0}\right\rangle $
+\end_inset
+
+ está dado por 
+\begin_inset Formula $\left\langle p^{\prime\prime},t;p^{\prime},t_{0}\right\rangle $
+\end_inset
+
+.
+ Encuentra una expresión explı́cita para 
+\begin_inset Formula $\left\langle p^{\prime\prime},t;p^{\prime},t_{0}\right\rangle $
+\end_inset
+
+ para el caso de la partı́cula libre.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Una de las formas en las que es posible representar al propagador es la
+ siguiente 
+\begin_inset Formula 
+\[
+K\left(x^{\prime\prime},t;x^{\prime},t_{0}\right)=\left\langle x^{\prime\prime}|\exp\left[\frac{-iH\left(t-t_{0}\right)}{\hbar}\right]|x^{\prime}\right\rangle \text{.}
+\]
+
+\end_inset
+
+De manera que si el propagador de momento análogo a la expresión anterior
+ esta dado por 
+\begin_inset Formula $\left\langle p^{\prime\prime},t;p^{\prime},t_{0}\right\rangle $
+\end_inset
+
+, entonces tenemos que 
+\begin_inset Formula 
+\[
+K\left(p^{\prime\prime},t;x^{\prime},t_{0}\right)=\left\langle p^{\prime\prime}|\exp\left[\frac{-iH\left(t-t_{0}\right)}{\hbar}\right]|p^{\prime}\right\rangle \text{.}
+\]
+
+\end_inset
+
+Ahora bien, para el caso de una partícula libre tenenmos el siguiente Hamiltonia
+no 
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}\text{,}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+K\left(p^{\prime\prime},t;x^{\prime},t_{0}\right)=\left\langle p^{\prime\prime}|\exp\left[\frac{-ip^{2}\left(t-t_{0}\right)}{2m\hbar}\right]|p^{\prime}\right\rangle =\exp\left[\frac{-i\left(p^{\prime}\right)^{2}\left(t-t_{0}\right)}{2m\hbar}\right]\left\langle p^{\prime\prime}|p^{\prime}\right\rangle \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore K\left(p^{\prime\prime},t;x^{\prime},t_{0}\right)=\exp\left[\frac{-i\left(p^{\prime}\right)^{2}\left(t-t_{0}\right)}{2m\hbar}\right]\delta\left(p^{\prime\prime}-p^{\prime}\right)\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Escribe la expression de la acción clásica del oscilador armónico simple
+ para un intervalo de tiempo finito.
+ Luego, construye el propagador 
+\begin_inset Formula $\left\langle x_{n},t|x_{n-1},t_{n-1}\right\rangle $
+\end_inset
+
+ para el oscilador armónico cuántico usando la prescripción de Feynman para
+ 
+\begin_inset Formula $\Delta t=t_{n}-t_{n-1}$
+\end_inset
+
+ pequeño.
+ Manteniendo términos sólo de orden 
+\begin_inset Formula $\left(\Delta t\right)^{2}$
+\end_inset
+
+, muestra que está completamente de acuerdo con el lı́mite 
+\begin_inset Formula $t-t_{0}\rightarrow0$
+\end_inset
+
+ del propagador 
+\begin_inset Formula $\left\langle x^{\prime\prime},t|x^{\prime},t_{0}\right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Por definición, la accción clásica esta dada por 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)=\int_{t_{n-1}}^{t_{n}}dt\mathcal{L}\left(x,\dot{x}\right)\text{,}
+\]
+
+\end_inset
+
+donde en este caso 
+\begin_inset Formula 
+\[
+\mathcal{L}\left(x,\dot{x}\right)=\frac{m\dot{x}^{2}}{2}-\frac{m\omega^{2}x^{2}}{2}\text{,}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)=\int_{t_{n-1}}^{t_{n}}dt\left(\frac{m\dot{x}^{2}}{2}-\frac{m\omega^{2}x^{2}}{2}\right)\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos que para un potencial arbitrario 
+\begin_inset Formula $V\left(x\right)$
+\end_inset
+
+ y un intervalo de tiempo finito 
+\begin_inset Formula $\Delta t=t_{n}-t_{n-1}$
+\end_inset
+
+, podemos aproximar la acción como 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)=\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{x_{n}-x_{n-1}}{\Delta t}\right]^{2}-V\left(\frac{x_{n}+x_{n-1}}{2}\right)\right\} \text{,}
+\]
+
+\end_inset
+
+en nuestro caso, tenemos que 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)=\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{x_{n}-x_{n-1}}{\Delta t}\right]^{2}-\frac{m\omega^{2}}{2}\left(\frac{x_{n}+x_{n-1}}{2}\right)^{2}\right\} \text{,}
+\]
+
+\end_inset
+
+si definimos 
+\begin_inset Formula $\Delta x=x_{n}-x_{n-1}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $x_{n}+x_{n-1}=\Delta x+2x_{n-1}$
+\end_inset
+
+, con lo cual 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)=\Delta t\left\{ \frac{m}{2}\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{m\omega^{2}}{2}\left(\frac{\Delta x+2x_{n-1}}{2}\right)^{2}\right\} \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S\left(n,n-1\right)=\Delta t\left\{ \frac{m}{2}\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{m\omega^{2}}{2}\left(\frac{\Delta x}{2}+x_{n-1}\right)^{2}\right\} \text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S\left(n,n-1\right)=\frac{m}{2}\left[\frac{\Delta x}{\Delta t}\right]\Delta x-\frac{m\omega^{2}}{2}\left(\left(\frac{\Delta x}{2}\right)^{2}+x_{n-1}\Delta x+\left(x_{n-1}\right)^{2}\right)\Delta t\text{,}
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $x_{n-1}\Delta x=x_{n}x_{n-1}-x_{n-1}^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Si además, despreciamos el término que va como 
+\begin_inset Formula $\left(\Delta x\right)^{2}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\implies S\left(n,n-1\right)\approx\frac{m}{2}\left(\frac{\Delta x}{\Delta t}\right)\Delta x-\frac{m\omega^{2}}{2}x_{n}x_{n-1}\Delta t\text{.}
+\]
+
+\end_inset
+
+Por otra parte, sabemos que el producto interno 
+\begin_inset Formula $\left\langle x^{\prime\prime},t|x^{\prime},t_{0}\right\rangle $
+\end_inset
+
+, esta dado por 
+\begin_inset Formula 
+\[
+\left\langle x^{\prime\prime},t|x^{\prime},t_{0}\right\rangle =\sqrt{\frac{m}{2\pi\hbar\Delta t}}\exp\left[\frac{i}{\hbar}S\left(n,n-1\right)\right]\text{,}
+\]
+
+\end_inset
+
+que en nuestro caso queda escrito como 
+\begin_inset Formula 
+\begin{equation}
+\left\langle x^{\prime\prime},t|x^{\prime},t_{0}\right\rangle =\sqrt{\frac{m}{2\pi\hbar\Delta t}}\exp\left[\left(\frac{i}{\hbar}\right)\left\{ \frac{m}{2}\left(\frac{\Delta x}{\Delta t}\right)\Delta x-\frac{m\omega^{2}}{2}x_{n}x_{n-1}\Delta t\right\} \right]\label{eq:prodinter}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora bien, sabemos que el propagador para el oscilador armonico está dado
+ por 
+\begin_inset Formula 
+\[
+K\left(x^{\prime\prime},t;x^{\prime},t_{0}\right)=\sqrt{\frac{m\omega}{2\pi i\hbar\sin\left[\omega\left(t-t_{0}\right)\right]}}\exp\left[\left\{ \frac{im\omega}{2\hbar\sin\left[\omega\left(t-t_{0}\right)\right]}\right\} \left\{ \left(\left(x^{\prime\prime}\right)^{2}+\left(x^{\prime}\right)^{2}\right)\cos\left[\omega\left(t-t_{0}\right)\right]-2x^{\prime}x^{\prime\prime}\right\} \right]\text{,}
+\]
+
+\end_inset
+
+si ahora hacemos que 
+\begin_inset Formula $t-t_{0}=\Delta t\rightarrow0$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\sin\left[\omega\Delta t\right]\rightarrow\omega\Delta t$
+\end_inset
+
+ y 
+\begin_inset Formula $\cos\left[\omega\Delta t\right]=1-\frac{\left(\omega\Delta t\right)^{2}}{2}$
+\end_inset
+
+, entonces
+\begin_inset Formula 
+\[
+K\left(x^{\prime\prime},t;x^{\prime},t_{0}\right)\approx K\left(x^{\prime\prime};x^{\prime}\right)=\sqrt{\frac{m\omega}{2\pi i\hbar\omega\Delta t}}\exp\left[\left(\frac{im\omega}{2\hbar\omega\Delta t}\right)\left\{ \left(\left(x^{\prime\prime}\right)^{2}+\left(x^{\prime}\right)^{2}\right)\left(1-\frac{\left(\omega\Delta t\right)^{2}}{2}\right)-2x^{\prime}x^{\prime\prime}\right\} \right]\text{,}
+\]
+
+\end_inset
+
+si ahora hacemos el cambio de variables 
+\begin_inset Formula $x^{\prime\prime}\rightarrow x_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $x^{\prime}\rightarrow x_{n-1}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+K\left(x_{n};x_{n-1}\right)=\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\left(\frac{im}{2\hbar\Delta t}\right)\left\{ \left(\left(x_{n}\right)^{2}+\left(x_{n-1}\right)^{2}\right)\left(1-\frac{\left(\omega\Delta t\right)^{2}}{2}\right)-2x_{n}x_{n-1}\right\} \right]\text{,}
+\]
+
+\end_inset
+
+con lo cual
+\begin_inset Formula 
+\[
+K\left(x_{n};x_{n-1}\right)=\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\left(\frac{im}{2\hbar\Delta t}\right)\left\{ -\left(\left(x_{n}\right)^{2}+\left(x_{n-1}\right)^{2}\right)\frac{\left(\omega\Delta t\right)^{2}}{2}+\left(x_{n}\right)^{2}+\left(x_{n-1}\right)^{2}-2x_{n}x_{n-1}\right\} \right]\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies K\left(x_{n};x_{n-1}\right)=\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\left(\frac{im}{2\hbar\Delta t}\right)\left\{ -\left(\left(x_{n}\right)^{2}+\left(x_{n-1}\right)^{2}\right)\frac{\left(\omega\Delta t\right)^{2}}{2}+\left(\Delta x\right)^{2}\right\} \right]\text{,}
+\]
+
+\end_inset
+
+donde se ha definido 
+\begin_inset Formula $\Delta x=x_{n}-x_{n-1}$
+\end_inset
+
+.
+ Ahora bien, notando que 
+\begin_inset Formula $\left(x_{n}\right)^{2}+\left(x_{n-1}\right)^{2}=\left(\Delta x\right)^{2}+2x_{n}x_{n-1}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+K\left(x_{n};x_{n-1}\right)=\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\left(\frac{im}{2\hbar\Delta t}\right)\left\{ -\left(\left(\Delta x\right)^{2}+2x_{n}x_{n-1}\right)\frac{\left(\omega\Delta t\right)^{2}}{2}+\left(\Delta x\right)^{2}\right\} \right]\text{,}
+\]
+
+\end_inset
+
+reordenando los terminos dentro de la exponencial, tenemos 
+\begin_inset Formula 
+\[
+K\left(x_{n};x_{n-1}\right)=\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\left(\frac{i}{\hbar}\right)\left\{ \frac{m}{2}\left(\frac{\Delta x}{\Delta t}\right)\Delta x-\frac{m}{2\Delta t}\left(\Delta x\right)^{2}\frac{\left(\omega\Delta t\right)^{2}}{2}-\frac{m\omega^{2}}{2\Delta t}x_{n}x_{n-1}\left(\Delta t\right)^{2}\right\} \right]\text{.}
+\]
+
+\end_inset
+
+Si ahora despreciamos los términos 
+\begin_inset Formula $\left(\Delta x\right)^{2}\left(\Delta t\right)^{2}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+K\left(x_{n};x_{n-1}\right)=\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\left(\frac{i}{\hbar}\right)\left\{ \frac{m}{2}\left(\frac{\Delta x}{\Delta t}\right)\Delta x-\frac{m\omega^{2}}{2}x_{n}x_{n-1}\Delta t\right\} \right]\text{.}
+\]
+
+\end_inset
+
+Si ahora comparamos la ecuación anterior con la ecuación dada por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:prodinter"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, vemos que es la misma expresión, con lo cual hemos demostrado lo que se
+ pedia en el problema.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

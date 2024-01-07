@@ -1,0 +1,980 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+subequations
+InStar
+fixltx2e
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "Ubuntu"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mecánica Cuántica.
+ Tarea 07
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Grupo C011 | Trimestre 21-1
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Profesor: Miguel Angel Bastarrachea Magnani | Ayudante: Yoshua Chávez Bolaños
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+José Emmanuel Flores Calderón
+\end_layout
+
+\begin_layout Date
+Fecha: 19/05/2021.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Partiendo de que 
+\begin_inset Formula $Y_{l}^{m}\left(\theta,\phi\right)=\langle\theta,\phi|l,m\rangle$
+\end_inset
+
+ muestre que la forma general de los armonicos esféricos esta dada por 
+\begin_inset Formula 
+\[
+Y_{jm}=\left(-1\right)^{m}\left(\frac{2j+1}{4\pi}\frac{\left(j-m\right)!}{\left(j+m\right)!}\right)^{\frac{1}{2}}P_{j}^{m}\left(\cos\theta\right)\exp\left(im\phi\right),
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+P_{m}^{j}\left(u\right)=\left(-1\right)^{j+m}\frac{\left(j+m\right)!}{\left(j-m\right)!}\frac{\left(1-u^{2}\right)^{-\frac{m}{2}}}{2^{j}j!}\left(\frac{d}{du}\right)^{j-m}\left(1-u^{2}\right),
+\]
+
+\end_inset
+
+son los polinomios asociados de Legendre.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Sabemos que la siguiente relación se cumple 
+\begin_inset Formula 
+\[
+\langle r,\theta,\phi|L_{z}|\Psi\rangle=\frac{\hbar}{i}\frac{\partial}{\partial\phi}\langle r,\theta,\phi|\Phi\rangle,
+\]
+
+\end_inset
+
+si ahora escogemos a 
+\begin_inset Formula $|\Phi\rangle=|l,m\rangle$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula 
+\[
+\langle r,\theta,\phi|L_{z}|l,m\rangle=\frac{\hbar}{i}\frac{\partial}{\partial\phi}\langle r,\theta,\phi|l,m\rangle,
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula $L_{z}|l,m\rangle=m\hbar|l,m\rangle$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+\frac{\hbar}{i}\frac{\partial}{\partial\phi}\langle r,\theta,\phi|l,m\rangle=m\hbar\langle r,\theta,\phi|l,m\rangle.
+\]
+
+\end_inset
+
+La ecuación diferencial anterior implica una dependencia en las eigenfunciones
+ de la forma 
+\begin_inset Formula $\exp\left(im\phi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por otra parte, calculemos 
+\begin_inset Formula 
+\[
+L_{+}|l,l\rangle=0,
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $L_{\text{\ensuremath{\pm}}}=L_{x}\pm iL_{y}$
+\end_inset
+
+.
+ Ahora bien, sabemos que 
+\begin_inset Formula 
+\[
+\mathbf{L}=\mathbf{r}\times\mathbf{p}\rightarrow\mathbf{r}\times\frac{\hbar}{i}\nabla,
+\]
+
+\end_inset
+
+ y haciendo el cambio a coordenadas esféricas, tenemos que 
+\begin_inset Formula 
+\[
+\mathbf{L}\rightarrow r\mathbf{u}_{r}\times\frac{\hbar}{i}\left(\mathbf{u}_{r}\frac{\partial}{\partial r}+\mathbf{u}_{\theta}\frac{1}{r}\frac{\partial}{\partial\theta}+\mathbf{u}_{\phi}\frac{1}{r\sin\theta}\frac{\partial}{\partial\phi}\right)=\frac{\hbar}{i}\left(\mathbf{u}_{r}\frac{\partial}{\partial\theta}-\mathbf{u}_{\theta}\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\right).
+\]
+
+\end_inset
+
+Si ahora, tomamos las componentes 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $y$
+\end_inset
+
+ vectores unitarios anteriores, tenemos que 
+\begin_inset Formula 
+\[
+L_{x}\rightarrow\frac{\hbar}{i}\left(-\sin\phi\frac{\partial}{\partial\theta}-\cot\theta\cos\phi\frac{\partial}{\partial\phi}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L_{y}\rightarrow\frac{\hbar}{i}\left(\cos\phi\frac{\partial}{\partial\theta}-\cot\theta\sin\phi\frac{\partial}{\partial\phi}\right).
+\]
+
+\end_inset
+
+Con lo cual, tenemos 
+\begin_inset Formula 
+\[
+L_{\pm}\rightarrow\frac{\hbar}{i}\exp\left(\pm i\phi\right)\left(\pm i\frac{\partial}{\partial\theta}-\cot\theta\frac{\partial}{\partial\phi}\right).
+\]
+
+\end_inset
+
+De manera que si calculamos 
+\begin_inset Formula $\langle\theta,\phi|L_{+}|l,l\rangle$
+\end_inset
+
+ se tiene 
+\begin_inset Formula 
+\[
+\langle\theta,\phi|L_{+}|l,l\rangle=\frac{\hbar}{i}\exp\left(i\phi\right)\left(i\frac{\partial}{\partial\theta}-\cot\theta\frac{\partial}{\partial\phi}\right)\langle\theta,\phi|l,l\rangle=0.
+\]
+
+\end_inset
+
+Si ahora insertamos la dependencia que conocida 
+\begin_inset Formula $\exp\left(il\phi\right)$
+\end_inset
+
+, obtenemos la ecuación diferencial 
+\begin_inset Formula 
+\[
+\left(\frac{\partial}{\partial\theta}-l\cot\theta\right)\langle\theta,\phi|l,l\rangle=0,
+\]
+
+\end_inset
+
+cuya solución esta dada por 
+\begin_inset Formula 
+\[
+\langle\theta,\phi|l,l\rangle=c_{l}\exp\left(il\phi\right)\sin^{l}\theta.
+\]
+
+\end_inset
+
+Usando la siguiente condición de normalización 
+\begin_inset Formula 
+\[
+\int_{0}^{\pi}d\theta\sin\theta\int_{0}^{2\pi}d\phi\left|Y_{l,m}\left(\theta,\phi\right)\right|^{2}=1,
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula 
+\[
+\langle\theta,\phi|l,l\rangle=\frac{\left(-1\right)^{l}}{2^{l}l!}\sqrt{\frac{\left(2l+1\right)!}{4\pi}}\exp\left(il\phi\right)\sin^{l}\theta.
+\]
+
+\end_inset
+
+Apliquemos ahora el operador de descenso, el cual sabemos que cumple con
+ 
+\begin_inset Formula 
+\[
+L_{-}|l,m\rangle=\sqrt{l\left(l+1\right)-m\left(m-1\right)}\hbar|l,m-1\rangle.
+\]
+
+\end_inset
+
+Si ahora combinamos los últimos dos resultados, tenemos que 
+\begin_inset Formula 
+\[
+Y_{l,m}\left(\theta,\phi\right)=\frac{\left(-1\right)^{l}}{2^{l}l!}\sqrt{\frac{\left(2l+1\right)\left(l+m\right)!}{4\pi\left(l-m\right)!}}\exp\left(im\phi\right)\frac{1}{\sin^{m}\theta}\frac{d^{l-m}}{d\left(\cos\theta\right)^{l-m}}\sin^{2l}\theta.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Considera una partı́cula sin espı́n ligada a un centro fijo por un potencial
+ de fuerza central.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Relaciona, tanto como sea posible, las matrices de elementos
+\begin_inset Formula 
+\[
+\langle n^{\prime},m^{\prime},l^{\prime}|\mp\frac{1}{\sqrt{2}}\left(x+iy\right)|n,l,m\rangle\ \ \ \&\ \ \ \langle n^{\prime},m^{\prime},l^{\prime}|z|n,l,m\rangle
+\]
+
+\end_inset
+
+usando sólo el teorema de Wigner-Eckart.
+ Asegúrate de establecer bajo qué condiciones la matriz de elementos es
+ no nula.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Haz el mismo problema usando la función de onda 
+\begin_inset Formula $\psi\left(\mathbf{x}\right)=R_{nl}\left(r\right)Y_{l}^{m}\left(\theta,\phi\right)$
+\end_inset
+
+.
+ Donde asumimos que la función de onda 
+\begin_inset Formula $\psi_{nlm}\left(\mathbf{x}\right)=\langle\mathbf{x}|n,l,m\rangle=R_{nl}\left(r\right)Y_{l}^{m}\left(\theta,\phi\right)$
+\end_inset
+
+ es separable, donde 
+\begin_inset Formula $R_{nl}\left(r\right)$
+\end_inset
+
+ es la función radial y 
+\begin_inset Formula $n$
+\end_inset
+
+ el número cuántico radial.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Enumerate
+Para los tensores esféricos, tenemos que 
+\begin_inset Formula 
+\[
+\mp\frac{\left(x+iy\right)}{\sqrt{2}}=T_{\pm1}^{\left(1\right)}\ \ \ \&\ \ \ z=T_{0}^{\left(1\right)}.
+\]
+
+\end_inset
+
+Ahora bien, por el teorema de Wigner-Eckart, tenemos que 
+\begin_inset Formula 
+\[
+\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{\left(1\right)}|nlm\rangle=\langle l1;mq|l1;l^{\prime}m^{\prime}\rangle\frac{\langle n^{\prime}l^{\prime}|T^{\left(1\right)}|nl\rangle}{\sqrt{2l+1}},
+\]
+
+\end_inset
+
+donde toda la dependencia de 
+\begin_inset Formula $m,m^{\prime}$
+\end_inset
+
+ y 
+\begin_inset Formula $q$
+\end_inset
+
+ esta contenida en los coeficientes de Clebsch-Gordan, así que tenemos las
+ dos relaciones siguientes 
+\begin_inset Formula 
+\[
+\langle n^{\prime}l^{\prime}m^{\prime}|T_{\pm1}^{\left(1\right)}|nlm\rangle=\langle l1;m,\pm1|l1;l^{\prime}m^{\prime}\rangle\frac{\langle n^{\prime}l^{\prime}|T^{\left(1\right)}|nl\rangle}{\sqrt{2l+1}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle n^{\prime}l^{\prime}m^{\prime}|T_{0}^{\left(1\right)}|nlm\rangle=\langle l1;m,0|l1;l^{\prime}m^{\prime}\rangle\frac{\langle n^{\prime}l^{\prime}|T^{\left(1\right)}|nl\rangle}{\sqrt{2l+1}}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\frac{\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{\left(1\right)}|nlm\rangle}{\langle n^{\prime}l^{\prime}m^{\prime}|T_{0}^{\left(1\right)}|nlm\rangle}=\frac{\langle l1;m,\pm1|l1;l^{\prime}m^{\prime}\rangle\frac{\langle n^{\prime}l^{\prime}|T^{\left(1\right)}|nl\rangle}{\sqrt{2l+1}}}{\langle l1;m,0|l1;l^{\prime}m^{\prime}\rangle\frac{\langle n^{\prime}l^{\prime}|T^{\left(1\right)}|nl\rangle}{\sqrt{2l+1}}}=\frac{\langle l1;m,\pm1|l1;l^{\prime}m^{\prime}\rangle}{\langle l1;m0\text{¸}|l1;l^{\prime}m^{\prime}\rangle},
+\]
+
+\end_inset
+
+o bien 
+\begin_inset Formula 
+\[
+\frac{\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{\left(1\right)}|nlm\rangle}{\langle n^{\prime}l^{\prime}m^{\prime}|T_{0}^{\left(1\right)}|nlm\rangle}=\frac{\langle l1;m,\pm1|l1;l^{\prime}m^{\prime}\rangle}{\langle l1;m0\text{¸}|l1;l^{\prime}m^{\prime}\rangle}.
+\]
+
+\end_inset
+
+Todos los elementos de matriz 
+\begin_inset Formula $\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{\left(1\right)}|nlm\rangle$
+\end_inset
+
+ son cero (para los tres casos 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ y 
+\begin_inset Formula $0$
+\end_inset
+
+), a menos que 
+\begin_inset Formula $m^{\prime}=m+q$
+\end_inset
+
+ y además que se cumpla 
+\begin_inset Formula $\left|l-1\right|\leq l^{\prime}\leq l+1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Utiliza el teorema de Wigner-Eckart para encontrar el valor de la integral
+ 
+\begin_inset Formula 
+\[
+\int d\Omega Y_{l}^{m*}\left(\theta,\phi\right)Y_{l_{1}}^{m_{1}}\left(\theta,\phi\right)Y_{l_{2}}^{m_{2}}\left(\theta,\phi\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Sabemos que 
+\begin_inset Formula 
+\[
+\mathcal{D}_{m0}^{\left(l\right)}\left(\alpha,\beta,\gamma=0\right)=\sqrt{\frac{4\pi}{\left(2l+1\right)}}Y_{l}^{m*}\left(\theta,\phi\right)|_{\theta=\beta,\phi=\alpha}.
+\]
+
+\end_inset
+
+Por otra parte, se cumple que 
+\begin_inset Formula 
+\[
+\mathcal{D}_{m_{1}m_{1}^{\prime}}^{\left(j_{1}\right)}\left(R\right)\mathcal{D}_{m_{2}m_{2}^{\prime}}^{\left(j_{2}\right)}\left(R\right)=\sum_{j}\sum_{m}\sum_{m^{\prime}}\langle j_{1}j_{2};m_{1}m_{2}|j_{1}j_{2};jm\rangle\times\langle j_{1}j_{2};m_{1}^{\prime}m_{2}^{\prime}|j_{1}j_{2};jm^{\prime}\rangle\mathcal{D}_{mm^{\prime}}^{\left(j\right)}\left(R\right).
+\]
+
+\end_inset
+
+Si ahora, hacemos 
+\begin_inset Formula $j_{1}=l_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $j_{2}=l_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $m_{1}^{\prime}\rightarrow0$
+\end_inset
+
+ y 
+\begin_inset Formula $m_{2}^{\prime}\rightarrow0$
+\end_inset
+
+, es decir 
+\begin_inset Formula $m\rightarrow0$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+\mathcal{D}_{m_{1}0}^{\left(l_{1}\right)}=\sqrt{\frac{4\pi}{\left(2l+1\right)}}Y_{l_{1}}^{m_{1}*}\left(\theta,\phi\right),
+\]
+
+\end_inset
+
+junto con 
+\begin_inset Formula 
+\[
+\mathcal{D}_{m_{2}0}^{\left(l_{2}\right)}=\sqrt{\frac{4\pi}{\left(2l+1\right)}}Y_{l_{2}}^{m_{2}*}\left(\theta,\phi\right).
+\]
+
+\end_inset
+
+Por otra parte, tenemos que 
+\begin_inset Formula 
+\[
+\mathcal{D}_{m_{1}0}^{\left(l_{1}\right)}\left(R\right)\mathcal{D}_{m_{2}0}^{\left(l_{2}\right)}\left(R\right)=\sum_{l^{\prime}}\sum_{m^{\prime}}\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};l^{\prime}m^{\prime}\rangle\times\langle l_{1}l_{2};00|l_{1}l_{2};l^{\prime}0\rangle\mathcal{D}_{m^{\prime}0}^{\left(l^{\prime}\right)}\left(R\right),
+\]
+
+\end_inset
+
+pero 
+\begin_inset Formula 
+\[
+\mathcal{D}_{m^{\prime}0}^{\left(l^{\prime}\right)}\left(R\right)=\sqrt{\frac{4\pi}{\left(2l+1\right)}}Y_{l^{\prime}}^{m^{\prime}*}\left(\theta,\phi\right),
+\]
+
+\end_inset
+
+con lo cual, tenemos que 
+\begin_inset Formula 
+\[
+\sqrt{\frac{4\pi}{\left(2l_{1}+1\right)}}Y_{l_{1}}^{m_{1}*}\left(\theta,\phi\right)\sqrt{\frac{4\pi}{\left(2l_{2}+1\right)}}Y_{l_{2}}^{m_{2}*}\left(\theta,\phi\right)=\sum_{l^{\prime}}\sum_{m^{\prime}}\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};l^{\prime}m^{\prime}\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\times\langle l_{1}l_{2};00|l_{1}l_{2};l^{\prime}0\rangle\sqrt{\frac{4\pi}{\left(2l+1\right)}}Y_{l^{\prime}}^{m^{\prime}*}\left(\theta,\phi\right),
+\]
+
+\end_inset
+
+con lo cual, tenemos que 
+\begin_inset Formula 
+\[
+Y_{l_{1}}^{m_{1}*}\left(\theta,\phi\right)Y_{l_{2}}^{m_{2}*}\left(\theta,\phi\right)=\sqrt{\frac{\left(2l_{1}+1\right)\left(2l_{2}+1\right)}{\left(2l^{\prime}+1\right)}}\sum_{l^{\prime}}\sum_{m^{\prime}}\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};l^{\prime}m^{\prime}\rangle\times\langle l_{1}l_{2};00|l_{1}l_{2};l^{\prime}0\rangle Y_{l^{\prime}}^{m^{\prime}*}\left(\theta,\phi\right),
+\]
+
+\end_inset
+
+o bien, si tomamos el complejo conjugado de la expresión anterior, tenemos
+ que 
+\begin_inset Formula 
+\[
+Y_{l_{1}}^{m_{1}}\left(\theta,\phi\right)Y_{l_{2}}^{m_{2}}\left(\theta,\phi\right)=\sqrt{\frac{\left(2l_{1}+1\right)\left(2l_{2}+1\right)}{4\pi\left(2l^{\prime}+1\right)}}\sum_{l^{\prime}}\sum_{m^{\prime}}\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};l^{\prime}m^{\prime}\rangle\times\langle l_{1}l_{2};00|l_{1}l_{2};l^{\prime}0\rangle Y_{l^{\prime}}^{m^{\prime}}\left(\theta,\phi\right).
+\]
+
+\end_inset
+
+Si ahora, multiplicamos la expresión anterior por 
+\begin_inset Formula $Y_{l}^{m*}\left(\theta,\phi\right)$
+\end_inset
+
+ e integramos sobre ángulos sólidos, tenemos que 
+\begin_inset Formula 
+\[
+\int d\Omega Y_{l}^{m*}\left(\theta,\phi\right)Y_{l_{1}}^{m_{1}}\left(\theta,\phi\right)Y_{l_{2}}^{m_{2}}\left(\theta,\phi\right)=\int d\Omega\text{¸}\sqrt{\frac{\left(2l_{1}+1\right)\left(2l_{2}+1\right)}{4\pi\left(2l^{\prime}+1\right)}}\sum_{l^{\prime}}\sum_{m^{\prime}}\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};l^{\prime}m^{\prime}\rangle
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\times\langle l_{1}l_{2};00|l_{1}l_{2};l^{\prime}0\rangle Y_{l}^{m*}\left(\theta,\phi\right)Y_{l^{\prime}}^{m^{\prime}}\left(\theta,\phi\right).
+\]
+
+\end_inset
+
+Usando las propiedades de ortogonalidad de los armonicos esféricos, tenemos
+ que el lado derecho de la ecuación anteior, se convierte en 
+\begin_inset Formula 
+\[
+\sqrt{\frac{\left(2l_{1}+1\right)\left(2l_{2}+1\right)}{4\pi\left(2l+1\right)}}\langle l_{1}l_{2};00|l_{1}l_{2};l0\rangle\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};lm\rangle,
+\]
+
+\end_inset
+
+por lo tanto, tenemos que 
+\begin_inset Formula 
+\[
+\int d\Omega Y_{l}^{m*}\left(\theta,\phi\right)Y_{l_{1}}^{m_{1}}\left(\theta,\phi\right)Y_{l_{2}}^{m_{2}}\left(\theta,\phi\right)=\sqrt{\frac{\left(2l_{1}+1\right)\left(2l_{2}+1\right)}{4\pi\left(2l+1\right)}}\langle l_{1}l_{2};00|l_{1}l_{2};l0\rangle\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};lm\rangle.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Dos partı́culas tienen momentos angulares 
+\begin_inset Formula $l=1$
+\end_inset
+
+ y 
+\begin_inset Formula $l_{2}=2$
+\end_inset
+
+.
+ Obtener explı́citamente los coe- ficientes del desarrollo del estado 
+\begin_inset Formula $|l_{1},l_{2};L=1,M=1\rangle$
+\end_inset
+
+ como combinación lineal de los estados 
+\begin_inset Formula $|l_{1},m_{1}\rangle|l_{2},m_{2}\rangle$
+\end_inset
+
+∣l1 , m1 ⟩ ∣l2, m2 ⟩.
+ .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing single
+\align block
+Un núcleo de espı́n 3/2 situado en el origen está sujeto a un campo eléctrio
+ inhomogeneo externo.
+ La interacción de cuadrupolo eléctrico básica pueden ser tomada como 
+\begin_inset Formula 
+\[
+H_{int}=\frac{eQ}{2s\left(s-1\right)\hbar^{2}}\left[\left(\frac{\partial^{2}\phi}{\partial x^{2}}\right)_{0}S_{x}^{2}+\left(\frac{\partial^{2}\phi}{\partial y^{2}}\right)_{0}S_{y}^{2}+\left(\frac{\partial^{2}\phi}{\partial z^{2}}\right)_{0}S_{z}^{2}\right],
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es un potencial electrostático que satisface la ecuación de Laplace y los
+ ejes coordenas son tales que 
+\begin_inset Formula 
+\[
+\left(\frac{\partial^{2}\phi}{\partial x\partial y}\right)_{0}=\left(\frac{\partial^{2}\phi}{\partial y\partial z}\right)_{0}=\left(\frac{\partial^{2}\phi}{\partial x\partial z}\right)_{0}=0.
+\]
+
+\end_inset
+
+Muestra que la energía de interacción puede ser escrita como 
+\begin_inset Formula 
+\[
+A\left(3S_{z}^{2}-\mathbf{S}^{2}\right)+B\left(S_{x}^{2}-S_{y}^{2}\right)+B\left(S_{+}^{2}+S_{-}^{2}\right),
+\]
+
+\end_inset
+
+y expresa 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\series default
+ en términos de 
+\begin_inset Formula $\left(\partial^{2}\phi/\partial x^{2}\right)_{0}$
+\end_inset
+
+ y así sucesivamente.
+ Determine los eigenkets de energía (en términos de 
+\begin_inset Formula $|m\rangle$
+\end_inset
+
+, donde 
+\begin_inset Formula $m=\pm3/2,\pm1/2$
+\end_inset
+
+) y sus correspondientes eigenvalores.
+ ¿Existe alguna degeneración? 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing single
+\align block
+
+\series bold
+Solución.
+\end_layout
+
+\begin_layout Standard
+Hagamos los siguientes cambios de notación 
+\begin_inset Formula 
+\[
+\alpha=\frac{eQ}{2s\left(s-1\right)\hbar^{2}},\ \ \text{\ensuremath{\phi_{xx}=}}\left(\frac{\partial^{2}\phi}{\partial x^{2}}\right)_{0},\ \ \phi_{yy}=\left(\frac{\partial^{2}\phi}{\partial y^{2}}\right)_{0},\ \ \phi_{zz}=\left(\frac{\partial^{2}\phi}{\partial z^{2}}\right)_{0}.
+\]
+
+\end_inset
+
+Entonces el Hamiltoniano de interacción, se escribe como 
+\begin_inset Formula 
+\[
+H_{int}=\alpha\left[\phi_{xx}S_{x}^{2}+\phi_{yy}S_{y}^{2}+\phi_{zz}S_{z}^{2}\right].
+\]
+
+\end_inset
+
+Por otra parte, sabemos que 
+\begin_inset Formula $\phi$
+\end_inset
+
+ satisface la ecuación de Laplace, esto es 
+\begin_inset Formula 
+\[
+\nabla^{2}\phi=0\iff\phi_{xx}+\phi_{yy}+\phi_{zz}=0\implies\phi_{xx}+\phi_{yy}=-\phi_{zz},
+\]
+
+\end_inset
+
+y que los operadores 
+\begin_inset Formula $S_{+}$
+\end_inset
+
+ ,
+\begin_inset Formula $S_{-}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{S}^{2}$
+\end_inset
+
+ están dados por 
+\begin_inset Formula 
+\[
+S_{+}=S_{x}+iS_{y}\ \ ,\ \ S_{-}=S_{x}-iS_{y}\ \ \&\ \ \ensuremath{\mathbf{S}^{2}}=S_{x}^{2}+S_{y}^{2}+S_{z}^{2}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+S_{+}^{2}+S_{-}^{2}=\left(S_{x}+iS_{y}\right)^{2}+\left(S_{x}-iS_{y}\right)^{2}=2\left(S_{x}^{2}-S_{y}^{2}\right).
+\]
+
+\end_inset
+
+Por lo tanto, queremos escribir a 
+\begin_inset Formula $H_{int}$
+\end_inset
+
+ de la siguiente forma 
+\begin_inset Formula 
+\[
+H_{int}=A\left(3S_{z}^{2}-\mathbf{S}^{2}\right)+B\left(S_{x}^{2}-S_{y}^{2}\right)+2B\left(S_{x}^{2}-S_{y}^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H_{int}=A\left(2S_{z}^{2}-S_{x}^{2}-S_{y}^{2}\right)+3B\left(S_{x}^{2}-S_{y}^{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H_{int}=2AS_{z}^{2}+\left(3B-A\right)S_{x}^{2}+\left(-3B-A\right)S_{y}^{2}
+\]
+
+\end_inset
+
+Si lo comparamos con el Hamiltoniano original, obtenemos las relaciones
+ 
+\begin_inset Formula 
+\[
+A=\frac{\alpha}{2}\phi_{zz}=-\frac{\alpha}{2}\left(\phi_{xx}+\phi_{yy}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B=\frac{\alpha}{6}\left(\phi_{xx}-\phi_{yy}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora bien, apliquemos 
+\begin_inset Formula $3S_{z}^{2}-\mathbf{S}^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{\pm}^{2}$
+\end_inset
+
+ al ket 
+\begin_inset Formula $|m\rangle$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(3S_{z}^{2}-\mathbf{S}^{2}\right)|m\rangle=3S_{z}^{2}|m\rangle-\mathbf{S}^{2}|m\rangle=\left(3m^{2}\hbar^{2}-\frac{3}{2}\left(\frac{3}{2}+1\right)\hbar^{2}\right)|m\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(3S_{z}^{2}-\mathbf{S}^{2}\right)|m\rangle=\hbar^{2}\left(3m^{2}-\frac{15}{4}\right)|m\rangle.
+\]
+
+\end_inset
+
+Ahora bien, apliquemos 
+\begin_inset Formula $S_{\pm}^{2}$
+\end_inset
+
+ al ket 
+\begin_inset Formula $|m\rangle$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+S_{+}^{2}|m\rangle=S_{+}\left(S_{+}|m\rangle\right)=S_{+}\left(\sqrt{\left(s-m\right)\left(s+m+1\right)}\hbar|m+1\rangle\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{+}^{2}|m\rangle=\hbar^{2}\sqrt{\left(s-m-1\right)\left(s+m+1\right)\left(s-m\right)\left(s+m+1\right)}|m+2\rangle,
+\]
+
+\end_inset
+
+mientras que para 
+\begin_inset Formula $S_{-}^{2}$
+\end_inset
+
+, tenemos 
+\begin_inset Formula 
+\[
+S_{-}^{2}|m\rangle=S_{-}\left(S_{-}|m\rangle\right)=S_{-}\left(\sqrt{\left(s+m\right)\left(s-m+1\right)}\hbar|m-1\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{-}^{2}|m\rangle=\hbar^{2}\sqrt{\left(s+m-1\right)\left(s-m+2\right)\left(s+m\right)\left(s-m+1\right)}|m-2\rangle.
+\]
+
+\end_inset
+
+Si ahora etiquetamos a los estados base como 
+\begin_inset Formula $m=\left\{ +\frac{3}{2},-\frac{1}{2},-\frac{3}{2},+\frac{1}{2}\right\} $
+\end_inset
+
+, obtenemos que la representación matricial del operador Hamiltoniano es
+ 
+\begin_inset Formula 
+\[
+H=\left(\begin{array}{cccc}
+3A & 2B\sqrt{3} & 0 & 0\\
+2B\sqrt{3} & -3A & 0 & 0\\
+0 & 0 & 3A & 2B\sqrt{3}\\
+0 & 0 & 2B\sqrt{3} & -3A
+\end{array}\right).
+\]
+
+\end_inset
+
+La matriz anterior es diagonal por bloques de 2x2, de manera que hay una
+ degeneración doble en todos los eigenvalores.
+ Para los bloques de matrices es sencillo encontrar los eigenvalores, basta
+ con ressolver el problema de eigenvalores 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cc}
+3A-\lambda & 2B\sqrt{3}\\
+2B\sqrt{3} & -3A-\lambda
+\end{array}\right)=0\iff-\left(3A-\lambda\right)\left(3A+\lambda\right)-12B^{2}=0\text{,}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff-9A^{2}+\lambda^{2}-12B^{2}=0\implies\lambda_{\pm}=\pm\sqrt{9A^{2}+12B^{2}}.
+\]
+
+\end_inset
+
+Y los vectores propios, sin diagonalizar, quedan escritos como 
+\begin_inset Formula 
+\[
+|\lambda_{\pm}\rangle=2\sqrt{3}B\left|\pm\frac{3}{2},\pm\frac{1}{2}\right\rangle +\left(\lambda_{\pm}\pm3A\right)\left|\mp\frac{3}{2},\mp\frac{1}{2}\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
