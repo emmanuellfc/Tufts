@@ -1,0 +1,73 @@
+Hugo's Comments
+
+1. Elliptic PDE not defined.
+
+2. Is this relevant: 
+"Furthermore, it is well known that the real and imaginary parts of an
+analytic function of one complex variable are harmonic; that is, they satisfy the (two-dimensional) Laplace equation."
+
+3. Which criteria are used to determine this? (GFD Algorithm)
+
+4. What do line intersections mean? (Fig. 1)
+
+5. Could be more illustrative to express this as relative error rather than absolute one. (Fig 3)
+
+6. Do you have a sketch of the mesh used? (GFD Algorithm)
+
+7. Of which data? How is it defined? (RMS)
+
+8. Do you have a comparison with the Cartesian standard FDM to see the improvements in your new approach?
+
+9. Your metric, the RMS error, is an average measure of error over the space. Do improvements fix outliers only, help similarly the full space, or improve in some regions and less in others? Can you find a way to assess tihs? For example, can you compare the right-hand side plot of fig.3 for three different solutions (or their ratio)?
+
+10. I don't understand this plot here, i don't see a perfect match between Fig 5 and Fig 3. Can you explain?
+
+11. What can be made smarter and why would that be smarter? (Conclusion)
+
+12. Which method has been used? (Appendix)
+
+13. Do you have the solution for GFDM?
+
+
+Response
+
+1. 
+We elaborate a little more and also added one reference.
+
+2. 
+You/re right, altought from the mathematical perspective this is interesnting we understand that this doesn't add anything to the main narravite and we decided to not inclusde that part in the final version of the paper.
+
+3.
+The comment seems to be calling out vagueness in the explanation of the GFDM algorithm. We have made the language more specific, but we want to avoid going into more detail to meet space constraints. Responding to what was specifically highlighted:
+ - To be honest, the mesher is a little bit of a black box for us. The mesher is designed to place more nodes where necessary to capture the features of a surface. Changing the behavior of the mesher is actually an area where we could improve the algorithm.
+ - About the target input for number of neighbors, this is a value that the user simply inputs to the solver. The language here has been made more concise.
+ - The reasoning for not forcing connections for boundary nodes is a little confusing, and we did not want to consume too much space in the algorithm section discussion this detail. The reasoning is this: When we build connections between nearby nodes, we only try to build connections from nodes that "want" to have their potential solved for. Boundary nodes already know their own potential, so they have no reason to try to form connections to other nodes. Other nodes who need their potential solved for can try to build connections to boundary nodes.
+
+4.
+Intersections of lines represent nodes of the mesh. At each intersection, the GFDM solver will try to figure out the potential. The lines themselves show neighbors of each node, and information for solving potential per node only uses information from its neighbors. We've made the caption more explicit about this.
+
+5.
+We agree that using relative error could better illustrate error than absolute. Having seen your comments, we tried to implement relative error plotting, but there is a technical challenge. If we take relative error to be ( gfdm_pot - analytic_pot ) / analytic_pot, then the relative error will blow up near grounded boundaries for small absolute errors. Due to time constraints to avoid the issue entirely, we've decided to stick with absolute error.
+
+6.
+The mesh in Figure 1 is a sketch of the mesh used for the coaxial problem except for a much lower node count. The number of nodes used in Figure 3 is about 10,000. We can produce an image of the mesh, but the density of nodes is so high that the image is meaningless. No details can be discerned for this many nodes.
+
+7.
+This is defined as the square root of the mean square, and is a statistical measure that helps us understand the magnitude of a set of values. It takes into account the variability within the set by squaring each value, taking the average of those squares, and finally taking the square root of that average. This metric both penalizes large regions of low error and small regions of high error but does not distinguish between the two. We could perform a more detailed quantitative analysis using something more than RMS, but under space and time constraints, we want to keep the error analysis concise and simple.
+
+8.
+In hindsight, we should have been comparing the GFDM to Cartesian FDM to justify the claim that the GFDM would perform better from the start. We have made a first attempt at comparing to Cartesian FDM, and we have found some surprising results that we want to investigate later. Specifically, Cartesian FDM sometimes does better, and we're not sure why yet. In the meantime, we're going to leave the structure of the paper mostly the same and avoid misleading language that we expect GFDM to perform better than Cartesian FDM. We'll be sorting this out after finals.
+
+9.
+We chose to avoid adding too many figures to meet space requirements. This sort of analysis, though, is valuable to be more specific for how higher node count yields better solutions. We have added additional language in section 5.1 better clarifying our findings here.
+
+10. Figure 3, refers to the solution obtained using GFD, whereas Figure 5, Right refers to the comparison between FEM and the analytic solution, and as you can see the RMS = 0.008. This is the motive for later use the FEM approach as our "analytical" solution for complex geometries.
+On the other hand, Figure 6 refers to the comparison between both approaches, FEM and GFD.
+
+11.
+We kept this vague to be concise, but it's an interesting point that we should expand on. We believe that we can make the neighbor selection smarter (and faster) by making more efficient use of the internal graph data structure of the GFDM algorithm. There exist efficient algorithms for solving nearest neighbor search problems in computer science literature that we can implement.
+
+12. The method used was FEM but we expand the Appendix in order to include all the information: mesh, potential and error between both approaches.
+
+13.
+At the time of submitting the draft, we had not yet prepared GFDM solutions for the bars and for the dolphin. We have now included GFDM solutions for these geometries that we showed during the presentation.

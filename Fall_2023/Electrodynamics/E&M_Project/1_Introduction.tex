@@ -1,0 +1,158 @@
+\chapter{Introduction}
+
+\section{Numerical Methods}
+In both engineering and science, it is common to find problems expressed in the language of differential equations, both ordinary and partial, in such a way that a good part of the effort in these areas of research lies in the resolution of these equations. However, on many occasions these models turn out to be highly complex, and their analytical resolution is very complicated, or impossible to carry out. In this way, the need arises to look for alternative tools that provide us with a way to attack the equations of the problem in question, and perhaps one of the most used tools in the scientific community is numerical methods.
+
+The basic idea of these methods is to take the given problem, expressed as a differential equation (partial or ordinary) and write it in discrete form, so that we go from a continuous problem with an infinite number of variables, to a discrete one with a finite number of variables. This has some subtle parts, since there are different ways to discretize the equations, either spatially or temporally. Within the great variety of numerical methods, probably the most used is the finite difference method. In this, derivatives are replaced by quotients, and the respective differential operators are replaced by their discrete counterparts, in such a way that we obtain a set of algebraic equations, which are the ones we have to solve. However, this method is not the only one, and in many cases it is not the best choice. This last statement has to do with the fact that in general there are differential equations of great complexity, in which conventional methods, such as the afore mentioned of finite differences, do not converge to the solution, or are numerically unstable, so that the need arises to use increasingly sophisticated methods, and in many cases extremely particular for the problem we face.
+
+For these and other reasons, scientists and engineers have developed a wide variety of numerical methods. In this work we will focus on the finite element method (FEM), which, in recent years, has become an increasingly used method to solve differential equations. This method is very popular and widely used, essentially due to the following characteristics, which I will describe in greater depth in the following sections \cite{Johnson2012}
+
+
+
+Software To-Do List:
+\begin{enumerate}
+    \item Generify boundary conditions for the finite differences' method. (Cullen)
+    \item Explain the Difference Method.(Emmanuel)
+    \item Consider expanding the finite differences' method with improved techniques. We can discretize the space in different ways.() 
+    \item Adapt known methods to determine the error of an approximation if we know the true solution.
+    \item Write the code using FEniCS and Finite Difference.
+\end{enumerate}
+
+
+
+\section{Poisson Equation}
+Poisson's equation can be written as
+\begin{equation}
+     -\nabla^2u = f; \ \ u\in \Omega, \ \ \Omega\subset\mathbb{R}^d
+\end{equation}
+with Dirichlet-type boundary conditions given by
+\begin{equation}
+     u = u_0, \in \Gamma_D\subset\partial\Omega,
+\end{equation}
+and Neumann type conditions, given by
+\begin{equation}
+     -\partial_nu = g, \in \Gamma_N\subset\partial\Omega,
+\end{equation}
+so that we can divide the domain boundary, $\Omega$, that is, $\partial\Omega$, as the union of the domains in which we have Dirichlet-type conditions, $\Gamma_D$, and domains in which we have Neumann type conditions, $\Gamma_N$, that is
+\begin{equation}
+     \partial\Omega = \Gamma_D\cup\Gamma_N.
+\end{equation}
+
+In the previous expressions, $u$ is the unknown function, $f$ is a certain given function, $\nabla^2$ is the Laplacian operator, $\Omega$ is the spatial domain over which the problem is defined, $d $ is the spatial dimension, $\partial_n$ is the normal derivative to $\Omega$, and $\partial\Omega$ is the boundary of $\Omega$, and furthermore, we are considering, without loss of generality, that $\Omega\subset\mathbb{R^2}$.
+
+Now, the algorithm to transform equation (3.32) into its weak form consists of multiplying it by a function $v$, which is called the test function, and which we are going to ask that it be a continuous function and that meet the condition
+\begin{equation}
+     v = 0, \text{ in } \Gamma_D,
+\end{equation}
+and integrate the result over the domain on which the original problem is defined, in this case $\Omega$, that is
+\begin{equation}
+     -\int_{\Omega}d\Omega(\nabla^2u) v = \int_{\Omega}d\Omega fv.
+\end{equation}
+Now we integrate by parts and use the following fact
+\begin{equation}
+     \int_{\Omega}d\Omega (\nabla^2u)v = -\int_{\Omega}d\Omega(\nabla u)\cdot (\nabla v) + \int_{\partial\Omega}ds( \partial_nu)v,
+\end{equation}
+so we have the following problem
+\begin{equation}
+     \int_{\Omega}d\Omega\nabla u\cdot \nabla v - \int_{\partial\Omega}ds(\partial_nu)v = \int_{\Omega}d\Omega fv.
+\end{equation}
+However, the boundary is formed by the union of the sets $\Gamma_D$ and $\Gamma_N$, that is
+\begin{equation}
+     \int_{\partial\Omega}ds(\partial_nu)v = \int_{\Gamma_D}ds(\partial_nu)v + \int_{\Gamma_N}ds(\partial_nu)v,
+\end{equation}
+However, by condition (3.35), we have that the previous equation results in
+\begin{equation}
+     \int_{\partial\Omega}ds(\partial_nu)v = \int_{\Gamma_N}ds(\partial_nu)v,
+\end{equation}
+but, using condition (3.34), we have to
+\begin{equation}
+     \int_{\partial\Omega}ds(\partial_nu)v = -\int_{\Gamma_N}dsgv.
+\end{equation}
+With which, we finally arrive at the weak formulation of the Poisson equation, that is
+\begin{equation}
+     \int_{\Omega}d\Omega\nabla u\cdot \nabla v - \int_{\Gamma_N}dsgv = \int_{\Omega}d\Omega fv.
+\end{equation}
+Which written in a precise mathematical way is: find $u\in V$, such that
+\begin{equation}
+     \int_{\Omega}d\Omega\nabla u\cdot \nabla v= \int_{\Omega}d\Omega fv - \int_{\Gamma_N}dsgv ; \ \ \ \forall v\in \hat{V}.
+\end{equation}
+
+\section{A finite difference method for general neighbors}
+Known finite difference methods discretize a PDE into a grid, make an initial guess for potential at each grid point, then iteratively improve the estimation for each point using direction from each Cartesian neighbor. For example, a Cartesian finite difference algorithm for Laplace's equation in two dimensions is
+\begin{equation}
+    u_{i,j} = \frac{1}{4}[ 
+    u_{i+1,j} +
+    u_{i-1,j} +
+    u_{i,j+1} +
+    u_{i,j-1}]
+\end{equation}
+where $u_{i,j}$, is the current estimation of potential at a Cartesian grid point $(i,j)$ \cite{Landau2015}. The algorithm estimates the potential for a point using the average potentials of its neighbors.
+
+The method is computationally efficient but lacks generality. In practice, choice of boundary conditions using this method are restricted to the grid, and the method only accounts for Dirichlet conditions. Furthermore, the problem may not be well-respected by a Cartesian coordinate system. In this case, an inaccurate convergence may occur. Once could use a finer-grained grid, but this is more computationally taxing.
+
+\todo[inline]{I still don't understand the extreme case of few neighbors yet - return to clean this up, but for now we can consider "well-behaved" cases (which is still poorly defined).}
+We present a generalization of the finite difference method for a general mesh. This mesh we implement as a discretized graph. Each node of the mesh still has its potential informed by neighbors, but the member and its neighbors are not fixed to a Cartesian grid. A node may have an arbitrary number of neighbors, and the neighbors may have arbitrary horizontal and vertical offsets.
+
+We desire for every node on the mesh,
+\begin{equation}
+    \nabla^2 u_i = 0
+\end{equation}
+where $u_i$ is the potential at some indexed node, $i$. We approximate the horizontal second partial derivative of the potential with respect to one neighbor, $j$, using a quadratic approximation
+\begin{equation}
+    \frac{\partial^2 u_i}{\partial x^2} \approx
+    \frac{1}{2}\frac{u_j - u_i}{(x_j-x_i)^2}
+\end{equation}
+The same is taken for the vertical term. Combining these into one term,
+\begin{equation}
+    \nabla^2 u_i \approx \frac{\partial^2 u_i}{\partial x^2} + \frac{\partial^2 u_i}{\partial y^2} \approx
+    \frac{u_j - u_i}{2}[\frac{1}{(x_j - x_i)^2} + \frac{1}{(y_j - y_i)^2}]
+\end{equation}
+The inverse square positional terms are constants of the mesh and are easily computed. For brevity, define constants
+\begin{equation}
+    \gamma_{i,j} = \frac{1}{2}[\frac{1}{(x_j - x_i)^2} + \frac{1}{(y_j - y_i)^2}]
+\end{equation}
+
+This approximation is poor when only informed by one neighbor. The approximation, however, becomes reasonable when the node, $i$, is surrounded by many neighbors. To inform node $i$ of its potential from an arbitrary number of neighbors, we use
+\begin{equation}
+    \nabla^2 u_i \approx \frac{1}{|n(i)|} \sum_{j \in n(i)} \gamma_{i,j}(u_j - u_i)
+\end{equation}
+where $n(i)$ is the set of neighbor nodes for a node, $i$, and $|n(i)|$ is the size of the set. We now average informed estimations from individual neighbors over all neighbors of $i$. Because we are solving Laplace's equation, this average equals zero for all $i$.
+
+This defines an $m$ by $m$ linear system of equations. We proceed for the specific case of Laplace's equation and disregard consideration of the size of the neighbor set as follows:
+\begin{equation}
+    0 \approx \sum_{j \in n(i)} \gamma_{i,j} (u_i - u_j)
+\end{equation}
+Rearranging the expression,
+\begin{equation}
+    0 \approx -u_i + \frac
+    {\sum_{j \in n(i)} \gamma_{i,j} u_j }
+    {\sum_{k \in n(i)} \gamma_{i,j}}
+\end{equation}
+
+We can now express the simultaneous linear system of equations in matrix representation,
+\begin{equation}
+    0 = \hat{C} \times \Vec{u}
+\end{equation}
+or by index,
+\begin{equation}
+    0 = \sum_j c_{i,j} u_j \;\;\;\;\;\; \forall i
+\end{equation}
+We identify
+\begin{equation}
+    c_{i,j} = \begin{cases}
+        -1 & i = j \\
+        0 & i \not= j, j \not\in n(i) \\
+        \frac{\gamma_{i,j}}{\sum_{k \in n(i)} \gamma_{i,k}} & i \not= j, j \in n(i)
+    \end{cases}
+\end{equation}
+
+The general method, then, is to iterate once through nodes in a mesh and build the matrix, $\hat{C}$, element by element. We then pass the system to a linear algebra package and extract a solution for the estimated potential at every node.
+\todo[inline]{We could discuss anticipated runtime of the algorithm here? Maybe better to think about this if/when we have a working model.}
+
+Writing To-Do List:
+\begin{enumerate}
+    \item Write an abstract.
+    \item Information about Poisson equation, Physics Stuff.(Emmanuel)
+    \item Finite Element Method brief introduction and add appendix with more information.(Emmanuel)
+    \item Graph Stuff (Cullen)
+\end{enumerate}

@@ -1,0 +1,932 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing double
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fontsize{15pt}{0pt}
+\backslash
+selectfont
+\end_layout
+
+\end_inset
+
+ Quantum Theory 1
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+PHY 0163 - Quantum Theory 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Tufts University
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Graduate School of Arts and Sciences
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+Final Evaluation
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename A&S_Hori_BK+BL.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+November 21th, 2023.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+The fine structure constant (for QM and E&M) is written as 
+\begin_inset Formula $\alpha=1/137$
+\end_inset
+
+.
+ It was asked in class “what are the units?” Answer this.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+
+\series bold
+Solution.
+
+\series default
+ The fine structure constant is a dimensionless quantity, and it plays a
+ fundamental role in the interpretation of electromagnetism in the quantum
+ realm, because it quentifies the strenght of the electromagnetic interaction
+ between elementary charged particles.
+ It's also important to say that this is constant independent of the system
+ of units, and, even more interesting, is defined in terms of fundamental
+ constants as follows.
+ Now, if we use CGS units, then we can express 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ as follows,
+\begin_inset Formula 
+\[
+\alpha=\frac{e}{\hbar c},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $e$
+\end_inset
+
+ is the charge of the electron, 
+\begin_inset Formula $\hbar$
+\end_inset
+
+ is the Plank constant divided by two 
+\begin_inset Formula $\pi$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ is the speed of light
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose the Stern-Gerlach experiment is repeated with a beam of spin 1 particles.
+ What would the pattern on the detector screen look like? On what physical
+ property of the particles does the scale of the pattern depend?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In the Stern-Gerlach experiment with spin-1 particles, the pattern on the
+ detector screen would exhibit three discrete spots.
+ This is because spin-1 particles have three possible projection values:
+ 
+\begin_inset Formula $+1,0,$
+\end_inset
+
+ and 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Stern-Gerlach experiment is designed to measure the component of a particle'
+s angular momentum along a particular axis.
+ For spin-1 particles, the angular momentum projection can take one of the
+ three values mentioned above.
+ The scale of the pattern on the detector screen depends on the physical
+ property of the particles related to their spin, specifically the quantum
+ number associated with their spin angular momentum.
+\end_layout
+
+\begin_layout Standard
+In summary, the pattern on the detector screen for spin-1 particles in the
+ Stern-Gerlach experiment would consist of three discrete spots, corresponding
+ to the three possible projection values of the particles' spin along the
+ chosen axis.
+ The scale of the pattern depends on the quantum nature of the particles'
+ spin.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Feynman path integral: After eqn.
+ 2.6.42 the text says “The reader may work out a similar comparison for the
+ simple harmonic oscillator.” Do that.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The Lagrangian for this system is given by 
+\begin_inset Formula 
+\[
+L=\frac{1}{2}m\dot{x}^{2}-\frac{1}{2}m\omega^{2}x^{2},
+\]
+
+\end_inset
+
+then the classical action is given by 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)=\int_{t_{n-1}}^{t_{n}}dt\left(\frac{1}{2}m\dot{x}^{2}-\frac{1}{2}m\omega^{2}x^{2}\right),
+\]
+
+\end_inset
+
+thus, if we assume that the time interval is so small, we can make a stright-lin
+e approximation to the path joining 
+\begin_inset Formula $\left(x_{n-1},t_{n-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(x_{n},t_{n}\right)$
+\end_inset
+
+, and with that, we can approximate the classical action as follows 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)\approx\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{x_{n}-x_{n-1}}{\Delta t}\right]^{2}-\frac{1}{2}m\omega^{2}\left(\frac{x_{n}+x_{n-1}}{2}\right)^{2}\right\} ,
+\]
+
+\end_inset
+
+but we can write 
+\begin_inset Formula 
+\[
+x_{n}+x_{n-1}=2x_{n}-\left(x_{n}-x_{n-1}\right)=2x_{n}-\Delta x,
+\]
+
+\end_inset
+
+thus the action becomes
+\begin_inset Formula 
+\[
+\implies S\left(n,n-1\right)\approx\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{1}{2}m\omega^{2}\left(\frac{2x_{n}-\Delta x}{2}\right)^{2}\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S\left(n,n-1\right)\approx\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{1}{2}m\omega^{2}\left(x_{n}-\frac{\Delta x}{2}\right)^{2}\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S\left(n,n-1\right)\approx\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{1}{2}m\omega^{2}\left(x_{n}^{2}-x_{n}\frac{\Delta x}{2}+\frac{\left(\Delta x\right)^{2}}{4}\right)\right\} ,
+\]
+
+\end_inset
+
+and if we keep only the lowest terms, we have that 
+\begin_inset Formula 
+\[
+S\left(n,n-1\right)\approx\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{1}{2}m\omega^{2}\left(x_{n}^{2}\right)\right\} .
+\]
+
+\end_inset
+
+Now, with this information, we know that 
+\begin_inset Formula $\left\langle x_{n},t_{n}|x_{n-1},t_{n-1}\right\rangle $
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\left\langle x_{n},t_{n}|x_{n-1},t_{n-1}\right\rangle =\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\frac{i}{\hbar}S\left(n,n-1\right)\right],
+\]
+
+\end_inset
+
+therefore, we have 
+\begin_inset Formula 
+\[
+\left\langle x_{n},t_{n}|x_{n-1},t_{n-1}\right\rangle =\sqrt{\frac{m}{2\pi i\hbar\Delta t}}\exp\left[\frac{i}{\hbar}\Delta t\left\{ \left(\frac{m}{2}\right)\left[\frac{\Delta x}{\Delta t}\right]^{2}-\frac{1}{2}m\omega^{2}\left(x_{n}^{2}\right)\right\} \right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ are two linearly independent and normalized (but not orthogonal) eigenfunctions
+ of H belonging to the same energy eigenvalue E .
+ They are degenerate states.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Show that 
+\begin_inset Formula $c_{1}\psi_{1}+c_{2}\psi_{2}$
+\end_inset
+
+ is also an eigenfunction of H belonging to the same eigenvalue as 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Construct two linear combinations of 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ that are orthogonal to each other.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Suppose that at 
+\begin_inset Formula $t=0$
+\end_inset
+
+ this system is purely 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ .
+ What is the probability that at a later time the system is still in 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+? How does that probability very with time?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solution.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a)
+\series default
+ Because 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ are eigenfunctions of 
+\begin_inset Formula $H$
+\end_inset
+
+, we have that the following relationships holds
+\begin_inset Formula 
+\[
+\psi_{1}H=E\psi_{1},\hspace{1em}\psi_{2}H=E\psi_{2},
+\]
+
+\end_inset
+
+then if we define 
+\begin_inset Formula 
+\[
+\psi_{3}=c_{1}\psi_{1}+c_{2}\psi_{2},
+\]
+
+\end_inset
+
+ we're going to prove that this linear combination is also an eigenfunction.
+ So, using the fact that 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ are eigenfunctions of 
+\begin_inset Formula $H$
+\end_inset
+
+, then, the following is true 
+\begin_inset Formula 
+\[
+c_{1}\psi_{1}H=c_{1}E\psi_{1},\hspace{1em}c_{2}\psi_{2}H=c_{2}E\psi_{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\psi_{3}H=\left(c_{1}\psi_{1}+c_{2}\psi_{2}\right)H,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{3}H=c_{1}\psi_{1}H+c_{2}\psi_{2}H=c_{1}E\psi_{1}+c_{2}E\psi_{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{3}H=c_{1}E\psi_{1}+c_{2}E\psi_{2}=E\left(c_{1}\psi_{1}+c_{2}\psi_{2}\right)=E\psi_{3},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\psi_{3}H=E\psi_{3},
+\]
+
+\end_inset
+
+thus, indeed, 
+\begin_inset Formula $\psi_{3}$
+\end_inset
+
+ is also an eigenfunction of the Hamiltonian, as stated before.
+ 
+\end_layout
+
+\begin_layout Standard
+(b) For this part of the problem, we're going to use the Gram-Schmith procedure,
+ which given a set of linearly independent vectors permit us to construc
+ an orthogonoal (orthonormal) set of vectors.
+ Let's begin by chosing 
+\begin_inset Formula $u_{1}=\psi_{1}$
+\end_inset
+
+, and because 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ is normalized, then 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ will be normalized as well, then, let's construct another vector as follows
+ 
+\begin_inset Formula 
+\[
+u_{2}=\psi_{2}-\text{proj}_{\psi_{1}}\left(\psi_{2}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\text{proj}_{\psi_{1}}\left(\psi_{2}\right)$
+\end_inset
+
+ is defined as follows 
+\begin_inset Formula 
+\[
+\text{proj}_{\psi_{1}}\left(\psi_{2}\right)=\frac{\left\langle \psi_{2}|\psi_{1}\right\rangle }{\left\langle \psi_{1}|\psi_{1}\right\rangle }\psi_{1},
+\]
+
+\end_inset
+
+but, because 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ is normalized, we have 
+\begin_inset Formula 
+\[
+\text{proj}_{\psi_{1}}\left(\psi_{2}\right)=\left\langle \psi_{2}|\psi_{1}\right\rangle \psi_{1},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+u_{2}=\psi_{2}-\left\langle \psi_{2}|\psi_{1}\right\rangle \psi_{1},
+\]
+
+\end_inset
+
+then, the two orthogonal linear combinations are given by 
+\begin_inset Formula 
+\[
+u_{1}=\psi_{1},\hspace{1em}u_{2}=\psi_{2}-\left\langle \psi_{2}|\psi_{1}\right\rangle \psi_{1}.
+\]
+
+\end_inset
+
+(c) For the final part we have the following: They evolve exactly the same
+ way and their evolution is determined by the Schroedinger equation.
+ For two eigenstates with the same eigenvalue the evolution is therefore
+ the same.
+ Another argument is that the superposition of two degnerate eigenstate
+ is also an eigenstate and is therefore stationary, from which we can conclude
+ that their time evolution must be the same.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\paragraph_spacing onehalf
+\noindent
+Write the Hamiltonian for a 2 dimensional simple harmonic oscillator in
+ terms of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ Assume the 2 directions have the same classical frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What are the energy eigenvalues of the eigenstates?
+\end_layout
+
+\begin_layout Enumerate
+Is there a conserved angular momentum (like 
+\begin_inset Formula $r\times p$
+\end_inset
+
+)? If there is, prove it and determine the eigenvalues?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solution.
+
+\series default
+ For a SHO in one dimension, we know that the Hamiltonian is given by 
+\begin_inset Formula 
+\[
+H=\frac{p_{x}^{2}}{2m}+\frac{m\omega_{x}^{2}x^{2}}{2},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega_{x}$
+\end_inset
+
+ is the frequency of the oscillator.
+ Thus for a 2D SHO, if we treat 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ as independent coordinates, we have that the Hamiltonian reads
+\begin_inset Formula 
+\[
+H=\frac{p_{x}^{2}}{2m}+\frac{p_{y}^{2}}{2m}+\frac{m\omega_{x}^{2}x^{2}}{2}+\frac{m\omega_{y}^{2}y^{2}}{2},
+\]
+
+\end_inset
+
+now, if we change the variables as follows 
+\begin_inset Formula $x\rightarrow x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\rightarrow x_{2}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+H=\frac{p_{x_{1}}^{2}}{2m}+\frac{p_{x_{2}}^{2}}{2m}+\frac{m\omega_{1}^{2}x_{1}^{2}}{2}+\frac{m\omega_{2}^{2}x_{2}^{2}}{2},
+\]
+
+\end_inset
+
+now, if we assume that 
+\begin_inset Formula $\omega_{1}=\omega_{2}=\omega$
+\end_inset
+
+, then the Hamiltonian becomes
+\begin_inset Formula 
+\[
+H=\frac{1}{2m}\left(p_{x_{1}}^{2}+p_{x_{2}}^{2}\right)+\frac{m\omega^{2}}{2}\left(x_{1}^{2}+x_{2}^{2}\right).
+\]
+
+\end_inset
+
+Now, the system can be decomposed into two subsystems, that is 
+\begin_inset Formula 
+\[
+H=H_{x_{1}}+H_{x_{2}},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+H_{x_{1}}=\frac{1}{2m}p_{x_{1}}^{2}+\frac{m\omega^{2}}{2}x_{1}^{2},\hspace{1em}H_{x_{2}}=\frac{1}{2m}p_{x_{2}}^{2}+\frac{m\omega^{2}}{2}x_{2}^{2},
+\]
+
+\end_inset
+
+and then, we can form the state kets for this system as follows 
+\begin_inset Formula 
+\[
+\left|\psi\right\rangle =\left|\psi_{x_{1}}\right\rangle \varotimes\left|\psi_{x_{2}}\right\rangle ,
+\]
+
+\end_inset
+
+this is, as the outer product of the two SHO.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, we also know that for the SHO in one dimension, the energy eigenkets
+ are given by 
+\begin_inset Formula 
+\[
+E=\left(n+\frac{1}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+then, for the two subsystems that we have, the energies are given by 
+\begin_inset Formula 
+\[
+E_{x_{2}}=\left(n_{x_{2}}+\frac{1}{2}\right)\hbar\omega,\hspace{1em}E_{x_{2}}=\left(n_{x_{2}}+\frac{1}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+thus, for the whole systems, we have 
+\begin_inset Formula 
+\[
+E=E_{x_{1}}+E_{x_{2}}=\left(n_{x_{2}}+\frac{1}{2}\right)\hbar\omega+\left(n_{x_{2}}+\frac{1}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies E=\left(n_{x_{2}}+n_{x_{2}}+1\right)\hbar\omega.
+\]
+
+\end_inset
+
+Now for the eigenfuncuions we can develop the same idea of the creation
+ and anhilation operators, so, let's define 
+\begin_inset Formula 
+\[
+a_{x_{1}}=\frac{1}{\sqrt{2}}\left(\beta x_{1}+i\frac{p_{x_{1}}}{\beta\hbar}\right),\hspace{1em}a_{x_{2}}=\frac{1}{\sqrt{2}}\left(\beta x_{2}+i\frac{p_{x_{2}}}{\beta\hbar}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta=\sqrt{m\omega/\hbar}$
+\end_inset
+
+.
+ But because those operators act on different spaces, we have that 
+\begin_inset Formula 
+\[
+\left[a_{x_{1}},a_{x_{1}}^{\dagger}\right]=\left[a_{x_{2}},a_{x_{2}}^{\dagger}\right]=1,
+\]
+
+\end_inset
+
+and even more, we can define the number operator for each one of the spaces,
+ thus 
+\begin_inset Formula 
+\[
+N_{x_{1}}=a_{x_{1}}^{\dagger}a_{x_{1}},\hspace{1em}N_{x_{2}}=a_{x_{2}}^{\dagger}a_{x_{2}},
+\]
+
+\end_inset
+
+which enables us to rewrite the Hamiltonian as follows 
+\begin_inset Formula 
+\[
+H=\left(N_{x_{1}}+N_{x_{2}}+1\right)\hbar\omega,
+\]
+
+\end_inset
+
+thus, any state 
+\begin_inset Formula $\left|\psi\right\rangle $
+\end_inset
+
+ can be constructed by successive aplications of the creation operators
+ for each space, this is 
+\begin_inset Formula 
+\[
+\left|\psi\right\rangle =\frac{1}{\sqrt{n_{x_{1}}!n_{x_{2}}!}}\left(a_{x_{1}}^{\dagger}a_{x_{2}}^{\dagger}\right)\left|\psi_{0,0}\right\rangle ,
+\]
+
+\end_inset
+
+and the corresponding wave function is the product of the wave function
+ of each subspace, but we know that the solution of this is in terms of
+ the Hermite polynomials, that is 
+\begin_inset Formula 
+\[
+u_{n_{x_{1}}}=\frac{1}{\sqrt{\pi^{1/2}2^{n_{x_{1}}}n_{x_{1}}!}}H_{n_{x_{1}}}\left(\beta x_{1}\right)\exp\left[-\beta^{2}x_{1}^{2}\right],
+\]
+
+\end_inset
+
+then, the solution will be 
+\begin_inset Formula 
+\[
+\left|\psi\right\rangle =\frac{1}{\sqrt{\pi2^{\left(n_{x_{1}}+n_{x_{2}}\right)}n_{x_{1}}!}n_{x_{2}}!}\exp\left[-\beta^{2}\left(x_{1}^{2}+x_{2}^{2}\right)\right]H_{n_{x_{1}}}\left(\beta x_{1}\right)H_{n_{x_{2}}}\left(\beta x_{2}\right).
+\]
+
+\end_inset
+
+Finally, if we define the angular momentum operator as 
+\begin_inset Formula 
+\[
+L_{z}=xp_{y}-yp_{x},
+\]
+
+\end_inset
+
+in which I've decided to make the change of variables 
+\begin_inset Formula $x_{1}\rightarrow x$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}\rightarrow y$
+\end_inset
+
+.
+ But we can rewrite that operator in terms of the creation and anhilation
+ operators as follows 
+\begin_inset Formula 
+\[
+L_{z}=i\hbar\left(a_{x}a_{y}^{\dagger}-a_{x}^{\dagger}a_{y}\right),
+\]
+
+\end_inset
+
+and we can also write the Hamiltonian in terms of these operators, that
+ is 
+\begin_inset Formula 
+\[
+H=\left(a_{x}^{\dagger}a_{x}+a_{y}^{\dagger}a_{y}+1\right)\hbar\omega,
+\]
+
+\end_inset
+
+and now let's calculate the commutator,
+\begin_inset Formula 
+\[
+\left[a_{x}a_{y}^{\dagger},a_{x}^{\dagger}a_{x}+a_{y}^{\dagger}a_{y}\right]=a_{x}a_{y}^{\dagger}-a_{x}a_{y}^{\dagger}=0,
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\left[a_{x}^{\dagger}a_{y},a_{x}^{\dagger}a_{x}+a_{y}^{\dagger}a_{y}\right]=-a_{x}^{\dagger}a_{y}+a_{x}^{\dagger}a_{y}=0,
+\]
+
+\end_inset
+
+therefore, we have 
+\begin_inset Formula 
+\[
+\left[H,L_{z}\right]=0,
+\]
+
+\end_inset
+
+which means that 
+\begin_inset Formula $L_{z}$
+\end_inset
+
+ is conserved quantity.
+\end_layout
+
+\end_deeper
+\begin_layout Bibliography
+\paragraph_spacing onehalf
+\noindent
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Sakurai, Jun John, and Eugene D.
+ Commins.
+ "Modern quantum mechanics, revised edition." (1995): 93-95.
+\end_layout
+
+\end_body
+\end_document
