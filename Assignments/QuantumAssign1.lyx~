@@ -1,0 +1,1533 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Theory II | Assignment 1
+\end_layout
+
+\begin_layout Author
+Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+Feb 08, 2024
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Problem 3.2)
+\end_layout
+
+\begin_layout Solution*
+Let's compute the eigenvalues and eigenvector of the Pauli matrix 
+\begin_inset Formula $\sigma_{y}$
+\end_inset
+
+, which we know is defined by 
+\begin_inset Formula 
+\[
+\sigma_{y}=\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+The eigenvalue problem, for this matrix is thus 
+\begin_inset Formula 
+\[
+\sigma_{y}x=\lambda x,
+\]
+
+\end_inset
+
+which is equivalent to 
+\begin_inset Formula 
+\[
+\det(\sigma_{y}-\lambda\mathrm{I})=0,
+\]
+
+\end_inset
+
+this is 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cc}
+-\lambda & -i\\
+i & -\lambda
+\end{array}\right)=0,\iff\lambda^{2}+i^{2}=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\lambda^{2}=1\iff\lambda_{\pm}=\pm1.
+\]
+
+\end_inset
+
+Now, with these, we can find the correspondent eigenvectors, let's begin
+ with 
+\begin_inset Formula $\lambda_{+}=1,$
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)=\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)\iff-iy=x\iff y=ix,
+\]
+
+\end_inset
+
+now, if we choose 
+\begin_inset Formula $x=1$
+\end_inset
+
+, then we have the following normalized vector 
+\begin_inset Formula 
+\[
+\lambda_{+}\rightarrow x_{+}=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+1\\
+i
+\end{array}\right),
+\]
+
+\end_inset
+
+on the other hand, for 
+\begin_inset Formula $\lambda_{-}=-1$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)=-\left(\begin{array}{c}
+x\\
+y
+\end{array}\right)\iff-iy=-x\iff y=-ix,
+\]
+
+\end_inset
+
+thus, if we choose 
+\begin_inset Formula $x=1$
+\end_inset
+
+, the normalized eigenvector will be 
+\begin_inset Formula 
+\[
+\lambda_{-}\rightarrow x_{-}=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+1\\
+-i
+\end{array}\right).
+\]
+
+\end_inset
+
+Now, let's suppose that an electron is in the spin state 
+\begin_inset Formula $|\phi\rangle=\left(\begin{array}{c}
+\alpha\\
+\beta
+\end{array}\right)$
+\end_inset
+
+, and we measure 
+\begin_inset Formula $s_{y}$
+\end_inset
+
+ we're interested in the probability of the measure result 
+\begin_inset Formula $\hbar/2$
+\end_inset
+
+.
+ Now, to answer this question we're going to make use of the previous eigenvecto
+rs, in this case 
+\begin_inset Formula $x_{+}$
+\end_inset
+
+, that's the case because we want to compute 
+\begin_inset Formula $|\langle x_{+}|\phi\rangle|^{2}$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+\langle x_{+}|\phi\rangle=\frac{1}{\sqrt{2}}\left(\begin{array}{cc}
+1 & -i\end{array}\right)\left(\begin{array}{c}
+\alpha\\
+\beta
+\end{array}\right)=\frac{1}{\sqrt{2}}\left(\alpha-i\beta\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|\langle x_{+}|\phi\rangle|^{2}=\left(\frac{1}{\sqrt{2}}\left(\alpha-i\beta\right)\right)^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Problem 3.5)
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+a)
+\series default
+ Before anything, it should be clear from the start that we're dealing with
+ a product of spaces, and following Sakurai's notation, I will call this
+ space as the direct product of the spaces for the electron and the positron.
+ Now, the full Hamiltonian for this problem is given by 
+\begin_inset Formula 
+\[
+H=A\mathbf{S}^{(e^{-})}\cdot\mathbf{S}^{(e^{+})}+\left(\frac{eB}{mc}\right)\left(S_{z}^{(e^{-})}-S_{z}^{(e^{+})}\right),
+\]
+
+\end_inset
+
+now, we're interested in the limit 
+\begin_inset Formula $A\rightarrow0$
+\end_inset
+
+, the Hamiltonian becomes 
+\begin_inset Formula 
+\[
+H=\left(\frac{eB}{mc}\right)\left(S_{z}^{(e^{-})}-S_{z}^{(e^{+})}\right),
+\]
+
+\end_inset
+
+we're also assuming that the spin function of the system is given by 
+\begin_inset Formula $\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}$
+\end_inset
+
+, and finally, that we're working with the 
+\begin_inset Formula $z$
+\end_inset
+
+-basis, thus using the definition of the 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ operator in the 
+\begin_inset Formula $z$
+\end_inset
+
+-basis, in general we have 
+\begin_inset Formula 
+\[
+S_{z}=\frac{\hbar}{2}\left[|+\rangle\langle+|-|-\rangle\langle-|\right],
+\]
+
+\end_inset
+
+it's important to notice that we have the same operator for each one of
+ the spaces but it acts in different kets, thus we have 
+\begin_inset Formula 
+\[
+S_{z}^{(e^{-})}\chi_{+}^{(e^{-})}=\frac{\hbar}{2}\chi_{+}^{(e^{-})}\text{ \& }S_{z}^{(e^{+})}\chi_{-}^{(e^{-})}=-\frac{\hbar}{2}\chi_{-}^{(e^{-})},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\left(S_{z}^{(e^{-})}-S_{z}^{(e^{+})}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}=S_{z}^{(e^{-})}\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}-S_{z}^{(e^{+})}\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(S_{z}^{(e^{-})}-S_{z}^{(e^{+})}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}=\frac{\hbar}{2}\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}-\left(-\frac{\hbar}{2}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(S_{z}^{(e^{-})}-S_{z}^{(e^{+})}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}=\hbar\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})},
+\]
+
+\end_inset
+
+thus
+\begin_inset Formula 
+\[
+\left(\frac{eB}{mc}\right)\left(S_{z}^{(e^{-})}-S_{z}^{(e^{+})}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}=\hbar\left(\frac{eB}{mc}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})},
+\]
+
+\end_inset
+
+which is equivalent to 
+\begin_inset Formula 
+\[
+H\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}=\hbar\left(\frac{eB}{mc}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})},
+\]
+
+\end_inset
+
+therefore 
+\begin_inset Formula $\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}$
+\end_inset
+
+ it is en eigenfunction.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+b)
+\series default
+ In this case we're interested in the following limit 
+\begin_inset Formula $\frac{eB}{mc}\rightarrow0$
+\end_inset
+
+, thus, the Hamiltonian becomes
+\begin_inset Formula 
+\[
+H=A\mathbf{S}^{(e^{-})}\cdot\mathbf{S}^{(e^{+})},
+\]
+
+\end_inset
+
+which can be written as
+\begin_inset Formula 
+\[
+H=A\left(S_{x}^{(e^{-})}\cdot S_{x}^{(e^{+})}+S_{y}^{(e^{-})}\cdot S_{y}^{(e^{+})}+S_{z}^{(e^{-})}\cdot S_{z}^{(e^{+})}\right)
+\]
+
+\end_inset
+
+and for this we need the operators 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{y}$
+\end_inset
+
+ expressed in this basis, which are 
+\begin_inset Formula 
+\[
+S_{x}=\frac{\hbar}{2}\left[|+\rangle\langle-|+|-\rangle\langle+|\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{y}=\frac{\hbar}{2}\left[-i|+\rangle\langle-|+i|-\rangle\langle+|\right],
+\]
+
+\end_inset
+
+now, if we apply those operators to 
+\begin_inset Formula $\chi_{+}^{(e^{-})}$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+S_{x}^{(e^{-})}\chi_{+}^{(e^{-})}=\frac{\hbar}{2}\chi_{-}^{(e^{-})},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{y}^{(e^{-})}\chi_{+}^{(e^{-})}=\frac{i\hbar}{2}\chi_{-}^{(e^{-})},
+\]
+
+\end_inset
+
+whereas for 
+\begin_inset Formula $\chi_{-}^{(e^{+})}$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+S_{x}^{(e^{+})}\chi_{-}^{(e^{+})}=\frac{\hbar}{2}\chi_{+}^{(e^{+})},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{y}^{(e^{+})}\chi_{-}^{(e^{+})}=-\frac{i\hbar}{2}\chi_{+}^{(e^{+})},
+\]
+
+\end_inset
+
+therefore, we have 
+\begin_inset Formula 
+\[
+\left(S_{x}^{(e^{-})}\cdot S_{x}^{(e^{+})}+S_{y}^{(e^{-})}\cdot S_{y}^{(e^{+})}+S_{z}^{(e^{-})}\cdot S_{z}^{(e^{+})}\right)\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\frac{\hbar}{2}\right)^{2}\chi_{-}^{(e^{-})}\chi_{+}^{(e^{+})}-\left(\frac{i\hbar}{2}\right)^{2}\chi_{-}^{(e^{-})}\chi_{+}^{(e^{+})}+\left(\frac{\hbar}{2}\right)^{2}\chi_{+}^{(e^{-})}\chi_{-}^{(e^{+})},
+\]
+
+\end_inset
+
+which clearly is not an eigenfunction, thus in the limit 
+\begin_inset Formula $\frac{eB}{mc}\rightarrow0$
+\end_inset
+
+ is not an eigenfunction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Problem 3.6)
+\end_layout
+
+\begin_layout Solution*
+For spin 1, if we use the 
+\begin_inset Formula $z$
+\end_inset
+
+-basis, we have the following states 
+\begin_inset Formula $|1\rangle,|0\rangle,|-1\rangle$
+\end_inset
+
+ with eigenvalues 
+\begin_inset Formula $\hbar,0,-\hbar$
+\end_inset
+
+ respectively, then by construction the 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ operator will be diagonal, and it'll be given by 
+\begin_inset Formula 
+\[
+S_{z}=\hbar\left(|1\rangle\langle1|+0|0\rangle\langle0|-|-1\rangle\langle-1|\right),
+\]
+
+\end_inset
+
+which in matrix notation is represented by 
+\begin_inset Formula 
+\[
+S_{z}\doteq\hbar\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right).
+\]
+
+\end_inset
+
+Now, this is one way of getting the matrix representation of the operator,
+ on the other hand, we know that, in the general case, the matrix elements
+ of the angular momentum are obtained via
+\begin_inset Formula 
+\[
+\langle j^{\prime}m^{\prime}|J_{z}|jm\rangle=m\hbar\delta_{j^{\prime}j}\delta_{m^{\prime}m},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle j^{\prime}m^{\prime}|J_{\pm}|jm\rangle=\sqrt{\left(j\mp m\right)\left(j\pm m+1\right)}\hbar\delta_{j^{\prime}j}\delta_{m^{\prime}m\pm1}.
+\]
+
+\end_inset
+
+And in order to make the notation more clear, I'm going to change a little
+ the notation: in this case 
+\begin_inset Formula $j=j^{\prime}=1$
+\end_inset
+
+, therefore we're going to drop that term from the ket-bra notation, and
+ I'm going to make the following change 
+\begin_inset Formula $J\rightarrow S$
+\end_inset
+
+, then, for the matrix elements of 
+\begin_inset Formula $S_{z}$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+\langle m^{\prime}|S_{z}|m\rangle=m\hbar\delta_{m^{\prime}m},
+\]
+
+\end_inset
+
+and, as we can see, only the diagonal terms survive, each one of them contribute
+s with 
+\begin_inset Formula $m=1,m=0,m=-1$
+\end_inset
+
+, thus, the matrix representation is 
+\begin_inset Formula 
+\[
+S_{z}\doteq\hbar\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right),
+\]
+
+\end_inset
+
+just as we previously found.
+ On the other hand, for the 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ operator, we know that 
+\begin_inset Formula 
+\[
+S_{x}=\frac{S_{+}+S_{-}}{2},
+\]
+
+\end_inset
+
+thus, if we find the matrix representation for 
+\begin_inset Formula $S_{\pm}$
+\end_inset
+
+ we find the matrix representation for 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+.
+ Thus, we have 
+\begin_inset Formula 
+\[
+\langle m^{\prime}|S_{+}|m\rangle=\sqrt{\left(1-m\right)\left(1+m+1\right)}\hbar\delta_{\left(m^{\prime},m+1\right)},
+\]
+
+\end_inset
+
+but, from the previous equation, only the terms 
+\begin_inset Formula $m^{\prime}=m+1$
+\end_inset
+
+ survive, which implies that the only surviving terms are 
+\begin_inset Formula $\{1,0\},\{0,-1\}$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\langle1|S_{+}|0\rangle=\sqrt{\left(1-0\right)\left(1+0+1\right)}\hbar\delta_{\left(1,0+1\right)}=\sqrt{2}\hbar,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle0|S_{+}|-1\rangle=\sqrt{\left(1+1\right)\left(1-1+1\right)}\hbar\delta_{\left(0,-1+1\right)}=\sqrt{2}\hbar,
+\]
+
+\end_inset
+
+now, for the other operator, we have 
+\begin_inset Formula 
+\[
+\langle m^{\prime}|S_{-}|m\rangle=\sqrt{\left(1+m\right)\left(1-m+1\right)}\hbar\delta_{\left(m^{\prime},m-1\right)},
+\]
+
+\end_inset
+
+and again, almost all of the coefficients are zero, except the ones for
+ which 
+\begin_inset Formula $m^{\prime}=m-1$
+\end_inset
+
+ holds, which implies that the only surviving terms are 
+\begin_inset Formula $\{0,1\},\{-1,0\}$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\langle0|S_{-}|1\rangle=\sqrt{\left(1+1\right)\left(1-1+1\right)}\hbar\delta_{\left(0,1-1\right)}=\sqrt{2}\hbar,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle-1|S_{-}|0\rangle=\sqrt{\left(1+0\right)\left(1-0+1\right)}\hbar\delta_{\left(-1,0-1\right)}=\sqrt{2}\hbar,
+\]
+
+\end_inset
+
+therefore, the matrix representation for 
+\begin_inset Formula $S_{x}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+S_{x}=\frac{1}{2}\left(S_{+}+S_{-}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}\doteq\frac{\sqrt{2}}{2}\hbar\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right)=\frac{\hbar}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore S_{x}\doteq\frac{\hbar}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+Now, with this at hand, we can perform the matrix multiplication given by
+ 
+\begin_inset Formula 
+\[
+S_{z}\left(S_{z}+\hbar\mathbb{I}\right)\left(S_{z}-\hbar\mathbb{I}\right)\text{ and }S_{x}\left(S_{x}+\hbar\mathbb{I}\right)\left(S_{x}-\hbar\mathbb{I}\right),
+\]
+
+\end_inset
+
+for the first one, we have 
+\begin_inset Formula 
+\[
+S_{z}\left(S_{z}+\hbar\mathbb{I}\right)\left(S_{z}-\hbar\mathbb{I}\right)\doteq\hbar\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right)\left\{ \left[\hbar\left(\begin{array}{ccc}
+2 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right)\right]\left[\hbar\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & -1 & 0\\
+0 & 0 & -2
+\end{array}\right)\right]\right\} ,
+\]
+
+\end_inset
+
+thus, we have
+\begin_inset Formula 
+\[
+\implies S_{z}\left(S_{z}+\hbar\mathbb{I}\right)\left(S_{z}-\hbar\mathbb{I}\right)\doteq\hbar^{3}\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right)\left(\begin{array}{ccc}
+2 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right)\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & -1 & 0\\
+0 & 0 & -2
+\end{array}\right),
+\]
+
+\end_inset
+
+doing one of the matrix products
+\begin_inset Formula 
+\[
+\implies S_{z}\left(S_{z}+\hbar\mathbb{I}\right)\left(S_{z}-\hbar\mathbb{I}\right)\doteq\hbar^{3}\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & -1
+\end{array}\right)\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & -1 & 0\\
+0 & 0 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+and from that, we can immediately see that the matrix is zero in all its
+ entries 
+\begin_inset Formula 
+\[
+\therefore S_{z}\left(S_{z}+\hbar\mathbb{I}\right)\left(S_{z}-\hbar\mathbb{I}\right)\doteq\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+now, for the other operator, we have 
+\begin_inset Formula 
+\[
+S_{x}\left(S_{x}+\hbar\mathbb{I}\right)\left(S_{x}-\hbar\mathbb{I}\right)\doteq\frac{\hbar}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right)\times
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ \left[\frac{\hbar}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right)+\hbar\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\right]\left[\left[\frac{\hbar}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right)-\hbar\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\right]\right]\right\} ,
+\]
+
+\end_inset
+
+which after a little algebra can be proof that it also gives us a zero matrix
+ 
+\begin_inset Formula 
+\[
+\therefore S_{x}\left(S_{x}+\hbar\mathbb{I}\right)\left(S_{x}-\hbar\mathbb{I}\right)\doteq\left(\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem*
+
+\series bold
+(Problem 3.7)
+\end_layout
+
+\begin_layout Solution*
+In general, for an observable 
+\begin_inset Formula $A$
+\end_inset
+
+, the Heisenberg equation is given by 
+\begin_inset Formula 
+\[
+\frac{dA}{dt}=\frac{1}{i\hbar}\left[A,H\right],
+\]
+
+\end_inset
+
+but using the fact that 
+\begin_inset Formula $\left[A,B\right]=-\left[B,A\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{i}=-i$
+\end_inset
+
+, then we can express the previous equation as 
+\begin_inset Formula 
+\[
+\frac{dA}{dt}=\left(-\frac{i}{\hbar}\right)\left(-\left[H,A\right]\right)=\frac{i}{\hbar}\left[H,A\right],
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\frac{dA}{dt}=\frac{i}{\hbar}\left[H,A\right].
+\]
+
+\end_inset
+
+Now, in this case, we have the following Hamiltonian 
+\begin_inset Formula 
+\[
+H=\frac{1}{2}\left(\frac{K_{1}^{2}}{I_{1}}+\frac{K_{2}^{2}}{I_{2}}+\frac{K_{2}^{2}}{I_{2}}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ is the angular momentum in the body frame, and we want to obtain the equation
+ of motion for this 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ operator, which is 
+\begin_inset Formula 
+\[
+\frac{d\mathbf{K}}{dt}=\frac{i}{\hbar}\left[H,\mathbf{K}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d\mathbf{K}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{2}^{2}}{I_{2}}+\frac{K_{2}^{2}}{I_{2}},\mathbf{K}\right],
+\]
+
+\end_inset
+
+now following the notation of 
+\begin_inset Formula $H$
+\end_inset
+
+ we can express 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ as follows 
+\begin_inset Formula 
+\[
+\mathbf{K}=K_{1}\mathbf{e}_{1}+K_{2}\mathbf{e}_{2}+K_{3}\mathbf{e}_{3},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\frac{d\mathbf{K}}{dt}=\frac{dK_{1}}{dt}\mathbf{e}_{1}+\frac{dK_{2}}{dt}\mathbf{e}_{2}+\frac{dK_{3}}{dt}\mathbf{e}_{3},
+\]
+
+\end_inset
+
+and from that if follows that 
+\begin_inset Formula 
+\[
+\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{2}^{2}}{I_{2}}+\frac{K_{3}^{2}}{I_{3}},K_{1}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{2}^{2}}{I_{2}}+\frac{K_{3}^{2}}{I_{3}},K_{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dK_{3}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{2}^{2}}{I_{2}}+\frac{K_{3}^{2}}{I_{3}},K_{3}\right].
+\]
+
+\end_inset
+
+So we have to calculate the previous commutators, but before doing any algebra,
+ let's remember the following property of the commutator 
+\begin_inset Formula 
+\[
+\left[A^{2},B\right]=A\left[A,B\right]+\left[A,B\right]A,
+\]
+
+\end_inset
+
+and from that it's easy to see that any commutator 
+\begin_inset Formula $\left[K_{i}^{2},K_{i}\right]=0$
+\end_inset
+
+, thus, we just have to calculate 
+\begin_inset Formula 
+\[
+\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{2}^{2}}{I_{2}}+\frac{K_{3}^{2}}{I_{3}},K_{1}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{3}^{2}}{I_{3}},K_{2}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dK_{3}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{2}^{2}}{I_{2}},K_{3}\right].
+\]
+
+\end_inset
+
+Then, for 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{2}^{2}}{I_{2}}+\frac{K_{3}^{2}}{I_{2}},K_{1}\right]=\frac{i}{2\hbar}\left\{ \frac{1}{I_{2}}\left[K_{2}^{2},K_{1}\right]+\frac{1}{I_{3}}\left[K_{3}^{2},K_{1}\right]\right\} ,
+\]
+
+\end_inset
+
+and using the previous property we have
+\begin_inset Formula 
+\[
+\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left\{ \frac{1}{I_{2}}K_{2}\left[K_{2},K_{1}\right]+\frac{1}{I_{2}}\left[K_{2},K_{1}\right]K_{2}+\frac{1}{I_{3}}K_{3}\left[K_{3},K_{1}\right]+\frac{1}{I_{3}}\left[K_{3},K_{1}\right]K_{3}\right\} ,
+\]
+
+\end_inset
+
+now, because this is an angular momentum, we expect that it follows the
+ commutation relations for angular momentum, however, this system is rotating,
+ so we have to change a little bit the relations that we have, this is for
+ the following reason: in the development of all the relations we assume
+ a coordinate system that remains unchanged, but that differs from the problem
+ that we have at hand, which is just a difference between passive versus
+ active rotations.
+ If we go back to the matrix rotations around some axis, we must change
+ the sign in one of the entries, which overall adds a minus sign to the
+ relations, therefore, for this point of view, we have 
+\begin_inset Formula 
+\[
+\left[K_{1},K_{2}\right]=-i\hbar K_{3},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[K_{2},K_{3}\right]=-i\hbar K_{1},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[K_{3},K_{1}\right]=-i\hbar K_{2},
+\]
+
+\end_inset
+
+it follows that the time equation for 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+ can be write as 
+\begin_inset Formula 
+\[
+\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left\{ \frac{1}{I_{2}}K_{2}\left(i\hbar K_{3}\right)+\frac{1}{I_{2}}\left(i\hbar K_{3}\right)K_{2}+\frac{1}{I_{3}}K_{3}\left(-i\hbar K_{2}\right)+\frac{1}{I_{3}}\left(-i\hbar K_{2}\right)K_{3}\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left\{ \frac{i\hbar}{I_{2}}\left(K_{2}K_{3}+K_{3}K_{2}\right)+\frac{i\hbar}{I_{3}}\left(-K_{3}K_{2}-K_{2}K_{3}\right)\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left\{ \left(\frac{i\hbar}{I_{2}}-\frac{i\hbar}{I_{3}}\right)K_{2}K_{3}+\left(\frac{i\hbar}{I_{2}}-\frac{i\hbar}{I_{3}}\right)K_{3}K_{2}\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{1}}{dt}=\frac{i}{2\hbar}\left(\frac{i\hbar}{I_{2}}-\frac{i\hbar}{I_{3}}\right)\left(K_{2}K_{3}+K_{3}K_{2}\right),
+\]
+
+\end_inset
+
+but we can write the last term as the anti commutator, thus 
+\begin_inset Formula 
+\[
+\implies\frac{dK_{1}}{dt}=-\frac{1}{2}\left(\frac{1}{I_{2}}-\frac{1}{I_{3}}\right)\left\{ K_{2},K_{3}\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{dK_{1}}{dt}=\frac{I_{2}-I_{3}}{2I_{2}I_{3}}\left\{ K_{2},K_{3}\right\} .
+\]
+
+\end_inset
+
+Now, for 
+\begin_inset Formula $K_{2}$
+\end_inset
+
+ we have to do the same calculation, this is 
+\begin_inset Formula 
+\[
+\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left[\frac{K_{1}^{2}}{I_{1}}+\frac{K_{3}^{2}}{I_{3}},K_{2}\right]=\frac{i}{2\hbar}\left(\left[\frac{K_{1}^{2}}{I_{1}},K_{2}\right]+\left[\frac{K_{3}^{2}}{I_{3}},K_{2}\right]\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left(\frac{1}{I_{1}}K_{1}\left[K_{1},K_{2}\right]+\frac{1}{I_{1}}\left[K_{1},K_{2}\right]K_{1}+\frac{1}{I_{3}}K_{3}\left[K_{3},K_{2}\right]+\frac{1}{I_{3}}\left[K_{3},K_{2}\right]K_{3}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left(\frac{1}{I_{1}}K_{1}\left(-i\hbar K_{3}\right)+\frac{1}{I_{1}}\left(-i\hbar K_{3}\right)K_{1}+\frac{1}{I_{3}}K_{3}\left(i\hbar K_{1}\right)+\frac{1}{I_{3}}\left(i\hbar K_{1}\right)K_{3}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left(\left(-\frac{1}{I_{1}}+\frac{1}{I_{3}}\right)i\hbar K_{1}K_{3}+\left(-\frac{1}{I_{1}}+\frac{1}{I_{3}}\right)i\hbar K_{3}K_{1}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{dK_{2}}{dt}=\frac{i}{2\hbar}\left(\left(-\frac{1}{I_{1}}+\frac{1}{I_{3}}\right)i\hbar\left\{ K_{1},K_{3}\right\} \right)=-\frac{1}{2}\left(-\frac{1}{I_{1}}+\frac{1}{I_{3}}\right)\left\{ K_{1},K_{3}\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\frac{dK_{2}}{dt}=\frac{I_{3}-I_{1}}{2I_{3}I_{1}}\left\{ K_{3},K_{1}\right\} ,
+\]
+
+\end_inset
+
+and from this we can infer the last one of the equations 
+\begin_inset Formula 
+\[
+\frac{dK_{3}}{dt}=\frac{I_{2}-I_{1}}{2I_{2}I_{1}}\left\{ K_{2},K_{1}\right\} .
+\]
+
+\end_inset
+
+And finally, in the classical limit we have 
+\begin_inset Formula 
+\[
+\frac{dK_{1}}{dt}=\frac{I_{2}-I_{3}}{2I_{2}I_{3}}\left\{ K_{2},K_{3}\right\} \rightarrow\frac{dK_{1}}{dt}=\frac{I_{2}-I_{3}}{2I_{2}I_{3}}\left(2K_{2}K_{3}\right)=\frac{I_{2}-I_{3}}{I_{2}I_{3}}\left(K_{2}K_{3}\right),
+\]
+
+\end_inset
+
+and we have to change from 
+\begin_inset Formula $K\rightarrow\omega$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\frac{d\omega_{1}}{dt}=\frac{I_{2}-I_{3}}{I_{2}I_{3}}\left(\omega_{2}\omega_{3}\right),
+\]
+
+\end_inset
+
+and the same for the other two components
+\begin_inset Formula 
+\[
+\frac{d\omega_{2}}{dt}=\frac{I_{3}-I_{1}}{I_{3}I_{1}}\omega_{3}\omega_{1},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d\omega_{3}}{dt}=\frac{I_{2}-I_{1}}{I_{2}I_{1}}\omega_{2}\omega_{1},
+\]
+
+\end_inset
+
+and it's no surprise that this correspond to the Euler’s equations of motion
+ for rigid-body rotation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Problem 3.10)
+\end_layout
+
+\begin_layout Solution*
+The given sequence of Euler Rotations is given by 
+\begin_inset Formula 
+\[
+\mathcal{D}^{(\frac{1}{2})}\left(\alpha,\beta,\gamma\right)=\exp\left(\frac{-i\sigma_{3}\alpha}{2}\right)\exp\left(\frac{-i\sigma_{2}\beta}{2}\right)\exp\left(\frac{-i\sigma_{3}\gamma}{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathcal{D}^{(\frac{1}{2})}\left(\alpha,\beta,\gamma\right)=\left(\begin{array}{cc}
+\exp\left[-i\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2} & -\exp\left[-i\left(\alpha-\gamma\right)/2\right]\cos\frac{\beta}{2}\\
+\exp\left[i\left(\alpha-\gamma\right)/2\right]\cos\frac{\beta}{2} & \exp\left[i\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2}
+\end{array}\right),
+\]
+
+\end_inset
+
+now, we know that these operator inherit the group properties of the rotations
+ matrices, so, in general there should exist some rotation around some axis
+ in such a way that corresponds to the combination of the given rotations.
+ In math terms, we expect a rotation given by 
+\begin_inset Formula 
+\[
+\mathcal{D}^{\left(\frac{1}{2}\right)}\left(\mathbf{n},\phi\right)\doteq\exp\left(\frac{-i\sigma\cdot\mathbf{n}}{2}\phi\right)\doteq\left(\begin{array}{cc}
+\cos\left(\frac{\phi}{2}\right)-in_{z}\sin\left(\frac{\phi}{2}\right) & \left(-in_{x}-n_{y}\right)\sin\left(\frac{\phi}{2}\right)\\
+\left(-in_{x}+n_{y}\right)\sin\left(\frac{\phi}{2}\right) & \cos\left(\frac{\phi}{2}\right)+in_{z}\sin\left(\frac{\phi}{2}\right)
+\end{array}\right),
+\]
+
+\end_inset
+
+now, first let's notice that if we compute the trace of both matrices, we
+ find a functional dependence on the angles, this is 
+\begin_inset Formula 
+\[
+\text{tr}\left[\mathcal{D}^{(\frac{1}{2})}\left(\alpha,\beta,\gamma\right)\right]=\exp\left[-i\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2}+\exp\left[i\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \implies\text{tr}\left[\mathcal{D}^{(\frac{1}{2})}\left(\alpha,\beta,\gamma\right)\right]=\\
+ & \left(\cos\left[\left(\alpha+\gamma\right)/2\right]-i\sin\left[\left(\alpha+\gamma\right)/2\right]\right)\cos\frac{\beta}{2}+\left(\cos\left[\left(\alpha+\gamma\right)/2\right]+i\sin\left[\left(\alpha+\gamma\right)/2\right]\right)\cos\frac{\beta}{2},
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\text{tr}\left[\mathcal{D}^{(\frac{1}{2})}\left(\alpha,\beta,\gamma\right)\right]=2\cos\left[\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2},
+\]
+
+\end_inset
+
+and for 
+\begin_inset Formula $\mathcal{D}^{\left(\frac{1}{2}\right)}\left(\mathbf{n},\phi\right)$
+\end_inset
+
+ we have something similar 
+\begin_inset Formula 
+\[
+\text{tr}\left(\mathcal{D}^{\left(\frac{1}{2}\right)}\left(\mathbf{n},\phi\right)\right)=\cos\left(\frac{\phi}{2}\right)-in_{z}\sin\left(\frac{\phi}{2}\right)+\cos\left(\frac{\phi}{2}\right)+in_{z}\sin\left(\frac{\phi}{2}\right)=2\cos\left(\frac{\phi}{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\text{tr}\left(\mathcal{D}^{\left(\frac{1}{2}\right)}\left(\mathbf{n},\phi\right)\right)=2\cos\left(\frac{\phi}{2}\right),
+\]
+
+\end_inset
+
+therefore, in order to find the angle, we have 
+\begin_inset Formula 
+\[
+\cos\left(\frac{\phi}{2}\right)=\cos\left[\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\phi=2\cos^{-1}\left[\cos\left[\left(\alpha+\gamma\right)/2\right]\cos\frac{\beta}{2}\right],
+\]
+
+\end_inset
+
+while the previous expression is not very aesthetic, it makes clear, at
+ least in theory, that we can always find this angle of rotation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Problem 3.19)
+\end_layout
+
+\begin_layout Solution*
+By definition, we have that 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=J_{x}^{2}+J_{y}^{2}+J_{z}^{2},
+\]
+
+\end_inset
+
+ and for now, let's focus on the first two terms of the RHS of the previous
+ equation.
+ So, we can write 
+\begin_inset Formula 
+\[
+J_{+}J_{-}=(J_{x}+iJ_{y})(J_{x}+iJ_{y})=J_{x}^{2}+J_{y}^{2}-i(J_{x}J_{y}-J_{y}J_{x}),
+\]
+
+\end_inset
+
+ but, we also know, in virtue of the commutation relationships between the
+ components of the angular momentum, that 
+\begin_inset Formula 
+\[
+[J_{x},J_{y}]=i\hbar J_{z},
+\]
+
+\end_inset
+
+thus, we have 
+\begin_inset Formula 
+\[
+-i(J_{x}J_{y}-J_{y}J_{x})=-i(i\hbar J_{z})=\hbar J_{z},
+\]
+
+\end_inset
+
+and this implies that 
+\begin_inset Formula 
+\[
+J_{x}^{2}+J_{y}^{2}=J_{+}J_{-}-\hbar J_{z},
+\]
+
+\end_inset
+
+ therefore, we end up with 
+\begin_inset Formula 
+\[
+J^{2}=J_{+}J_{-}-\hbar J_{z}+J_{z}^{2},
+\]
+
+\end_inset
+
+thus, ordering the equation, we have 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}=J_{z}^{2}+J_{+}J_{-}-\hbar J_{z},
+\]
+
+\end_inset
+
+ just as we wanted.
+\end_layout
+
+\begin_layout Solution*
+Now, in order to determine the constant 
+\begin_inset Formula $c_{-}$
+\end_inset
+
+ we must do the following calculation 
+\begin_inset Formula 
+\[
+\langle j,m|J_{-}^{\dagger}J_{-}|j,m\rangle,
+\]
+
+\end_inset
+
+ but, because of the definition of the ladder operators, we know that 
+\begin_inset Formula 
+\[
+J_{-}^{\dagger}J_{-}=J_{+}J_{-},
+\]
+
+\end_inset
+
+ thus, we can use use previous result as follows: 
+\begin_inset Formula 
+\[
+\langle j,m|J_{-}^{\dagger}J_{-}|j,m\rangle=\langle j,m|\mathbf{J}^{2}-J_{z}^{2}+\hbar J_{z}|j,m\rangle,
+\]
+
+\end_inset
+
+ but, we know the eigenvalues of 
+\begin_inset Formula $\mathbf{J}$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{z}$
+\end_inset
+
+ are 
+\begin_inset Formula $j(j+1)\hbar^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $m\hbar$
+\end_inset
+
+ respectively, thus, for the previous expression we have 
+\begin_inset Formula 
+\[
+\langle j,m|J_{-}^{\dagger}J_{-}|j,m\rangle=j(j+1)\hbar^{2}-m^{2}\hbar^{2}+m\hbar^{2},
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\implies\langle j,m|J_{-}^{\dagger}J_{-}|j,m\rangle=\hbar^{2}\left[j(j+1)-m^{2}+m\right],
+\]
+
+\end_inset
+
+ and now, let's play a little with the algebra 
+\begin_inset Formula 
+\[
+\implies\langle j,m|J_{-}^{\dagger}J_{-}|j,m\rangle=\hbar^{2}\left[j(j+1)-m^{2}+m-mj+mj\right],
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\implies\langle j,m|J_{-}^{\dagger}J_{-}|j,m\rangle=\hbar^{2}\left[(j+m)(j-m+1)\right],
+\]
+
+\end_inset
+
+ and therefore, we have 
+\begin_inset Formula 
+\[
+c_{-}=\hbar\sqrt{(j+m)(j-m+1)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

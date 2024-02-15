@@ -1,0 +1,1452 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Statistical Mechanics Assignment 1
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+February 4, 2024.
+\end_layout
+
+\begin_layout Subsection*
+Problem 1.
+\end_layout
+
+\begin_layout Standard
+The figure shows the P-V diagram for an unlikely, but conceivable, cyclic
+ process involving two isothermal steps (in blue) and two steps in which
+ pressure varies linearly with volume (in red).
+ Assume that the working medium is a fixed quantity of a monatomic ideal
+ gas, and, of course, that all steps are quasi-static and that they proceed
+ clockwise.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Assign1P1.png
+	scale 25
+	BoundingBox 0cm 8bp 2073bp 1668bp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ For each of the four steps, calculate the work 
+\begin_inset Formula $W_{\text{on}}$
+\end_inset
+
+ done on the gas and the heat 
+\begin_inset Formula $Q$
+\end_inset
+
+ that flows into the gas.
+ In each case, clearly state whether the gas is doing work or having work
+ done on it, and whether the gas is receiving or releasing heat, and explain
+ why that makes sense physically as well as mathematically.
+ Give numerical values in 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $atm$
+\end_inset
+
+ as well as symbolic expressions.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ Which of your values would be different if the gas were diatomic instead
+ of monatomic? Would they be larger or smaller?
+\end_layout
+
+\begin_layout Section*
+Solution
+\end_layout
+
+\begin_layout Standard
+a) Before any calculations, I want to make one assumption, in what follows,
+ I'll be using the first law in the following form 
+\begin_inset Formula 
+\[
+\Delta U=Q-W,
+\]
+
+\end_inset
+
+which corresponds to the Clausius convention or interpretation.
+\end_layout
+
+\begin_layout Standard
+Now, for an ideal gas it is true that 
+\begin_inset Formula $pV=nRT$
+\end_inset
+
+.
+ For this cyclic process, we know that 
+\begin_inset Formula $n$
+\end_inset
+
+ is fixed, and furthermore 
+\begin_inset Formula $R$
+\end_inset
+
+ is constant.
+ So let's put our attention on the isothermal processes and of these let's
+ focus on the process with the highest temperature.
+ Now, because those processes are done at a fixed temperature, in virtue
+ of the ideal gas equation, we know that 
+\begin_inset Formula $nRT$
+\end_inset
+
+ will be a constant, thus we can obtain the functional relationship of 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ as follows
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pV=nRT=\alpha\implies p=\frac{\alpha}{V},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is just a constant, as stated previously.
+ Now, with this information, we can calculate the work, which is given by
+ 
+\begin_inset Formula 
+\[
+W=\int_{V_{i}}^{V_{f}}pdV\implies W=\int_{V_{i}}^{V_{f}}\frac{\alpha}{V}dV=\alpha\ln\left(\frac{V_{f}}{V_{i}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W=\alpha\ln\left(\frac{V_{f}}{V_{i}}\right)
+\]
+
+\end_inset
+
+in this case, the numerical values for the volumes are 
+\begin_inset Formula $V_{f}=2$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{i}=4$
+\end_inset
+
+, then, the work is 
+\begin_inset Formula 
+\[
+W=\alpha\ln\left(\frac{2}{4}\right)=\alpha\ln\left(\frac{1}{2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W=\alpha\ln\left(\frac{2}{4}\right)=\alpha\ln\left(\frac{1}{2}\right)=-0.693\alpha,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore W_{1}=-0.693\alpha,
+\]
+
+\end_inset
+
+and moreover, for ideal gases, we know that the internal energy is a function
+ that depends just on the temperature, that is 
+\begin_inset Formula 
+\[
+U=U\left(T\right),
+\]
+
+\end_inset
+
+and this relationship is linear, this is 
+\begin_inset Formula $U=nRT$
+\end_inset
+
+, where 
+\begin_inset Formula $nR$
+\end_inset
+
+ in this case is just a constant, thus, for an ideal gas and an isothermal
+ process the change in internal energy is zero, thus in virtue of the first
+ law, we have 
+\begin_inset Formula 
+\[
+Q_{1}=W_{1}.
+\]
+
+\end_inset
+
+Now, for the other isothermal process, the procedure and the calculation
+ is the same, the only difference is in the volume initial and final, which
+ in this case are given by 
+\begin_inset Formula $V_{f}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{i}=6$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+W=\alpha\ln\left(\frac{6}{1}\right)=\alpha\ln\left(6\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W_{2}=1.792\alpha,
+\]
+
+\end_inset
+
+and again, in virtue of the first law, we have that 
+\begin_inset Formula 
+\[
+Q_{2}=W_{2}.
+\]
+
+\end_inset
+
+Now, let's move on with the linear process: again, we need a functional
+ relation between 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+, but because the process is linear, we can calculate the slope of the line
+ and the intersection with the 
+\begin_inset Formula $p$
+\end_inset
+
+-axis, that is 
+\begin_inset Formula 
+\[
+m=\frac{\Delta p}{\Delta v}=\frac{1-9}{6-4}=-\frac{8}{2}-4\implies p=-4V+b,
+\]
+
+\end_inset
+
+but because we know that the point 
+\begin_inset Formula $(4,9)$
+\end_inset
+
+ is an element of the line, we can determine the 
+\begin_inset Formula $b$
+\end_inset
+
+ constant by direct evaluation, this is 
+\begin_inset Formula 
+\[
+9=-4(4)+b\implies b=25,
+\]
+
+\end_inset
+
+and thus, the functional relation between 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+p=-4V+25,
+\]
+
+\end_inset
+
+and with this, we can compute the work as follows
+\begin_inset Formula 
+\[
+W=\int_{V_{i}}^{V_{f}}pdV=\int_{V_{i}}^{V_{f}}\left(-4V+25\right)dV=-4\frac{V^{2}}{2}|_{V_{i}}^{V_{f}}+25V|_{V_{i}}^{V_{f}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W=-2\left(V_{f}^{2}-V_{i}^{2}\right)+25(V_{f}-V_{i}),
+\]
+
+\end_inset
+
+in this case is important to notice that the slope 
+\begin_inset Formula $m$
+\end_inset
+
+ has dimensions, otherwise our equation will be wrong, and the volumes for
+ this part of the cycle are 
+\begin_inset Formula $V_{f}=6$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{i}=4$
+\end_inset
+
+, then, the work is
+\begin_inset Formula 
+\[
+W=W=-2\left(6^{2}-4^{2}\right)+25(6-4),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W=-2(20)+25(2)=10,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore W_{3}=10.
+\]
+
+\end_inset
+
+Now, for the heat, the approach is to calculate the change in internal energy
+ and from that, use the first law to calculate the heat.
+ Indeed, using the equation for the internal energy of an ideal gas, we
+ have that 
+\begin_inset Formula 
+\[
+U=\alpha T\implies\Delta U=\alpha\Delta T,
+\]
+
+\end_inset
+
+and the temperature can be calculated for each one of the isotherms using
+ the ideal gas equation, thus, in general we have 
+\begin_inset Formula 
+\[
+pV=\alpha T\implies T=\frac{pV}{\alpha},
+\]
+
+\end_inset
+
+and for the first isotherm, we have 
+\begin_inset Formula 
+\[
+T=\frac{36}{\alpha},
+\]
+
+\end_inset
+
+whereas for the second isotherm
+\begin_inset Formula 
+\[
+T=\frac{6}{\alpha},
+\]
+
+\end_inset
+
+thus, the change in internal energy is given by 
+\begin_inset Formula 
+\[
+\Delta U=\alpha\Delta T=\alpha\left(\frac{6}{\alpha}-\frac{36}{\alpha}\right)=-30
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\Delta U=-30,
+\]
+
+\end_inset
+
+and with this at hand, in virtue of the first law, the heat is given by
+ 
+\begin_inset Formula 
+\[
+Q=\Delta U+W,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies Q=-30+10=-20,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore Q=-20.
+\]
+
+\end_inset
+
+And again, for the other linear process, we proceed in the same way: 
+\begin_inset Formula 
+\[
+m=\frac{\Delta p}{\Delta v}=\frac{18-6}{2-1}=\frac{12}{1}=12\implies p=12V+b,
+\]
+
+\end_inset
+
+but because we know that the point 
+\begin_inset Formula $(1,6)$
+\end_inset
+
+ is an element of the line, we can determine the 
+\begin_inset Formula $b$
+\end_inset
+
+ constant by direct evaluation, this is 
+\begin_inset Formula 
+\[
+6=12(1)+b\implies b=-6,
+\]
+
+\end_inset
+
+and thus, the functional relation between 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+p=12V-6,
+\]
+
+\end_inset
+
+and with this in mind we can also calculate the work.
+ Indeed,
+\begin_inset Formula 
+\[
+W=\int_{V_{i}}^{V_{f}}pdV=\int_{V_{i}}^{V_{f}}\left(12V-6\right)dV=12\frac{V^{2}}{2}|_{V_{i}}^{V_{f}}-6V|_{V_{i}}^{V_{f}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W=6\left(V_{f}^{2}-V_{i}^{2}\right)-6(V_{f}-V_{i}),
+\]
+
+\end_inset
+
+now, in this case the volumes are given by 
+\begin_inset Formula $V_{f}=2$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{i}=1$
+\end_inset
+
+, then, the work is
+\begin_inset Formula 
+\[
+W=6\left(4-1\right)-6(2-1)=12,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies W=12,
+\]
+
+\end_inset
+
+and again, using the same procedure as for the other linear process, we
+ can calculate the change in temperature, and from that the change in internal
+ energy, and with that, the heat:
+\begin_inset Formula 
+\[
+\Delta U=\alpha\Delta T=\alpha\left(\frac{36}{\alpha}-\frac{6}{\alpha}\right)=30,
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+Q=\Delta U+W,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies Q=30+12=42,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore Q=42.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+
+\series bold
+There are some issues with the development of my solution.
+ Here I will like to elaborate a little more on that:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+First, I'm not sure on the integration limits that are provided in the solution
+ of the problem, in particular for the 
+\begin_inset Formula $W_{on,1}$
+\end_inset
+
+ on the integral 
+\begin_inset Formula $\int dV/V$
+\end_inset
+
+, from given figure the integration limits should be 
+\begin_inset Formula $V_{f}=4$
+\end_inset
+
+ and the 
+\begin_inset Formula $V_{i}=2$
+\end_inset
+
+, not sure if I'm misreading the plot, and the same applies for 
+\begin_inset Formula $W_{on,2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Because I used a different convention, it makes sense that the work changes
+ sign, but overall, I think that the physics is well interpreted.
+\end_layout
+
+\begin_layout Itemize
+For the linear processes, I used an analytical method, and my numbers match
+ with the solution provided, which was done following another approach.
+\end_layout
+
+\begin_layout Itemize
+I did't put the results in the correct units, however, the reasoning was
+ OK, overall, but the units are a great deal of this theory, I understand
+ that.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Score: 8/10
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 2.
+\end_layout
+
+\begin_layout Standard
+As mentioned in class, not everything is well approximated by an ideal gas.
+ The next three problems ask about behaviors of a familiar material under
+ different conditions.
+ You are not expected to produce quantitatively accurate results, and the
+ reasoning is more important than the answer.
+ Get as far as you can using your store of knowledge about the world and
+ water (more than you may realize!) Use Google only when your own knowledge
+ base is exhausted and you need something more.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(Problem 2)
+\series default
+ Suppose you have 1 
+\begin_inset Formula $\text{cm}^{3}$
+\end_inset
+
+ of pure water at room temperature and atmospheric pressure.
+ Imagine you keep the pressure constant and vary the temperature slowly
+ so that the water is always in internal equilibrium.
+ 
+\end_layout
+
+\begin_layout Standard
+a) Sketch on the graph below qualitatively how you think the volume will
+ vary as the temperature is changed over the range shown.
+ Explain the important features of your sketch.
+\end_layout
+
+\begin_layout Standard
+b) What kind of apparatus would be needed to carry out such a measurement?
+\end_layout
+
+\begin_layout Section*
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a) 
+\series default
+Here's a sketch of the graph
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Assign1P2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the following discussion I'm assuming that the pressure is fixed.
+ Now, an increase in the temperature of some system usually also increases
+ the volume liquids and solids.
+ In this case we're interested in a volumetric expansion, but we can first
+ think of a linear expansion, and in this case it has been seen experimentally
+ that, if the change in the temperature is not very large (around 100 C°),
+ then the increase in volume is proportional to the temperature change,
+ and this proportionality is, to a very good approximation, linear, and
+ follows the equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta V=\beta V_{0}\Delta T,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the volume expansion coefficient.
+ On the other hand as (bad) first approximation, maybe we could think of
+ this problem as an ideal gas, in which, by the ideal gas law, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pV=nRT,
+\]
+
+\end_inset
+
+and if we fix the pressure, then 
+\begin_inset Formula 
+\[
+V=\frac{nR}{p}T,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=\alpha_{1}T,
+\]
+
+\end_inset
+
+which gives us also a linear dependence, however, as I argued before this
+ is valid if the change in the temperature is not very large, but still,
+ it could be us a picture in mind of what's happening in the system.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b) 
+\series default
+Because the pressure is fixed, we can put the water in a scale with an electric
+ resistance water heater, and also a thermometer.
+\end_layout
+
+\begin_layout Remark
+
+\series bold
+I think my solution is not right but it was on the right path, and here
+ I like to elaborate a little more:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+First, I totally agree with your graph, and I understand what you're trying
+ to say.
+\end_layout
+
+\begin_layout Itemize
+However, the main issue here is that I considered the volume of the water
+ and the volume of the gas as two different things.
+ In my mind I was thinking that above at 
+\begin_inset Formula $100$
+\end_inset
+
+ degrees Celsius water evaporates, which means that the volume of water
+ is less.
+ However in the problem you stated to draw the diagram for the whole system,
+ and I misread that.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Score: 8/10
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 3.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(Problem 3)
+\series default
+ Start with the same 1 
+\begin_inset Formula $\text{cm}^{3}$
+\end_inset
+
+ of water at room temperature and atmospheric pressure.
+ Now assume that the volume is kept constant as the temperature is slowly
+ changed.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ Sketch on the graph below how you think the pressure of the water will
+ vary as the temperature is changed over the range shown.
+ Explain the important features of your sketch
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ What kind of apparatus would be needed to carry out such a measurement?
+\end_layout
+
+\begin_layout Section*
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a) 
+\series default
+Here's a sketch of the graph
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Assign1P3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, if we start with a (bad) first approximation, and we think of the
+ system as an ideal gas, maybe we can understand to some degree the system,
+ so, by the ideal gas law, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pV=nRT,
+\]
+
+\end_inset
+
+and if we fix the volume, then 
+\begin_inset Formula 
+\[
+p=\frac{nR}{V}T,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies p=\alpha_{2}T,
+\]
+
+\end_inset
+
+which gives us also a linear dependence, however, I think that after the
+ water evaporates, because we just have gas, I think the pressure is more
+ easy to increment, that's why I don't expect a linear behavior beyond 100
+ C°.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ For this experiment we could try to couple a thermometer with a barometer
+ inside some container, something like a pressure cooker such that we can
+ fix the volume and we have some control over the temperature and the pressure.
+\end_layout
+
+\begin_layout Remark
+
+\series bold
+Here are my thought on this problem:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I agree 100 %, this was a really tricky problem to think about.
+ I knew that it water it's really hard to comprise but the discussion that
+ you made in therms of the partial derivatives was really helpful.
+\end_layout
+
+\begin_layout Itemize
+I found really interesting all the discussion you made in order to justify
+ the drop in the pressure, while true (it seems to me) I find really hard
+ to think or visualize the process at that stage.
+\end_layout
+
+\begin_layout Itemize
+However, I think we agree on the behavior after that drop in the pressure.
+\end_layout
+
+\begin_layout Itemize
+Score: 8/10.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 4.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(Problem 4)
+\series default
+ You can probably guess the next question.
+ Now we will keep the temperature of the water constant.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ Sketch on the graph below how the volume of the water will vary as the
+ pressure is changed.
+ Explain the important features of your sketch.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ What kind of apparatus would be needed to carry out such a measurement?
+\end_layout
+
+\begin_layout Section*
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a) 
+\series default
+Here's a sketch of the graph
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Assign1P4.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here I tried something different, I draw two graphics, one for an ideal
+ gas and another for our actual system, and for the later, in virtue of
+ the ideal gas law, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pV=nRT,
+\]
+
+\end_inset
+
+and if we fix the temperature, then 
+\begin_inset Formula 
+\[
+V=\frac{nRT}{p},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies V=\frac{\alpha_{3}}{p},
+\]
+
+\end_inset
+
+which gives us also a dependence of 
+\begin_inset Formula $1/p$
+\end_inset
+
+, however, that doesn't take into account the fact that we can see a change
+ of phase, thus I think that a more realistic picture would be the orange
+ line, in which the region parallel to the pressure corresponds to a phase
+ change in the water.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ Maybe we can try to connect a piston, a barometer and a heat reservoir
+ such that we can have control over the pressure via de piston, and the
+ heat reservoir to fix the temperature.
+\end_layout
+
+\begin_layout Remark
+
+\series bold
+Here are my thought on this process:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In my discussion (line of thought) I used as a base an ideal gas, I think
+ it was biases since the beginning, and that lead me to a wrong understanding
+ of the system, at least in the middle of the diagram.
+\end_layout
+
+\begin_layout Itemize
+However, we agreed on the asymptotical behavior which makes me think that
+ it was a 
+\begin_inset Quotes eld
+\end_inset
+
+good thing
+\begin_inset Quotes erd
+\end_inset
+
+ to use the ideal gas as an example, however, I need to take more care with
+ my analogies and have a better understanding of the physics involved.
+\end_layout
+
+\begin_layout Itemize
+Score: 8/10.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 5.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(Problem 5)
+\series default
+ Classically, a diatomic molecule has three degrees of freedom associated
+ with center-of- mass motion, two degrees of freedom associated with rotational
+ motion around axes perpendicular to the interatomic bond, one degree of
+ freedom associated with rotational motion around the interatomic bond (see
+ the figure), and two degrees of freedom (KE and PE) associated with the
+ interatomic vibration.
+ That’s 8 degrees of freedom.
+ So the equipartition theorem says that the average internal energy per
+ molecule should be 
+\begin_inset Formula $4k_{B}T$
+\end_inset
+
+, but in fact, for normal conditions, it’s 
+\begin_inset Formula $(5/2)k_{B}T$
+\end_inset
+
+.
+ This problem explores that discrepancy.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ At room temperature, what is the value of 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+, in eV? (This is a good number to memorize.) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ For a nitrogen molecule, 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+, estimate the moment of inertia 
+\begin_inset Formula $I$
+\end_inset
+
+ for rotation about axes perpendicular and parallel to the molecular axis,
+ that is, the line joining the nuclei.
+ Remember that virtually all of the mass is contained in the nuclei, which
+ have radii 
+\begin_inset Formula $\sim10-15$
+\end_inset
+
+ m, but there is also an electron cloud, which has much less mass, but a
+ much larger radius.
+ You don’t need to do any complicated calculations with the parallel axis
+ theorem; we’re just trying to get the right order of magnitude.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+c)
+\series default
+ Quantum mechanically, we know that the angular momentum is quantized.
+ Using this fact, estimate, in eV, the spacing between rotational energy
+ levels, for rotations perpendicular and parallel to the molecular axis.
+ (The levels are not evenly spaced, but we’re just looking for the order
+ of magnitude, for relatively small 
+\begin_inset Formula $l$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+d)
+\series default
+ The vibrational frequency of 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $2560\text{cm}^{-1}$
+\end_inset
+
+.
+ (In infrared spectroscopy, frequencies are usually given in units of 
+\begin_inset Formula $\text{cm}^{-1}$
+\end_inset
+
+.
+ What this really means is that 1 1 2560cm λ − = where λ is the wavelength
+ of light at that frequency.) To a very good approximation, we can model
+ the vibration as a harmonic oscillator.
+ What is the spacing of energy levels, in eV? 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+e)
+\series default
+ Classical thermodynamics generally works as long as 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+ is much greater than the energy spacing between quantum mechanical energy
+ levels.
+ Using this insight, explain which degrees of freedom can be described classical
+ly, and, thus, why the average energy is 
+\begin_inset Formula $(5/2)k_{B}T$
+\end_inset
+
+ at temperatures not too far from room temperature.
+\end_layout
+
+\begin_layout Section*
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ Room temperature is around 20 C° which is to a good approximation 293 K,
+ 
+\begin_inset Formula $k_{B}=1.381\times10^{-23}\text{J/K}$
+\end_inset
+
+, and we have the following conversion 
+\begin_inset Formula $1ev=1.602\times10^{-19}J$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+k_{B}T=293\times1.381\times10^{-23}\times\frac{1\text{ev}}{1.602\times10^{-19}}[K]\left[\frac{J}{K}\right]\left[\frac{ev}{J}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore k_{B}T=0.025ev.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+
+\series bold
+Here are my thoughts on this problem:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+As stated in the final reflexion due to my lack of organization I couldn't
+ finish this problem, however, the first part of my problem was right.
+\end_layout
+
+\begin_layout Itemize
+Score: 2/10.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Final Reflexion:
+\end_layout
+
+\begin_layout Standard
+Looking back on the problem set as a whole: 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a)
+\series default
+ What is something specific you understand better than you did before? 
+\end_layout
+
+\begin_layout Standard
+I think it is important to take into account the limitations of the models
+ I am working with, that is, knowing their conditions of applicability.
+ I believe the problems served as a reminder of the topics I covered and
+ learned in undergrad.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ What is something specific that surprised, confused, or intrigued you,
+ or that you struggled with?
+\end_layout
+
+\begin_layout Standard
+Conventions have always been difficult for me, or the point of reference,
+ whether the heat is positive or negative, for me it is clear that the work
+ is the integral under the curve, but even so, every time I solve an exercise
+ I tend to review the book and the notation it uses, just to know exactly
+ what your reference point is like.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+c)
+\series default
+ What is something that this problem set made you want to know more about?
+ 
+\end_layout
+
+\begin_layout Standard
+Due to my lack of organization I was not able to finish the last exercise,
+ but I would like to explore more.
+ The area in which I have the most experience is doing molecular dynamics,
+ and I am curious how I could model that specific system.
+ Honestly, I would like to explore this a little more.
+\end_layout
+
+\begin_layout Section*
+Resources:
+\end_layout
+
+\begin_layout Standard
+List any resources, aside from course materials and fellow students, that
+ you consulted in doing this assignment, and describe how you used them
+ and for which problem(s).
+ This could include web sites, videos, computational tools (e.g.
+ Desmos), or AI tools (e.g.
+ ChatGPT).
+ If you didn’t use any such resources, write “None.”
+\end_layout
+
+\begin_layout Standard
+For the books I used another material, in particular Universitary Physics
+ by Sears and Zemansky, and I think my favorite book in thermodynamics:
+ Termodinamica, by Eduardo Piña Garza.
+\end_layout
+
+\end_body
+\end_document
