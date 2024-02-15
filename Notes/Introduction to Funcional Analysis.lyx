@@ -1,0 +1,1122 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introduction to Functional Analysis
+\end_layout
+
+\begin_layout Author
+Emmanuel Flores
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Introduction
+\end_layout
+
+\begin_layout Standard
+While I was an undergrad I enrolled in a topology, but I ended dropped the
+ course.
+ I was in a very tight situation in terms of a current research project,
+ but I was really having a good time.
+ And to be honest I've always feel attracted to this kind of abstractions:
+ I love the crazy names, I do not know why, but I love that.
+ I'm a physicist, and in some sense we deal with very abstract things, but
+ pure math has always been there in the room, just waiting for me to.
+ However, I need to say that I don't consider myself as someone good at
+ math, and this is not false modesty, it's the true, however, I really like
+ the idea of learning, that's why I decided to enroll in this learning journey.
+\end_layout
+
+\begin_layout Part
+Topology
+\end_layout
+
+\begin_layout Section
+What is Topology?
+\end_layout
+
+\begin_layout Standard
+Topologists study the geometric properties or quantities that are conserved
+ before and after deformation of an object, i.e., spatial extension or contraction.
+ This is a cool way of see the study of topology, however, we must have
+ a clear definition of what we mean by "deformation", and on the other hand,
+ it's really intuitive to say geometric quantities, but how are we going
+ to characterize it in a formal mathematical way using this formal theory.
+\end_layout
+
+\begin_layout Standard
+Thus, in some sense, we can say that: functional analysis tells us what
+ mathematical properties are conserved through deformation (whatever that
+ word means).
+\end_layout
+
+\begin_layout Subsection
+What is closeness? 
+\end_layout
+
+\begin_layout Standard
+In order to define closeness, we first must define how to measure distances,
+ and this can be done in a wide variety of ways.
+ The formal way to proceed is to start with a set and define a function
+ within the set itself, this function is called a metric, and this function
+ must satisfy some properties, but we're not dig too much into that.
+ Once we have a well defined metric, then, we can say how "close" one point
+ is from one another.
+ And as you can imagine, this notion of the metric is quite general, thus
+ in functional analysis we are allowed to set rules for distance between
+ elements at our convenience.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+In summary:
+\series default
+ we define how we measure distances, and that defines the type of topology
+ that you have.
+\end_layout
+
+\begin_layout Subsection
+Convergence 
+\end_layout
+
+\begin_layout Standard
+The notion of convergence is primordial in all areas of mathematics, because
+ we can define so many things in terms of this notion.
+ So, we're going to give an intuitive idea of what we mean by the statement:
+ the sequence 
+\begin_inset Formula $P_{n}$
+\end_inset
+
+ converges to 
+\begin_inset Formula $P$
+\end_inset
+
+ which can be restated in the form: the distance 
+\begin_inset Formula $d(P_{n},P)$
+\end_inset
+
+ decreases unlimitedly with increasing 
+\begin_inset Formula $n$
+\end_inset
+
+, the notation for this is: 
+\begin_inset Formula $\{p_{n}\}\rightarrow p,n\rightarrow\infty$
+\end_inset
+
+.
+ Now, the formal mathematical statement is: 
+\end_layout
+
+\begin_layout Definition
+For every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ there exists 
+\begin_inset Formula $k\in N$
+\end_inset
+
+ such that if 
+\begin_inset Formula $n>k$
+\end_inset
+
+ then 
+\begin_inset Formula $d(P_{n},P)<\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, we can also define convergence in terms of something called neighborhood,
+ which in some sense we can say that quantifies how close a set is close
+ from some point.
+ But writing the notion of convergence in terms of neighborhood, let's define
+ what we mean by it.
+\end_layout
+
+\begin_layout Definition
+An 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-neighborhood of 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $V_{\epsilon}(P)$
+\end_inset
+
+, is the set of points whose distances from the point 
+\begin_inset Formula $P$
+\end_inset
+
+ are smaller than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ In formal notation we have 
+\begin_inset Formula 
+\[
+V_{\epsilon}(p)=\{q|d(p,q)<\epsilon\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And with this definition at hand, we can make the following proposition:
+\end_layout
+
+\begin_layout Proposition
+We can define convergence in terms of neighborhood: 
+\begin_inset Formula $\{p_{n}\}\rightarrow p$
+\end_inset
+
+ if and only if for every 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ there exists 
+\begin_inset Formula $k\in N$
+\end_inset
+
+ such that if 
+\begin_inset Formula $n>k$
+\end_inset
+
+ then 
+\begin_inset Formula $p_{n}\in V_{\epsilon}(p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+(Monotonic sequences) The sequence 
+\begin_inset Formula $\{p_{n}\}$
+\end_inset
+
+ is monotonically increasing if 
+\begin_inset Formula $p_{n}<p_{n+1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+, and on the other hand 
+\begin_inset Formula $\{p_{n}\}$
+\end_inset
+
+ is called monotonically decreasing if 
+\begin_inset Formula $p_{n}>p_{n+1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The general definition of Topology is usually stated in terms of open sets,
+ so let's define them.
+\end_layout
+
+\begin_layout Theorem
+(Open and closed sets) Every point 
+\begin_inset Formula $p$
+\end_inset
+
+ in an open set 
+\begin_inset Formula $B$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $V_{\epsilon}\left(p\right)\subset B$
+\end_inset
+
+.
+ If a point sequence 
+\begin_inset Formula $\{p_{n}\}$
+\end_inset
+
+ in a closed disk 
+\begin_inset Formula $B$
+\end_inset
+
+ converges to 
+\begin_inset Formula $p$
+\end_inset
+
+, then 
+\begin_inset Formula $p\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Key-point:
+\end_layout
+
+\begin_layout Itemize
+Even if all the points 
+\begin_inset Formula $\{p_{n}\}$
+\end_inset
+
+ are contained in a set 
+\begin_inset Formula $X$
+\end_inset
+
+, their limit 
+\begin_inset Formula $p$
+\end_inset
+
+ may not be contained in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+Suppose that arbitrary point 
+\begin_inset Formula $p\in S$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $V_{\epsilon}\subset X$
+\end_inset
+
+ for a sufficiently small 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $X$
+\end_inset
+
+ is called an open set.
+\end_layout
+
+\begin_layout Standard
+But, we can also have closed sets.
+\end_layout
+
+\begin_layout Definition
+Suppose a set 
+\begin_inset Formula $X$
+\end_inset
+
+ contains an infinite sequence of points 
+\begin_inset Formula $\{p_{n}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{p_{n}\}\rightarrow p$
+\end_inset
+
+, if
+\begin_inset Formula $p\in X$
+\end_inset
+
+ then 
+\begin_inset Formula $X$
+\end_inset
+
+ is called a closed set.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, with the previous machinery, we're in the position to define accumulation
+ points
+\end_layout
+
+\begin_layout Definition
+(Accumulation points) Suppose a set 
+\begin_inset Formula $M$
+\end_inset
+
+ contains an infinite sequence 
+\begin_inset Formula $\{p_{n}\}$
+\end_inset
+
+ that consists of different points.
+ If 
+\begin_inset Formula $\{p_{n}\}\rightarrow p$
+\end_inset
+
+, then 
+\begin_inset Formula $p$
+\end_inset
+
+ is called an accumulation point of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Key-points:
+\end_layout
+
+\begin_layout Itemize
+Given an accumulation point P, you can find infinitely many points within
+ a small region around P, no matter how small the region is.
+\end_layout
+
+\begin_layout Itemize
+An accumulation point of a set X may and may not be contained in X.
+\end_layout
+
+\begin_layout Section
+Continuous Mapping
+\end_layout
+
+\begin_layout Definition
+(Point continuity) Suppose that a mapping 
+\begin_inset Formula $\phi$
+\end_inset
+
+ between two planes satisfies the following condition for arbitrary points
+ in the planes:
+\end_layout
+
+\begin_layout Standard
+In simple terms, 
+\begin_inset Formula $φ$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $p$
+\end_inset
+
+ if the convergence property of infinite sequences is conserved at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $φ$
+\end_inset
+
+ is discontinuous, the image 
+\begin_inset Formula $\{\phi\left(p\right)\}$
+\end_inset
+
+ may not converge.
+\end_layout
+
+\begin_layout Subsection
+Relation between continuity and closed sets
+\end_layout
+
+\begin_layout Standard
+A mapping φ is continuous everywhere if and only if, given an arbitrary
+ closed set F, its inverse image φ−1(F) is also closed.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Key-points: 
+\end_layout
+
+\begin_layout Itemize
+The continuity of a mapping φ is judged by the nature of its inverse
+\end_layout
+
+\begin_layout Itemize
+The inverse φ−1 is what we should pay attention to in examining the continuity
+ of φ.
+ ### Closure of a set Definition (Closure):
+\end_layout
+
+\begin_layout Standard
+The closure of a set S, denoted S, is the union of S and all its accumulation
+ points.
+\end_layout
+
+\begin_layout Theorem
+(Continuous mapping and closure) A mapping 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is continuous in 
+\begin_inset Formula $X$
+\end_inset
+
+ if and only if all subsets 
+\begin_inset Formula $S\subset X$
+\end_inset
+
+ satisfy.
+\end_layout
+
+\begin_layout Standard
+## Homeomorphism
+\end_layout
+
+\begin_layout Definition
+Definition (Homeomorphic mapping) Consider a continuous mapping 
+\begin_inset Formula $\phi$
+\end_inset
+
+ which transforms the metric space 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+ to another metric space 
+\begin_inset Formula $(Y,d^{\prime})$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $φ^{-1}$
+\end_inset
+
+ is also continuous, we say that: 
+\end_layout
+
+\begin_layout Definition
+1.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are homeomorphic (or topologically equivalent).
+\end_layout
+
+\begin_layout Definition
+2.
+ 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is a homeomorphic mapping (or homeomorphism) from 
+\begin_inset Formula $X$
+\end_inset
+
+ to 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Key-point: 
+\end_layout
+
+\begin_layout Itemize
+Homeomorphic mappings are special continuous mappings that preserve the
+ convergence (not distance) property.
+\end_layout
+
+\begin_layout Theorem
+Consider a homeomorphic mapping φ from a metric space 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+ to 
+\begin_inset Formula $(Y,d^{\prime})$
+\end_inset
+
+.
+ Then we have: 
+\end_layout
+
+\begin_layout Theorem
+1.
+ 
+\begin_inset Formula $\{x_{n}\}\rightarrow x$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\{\phi\left(x_{n}\right)\}\rightarrow\phi\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+2.
+ 
+\begin_inset Formula $O$
+\end_inset
+
+ is an open set in 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $φ(O)$
+\end_inset
+
+ is an open set in 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+3.F is a closed set in X ⇔ φ(F) is a closed set in Y.
+ 
+\end_layout
+
+\begin_layout Theorem
+4.V is a neighborhood of 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $φ(V)$
+\end_inset
+
+ is a neighborhood of 
+\begin_inset Formula $φ(x)\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+5.
+ The closure of a set S in X, S, is mapped to the closure of φ(S) in Y,
+ φ(S).
+\end_layout
+
+\begin_layout Subsection
+Revisited: What is topology?
+\end_layout
+
+\begin_layout Standard
+So, what is topology?
+\end_layout
+
+\begin_layout Definition
+Definition (Topological equivalence): Two metric spaces 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+ and 
+\begin_inset Formula $(Y,d^{\prime})$
+\end_inset
+
+ are said to have the same topology, if they are homeomorphic.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Key-point: 
+\end_layout
+
+\begin_layout Itemize
+Topological properties of a space are what are conserved by homeomorphic
+ mappings 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Vector Spaces
+\end_layout
+
+\begin_layout Subsection
+What is a vector space?
+\end_layout
+
+\begin_layout Standard
+A vector space is a set of mathematical entities to which addition and multiplic
+ation can apply.
+ Many theorems and formulae deduced from the vector space theory are universal
+ in the sense that they hold true no matter what kinds of entities are chosen
+ for the elements of the space.
+\end_layout
+
+\begin_layout Standard
+We need some concepts in order to define a Hilbert Space, such as: distance,
+ norm, inner product, orthogonality, and completeness of a space.
+ The salient feature of Hilbert Spaces is that they are endowed with inner
+ product and completeness.
+ Perhaps the concept of completeness is not very familiar, but this is highly
+ important, because this concept opens the gate for establishing a wide
+ variety of complete orthonormal sets, using which we can decompose a given
+ intractable mathematical entity into a set of easily-handled alternatives.
+ But before moving on, let's define what we mean by a vector space
+\end_layout
+
+\begin_layout Definition
+(Vector Space) A vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ is a collection of elements 
+\begin_inset Formula $x$
+\end_inset
+
+ (called vectors) that satisfy the following axioms:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $V$
+\end_inset
+
+ s a commutative group under addition:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V$
+\end_inset
+
+ satisfies the following axioms respect to a field 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+, whose elements are called scalars:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $V$
+\end_inset
+
+ is closed under scalar multiplication.
+\end_layout
+
+\begin_layout Enumerate
+Scalar multiplication is distributive with respect to elements of both 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Scalar multiplication is associative.
+\end_layout
+
+\begin_layout Enumerate
+Multiplication with the zero scalar gives the zero vector.
+\end_layout
+
+\begin_layout Enumerate
+Unit scalar has the property of 
+\begin_inset Formula $1\mathbf{x}=\mathbf{x}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Definition
+This definition is quite general, but usually, for the field we consider
+ 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ or 
+\begin_inset Formula $\,\mathbb{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Key-points: 
+\end_layout
+
+\begin_layout Itemize
+A vector space is a group under addition.
+\end_layout
+
+\begin_layout Itemize
+Its axiom relies on the algebraic concept of field.
+\end_layout
+
+\begin_layout Subsection
+Properties of a vector space
+\end_layout
+
+\begin_layout Standard
+As with any mathematical structure, once defined we need to characterize
+ it.
+\end_layout
+
+\begin_layout Subsubsection
+Inner product.
+\end_layout
+
+\begin_layout Definition
+(Inner product) An inner product is a mapping from an ordered pair of vectors
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, written by 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+, to a scalar (complex-valued, in general).
+ The mapping satisfied the following rules:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(x,y\right)=\left(y,x\right)^{*};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\alpha x+\beta y,z\right)=\alpha^{*}\left(x,y\right)+\beta^{*}\left(y,z\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $\alpha,\beta\in\mathbb{C};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(x,x\right)\geq0\hspace{1em}\forall x;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(x,x\right)=0\iff x=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(Inner product space)
+\series default
+ Vector spaces endowed with an inner product space are called inner product
+ spaces.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Key-point:
+\series default
+ Any inner product must possess positive definite property: 
+\begin_inset Formula $\left(x,x\right)\geq0$
+\end_inset
+
+ for 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+And another important feature of inner products is that they are not linear
+ but conjugate linear with respect to the first factor, and this implies
+ that 
+\begin_inset Formula $\left(x,x\right)\in\mathbb{R}$
+\end_inset
+
+, thus we can define the length of a vector by 
+\begin_inset Formula 
+\[
+||x||=\sqrt{\left(x,x\right)},
+\]
+
+\end_inset
+
+and even more, we have 
+\begin_inset Formula 
+\[
+||\alpha x||=\sqrt{\alpha^{*}\alpha\left(x,x\right)}=|\alpha|\cdot||x||.
+\]
+
+\end_inset
+
+In view of functional analysis, the norm should be a more general concept
+ and can be introduced independently of the concept of inner product.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Key-point:
+\series default
+ A norm is a broader concept than an inner product.
+\end_layout
+
+\begin_layout Subsubsection
+Geometry of inner product spaces.
+\end_layout
+
+\begin_layout Standard
+Once endowed with a norm and an inner product, vector spaces take on geometric
+ structures based on which we can argue the length of an element and convergence
+ of an infinite sequence of elements in the spaces.
+\end_layout
+
+\begin_layout Theorem
+Given an inner product space, any two elements 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ satisfy the following equality/inequality.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+(Schwarz's inequality) 
+\begin_inset Formula $|\left(x,y\right)|\leq||x||\cdot||y||;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(Triangle inequality) 
+\begin_inset Formula $||x+y||\leq||x||+||y||;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(Parallelogram law) 
+\begin_inset Formula $||x+y||^{2}+||x-y||^{2}=2\left(||x||^{2}+||y||^{2}\right).$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Schwarz's inequality is crucial important in the study of functional analysis,
+ because is often used when discussing convergence of an infinite sequence
+ of elements in inner product spaces.
+ Furthermore, an important physical application of this inequality is found
+ in the general formulation of the uncertainty principle.
+\end_layout
+
+\begin_layout Proof
+(Schwarz's inequality) Let be 
+\begin_inset Formula $z=x+\alpha y$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align*}
+0 & \leq\left(z,z\right)=\left(x+\alpha y,x+\alpha y\right)\\
+ & \leq\left(x,x+\alpha y\right)+\left(\alpha y,x+\alpha y\right)\\
+ & \leq\left(x,x\right)+\alpha\left(x,y\right)+\alpha^{*}\left(y,x\right)+|\alpha|^{2}\left(y,y\right),
+\end{align*}
+
+\end_inset
+
+now, if we choose 
+\begin_inset Formula $\alpha=-\frac{\left(y,x\right)}{y,y}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+0 & \leq\left(x,x\right)-\frac{\left(y,x\right)}{\left(y,y\right)}\left(x,y\right)-\frac{\left(x,y\right)}{\left(y,y\right)}\left(y,x\right)+\frac{\left(x,y\right)\left(y,x\right)}{\left(y,y\right)^{2}}\left(y,y\right),\\
+ & \leq\left(x,x\right)-\frac{\left(y,x\right)}{\left(y,y\right)}\left(x,y\right),
+\end{align*}
+
+\end_inset
+
+therefore, we have 
+\begin_inset Formula 
+\[
+\left(y,x\right)\left(x,y\right)\leq\left(x,x\right)\left(y,y\right),
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+|\left(x,y\right)|^{2}\leq\left(x,x\right)\left(y,y\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hierarchy of vector space
+\end_layout
+
+\end_body
+\end_document

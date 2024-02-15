@@ -1,0 +1,290 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Notes: Tensor for Physicists
+\end_layout
+
+\begin_layout Author
+Emmanuel Flores
+\end_layout
+
+\begin_layout Standard
+In math, when we're talking about vectors, we're talking about elements
+ of a vector space, however, in physics we have to say more things about
+ it.
+ In physics almost each vector/tensor has a physical meaning, therefore,
+ the point of view can be a little different, however, we're still working
+ with the same mathematical structure, we're just adding some layers of
+ information.
+ With this in mind, we can say that a vector (
+\series bold
+tensor or rank 0
+\series default
+) is an object which transforms by a rotation matrix, and we can elaborate
+ al little more and sat that a tensor is just a mathematical entity in which
+ each one if its components are transformed by a rotation matrix when changing
+ the coordinate system.
+ Here's a more precise definition.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(Vector)
+\series default
+ A tensor of rank 
+\begin_inset Formula $l$
+\end_inset
+
+ is a quantity whose components are transformed upon a rotation of the coordinat
+e system with the 
+\begin_inset Formula $l$
+\end_inset
+
+-fold product of the rotation matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+A quantity a with Cartesian components 
+\begin_inset Formula $a_{μ}$
+\end_inset
+
+, 
+\begin_inset Formula $μ=1,2,3$
+\end_inset
+
+ is called a vector when, upon a rotation of the coordinate system, its
+ components are transformed just like the components of the position vector.
+ More specifically: a Cartesian tensor of rank 
+\begin_inset Formula $l$
+\end_inset
+
+ is a quantity with 
+\begin_inset Formula $l$
+\end_inset
+
+ indices, e.g.
+ 
+\begin_inset Formula 
+\[
+A_{μ_{1}μ_{2}...μ_{l}},
+\]
+
+\end_inset
+
+whose Cartesian components 
+\begin_inset Formula 
+\[
+A^{\prime}{}_{μ_{1}μ_{2}...μ_{l}}
+\]
+
+\end_inset
+
+in a rotated coordinate system are obtained from the original ones by the
+ application of 
+\begin_inset Formula $l$
+\end_inset
+
+ rotation matrices 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ to each one of the indices.
+\end_layout
+
+\begin_layout Subsection
+The physical content of equations must be invariant under a rotation of
+ the coordinate system.
+\end_layout
+
+\begin_layout Subsection
+Parity Operation
+\end_layout
+
+\begin_layout Standard
+The parity operation is an 
+\series bold
+active transformation
+\series default
+ where the position vector 
+\begin_inset Formula $r$
+\end_inset
+
+ is replaced by −r, (P − 1)(P + 1) = 0.
+ Thus the eigenvalues of the parity operator are
+\begin_inset Formula $P=\pm1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parity of Vectors and Tensors
+\end_layout
+
+\begin_layout Standard
+In most applications tensors, and this includes vectors, are eigenfunction
+ of the parity operator.
+ Tensors of rank 
+\begin_inset Formula $l$
+\end_inset
+
+ with 
+\begin_inset Formula 
+\[
+P=(−1)^{l}
+\]
+
+\end_inset
+
+ are called proper tensors, those with 
+\begin_inset Formula $l$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+P=−(−1)^{l}=(−1)^{l+1},
+\]
+
+\end_inset
+
+are referred as pseudo-tensors.
+\end_layout
+
+\begin_layout Subsection
+Time Derivatives
+\end_layout
+
+\begin_layout Standard
+The time derivative of a tensor A is a tensor again.
+ It is defined as the time derivatives of all its components
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{d}{dt}\mathbf{A}\right)_{\mu\nu\dots}\equiv\frac{dA}{dt}_{\mu\nu\dots}.
+\]
+
+\end_inset
+
+Since the transformation matrix 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ is “timeless”, the differentiation with respect to time and the rotation
+ of the coordinate system commute.
+\end_layout
+
+\begin_layout Standard
+The parity operation is also timeless.
+ Thus it commutes with the differentiation with respect to time.
+ Consequently, the time derivative 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ of a tensor has the same parity as the original tensor 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

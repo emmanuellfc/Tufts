@@ -1,0 +1,557 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Foams: Notes
+\end_layout
+
+\begin_layout Author
+Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+Feb 14, 2024.
+\end_layout
+
+\begin_layout Standard
+Foams are some kind of materials formed by trapping pockets of gas in a
+ liquid or solid matrix, thus broadly speaking, a foam consists of bubbles
+ packed together.
+\end_layout
+
+\begin_layout Standard
+We can classify foams by the volume ratio of the liquid's volume and the
+ foam's volume:
+\end_layout
+
+\begin_layout Itemize
+Dry Foams: almost zero liquid in the films.
+\end_layout
+
+\begin_layout Itemize
+Wet Foam: we say a foam is wet if both the Plateau borders (edges) and vertices
+ are inflated with liquid.
+\end_layout
+
+\begin_layout Itemize
+Bubbly liquid: bubbles dispersed in a liquid.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Structure.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+Classification:
+\end_layout
+
+\begin_layout Itemize
+At the scale of a gas/liquid interface:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Surface tension and the Young–Laplace law: in general, we determine the
+ shape from the Young–Laplace law, which states that the pressure difference
+ between the two sides of an interface is equal to the mean curvature of
+ the interface multiplied by its surface tension
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+At the scale of a film
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Minimal surfaces
+\end_layout
+
+\begin_layout Itemize
+From film to bubble: when a group of bubbles come together the conservation
+ of volumes and the minimization of surface area leads to some simple laws
+ which govern the local shape of the bubbles known as Plateau’s laws.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+At the scale of a bubble
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Bubbles, films, and Plateau borders: a bubble in the centre of a dry foam
+ is polyhedral in shape because of its neighbors.
+ Its faces are thin films that are gently curved either because of the pressure
+ differences between the bubbles, or simply because its perimeter does not
+ lie in one plane.
+ The films intersect in threes along the edges, which are liquid-carrying
+ channels known as 
+\series bold
+Plateau borders
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+From bubble to foam: the amount of liquid contained in a foam is defined
+ by the liquid volume fraction, 
+\begin_inset Formula $\phi_{l}=V_{l}/V_{f}$
+\end_inset
+
+, the ratio of the volume of liquid to the total volume of the foam.
+ This quantity is linked to the density 
+\begin_inset Formula $\rho$
+\end_inset
+
+ of the foam.
+ Now, based on this, different types of structure are obtained depending
+ on the liquid fraction
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\phi_{l}>\phi_{l}^{*}$
+\end_inset
+
+: the bubbles are spherical and do not touch (
+\series bold
+bubbly liquid
+\series default
+).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0.05\lesssim\phi_{l}<\phi_{l}^{*}$
+\end_inset
+
+: the bubbles touch and take the shape of a squashed sphere at each bubble/bubbl
+e contact (
+\series bold
+wet foam
+\series default
+).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0.05\lesssim\phi_{l}$
+\end_inset
+
+: the bubbles are polyhedral and the Plateau borders have a negligible cross-sec
+tion (
+\series bold
+dry foam
+\series default
+).
+\end_layout
+
+\begin_layout Itemize
+The variable 
+\begin_inset Formula $\phi^{*}$
+\end_inset
+
+ is associated to the transition from bubbly liquid to wet foam, and it
+ occurs when the osmotic pressure vanishes, which corresponds to the numerical
+ value 
+\begin_inset Formula $\phi^{*}=0.3$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+The Young-Laplace Law
+\end_layout
+
+\begin_layout Standard
+If an interface is not flat then the surface tension induces normal forces
+ which are compensated, at equilibrium, by the pressure in each side.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename YoungLaplace.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta P=P_{A}-P_{B}=\gamma H=\gamma\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right),
+\]
+
+\end_inset
+
+this law indicates that surface tension tends to reduce the curvature of
+ an interface, making it more planar, and that is counterbalanced by a pressure
+ difference, which tends to bend the interface.
+\end_layout
+
+\begin_layout Subsection
+Definition of an ideal foam.
+\end_layout
+
+\begin_layout Standard
+Here I list the properties that define an ideal foam.
+\end_layout
+
+\begin_layout Itemize
+The foam is very dry.
+\end_layout
+
+\begin_layout Itemize
+The foam is at mechanical equilibrium and is thus static.
+\end_layout
+
+\begin_layout Itemize
+The foam has an energy proportional to the surface area of its bubbles.
+\end_layout
+
+\begin_layout Itemize
+The foam is incompressible.
+\end_layout
+
+\begin_layout Subsection
+Plateau's laws
+\end_layout
+
+\begin_layout Itemize
+Equilibrium of faces: the soap films are smooth and have a constant mean
+ curvature which is determined by the Young-Laplace Law.
+\end_layout
+
+\begin_layout Itemize
+Equilibrium of edges: the films always meet in threes along edges, forming
+ angles of 120.
+\end_layout
+
+\begin_layout Itemize
+Equilibrium of vertices: the edges meet at four-fold at vertices, forming
+ angles of 
+\begin_inset Formula $\theta_{a}\approx109.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Plateau.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These laws are a necessary and sufficient condition to ensure mechanical
+ equilibrium of an ideal foam.
+\end_layout
+
+\begin_layout Standard
+Now, in 2D for dry foams, the Plateau's Laws are given by: 
+\end_layout
+
+\begin_layout Itemize
+Edges are arcs of circles
+\end_layout
+
+\begin_layout Itemize
+Edges meet in threes at vertices
+\end_layout
+
+\begin_layout Itemize
+Angles at vertices are 120
+\end_layout
+
+\begin_layout Itemize
+Edges meet solid walls al 90
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename TwoDimFoams.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+thus, following these laws bubbles are polygons with curved edges and vertices
+ are all triconnected.
+ 
+\end_layout
+
+\begin_layout Subsection
+Time dependence of the bubble's area.
+\end_layout
+
+\begin_layout Standard
+For ideally dry purely 2D foams, a bubble’s area 
+\begin_inset Formula $A$
+\end_inset
+
+ changes at a rate that depends only on its number 
+\begin_inset Formula $n$
+\end_inset
+
+ of sides according to von Neumann’s law
+\begin_inset Formula 
+\[
+\frac{dA}{dt}=K_{0}\left(n-6\right).
+\]
+
+\end_inset
+
+but there've been some efforts to generalize this equation to 
+\begin_inset Formula 
+\[
+\frac{dA}{dt}=K_{0}\left(1-\frac{2r}{H}+\frac{\pi\sqrt{rl}}{H}\right)\left[\left(n-6\right)+\frac{6nCr}{\sqrt{3\pi A}}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Cantat"
+key "key-1"
+literal "false"
+
+\end_inset
+
+Cantat, Isabelle, Sylvie Cohen-Addad, Florence Elias, François Graner, Reinhard
+ Höhler, Olivier Pitois, Florence Rouyer, and Arnaud Saint-Jalmes.
+ Foams: structure and dynamics.
+ OUP Oxford, 2013.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Chieco"
+key "key-2"
+literal "false"
+
+\end_inset
+
+Chieco, A.
+ T., and D.
+ J.
+ Durian.
+ “Experimentally Testing a Generalized Coarsening Model for Individual Bubbles
+ in Quasi-Two-Dimensional Wet Foams.” Physical Review E 103, no.
+ 1 (January 20, 2021): 012610.
+ https://doi.org/10.1103/PhysRevE.103.012610.
+ 
+\end_layout
+
+\end_body
+\end_document
