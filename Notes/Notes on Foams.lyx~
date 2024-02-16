@@ -96,6 +96,10 @@ Foams: Notes
 Emmanuel Flores
 \end_layout
 
+\begin_layout Date
+Feb 14, 2024.
+\end_layout
+
 \begin_layout Standard
 Foams are some kind of materials formed by trapping pockets of gas in a
  liquid or solid matrix, thus broadly speaking, a foam consists of bubbles
@@ -512,6 +516,86 @@ but there've been some efforts to generalize this equation to
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Image Analysis for Wet Foams
+\end_layout
+
+\begin_layout Standard
+In order to analyze images of wet foams, one should take a little more care
+ with the process the main reason is this: because the wet foam has bright
+ vertices surrounded by dark surface Plateau borders the images do not skeletoni
+ze in a way that is representative of the foams.
+ Therefore, we can not simply binarize, skeletonize and watershed the images
+ of the wet foams in order determine bubble areas like we can for the dry
+ foams, the major reason is because the wet foams have features of varying
+ brightness that make the skeletonized images poor representations of the
+ foam.
+ 
+\end_layout
+
+\begin_layout Standard
+Here's an approach for this analysis:
+\end_layout
+
+\begin_layout Itemize
+To find the vertex positions we start by binarizing, skeletonizing, and
+ watershedding the images.
+\end_layout
+
+\begin_layout Itemize
+The locations determined from the watershedding basins are close enough
+ to the vertices that they make excellent seeding locations for the structuring
+ elements of a Monte Carlo like reconstruction method.
+ 
+\end_layout
+
+\begin_layout Standard
+In the figure below, we can appreciate the things that we've just discussed:
+ the first row refers to a dry foam, whereas the second refers to a wet
+ foam.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Foams_Image_Analysis.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+All figures are taken from the references and the goal of this document
+ is just educational.
 \end_layout
 
 \begin_layout Bibliography
