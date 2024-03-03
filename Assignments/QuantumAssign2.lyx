@@ -105,11 +105,225 @@ Feb 27, 2024
 \end_layout
 
 \begin_layout Solution*
-Sol
+We want to express 
+\begin_inset Formula $|jm\rangle$
+\end_inset
+
+, with 
+\begin_inset Formula $j=0,1,2$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $|j_{1}j_{2};m_{1}m_{2}\rangle$
+\end_inset
+
+ and the notation used will be 
+\begin_inset Formula $\pm,0$
+\end_inset
+
+ for 
+\begin_inset Formula $m_{1,2}=\pm1,0$
+\end_inset
+
+ with 
+\begin_inset Formula $j_{1}=j_{2}=1$
+\end_inset
+
+.
+ But we know that 
+\begin_inset Formula $m=m_{1}+m_{2}$
+\end_inset
+
+, then we should have 
+\begin_inset Formula $|jm\rangle=|2,2\rangle=|++\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $|2,-2\rangle=|--\rangle$
+\end_inset
+
+, and from this, we can build the other 
+\begin_inset Formula $j=2$
+\end_inset
+
+ states, but in order to do that, we must remember the following equations
+ 
+\begin_inset Formula 
+\[
+J_{-}|jm\rangle=\sqrt{\left(j+m\right)\left(j-m+1\right)}|j,m-1\rangle,\hspace{1em}J_{-}=J_{1-}+J_{2-},
+\]
+
+\end_inset
+
+thus we have 
+\begin_inset Formula 
+\[
+J_{-}|2,2\rangle=\sqrt{4}|2,1\rangle=2|2,1\rangle,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{-}|2,2\rangle=\left(J_{1-}+J_{2-}\right)|++\rangle=\sqrt{2}\left(|0+\rangle+|+0\rangle\right),
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+|2,1\rangle=\frac{1}{\sqrt{2}}\left(|0+\rangle+|+0\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{-}|2,1\rangle=\sqrt{6}|2,0\rangle=\frac{1}{\sqrt{2}}\left(\sqrt{2}|-+\rangle+\sqrt{2}|00\rangle+\sqrt{2}|00\rangle+\sqrt{2}|+-\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|2,0\rangle=\frac{1}{\sqrt{6}}\left(|-+\rangle+2|00\rangle+|+-\rangle\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{-}|2,0\rangle=\sqrt{6}|2,-1\rangle=\frac{1}{\sqrt{6}}\left(\sqrt{2}|-0\rangle+2\sqrt{2}|-0\rangle+2|0-\rangle+\sqrt{2}|0-\rangle\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|2,-1\rangle=\frac{1}{\sqrt{2}}\left(|-0\rangle+|0-\rangle\right)
+\]
+
+\end_inset
+
+and finally 
+\begin_inset Formula 
+\[
+J_{-}|2,-1\rangle=\sqrt{4}|2,-2\rangle=\frac{1}{\sqrt{2}}\left(\sqrt{2}|--\rangle+\sqrt{2}|--\rangle\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|2,-2\rangle=|--\rangle.
+\]
+
+\end_inset
+
+Now, for 
+\begin_inset Formula $j=1$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+|1,\pm1\rangle=a|0\pm\rangle+b|\pm0\rangle
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $a^{2}+b^{2}=1$
+\end_inset
+
+, but 
+\begin_inset Formula 
+\[
+\langle2,\pm1|1,\pm1\rangle=0,\hspace{1em}a+b=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies|1,\pm1\rangle=\frac{1}{\sqrt{2}}\left(|\pm0\rangle-|0\pm\rangle\right),
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+J_{-}|1,1\rangle=\sqrt{2}|1,0\rangle,\hspace{1em}J_{-}|1,1\rangle=\frac{1}{\sqrt{2}}\left(\sqrt{2}|+-\rangle+\sqrt{2}|00\rangle-\sqrt{2}|-+\rangle\right),
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+|1,0\rangle=\frac{1}{\sqrt{2}}\left(|+-\rangle-|-+\rangle\right),
+\]
+
+\end_inset
+
+and finally, if we put 
+\begin_inset Formula 
+\[
+|0,0\rangle=\alpha|+-\rangle+\beta|00\rangle+\gamma|-+\rangle,
+\]
+
+\end_inset
+
+and using the normalization condition together with the fact that 
+\begin_inset Formula 
+\[
+\langle2,0|0,0\rangle=0=\langle1,0|0,0\rangle,
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\alpha+2\beta+\gamma=0\implies\alpha-\gamma=0\hspace{1em}\text{\&}\hspace{1em}\alpha^{2}+\beta^{2}+\gamma^{2}=1
+\]
+
+\end_inset
+
+therefore 
+\begin_inset Formula 
+\[
+\beta=-\frac{\alpha+\gamma}{2}=-\alpha=-\frac{1}{\sqrt{3}},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+|0,0\rangle=\frac{1}{\sqrt{3}}\left(|+-\rangle-|00\rangle+|-+\rangle\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Solution*
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -120,11 +334,271 @@ Sol
 \end_layout
 
 \begin_layout Solution*
-Sol
+a) For this part, we want to compute the following 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{\left(j\right)}\left(\beta\right)\right|m,
+\]
+
+\end_inset
+
+and in order to compute that, we're going to star with 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(R\right)T_{q}^{\left(k\right)}\mathcal{D}^{\dagger}\left(R\right)=\sum\mathcal{D}_{q^{\prime}q}^{\left(k\right)}\left(R\right)T_{q}^{\left(k\right)},
+\]
+
+\end_inset
+
+which holds for the 
+\begin_inset Quotes eld
+\end_inset
+
+complete
+\begin_inset Quotes erd
+\end_inset
+
+ Wigner functions.
+ Now, by definition we know that
+\begin_inset Formula 
+\[
+\mathcal{D}_{mm^{\prime}}^{\left(j\right)}\left(\alpha,\beta,\gamma\right)=\exp\left[-i\left(m\alpha+m^{\prime}\gamma\right)\right]\langle jm|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)jm^{\prime}\rangle,
+\]
+
+\end_inset
+
+and from this, we define 
+\begin_inset Formula 
+\[
+d_{mm^{\prime}}^{\left(j\right)}\left(\beta\right)=\langle jm|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)jm^{\prime}\rangle,
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m=\sum_{m=-j}^{j}\langle jm^{\prime}|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle\langle jm|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle m,
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $J_{z}|jm\rangle=m\hbar|jm\rangle$
+\end_inset
+
+, then we have
+\begin_inset Formula 
+\begin{align*}
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m & =\sum_{m=-j}^{j}\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle m\langle jm|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,\\
+ & =\frac{1}{\hbar}\sum_{m=-j}^{j}\langle jm^{\prime}|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)J_{z}|jm\rangle\langle jm|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,
+\end{align*}
+
+\end_inset
+
+thus we have 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m=\frac{1}{\hbar}\langle jm^{\prime}|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)J_{z}\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,
+\]
+
+\end_inset
+
+and in order to evaluate the RHS of the previous equation, we make use of
+ the Baker-Haussforf Lemma, which says that 
+\begin_inset Formula 
+\[
+\exp\left(\frac{i}{\hbar}J_{y}\beta\right)J_{z}\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)=J_{z}+i\left(\frac{\beta}{\hbar}\right)\left[J_{y},J_{z}\right]+\left(\frac{i^{2}\beta^{2}}{2\hbar^{2}}\right)\left[J_{y},\left[J_{y},J_{z}\right]\right]+\dots
+\]
+
+\end_inset
+
+which the result given by
+\begin_inset Formula 
+\[
+\exp\left(\frac{i}{\hbar}J_{y}\beta\right)J_{z}\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)=J_{z}\cos\beta+J_{x}\sin\beta,
+\]
+
+\end_inset
+
+then, we have that
+\begin_inset Formula 
+\begin{align*}
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m & =\frac{1}{\hbar}\langle jm^{\prime}|J_{z}\cos\beta+J_{x}\sin\beta|jm\rangle\\
+ & =\frac{\cos\beta}{\hbar}\langle jm^{\prime}|J_{z}|jm\rangle+\frac{\sin\beta}{\hbar}\langle jm^{\prime}|J_{x}|jm\rangle\\
+ & =\frac{\cos\beta}{\hbar}m\hbar\delta_{mm^{\prime}}+\frac{\sin\beta}{\hbar}\langle jm^{\prime}|J_{x}|jm\rangle,
+\end{align*}
+
+\end_inset
+
+Now, for 
+\begin_inset Formula $J_{x}$
+\end_inset
+
+ we can make use of the ladder operators, this is
+\begin_inset Formula 
+\[
+J_{\pm}=J_{x}\pm iJ_{y}\implies J_{x}=\frac{1}{2}\left(J_{+}+J_{-}\right),
+\]
+
+\end_inset
+
+but as we can see, at the end, the effect of 
+\begin_inset Formula $J_{\pm}$
+\end_inset
+
+ is to change the state 
+\begin_inset Formula $|jm\rangle$
+\end_inset
+
+ to 
+\begin_inset Formula $|jm+1\rangle,|jm-1\rangle$
+\end_inset
+
+, and by orthogonality, the inner product vanish, therefore, we end with
+ 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m=m^{\prime}\cos\beta.
+\]
+
+\end_inset
+
+b) Now, for this part we have something similar 
+\begin_inset Formula 
+\[
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m^{2}=\sum_{m=-j}^{j}\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle\langle jm|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle m^{2},
+\]
+
+\end_inset
+
+and again, using 
+\begin_inset Formula $J_{z}|jm\rangle=m\hbar|jm\rangle\implies J_{z}^{2}|jm\rangle=m^{2}\hbar^{2}|jm\rangle$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\begin{align*}
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m^{2} & =\sum_{m=-j}^{j}\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle m^{2}\langle jm|\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,\\
+ & =\frac{1}{\hbar^{2}}\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)J_{z}^{2}\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,
+\end{align*}
+
+\end_inset
+
+now, for the last part, we're going to see the tensor properties of 
+\begin_inset Formula $J_{z}^{2}$
+\end_inset
+
+, this is, we can decompose the dyadic product as 
+\begin_inset Formula 
+\[
+U_{i}V_{j}=\frac{1}{3}\mathbf{U}\cdot\mathbf{V}+\frac{\left(U_{i}V_{j}-U_{j}V_{i}\right)}{2}+\left(\frac{U_{i}V_{j}+U_{j}V_{i}}{2}-\frac{\mathbf{U}\cdot\mathbf{V}}{3}\delta_{ij}\right),
+\]
+
+\end_inset
+
+and in this case, we have 
+\begin_inset Formula $\mathbf{U}=\mathbf{V}=\mathbf{J}$
+\end_inset
+
+ and in particular 
+\begin_inset Formula $U_{i}V_{j}=J_{z}J_{z}$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+J_{z}^{2}=\frac{1}{3}\mathbf{J}^{2}+\left(J_{z}^{2}-\frac{\mathbf{J}^{2}}{3}\right),
+\]
+
+\end_inset
+
+but we can identify the part inside the parenthesis as 
+\begin_inset Formula 
+\[
+T_{0}^{(2)},
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+J_{z}^{2}=\frac{1}{3}\mathbf{J}^{2}+T_{0}^{(2)},
+\]
+
+\end_inset
+
+now, with this we have 
+\begin_inset Formula 
+\begin{align*}
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m^{2} & =\frac{1}{\hbar^{2}}\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)\left(\frac{1}{3}\mathbf{J}^{2}+T_{0}^{(2)}\right)\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,\\
+ & =\frac{1}{3\hbar^{2}}\hbar^{2}j\left(j+1\right)\delta_{mm^{\prime}}+\frac{1}{\hbar^{2}}\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)T_{0}^{(2)}\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle
+\end{align*}
+
+\end_inset
+
+which is a consequence from the eigenvalues of the 
+\begin_inset Formula $\mathbf{J}^{2}$
+\end_inset
+
+, thus, we the only thing left is 
+\begin_inset Formula 
+\[
+\langle jm^{\prime}|\exp\left(\frac{i}{\hbar}J_{y}\beta\right)T_{0}^{(2)}\exp\left(-\frac{i}{\hbar}J_{y}\beta\right)|jm\rangle,
+\]
+
+\end_inset
+
+but we can use the definition of an spherical tensor in terms of the rotation
+ operators as follows 
+\begin_inset Formula 
+\[
+\mathcal{D}^{\dagger}\left(R\right)T_{q}^{(2)}\mathcal{D}\left(R\right)=\sum_{q^{\prime}=-2}^{2}\mathcal{D}_{qq^{\prime}}^{(2)^{*}}\left(R\right)T_{q}^{(2)},
+\]
+
+\end_inset
+
+but because we want the expectation value in the state 
+\begin_inset Formula $|jm^{\prime}\rangle$
+\end_inset
+
+, only the 
+\begin_inset Formula $T_{0}^{(2)}$
+\end_inset
+
+ gives a result different that zero, thus
+\begin_inset Formula 
+\begin{align*}
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m^{2} & =\frac{1}{3}j\left(j+1\right)\delta_{mm^{\prime}}+\frac{1}{\hbar^{2}}\mathcal{D}_{00}^{(2)}\langle jm^{\prime}|J_{z}^{2}-\frac{\mathbf{J}^{2}}{3}|jm\rangle,\\
+ & =\frac{1}{3}j\left(j+1\right)\delta_{mm^{\prime}}+\frac{1}{\hbar^{2}}\mathcal{D}_{00}^{(2)}\left(m^{2}\hbar^{2}-\frac{\hbar^{2}}{3}j\left(j+1\right)\right)\delta_{mm^{\prime}},
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+\mathcal{D}_{00}^{(2)}=P_{2}\left(\cos\beta\right)=\frac{1}{2}\left(3\cos^{2}\beta-1\right),
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\begin{align*}
+\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m^{2} & =\frac{1}{3}j\left(j+1\right)+\frac{1}{2}\left(3\cos^{2}\beta-1\right)\left(m^{\prime2}-\frac{1}{3}j\left(j+1\right)\right),\\
+ & =\frac{1}{3}\left(1-\frac{1}{2}\left(3\cos^{2}\beta-1\right)\right)j\left(j+1\right)+\frac{1}{2}\left(3\cos^{2}\beta-1\right)\left(m^{\prime2}\right),\\
+\therefore\sum_{m=-j}^{j}\left|d_{mm^{\prime}}^{(j)}\left(\beta\right)\right|m^{2} & =\frac{1}{2}j\left(j+1\right)\sin^{2}\beta+\frac{\left(m^{\prime}\right)^{2}}{2}\left(3\cos^{2}\beta-1\right).
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Solution*
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -135,11 +609,208 @@ Sol
 \end_layout
 
 \begin_layout Solution*
-Sol
+Using 
+\begin_inset Formula $U_{q}^{(1)}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{q}^{(1)}$
+\end_inset
+
+ we know that the product of tensors is given by 
+\begin_inset Formula 
+\[
+T_{q}^{(k)}=\sum_{q_{1}=-1}^{1}\sum_{q_{2}=-1}^{1}\langle11;q_{1}q_{2}|11;kq\rangle U_{q_{1}}^{(1)}V_{q_{2}}^{(1)},
+\]
+
+\end_inset
+
+where, explicitly 
+\begin_inset Formula 
+\[
+U_{0}^{(1)}=U_{z},U_{\pm}^{(1)}=\mp\frac{U_{x}\pm iU_{y}}{\sqrt{2}},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+V_{0}^{(1)}=V_{z},V_{\pm}^{(1)}=\mp\frac{V_{x}\pm iV_{y}}{\sqrt{2}},
+\]
+
+\end_inset
+
+then, from this we have 
+\begin_inset Formula 
+\[
+T_{+1}^{(1)}=\langle11;01|11;11\rangle U_{0}^{(1)}V_{+1}^{(1)}+\langle11;10|11;11\rangle U_{+1}^{(1)}V_{0}^{(1)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T_{+1}^{(1)}=\frac{1}{\sqrt{2}}\left(-U_{0}^{(1)}V_{+1}^{(1)}+U_{+1}^{(1)}V_{0}^{(1)}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{0}^{(1)}=\langle11;-11|11;10\rangle U_{-1}^{(1)}V_{+1}^{(1)}+\langle11;00|11;10\rangle U_{0}^{(1)}V_{0}^{(1)}\langle11;1-1|11;10\rangle U_{+1}^{(1)}V_{-1}^{(1)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T_{0}^{(1)}=\frac{1}{\sqrt{2}}\left(-U_{-1}^{(1)}V_{+1}^{(1)}+U_{+1}^{(1)}V_{-1}^{(1)}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{-1}^{(1)}=\langle11;-10|11;1-1\rangle U_{-1}^{(1)}V_{0}^{(1)}+\langle11;0-1|11;1-1\rangle U_{0}^{(1)}V_{-1}^{(1)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T_{-1}^{(1)}=\frac{1}{\sqrt{2}}\left(-U_{-1}^{(1)}V_{0}^{(1)}+U_{0}^{(1)}V_{-1}^{(1)}\right)
+\]
+
+\end_inset
+
+and the same procedure follows for every one of the components of the spherical
+ tensor, this is 
+\begin_inset Formula 
+\[
+T_{+2}^{(2)}=U_{+1}^{(1)}V_{+1}^{(1)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{+1}^{(2)}=\frac{1}{\sqrt{2}}\left(U_{0}^{(1)}V_{+1}^{(1)}+U_{+1}^{(1)}V_{0}^{(1)}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{0}^{(2)}=\frac{1}{\sqrt{6}}\left(U_{-1}^{(1)}V_{+1}^{(1)}+2U_{0}^{(1)}V_{0}^{(1)}+U_{+1}^{(1)}V_{-1}^{(1)}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{-1}^{(2)}=\frac{1}{\sqrt{2}}\left(U_{-1}^{(1)}V_{0}^{(1)}+U_{0}^{(1)}V_{-1}^{(1)}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{-2}^{(2)}=U_{-1}^{(1)}V_{-1}^{(1)},
+\]
+
+\end_inset
+
+we can express those components in terms of 
+\begin_inset Formula $\left(U_{x},U_{y},U_{z}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(V_{x},V_{y},V_{z}\right)$
+\end_inset
+
+ by using the definition of 
+\begin_inset Formula $U_{0}^{(1)},U_{\pm}^{(1)}$
+\end_inset
+
+ which, after a lot of algebra will have
+\begin_inset Formula 
+\[
+T_{+1}^{(2)}=\frac{1}{2}\left(U_{z}V_{z}-U_{x}V_{z}+i\left(U_{z}V_{y}-U_{y}V_{z}\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{+0}^{(2)}=\frac{i}{\sqrt{2}}\left(U_{x}V_{y}-U_{y}V_{x}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{-1}^{(2)}=\frac{1}{2}\left(U_{z}V_{x}-U_{x}V_{z}+i\left(U_{y}V_{z}-U_{z}V_{y}\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{+2}^{(2)}=\frac{1}{2}\left(U_{x}V_{x}-U_{y}V_{y}+i\left(U_{y}V_{x}-U_{z}V_{y}\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{+1}^{(2)}=-\frac{1}{2}\left(U_{z}\left(V_{x}+iV_{y}\right)+\left(U_{x}+iU_{y}\right)V_{z}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{0}^{(2)}=\frac{1}{\sqrt{6}}\left(U_{x}V_{x}+U_{y}V_{y}+2U_{z}V_{z}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{-1}^{(2)}=\frac{1}{2}\left(U_{z}V_{x}+U_{x}V_{z}-i\left(U_{y}V_{z}+U_{z}V_{y}\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T_{-2}^{(2)}=\frac{1}{2}\left(U_{x}V_{x}-U_{y}V_{y}-i\left(U_{y}V_{x}+U_{x}V_{y}\right)\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Solution*
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -150,11 +821,102 @@ Sol
 \end_layout
 
 \begin_layout Solution*
-Sol
+a) We have a spin-less particle bound to a fixed center by a central force
+ potential, the problem ask for the matrix elements 
+\begin_inset Formula 
+\[
+\langle n^{\prime}l^{\prime}m^{\prime}|\mp\frac{1}{\sqrt{2}}\left(x\pm iy\right)|nlm\rangle,\hspace{1em}\langle n^{\prime}l^{\prime}m^{\prime}|z|nlm\rangle,
+\]
+
+\end_inset
+
+so in order to make the relation with the Wigner Eckart Theorem, we have
+ to relate those quantities as some spherical tensors, but we now that 
+\begin_inset Formula 
+\[
+T_{0}^{\left(1\right)}=\sqrt{\frac{3}{4\pi}}V_{z},\hspace{1em}T_{\pm1}^{\left(1\right)}=\sqrt{\frac{3}{4\pi}}\left(\mp\frac{V_{x}\pm iV_{y}}{\sqrt{2}}\right),
+\]
+
+\end_inset
+
+and if we make the following association 
+\begin_inset Formula 
+\[
+V_{x}\rightarrow x,V_{y}\rightarrow y,V_{z}\rightarrow z,
+\]
+
+\end_inset
+
+we see that our matrix elements can be seen as the matrix elements of some
+ spherical tensors of rank 1.
+ Now, the Wigner Eckart Theorem says that 
+\begin_inset Formula 
+\[
+\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{(1)}|nlm\rangle=\langle l1;mq|l1;l^{\prime}m^{\prime}\rangle\frac{\langle n^{\prime}l^{\prime}|T^{(1)}|nl\rangle}{\sqrt{2l+1}},
+\]
+
+\end_inset
+
+in which al the dependence on 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $m^{\prime}$
+\end_inset
+
+ is contained int the Clebsch, and with this in mind we have 
+\begin_inset Formula 
+\[
+\frac{\langle n^{\prime}l^{\prime}m^{\prime}|T_{\pm1}^{(1)}|nlm\rangle}{\langle n^{\prime}l^{\prime}m^{\prime}|T_{0}^{(1)}|nlm\rangle}=\frac{\langle l1;m\pm1|l1;l^{\prime}m^{\prime}\rangle}{\langle l1;m0|l1;l^{\prime}m^{\prime}\rangle}.
+\]
+
+\end_inset
+
+b) Now for this part, we have the following: if we use wave functions, we
+ know that the problem can be decomposed into a radial part, angle-dependent,
+ and an azimuthal part, so the Wigner-Eckart Theorem express that, this
+ is given the wave function
+\begin_inset Formula 
+\[
+\psi\left(\mathbf{x}\right)=R_{nl}\left(r\right)Y_{l}^{m}\left(\theta,\phi\right),
+\]
+
+\end_inset
+
+we know that one property of the spherical harmonics is 
+\begin_inset Formula 
+\[
+\int d\Omega Y_{l}^{m^{*}}\left(\theta,\phi\right)Y_{l_{1}}^{m_{1}}\left(\theta,\phi\right)Y_{l_{2}}^{m_{2}}\left(\theta,\phi\right)=\sqrt{\frac{\left(2l_{1}+1\right)\left(2l_{2}+1\right)}{4\pi\left(2l+1\right)}}\langle l_{1}l_{2};00|l_{1}l_{2};l0\rangle\langle l_{1}l_{2};m_{1}m_{2}|l_{1}l_{2};lm\rangle,
+\]
+
+\end_inset
+
+then if we go to the continuum using 
+\begin_inset Formula $1=\int d^{3}x|x\rangle\langle x|$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\[
+\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{\left(1\right)}|nlm\rangle=\int_{0}^{\infty}r^{3}drR_{n^{\prime}l^{\prime}}\left(r\right)R_{nl}\left(r\right)\times\sqrt{\frac{4\pi}{3}}\int d\Omega Y_{l^{\prime}}^{m^{*}}\left(\theta,\phi\right)Y_{l^{\prime}}^{m}\left(\theta,\phi\right)Y_{1}^{q}\left(\theta,\phi\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\langle n^{\prime}l^{\prime}m^{\prime}|T_{q}^{\left(1\right)}|nlm\rangle=\int_{0}^{\infty}r^{3}drR_{n^{\prime}l^{\prime}}\left(r\right)R_{nl}\left(r\right)\times\sqrt{\frac{2l+1}{2l^{\prime}+1}}\langle l1;00|l1;l^{\prime}0\rangle\langle l1;mq|l1;l^{\prime}m^{\prime}\rangle,
+\]
+
+\end_inset
+
+where the second Clebsh is the same as in the Wigner-Eckart Theorem.
 \end_layout
 
 \begin_layout Solution*
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -165,11 +927,178 @@ Sol
 \end_layout
 
 \begin_layout Solution*
-Sol
+a) For this part, we know that 
+\begin_inset Formula 
+\[
+Y_{2}^{\pm2}=\sqrt{\frac{15}{32\pi}}\frac{\left(x\pm iy\right)^{2}}{r^{2}},
+\]
+
+\end_inset
+
+and we also know that 
+\begin_inset Formula 
+\[
+Y_{2}^{\pm1}=\mp\sqrt{\frac{15}{8\pi}}\sin\theta\cos\theta\exp\left(i\phi\right),\hspace{1em}Y_{2}^{0}=\sqrt{\frac{5}{16\pi}}\left(3\cos^{2}\theta-1\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\sin\theta=\frac{\sqrt{x^{2}+y^{2}}}{r},\hspace{1em}\cos\theta=\frac{z}{r}\hspace{1em}\exp\left(i\phi\right)=\frac{x+iy}{\sqrt{x^{2}+y^{2}}},
+\]
+
+\end_inset
+
+and from this we have that
+\begin_inset Formula 
+\[
+\sqrt{\frac{32\pi}{15}}r^{2}Y_{2}^{2}=x^{2}-y^{2}+2ixy,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sqrt{\frac{32\pi}{15}}r^{2}Y_{2}^{-2}=x^{2}-y^{2}-2ixy,
+\]
+
+\end_inset
+
+thus
+\begin_inset Formula 
+\[
+x^{2}-y^{2}=\frac{1}{2}\sqrt{\frac{32\pi}{15}}r^{2}\left(Y_{2}^{2}+Y_{2}^{-2}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+xy=\frac{1}{2i}\sqrt{\frac{32\pi}{15}}r^{2}\left(Y_{2}^{2}-Y_{2}^{-2}\right),
+\]
+
+\end_inset
+
+and for the other product, we have that the 
+\begin_inset Formula $Y_{2}^{\pm1}$
+\end_inset
+
+ can be rewritten as
+\begin_inset Formula 
+\[
+Y_{2}^{\pm1}=\mp\sqrt{\frac{15}{8\pi}}\left(\frac{\sqrt{x^{2}+y^{2}}}{r}\right)\left(\frac{z}{r}\right)\left(\frac{x+iy}{\sqrt{x^{2}+y^{2}}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies Y_{2}^{\pm1}=\mp\sqrt{\frac{15}{8\pi}}\left(\frac{z\left(x+iy\right)}{r^{2}}\right),
+\]
+
+\end_inset
+
+then, from this, we have that 
+\begin_inset Formula 
+\[
+\sqrt{\frac{8\pi}{15}}r^{2}Y_{2}^{1}=-z\left(x+iy\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sqrt{\frac{8\pi}{15}}r^{2}Y_{2}^{-1}=z\left(x+iy\right),
+\]
+
+\end_inset
+
+thus
+\begin_inset Formula 
+\[
+xz=\frac{1}{2}\sqrt{\frac{8\pi}{15}}r^{2}\left(Y_{2}^{-1}-Y_{2}^{1}\right),
+\]
+
+\end_inset
+
+and finally,
+\begin_inset Formula 
+\[
+Y_{2}^{0}=\sqrt{\frac{5}{16\pi}}\left(3\frac{z^{2}}{r^{2}}-1\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies3z^{2}-r^{2}=\sqrt{\frac{16\pi}{5}}r^{2}Y_{2}^{0}
+\]
+
+\end_inset
+
+b) Now, for this part need to evaluate 
+\begin_inset Formula 
+\[
+e\langle\alpha j,m=j|(x^{2}-y^{2})|\alpha,j,m=j\rangle
+\]
+
+\end_inset
+
+in terms of 
+\begin_inset Formula 
+\[
+Q=e\langle\alpha j,m=j|(3z^{2}-r^{2})|\alpha,j,m=j\rangle,
+\]
+
+\end_inset
+
+and in order to do that, we're going to use the Wigner-Eckart Theorem
+\begin_inset Formula 
+\begin{align*}
+e\langle\alpha j,m & =j|(x^{2}-y^{2})|\alpha,j,m=j\rangle=e\langle\alpha j,m=j|\frac{1}{2}\sqrt{\frac{32\pi}{15}}r^{2}\left(Y_{2}^{2}+Y_{2}^{-2}\right)|\alpha,j,m=j\rangle\\
+ & =e\frac{1}{2}\sqrt{\frac{32\pi}{15}}\frac{\langle\alpha j|Y^{2}|\alpha j\rangle}{\sqrt{2j+1}}\left[\langle j2j,2|j2jm^{\prime}\rangle+\langle j2j,-2|j2jm^{\prime}\rangle\right],
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula $\langle j2j,2|j2jm^{\prime}\rangle=0$
+\end_inset
+
+ because 
+\begin_inset Formula $m^{\prime}=j+2$
+\end_inset
+
+ is not possible.
+ On the other hand, we have that
+\begin_inset Formula 
+\begin{align*}
+Q & =e\langle\alpha j,m=j|\sqrt{\frac{16\pi}{5}}r^{2}Y_{2}^{0}|\alpha,j,m=j\rangle,\\
+ & =e\sqrt{\frac{16\pi}{5}}\frac{\langle\alpha j|Y^{2}|\alpha j\rangle}{\sqrt{2j+1}}\langle j2j,0|j2jj\rangle,
+\end{align*}
+
+\end_inset
+
+therefore, we have that
+\begin_inset Formula 
+\[
+e\langle\alpha j,m=j|(x^{2}-y^{2})|\alpha,j,m=j\rangle=\frac{Q}{\sqrt{2}}\frac{\langle j2j,-2|j2jm^{\prime}\rangle}{\langle j2j,0|j2jj\rangle}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Solution*
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -180,29 +1109,525 @@ Sol
 \end_layout
 
 \begin_layout Solution*
-Sol
-\end_layout
+The Hamiltonian is given by 
+\begin_inset Formula 
+\[
+H=\frac{eQ}{2s(s-1)\hbar^{2}}\left[\partial_{xx}\phi S_{x}^{2}+\partial_{yy}\phi S_{y}^{2}+\partial_{zz}\phi S_{z}^{2}\right].
+\]
 
-\begin_layout Solution*
-\begin_inset Newpage pagebreak
+\end_inset
+
+So, let's rewrite the interaction Hamiltonian, but first let's make use
+ of the following 
+\begin_inset Formula 
+\[
+S_{\pm}^{2}=\left(S_{x}\pm iS_{y}\right)^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{\pm}^{2}=S_{x}^{2}-S_{y}^{2}\pm i\left(S_{x}S_{y}+S_{y}S_{x}\right),
+\]
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\[
+S_{x}^{2}-S_{y}^{2}=\frac{S_{+}^{2}+S_{-}^{2}}{2},
+\]
+
+\end_inset
+
+and on the other hand 
+\begin_inset Formula 
+\[
+\mathbf{S^{2}}=S_{x}^{2}+S_{y}^{2}+S_{z}^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}^{2}+S_{y}^{2}=\mathbf{S^{2}}-S_{z}^{2}
+\]
+
+\end_inset
+
+and from those equations we have 
+\begin_inset Formula 
+\[
+2S_{x}^{2}=\frac{S_{+}^{2}+S_{-}^{2}}{2}+\mathbf{S^{2}}-S_{z}^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{x}^{2}=\frac{S_{+}^{2}+S_{-}^{2}+2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}
+\]
+
+\end_inset
+
+and similar for 
+\begin_inset Formula $S_{y}^{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+-2S_{y}^{2}=\frac{S_{+}^{2}+S_{-}^{2}}{2}-\left(\mathbf{S^{2}}-S_{z}^{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies S_{y}^{2}=-\frac{S_{+}^{2}+S_{-}^{2}-2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}
+\]
+
+\end_inset
+
+thus, the Hamiltonian will be, taking into account that 
+\begin_inset Formula $s=3/2$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+H=\frac{eQ}{2\frac{3}{2}(\frac{3}{2}-1)\hbar^{2}}\left[\partial_{xx}\phi\left(\frac{S_{+}^{2}+S_{-}^{2}+2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}\right)+\partial_{yy}\phi\left(-\frac{S_{+}^{2}+S_{-}^{2}-2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}\right)+\partial_{zz}\phi\left(S_{z}^{2}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{2eQ}{3\hbar^{2}}\left[\partial_{xx}\phi\left(\frac{S_{+}^{2}+S_{-}^{2}+2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}\right)+\partial_{yy}\phi\left(-\frac{S_{+}^{2}+S_{-}^{2}-2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}\right)+\partial_{zz}\phi\left(S_{z}^{2}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{2eQ}{3\hbar^{2}}\left[\left(\partial_{xx}\phi+\partial_{yy}\phi\right)\left(\frac{2\left(\mathbf{S^{2}}-S_{z}^{2}\right)}{4}\right)+\left(\partial_{xx}\phi-\partial_{yy}\phi\right)\left(\frac{S_{+}^{2}+S_{-}^{2}}{4}\right)+\partial_{zz}\phi\left(S_{z}^{2}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=\frac{2eQ}{3\hbar^{2}}\left[\frac{1}{4}\left(\partial_{xx}\phi+\partial_{yy}\phi\right)\left(2\mathbf{S^{2}}-2S_{z}^{2}\right)+\frac{1}{\$}\left(\partial_{xx}\phi-\partial_{yy}\phi\right)\left(S_{+}^{2}+S_{-}^{2}\right)+\partial_{zz}\phi\left(S_{z}^{2}\right)\right],
+\]
+
+\end_inset
+
+but because 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is harmonic, we know that 
+\begin_inset Formula 
+\[
+\partial_{xx}\phi+\partial_{yy}\phi+\partial_{zz}\phi=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{zz}\phi=-\left(\partial_{xx}\phi+\partial_{yy}\phi\right),
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+H=\frac{2eQ}{3\hbar^{2}}\left[\frac{1}{4}\left(\partial_{xx}\phi+\partial_{yy}\phi\right)\left(2\mathbf{S^{2}}-2S_{z}^{2}-4S_{z}^{2}\right)+\frac{1}{\$}\left(\partial_{xx}\phi-\partial_{yy}\phi\right)\left(S_{+}^{2}+S_{-}^{2}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies H=-\frac{4eQ}{3\hbar^{2}}\left(\frac{1}{4}\left(\partial_{xx}\phi+\partial_{yy}\phi\right)\right)\left(\mathbf{-S^{2}}+3S_{z}^{2}\right)+\frac{2eQ}{3\hbar^{2}}\left(\frac{1}{4}\left(\partial_{xx}\phi-\partial_{yy}\phi\right)\right)\left(S_{+}^{2}+S_{-}^{2}\right),
+\]
+
+\end_inset
+
+thus, if we make 
+\begin_inset Formula 
+\[
+A=-\frac{4eQ}{3\hbar^{2}}\left(\frac{1}{4}\left(\partial_{xx}\phi+\partial_{yy}\phi\right)\right)\hspace{1em},B=\frac{2eQ}{3\hbar^{2}}\left(\frac{1}{4}\left(\partial_{xx}\phi-\partial_{yy}\phi\right)\right),
+\]
+
+\end_inset
+
+we have 
+\begin_inset Formula 
+\[
+H=A\left(3S_{z}^{2}-\mathbf{S^{2}}\right)+B\left(S_{+}^{2}+S_{-}^{2}\right),
+\]
+
+\end_inset
+
+just as we wanted.
+ Now for this system we have the following relations 
+\begin_inset Formula 
+\[
+\left(3S_{z}^{2}-\mathbf{S^{2}}\right)|m\rangle=\hbar^{2}\left(3m^{2}-\frac{15}{4}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{\pm}^{2}|m\rangle=\hbar^{2}\sqrt{\left(s\mp m-1\right)\left(s\pm m+2\right)\left(s\mp m\right)\left(s\pm m+1\right)}|m\pm2\rangle,
+\]
+
+\end_inset
+
+and now, after a little bit of algebra, we can obtain the matrix representation
+ of the Hamiltonian Operator, which is
+\begin_inset Formula 
+\[
+H=\left(\begin{array}{cccc}
+3A & 2B\sqrt{3} & 0 & 0\\
+2B\sqrt{3} & -3A & 0 & 0\\
+0 & 0 & 3A & 2B\sqrt{3}\\
+0 & 0 & 2B\sqrt{3} & -3A
+\end{array}\right),
+\]
+
+\end_inset
+
+and now, for the eigenvector y eigenvalues we have to solve the problem
+\begin_inset Formula 
+\[
+Hx=\lambda x.
+\]
+
+\end_inset
+
+Then the eigenvalues are given by 
+\begin_inset Formula 
+\[
+\left\{ -\sqrt{3}\sqrt{3A^{2}+4B^{2}},-\sqrt{3}\sqrt{3A^{2}+4B^{2}},\sqrt{3}\sqrt{3A^{2}+4B^{2}},\sqrt{3}\sqrt{3A^{2}+4B^{2}}\right\} ,
+\]
+
+\end_inset
+
+whereas the eigenvectors associated with each eigenvalue are given by 
+\begin_inset Formula 
+\[
+\left(0,0,-\frac{\sqrt{3A^{2}+4B^{2}}-\sqrt{3}A}{2B},1\right),\left(-\frac{\sqrt{3A^{2}+4B^{2}}-\sqrt{3}A}{2B},1,0,0\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(0,0,-\frac{-\sqrt{3A^{2}+4B^{2}}-\sqrt{3}A}{2B},1\right),\left(-\frac{-\sqrt{3A^{2}+4B^{2}}-\sqrt{3}A}{2B},1,0,0\right).
+\]
+
+\end_inset
+
+
+\begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
 \begin_layout Problem
-(Mann-1)
+Problem 3.42 (Mann-1)
 \end_layout
 
 \begin_layout Solution*
-Sol
-\end_layout
+Instead of just solving for one component of the problem, I decided to do
+ the problem with all the components, so let's begin.
+ We need to evaluate the following sum 
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{qq^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)},
+\]
 
-\begin_layout Solution*
-\begin_inset Newpage pagebreak
+\end_inset
+
+where 
+\begin_inset Formula $d$
+\end_inset
+
+ is given by the following matrix representation 
+\begin_inset Formula 
+\[
+d^{(1)}=\left(\begin{array}{ccc}
+\frac{1}{2}(\cos(\beta)+1) & -\frac{\sin(\beta)}{\sqrt{2}} & \frac{1}{2}(1-\cos(\beta))\\
+\frac{\sin(\beta)}{\sqrt{2}} & \cos(\beta) & -\frac{\sin(\beta)}{\sqrt{2}}\\
+\frac{1}{2}(1-\cos(\beta)) & \frac{\sin(\beta)}{\sqrt{2}} & \frac{1}{2}(\cos(\beta)+1)
+\end{array}\right),
+\]
+
+\end_inset
+
+and in this case, the vector is given by the following expression 
+\begin_inset Formula 
+\[
+V^{(1)}=\left(\begin{array}{c}
+V_{1}\\
+V_{0}\\
+V_{-1}
+\end{array}\right)=\left(\begin{array}{c}
+-\frac{V_{x}+iV_{y}}{\sqrt{2}}\\
+V_{z}\\
+\frac{V_{x}-iV_{y}}{\sqrt{2}}
+\end{array}\right).
+\]
+
+\end_inset
+
+Now, with this information at hand we proceed with the following products
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)},\hspace{1em}\sum_{q^{\prime}}d_{0q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)},\hspace{1em}\sum_{q^{\prime}}d_{-1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)},
+\]
+
+\end_inset
+
+thus, we have for 
+\begin_inset Formula $q=1$
 \end_inset
 
 
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(\frac{1}{2}(\cos(\beta)+1),-\frac{\sin(\beta)}{\sqrt{2}},\frac{1}{2}(1-\cos(\beta))\right)\cdot\left(\begin{array}{c}
+-\frac{V_{x}+iV_{y}}{\sqrt{2}}\\
+V_{z}\\
+\frac{V_{x}-iV_{y}}{\sqrt{2}}
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sum_{q^{\prime}}d_{1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(\frac{1}{2}(\cos(\beta)+1)\right)\left(-\frac{V_{x}+iV_{y}}{\sqrt{2}}\right)+\left(-\frac{\sin(\beta)}{\sqrt{2}}\right)\left(V_{z}\right)+\left(\frac{1}{2}(1-\cos(\beta))\right)\left(\frac{V_{x}-iV_{y}}{\sqrt{2}}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sum_{q^{\prime}}d_{1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\frac{-V_{x}\cos(\beta)-iV_{y}-V_{z}\sin(\beta)}{\sqrt{2}},
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $q=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{0q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(\frac{\sin(\beta)}{\sqrt{2}},\cos(\beta),-\frac{\sin(\beta)}{\sqrt{2}}\right)\cdot\left(\begin{array}{c}
+-\frac{V_{x}+iV_{y}}{\sqrt{2}}\\
+V_{z}\\
+\frac{V_{x}-iV_{y}}{\sqrt{2}}
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sum_{q^{\prime}}d_{0q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(\frac{\sin(\beta)}{\sqrt{2}}\right)\left(-\frac{V_{x}+iV_{y}}{\sqrt{2}}\right)+V_{z}\cos(\beta)+\left(-\frac{\sin(\beta)}{\sqrt{2}}\right)\left(\frac{V_{x}-iV_{y}}{\sqrt{2}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sum_{q^{\prime}}d_{0q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=V_{z}\cos(\beta)-V_{x}\sin(\beta),
+\]
+
+\end_inset
+
+and finally, for 
+\begin_inset Formula $q=-1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{-1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(\frac{1}{2}(1-\cos(\beta)),\frac{\sin(\beta)}{\sqrt{2}},\frac{1}{2}(\cos(\beta)+1)\right)\cdot\left(\begin{array}{c}
+-\frac{V_{x}+iV_{y}}{\sqrt{2}}\\
+V_{z}\\
+\frac{V_{x}-iV_{y}}{\sqrt{2}}
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\sum_{q^{\prime}}d_{-1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(\frac{1}{2}(1-\cos(\beta))\right)\left(-\frac{V_{x}+iV_{y}}{\sqrt{2}}\right)+V_{z}\frac{\sin(\beta)}{\sqrt{2}}+\left(\frac{1}{2}(\cos(\beta)+1)\right)\left(\frac{V_{x}-iV_{y}}{\sqrt{2}}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\[
+\implies\sum_{q^{\prime}}d_{-1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\frac{V_{x}\cos(\beta)-iV_{y}+V_{z}\sin(\beta)}{\sqrt{2}}.
+\]
+
+\end_inset
+
+On the other hand, a rotation about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis by an angle 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is given by the matrix
+\begin_inset Formula 
+\[
+R_{y}=\left(\begin{array}{ccc}
+\cos(\beta) & 0 & \sin(\beta)\\
+0 & 1 & 0\\
+-\sin(\beta) & 0 & \cos(\beta)
+\end{array}\right),
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\left(V^{(1)}\right)^{\prime}=R_{y}V^{(1)}=\left(\begin{array}{ccc}
+\cos(\beta) & 0 & \sin(\beta)\\
+0 & 1 & 0\\
+-\sin(\beta) & 0 & \cos(\beta)
+\end{array}\right)\cdot\left(\begin{array}{c}
+-\frac{V_{x}+iV_{y}}{\sqrt{2}}\\
+V_{z}\\
+\frac{V_{x}-iV_{y}}{\sqrt{2}}
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(V^{(1)}\right)^{\prime}=\left(\begin{array}{c}
+V_{x}\cos(\beta)+V_{z}\sin(\beta)\\
+V_{Y}\\
+V_{z}\cos(\beta)-V_{x}\sin(\beta)
+\end{array}\right),
+\]
+
+\end_inset
+
+and now, in order to make the comparison, using our rotated vector, we have
+ to construct the following 
+\begin_inset Quotes eld
+\end_inset
+
+tensor
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(V^{(1)}\right)^{\prime\prime}=\left(\begin{array}{c}
+\left(V_{1}\right)^{\prime\prime}\\
+\left(V_{0}\right)^{\prime\prime}\\
+\left(V_{-1}\right)^{\prime\prime}
+\end{array}\right)=\left(\begin{array}{c}
+-\frac{\left(V_{x}\right)^{\prime}+i\left(V_{y}\right)^{\prime}}{\sqrt{2}}\\
+\left(V_{z}\right)^{\prime}\\
+\frac{\left(V_{x}\right)^{\prime}-i\left(V_{y}\right)^{\prime}}{\sqrt{2}}
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(V_{1}\right)^{\prime\prime}=-\frac{V_{x}\cos(\beta)+iV_{y}+V_{z}\sin(\beta)}{\sqrt{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(V_{0}\right)^{\prime\prime}=V_{z}\cos(\beta)-V_{x}\sin(\beta),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left(V_{-1}\right)^{\prime\prime}=\frac{V_{x}\cos(\beta)-iV_{y}+V_{z}\sin(\beta)}{\sqrt{2}}.
+\]
+
+\end_inset
+
+And as we can see, we have the following result
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(V_{1}\right)^{\prime\prime},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{0q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(V_{0}\right)^{\prime\prime},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{q^{\prime}}d_{-1q^{\prime}}^{(j)}\left(\beta\right)V_{q^{\prime}}^{(1)}=\left(V_{-1}\right)^{\prime\prime},
+\]
+
+\end_inset
+
+therefore, this concludes the proof.
 \end_layout
 
 \end_body

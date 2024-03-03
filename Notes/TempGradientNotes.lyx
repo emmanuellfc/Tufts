@@ -88,7 +88,7 @@ pdfcomment
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Title
 Temperature Gradient
 \end_layout
 
@@ -96,15 +96,102 @@ Temperature Gradient
 The main equation that we're trying to solve is the following
 \begin_inset Formula 
 \[
-F=
+F=,
 \]
 
 \end_inset
 
-= 
+using this free energy, with the following dynamical rule 
+\begin_inset Formula 
+\[
+=,
+\]
+
+\end_inset
+
+we obtain an equation for the scalar order parameter, which reads
 \begin_inset Formula 
 \[
 \frac{\partial S}{\partial t}=\alpha^{\prime}\nabla^{2}S-a_{0}\Delta TS+b^{\prime}S^{2}-c^{\prime}S^{3},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, what we want is to couple that previous equation with a heat equation
+ of the form 
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=\alpha\nabla^{2}u,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the thermal diffusivity, but first let's try a few examples of this
+ kind.
+\end_layout
+
+\begin_layout Subsection
+Examples of the heat equation:
+\end_layout
+
+\begin_layout Subsubsection
+Heat Flow in a uniform rod
+\end_layout
+
+\begin_layout Standard
+Using Fourier's law, we can derive, for an isotropic medium, that the rate
+ of flow of heat energy per unit area through a surface is proportional
+ to the negative temperature gradient across it, this is 
+\begin_inset Formula 
+\[
+\mathbf{q}=-\kappa\nabla u,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ is the thermal conductivity of the material, 
+\begin_inset Formula $u=u\left(x,t\right)$
+\end_inset
+
+ is the temperature and 
+\begin_inset Formula $\mathbf{q}=\mathbf{q}\left(x,t\right)$
+\end_inset
+
+ is a vector field that represents the magnitude and direction of the heat
+ flow at the point 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ of space and time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Internal heat generation
+\end_layout
+
+\begin_layout Standard
+On the other hand, we can have a medium that can generate its own heat,
+ and in that case, we have the following modification to our main equation
+ for the temperature distribution:
+\begin_inset Formula 
+\[
+\frac{1}{\alpha}\frac{\partial u}{\partial t}=\nabla^{2}u+\frac{1}{k}\mathbf{q}
 \]
 
 \end_inset

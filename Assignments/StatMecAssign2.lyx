@@ -64,10 +64,10 @@ pdfcomment
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
+\leftmargin 3.5cm
+\topmargin 3cm
+\rightmargin 3.5cm
+\bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -78,7 +78,7 @@ pdfcomment
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle fancy
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -93,10 +93,26 @@ Statistical Mechanics | Assignment 2
 \end_layout
 
 \begin_layout Author
-Emmanuel Flores
+Emmanuel Flores 
+\end_layout
+
+\begin_layout Date
+Feb 18, 2024.
 \end_layout
 
 \begin_layout Problem
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+Score: 8/10
+\end_layout
+
+\end_inset
+
 The figure shows the P-V diagram for the same cyclical process that you
  analyzed on HW1.
  Now we’re going to think of it as an unlikely, but conceivable, cyclic
@@ -128,7 +144,300 @@ c) Could the cycle shown in the figure represent a reversible process? How
 d) If the working medium were a diatomic ideal gas, would the efficiency
  of the engine be lower, higher, or the same? (You shouldn’t need to redo
  the whole calculation; just look at where that change would make a difference.)
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+a)
+\series default
+ The definition efficiency if given by the following equation 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+The sum is wrong,
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+and one of the 
+\begin_inset Formula $Q$
+\end_inset
+
+'s 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+was wrong.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta=\frac{W}{Q},
+\]
+
+\end_inset
+
+thus, the efficiency is the ratio of the work out to the heat in.
+ Now, in this particular process the heat and work for each part of the
+ cycle are given by 
+\end_layout
+
+\begin_layout Itemize
+Step 1: 
+\begin_inset Formula 
+\[
+W_{on,1}=-36\ln3,\hspace{1em}Q_{1}=36\ln3,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Step 2:
+\begin_inset Formula 
+\[
+W_{on,2}=-10,\hspace{1em}\Delta U_{2}=-45,\hspace{1em}Q_{2}=-35,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Step 3:
+\begin_inset Formula 
+\[
+W_{on,3}=6\ln6,\hspace{1em}Q_{3}=-6\ln6,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Step 4:
+\begin_inset Formula 
+\[
+W_{on,4}=-12,\hspace{1em}\Delta U_{4}=45,\hspace{1em}Q_{4}=-57,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, for the cycle, the efficiency is given by 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\eta & =1-\frac{|Q_{1}|}{|Q_{2}+Q_{3}+Q_{4}|},\\
+\implies\eta & =0.615.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b)
+\series default
+ For a Carnot Cycle, the efficiency is given by 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+The solution 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+is correct.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta=1-\frac{T_{c}}{T_{h}},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $T_{h}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{c}$
+\end_inset
+
+ stands for hot and cold, respectively.
+ Thus, in this case, from the diagram, we have 
+\begin_inset Formula $T_{h}=36$
+\end_inset
+
+, and 
+\begin_inset Formula $T_{c}=6$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\begin{align*}
+\eta_{Carnot} & =1-\frac{6}{36},\\
+\implies\eta_{Carnot} & =\frac{5}{6}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+c)
+\series default
+ 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+c) My first solution
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+was like yours,
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+but I decided to
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+switch to this,
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+I was's sure of
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+the generalization
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+of Carnot cycle.
+\end_layout
+
+\end_inset
+
+For this part, we have to remember the definition of a reversible process,
+ which is described as the process where both the system and its surroundings
+ can be returned to their exact starting states without leaving any other
+ changes in the universe.
+ This is an idealization and in nature no process is reversible, however,
+ I think with enough care, we could get close to that ideal process ~ reversible.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+d)
+\series default
+ From the previous assignment we know that in the calculation of the work
+ and heat for each stage of the process, and even more, we know that the
+ heat and the work is changed (higher) for the stages 
+\begin_inset Formula $2$
+\end_inset
+
+ and 
+\begin_inset Formula $4$
+\end_inset
+
+, which means that in our equation for the efficiency, the denominator will
+ be higher, thus, the efficiency lower.
+ 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+d) The argument 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+and the answer 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+are the same
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -142,6 +451,18 @@ d) If the working medium were a diatomic ideal gas, would the efficiency
 \end_layout
 
 \begin_layout Problem
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+Score: 10/10
+\end_layout
+
+\end_inset
+
 A Carnot engine is defined as one that is reversible.
  The Carnot cycle is a particular type of ideal-gas engine that uses two
  isothermal steps joined by two adiabatic steps.
@@ -149,8 +470,9 @@ A Carnot engine is defined as one that is reversible.
  represents a Carnot engine)?
 \end_layout
 
-\begin_layout Problem
-a) Clausius’s theorem tells us that for a reversible cycle 
+\begin_deeper
+\begin_layout Enumerate
+Clausius’s theorem tells us that for a reversible cycle 
 \begin_inset Formula 
 \[
 \oint\frac{dQ}{T}=0
@@ -159,7 +481,309 @@ a) Clausius’s theorem tells us that for a reversible cycle
 \end_inset
 
 
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Enumerate
+Our analysis of the Carnot cycle is based on the ideal gas definition of
+ temperature.
+ We also defined a thermodynamic temperature scale based on the requirement
+ that the efficiency of any reversible engine is 
+\begin_inset Formula $\eta_{C}=1-\frac{T_{C}}{T_{H}}$
+\end_inset
+
+.
+ Show, by direct analysis of the heat and work in each stage of the cycle,
+ that the efficiency of the Carnot cycle (calculated using the ideal gas
+ definition of temperature) agrees with this relationship.
+ That result confirms the equivalency of the two temperature scales
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+For 
+\series bold
+a)
+\series default
+ 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+a) Out approach is 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+different, but based 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+on the same 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+equations and 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+therefore, 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+it's equivalent.
+\end_layout
+
+\end_inset
+
+we have the following: by definition, the Carnot cycle is given by two isotherms
+ stages and two adiabatic stages, as shown in the next figure:
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename StatMec_A2_Carnot.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Solution*
+On the other hand, by definition, the adiabatic stages are processes in
+ which there's no heat exchange with the surroundings, thus, the calculation
+ of 
+\begin_inset Formula 
+\[
+\oint\frac{\delta Q}{T},
+\]
+
+\end_inset
+
+reduces to 
+\begin_inset Formula 
+\[
+\oint\frac{\delta Q}{T}=\frac{Q_{h}}{T_{h}}+\frac{Q_{c}}{T_{c}},
+\]
+
+\end_inset
+
+now, before jumping into that calculation, let's remember some expressions
+ for each stage in this cyclic process:
+\end_layout
+
+\begin_layout Itemize
+For the isothermal expansion, we have the following equation for the 
+\begin_inset Formula 
+\[
+Q_{h}=RT_{h}\ln\frac{V_{B}}{V_{A}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For the adiabatic expansion, we have 
+\begin_inset Formula 
+\[
+\left(\frac{T_{h}}{T_{c}}\right)=\left(\frac{V_{C}}{V_{B}}\right)^{\gamma-1},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For the isothermal compression, we have 
+\begin_inset Formula 
+\[
+Q_{c}=-RT_{c}\ln\frac{V_{D}}{V_{C}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+And finally, for the adiabatic compression 
+\begin_inset Formula 
+\[
+\left(\frac{T_{c}}{T_{h}}\right)=\left(\frac{V_{A}}{V_{D}}\right)^{\gamma-1},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, from the information in the two adiabatic steps, we have that 
+\begin_inset Formula 
+\[
+\left(\frac{V_{C}}{V_{B}}\right)^{\gamma-1}=\left(\frac{T_{h}}{T_{c}}\right)=\left(\frac{V_{A}}{V_{D}}\right)^{1-\gamma},
+\]
+
+\end_inset
+
+then, it follows that
+\begin_inset Formula 
+\begin{align*}
+\left(\frac{V_{C}}{V_{B}}\right)^{\gamma-1} & =\left(\frac{V_{D}}{V_{A}}\right)^{\gamma-1},\\
+\implies\frac{V_{C}}{V_{B}} & =\frac{V_{D}}{V_{A}},\\
+\implies\frac{V_{C}}{V_{D}} & =\frac{V_{B}}{V_{A}}.
+\end{align*}
+
+\end_inset
+
+Now, if we plug this, into the heat for the isothermal compression, we have
+ that 
+\begin_inset Formula 
+\[
+Q_{c}=-RT_{c}\ln\frac{V_{D}}{V_{C}}=RT_{c}\ln\frac{V_{C}}{V_{D}},
+\]
+
+\end_inset
+
+then, we have
+\begin_inset Formula 
+\begin{align*}
+Q_{c} & =RT_{c}\ln\frac{V_{B}}{V_{A}},\\
+\implies\frac{Q_{c}}{T_{c}} & =R\ln\frac{V_{B}}{V_{A}}.
+\end{align*}
+
+\end_inset
+
+Now, for the isothermal expansion we have a similar expression, this is
+ 
+\begin_inset Formula 
+\[
+\frac{Q_{h}}{T_{h}}=R\ln\frac{V_{B}}{V_{A}},
+\]
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\begin{align*}
+\frac{Q_{c}}{T_{c}} & =\frac{Q_{h}}{T_{h}}\\
+\implies\frac{Q_{c}}{T_{c}}-\frac{Q_{h}}{T_{h}} & =0,\\
+\therefore\oint\frac{\delta Q}{T} & =0,
+\end{align*}
+
+\end_inset
+
+just as we wanted to prove.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b) 
+\series default
+
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+b) Good!
+\end_layout
+
+\end_inset
+
+For this part, we're going to make use of one of the relationships previously
+ proved, that is 
+\begin_inset Formula 
+\[
+\frac{Q_{c}}{T_{c}}=\frac{Q_{h}}{T_{h}},
+\]
+
+\end_inset
+
+now, in general the efficiency is given by 
+\begin_inset Formula 
+\[
+\eta=\frac{W}{Q},
+\]
+
+\end_inset
+
+but given the setup of the system, this equations can be expressed as follows
+\begin_inset Formula 
+\[
+\eta=\frac{Q_{h}-Q_{c}}{Q_{h}},
+\]
+
+\end_inset
+
+therefore, we have that 
+\begin_inset Formula 
+\[
+\eta=1-\frac{Q_{c}}{Q_{h}},
+\]
+
+\end_inset
+
+but using the relationship stated at the beginning of the problem, we have
+ that 
+\begin_inset Formula 
+\[
+\eta=1-\frac{T_{c}}{T_{h}},
+\]
+
+\end_inset
+
+which corresponds to the efficiency to any reversible engine, and thus,
+ the efficiency of Carnot's engine agrees with this expression.
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -173,29 +797,367 @@ a) Clausius’s theorem tells us that for a reversible cycle
 \end_layout
 
 \begin_layout Problem
-We customarily show ideal gas processes in a P-V diagram.
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+Score: 10/10
+\end_layout
+
+\end_inset
+
+We customarily show ideal gas processes in a 
+\begin_inset Formula $P-V$
+\end_inset
+
+ diagram.
  In such a diagram you can read changes in internal energy and work directly
  from the diagram, but you the have to infer heat from those values and
  the First Law.
  Isobaric and isochoric processes are represented by horizontal and vertical
  lines, while isothermal and adiabatic processes are represented by curves.
- For reversible processes, it’s also possible to use an S-T diagram, with
- entropy S on the horizontal axis and T on the vertical axis.
+ For reversible processes, it’s also possible to use an 
+\begin_inset Formula $S-T$
+\end_inset
+
+ diagram, with entropy S on the horizontal axis and T on the vertical axis.
  
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sketch a Carnot cycle in an 
+\begin_inset Formula $S-T$
+\end_inset
+
+ diagram, clearly labeling each of the steps (e.g.
+ “isothermal expansion,” “adiabatic compression,” etc.)
+\end_layout
+
+\begin_layout Enumerate
+Find the heat Q and work 
+\begin_inset Formula $W_{by}$
+\end_inset
+
+ from this diagram.
+ Which can you read off directly, and which do you need to infer from the
+ First Law?
+\end_layout
+
+\begin_layout Enumerate
+Use your results to find the efficiency of the engine.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+a) 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+a) The graph of 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+the process match 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+your answer.
+ I think 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+I could probably 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+elaborate a little more.
+\end_layout
+
+\end_inset
+
+Here is my sketch of the cycle in the 
+\begin_inset Formula $S-T$
+\end_inset
+
+ space 
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename StatMec_A2_CarnotTS_Diagram.png
+	scale 40
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+b) 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+b) Probably my 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+answer about the 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+area under the 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+curve is a little 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+\begin_inset Quotes eld
+\end_inset
+
+vague
+\begin_inset Quotes erd
+\end_inset
+
+ because 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+we're not working 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+on the PV space, 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+but my reasoning 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+was that if do a 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+Legendre 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+transformation 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+and go to another 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+space (T,S) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+the 
+\begin_inset Quotes eld
+\end_inset
+
+geometry
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+will be preserved.
+\end_layout
+
+\end_inset
+
+The work will be the the sum of the area under the curve for each step in
+ the cycle,.
+ which in this case will correspond to 
+\begin_inset Formula 
+\[
+W=\left(T_{h}-T_{c}\right)\left(S_{h}-S_{c}\right),
+\]
+
+\end_inset
+
+now for the heat, we need to make use the of the first law, and in this
+ case, because the process is cyclic, the change in internal energy is zero,
+ thus 
+\begin_inset Formula 
+\[
+Q=-W.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+c) 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+c) Good!
+\end_layout
+
+\end_inset
+
+Finally, for the efficiency, we have, in virtue of the second law
+\begin_inset Formula 
+\[
+dQ_{1}=T_{h}dS\implies Q_{1}=T_{h}\left(S_{B}-S_{A}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+dQ_{3}=T_{c}dS\implies Q_{3}=T_{c}\left(S_{D}-S_{C}\right)=T_{c}\left(S_{A}-S_{B}\right),
+\]
+
+\end_inset
+
+now, with this at hand, we can obtain 
+\begin_inset Formula $\eta$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\eta=\frac{W}{Q_{h}}=\frac{T_{h}\left(S_{B}-S_{A}\right)+T_{c}\left(S_{A}-S_{B}\right)}{T_{h}\left(S_{B}-S_{A}\right)}=\frac{\left(T_{h}-T_{c}\right)\left(S_{B}-S_{A}\right)}{T_{h}\left(S_{B}-S_{A}\right)},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\eta=1-\frac{T_{c}}{T_{h}},
+\]
+
+\end_inset
+
+which corresponds to our known definition.
+ 
+\begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
 \begin_layout Problem
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+Score: 5/10
+\end_layout
+
+\end_inset
+
 There is great interest these days in heat pumps for heating buildings,
  as alternatives to burning fossil fuels.
  A heat pump is essentially a refrigerator (or air conditioner) in which
@@ -203,27 +1165,545 @@ There is great interest these days in heat pumps for heating buildings,
  reservoir (the outside air) into a hot reservoir (the warm air inside the
  building).
  
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_deeper
+\begin_layout Enumerate
+A heat pump can deliver several times as much heat energy as the amount
+ of electrical energy is uses (unlike, for example, an electric space heater,
+ where the heat delivered is exactly equal to the electrical energy used.)
+ A friend of yours, who has never studied thermal physics, wants to know
+ how that can possibly be true.
+ Provide an accurate but accessible explanation.
+\end_layout
+
+\begin_layout Enumerate
+When the outside temperature is moderate, the COP of a heat pump (the ratio
+ of the heat delivered to the building to the electrical energy used) can
+ be on the order of 5 or 6, but as the outside temperature drops, so does
+ the COP, as shown in the figure.
+ Explain, in terms of fundamental thermodynamics, why such a drop in COP
+ is unavoidable.
+ (You’re not expected to account quantitatively for the values, just for
+ the qualitative trend.)
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+a) For this part I think the main issue relies on the fact that a heat pump
+ is moving heat, instead of generating it, and it turns out that it's easier
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+move heat
+\begin_inset Quotes erd
+\end_inset
+
+ than generate, or at least in the majority of the cases, it could be possible
+ to make a heat pump very inefficient.
+ Again, the principal thing here is that there are many ways in which you
+ can transport heat, and for that process the amount of work is lower than
+ in the generation process.
+\end_layout
+
+\begin_layout Solution*
+b) 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+a) and b) Lack of 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+argumentation 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+in both answers.
+\end_layout
+
+\end_inset
+
+For this part we have to remember the first law, which in broadly states
+ that we can't have a machine with 
+\begin_inset Formula $100$
+\end_inset
+
+% efficiency, thus this drop in the COP when the temperature is lower outside
+ is a consequence of this fact.
+\begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
 \begin_layout Problem
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+Score: 8/10
+\end_layout
+
+\end_inset
+
 You may be aware that the temperature at which water boils decreases with
  decreasing atmospheric pressure, so it is lower in Denver, for example,
  than in Boston.
  The Clausius-Clapeyron equation describes the change of the boiling point
  of a liquid with pressure.
  
-\begin_inset Newpage pagebreak
+\begin_inset Formula 
+\[
+\frac{dP}{dT}=\frac{L_{vap}}{T\Delta V}.
+\]
+
+\end_inset
+
+Where 
+\begin_inset Formula $L_{vap}$
+\end_inset
+
+ is the latent heat of vaporization and 
+\begin_inset Formula $ΔV$
+\end_inset
+
+ is the change in volume between the liquid and gas phases.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Using this relation, estimate the difference in boiling point for water
+ between Boston and Denver.
+ Look up whatever you need to, but specify what you looked up and why.
+ Be careful about units.
+ Does your answer seem reasonable? Why?
+\end_layout
+
+\begin_layout Enumerate
+Imagine a Carnot steam engine that uses 1 mole of water as its working medium.
+ It takes heat 
+\begin_inset Formula $Q_{h}=L$
+\end_inset
+
+ from the hot reservoir at 
+\begin_inset Formula $T$
+\end_inset
+
+ boiling, converting the water at pressure 
+\begin_inset Formula $P$
+\end_inset
+
+ into water vapor, increasing its volume by 
+\begin_inset Formula $ΔV$
+\end_inset
+
+.
+ The vapor then expands adiabatically, reducing its pressure to 
+\begin_inset Formula $P–dP$
+\end_inset
+
+, and its temperature to 
+\begin_inset Formula $T–dT$
+\end_inset
+
+.
+ (The volume also increases, but the change is very small compared to the
+ change between liquid and vapor, so the work done in this step can be neglected.
+) The vapor then condenses back into liquid water, decreasing its volume
+ by 
+\begin_inset Formula $ΔV$
+\end_inset
+
+.
+ To complete the cycle, the liquid water is brought back to its original
+ state 
+\begin_inset Formula $(P,T)$
+\end_inset
+
+ with essentially no change in volume.
+ Make a rough sketch of the 
+\begin_inset Formula $P-V$
+\end_inset
+
+ diagram for this process.
+ (Remember, this is NOT an ideal gas!)
+\end_layout
+
+\begin_layout Enumerate
+Show that the net work done by the engine in the cycle is by 
+\begin_inset Formula $W_{by}=\Delta VdP$
+\end_inset
+
+ and the Carnot efficiency is 
+\begin_inset Formula $\eta_{C}=\frac{dT}{T}$
+\end_inset
+
+ .
+ From these results, derive the Clausius-Clapeyron equation given above.
+\end_layout
+
+\begin_layout Enumerate
+A hurricane can be thought of as a heat engine that operates something like
+ the idealized steam engine described above (see this article from Physics
+ Today).
+ The primary source of work is the evaporation and condensation of water.
+ The high- temperature reservoir is the ocean surface, at a temperature
+ of about 300 K.
+ The low-temperature reservoir is the upper atmosphere, at a temperature
+ of about 200 K.
+ Water evaporates from the ocean surface.
+ The water vapor, mixed with air, undergoes adiabatic expansion as it rises
+ and cools, and condenses into clouds in the upper atmosphere.
+ (In real hurricanes it isn’t the same air/water mixture that cycles back
+ to close the loop, but that doesn’t really matter to the analysis.) The
+ work drives the hurricane’s winds ─ in steady state the kinetic energy
+ of the winds is dissipated by surface friction.
+ To be self-sustaining, a hurricane needs to vaporize and condense about
+ 
+\begin_inset Formula $10^{11}$
+\end_inset
+
+ kg/hour of water.
+ Estimate the maximum power output of such a hurricane, in watts.
+ Compare that value to something that allows you to place it in some kind
+ of meaningful context.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+a) 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+a) Good develop 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+of the math and 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+the answer is 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+pretty close
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+(rounding I think).
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+I used another scale.
+\end_layout
+
+\end_inset
+
+For this part of the problem let's start with the Clausius-Clapeyron equation,
+ 
+\begin_inset Formula 
+\[
+\frac{dP}{dT}=\frac{L}{T\Delta V},
+\]
+
+\end_inset
+
+now, in our case 
+\begin_inset Formula $\Delta V$
+\end_inset
+
+ corresponds to the change of the vapor water and the volume of the liquid
+ water, thus, if we consider that 
+\begin_inset Formula $V_{gas}\gg V_{liq}$
+\end_inset
+
+, then we have 
+\begin_inset Formula 
+\[
+\frac{dP}{dT}=\frac{L}{TV},
+\]
+
+\end_inset
+
+and if we also consider the vapor water as an ideal gas, we have that 
+\begin_inset Formula 
+\begin{align*}
+\frac{dP}{dT} & =\frac{L}{\frac{RT^{2}}{P}},\\
+\implies\frac{dP}{dT} & =\frac{LP}{RT^{2}}\\
+\implies\frac{dP}{P} & =\frac{LdT}{RT^{2}},
+\end{align*}
+
+\end_inset
+
+and the solution for this differential equation s given by 
+\begin_inset Formula 
+\[
+\ln\left(\frac{P_{2}}{P_{1}}\right)=-\frac{L}{R}\left(\frac{1}{T_{2}}-\frac{1}{T1}\right),
+\]
+
+\end_inset
+
+now if we assume that 
+\begin_inset Formula $P_{1}=1$
+\end_inset
+
+ atm, and 
+\begin_inset Formula $T_{1}=373$
+\end_inset
+
+ K, and (digging) in the web I found that pressure in Denver is 
+\begin_inset Formula $0.85$
+\end_inset
+
+ atm, thus 
+\begin_inset Formula 
+\[
+\ln\left(0.83\right)=\frac{L}{R}\left(\frac{1}{T_{2}}-\frac{1}{373}\right),
+\]
+
+\end_inset
+
+now, in this case 
+\begin_inset Formula $\frac{L}{R}=5092$
+\end_inset
+
+ K, thus 
+\begin_inset Formula 
+\[
+\frac{\ln\left(0.85\right)}{-592}=\frac{1}{T_{2}}-\frac{1}{373},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{T_{2}}=0.000036592+\frac{1}{373},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{1}{T_{2}}=0.0027175,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T_{2}=\frac{1}{0.0027175},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore T_{2}=367.985\text{ K },
+\]
+
+\end_inset
+
+and this results is lower, as expected.
+\end_layout
+
+\begin_layout Solution*
+b) 
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+b) Lack of 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+argumentation.
+\end_layout
+
+\end_inset
+
+For b, here's the sketch of the process in a 
+\begin_inset Formula $P-V$
+\end_inset
+
+ diagram:
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename StatMec_A2_Sketch.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+c) First let's focus on the work, we know that in a 
+\begin_inset Formula $P-V$
+\end_inset
+
+ diagram, the work corresponds to the area of the cycle, thus, in this case,
+ the area is simply 
+\begin_inset Formula 
+\[
+w_{by}=\Delta VdP.
+\]
+
+\end_inset
+
+Now, with this results at hand, we can prove the Clausius-Clapeyron equation
+ as follows: by definition, the efficiency is given by 
+\begin_inset Formula 
+\[
+\eta=\frac{W}{Q_{h}},
+\]
+
+\end_inset
+
+but in our case we have the following relations 
+\begin_inset Formula 
+\[
+\eta=\frac{dT}{T},\hspace{1em}W=\Delta VdP,\hspace{1em}Q_{h}=L,
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\begin{align*}
+\frac{dT}{T} & =\frac{\Delta VdP}{L}\\
+\implies\frac{dP}{dT} & =\frac{L}{T\Delta V},
+\end{align*}
+
+\end_inset
+
+just as we wanted.
+\end_layout
+
+\begin_layout Solution*
+d) 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+d) I didn't take 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+into account the 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+efficiency, which
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+was a huge part
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\color red
+of the solution.
+\end_layout
+
+\end_inset
+
+For this problem, we know that the latent heat of vaporization of water
+ is about 
+\begin_inset Formula $2,260$
+\end_inset
+
+ kJ/kg, thus 
+\begin_inset Formula 
+\[
+\text{Power}=2260\left[\frac{\text{kJ}}{\text{kg}}\right]\times10^{11}\left[\frac{\text{kg}}{\text{hour}}\right]=2.63\times10^{17}\text{\left[\frac{\text{J}}{\text{hour}}\right]}
+\]
+
 \end_inset
 
 
@@ -236,12 +1716,87 @@ You may be aware that the temperature at which water boils decreases with
 
 \end_layout
 
-\begin_layout Problem
-A typical battery for an internal-combustion-engine vehicle is a 12 Volt
- lead-acid battery, with a capacity of around 50 Ampere-hours.
- (Since an Ampere is a Coulomb per second, 50 Ah is a number of Coulombs.
- It tells you the amount of charge the battery can push through a circuit
- before it’s fully discharged.) The fundamental reaction is:
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\series bold
+Final questions
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+You’ll be asked these same questions at the end of every homework assignment.
+ You don’t have to put each of them on a new page.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Final Reflection:
+\series default
+ Looking back on the problem set as a whole: 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+a) What is something specific you understand better than you did before?
+\series default
+ I think I've seen much of this material in the past, except for the Clausius-Cl
+apeyron, I thing I used that equation ages ago, so I think it was a good
+ thing for me to do some exercises on that, and remember how those things
+ operate.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+b) What is something specific that surprised, confused, or intrigued you,
+ or that you struggled with?
+\series default
+ Heat flow and the sign of work is always a little difficult to me, mainly
+ because of the conventions, I still have a hard time getting used to the
+ convention that we're using.
+ On the other hand I feel more comfortable with the math behind, so, I always
+ try to thing on those terms.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+c) What is something that this problem set made you want to know more about?
+\series default
+ I think this problem set required a little bit more maths than the previous
+ one, so I really like that part, and because of that I really want to start
+ doing things in statistical mechanics, ensembles, probability distributions,
+ and maybe work a little bit more with the computer.
+\end_layout
+
+\begin_layout Standard
+Resources.
+ List any resources, aside from course materials and fellow students, that
+ you consulted in doing this assignment, and describe how you used them
+ and for which problem(s).
+ This could include web sites, videos, computational tools (e.g.
+ Desmos), or AI tools (e.g.
+ ChatGPT).
+ If you didn’t use any such resources, write “None.” 
+\end_layout
+
+\begin_layout Standard
+AI: I used Gemini (similar to ChatGPT but from google) to easy find some
+ constants and to convert some units.
+\end_layout
+
+\begin_layout Standard
+For the textbook, I've been using: Blundell, Stephen J., and Katherine M.
+ Blundell.
+ Concepts in thermal physics.
+ Oup Oxford, 2010, which I think it's quite a good book.
 \end_layout
 
 \end_body
