@@ -152,12 +152,17 @@ Compare your conclusion to what we concluded on HW #2 from our analysis
 
 \end_deeper
 \begin_layout Solution*
-Let's start with part a), we know that for a monoatomic ideal gas, the internal
- energy is just a function on the temperature, and even more, we know the
- functional relation, which is given by 
+Let's start:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We know that for a monoatomic ideal gas, the internal energy is just a function
+ on the temperature, and even more, we know the functional relation, which
+ is given by 
 \begin_inset Formula 
 \[
-U=nC_{V}T\implies dU=nC_{v}dT,
+U=nC_{v}T\implies dU=nC_{v}dT,
 \]
 
 \end_inset
@@ -167,7 +172,7 @@ and even more, in virtue of the second law of thermodynamics, we have that
 \begin_inset Formula 
 \begin{align*}
 dU & =dQ-pdV,\\
-\implies dQ & =dU+pdV.
+dQ & =dU+pdV.
 \end{align*}
 
 \end_inset
@@ -194,7 +199,7 @@ then, we have
 \begin_inset Formula 
 \begin{align*}
 \int_{A}^{B}\frac{dQ}{T} & =\int_{A}^{B}\frac{1}{T}\left(nC_{v}dT+pdV\right),\\
-\implies & =\int_{A}^{B}\frac{nC_{v}dT}{T}+\int_{A}^{B}\frac{pdV}{T},
+\int_{A}^{B}\frac{dQ}{T} & =\int_{A}^{B}\frac{nC_{v}dT}{T}+\int_{A}^{B}\frac{pdV}{T},
 \end{align*}
 
 \end_inset
@@ -203,7 +208,7 @@ and making use of the ideal gas equation
 \begin_inset Formula 
 \begin{align*}
 \int_{A}^{B}\frac{dQ}{T} & =\int_{A}^{B}\frac{nC_{v}dT}{T}+\int_{A}^{B}\frac{nRpdV}{pV},\\
- & =nC_{v}\int_{A}^{B}\frac{dT}{T}+nR\int_{A}^{B}\frac{dV}{V},
+\int_{A}^{B}\frac{dQ}{T} & =nC_{v}\int_{A}^{B}\frac{dT}{T}+nR\int_{A}^{B}\frac{dV}{V},
 \end{align*}
 
 \end_inset
@@ -256,9 +261,1281 @@ and therefore, the functional form of
  is the logarithmic function.
 \end_layout
 
+\begin_layout Enumerate
+Now, for this second part we have that for both isothermal processes 
+\begin_inset Formula 
+\[
+\frac{1}{nR}\int\frac{dQ}{T}=\ln\left(\frac{V_{2}}{V_{3}}\right)-\ln\left(\frac{V_{1}}{V_{4}}\right),
+\]
+
+\end_inset
+
+and for the first linear process we have 
+\begin_inset Formula 
+\[
+\frac{1}{nR}\int_{2}^{3}\frac{dQ}{T}=\frac{3}{2}\ln\left(\frac{p_{3}}{p_{2}}\right)+\frac{5}{2}\ln\left(\frac{V_{3}}{V_{2}}\right),
+\]
+
+\end_inset
+
+and using the ideal gas equation we can write 
+\begin_inset Formula 
+\[
+\frac{1}{nR}\int_{2}^{3}\frac{dQ}{T}=\frac{3}{2}\ln\left(\frac{V_{2}}{V_{3}}\right)+\frac{5}{2}\ln\left(\frac{V_{3}}{V_{2}}\right),
+\]
+
+\end_inset
+
+and for the other linear process
+\begin_inset Formula 
+\[
+\frac{1}{nR}\int_{4}^{1}\frac{dQ}{T}=\frac{3}{2}\ln\left(\frac{p_{4}}{p_{1}}\right)+\frac{5}{2}\ln\left(\frac{V_{4}}{V_{1}}\right),
+\]
+
+\end_inset
+
+and again, making use of the ideal gas equation we have 
+\begin_inset Formula 
+\[
+\frac{1}{nR}\int_{4}^{1}\frac{dQ}{T}=\frac{3}{2}\ln\left(\frac{V_{1}}{V_{4}}\right)+\frac{5}{2}\ln\left(\frac{V_{4}}{V_{1}}\right),
+\]
+
+\end_inset
+
+thus, the integral over the whole cycle becomes 
+\begin_inset Formula 
+\[
+\frac{1}{nR}\oint\frac{dQ}{T}=\ln\left(\frac{V_{2}}{V_{3}}\right)-\ln\left(\frac{V_{1}}{V_{4}}\right)+\frac{3}{2}\ln\left(\frac{V_{2}}{V_{3}}\right)+\frac{5}{2}\ln\left(\frac{V_{3}}{V_{2}}\right)+\frac{3}{2}\ln\left(\frac{V_{1}}{V_{4}}\right)+\frac{5}{2}\ln\left(\frac{V_{4}}{V_{1}}\right),
+\]
+
+\end_inset
+
+and this implies that 
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{nR}\oint\frac{dQ}{T} & =\frac{5}{2}\ln\left(\frac{V_{2}}{V_{3}}\right)+\frac{5}{2}\ln\left(\frac{V_{3}}{V_{2}}\right)+\frac{1}{2}\ln\left(\frac{V_{1}}{V_{4}}\right)+\frac{5}{2}\ln\left(\frac{V_{4}}{V_{1}}\right),\\
+\frac{1}{nR}\oint\frac{dQ}{T} & =\frac{5}{2}\ln\left(\frac{V_{2}}{V_{3}}\right)-\frac{5}{2}\ln\left(\frac{V_{2}}{V_{3}}\right)-\frac{1}{2}\ln\left(\frac{V_{4}}{V_{1}}\right)+\frac{5}{2}\ln\left(\frac{V_{4}}{V_{1}}\right),
+\end{align*}
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\[
+\frac{1}{nR}\oint\frac{dQ}{T}=2\ln\left(\frac{V_{4}}{V_{1}}\right)\neq0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, from the previous equation, we have that 
+\begin_inset Formula 
+\[
+\oint\frac{dQ}{T}\neq0,
+\]
+
+\end_inset
+
+but we know that if the above closed integral is zero, then the process
+ is reversible, thus, in this case the process is irreversible.
+\end_layout
+
+\begin_layout Enumerate
+Finally, in the assignment #2, we found that the efficiency of this engine,
+ was lower that a Carnot engine, which by construction is reversible, and
+ even more, we know that all reversible engines share the same efficiency,
+ thus, because the efficiency was lower that implied the process was irreversibl
+e, and here, we prove the same statement, but using a different approach.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+A typical battery for an internal- combustion-engine vehicle is a 12 Volt
+ lead-acid battery, with a capacity of around 50 Ampere-hours.
+ (Since an Ampere is a Coulomb per second, 50 Ah is a number of Coulombs.
+ It tells you the amount of charge the battery can push through a circuit
+ before it’s fully discharged.) The fundamental reaction is:
+\begin_inset Formula 
+\[
+\text{Pb}+\text{Pb}\text{O}_{2}+4\text{H}^{+}+2\text{SO}_{4}^{2-}\rightarrow2\text{PbSO}_{4}+2\text{H}_{2}\text{O}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How much electrical work can the battery provide before it’s fully discharged?
+ 
+\end_layout
+
+\begin_layout Enumerate
+If you want to know how much electrical work can be provided per mole of
+ reactants, which thermodynamic parameter should you look at? 
+\end_layout
+
+\begin_layout Enumerate
+If you want to know how much total energy is released per mole of reactants,
+ which thermodynamic parameter should you look at? 
+\end_layout
+
+\begin_layout Enumerate
+Using the table, what are the values of the quantities mentioned in 2 and
+ 3? Are they the same? If not, where does the energy go or come from to
+ account for the difference? 
+\end_layout
+
+\begin_layout Enumerate
+Based on your answer to 4, is the entropy of the products higher or lower
+ than the entropy of the reactants? By how much (per mole)? Does your answer
+ agree with what you find in the table? 
+\end_layout
+
+\begin_layout Enumerate
+Each time the reaction occurs, two electrons are released by the reactants,
+ flow through the external circuit, and then recombine with the products.
+ Knowing this, what is the voltage provided by one such battery cell? A
+ 12 V battery has multiple cells arranged in series to give the full voltage.
+ How many?
+\end_layout
+
+\begin_layout Enumerate
+How many moles of SO42- would you expect the battery to contain? Does the
+ order of magnitude of your answer seem reasonable? Why?
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Let's begin:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We know that the voltage of the battery is given by 
+\begin_inset Formula $V=12$
+\end_inset
+
+ Volt, and the capacity of the battery is 
+\begin_inset Formula $50$
+\end_inset
+
+ Ah, thus the energy or electrical work will be 
+\begin_inset Formula 
+\begin{align*}
+W_{e} & =12\times50\left[\text{VAh}\right],\\
+W_{e} & =600\text{\left[Wh\right],}
+\end{align*}
+
+\end_inset
+
+thus the battery could provide a maximum amount of electrical work given
+ by 600 Watts-hours 
+\end_layout
+
+\begin_layout Enumerate
+For this we know that 
+\begin_inset Formula $\Delta G$
+\end_inset
+
+ is associated with the spontaneity of a physical or chemical change, and
+ this, is also associated with the amount of work that a system can perform
+ on the surroundings, but let's elaborate a little more on this; by definition,
+ we have 
+\begin_inset Formula 
+\[
+G=H-TS,
+\]
+
+\end_inset
+
+thus, under constant pressure and temperature 
+\begin_inset Formula 
+\[
+\Delta G=\Delta H-T\Delta S,
+\]
+
+\end_inset
+
+and from the above expression we can see that the first term on the RHS,
+ under some conditions, could be interpreted as energy released to the environme
+nt, and therefore used to work.
+ On the other hand, the second term in the RHS is interpreted as increasing
+ the entropy, thus, if we consider a process in which the system is always
+ in equilibrium, in such a way that 
+\begin_inset Formula $\Delta S\rightarrow0$
+\end_inset
+
+, we can associate 
+\begin_inset Formula $\Delta G$
+\end_inset
+
+ with the maximum amount of possible work.
+ Therefore, I will look up for the change in Gibbs free energy.
+\end_layout
+
+\begin_layout Enumerate
+We should look for the change in enthalpy; 
+\begin_inset Formula $H$
+\end_inset
+
+ is the total amount of thermal energy at a constant pressure, thus we can
+ associate 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ as the difference in enthalpy between the products and reactants of a chemical
+ reaction.
+\end_layout
+
+\begin_layout Enumerate
+Here's the full reaction and a table with the information provided for this
+ problem
+\begin_inset Formula 
+\[
+\text{Pb}+\text{Pb}\text{O}_{2}+4\text{H}^{+}+2\text{SO}_{4}^{2-}\rightarrow2\text{PbSO}_{4}+2\text{H}_{2}\text{O},
+\]
+
+\end_inset
+
+ 
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Substance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ (kJ/mol)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta G$
+\end_inset
+
+ (kJ/mol)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S (J/(mol K))
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+195
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+162.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+175.4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pb
+\begin_inset Formula $\text{O}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-277.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-217.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+68.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{H}^{+}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{SO}_{4}^{2-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-909.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-744.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{PbSO}_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-920.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-813.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+148.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{H}_{2}\text{O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-285.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-237.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Standard enthalpy of formation and the standard Gibbs free energy of formation
+ for the species present in the chemical reaction.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+As we can see, the values are different, but as stated in 2 and 3, Gibbs
+ free energy is associated with the maximum amount of possible work, whereas
+ the enthalpy is associated with the total amount of energy at constant
+ pressure.
+ Thus they are related but they not necessarily coincide, and even more,
+ in the discussion for the work and the Gibbs free energy we assume 
+\begin_inset Formula $\Delta S\rightarrow0$
+\end_inset
+
+, thus, the discrepancies are related to the entropy change.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
-5.
- This problem explores the thermodynamics of a stretched rubber band.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+3.
+ At atmospheric pressure, water melts at 
+\begin_inset Formula $0°$
+\end_inset
+
+ C with a latent heat of 
+\begin_inset Formula $334$
+\end_inset
+
+ J/g.
+ In the process of melting, the volume decreases by about 
+\begin_inset Formula $10$
+\end_inset
+
+% (ice is less dense than water; otherwise the Titanic would have reached
+ New York).
+ The heat capacity of liquid water is 
+\begin_inset Formula $4.184$
+\end_inset
+
+ J/g °C and is nearly independent of temperature.
+ The molecular weight of water is 
+\begin_inset Formula $18$
+\end_inset
+
+ g/mol
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is the difference in internal energy ΔU between the liquid and solid states
+ of water at 0°C larger or smaller than the difference in enthalpy ΔH? By
+ what percentage?
+\end_layout
+
+\begin_layout Enumerate
+What is the difference in Gibbs free energy, ΔG, between the liquid and
+ solid states of water at the melting point? 
+\end_layout
+
+\begin_layout Enumerate
+What is the difference in entropy (per mole) between the liquid and solid
+ states of water at the melting point?
+\end_layout
+
+\begin_layout Enumerate
+What is the difference in entropy between a mole of liquid water at 100°C
+ and at 0°C?
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+In order to solve all of these questions we need going to remember the definitio
+n of the thermodynamical potentials, thus, it's a good idea to write the
+ definitions;
+\begin_inset Formula 
+\begin{align*}
+dU & =TdS-pdV\leftarrow\text{(Internal Energy)},\\
+dH & =TdS+Vdp\leftarrow\text{(Enthalpy)},\\
+dF & =-SdT-pdV,\leftarrow\text{(Free Energy)},\\
+dG & =-SdT+Vdp\leftarrow\text{(Gibbs)},
+\end{align*}
+
+\end_inset
+
+now, let's move on to the questions.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We know that the internal energy is a function of the entropy and the volume,
+ this is 
+\begin_inset Formula $U=U\left(T,p\right)$
+\end_inset
+
+.
+ On the other hand, for the Enthalpy, we have a contribution from the entropy
+ and the pressure, but because in this case there's no variation in the
+ former, we have just one contribution, this is, 
+\begin_inset Formula 
+\[
+dU=TdS-pdV\implies\Delta U=T\Delta S-p\Delta V,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+dH=TdS\implies\Delta H=T\Delta S,
+\]
+
+\end_inset
+
+now, if we compare the above expressions we have that 
+\begin_inset Formula 
+\[
+\Delta U=\Delta H-p\Delta V,
+\]
+
+\end_inset
+
+and from we can use the information given un the statement of the problem
+ about the fact that ice decreases it's volume by about 10% when melting,
+ and this implies that 
+\begin_inset Formula $\Delta V=-10\%$
+\end_inset
+
+, and this is negative because we're seeing a reduction in the volume, then
+ 
+\begin_inset Formula 
+\[
+\Delta U=\Delta H+\alpha,\hspace{1em}\alpha=p\Delta V>0,
+\]
+
+\end_inset
+
+and from this we have that the change in internal energy is 10% higher than
+ the change in enthalpy.
+\end_layout
+
+\begin_layout Enumerate
+For this part we have that the Gibbs free energy is function of the change
+ in temperature and the change in pressure, but both of those state variables
+ are kept constant during the phase transition, therefore, this implies
+ that the change in Gibbs free energy is zero.
+ Now, in math terms, what we have is the following 
+\begin_inset Formula 
+\[
+dG=-SdT+Vdp,
+\]
+
+\end_inset
+
+and for a finite change, not a differential change, we need to integrate
+ the previous expression 
+\begin_inset Formula 
+\[
+\Delta G=-\int S(T)dT+\int V(p)dp,
+\]
+
+\end_inset
+
+but in this case, there's no variation in the temperature nor in the pressure,
+ because of the physical constraints of the system, thus 
+\begin_inset Formula 
+\[
+\Delta G=0.
+\]
+
+\end_inset
+
+Now, for the following two problems, we have to remember that in a first
+ order phase transition there are some parameters which are discontinuous,
+ and we can associate a latent heat to the transition, in this case we're
+ talking about melting and vaporization of water.
+ Now, for we can associate the change in entropy and the latent heat as
+ follows 
+\begin_inset Formula 
+\[
+L=\Delta Q=T_{c}\left(S_{2}-S_{1}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the latent heat,
+\begin_inset Formula $T_{c}$
+\end_inset
+
+ is the transition temperature and 
+\begin_inset Formula $S_{2},S_{1}$
+\end_inset
+
+ are the entropies at the phases 
+\begin_inset Formula $2$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Enumerate
+Thus, going from ice to liquid we have that the change in entropy is given
+ by 
+\begin_inset Formula 
+\[
+\Delta S=\frac{L}{T_{c}}=\frac{6.01\times10^{3}}{273.15}\left[\frac{\text{J/mol}}{\text{K}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\Delta S=22.0\frac{\text{J/mol}}{\text{K}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+On the other hand, going from liquid to gas, we have 
+\begin_inset Formula 
+\[
+\Delta S=\frac{L}{T_{c}}=\frac{40.7\times10^{3}}{373.15}\left[\frac{\text{J/mol}}{\text{K}}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta S=109.1\frac{\text{J/mol}}{\text{K}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\color white
+Statement
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose a warm stone, at temperature 
+\begin_inset Formula $T_{s}^{0}$
+\end_inset
+
+, is placed in a container of cool water, at temperature 
+\begin_inset Formula $T_{w}^{0}$
+\end_inset
+
+.
+ As the combined system comes to thermal equilibrium, at some final temperature
+ 
+\begin_inset Formula $T_{f}$
+\end_inset
+
+, heat flows between the stone and the water.
+ Assuming that the combined system does not exchange energy with its surrounding
+s, show that the total change of entropy of the combined system as it approaches
+ equilibrium, 
+\begin_inset Formula $ΔS_{s}+ΔS_{w}$
+\end_inset
+
+ is necessarily positive.
+ Would the result be different if the stone were initially cooler than the
+ water?
+\end_layout
+
+\begin_layout Enumerate
+Suppose a fixed amount of gas is enclosed in a sealed container with a freely
+ moving piston, so its volume can change and it can exchange heat with its
+ surroundings.
+ It is placed inside a much larger bath, which is at temperature 
+\begin_inset Formula $T$
+\end_inset
+
+ and pressure 
+\begin_inset Formula $p$
+\end_inset
+
+, and allowed to come (quasi-statically) to equilibrium.
+ In the process, the gas transfers an amount of heat 
+\begin_inset Formula $Q_{\text{bath}}$
+\end_inset
+
+ (which may be positive or negative) into the bath.
+ Relate 
+\begin_inset Formula $Q_{\text{bath}}$
+\end_inset
+
+ to the change in enthalpy of the gas, and use that relationship to show
+ that maximizing the total entropy change of the combined system corresponds
+ to minimizing the Gibbs free energy G of the gas.
+ (Because the bath is large, we can assume 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+ do not change.)
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Let's begin: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For this we have that 
+\begin_inset Formula 
+\[
+\Delta S_{i}=\int\frac{dQ_{i}}{T},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ refers to the stone and the water in the container.
+ Now, we know that once in thermal contact, after some time, they will be
+ in thermodynamical equilibrium at some temperature 
+\begin_inset Formula $T_{f}$
+\end_inset
+
+, and in the following I'm going to use the following notation 
+\begin_inset Formula 
+\[
+T_{s}^{0}\rightarrow T_{1},\hspace{1em}T_{w}^{0}\rightarrow T_{2},
+\]
+
+\end_inset
+
+then, we have that 
+\begin_inset Formula 
+\[
+\Delta S_{1}=\int_{T_{1}}^{T_{f}}\frac{dQ_{1}}{T},\hspace{1em}\Delta S_{2}=\int_{T_{2}}^{T_{f}}\frac{dQ_{2}}{T},
+\]
+
+\end_inset
+
+and, even more, for for a reversible heat transfer we have 
+\begin_inset Formula $dQ_{i}=C_{i}dT$
+\end_inset
+
+, where in general 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $T$
+\end_inset
+
+ and
+\begin_inset Formula $C_{i}>0$
+\end_inset
+
+ , thus 
+\begin_inset Formula 
+\[
+\Delta S_{1}=\int_{T_{1}}^{T_{f}}\frac{C_{1}\left(T\right)dT}{T},\hspace{1em}\Delta S_{2}=\int_{T_{2}}^{T_{f}}\frac{C_{2}\left(T\right)dT}{T},
+\]
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\[
+\Delta S=\Delta S_{1}+\Delta S_{2}=\int_{T_{1}}^{T_{f}}\frac{C_{1}\left(T\right)dT}{T}+\int_{T_{2}}^{T_{f}}\frac{C_{2}\left(T\right)dT}{T},
+\]
+
+\end_inset
+
+but for the first integral we have that 
+\begin_inset Formula $T_{f}<T_{1}$
+\end_inset
+
+ and the integrand is an increasing function, thus 
+\begin_inset Formula 
+\[
+\Delta S_{1}<0,
+\]
+
+\end_inset
+
+on the other hand, for the second integral 
+\begin_inset Formula $T_{f}>T_{2}$
+\end_inset
+
+, and again, for being an increasing function, we have that 
+\begin_inset Formula 
+\[
+\Delta S_{2}>0,
+\]
+
+\end_inset
+
+now we must show that even with one of the 
+\begin_inset Formula $\Delta S_{i}$
+\end_inset
+
+ negative, the 
+\begin_inset Formula $\Delta S$
+\end_inset
+
+ (i.e, the sum)is still positive.
+ And for this we're going to simplify a little our model, we're going to
+ consider that 
+\begin_inset Formula $C_{1},C_{2}$
+\end_inset
+
+ are constants, thus 
+\begin_inset Formula 
+\[
+\Delta S_{1}=C_{1}\ln\left(\frac{T_{f}}{T_{1}}\right),\hspace{1em}\Delta S_{2}=C_{2}\ln\left(\frac{T_{f}}{T_{2}}\right),
+\]
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\[
+\Delta S=C_{1}\ln\left(\frac{T_{f}}{T_{1}}\right)+C_{2}\ln\left(\frac{T_{f}}{T_{2}}\right),
+\]
+
+\end_inset
+
+and in order to find 
+\begin_inset Formula $T_{f}$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+Q_{1}+Q_{2}=0\iff C_{1}\left(T_{f}-T_{1}\right)+C_{2}\left(T_{f}-T_{2}\right)=0,
+\]
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\[
+T_{f}\left(C_{1}+C_{2}\right)-\left(C_{1}T_{1}+C_{2}T_{2}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies T_{f}=\frac{\left(C_{1}T_{1}+C_{2}T_{2}\right)}{\left(C_{1}+C_{2}\right)}=\frac{C_{1}}{C_{1}+C_{2}}T_{1}+\frac{C_{2}}{C_{1}+C_{2}}T_{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore T_{f}=\frac{C_{1}}{C_{1}+C_{2}}T_{1}+\frac{C_{2}}{C_{1}+C_{2}}T_{2},
+\]
+
+\end_inset
+
+and now, if we define 
+\begin_inset Formula 
+\[
+\alpha=\frac{C_{1}}{C_{1}+C_{2}},
+\]
+
+\end_inset
+
+we have that 
+\begin_inset Formula 
+\[
+\alpha-1=\frac{C_{1}}{C_{1}+C_{2}}-1=\frac{C_{1}-\left(C_{1}+C_{2}\right)}{C_{1}+C_{2}}=-\frac{C_{2}}{C_{1}+C_{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{C_{2}}{C_{1}+C_{2}}=1-\alpha,
+\]
+
+\end_inset
+
+and then 
+\begin_inset Formula $T_{f}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+T_{f}=\alpha T_{1}+\left(1-\alpha\right)T_{2},
+\]
+
+\end_inset
+
+now, let's use this relation in the total change in entropy
+\begin_inset Formula 
+\begin{align*}
+\Delta S & =C_{1}\ln\left(\frac{T_{f}}{T_{1}}\right)+C_{2}\ln\left(\frac{T_{f}}{T_{2}}\right),\\
+ & =C_{1}\ln\left(\frac{\alpha T_{1}+\left(1-\alpha\right)T_{2}}{T_{1}}\right)+C_{2}\ln\left(\frac{\alpha T_{1}+\left(1-\alpha\right)T_{2}}{T_{2}}\right),\\
+ & =\left(C_{1}+C_{2}\right)\ln\left(\alpha T_{1}+\left(1-\alpha\right)T_{2}\right)-C_{1}\ln T_{1}-C_{2}\ln T_{2},
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+C_{1}=\alpha\left(C_{1}+C_{2}\right)\text{ \& }C_{2}=\left(1-\alpha\right)\left(C_{1}+C_{2}\right),
+\]
+
+\end_inset
+
+then naming 
+\begin_inset Formula $\beta=-C_{1}\ln T_{1}-C_{2}\ln T_{2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+\beta & =-\alpha\left(C_{1}+C_{2}\right)\ln T_{1}-\left(1-\alpha\right)\left(C_{1}+C_{2}\right)\ln T_{2,}\\
+\beta & =-\left(C_{1}+C_{2}\right)\left(\alpha\ln T_{1}+\left(1-\alpha\right)\ln T_{2,}\right),\\
+\beta & =-\left(C_{1}+C_{2}\right)\left(\ln T_{1}^{\alpha}+\ln T_{2,}^{1-\alpha}\right),
+\end{align*}
+
+\end_inset
+
+then, finally 
+\begin_inset Formula 
+\[
+\beta=-\left(C_{1}+C_{2}\right)\left(\ln T_{1}^{\alpha}T_{2,}^{1-\alpha}\right),
+\]
+
+\end_inset
+
+and from this, we have that the total change in entropy is given by 
+\begin_inset Formula 
+\begin{align*}
+\Delta S & =\left(C_{1}+C_{2}\right)\ln\left(\alpha T_{1}+\left(1-\alpha\right)T_{2}\right)-\left(C_{1}+C_{2}\right)\left(\ln T_{1}^{\alpha}T_{2,}^{1-\alpha}\right)\\
+\Delta S & =\left(C_{1}+C_{2}\right)\ln\left(\frac{\alpha T_{1}+\left(1-\alpha\right)T_{2}}{T_{1}^{\alpha}T_{2,}^{1-\alpha}}\right),
+\end{align*}
+
+\end_inset
+
+now, in order to prove that 
+\begin_inset Formula $\Delta S>0$
+\end_inset
+
+, we have to prove that the function is increasing, and the logarithm is
+ an increasing function, as long as the value inside the function is increasing,
+ and indeed, this is the case because 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is bounded to live between 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+, and this comes purely from its definition, thus 
+\begin_inset Formula 
+\[
+\alpha T_{1}+\left(1-\alpha\right)T_{2}>0,
+\]
+
+\end_inset
+
+and therefore 
+\begin_inset Formula 
+\[
+\Delta S>0,
+\]
+
+\end_inset
+
+and finally, if we take into consideration the other case in which the stone
+ were colder instead of hotter, the same reasoning applies, and therefore
+ in that case the total change in entropy also increases.
+\end_layout
+
+\begin_layout Enumerate
+Now for this part, when we transfer energy dU and volume dV from the surrounding
+s, to the system we have that the internal energy of the surrounding changes
+ by an amount 
+\begin_inset Formula $dU_{0}$
+\end_inset
+
+ which is given by
+\begin_inset Formula 
+\[
+dU_{0}=-dU=T_{0}dS_{0}-p_{0}\left(dV\right),
+\]
+
+\end_inset
+
+where the minus sign reflect the fact that the energy and volume is decreasing.
+ Then, from the previous expression we have that 
+\begin_inset Formula 
+\[
+dS_{0}=-\frac{dU+p_{0}dV}{T_{0}},
+\]
+
+\end_inset
+
+now, if the entropy of the system changes by dS, then the total change in
+ the entropy 
+\begin_inset Formula $dS_{0}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+dS_{\text{tot}}=dS_{0}+dS,
+\]
+
+\end_inset
+
+and using the second law, we have 
+\begin_inset Formula 
+\[
+T_{0}dS_{\text{tot}}=-\left[dU+p_{0}dV-T_{0}dS\right]\ge0,
+\]
+
+\end_inset
+
+and therefore, we have that 
+\begin_inset Formula 
+\[
+dU+p_{0}dV-T_{0}dS\leq0.
+\]
+
+\end_inset
+
+And now, if we assume that the system can be approximated as a system with
+ constant pressure and temperature, we can use the definition of the Gibbs
+ free energy, as follows 
+\begin_inset Formula 
+\[
+dG=dU+p_{0}dV+Vdp-T_{0}dS-SdT=dU-T_{0}dS+p_{0}dV,
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $dp=dT=0$
+\end_inset
+
+, and from and the condition for the previous equation, we have 
+\begin_inset Formula 
+\[
+dG\leq0,
+\]
+
+\end_inset
+
+and from this we have that maximizing the total entropy change of the combined
+ system corresponds to minimizing the Gibbs free energy G of the gas.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+This problem explores the thermodynamics of a stretched rubber band.
  Because a stretched rubber band exerts a force 
 \begin_inset Formula $f$
 \end_inset
@@ -276,7 +1553,12 @@ dU=TdS-pdV+fdL,
 
 \end_inset
 
-a) The 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The 
 \begin_inset Formula $dV$
 \end_inset
 
@@ -289,8 +1571,8 @@ a) The
  
 \end_layout
 
-\begin_layout Standard
-b) Write the comparable expression for 
+\begin_layout Enumerate
+Write the comparable expression for 
 \begin_inset Formula $dG$
 \end_inset
 
@@ -298,20 +1580,24 @@ b) Write the comparable expression for
  
 \end_layout
 
-\begin_layout Standard
-c) Use appropriate second derivatives of 
+\begin_layout Enumerate
+Use appropriate second derivatives of 
 \begin_inset Formula $G$
 \end_inset
 
  to derive a Maxwell relation between
 \begin_inset Formula 
 \[
-\left(\frac{\partial S}{\partial L}\right)_{T,p}\text{ and }\left(\frac{\partial f}{\partial T}\right)_{L,p}
+\left(\frac{\partial S}{\partial L}\right)_{T,p}\text{ and }\left(\frac{\partial f}{\partial T}\right)_{L,p}.
 \]
 
 \end_inset
 
-d) This relationship means that you can determine the variation of entropy
+
+\end_layout
+
+\begin_layout Enumerate
+This relationship means that you can determine the variation of entropy
  with length by measuring something completely different, and very accessible
  experimentally: the variation of force with temperature.
  The graph at right shows 
@@ -328,9 +1614,14 @@ d) This relationship means that you can determine the variation of entropy
  increase or decrease when it is stretched?
 \end_layout
 
-\begin_layout Standard
-Solution.
- Let's begin with a) As the problem says, both 
+\end_deeper
+\begin_layout Solution*
+Let's begin: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+As the problem says, both 
 \begin_inset Formula $dV$
 \end_inset
 
@@ -343,8 +1634,8 @@ Solution.
  have that the surroundings are doing work over the system.
 \end_layout
 
-\begin_layout Standard
-b) Let's move on with the calculation of 
+\begin_layout Enumerate
+Let's move on with the calculation of 
 \begin_inset Formula $dG$
 \end_inset
 
@@ -389,7 +1680,11 @@ dG=Vdp-SdT+fdL.
 
 \end_inset
 
-c) Now, we're going to make use of the previous relation, but before jumping
+
+\end_layout
+
+\begin_layout Enumerate
+Now, we're going to make use of the previous relation, but before jumping
  with the math, let's remember the the property under which base the Maxwell
  relations, this is 
 \begin_inset Formula 
@@ -422,13 +1717,17 @@ where the subscript means keeping the appropriate variables constant.
  And with this we end up with the following Maxwell relation 
 \begin_inset Formula 
 \[
-\left(\frac{\partial f}{\partial T}\right)_{L,p}=-\left(\frac{\partial S}{\partial L}\right)_{T,p}
+\left(\frac{\partial f}{\partial T}\right)_{L,p}=-\left(\frac{\partial S}{\partial L}\right)_{T,p}.
 \]
 
 \end_inset
 
-d) Now, from the figure we can see that we have a linear relation between
- the 
+
+\end_layout
+
+\begin_layout Enumerate
+Now, from the figure we can see that we have a linear relation between the
+ 
 \begin_inset Formula $f$
 \end_inset
 
@@ -456,7 +1755,7 @@ and even more, from the figure(experimental data) we can see that
  have that
 \begin_inset Formula 
 \[
-\frac{\partial S}{\partial L}=-\frac{\partial f}{\partial T}=-\frac{\partial}{\partial T}\left(mT+b\right)=-\left(m+b\right)=\alpha,
+\frac{\partial S}{\partial L}=-\frac{\partial f}{\partial T}=-\frac{\partial}{\partial T}\left(mT+b\right)=-m,
 \]
 
 \end_inset
@@ -470,7 +1769,7 @@ and even more, from the figure(experimental data) we can see that
 \end_inset
 
 where 
-\begin_inset Formula $\alpha<0$
+\begin_inset Formula $\alpha=-m<0$
 \end_inset
 
 , thus, from the previous equation, we have that 
@@ -481,8 +1780,23 @@ dS=\alpha dL\implies\Delta S=\alpha\Delta L,
 
 \end_inset
 
-now, is we assume that we go from a lower stretch to a higher stretch, we
- can see that 
+now, is we assume that we go from 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ stretch to 
+\begin_inset Quotes eld
+\end_inset
+
+higher
+\begin_inset Quotes erd
+\end_inset
+
+ stretch, we can see that 
 \begin_inset Formula $\Delta L>0$
 \end_inset
 
@@ -495,6 +1809,59 @@ now, is we assume that we go from a lower stretch to a higher stretch, we
 \end_inset
 
 thus, the entropy decrease when we stretch the rubber.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\series bold
+Resources
+\series default
+.
+ List any resources, aside from course materials, that you consulted in
+ doing this assignment, and describe how you used them and for which problem(s).
+ This could include web sites, videos, computational tools (e.g.
+ Desmos), or AI tools (e.g.
+ ChatGPT).
+ If you didn’t use any such resources, write “None.”
+\end_layout
+
+\begin_layout Standard
+For the chemistry problem I used the following resource: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+ https://chem.libretexts.org/Bookshelves/General_Chemistry/Map%3A_Chemistry_-_The_
+Central_Science_(Brown_et_al.)/19%3A_Chemical_Thermodynamics/19.05%3A_Gibbs_Free_E
+nergy?readerView#mjx-eqn-Eq2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I'm not very good at chemistry, and although I thinks it's amazing and very
+ difficult, and because I'm not very interested into that discipline, it
+ was a quite difficult for me to map the knowledge that I have from thermal
+ physics, and I needed some help with that.
+\end_layout
+
+\begin_layout Standard
+Other than that I used the following books for help with some definitions:
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
