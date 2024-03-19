@@ -110,6 +110,12 @@ The partition function contains all the information about the energies of
 Steps to solving statistical mechanics problems 
 \end_layout
 
+\begin_layout Standard
+In some sense I like to think that the partition function is the analog
+ of the wave function in quantum mechanics, this is, we can derive all the
+ thermodynamic properties from this function, and the procedure is as follows:
+\end_layout
+
 \begin_layout Enumerate
 Write down the partition function.
  
