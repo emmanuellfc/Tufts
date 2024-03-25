@@ -89,12 +89,378 @@ pdfcomment
 \begin_body
 
 \begin_layout Title
-QM Assignment X
+QM Assignment 4
 \end_layout
 
 \begin_layout Author
 J.
  Emmanuel Flores
+\end_layout
+
+\begin_layout Problem
+N identical spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+ particles are subjected to a one-dimensional simple harmonic oscillator
+ potential.
+ Ignore any mutual interactions between the particles.
+ What is the ground-state energy? What is the Fermi energy? What are the
+ ground-state and Fermi energies if we ignore the mutual interactions and
+ assume 
+\begin_inset Formula $N$
+\end_inset
+
+ to be very large?
+\end_layout
+
+\begin_layout Solution*
+Solution: Even case
+\begin_inset Formula 
+\begin{align*}
+E_{tot} & =2\left[\frac{1}{2}\hbar\omega+\frac{3}{2}\hbar\omega+\cdots+\frac{2m-1}{2}\hbar\omega\right],\\
+ & =\hbar\omega+3\hbar\omega+\cdots+\left(2m-1\right)\hbar\omega,
+\end{align*}
+
+\end_inset
+
+and from this we have that 
+\begin_inset Formula 
+\[
+E_{tot}=\sum_{i=1}^{N/2}\left(2i-1\right)\hbar\omega,
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\left(2i-1\right)=n^{2},
+\]
+
+\end_inset
+
+and in our case 
+\begin_inset Formula $n=N/2$
+\end_inset
+
+, then we hav e
+\begin_inset Formula 
+\[
+E_{tot}=\frac{N^{2}}{4}\hbar\omega.
+\]
+
+\end_inset
+
+Now, for 
+\begin_inset Formula $N$
+\end_inset
+
+ odd, we have 
+\begin_inset Formula 
+\[
+E_{tot}=\sum_{i=1}^{N/2-1}\left(2i-1\right)\hbar\omega+2\left(\frac{N-1}{2}-1\right)\frac{\hbar\omega}{2},
+\]
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\begin{align*}
+E_{tot} & =\frac{\left(N-1\right)^{2}}{4}\hbar\omega+\frac{N}{2}\hbar\omega,\\
+ & =\left(\frac{N^{2}}{4}-\frac{N}{1}+\frac{1}{4}+\frac{N}{2}\right)\hbar\omega,
+\end{align*}
+
+\end_inset
+
+and from this we have that 
+\begin_inset Formula 
+\[
+E_{tot}=\frac{\left(N+1\right)^{2}}{4}\hbar\omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+It is obvious that two nonidentical spin 1 particles with no orbital angular
+ momenta (that is, s-states for both) can form j = 0, j = 1, and j = 2.
+ Suppose, however, that the two particles are identical.
+ What restrictions do we get?
+\end_layout
+
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+Discuss what would happen to the energy levels of a helium atom if the electron
+ were a spinless boson.
+ Be as quantitative as you can.
+\end_layout
+
+\begin_layout Solution*
+If the electron were spinless boson, then the Pauli exclusion principle
+ doesn'f apply anymore to these particles.
+ And even more, we know that for bosons, the wave function must be symmetric,
+ which means that 
+\begin_inset Formula 
+\[
+\psi\left(x_{1},x_{2}\right)=\frac{1}{\sqrt{2}}\left(\psi_{a}\left(x_{1}\right)\psi_{b}\left(x_{2}\right)+\psi_{b}\left(x_{1}\right)\psi_{a}\left(x_{2}\right)\right),\hspace{1em}a\neq b,
+\]
+
+\end_inset
+
+and if 
+\begin_inset Formula $a=b$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\psi\left(x_{1},x_{2}\right)=\psi_{a}\left(x_{1}\right)\psi_{b}\left(x_{2}\right),
+\]
+
+\end_inset
+
+then, we will have only singlet parahelium.
+\end_layout
+
+\begin_layout Problem
+Three spin 0 particles are situated at the corners of an equilateral triangle.
+ Let us define the z-axis to go through the center and in the direction
+ normal to the plane of the triangle.
+ The whole system is free to rotate about the z-axis.
+ Using statistics considerations, obtain restrictions on the magnetic quantum
+ numbers corresponding to 
+\begin_inset Formula $J_{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+We know that the rotation operator about the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis is given by 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(z,\phi\right)=\exp\left(-\frac{i}{\hbar}J_{z}\phi\right).
+\]
+
+\end_inset
+
+Now, if we take into consideration that the particles are identical, we
+ have that a rotation about 
+\begin_inset Formula $2\pi/3$
+\end_inset
+
+ let the system invariant, which means that exist 
+\begin_inset Formula $a\in\mathbb{C}$
+\end_inset
+
+, such that 
+\begin_inset Formula 
+\begin{align*}
+\mathcal{D}\left(-\frac{i}{\hbar}J_{z}\left(\frac{2\pi}{3}\right)\right)\left|\alpha\right\rangle  & =a\left|\alpha\right\rangle ,\\
+\exp\left(-\frac{2\pi i}{3\hbar}J_{z}\right)\left|\alpha\right\rangle  & =a\left|\alpha\right\rangle ,
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+ is the state corresponding to the triangle configuration.
+ Now, let's look a the effect or the parity opreator over the triangle state,
+ we can see that 
+\begin_inset Formula 
+\[
+P_{23}P_{12}=1,
+\]
+
+\end_inset
+
+which expressed in other words means that the a double permutation is an
+ element of the group's symetries of the system.
+ Now, taking into account the fact that the particles are spin 0, we have
+ that 
+\begin_inset Formula 
+\[
+P_{ij}\left|\alpha\right\rangle =+\left|\alpha\right\rangle ,
+\]
+
+\end_inset
+
+this is 
+\begin_inset Formula $a=1$
+\end_inset
+
+, and from this, we have that 
+\begin_inset Formula 
+\[
+\exp\left(-\frac{2\pi i}{3\hbar}J_{z}\right)\left|\alpha\right\rangle =\left|\alpha\right\rangle ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\exp\left(-\frac{2\pi i}{3\hbar}J_{z}\right)=1,
+\]
+
+\end_inset
+
+and the above equality holds whenever 
+\begin_inset Formula 
+\[
+m=0,\pm3,\pm6,\dots
+\]
+
+\end_inset
+
+and so on.s
+\end_layout
+
+\begin_layout Problem
+Consider three weakly interacting, identical spin 1 particles.
+ a.
+ Suppose the space part of the state vector is known to be symmetric under
+ interchange of any pair.
+ Using notation |+⟩|0⟩|+⟩ for particle 1 in ms = +1, particle 2 in ms =
+ 0, particle 3 in ms = +1, and so on, construct the normalized spin states
+ in the following three cases.
+ (i) All three of them in |+⟩.
+ (ii) Two of them in |+⟩, one in |0⟩.
+ (iii) All three in different spin states.
+ What is the total spin in each case? b.
+ Attempt to do the same problem when the space part is antisymmetric under
+ interchange of any pair.
+\end_layout
+
+\begin_layout Solution*
+Sol.
+\end_layout
+
+\begin_layout Problem
+7.10 Suppose the electron were a spin 32 particle obeying Fermi–Dirac statistics.
+ Write the configuration of a hypothetical Ne (Z = 10) atom made up of such
+ “electrons” [that is, the analogue of (1s)2(2s)2(2p)6].
+ Show that the configuration is highly degenerate.
+ What is the ground state (the lowest term) of the hypothetical Ne atom
+ in spectroscopic notation (2S+1LJ, where S, L, and J stand for the total
+ spin, the total orbital angular momentum, and the total angular momentum,
+ respectively) when exchange splitting and spin-orbit splitting are taken
+ into account?
+\end_layout
+
+\begin_layout Problem*
+Sol.
+\end_layout
+
+\begin_layout Problem
+(7.11) Two identical spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+ fermions move in one dimension under the influence of the infinite-wall
+ potential 
+\begin_inset Formula $V=∞$
+\end_inset
+
+ for 
+\begin_inset Formula $x<0$
+\end_inset
+
+, 
+\begin_inset Formula $x>L$
+\end_inset
+
+, and 
+\begin_inset Formula $V=0$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq x\leq L$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write the ground-state wave function and the ground-state energy when the
+ two particles are constrained to a triplet spin state (ortho state).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Repeat (1) when they are in a singlet spin state (para state).
+\end_layout
+
+\begin_layout Enumerate
+Let us now suppose that the two particles interact mutually via a very short
+ range attractive potential that can be approximated by 
+\begin_inset Formula 
+\[
+V=−\lambda\delta\left(x_{1}-x_{2}\right),\hspace{1em}λ>0.
+\]
+
+\end_inset
+
+Assuming that perturbation theory is valid even with such a singular potential,
+ discuss semiquantitatively what happens to the energy levels obtained in
+ (1) and (2).
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+The eigen-functions for this problem are given by 
+\begin_inset Formula 
+\[
+\psi_{n}\left(x\right)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right),
+\]
+
+\end_inset
+
+with eigen-energies given by 
+\begin_inset Formula 
+\[
+E_{n}=\frac{n^{2}\pi^{2}\hbar^{2}}{2mL^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(Mann-5) A deuterium molecule (D 2 ) is comprised of two identical spin-1
+ nuclei (each is a neutron-proton bound state) plus two electrons.
+ Suppose 1) the two-electron subsystem is in a 2S+1 LJ = 1 S 0 configuration,
+ 2) the nuclear subsystem is also s-wave, and 3) the total spin for the
+ entire molecule is J = 2.
+ A beam of such molecules is passed through a Stern-Gerlach apparatus with
+ the gradient B-field oriented along a z-axis.
+ Specify the total number, the form, and the exchange symmetry of the states
+ of the nuclear subsystem that are thereby resolved.
+\end_layout
+
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+Mann-6: Let A, B be two operators for which the respective inverse operators
+ A -1 , B-1 are defined.
+ Prove the identities 1/A – 1/B = (1/A) ( B – A) (1/B) = (1/B) (B – A) (1/A)
+ 
 \end_layout
 
 \end_body
