@@ -1,0 +1,441 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Statistical Mechanics: Class Notes
+\end_layout
+
+\begin_layout Date
+Tue, Mar, 26
+\end_layout
+
+\begin_layout Standard
+Remember, we're thinkin in 
+\begin_inset Quotes eld
+\end_inset
+
+diffusive
+\begin_inset Quotes erd
+\end_inset
+
+ equilibrium 
+\begin_inset Formula $\rightarrow\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Canonical Ensemble
+\end_layout
+
+\begin_layout Standard
+Canonical ensemble ~ thermal equilibrium 
+\begin_inset Formula $\implies$
+\end_inset
+
+ statistical definition of temperature.
+\end_layout
+
+\begin_layout Standard
+Boltzmann Factor and Boltzmann Expression 
+\begin_inset Formula 
+\[
+\frac{P\left(E_{1}\right)}{P\left(E_{2}\right)}=\exp\left(-\frac{\left(E_{1}-E_{2}\right)}{k_{B}T}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{Z}=\sum_{n}\exp\left(-\beta E_{n}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and from this we can derive all of the thermodynamical properties.
+\end_layout
+
+\begin_layout Subsection
+Grand Canonical Ensemble:
+\end_layout
+
+\begin_layout Standard
+Now, we're moving to the Gran Canonical Ensemble: so, as before, we're thinking
+ in a system coupled with a reservoir.
+\end_layout
+
+\begin_layout Standard
+Bias towards higher 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gibbs factor 
+\begin_inset Formula 
+\[
+P\propto\exp\left(-\beta E+\beta\mu N\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Grand Partition Function 
+\begin_inset Formula 
+\[
+\mathcal{Z}=\sum_{i}\sum_{j}\exp\left(-\beta\left(E_{j}-N_{i}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Quantum Ideal Gases
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n_{Q}=\left(\frac{mk_{B}T}{2\pi\hbar}\right)^{3/2}\approx\left(\frac{1}{\lambda_{dB}}\right)^{3}
+\]
+
+\end_inset
+
+Now, for a quantum gas, we have 
+\begin_inset Formula 
+\[
+n\gtrsim n_{Q},\hspace{1em}T\leq T_{Q}\approx\left(\frac{2\pi\hbar}{mk_{B}T}\right)n^{2/3}
+\]
+
+\end_inset
+
+And for atoms/molecules 
+\begin_inset Formula $T_{Q}\leq10K$
+\end_inset
+
+, but electrons, neutron stars, etc, can have a uhc higher 
+\begin_inset Formula $T_{Q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $n\gg n_{Q}$
+\end_inset
+
+ of 
+\begin_inset Formula $T\ll T_{Q}$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+degenerate
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Third Law: as 
+\begin_inset Formula $T\rightarrow0$
+\end_inset
+
+, then 
+\begin_inset Formula $S\rightarrow0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sakur Tetrode 
+\begin_inset Formula 
+\[
+S=k_{B}N\left[\ln\left(\frac{n_{Q}}{n}\right)+\frac{5}{2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N$
+\end_inset
+
+ quantum particles indistinguishable, non-interacting.
+\end_layout
+
+\begin_layout Standard
+Let's assume that we're dealing with bosons, this, we know that the wave
+ function must be symmetric.
+\end_layout
+
+\begin_layout Standard
+On the contrary, if we're dealing with fermions, then, we know that the
+ wave function must be antisymetric.
+\end_layout
+
+\begin_layout Standard
+Occupancy number of a particular orbital: 
+\begin_inset Formula $f_{s}\left(E_{s},T,\mu\right)$
+\end_inset
+
+, and in the classical limit 
+\begin_inset Formula $f\ll1$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+f\text{=}\left\langle n\right\rangle =k_{B}T\frac{\partial}{\partial\mu}\left(\ln\mathcal{Z}\right)=k_{B}T\frac{1}{\mathcal{Z}}\frac{\partial\mathcal{Z}}{\partial\mu}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's start with fermions: the only possible values are 
+\begin_inset Formula $0,1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Fermi Dirac Distribution
+\series default
+
+\begin_inset Formula 
+\[
+f_{s}=\frac{1}{\exp\left(\beta\left(E_{s}-\mu\right)\right)+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Fermi Energy:
+\series default
+ let's consider 
+\begin_inset Formula $T=0$
+\end_inset
+
+
+\series bold
+ 
+\series default
+and 
+\begin_inset Formula $\mu\left(T=0\right)$
+\end_inset
+
+
+\series bold
+ 
+\begin_inset Formula 
+\[
+E_{n}=\frac{\hbar^{2}\pi^{2}}{2mL^{2}}n^{2},
+\]
+
+\end_inset
+
+
+\series default
+for some 
+\begin_inset Formula $n_{max}$
+\end_inset
+
+ corresponding to the Fermi energy, and from this we have that 
+\begin_inset Formula 
+\[
+N=2\frac{1}{8}\frac{4\pi}{3}n_{max}^{3}\implies n_{max}^{3}=\frac{3}{\pi}N,
+\]
+
+\end_inset
+
+and from this 
+\begin_inset Formula 
+\[
+E_{F}=\frac{\hbar^{2}}{2m}\left(3\pi n\right)^{2/3},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the number density.
+\end_layout
+
+\begin_layout Standard
+Density of States: number of orbitals with 
+\begin_inset Formula $E<E\left(n\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+N_{0}\left(n\right)=\frac{\pi}{3}n^{3},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+\frac{dN_{0}}{dn}=\pi n^{2},
+\]
+
+\end_inset
+
+but I want to know 
+\begin_inset Formula 
+\[
+\frac{dN_{0}}{dE}=\frac{dN_{0}}{dn}\frac{dn}{dE},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+n=\left(\frac{2mL^{2}}{\hbar^{2}\pi^{2}}E\right)^{1/2},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+\frac{dN_{0}}{dE}=\frac{V}{2\pi^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{\frac{3}{2}}E^{\frac{1}{2}},
+\]
+
+\end_inset
+
+and from this we can write 
+\begin_inset Formula 
+\[
+D\left(E\right)=\frac{3}{2}\left(\frac{N}{E_{F}}\right)\left(\frac{E}{E_{F}}\right)^{\frac{1}{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

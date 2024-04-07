@@ -1,0 +1,1677 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+QM Assignment 4
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $N$
+\end_inset
+
+ identical spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+ particles are subjected to a one-dimensional simple harmonic oscillator
+ potential.
+ Ignore any mutual interactions between the particles.
+ What is the ground-state energy? What is the Fermi energy? What are the
+ ground-state and Fermi energies if we ignore the mutual interactions and
+ assume 
+\begin_inset Formula $N$
+\end_inset
+
+ to be very large?
+\end_layout
+
+\begin_layout Solution*
+The Hamiltonian for problem is given by 
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega x^{2}
+\]
+
+\end_inset
+
+and even more, we know that the allowed energies (eigen-energies) are given
+ by the following expression
+\begin_inset Formula 
+\[
+E_{n}=\hbar\omega\left(n+\frac{1}{2}\right),\hspace{1em}n\in\mathbb{N}\cup\left\{ 0\right\} .
+\]
+
+\end_inset
+
+From now, in order to find the ground state we have to consider two cases,
+ odd and even case, and even more, because we're thinking in non-interacting
+ spins, then we can just add the contribution of each one individually to
+ the total energy.
+ So with this in mind, let's move to the actual calculation
+\end_layout
+
+\begin_layout Solution*
+For the even case we have 
+\begin_inset Formula $N=2n$
+\end_inset
+
+, where 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, but we have to add two particles per energy level(spin up and down), thus
+ ew have 
+\begin_inset Formula 
+\begin{align*}
+E_{even} & =2\left[\frac{1}{2}\hbar\omega+\frac{3}{2}\hbar\omega+\cdots+\frac{2n+1}{2}\hbar\omega\right],\\
+ & =\hbar\omega+3\hbar\omega+\cdots+\left(2n+1\right)\hbar\omega,
+\end{align*}
+
+\end_inset
+
+and from this we have that 
+\begin_inset Formula 
+\begin{align*}
+E_{tot} & =\sum_{i=0}^{N/2}\left(2i+1\right)\hbar\omega,\\
+ & =\hbar\omega\sum_{i=0}^{N/2}\left(2i+1\right),
+\end{align*}
+
+\end_inset
+
+but we know that we change the index the sum such that we start at 
+\begin_inset Formula $1$
+\end_inset
+
+, instead of 
+\begin_inset Formula $0$
+\end_inset
+
+, and the effect will be just to shift the sum, as follows 
+\begin_inset Formula 
+\[
+\sum_{i=0}\left(2i+1\right)\rightarrow\sum_{i=1}\left(2i-1\right).
+\]
+
+\end_inset
+
+But, we know that 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\left(2i-1\right)=n^{2},
+\]
+
+\end_inset
+
+and in this case we can perform 
+\begin_inset Formula $n=N/2$
+\end_inset
+
+, and from this we have
+\begin_inset Formula 
+\[
+E_{even}=\hbar\omega\left(\frac{N}{2}\right)^{2},
+\]
+
+\end_inset
+
+then we have that
+\begin_inset Formula 
+\[
+E_{even}=\hbar\omega\frac{N^{2}}{4}.
+\]
+
+\end_inset
+
+Now, for 
+\begin_inset Formula $N$
+\end_inset
+
+ odd, we have 
+\begin_inset Formula $N=2n\prime-1$
+\end_inset
+
+, thus in this case the upper limit to the sum is 
+\begin_inset Formula $N/2-1$
+\end_inset
+
+, we have that
+\begin_inset Formula 
+\[
+E_{odd}=\sum_{i=1}^{N/2-1}\left(2i-1\right)\hbar\omega+2\left(\frac{N-1}{2}-1\right)\frac{\hbar\omega}{2},
+\]
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\begin{align*}
+E_{odd} & =\frac{\left(N-1\right)^{2}}{4}\hbar\omega+\frac{N}{2}\hbar\omega,\\
+ & =\left(\frac{N^{2}}{4}-\frac{N}{1}+\frac{1}{4}+\frac{N}{2}\right)\hbar\omega,
+\end{align*}
+
+\end_inset
+
+and from this we have that 
+\begin_inset Formula 
+\[
+E_{odd}=\frac{\left(N+1\right)^{2}}{4}\hbar\omega.
+\]
+
+\end_inset
+
+Now, let's move to the Fermi level, which we know, is defined as the highest
+ occupied level, which simply means the latest term in the sum, thus, for
+ the even case we have 
+\begin_inset Formula $n=N/2$
+\end_inset
+
+, and from this 
+\begin_inset Formula 
+\[
+E_{even}^{F}=n\hbar\omega,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies E_{even}^{F}=\frac{N\hbar\omega}{2},
+\]
+
+\end_inset
+
+now, for the odd case we have 
+\begin_inset Formula $n^{\prime}=N/2-1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{odd}^{F}=n^{\prime}\hbar\omega,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies E_{odd}^{F}=\frac{\left(N-1\right)\hbar\omega}{2}.
+\]
+
+\end_inset
+
+Now, of we consider 
+\begin_inset Formula $N$
+\end_inset
+
+ to be really large, then we have for the even case
+\begin_inset Formula 
+\[
+E_{even}=\hbar\omega\frac{N^{2}}{4},
+\]
+
+\end_inset
+
+just as before, but for the odd case we have 
+\begin_inset Formula 
+\[
+E_{odd}=\frac{\left(N+1\right)^{2}}{4}\hbar\omega\approx\hbar\omega\frac{N^{2}}{4},
+\]
+
+\end_inset
+
+therefore, for large 
+\begin_inset Formula $N$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+E_{even}=E_{odd}=\hbar\omega\frac{N^{2}}{4},
+\]
+
+\end_inset
+
+and from that we also have that the Fermi energy is given by 
+\begin_inset Formula 
+\[
+E^{F}=\frac{\hbar\omega N}{2}.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+It is obvious that two nonidentical spin 1 particles with no orbital angular
+ momenta (that is, s-states for both) can form 
+\begin_inset Formula $j=0$
+\end_inset
+
+, 
+\begin_inset Formula $j=1$
+\end_inset
+
+, and 
+\begin_inset Formula $j=2$
+\end_inset
+
+.
+ Suppose, however, that the two particles are identical.
+ What restrictions do we get?
+\end_layout
+
+\begin_layout Solution*
+Using the a Clebsh-Gordon table, we can obtain the following coefficients
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|-1\right\rangle \left|-1\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sqrt{2}}\left|0,-1\right\rangle -\frac{1}{\sqrt{2}}\left|-1,0\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sqrt{2}}\left|0,-1\right\rangle +\frac{1}{\sqrt{2}}\left|-1,0\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sqrt{2}}\left|1,-1\right\rangle -\frac{1}{\sqrt{2}}\left|-1,1\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sqrt{6}}\left|1,-1\right\rangle +\sqrt{\frac{2}{3}}\left|0,0\right\rangle +\frac{1}{\sqrt{6}}\left|-1,1\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sqrt{2}}\left|1,0\right\rangle -\frac{1}{\sqrt{2}}\left|0,1\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sqrt{2}}\left|1,0\right\rangle +\frac{1}{\sqrt{2}}\left|0,1\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|1,1\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ And we also have to consider 
+\begin_inset Formula $\left|j=0\right\rangle =\frac{1}{\sqrt{3}}\left|1,-1\right\rangle -\frac{1}{\sqrt{3}}\left|0,0\right\rangle +\frac{1}{\sqrt{3}}\left|-1,1\right\rangle $
+\end_inset
+
+.
+ Now, with this in mind, we know that particles with spin in the integers
+ must obey Bose statistics, and in this statistics the wave function must
+ be symmetric.
+ On the other hand, for a full description, we also need to take into account
+ the orbital angular momentum, but in this case we don't have to worry about
+ that, thus, if follows that the whole state must be symmetric under the
+ interchange 
+\begin_inset Formula 
+\[
+m_{1}\leftrightarrow m_{2},
+\]
+
+\end_inset
+
+and it follows that this is indeed the case for 
+\begin_inset Formula $j=2$
+\end_inset
+
+ and 
+\begin_inset Formula $j=0$
+\end_inset
+
+, but, on the other hand, it turns out that those states are antisymmetric
+ for 
+\begin_inset Formula $j=0$
+\end_inset
+
+, therefore, it follows that two identical spin-one particles can only form
+ s-states with 
+\begin_inset Formula $j=0$
+\end_inset
+
+ or 
+\begin_inset Formula $j=2$
+\end_inset
+
+.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Discuss what would happen to the energy levels of a helium atom if the electron
+ were a spinless boson.
+ Be as quantitative as you can.
+\end_layout
+
+\begin_layout Solution*
+If the electron were a spinless boson in a helium atom, several key aspects
+ of its behavior are going to change, in particular: 
+\end_layout
+
+\begin_layout Itemize
+Because of the Pauli Exclusion Principle we know that no two fermions can
+ occupy the same quantum state simultaneously, however, bosons, being subject
+ to Bose-Einstein statistics, do not follow this principle.
+ Therefore, if the electron were a spinless boson, multiple electrons could
+ occupy the same quantum state, which will lead us to significant changes
+ in the energy levels of the atom.Ground State Energy**: The ground state
+ energy of the helium atom would decrease because multiple electrons could
+ occupy the same energy level without violating the Pauli Exclusion Principle.
+ This would lead to a more stable ground state for the atom.
+\end_layout
+
+\begin_layout Itemize
+On the other hand the exited states are also going to change: the degeneracy
+ of energy levels would increase since multiple electrons could occupy the
+ same state, leading to changes in the overall energy spectrum of the atom.
+\end_layout
+
+\begin_layout Itemize
+The binding energy of the electrons in the atom is also going to change,
+ and this is due to the altered energy levels.
+ The effective interaction between the electrons and the nucleus would be
+ modified, influencing the overall stability of the atom.
+\end_layout
+
+\begin_layout Itemize
+Finally; trying to be a little more quantitative, because of the fact that
+ now, those particles do not follow the Pauli Exclusion principle, and we're
+ considering the electron as a boson, we know that for bosons, the wave
+ function must be symmetric, which means that 
+\begin_inset Formula 
+\[
+\psi\left(x_{1},x_{2}\right)=\frac{1}{\sqrt{2}}\left(\psi_{a}\left(x_{1}\right)\psi_{b}\left(x_{2}\right)+\psi_{b}\left(x_{1}\right)\psi_{a}\left(x_{2}\right)\right),\hspace{1em}a\neq b,
+\]
+
+\end_inset
+
+and if 
+\begin_inset Formula $a=b$
+\end_inset
+
+, but this implies that 
+\begin_inset Formula 
+\[
+\psi\left(x_{1},x_{2}\right)=\psi_{a}\left(x_{1}\right)\psi_{b}\left(x_{2}\right),
+\]
+
+\end_inset
+
+then, we will have only singlet para-helium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Three spin 0 particles are situated at the corners of an equilateral triangle.
+ Let us define the z-axis to go through the center and in the direction
+ normal to the plane of the triangle.
+ The whole system is free to rotate about the z-axis.
+ Using statistics considerations, obtain restrictions on the magnetic quantum
+ numbers corresponding to 
+\begin_inset Formula $J_{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+We know that the rotation operator about the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis is given by 
+\begin_inset Formula 
+\[
+\mathcal{D}\left(z,\phi\right)=\exp\left(-\frac{i}{\hbar}J_{z}\phi\right).
+\]
+
+\end_inset
+
+Now, if we take into consideration that the particles are identical, we
+ have that a rotation about 
+\begin_inset Formula $2\pi/3$
+\end_inset
+
+ let the system invariant, which means that exist 
+\begin_inset Formula $a\in\mathbb{C}$
+\end_inset
+
+, such that 
+\begin_inset Formula 
+\begin{align*}
+\mathcal{D}\left(-\frac{i}{\hbar}J_{z}\left(\frac{2\pi}{3}\right)\right)\left|\alpha\right\rangle  & =a\left|\alpha\right\rangle ,\\
+\exp\left(-\frac{2\pi i}{3\hbar}J_{z}\right)\left|\alpha\right\rangle  & =a\left|\alpha\right\rangle ,
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+ is the state corresponding to the triangle configuration.
+ Now, let's look a the effect or the parity operator over the triangle state,
+ we can see that 
+\begin_inset Formula 
+\[
+P_{23}P_{12}=1,
+\]
+
+\end_inset
+
+which expressed in other words means that the a double permutation is an
+ element of the group's symetries of the system.
+ Now, taking into account the fact that the particles are spin 0, we have
+ that 
+\begin_inset Formula 
+\[
+P_{ij}\left|\alpha\right\rangle =+\left|\alpha\right\rangle ,
+\]
+
+\end_inset
+
+this is 
+\begin_inset Formula $a=1$
+\end_inset
+
+, and from this, we have that 
+\begin_inset Formula 
+\[
+\exp\left(-\frac{2\pi i}{3\hbar}J_{z}\right)\left|\alpha\right\rangle =\left|\alpha\right\rangle ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\exp\left(-\frac{2\pi i}{3\hbar}J_{z}\right)=1,
+\]
+
+\end_inset
+
+and the above equality holds whenever 
+\begin_inset Formula 
+\[
+m=0,\pm3,\pm6,\dots
+\]
+
+\end_inset
+
+and so on.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider three weakly interacting, identical spin 1 particles.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose the space part of the state vector is known to be symmetric under
+ interchange of any pair.
+ Using notation 
+\begin_inset Formula $\left|+\right\rangle \left|0\right\rangle \left|+\right\rangle $
+\end_inset
+
+ for particle 1 in 
+\begin_inset Formula $m_{s}=+1$
+\end_inset
+
+, particle 2 in 
+\begin_inset Formula $m_{s}=0$
+\end_inset
+
+, particle 3 in 
+\begin_inset Formula $m_{s}=+1$
+\end_inset
+
+, and so on, construct the normalized spin states in the following three
+ cases.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+All three of them in 
+\begin_inset Formula $\left|+\right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Two of them in 
+\begin_inset Formula $\left|+\right\rangle $
+\end_inset
+
+, one in 
+\begin_inset Formula $\left|0\right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+All three in different spin states.
+ What is the total spin in each case?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Attempt to do the same problem when the space part is antisymmetric under
+ interchange of any pair.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Let's start with the symmetric case, for a), the state we're looking for
+ is given by 
+\begin_inset Formula 
+\[
+\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,
+\]
+
+\end_inset
+
+and in order to prove that, let's see the that
+\begin_inset Formula 
+\begin{align*}
+S_{z}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle  & =\left(S_{1_{z}}+S_{2_{z}}+S_{3_{z}}\right)\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,\\
+ & =3\hbar\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,
+\end{align*}
+
+\end_inset
+
+and, on the other hand
+\begin_inset Formula 
+\begin{align*}
+\mathbf{S}^{2} & =(S_{1}^{2}+S_{2}^{2}+S_{3}^{2})+2\left(S_{1_{z}}S_{2_{z}}+S_{1_{z}}S_{3_{z}}+S_{2_{z}}S_{3_{z}}\right)+S_{1_{+}}S_{2_{-}}+S_{1_{+}}S_{3_{-}}+S_{2_{+}}S_{3_{-}}\\
+ & +S_{1_{-}}S_{2_{+}}+S_{1_{-}}S_{3_{+}}+S_{2_{-}}S_{3_{+}},
+\end{align*}
+
+\end_inset
+
+and from this we can compute
+\begin_inset Formula 
+\[
+\mathbf{S}^{2}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,
+\]
+
+\end_inset
+
+but we can see that only the first two terms in the parenthesis contribute,
+ and this implies that 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{S}^{2}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle  & =\left[(S_{1}^{2}+S_{2}^{2}+S_{3}^{2})+2\left(S_{1_{z}}S_{2_{z}}+S_{1_{z}}S_{3_{z}}+S_{2_{z}}S_{3_{z}}\right)\right]\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,\\
+ & =\left[2+2+2+2+2+2\right]\hbar^{2}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,\\
+ & =12\hbar^{2}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,\\
+ & =3\left(3+1\right)\hbar^{2}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Now, for b) we have that the state is given by 
+\begin_inset Formula 
+\[
+\left|\beta\right\rangle =\frac{1}{\sqrt{3}}\left[\left|0\right\rangle \left|+\right\rangle \left|+\right\rangle +\left|+\right\rangle \left|0\right\rangle \left|+\right\rangle +\left|+\right\rangle \left|+\right\rangle \left|0\right\rangle \right],
+\]
+
+\end_inset
+
+and from this we can compute, as in the previous case 
+\begin_inset Formula 
+\begin{align*}
+S_{z}\left|\beta\right\rangle  & =\left(S_{1_{z}}+S_{2_{z}}+S_{3_{z}}\right)\frac{1}{\sqrt{3}}\left[\left|0\right\rangle \left|+\right\rangle \left|+\right\rangle +\left|+\right\rangle \left|0\right\rangle \left|+\right\rangle +\left|+\right\rangle \left|+\right\rangle \left|0\right\rangle \right],\\
+ & =2\hbar\left|\beta\right\rangle ,
+\end{align*}
+
+\end_inset
+
+and even more, we can reach this state from 
+\begin_inset Formula 
+\[
+S_{-}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle =\left(S_{1_{-}}+S_{2_{-}}+S_{3_{-}}\right)\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,
+\]
+
+\end_inset
+
+ which also implies that 
+\begin_inset Formula $m=2$
+\end_inset
+
+.
+ And even more, with this information at hand, we have the following: because
+ 
+\begin_inset Formula $S_{-}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{S}^{2}$
+\end_inset
+
+ commute, we have that 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{S}^{2}\left|\beta\right\rangle  & \propto\mathbf{S}^{2}S_{-}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,\\
+ & =S_{-}\mathbf{S}^{2}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,\\
+ & =12\hbar^{2}S_{-}\left|+\right\rangle \left|+\right\rangle \left|+\right\rangle ,
+\end{align*}
+
+\end_inset
+
+which implies that 
+\begin_inset Formula $j=3$
+\end_inset
+
+ and 
+\begin_inset Formula $m=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Now, for c) we have the following
+\begin_inset Formula 
+\[
+\left|\gamma\right\rangle =\frac{1}{\sqrt{6}}\left[\left|+\right\rangle \left|0\right\rangle \left|-\right\rangle +\left|-\right\rangle \left|+\right\rangle \left|0\right\rangle +\left|0\right\rangle \left|-\right\rangle \left|+\right\rangle +\left|0\right\rangle \left|+\right\rangle \left|-\right\rangle +\left|-\right\rangle \left|0\right\rangle \left|+\right\rangle +\left|+\right\rangle \left|-\right\rangle \left|0\right\rangle \right],
+\]
+
+\end_inset
+
+and from this it follows that
+\begin_inset Formula 
+\[
+S_{z}\left|\gamma\right\rangle =0,
+\]
+
+\end_inset
+
+but if we compute 
+\begin_inset Formula $\mathbf{S}^{2}\left|\gamma\right\rangle $
+\end_inset
+
+, then then we are going to find components where all three particles were
+ not in different states, which implies that this is not an eigenstate of
+ 
+\begin_inset Formula $\mathbf{S}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Now, let's move on to the antisymmetric case, and for the analog of 
+\series bold
+a)
+\series default
+ we have that this case is not possible, and this is due to the fact that
+ for any component with two spins the same will remain the same under particle
+ interchange, and we need the overall sign to change, and this is also true
+ for the 
+\series bold
+b)
+\series default
+ case, thus, we have that the only possible state is given by 
+\begin_inset Formula 
+\[
+\left|\delta\right\rangle =\frac{1}{\sqrt{6}}\left[\left|+\right\rangle \left|0\right\rangle \left|-\right\rangle +\left|-\right\rangle \left|+\right\rangle \left|0\right\rangle +\left|0\right\rangle \left|-\right\rangle \left|+\right\rangle -\left|0\right\rangle \left|+\right\rangle \left|-\right\rangle -\left|-\right\rangle \left|0\right\rangle \left|+\right\rangle -\left|+\right\rangle \left|-\right\rangle \left|0\right\rangle \right],
+\]
+
+\end_inset
+
+and again, as in the case for 
+\begin_inset Formula $\left|\gamma\right\rangle $
+\end_inset
+
+ we can see that 
+\begin_inset Formula $S_{z}\left|\delta\right\rangle =0$
+\end_inset
+
+, and now let's work with the operator 
+\begin_inset Formula $\mathbf{S}^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{1}^{2}\left|\delta\right\rangle =S_{2}^{2}\left|\delta\right\rangle =S_{3}^{2}\left|\delta\right\rangle =2\hbar^{2}\left|\delta\right\rangle ,
+\]
+
+\end_inset
+
+and also 
+\begin_inset Formula 
+\[
+S_{1_{z}}S_{2_{z}}\left|\delta\right\rangle =\frac{1}{\sqrt{6}}\hbar^{2}\left[-\left|-\right\rangle \left|+\right\rangle \left|0\right\rangle +\left|+\right\rangle \left|-\right\rangle \left|0\right\rangle \right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left[S_{1_{z}}S_{2_{z}}+S_{1_{z}}S_{3_{z}}+S_{2_{z}}S_{3_{z}}\right]\left|\delta\right\rangle =-\hbar^{2}\left|\delta\right\rangle ,
+\]
+
+\end_inset
+
+and we also have that the combination of 
+\begin_inset Formula $S_{i\pm}S_{j\mp}$
+\end_inset
+
+ gives us a contribution of 
+\begin_inset Formula $-4\hbar^{2}$
+\end_inset
+
+, and from this we have that 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{S}^{2}\left|\delta\right\rangle  & =\left(2+2+2-2-4\right)\hbar^{2}\left|\delta\right\rangle ,\\
+ & =0,
+\end{align*}
+
+\end_inset
+
+which implies that 
+\begin_inset Formula $S=0$
+\end_inset
+
+.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(7.10)
+\series default
+ Suppose the electron were a spin 
+\begin_inset Formula $\frac{3}{2}$
+\end_inset
+
+ particle obeying Fermi–Dirac statistics.
+ Write the configuration of a hypothetical Ne (
+\begin_inset Formula $Z=10$
+\end_inset
+
+) atom made up of such “electrons” [that is, the analogue of 
+\begin_inset Formula $(1s)^{2}(2s)^{2}(2p)^{6}$
+\end_inset
+
+].
+ Show that the configuration is highly degenerate.
+ What is the ground state (the lowest term) of the hypothetical Ne atom
+ in spectroscopic notation (2S+1LJ, where S, L, and J stand for the total
+ spin, the total orbital angular momentum, and the total angular momentum,
+ respectively) when exchange splitting and spin-orbit splitting are taken
+ into account?
+\end_layout
+
+\begin_layout Solution*
+In general we know that the number of possible spin states is given by 
+\begin_inset Formula $2s+1$
+\end_inset
+
+, now, in this case we have spin 
+\begin_inset Formula $3/2$
+\end_inset
+
+, which means that the total number of possible states is given by 
+\begin_inset Formula 
+\[
+2\left(\frac{3}{2}\right)+1=4,
+\]
+
+\end_inset
+
+which implies that in the configuration 
+\begin_inset Formula $(1s)^{2}(2s)^{2}(2p)^{6}$
+\end_inset
+
+, each one of the 
+\begin_inset Formula $2p$
+\end_inset
+
+ states can accommodate 
+\begin_inset Formula $4$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+electrons
+\begin_inset Quotes erd
+\end_inset
+
+, in each one of the 
+\begin_inset Formula $2l+1=3$
+\end_inset
+
+ orbital p states.
+ Now with 
+\begin_inset Formula $Z=10$
+\end_inset
+
+, we have that only two electrons are in the 
+\begin_inset Formula $2p$
+\end_inset
+
+ state, then it follows that the degeneracy is given by 
+\begin_inset Formula 
+\begin{align*}
+\left(\begin{array}{c}
+12\\
+2
+\end{array}\right) & =\frac{12!}{\left(12-2\right)!2!},\\
+ & =\frac{12!}{10!2!},\\
+ & =\frac{12\times11}{2},\\
+ & =66.
+\end{align*}
+
+\end_inset
+
+Now, we know that the ground state should have spin states in such a way
+ that those state are as symmetric as possible, and spacial states as antisymmet
+ric as possible, but the only antisymmetric spacial state are the 
+\begin_inset Formula $p$
+\end_inset
+
+-wave state, which is given by 
+\begin_inset Formula $l_{1}=l_{2}=l$
+\end_inset
+
+, with a total angular momentum given by 
+\begin_inset Formula $L=1$
+\end_inset
+
+, and even more, the total spin will be given by 
+\begin_inset Formula $S=3/2+3/2=3$
+\end_inset
+
+, which is a spin 7-plet.
+ On the other hand, for both 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{S}$
+\end_inset
+
+, we have that those states should be as antiparallel as possible, which
+ implies that 
+\begin_inset Formula $J=2$
+\end_inset
+
+, thus the ground state will be given by 
+\begin_inset Formula 
+\[
+^{7}P_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(7.11)
+\series default
+ Two identical spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+ fermions move in one dimension under the influence of the infinite-wall
+ potential 
+\begin_inset Formula $V=∞$
+\end_inset
+
+ for 
+\begin_inset Formula $x<0$
+\end_inset
+
+, 
+\begin_inset Formula $x>L$
+\end_inset
+
+, and 
+\begin_inset Formula $V=0$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq x\leq L$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write the ground-state wave function and the ground-state energy when the
+ two particles are constrained to a triplet spin state (ortho state).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Repeat (1) when they are in a singlet spin state (para state).
+\end_layout
+
+\begin_layout Enumerate
+Let us now suppose that the two particles interact mutually via a very short
+ range attractive potential that can be approximated by 
+\begin_inset Formula 
+\[
+V=−\lambda\delta\left(x_{1}-x_{2}\right),\hspace{1em}λ>0.
+\]
+
+\end_inset
+
+Assuming that perturbation theory is valid even with such a singular potential,
+ discuss semiquantitatively what happens to the energy levels obtained in
+ (1) and (2).
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+The Hamiltonian for the whole system is given by 
+\begin_inset Formula 
+\[
+H=\frac{p_{1}^{2}}{2m}+\frac{p_{2}^{2}}{2m}+V,
+\]
+
+\end_inset
+
+and we know that if we just consider one particle, the eigen-functions for
+ this problem are given by 
+\begin_inset Formula 
+\[
+\psi_{n}\left(x\right)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi x}{L}\right),
+\]
+
+\end_inset
+
+with eigen-energies given by 
+\begin_inset Formula 
+\[
+E_{n}=\frac{n^{2}\pi^{2}\hbar^{2}}{2mL^{2}},
+\]
+
+\end_inset
+
+therefore, we propose solutions of the form
+\begin_inset Formula 
+\[
+\psi_{n}\left(x_{1},x_{2}\right)=\psi_{1}\left(x_{1}\right)\psi_{2}\left(x_{2}\right)
+\]
+
+\end_inset
+
+Now, the ground state function when the two particles are in a ortho state,
+ has its spin symmetric, then, it follows that the 
+\series bold
+spatial state
+\series default
+ should be antisymmetric, this is 
+\begin_inset Formula 
+\[
+\psi_{0}\left(x_{1},x_{2}\right)_{ortho}=\frac{1}{\sqrt{2}}\left[\psi_{1}\left(x_{1}\right)\psi_{2}\left(x_{2}\right)-\psi\left(x_{2}\right)\psi\left(x_{1}\right)\right],
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\begin{align*}
+H\psi_{0}\left(x_{1},x_{2}\right)_{ortho} & =\left[\frac{\pi^{2}\hbar^{2}}{2mL^{2}}+\frac{4\pi\hbar^{2}}{2mL^{2}}\right]\psi_{0}\left(x_{1},x_{2}\right)_{ortho},\\
+ & =\frac{5\pi\hbar^{2}}{2mL^{2}}\psi_{0}\left(x_{1},x_{2}\right).
+\end{align*}
+
+\end_inset
+
+Now, moving on, for the para state, we have that the spatial part is symmetric,
+ which in this case, implies that 
+\begin_inset Formula 
+\[
+\psi_{0}\left(x_{1},x_{2}\right)_{para}=\psi_{1}\left(x_{1}\right)\psi_{1}\left(x_{2}\right),
+\]
+
+\end_inset
+
+which again, 
+\begin_inset Formula 
+\begin{align*}
+H\psi_{0}\left(x_{1},x_{2}\right)_{para} & =\left[\frac{\pi^{2}\hbar^{2}}{2mL^{2}}+\frac{\pi\hbar^{2}}{2mL^{2}}\right]\psi_{0}\left(x_{1},x_{2}\right)_{para},\\
+ & =\frac{\pi\hbar^{2}}{mL^{2}}\psi_{0}\left(x_{1},x_{2}\right)_{para}.
+\end{align*}
+
+\end_inset
+
+And finally, if we change to the given potential, and if we assume that
+ the we can use approximation methods, in particular, perturbation theory,
+ we have that we can compute the perturbation in the energy to first order
+ as follows 
+\begin_inset Formula 
+\begin{align*}
+\Delta E & =\left\langle \psi_{0}\left(x_{1},x_{2}\right)\right|V\left|\psi_{0}\left(x_{1},x_{2}\right)\right\rangle ,\\
+ & =\int dx_{1}\int dx_{2}\psi_{0}\left(x_{1},x_{2}\right)V\psi_{0}\left(x_{1},x_{2}\right),\\
+ & =−\lambda\int dx_{1}\int dx_{2}\psi_{0}\left(x_{1},x_{2}\right)\delta\left(x_{1}-x_{2}\right)\psi_{0}\left(x_{1},x_{2}\right),\\
+ & =−\lambda\int dx_{1}\psi_{0}\left(x_{1},x_{1}\right)\psi_{0}\left(x_{1},x_{1}\right),
+\end{align*}
+
+\end_inset
+
+and if we drop the sub-index, we have 
+\begin_inset Formula 
+\[
+\Delta E=−\lambda\int dx\psi_{0}^{2}\left(x\right).
+\]
+
+\end_inset
+
+Now, with this at hand, for the ortho state, given the fact that the spatial
+ wave function is antisymmetric, this enforces the two particles to never
+ be at the same place, which implies that 
+\begin_inset Formula 
+\[
+\Delta E=0,
+\]
+
+\end_inset
+
+i.e., the particles doesn't feel the effect of the delta potential.
+ On the other hand, for the para state, we have that 
+\begin_inset Formula 
+\begin{align*}
+\Delta E & =−\lambda\int_{0}^{L}dx\left[\left(\frac{2}{L}\right)\sin^{2}\left(\frac{n\pi x}{L}\right)\right]^{2},\\
+ & =−\lambda\left(\frac{2}{L}\right)^{2}\int_{0}^{L}dx\sin^{4}\left(\frac{n\pi x}{L}\right)^{2},\\
+ & =−\lambda\left(\frac{2}{L}\right)^{2}\left(\frac{3L}{8}\right),
+\end{align*}
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\[
+\Delta E=-\frac{3\lambda}{2L}.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Mann-5)
+\series default
+ A deuterium molecule (D2) is comprised of two identical spin-
+\begin_inset Formula $1$
+\end_inset
+
+ nuclei (each is a neutron-proton bound state) plus two electrons.
+ Suppose 1) the two-electron subsystem is in a 2S+1 LJ = 1 S 0 configuration,
+ 2) the nuclear subsystem is also s-wave, and 3) the total spin for the
+ entire molecule is J = 2.
+ A beam of such molecules is passed through a Stern-Gerlach apparatus with
+ the gradient B-field oriented along a z-axis.
+ Specify the total number, the form, and the exchange symmetry of the states
+ of the nuclear subsystem that are thereby resolved.
+\end_layout
+
+\begin_layout Solution*
+Given the fact that the total spin for the entire molecule is 
+\begin_inset Formula $J=2$
+\end_inset
+
+, and the two-electron subsystem is in a singlet 
+\begin_inset Formula $2S+1LJ=1S0$
+\end_inset
+
+ configuration, then it follows that the total spin 
+\begin_inset Formula $J$
+\end_inset
+
+ of the molecule is contributed solely by the nuclear subsystem.
+\end_layout
+
+\begin_layout Solution*
+For two spin-1 nuclei, the possible values of the total spin 
+\begin_inset Formula $J$
+\end_inset
+
+ can be 0, 1, or 2.
+ Since J = 2, we conclude that the nuclear subsystem has 
+\begin_inset Formula $J=2$
+\end_inset
+
+.
+ Now, we know that the Stern-Gerlach apparatus resolves the projection of
+ the total angular momentum 
+\begin_inset Formula $J$
+\end_inset
+
+ along the z-axis, this is 
+\begin_inset Formula $J_{z}$
+\end_inset
+
+ , and this as we know very well can can take values from 
+\begin_inset Formula $-J$
+\end_inset
+
+ to 
+\begin_inset Formula $J$
+\end_inset
+
+ in integer steps.
+ And for this, if we move to the system with 
+\begin_inset Formula $J=2$
+\end_inset
+
+, the possible values of 
+\begin_inset Formula $J_{z}$
+\end_inset
+
+ are 
+\begin_inset Formula $\left\{ -2,-1,0,1,2\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+With all this in mind, now, let's consider the exchange symmetry of the
+ states.
+ Since the two nuclei are identical particles (spin-1 nuclei), then, it
+ follows that their wave function must be symmetric under particle exchange,
+ and this is due to the symmetric nuclear wave function (s-wave).
+ But this implies that the nuclear wave function must be symmetric under
+ particle exchange, which also implies that we're just going yo have integer
+ values of 
+\begin_inset Formula $J$
+\end_inset
+
+.
+ And from this, it follows that the resolved states of the nuclear subsystem
+ are those with 
+\begin_inset Formula $J=2$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{z}=\left\{ -2,-1,0,1,2\right\} $
+\end_inset
+
+, and they have exchange symmetry that corresponds to even values of 
+\begin_inset Formula $J$
+\end_inset
+
+.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(Mann-6)
+\series default
+: Let 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ be two operators for which the respective inverse operators 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ , 
+\begin_inset Formula $B^{-1}$
+\end_inset
+
+ are defined.
+ Prove the identities 
+\begin_inset Formula 
+\[
+A^{-1}–B^{-1}=(A^{-1})(B–A)(B^{-1})=(B^{-1})(B–A)(A^{-1}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be operators such that the inverses are defined and exists, then it follows
+ that 
+\begin_inset Formula 
+\[
+A^{-1}-B^{-1}=A^{-1}\left(1\right)-\left(1\right)B^{-1},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+ means the identity operator, hence 
+\begin_inset Formula 
+\begin{align*}
+A^{-1}-B^{-1} & =A^{-1}\left(1\right)-\left(1\right)B^{-1},\\
+ & =A^{-1}\left(BB^{-1}\right)-\left(A^{-1}A\right)B^{-1},\\
+ & =A^{-1}\left(BB^{-1}-AB^{-1}\right),\\
+ & =A^{-1}\left(B-A\right)B^{-1},
+\end{align*}
+
+\end_inset
+
+thus, it follows that 
+\begin_inset Formula 
+\[
+A^{-1}-B^{-1}=A^{-1}\left(B-A\right)B^{-1},
+\]
+
+\end_inset
+
+just as we wanted.
+ Now for the other identity we're going to use the same trick (multiply
+ by a 
+\begin_inset Quotes eld
+\end_inset
+
+smart
+\begin_inset Quotes erd
+\end_inset
+
+ unity), thus 
+\begin_inset Formula 
+\begin{align*}
+A^{-1}-B^{-1} & =\left(1\right)A^{-1}-B^{-1}\left(1\right),\\
+ & =\left(B^{-1}B\right)A^{-1}-B^{-1}\left(AA^{-1}\right),\\
+ & =B^{-1}\left(BA^{-1}-AA^{-1}\right),\\
+ & =B^{-1}\left(B-A\right)A^{-1},
+\end{align*}
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\[
+A^{-1}-B^{-1}=B^{-1}\left(B-A\right)A^{-1},
+\]
+
+\end_inset
+
+just as we wanted, and that completes the proof.
+\end_layout
+
+\end_body
+\end_document

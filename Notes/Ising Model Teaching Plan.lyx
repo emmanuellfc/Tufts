@@ -1,0 +1,222 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ising Model: Preliminary Plan
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores & Zahra Bayat
+\end_layout
+
+\begin_layout Date
+April 6th, 2024.
+\end_layout
+
+\begin_layout Standard
+The plan of this design is to cover a 75-minute class on the Ising model,
+ and we plan to cover fundamental concepts, examples, and encouraging interactiv
+e discussions.
+ The following is an skeleton of the class, we're still working on the actual
+ notes for the class nd also the 
+\begin_inset Quotes eld
+\end_inset
+
+problem set
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Goals (Primary Ideas)
+\end_layout
+
+\begin_layout Enumerate
+Get the Basics of the Ising Model: By the end of the class, you should understan
+d what the Ising model is all about—how it represents spins on a grid, the
+ interactions between them, and why it's a big deal in statistical mechanics.
+ You'll see how it helps us study phase transitions and critical behavior
+ in materials.
+\end_layout
+
+\begin_layout Enumerate
+Learn to Solve Ising Model Problems: We want to provide our classmates with
+ the skills to tackle simple problems related to the Ising model.
+ This means using formulas like Hamiltonians and partition functions to
+ figure out stuff like magnetization and critical temperatures.
+\end_layout
+
+\begin_layout Enumerate
+Think Critically about the Model and Possible Generalizations: Finally,
+ we want to provide our classmates with an overview or the things that we
+ can study with the Ising Model or Spin Systems, i.e., some generalizations
+ and cool stuff that people are doing in the research community.
+\end_layout
+
+\begin_layout Subsection*
+Outline of the topics and class Structure:
+\end_layout
+
+\begin_layout Enumerate
+Introduction to Statistical Mechanics (10 minutes)** - Briefly review the
+ principles of statistical mechanics relevant to the Ising model.
+ - We want to discuss the importance of models in understanding physical
+ systems, with an special emphasis on the fact that the model is designed
+ to capture some specific phenomena, and sometimes a full description of
+ the system under study is not possible, at least not with just one framework.
+ - Introduce the Ising model as a key model in statistical mechanics.
+\end_layout
+
+\begin_layout Enumerate
+Ising Model Basics (15 minutes)** - Define the Ising model and its historical
+ significance: in a "pictorial" way - Define the Hamiltonian of the Ising
+ model.
+ - Discuss the basic elements: lattice, spins, nearest-neighbor interactions.
+\end_layout
+
+\begin_layout Enumerate
+One-Dimensional Ising Model (15 minutes)** - Explore the one-dimensional
+ Ising model as a starting example.
+ - Show how to write the Hamiltonian and calculate partition function/Z.
+ - Discuss analytical and numerical solutions for simple cases.
+\end_layout
+
+\begin_layout Enumerate
+Two-Dimensional Ising Model (15 minutes)** - Extend to the two-dimensional
+ Ising model.
+ - Introduce concepts like phase transitions and critical phenomena.
+ - Discuss the role of Monte Carlo simulations and mean-field theory: the
+ objective of this point is to show several kinds of approximations that
+ one can make in order to find a "solution".
+\end_layout
+
+\begin_layout Enumerate
+Discussion and Q&A (10 minutes)** - Open the floor for questions and discussion.
+ - Try to engage the discussion in such a way that we can incorporate concepts
+ of other areas of physics.
+ - Address any confusion or delve deeper into specific topics based on interest.
+\end_layout
+
+\begin_layout Enumerate
+Assignment (10 minutes)** - Provide an assignment related to the Ising model.
+ - Emphasize applying concepts learned in class to solve a specific problem.
+ - Specify the deadline and any resources or guidance available.
+\end_layout
+
+\begin_layout Subsection*
+Teaching Methodology:
+\end_layout
+
+\begin_layout Itemize
+We want to use diagrams and graphs through the class.
+ - In the derivations we want to ask question as: "ok, what could be the
+ next step?".
+ - We plan to theoretical concepts to real-world applications (e.g., magnetism,
+ phase transitions).
+ - Emphasize problem-solving techniques and computational methods.
+\end_layout
+
+\begin_layout Subsection*
+Assignment:
+\end_layout
+
+\begin_layout Itemize
+For this part we're still deciding on a good problem that captures a good
+ amount the theory presented, but we have some ideas, such as: - Analyzing
+ a specific Ising model configuration.
+ - Calculating critical temperatures or magnetization.
+ 
+\end_layout
+
+\end_body
+\end_document
