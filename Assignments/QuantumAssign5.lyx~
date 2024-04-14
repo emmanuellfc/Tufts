@@ -1,0 +1,1655 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Theory: Assignment 5
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores Calderon
+\end_layout
+
+\begin_layout Date
+Apr 12, 2024.
+\end_layout
+
+\begin_layout Problem
+A simple harmonic oscillator (in one dimension) is subjected to a perturbation
+\begin_inset Formula 
+\[
+H_{1}=bx,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $b$
+\end_inset
+
+ is a real constant.
+ a.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate the energy shift of the ground state to lowest non-vanishing order.
+\end_layout
+
+\begin_layout Enumerate
+Solve this problem exactly and compare with your result obtained in (1).
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+As we know, with perturbation theory, we're interested in solving a given
+ problem in an approximate way, and we divide the Hamiltonian into an 
+\begin_inset Quotes eld
+\end_inset
+
+exact
+\begin_inset Quotes erd
+\end_inset
+
+ part and a 
+\begin_inset Quotes eld
+\end_inset
+
+perturbed
+\begin_inset Quotes erd
+\end_inset
+
+ part, where the exact part refers to Hamiltonian for which we can solve
+ analytically this is: we known the eigenfunctions and the energy spectrum,
+ in math 
+\begin_inset Quotes eld
+\end_inset
+
+language
+\begin_inset Quotes erd
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+H=H_{0}+V,
+\]
+
+\end_inset
+
+or more specifically 
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2}+bx
+\]
+
+\end_inset
+
+Now, in this case the exact, or non-perturbed, Hamiltonian is given by 
+\begin_inset Formula 
+\[
+H_{0}=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}x^{2},
+\]
+
+\end_inset
+
+which eigen energies are given by 
+\begin_inset Formula 
+\[
+E_{n}=\left(n+\frac{1}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+and for the eigenkets, I know two ways of solving the problem: the algebraic
+ method for which we need to make use of the ladder operators, and using
+ wave mechanics in which the solution can be represented in terms of the
+ Hermite polynomials.
+ In this case, I'm going to make use of the algebraic method, and in particular
+ I'm going to make use of the following result of that approach, which reads
+ 
+\begin_inset Formula 
+\[
+\left\langle n^{\prime}|x|n\right\rangle =\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{n}\delta_{n^{\prime},n-1}+\sqrt{n+1}\delta_{n^{\prime},n+1}\right).
+\]
+
+\end_inset
+
+Now, having said that, we know that in perturbation theory the energy shift
+ is given by 
+\begin_inset Formula 
+\[
+\Delta_{n}=\lambda V_{nn}+\lambda^{2}\sum_{n\neq k}\frac{\left|V_{nk}\right|^{2}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}}+\dots,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+V_{nk}=\left\langle n|V|k\right\rangle 
+\]
+
+\end_inset
+
+refers to the expectation value with respect to the eigenkets of the non-perturb
+ed Hamiltonian, and now, we have set up everything for the problem.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Using perturbation theory:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+First order perturbation in the ground state, we have to compute 
+\begin_inset Formula $\left\langle 0|bx|0\right\rangle $
+\end_inset
+
+, thus
+\begin_inset Formula 
+\begin{align*}
+\left\langle 0|bx|0\right\rangle  & =b\left\langle 0|x|0\right\rangle \\
+ & =\sqrt{\frac{\hbar}{2m\omega}b}\left(\sqrt{0}\delta_{0,0-1}+\sqrt{0+1}\delta_{0,0+1}\right),\\
+ & =0,
+\end{align*}
+
+\end_inset
+
+therefore as we can see, there's no contribution, at least to first order.
+\end_layout
+
+\begin_layout Itemize
+Second order perturbation: in this case we have to compute 
+\begin_inset Formula 
+\[
+\sum_{n\neq k}\frac{\left|V_{nk}\right|^{2}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\begin{align*}
+\sum_{n\neq k}\frac{\left|V_{0k}\right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}} & =\sum_{n\neq k}\frac{\left|\left\langle k|bx|0\right\rangle \right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}},\\
+ & =\left|b\right|^{2}\sum_{n\neq k}\frac{\left|\left\langle k|x|0\right\rangle \right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}},
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\begin{align*}
+\left|\left\langle k|x|0\right\rangle \right| & =\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{0}\delta_{k,0-1}+\sqrt{0+1}\delta_{k,0+1}\right),\\
+ & =\sqrt{\frac{\hbar}{2m\omega}}\delta_{k,1},
+\end{align*}
+
+\end_inset
+
+thus
+\begin_inset Formula 
+\begin{align*}
+\sum_{n\neq k}\frac{\left|V_{nk}\right|^{2}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}} & =\left|b\right|^{2}\sum_{n\neq k}\frac{\left|\sqrt{\frac{\hbar}{2m\omega}}\delta_{k,1}\right|^{2}}{E_{0}^{\left(0\right)}-E_{k}^{\left(0\right)}},\\
+ & =\left|b\right|^{2}\frac{\left|\sqrt{\frac{\hbar}{2m\omega}}\right|^{2}}{E_{0}^{\left(0\right)}-E_{1}^{\left(0\right)}},
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+E_{0}^{\left(0\right)}-E_{1}^{\left(0\right)}=\frac{\hbar\omega}{2}-\frac{3\hbar\omega}{2}=-\hbar\omega,
+\]
+
+\end_inset
+
+then, the energy shift due to second order is given by
+\begin_inset Formula 
+\[
+\frac{-\left|b\right|^{2}}{2m\omega^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+On the other hand, we can solve the problem exactly if we do some 
+\begin_inset Quotes eld
+\end_inset
+
+transformation or coordinates
+\begin_inset Quotes erd
+\end_inset
+
+.
+ So let's go back to the potential energy, and we're playing a little bit
+ with that, we're going to complete the square 
+\begin_inset Formula 
+\[
+V\left(x\right)=\frac{m\omega^{2}}{2}\left(x^{2}+\frac{bx}{m\omega^{2}}\right)^{2}-\frac{b^{2}}{2m\omega^{2}},
+\]
+
+\end_inset
+
+ and from this, if we define 
+\begin_inset Formula 
+\[
+x^{\prime}=x+\frac{b}{m\omega^{2}},
+\]
+
+\end_inset
+
+then we recover the form of the SHO without perturbation, the only difference
+ is that the coordinates are shifted by an amount of 
+\begin_inset Formula 
+\[
+\frac{-b}{m\omega^{2}},
+\]
+
+\end_inset
+
+and from this we can see that the perturbation theory gives us the exact
+ solution.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+In non-degenerate time-independent perturbation theory, what is the probability
+ of finding in a perturbed energy eigenstate (
+\begin_inset Formula $\left|k\right\rangle $
+\end_inset
+
+) the corresponding unperturbed eigenstate (
+\begin_inset Formula $\left|k^{\left(0\right)}\right\rangle $
+\end_inset
+
+)? Solve this up to terms of order 
+\begin_inset Formula $λ^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+What we want to compute is the following probability transition 
+\begin_inset Formula 
+\[
+\frac{\left|\left\langle n^{(0)}|n\right\rangle \right|}{\left\langle n|n\right\rangle },
+\]
+
+\end_inset
+
+up to first order in 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, the problem ask for second order, but we have to keep in mind that we're
+ going to compute some inner product, and thus, we only need the expansion
+ up to first order.
+ But first we need to normalize the kets 
+\begin_inset Formula $\left|n\right\rangle $
+\end_inset
+
+, so let's get down to business: we found that 
+\begin_inset Formula $\left|n\right\rangle $
+\end_inset
+
+ up to first order is given by 
+\begin_inset Formula 
+\[
+\left|n\right\rangle =\left|n^{(0)}\right\rangle +\lambda\sum_{n\neq k}\left|k^{(0)}\right\rangle \frac{V_{nk}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}},
+\]
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\begin{align*}
+\left\langle n|n\right\rangle  & =\left[\left\langle n^{(0)}\right|+\lambda\sum_{n\neq k}\left\langle k^{(0)}\right|\frac{V_{kn}^{*}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}}\right]\left[\left|n^{(0)}\right\rangle +\lambda\sum_{l\neq n}\left|l^{(0)}\right\rangle \frac{V_{ln}}{E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}}\right],\\
+ & =\left[\left\langle n^{(0)}|n^{(0)}\right\rangle +\lambda^{2}\sum_{n\neq k}\sum_{l\neq k}\left\langle k^{(0)}|l^{(0)}\right\rangle \frac{V_{kn}^{*}V_{ln}}{\left(E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}\right)\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)},\right]
+\end{align*}
+
+\end_inset
+
+but the eigenkets 
+\begin_inset Formula $\left|n^{(0)}\right\rangle $
+\end_inset
+
+ are orthogonal by assumption, thus 
+\begin_inset Formula 
+\[
+\left\langle n|n\right\rangle =1+\lambda^{2}\sum_{n\neq k}\sum_{l\neq k}\delta_{kl}\frac{V_{kn}^{*}V_{ln}}{\left(E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}\right)\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)},
+\]
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\[
+\left\langle n|n\right\rangle =1+\lambda^{2}\sum_{n\neq k}\frac{\left|V_{ln}\right|^{2}}{\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)^{2}},
+\]
+
+\end_inset
+
+therefore, we have
+\begin_inset Formula 
+\[
+\frac{\left|\left\langle n^{(0)}|n\right\rangle \right|}{\left\langle n|n\right\rangle }=\frac{\left|\left\langle n^{(0)}|n\right\rangle \right|}{1+\lambda^{2}\sum_{n\neq k}\frac{\left|V_{ln}\right|^{2}}{\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)^{2}}},
+\]
+
+\end_inset
+
+up to second order.
+ On the other hand we know that 
+\begin_inset Formula 
+\[
+\lim_{\lambda\rightarrow\infty}c_{n}\left(\lambda\right)=1,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+c_{n}\left(\lambda\right)=\left\langle n^{(0)}|n\right\rangle ,
+\]
+
+\end_inset
+
+therefore taking into consideration this limit we have that 
+\begin_inset Formula 
+\[
+\frac{\left|\left\langle n^{(0)}|n\right\rangle \right|}{\left\langle n|n\right\rangle }=\frac{1}{1+\lambda^{2}\sum_{n\neq k}\frac{\left|V_{ln}\right|^{2}}{\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)^{2}}},
+\]
+
+\end_inset
+
+now, we can Taylor expand the previous equation to obtain 
+\begin_inset Formula 
+\[
+\frac{\left|\left\langle n^{(0)}|n\right\rangle \right|}{\left\langle n|n\right\rangle }=1-\lambda^{2}\sum_{n\neq k}\frac{\left|V_{ln}\right|^{2}}{\left(E_{n}^{\left(0\right)}-E_{l}^{\left(0\right)}\right)^{2}},
+\]
+
+\end_inset
+
+and this completes the proof.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider a particle in a two-dimensional potential 
+\begin_inset Formula 
+\[
+V_{0}=\begin{cases}
+\begin{array}{cc}
+0 & 0\leq x\leq L,\hspace{1em}0\leq y\leq L,\\
+\infty & \text{\text{\ensuremath{otherwise.}}}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+Write the energy eigenfunctions for the ground and first excited states.
+ We now add a time-independent perturbation of the form
+\begin_inset Formula 
+\[
+V_{1}=\begin{cases}
+\begin{array}{cc}
+\lambda xy & 0\leq x\leq L,\hspace{1em}0\leq y\leq L,\\
+\infty & \text{\text{\ensuremath{otherwise}}}.
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+Obtain the zeroth-order energy eigenfunctions and the first-order energy
+ shifts for the ground and first excited states.
+\end_layout
+
+\begin_layout Solution*
+We know that the problem is separable into a product of eigen functions,
+ therefore, the solution is a product of the particle in a 1D potential
+ for each coordinate, this is 
+\begin_inset Formula 
+\[
+\psi_{0}^{(0)}\left(x,y\right)=\frac{2}{L}\sin\left(\frac{\pi x}{L}\right)\sin\left(\frac{\pi y}{L}\right),
+\]
+
+\end_inset
+
+therefore, the energy shift to the ground state to first order is given
+ by which is given by
+\begin_inset Formula 
+\[
+\Delta_{0}^{(1)}=V_{00}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta_{0}^{(1)}=\frac{2\lambda}{L^{2}}\int_{0}^{L}\int_{0}^{L}xy\sin^{2}\left(\frac{\pi x}{L}\right)\sin^{2}\left(\frac{\pi y}{L}\right)dxdy,
+\]
+
+\end_inset
+
+and having set up the problem in this way, for the evaluation of the integrals
+ I just used Mathematica, which will lead us to the result 
+\begin_inset Formula 
+\[
+\Delta_{0}^{(1)}=\frac{\lambda L^{4}}{4},
+\]
+
+\end_inset
+
+and from this we can see that the zeroth order eigen-function is just 
+\begin_inset Formula $\psi_{0}^{(0)}$
+\end_inset
+
+.
+ Now moving on the first excited state, this can be written as
+\begin_inset Formula 
+\[
+\psi_{1a}^{(0)}=\frac{2}{L}\sin\left(\frac{\pi x}{L}\right)\sin\left(\frac{2\pi y}{L}\right),
+\]
+
+\end_inset
+
+as well as 
+\begin_inset Formula 
+\[
+\psi_{1b}^{(0)}=\frac{2}{L}\sin\left(\frac{2\pi x}{L}\right)\sin\left(\frac{\pi y}{L}\right),
+\]
+
+\end_inset
+
+and from this we can see that the state is twice degenerate, therefore,
+ we need to construct a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix and diagonalize it.
+ With that in mind the diagonal elements are 
+\begin_inset Formula 
+\begin{align*}
+V_{aa} & =\int\psi_{1a}^{(0)}\psi_{1a}^{(0)}dxdy,\\
+ & =\frac{4\lambda}{L^{2}}\int_{0}^{L}\int_{0}^{L}xy\sin^{2}\left(\frac{\pi x}{L}\right)\sin^{2}\left(\frac{2\pi y}{L}\right)dxdy,\\
+ & =\frac{\lambda L^{2}}{4},
+\end{align*}
+
+\end_inset
+
+and because of the form of the eigenfunctions this result is the same for
+ 
+\begin_inset Formula $V_{bb}$
+\end_inset
+
+.
+ Now, for the off diagonal terms we have 
+\begin_inset Formula 
+\begin{align*}
+V_{ab} & =\int\psi_{1a}^{(0)}\psi_{1b}^{(0)}dxdy\\
+ & =\frac{4\lambda}{L^{2}}\int_{0}^{L}\int_{0}^{L}xy\sin\left(\frac{\pi x}{L}\right)\sin\left(\frac{2\pi y}{L}\right)\sin\left(\frac{2\pi x}{L}\right)\sin\left(\frac{\pi y}{L}\right)dxdy,\\
+ & =\frac{128\lambda L^{2}}{81\pi^{4}},
+\end{align*}
+
+\end_inset
+
+and again, because of the symmetry of the eigenfunctions we have that .
+ Now with this we can form the matrix 
+\begin_inset Formula $V$
+\end_inset
+
+,a and we know that the first order energy shift is given by the eigenvalues
+ of that matrix, thus
+\begin_inset Formula 
+\[
+V=\frac{\lambda L^{2}}{4\pi^{4}}\left[\begin{array}{cc}
+\pi^{4} & 1024/81\\
+1024/81 & \pi^{4}
+\end{array}\right],
+\]
+
+\end_inset
+
+and from this we want to solve 
+\begin_inset Formula 
+\[
+\det\left(V-\Delta_{1}^{(1)}\mathbb{I}\right)=0,
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+\left(\frac{\lambda L^{2}}{4}-\Delta_{1}^{(1)}\right)^{2}-\left(\frac{128\lambda L^{2}}{81\pi^{4}}\right)^{2}=0,
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+\Delta_{1}^{(1)}=\lambda L^{2}\left(\frac{1}{4}\pm\frac{128}{81\pi^{4}}\right)=\lambda L^{2}\left\{ 0.266,0.233\right\} ,
+\]
+
+\end_inset
+
+and from this we can find the eigenvectors (eigenfunctions)
+\begin_inset Formula 
+\[
+\frac{\left(\psi_{1a}^{(0)}\pm\psi_{1b}^{(0)}\right)}{\sqrt{2}}.
+\]
+
+\end_inset
+
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider an isotropic harmonic oscillator in two dimensions.
+ The Hamiltonian is
+\begin_inset Formula 
+\[
+H_{0}=\frac{p_{x}^{2}}{2m}+\frac{p_{y}^{2}}{2m}+\frac{m\omega^{2}}{2}\left(x^{2}+y^{2}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What are the energies of the three lowest-lying states? Is there any degeneracy?
+\end_layout
+
+\begin_layout Enumerate
+We now apply a perturbation
+\begin_inset Formula 
+\[
+V=\delta m\omega^{2}xy,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is a dimensionless real number much smaller than unity.
+ Find the zeroth-order energy eigen-ket and the corresponding energy to
+ first order [that is, the unperturbed energy obtained in (1) plus the first-ord
+er energy shift] for each of the three lowest-lying states.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Solve the 
+\begin_inset Formula $H_{0}+V$
+\end_inset
+
+ problem exactly.
+ Compare with the perturbation results obtained in (2).
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Let's begin:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For 1, we can write the Hamiltonian 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ as follows 
+\begin_inset Formula 
+\begin{align*}
+H_{0} & =\frac{p_{x}^{2}}{2m}+\frac{m\omega^{2}}{2}x^{2}+\frac{p_{y}^{2}}{2m}+\frac{m\omega^{2}}{2}y^{2},\\
+ & =H_{x}+H_{y},
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $H_{x}$
+\end_inset
+
+and 
+\begin_inset Formula $H_{y}$
+\end_inset
+
+ stands for 
+\begin_inset Formula 
+\begin{align*}
+H_{x} & =\frac{p_{x}^{2}}{2m}+\frac{m\omega^{2}}{2}x^{2},\\
+H_{y} & =\frac{p_{y}^{2}}{2m}+\frac{m\omega^{2}}{2}y^{2},
+\end{align*}
+
+\end_inset
+
+this is, we can separate the problem into two independent harmonic oscillators,
+ each one of them in one dimension.
+ Therefore, we can make 
+\begin_inset Formula 
+\[
+\left|n\right\rangle =\left|n_{x},n_{y}\right\rangle ,
+\]
+
+\end_inset
+
+and we know that the energies for a quantum harmonic oscillator in 1D are
+ given by 
+\begin_inset Formula 
+\[
+E_{n}=\left(n+\frac{1}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+thus the whole energy is going to be given by 
+\begin_inset Formula 
+\[
+E=\left(n_{x}+n_{y}+1\right)\hbar\omega.
+\]
+
+\end_inset
+
+And from this we can see that the ground eigenstate is given by 
+\begin_inset Formula 
+\[
+\left|0\right\rangle =\left|0,0\right\rangle \implies E=\hbar\omega,
+\]
+
+\end_inset
+
+for the first excited state we have 
+\begin_inset Formula 
+\[
+\left|1\right\rangle =\left\{ \left|0,1\right\rangle ,\left|1,0\right\rangle \right\} \implies E=2\hbar\omega,
+\]
+
+\end_inset
+
+thus as we can see this eigenstate is double degenerate.
+\end_layout
+
+\begin_layout Enumerate
+Now, let's move to part (2) on to the part of the problem in this case,
+ we have to consider the given perturbation 
+\begin_inset Formula $V$
+\end_inset
+
+, but first order energy shift, this is 
+\begin_inset Formula $\Delta_{0}^{(1)}$
+\end_inset
+
+, for the ground state is zero, and this is because the operators 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ only connect states that differ by one quantum, and we can see this using
+ the algebraic method (ladder operators), thus we have 
+\begin_inset Formula 
+\[
+\Delta_{0}^{(1)}=\left\langle 0,0\right|xy\left|0,0\right\rangle =0.
+\]
+
+\end_inset
+
+Now, for the first excited state, there's degeneracy in it, thus we need
+ to diagonalize the perturbation exactly as we did in the previous problem,
+ but we have 
+\begin_inset Formula 
+\[
+\left\langle 1,0\right|xy\left|1,0\right\rangle =\left\langle 1,0\right|xy\left|1,0\right\rangle =0,
+\]
+
+\end_inset
+
+and for the off-diagonal terms we have 
+\begin_inset Formula 
+\begin{align*}
+\delta m\omega^{2}\left\langle 1,0\right|xy\left|0,1\right\rangle  & =\delta m\omega^{2}\left\langle 1,0\right|\left[\sqrt{\frac{\hbar}{2m\omega}}\sqrt{1}\sqrt{\frac{\hbar}{2m\omega}}\sqrt{1}\right]\left|0,1\right\rangle ,\\
+ & =\delta\frac{\hbar\omega}{2},
+\end{align*}
+
+\end_inset
+
+and by symmetry we have that 
+\begin_inset Formula $\delta m\omega^{2}\left\langle 1,0\right|xy\left|0,1\right\rangle =\delta m\omega^{2}\left\langle 0,1\right|xy\left|1,0\right\rangle $
+\end_inset
+
+, thus we have that 
+\begin_inset Formula 
+\[
+V=\delta\left[\begin{array}{cc}
+0 & \frac{\hbar\omega}{2}\\
+\frac{\hbar\omega}{2} & 0
+\end{array}\right],
+\]
+
+\end_inset
+
+therefore, solving 
+\begin_inset Formula 
+\[
+\det\left(V-\Delta_{1}^{(1)}\mathbb{I}\right)=0,
+\]
+
+\end_inset
+
+we have 
+\begin_inset Formula 
+\[
+\left(\Delta_{1}^{(1)}\right)^{2}-\left(\frac{\delta\hbar\omega}{2}\right)^{2}\implies\Delta_{1}^{(1)}=\pm\frac{\delta\hbar\omega}{2},
+\]
+
+\end_inset
+
+and from this we have that the energy is given by 
+\begin_inset Formula 
+\[
+E=\left(2\pm\frac{\delta}{2}\right)\hbar\omega,
+\]
+
+\end_inset
+
+and again using the results from the previous problem we have that the eigenstat
+es are
+\begin_inset Formula 
+\[
+\left|1\right\rangle =\frac{1}{\sqrt{2}}\left(\left|1,0\right\rangle \pm\left|0,1\right\rangle \right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, in order to solve the problem exactly we're going to do a change of
+ variable as follows
+\begin_inset Formula 
+\begin{align*}
+V & =\frac{1}{2}m\omega^{2}\left(x^{2}+y^{2}+2\delta xy\right)\\
+ & =\frac{1}{2}m\omega^{2}\left[\left(1+\delta\right)\frac{\left(x+y\right)^{2}}{2}+\left(1-\delta\right)\frac{\left(x-y\right)^{2}}{2}\right],
+\end{align*}
+
+\end_inset
+
+and now, if we rotate the axes by 
+\begin_inset Formula $\pi/4$
+\end_inset
+
+ we can have an anharmonic oscillator with new coordinates and frequencies
+\begin_inset Formula 
+\[
+x^{\prime}=\frac{\left(x+y\right)}{\sqrt{2}},\text{\ensuremath{\omega_{x}=\omega\left(1+\delta\right)^{1/2}}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y^{\prime}=\frac{\left(x-y\right)}{\sqrt{2}},\text{\ensuremath{\omega_{y}=\omega\left(1-\delta\right)^{1/2}}},
+\]
+
+\end_inset
+
+and from this the solution is essentially the 
+\begin_inset Quotes eld
+\end_inset
+
+same
+\begin_inset Quotes erd
+\end_inset
+
+, just with a using the new coordinates and frequencies, this is, for the
+ ground state
+\begin_inset Formula 
+\[
+\left|0\right\rangle =\left|0,0\right\rangle \implies E=\frac{1}{2}\hbar\omega_{x}+\frac{1}{2}\hbar\omega_{y},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\begin{align*}
+E & =\frac{1}{2}\hbar\omega\left(1+\delta\right)^{1/2}+\frac{1}{2}\hbar\omega\left(1-\delta\right)^{1/2},\\
+ & =\frac{1}{2}\hbar\omega\left[\left(1+\delta\right)^{1/2}+\left(1-\delta\right)^{1/2}\right],
+\end{align*}
+
+\end_inset
+
+and if we Taylor expand the roots, we have 
+\begin_inset Formula 
+\begin{align*}
+E & \approx\frac{1}{2}\hbar\omega\left[1+\delta/2+1-\delta/2\right]\\
+ & \approx\hbar\omega.
+\end{align*}
+
+\end_inset
+
+Now, for the next excited state we have 
+\begin_inset Formula 
+\begin{align*}
+\left|0,1\right\rangle  & =\frac{3}{2}\hbar\omega\left(1+\delta\right)^{1/2}+\frac{1}{2}\hbar\omega\left(1-\delta\right)^{1/2},\\
+ & =\frac{1}{2}\hbar\omega\left[3\left(1+\delta\right)^{1/2}+\left(1-\delta\right)^{1/2}\right],
+\end{align*}
+
+\end_inset
+
+and again, if we Taylor expand the roots we have 
+\begin_inset Formula 
+\begin{align*}
+\left|0,1\right\rangle  & \approx\frac{1}{2}\hbar\omega\left[3+3\delta/2+1-\delta/2\right],\\
+ & \approx\hbar\omega\left[2+\delta/2\right].
+\end{align*}
+
+\end_inset
+
+And finally, for the last excited state under consideration, we have
+\begin_inset Formula 
+\begin{align*}
+\left|0,1\right\rangle  & =\frac{1}{2}\hbar\omega\left(1+\delta\right)^{1/2}+\frac{3}{2}\hbar\omega\left(1-\delta\right)^{1/2},\\
+ & =\frac{1}{2}\hbar\omega\left[\left(1+\delta\right)^{1/2}+3\left(1-\delta\right)^{1/2}\right],
+\end{align*}
+
+\end_inset
+
+and again, if we Taylor expand the roots we have 
+\begin_inset Formula 
+\begin{align*}
+\left|0,1\right\rangle  & \approx\frac{1}{2}\hbar\omega\left[1+1\delta/2+3-3\delta/2\right],\\
+ & \approx\hbar\omega\left[2-\delta/2\right],
+\end{align*}
+
+\end_inset
+
+thus, we can see that this is in agreement with the solution found using
+ perturbation theory.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+A one-electron atom whose ground state is non-degenerate is placed in a
+ uniform electric field in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction.
+ Obtain an approximate expression for the induced electric dipole moment
+ of the ground state by considering the expectation value of 
+\begin_inset Formula $ez$
+\end_inset
+
+ with respect to the perturbed state vector computed to first order.
+ Show that the same expression can also be obtained from the energy shift
+ 
+\begin_inset Formula $\Delta=-\alpha\left|\mathbf{E}\right|^{2}/2$
+\end_inset
+
+ of the ground state computed to second order.
+ (Note: 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ stands for the polarizability.) Ignore spin.
+\end_layout
+
+\begin_layout Solution*
+Due to the symmetry of this problem we're going to use the basis 
+\begin_inset Formula $\left|nlm\right\rangle $
+\end_inset
+
+.
+ And in using perturbation theory we know that 
+\begin_inset Formula 
+\[
+\left|n\right\rangle =\left|n^{(0)}\right\rangle +\lambda\sum_{n\neq k}\left|k^{(0)}\right\rangle \frac{V_{nk}}{E_{n}^{\left(0\right)}-E_{k}^{\left(0\right)}},
+\]
+
+\end_inset
+
+thus, using the base 
+\begin_inset Formula $\left|nlm\right\rangle $
+\end_inset
+
+, the previous equation becomes
+\begin_inset Formula 
+\[
+\left|100^{(1)}\right\rangle =\left|100^{(0)}\right\rangle -e\left|\mathbf{E}\right|\sum_{nlm}\left|nlm^{(0)}\right\rangle \frac{\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle }{E_{100}^{\left(0\right)}-E_{nlm}^{\left(0\right)}},
+\]
+
+\end_inset
+
+where I have used 
+\begin_inset Formula $V=-e\left|\mathbf{E}\right|z$
+\end_inset
+
+.
+ And from this we want to compute 
+\begin_inset Formula 
+\[
+\left\langle 100^{(1)}\right|ez\left|100^{(1)}\right\rangle ,
+\]
+
+\end_inset
+
+thus we have 
+\begin_inset Formula 
+\begin{align*}
+\left\langle 100^{(1)}\right|ez\left|100^{(1)}\right\rangle  & =\left[\left|100^{(0)}\right\rangle -e\left|\mathbf{E}\right|\sum_{nlm}\left|nlm^{(0)}\right\rangle \frac{\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle }{E_{100}^{\left(0\right)}-E_{k}^{\left(0\right)}}\right]^{\dagger}\times\\
+ & \times\left[\left|100^{(0)}\right\rangle -e\left|\mathbf{E}\right|\sum_{nlm}\left|nlm^{(0)}\right\rangle \frac{\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle }{E_{100}^{\left(0\right)}-E_{k}^{\left(0\right)}}\right]
+\end{align*}
+
+\end_inset
+
+but the term 
+\begin_inset Formula $\left\langle 100^{(0)}\right|ez\left|100^{(0)}\right\rangle $
+\end_inset
+
+ is zero, in virtue of the Wigner-Eckart Theorem, thus we have 
+\begin_inset Formula 
+\begin{align*}
+\left\langle 100^{(1)}\right|ez\left|100^{(1)}\right\rangle  & =-e^{2}\left|\mathbf{E}\right|\left[\sum_{nlm}\left\langle 100^{(0)}|z|nlm{}^{(0)}\right\rangle \left|nlm^{(0)}\right\rangle \frac{\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle }{E_{100}^{\left(0\right)}-E_{nlm}^{\left(0\right)}}\right]+\\
+ & -e^{2}\left|\mathbf{E}\right|\left[\sum_{nlm}\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle \left|nlm^{(0)}\right\rangle \frac{\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle ^{*}}{E_{100}^{\left(0\right)}-E_{nlm}^{\left(0\right)}}\right]
+\end{align*}
+
+\end_inset
+
+then we have that 
+\begin_inset Formula 
+\[
+\left\langle 100^{(1)}\right|ez\left|100^{(1)}\right\rangle =-2e^{2}\left|\mathbf{E}\right|\left[\sum_{nlm}\frac{\left|\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle \right|^{2}}{E_{100}^{\left(0\right)}-E_{nlm}^{\left(0\right)}}\right],
+\]
+
+\end_inset
+
+and now, if we define 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in such a way that 
+\begin_inset Formula 
+\[
+\alpha=-2e^{2}\left[\sum_{nlm}\frac{\left|\left\langle nlm^{(0)}|z|100{}^{(0)}\right\rangle \right|^{2}}{E_{100}^{\left(0\right)}-E_{nlm}^{\left(0\right)}}\right],
+\]
+
+\end_inset
+
+then we have 
+\begin_inset Formula 
+\[
+\left\langle 100^{(1)}\right|ez\left|100^{(1)}\right\rangle =\alpha\left|\mathbf{E}\right|,
+\]
+
+\end_inset
+
+just as we wanted, because from this we can see that the this is the energy
+ shift 
+\begin_inset Formula $\Delta=-\alpha\left|\mathbf{E}\right|^{2}/2$
+\end_inset
+
+ of the ground state computed to second order.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Suppose the Hamiltonian of a rigid rotator in a magnetic field perpendicular
+ to the axis is of the form (Merzbacher 1970, Problem 17-1)
+\begin_inset Formula 
+\[
+A\mathbf{L}^{2}+BL_{z}+CL_{y},
+\]
+
+\end_inset
+
+if terms quadratic in the field are neglected.
+ Assuming 
+\begin_inset Formula $B\gg C$
+\end_inset
+
+, use perturbation theory to lowest non-vanishing order to get approximate
+ energy eigenvalues.
+\end_layout
+
+\begin_layout Solution*
+The problem states that 
+\begin_inset Formula $B\gg C$
+\end_inset
+
+, then, considering the given expression as the total Hamiltonian for the
+ system we can decompose them into two part, and regard one of them as the
+ perturbation, this is
+\begin_inset Formula 
+\[
+H=H_{0}+V,
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+H_{0}=A\mathbf{L}^{2}+BL_{z},\hspace{1em}V=CL_{y},
+\]
+
+\end_inset
+
+and for the non-perturbed Hamiltonian we can see that this is combination
+ of the operators 
+\begin_inset Formula $\mathbf{L}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{z}$
+\end_inset
+
+, but we know that, in general: 
+\begin_inset Formula 
+\[
+\mathbf{J}^{2}\left|j,m\right\rangle =j\left(j+1\right)\hbar^{2}\left|j,m\right\rangle ,\hspace{1em}J_{z}\left|j,m\right\rangle =m\hbar\left|j,m\right\rangle ,
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+\mathbf{L}^{2}\left|l,m\right\rangle =l\left(l+1\right)\hbar^{2}\left|l,m\right\rangle ,\hspace{1em}L_{z}\left|l,m\right\rangle =m\hbar\left|l,m\right\rangle ,
+\]
+
+\end_inset
+
+therefore, one option for the eigenkets of the non-perturbed Hamiltonian
+ is 
+\begin_inset Formula 
+\[
+\left|n^{(0)}\right\rangle =\left|l,m\right\rangle ,
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\begin{align*}
+H_{0}\left|l,m\right\rangle  & =\left(A\mathbf{L}^{2}+BL_{z}\right)\left|l,m\right\rangle ,\\
+ & =A\mathbf{L}^{2}\left|n^{(0)}\right\rangle +BL_{z}\left|l,m\right\rangle ,\\
+ & =Al\left(l+1\right)\hbar^{2}\left|n^{(0)}\right\rangle +Bm\hbar\left|l,m\right\rangle ,
+\end{align*}
+
+\end_inset
+
+therefore we have 
+\begin_inset Formula 
+\[
+H_{0}\left|l,m\right\rangle =E_{lm}^{(0)}\left|l,m\right\rangle ,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+E_{lm}^{(0)}=Al\left(l+1\right)\hbar^{2}+Bm\hbar.
+\]
+
+\end_inset
+
+On the other hand, for the perturbation, we wan rewrite it using the ladder
+ operator as follows 
+\begin_inset Formula 
+\[
+L_{y}=\frac{1}{2i}\left(L_{+}-L_{-}\right),
+\]
+
+\end_inset
+
+then the form of the operator will be 
+\begin_inset Formula 
+\begin{align*}
+V & =CL_{y},\\
+ & =\frac{C}{2i}\left(L_{+}-L_{-}\right).
+\end{align*}
+
+\end_inset
+
+And from this, we have, for the energy shift to first order
+\begin_inset Formula 
+\[
+\left\langle n^{(0)}\right|V\left|n^{(0)}\right\rangle =\frac{C}{2i}\left\langle l,m\right|L_{+}-L_{-}\left|l,m\right\rangle ,
+\]
+
+\end_inset
+
+but as we can see 
+\begin_inset Formula $L_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{-}$
+\end_inset
+
+ raise and lower the 
+\begin_inset Formula $m$
+\end_inset
+
+ one unity, thus the overall inner product is zero because we have orthogonal
+ states, this is 
+\begin_inset Formula 
+\[
+\Delta_{lm}^{(1)}=0.
+\]
+
+\end_inset
+
+Thus, we have to consider perturbation theory to second order, this is 
+\begin_inset Formula 
+\begin{align*}
+\Delta_{lm}^{(2)} & =\sum_{l^{\prime}m^{\prime}}\frac{\left|\left\langle l,m\right|V\left|l^{\prime},m^{\prime}\right\rangle \right|^{2}}{E_{lm}^{(0)}-E_{l^{\prime}m^{\prime}}^{(0)}},\\
+ & =\sum_{l^{\prime}m^{\prime}}\frac{C^{2}}{4}\frac{\left|\left\langle l,m\right|L_{+}-L_{-}\left|l^{\prime},m^{\prime}\right\rangle \right|^{2}}{E_{lm}^{(0)}-E_{l^{\prime}m^{\prime}}^{(0)}},
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+but from that expression we can see that some terms are going to cancel
+ due to orthogonality, which leave us with 
+\begin_inset Formula 
+\[
+\Delta_{lm}^{(2)}=\frac{C^{2}\hbar^{2}}{4}\left[\frac{\left(l-m+1\right)\left(l+m\right)}{E_{lm}^{(0)}-E_{l,m-1}^{(0)}}-\frac{\left(l+m+1\right)\left(l-m\right)}{E_{lm}^{(0)}-E_{l,m-1}^{(0)}}\right],
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $E_{lm}^{(0)}-E_{l,m-1}^{(0)}=Al\left(l+1\right)\hbar^{2}+Bm\hbar-Al\left(l+1\right)\hbar^{2}-B\left(m-1\right)\hbar,$
+\end_inset
+
+then it follows 
+\begin_inset Formula 
+\[
+E_{lm}^{(0)}-E_{l,m-1}^{(0)}=B\hbar,
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\Delta_{lm}^{(2)}=\frac{C^{2}\hbar^{2}}{4B\hbar}\left[\left(l-m+1\right)\left(l+m\right)-\left(l+m+1\right)\left(l-m\right)\right],
+\]
+
+\end_inset
+
+and we also have that
+\begin_inset Formula 
+\[
+\left(l-m+1\right)\left(l+m\right)-\left(l+m+1\right)\left(l-m\right)=2m,
+\]
+
+\end_inset
+
+therefore
+\begin_inset Formula 
+\[
+\Delta_{lm}^{(2)}=\frac{C^{2}\hbar^{2}}{4B\hbar}\left(2m\right),
+\]
+
+\end_inset
+
+which can be simplified as 
+\begin_inset Formula 
+\[
+\Delta_{lm}^{(2)}=\frac{C^{2}\hbar m}{2B}.
+\]
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider the matrix elements 
+\begin_inset Formula 
+\[
+\left\langle n^{\prime}l^{\prime}m_{l}^{\prime}m_{s}^{\prime}\right|3z^{2}-r^{2}\left|nlm_{l}m_{s}\right\rangle ,\hspace{1em}\left\langle n^{\prime}l^{\prime}m_{l}^{\prime}m_{s}^{\prime}\right|xy\left|nlm_{l}m_{s}\right\rangle 
+\]
+
+\end_inset
+
+of a one-electron (for example, alkali) atom.
+ Write the selection rules for 
+\begin_inset Formula $\Delta l$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta m_{l}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Delta m_{s}$
+\end_inset
+
+.
+ Justify your answer.
+\end_layout
+
+\begin_layout Solution*
+Let's start with the first matrix element: for 
+\begin_inset Formula $m_{s}$
+\end_inset
+
+, we can see that there is no spin dependence in the functions (operators)
+ inside the inner product.
+ On the other hand, we know that (I took this result form homework 3) 
+\begin_inset Formula 
+\[
+3z^{2}-r^{2}=\sqrt{\frac{16\pi}{5}}r^{2}Y_{2}^{0},
+\]
+
+\end_inset
+
+this is 
+\begin_inset Formula 
+\[
+3z^{2}-r^{2}\propto Y_{2}^{0},
+\]
+
+\end_inset
+
+and we know that this operator is a spherical tensor of the kind 
+\begin_inset Formula 
+\[
+T_{0}^{(2)},
+\]
+
+\end_inset
+
+therefore we can use the Wigner-Eckart theorem, and with that we're going
+ to have 
+\begin_inset Formula 
+\[
+\left\langle l^{\prime}m^{\prime}\right|3z^{2}-r^{2}\left|lm\right\rangle \propto\left\langle l2;m0|l2;l^{\prime}m^{\prime}\right\rangle ,
+\]
+
+\end_inset
+
+and from this we obtain the selection rules 
+\begin_inset Formula 
+\[
+m=m^{\prime},\hspace{1em}\left|l-2\right|\leq l^{\prime}\leq l+2,
+\]
+
+\end_inset
+
+and in addition to that due to the parity of the spherical harmonic, even
+ parity, the difference 
+\begin_inset Formula $l-l^{\prime}$
+\end_inset
+
+ must be even.
+\end_layout
+
+\begin_layout Solution*
+Now, for the second matrix element, we have 
+\begin_inset Formula 
+\[
+\left\langle n^{\prime}l^{\prime}m_{l}^{\prime}m_{s}^{\prime}\right|xy\left|nlm_{l}m_{s}\right\rangle ,
+\]
+
+\end_inset
+
+but again, we don't have spin dependence, thus 
+\begin_inset Formula $m_{s}=$
+\end_inset
+
+, thus we can change a little bit the notation as follows 
+\begin_inset Formula 
+\[
+\left\langle l^{\prime}m^{\prime}\right|xy\left|lm\right\rangle 
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula 
+\[
+xy=r\sin^{2}\theta\cos\phi\sin\phi,
+\]
+
+\end_inset
+
+and this product is proportional to the following combination of spherical
+ harmonics
+\begin_inset Formula 
+\[
+r\sin^{2}\theta\cos\phi\sin\phi\propto Y_{2}^{2}-Y_{2}^{-2},
+\]
+
+\end_inset
+
+therefore, we have 
+\begin_inset Formula 
+\[
+xy\propto Y_{2}^{2}-Y_{2}^{-2},
+\]
+
+\end_inset
+
+and again, we can use the Wigner-Eckart theorem because the spherical harmonics
+ can be seen as spherical tensors as follows
+\begin_inset Formula 
+\[
+xy\propto T_{2}^{(2)}-T_{-2}^{(2)},
+\]
+
+\end_inset
+
+thus we have 
+\begin_inset Formula 
+\[
+\left\langle l^{\prime}m^{\prime}\right|xy\left|lm\right\rangle \propto\left\langle l^{\prime}m^{\prime}\right|T_{2}^{(2)}\left|lm\right\rangle -\left\langle l^{\prime}m^{\prime}\right|T_{-2}^{(2)}\left|lm\right\rangle ,
+\]
+
+\end_inset
+
+and for the first spherical tensor we have that is proportional to 
+\begin_inset Formula $\left\langle l2;m2|l2;l^{\prime}m^{\prime}\right\rangle $
+\end_inset
+
+ if 
+\begin_inset Formula $m^{\prime}-m=2$
+\end_inset
+
+ and for the second spherical tensor 
+\begin_inset Formula $\left\langle l2;m,-2|l2;l^{\prime}m^{\prime}\right\rangle $
+\end_inset
+
+ if 
+\begin_inset Formula $m^{\prime}-m=-2$
+\end_inset
+
+, and zero otherwise, and in this case the same selection rules apply to
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $l^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Work out the quadratic Zeeman effect for the ground-state hydrogen atom
+ due to the usually neglected 
+\begin_inset Formula $e^{2}\mathbf{A}^{2}/2m_{e}c^{2}$
+\end_inset
+
+ term in the Hamiltonian taken to first order.
+ Write the energy shift as 
+\begin_inset Formula 
+\[
+\Delta=-\frac{1}{2}\chi\mathbf{B}^{2},
+\]
+
+\end_inset
+
+and obtain an expression for diamagnetic susceptibility, χ.
+\end_layout
+
+\begin_layout Solution*
+If we consider 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ in the positive 
+\begin_inset Formula $z$
+\end_inset
+
+ direction, then we know that 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\mathbf{A}=-\frac{1}{2}\left(By\mathbf{e}_{x}-Bx\mathbf{e}_{y}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{A}^{2}=\frac{1}{4}\left(By\mathbf{e}_{x}-Bx\mathbf{e}_{y}\right)\cdot\left(By\mathbf{e}_{x}-Bx\mathbf{e}_{y}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mathbf{A}^{2}=\frac{1}{4}\left(B^{2}y^{2}+B^{2}x^{2}\right),
+\]
+
+\end_inset
+
+and with this the perturbation becomes 
+\begin_inset Formula 
+\[
+V=\frac{e^{2}B^{2}\left(x^{2}+y^{2}\right)}{8m_{e}c^{2}}.
+\]
+
+\end_inset
+
+Now, we also know that the ground state is spherically symmetric, which
+ implies that
+\begin_inset Formula 
+\[
+\left\langle x^{2}\right\rangle =\left\langle y^{2}\right\rangle =\left\langle z^{2}\right\rangle =\frac{\left\langle r^{2}\right\rangle }{3},
+\]
+
+\end_inset
+
+thus we have
+\begin_inset Formula 
+\begin{align*}
+\Delta & =\left(\frac{e^{2}B^{2}}{8m_{e}c^{2}}\right)\left(\frac{2}{3\pi a_{0}^{3}}\right)4\pi\int_{0}^{\infty}r^{2}\exp\left(-\frac{2r}{a_{0}}\right)r^{2}dr,\\
+ & =\left(\frac{e^{2}B^{2}}{8m_{e}c^{2}}\right)\left(\frac{2}{3\pi a_{0}^{3}}\right)4\pi\int_{0}^{\infty}r^{4}\exp\left(-\frac{2r}{a_{0}}\right)dr
+\end{align*}
+
+\end_inset
+
+then, after evaluating the integral, we have 
+\begin_inset Formula 
+\[
+\Delta=\left(\frac{e^{2}B^{2}}{8m_{e}c^{2}}\right)\frac{1}{3a_{0}^{3}}\frac{4!}{\left(2/a_{0}\right)^{5}},
+\]
+
+\end_inset
+
+and we can rewrite that previous expression as follows 
+\begin_inset Formula 
+\[
+\Delta=\frac{e^{2}B^{2}a_{0}^{2}}{4m_{e}c^{2}},
+\]
+
+\end_inset
+
+now if we rename/define 
+\begin_inset Formula 
+\[
+\chi=\frac{e^{2}a_{0}^{2}}{2m_{e}c^{2}},
+\]
+
+\end_inset
+
+then wee can write the shift in the perturbation as follows 
+\begin_inset Formula 
+\[
+\Delta=-\frac{1}{2}\chi B^{2},
+\]
+
+\end_inset
+
+and in this way we have that the susceptibility is given by the previous
+ expression of 
+\begin_inset Formula $\chi$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,464 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Theory: Assignment 6
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores Calderon
+\end_layout
+
+\begin_layout Date
+April 23, 2024.
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(5.29)
+\series default
+ Consider a one-dimensional simple harmonic oscillator whose classical angular
+ frequency is 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $t<0$
+\end_inset
+
+ it is known to be in the ground state.
+ For 
+\begin_inset Formula $t>0$
+\end_inset
+
+ there is also a time-dependent potential 
+\begin_inset Formula 
+\[
+V\left(t\right)=F_{0}x\cos\left(\omega t\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F_{0}$
+\end_inset
+
+ is constant in both space and time.
+ Obtain an expression for the expectation value 
+\begin_inset Formula $\left\langle x\right\rangle $
+\end_inset
+
+ as a function of time using time-dependent perturbation theory to lowest
+ non-vanishing order.
+ Is this procedure valid for 
+\begin_inset Formula $\omega\simeq\omega_{0}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(5.30)
+\series default
+ A one-dimensional harmonic oscillator is in its ground state for 
+\begin_inset Formula $t<0$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+ it is subjected to a time-dependent but spatially uniform force (not potential!
+) in the x-direction, 
+\begin_inset Formula 
+\[
+F\left(t\right)=F_{0}\exp\left(-\frac{t}{\tau}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Using time-dependent perturbation theory to first order, obtain the probability
+ of finding the oscillator in its first excited state for 
+\begin_inset Formula $t>0$
+\end_inset
+
+.
+ Show that the 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ (
+\begin_inset Formula $\tau$
+\end_inset
+
+ finite) limit of your expression is independent of time.
+ Is this reasonable or surprising? 
+\end_layout
+
+\begin_layout Enumerate
+Can we find higher excited states? 
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(5.31)
+\series default
+ Consider a particle bound in a simple harmonic oscillator potential.
+ Initially (
+\begin_inset Formula $t<0$
+\end_inset
+
+), it is in the ground state.
+ At 
+\begin_inset Formula $t=0$
+\end_inset
+
+ a perturbation of the form 
+\begin_inset Formula 
+\[
+H^{\prime}\left(x,t\right)=Ax^{2}\exp\left(-\frac{t}{\tau}\right)
+\]
+
+\end_inset
+
+is switched on.
+ Using time-dependent perturbation theory, calculate the probability that,
+ after a sufficiently long time (
+\begin_inset Formula $t\ggτ$
+\end_inset
+
+), the system will have made a transition to a given excited state.
+ Consider all final states.
+\end_layout
+
+\begin_layout Solution*
+Sol 
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(5.32)
+\series default
+ The unperturbed Hamiltonian of a two-state system is represented by 
+\begin_inset Formula 
+\[
+H_{0}=\left(\begin{array}{cc}
+E_{1}^{0} & 0\\
+0 & E_{2}^{0}
+\end{array}\right).
+\]
+
+\end_inset
+
+There is, in addition, a time-dependent perturbation 
+\begin_inset Formula 
+\[
+V\left(t\right)=\left(\begin{array}{cc}
+0 & \lambda\cos\left(\omega t\right)\\
+\lambda\cos\left(\omega t\right) & 0
+\end{array}\right)\hspace{1em}\lambda\in\mathbb{R}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+At 
+\begin_inset Formula $t=0$
+\end_inset
+
+ the system is known to be in the first state, represented by 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+Using time-dependent perturbation theory and assuming that 
+\begin_inset Formula $E_{1}^{0}-E_{2}^{0}$
+\end_inset
+
+ is not close 
+\begin_inset Formula $\pm\hbar\omega$
+\end_inset
+
+, derive an expression for the probability that the system be found in the
+ second state represented by 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+0\\
+1
+\end{array}\right)
+\]
+
+\end_inset
+
+as a function of 
+\begin_inset Formula $t$
+\end_inset
+
+(
+\begin_inset Formula $t>0$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Why is this procedure not valid when 
+\begin_inset Formula $E_{1}^{0}-E_{2}^{0}$
+\end_inset
+
+ is close to 
+\begin_inset Formula $\pm\hbar\omega$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(5.35)
+\series default
+ A hydrogen atom in its ground state [
+\begin_inset Formula $\left(n,l,m\right)=\left(1,0,0\right)$
+\end_inset
+
+] is placed between the plates of a capacitor.
+ A time-dependent but spatial uniform electric field (not potential!) is
+ applied as follows: 
+\begin_inset Formula 
+\[
+\mathbf{E}=\left\{ \begin{array}{cc}
+0 & t<0\\
+\mathbf{E}_{0}\exp\left(-\frac{t}{\tau}\right) & t>0
+\end{array}\right.\left(\mathbf{E}_{0}\text{in the positive z-direction.}\right)
+\]
+
+\end_inset
+
+Using first-order time-dependent perturbation theory, compute the probability
+ for the atom to be found at 
+\begin_inset Formula $t\ggτ$
+\end_inset
+
+ in each of the three 2p states: 
+\begin_inset Formula $\left(n,l,m\right)=\left(2,1,\pm1\text{ or }0\right)$
+\end_inset
+
+.
+ Repeat the problem for the 2s state: 
+\begin_inset Formula $\left(n,l,m\right)=\left(2,0,0\right)$
+\end_inset
+
+.
+ Consider the limit 
+\begin_inset Formula $\tau\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+(5.45)
+\series default
+ The ground state of a hydrogen atom 
+\begin_inset Formula $\left(n=1,l=0\right)$
+\end_inset
+
+ is subjected to a time-dependent potential as follows: 
+\begin_inset Formula 
+\[
+V\left(\mathbf{x},t\right)=V_{0}\cos\left(kz-\omega t\right).
+\]
+
+\end_inset
+
+Using time-dependent perturbation theory, obtain an expression for the transitio
+n rate at which the electron is emitted with momentum 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+.
+ Show, in particular, how you may compute the angular distribution of the
+ ejected electron (in terms of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ defined with respect to the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis).
+ Discuss briefly the similarities and the differences between this problem
+ and the (more realistic) photoelectric effect.
+ (Note: For the initial wave function see Problem 5.42.
+ If you have a normalization problem, the final wave function may be taken
+ to be 
+\begin_inset Formula 
+\[
+\psi_{f}\left(\mathbf{x}\right)=\left(\frac{1}{L^{3/2}}\right)\exp\left(\frac{i}{\hbar}\mathbf{p}\cdot\mathbf{x}\right)
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $L$
+\end_inset
+
+ very large, but you should be able to show that the observable effects
+ are independent of 
+\begin_inset Formula $L$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Solution*
+Sol
+\end_layout
+
+\begin_layout Problem
+Mann 7
+\end_layout
+
+\begin_layout Solution*
+Sol
+\end_layout
+
+\end_body
+\end_document

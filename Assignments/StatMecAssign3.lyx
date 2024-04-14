@@ -94,11 +94,17 @@ Statistical Mechanics: Assignment 3
 
 \begin_layout Author
 J.
- Emmanuel Flores
+ Emmanuel Flores 
 \end_layout
 
 \begin_layout Date
 March 31.
+\end_layout
+
+\begin_layout Section*
+
+\color blue
+GRADE: 44/50
 \end_layout
 
 \begin_layout Problem
@@ -319,6 +325,74 @@ Finally, if we stretch the rubber that means we're in some sense in high
 \end_layout
 
 \end_deeper
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\color red
+Comments:
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+The problem was really interesting, I really enjoyed workin on it.
+ I think my solution matches quite good with yours, especially in part 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+In part two in not quite sure of the numbers, because my approximation was
+ very naive, however, I think my argument still holds.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+And finally, I think my discussion of the physics involved was not was structure
+d as yours but I think it captures the essential parts.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+With the data from the figure I tried to extract the information of the
+ plots using Mathematica, and then do a linear fit, but it was a little
+ tricky, and I think this part was very instructive; recently I had to do
+ the same with one paper because they didn't provide a table with the numerical
+ values and I needed to compare my solution with theirs.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Grade: 10/10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -800,6 +874,75 @@ the spacings between vibrational levels and between rotational levels about
 
 \end_deeper
 \begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\color red
+Comments:
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+The notation in some parts is a little sloppy and I think it could be better,
+ sorry for that.
+ On the other hand I think the discussion of the partition function was
+ quite good, and I didn't express the geometric series, I just used the
+ solutions derived in class (well I also derived that myself), but I didn't
+ want to make the solution any longer, probably not the best idea.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Finally, I think the solution is correct, however I din't interpret the
+ term 
+\begin_inset Formula $\frac{\hbar\omega}{2}$
+\end_inset
+
+ properly, in the sense that, as you explained in your solution: this is
+ just a constant and in particular, 
+\begin_inset Quotes eld
+\end_inset
+
+it has no dependence on the temperature, so It won't contribute to the heat
+ capacity
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Grade: 10/10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
 \begin_inset Newpage newpage
 \end_inset
 
@@ -1191,6 +1334,66 @@ thus comparing the previous results we can see that the energy required
 \end_layout
 
 \end_deeper
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\color red
+Comments:
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+This was by far my worst solution, I think in some parts the intuition it's
+ good; in particular with the change in entropy and seeing the process as
+ an isothermal compression, however, the numbers are 
+\begin_inset Quotes eld
+\end_inset
+
+not good enough
+\begin_inset Quotes erd
+\end_inset
+
+ (correct) I think.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+I've always struggled working with numerical values, and it's something
+ that I need to improve, I need to be better.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Grade: 5/10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Solution*
 \begin_inset Newpage newpage
 \end_inset
@@ -1620,6 +1823,57 @@ P\left(\lambda\right)=\frac{8\pi hc}{\lambda^{5}}\left(\frac{A}{\exp\left(\frac{
 \end_inset
 
 which as we can see have a different functional form.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+
+\color red
+Comments:
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+This problem was a little bit tricky, in particular for the shift in the
+ maxima once you change the variables, and I think my solution agrees quite
+ good with the one you provided.
+ At some point for the transcendental equation I thought in Taylor expand,
+ but I wasn't sure how to proceed, because in the equation we have 
+\begin_inset Formula $x$
+\end_inset
+
+ on both sides of the equation which makes Taylor expand a little weird.
+ And finally, I think this problem was really good and interesting.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Grade: 10/10
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Solution*
@@ -2129,6 +2383,67 @@ which is a really high number, consistent in some sense with the giant sequoias,
 
 \end_deeper
 \end_deeper
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\color red
+Comments:
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+These problems were really challenging, my knowledge of the chemical potential
+ was't good enough for this, so I had to read quite a lot on the books in
+ my electronic library.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+For the centrifuge I think our solutions are in agreement with each other,
+ however I din't complete the part c.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+For the tree sap, our solution is also in agreement, but I'm not very happy
+ with the solution; as far as I know my whole solution rest on the fact
+ that I'm thinking of an ideal gas, and this is not the case, however, I'm
+ still not sure how to solve the problem using other assumptions but to
+ ideal gas.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+Grade: 9/10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -2180,5 +2495,74 @@ On the part of AI tools, I sed ChatGPT to guide in the unit conversions
 on in the USA.
 \end_layout
 
+\begin_layout Subsection*
+Final Reflection:
+\end_layout
+
+\begin_layout Standard
+Looking back on the problem set as a whole:
+\end_layout
+
+\begin_layout Enumerate
+What is something specific you understand better than you did before?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For sure I think I have more knowledge of the chemical potential, before
+ this I just knew the basics: related to the 
+\begin_inset Quotes eld
+\end_inset
+
+particles
+\begin_inset Quotes erd
+\end_inset
+
+ and that appears in the grand partition function for the gran canonical
+ ensemble.
+ I think the exercises were pretty good, in particular and I did have fun
+ solving them.
+\end_layout
+
+\begin_layout Enumerate
+The problem with the black-body radiation was also really interesting, in
+ particular the shift with the maxima I spent quite good time thinking on
+ why the solution was off by almost a factor of two.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is something specific that surprised, confused, or intrigued you, or
+ that you struggled with?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+As stated in some of the comments, I struggled a lot with units, I tried
+ to just do the evaluations at the end, but still I always made some mistake,
+ I've thinking in using Mathematica for my algebra and evaluation of the
+ expressions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is something that this problem set made you want to know more about?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I really like statistical mechanics, and I think I want to learn a little
+ bit more from each one of the problems, in particular with the chemical
+ potential.
+\end_layout
+
+\begin_layout Enumerate
+I think statistical mechanics is one of my favorites areas of physics, and
+ I really want to explore a little bit more on some other interesting topics,
+ for example phonons, condensates and non-equilibrium phenomena, just to
+ say something.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
