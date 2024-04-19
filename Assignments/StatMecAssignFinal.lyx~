@@ -1,0 +1,317 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Statistical Mechanics: Last Assignment
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores Calderon
+\end_layout
+
+\begin_layout Problem
+A system, in thermal contact with a reservoir at temperature T, has four
+ possible states, with the energies shown on the left of the diagram.
+ (
+\series bold
+Condition A
+\series default
+) It undergoes a process that raises the energy of each state by ΔE > 0,
+ as shown on the right (
+\series bold
+Condition B
+\series default
+).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+When the system changes from 
+\series bold
+Condition A
+\series default
+ to 
+\series bold
+Condition B
+\series default
+, does the partition function 
+\begin_inset Formula $\mathcal{Z}$
+\end_inset
+
+ increase, decrease, or stay the same? If 
+\begin_inset Formula $\mathcal{Z}$
+\end_inset
+
+ changes, by what factor does it change? 
+\end_layout
+
+\begin_layout Enumerate
+When the system changes from 
+\series bold
+Condition A
+\series default
+ to 
+\series bold
+Condition B
+\series default
+, does the probability of finding the system in state 2 increase, decrease,
+ or stay the same? If the probability changes, by what factor does it change?
+ 
+\end_layout
+
+\begin_layout Enumerate
+When the system changes from 
+\series bold
+Condition A
+\series default
+ to 
+\series bold
+Condition B
+\series default
+, does the ratio of the probability of finding the system in state 1 to
+ the probability of finding the system in state 2, 
+\begin_inset Formula $P(1)/P(2)$
+\end_inset
+
+, increase, decrease, or stay the same? If the probability ratio changes,
+ by what factor does it change? 
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Because the system is in contact with a heat reservoir and there is no particle
+ exchange, we're thinking in a canonical ensemble, and we know that in this
+ ensemble, the partition function is defined as the sum over states of the
+ Boltzmann factors, this is 
+\begin_inset Formula 
+\[
+\mathcal{Z}=\sum_{i}\exp\left(-\beta\varepsilon_{i}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta=1/k_{B}T$
+\end_inset
+
+, and 
+\begin_inset Formula $\varepsilon_{i}$
+\end_inset
+
+ corresponds to the energy of that state.
+ Now, with this in mind we can write down the partition function for the
+ system in the Condition A, and Condition B, and then compare them.
+ Let's do that, for A, we have 
+\begin_inset Formula 
+\begin{align*}
+\mathcal{Z}_{A} & =\sum_{i}\exp\left(-\beta\varepsilon_{i}\right),\\
+ & =\exp\left(-\beta\epsilon_{0}\right)+\exp\left(-\beta\varepsilon_{1}\right)+\exp\left(-\beta\varepsilon_{2}\right)+\exp\left(-\beta\varepsilon_{3}\right),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\varepsilon_{0}=0,\varepsilon_{1}=1,\varepsilon_{2}=2,\varepsilon_{3}=3$
+\end_inset
+
+, we can write the previous expression in a nicer way, of course, but for
+ our purposes that will be enough.
+ Now, let's write the partition function for the B condition, this is
+\begin_inset Formula 
+\[
+\mathcal{Z}_{B}=\sum_{i}\exp\left(-\beta\epsilon_{i}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\epsilon_{i}=\varepsilon+\Delta E$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align*}
+\mathcal{Z}_{B} & =\sum_{i}\exp\left(-\beta\left(\varepsilon_{i}+\Delta E\right)\right),\\
+ & =\sum_{i}\exp\left(-\beta\varepsilon_{i}\right)\exp\left(-\beta\Delta E\right),
+\end{align*}
+
+\end_inset
+
+and in the last expression, the term with the 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ is independent of the sum, then we can put that term outside the sum symbol,
+ thus 
+\begin_inset Formula 
+\[
+\mathcal{Z}_{B}=\exp\left(-\beta\Delta E\right)\sum_{i}\exp\left(-\beta\varepsilon_{i}\right),
+\]
+
+\end_inset
+
+but the expression in the sum is the partition function for the Condition
+ A, this is 
+\begin_inset Formula 
+\[
+\mathcal{Z}_{B}=\exp\left(-\beta\Delta E\right)\mathcal{Z}_{A},
+\]
+
+\end_inset
+
+then, as we can see, the partition function increases by a factor of determined
+ by the 
+\begin_inset Quotes eld
+\end_inset
+
+excess
+\begin_inset Quotes erd
+\end_inset
+
+ of energy in the new configuration, this is 
+\begin_inset Formula $\exp\left(-\beta\Delta E\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, let's calculate the probability for finding the system in the state
+ 2, in the Condition A, this is given by 
+\begin_inset Formula 
+\[
+P\left(\varepsilon_{2}\right)_{A}=\frac{\exp\left(-\beta\varepsilon_{2}\right)}{\mathcal{Z}_{A}},
+\]
+
+\end_inset
+
+now, let's compute the same probability using Condition B, this is
+\begin_inset Formula 
+\begin{align*}
+P\left(\epsilon_{2}\right)_{B} & =\frac{\exp\left(-\beta\epsilon_{2}\right)}{\mathcal{Z}_{B}},\\
+ & =\frac{\exp\left(-\beta\left(\varepsilon_{2}+\Delta E\right)\right)}{\exp\left(-\beta\Delta E\right)\mathcal{Z}_{A}},\\
+ & =\frac{\exp\left(-\beta\Delta E\right)\exp\left(-\beta\varepsilon_{2}\right)}{\exp\left(-\beta\Delta E\right)\mathcal{Z}_{A}},
+\end{align*}
+
+\end_inset
+
+and as we can see the 
+\begin_inset Quotes eld
+\end_inset
+
+excess
+\begin_inset Quotes erd
+\end_inset
+
+ in the partition function cancels out, leaving us with 
+\begin_inset Formula 
+\[
+P\left(\epsilon_{2}\right)_{B}=\frac{\exp\left(-\beta\varepsilon_{2}\right)}{\mathcal{Z}_{A}},
+\]
+
+\end_inset
+
+but this is the same expression for the probability in the Condition A,
+ therefore 
+\begin_inset Formula 
+\[
+P\left(\epsilon_{2}\right)_{B}=P\left(\epsilon_{2}\right)_{A},
+\]
+
+\end_inset
+
+and from this we can conclude that the probability stays the same.
+\end_layout
+
+\end_body
+\end_document
