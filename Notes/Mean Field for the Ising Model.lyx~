@@ -1,0 +1,260 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Now, we're going to move to the case in which we consider the interaction
+ between spins.
+ This, as we will see turns out to be very difficult, and in general is
+ not even possible to find an analytic expression for the partition function
+ without making any approximation.
+ To see this let's go back to the definition of the Hamiltonian and let's
+ try to write 
+\begin_inset Formula $Z$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+Z=\sum_{\sigma_{1}}\sum_{\sigma_{2}}\cdots\sum_{\sigma_{N}}\exp\left[-\beta\left(-J\sum_{\left\langle i,j\right\rangle }\sigma_{i}\sigma_{j}-h\sum_{i}\sigma_{i}\right)\right],
+\]
+
+\end_inset
+
+and let's also remember that the notation 
+\begin_inset Formula $\sum_{\left\langle i,j\right\rangle }$
+\end_inset
+
+ refers to a special kind of sum, in which we take into consideration the
+ nearest neighbors, and as we can see, for example if the spin 
+\begin_inset Formula $i$
+\end_inset
+
+ is connected with the spin 
+\begin_inset Formula $j$
+\end_inset
+
+ this spin is also connected with it's neighbors, which makes impossible
+ to factorize the partition function.
+ So we're going to take another route in order to solve the problem, instead
+ we're going to find an expression for the free energy.
+ In particular, we have to work a little bit with the contribution of the
+ interaction to the total internal energy.
+ 
+\end_layout
+
+\begin_layout Standard
+In previous sections we find that, for the non-interacting case, the free
+ energy is given by the following expression 
+\begin_inset Formula 
+\[
+F=-NhM+Nk_{B}T\left(\left(\frac{1+M}{2}\right)\log\left(\frac{1+M}{2}\right)+\left(\frac{1-M}{2}\right)\log\left(\frac{1-M}{2}\right)\right),
+\]
+
+\end_inset
+
+which can also be expressed as 
+\begin_inset Formula 
+\[
+\frac{F}{N}=-hM+k_{B}T\left(\left(\frac{1+M}{2}\right)\log\left(\frac{1+M}{2}\right)+\left(\frac{1-M}{2}\right)\log\left(\frac{1-M}{2}\right)\right),
+\]
+
+\end_inset
+
+and let's remember that the definition of the free energy is given by 
+\begin_inset Formula 
+\[
+F=E-TS,
+\]
+
+\end_inset
+
+and we've already computed the entropy of the system, and also the energy
+ due to the external magnetic field, thus what we have left is to compute
+ the contribution of the interaction between spins to the internal energy,
+ this is, we need to compute 
+\begin_inset Formula 
+\[
+E_{int}=-J\sum_{\left\langle i,j\right\rangle }\sigma_{i}\sigma_{j},
+\]
+
+\end_inset
+
+but as we said earlier in the discussion this term tend to be quite complicated,
+ thus, what we're going to do is the following: instead of working with
+ that expression, let's work with the average, this is 
+\begin_inset Formula 
+\[
+\left\langle E_{int}\right\rangle =-J\sum_{\left\langle i,j\right\rangle }\left\langle \sigma_{i}\sigma_{j}\right\rangle ,
+\]
+
+\end_inset
+
+but still, this expression is hard to work with, thus, let's do this approximati
+on 
+\begin_inset Formula 
+\[
+\left\langle \sigma_{i}\sigma_{j}\right\rangle \approx\left\langle \sigma_{i}\right\rangle \left\langle \sigma_{j}\right\rangle ,
+\]
+
+\end_inset
+
+from the mathematical point of view that approximation makes no sense at
+ all, however, we will find that actually, works quite great.
+ Now, if we trust the previous equation we have 
+\begin_inset Formula 
+\[
+\left\langle E_{int}\right\rangle \approx-J\sum_{\left\langle i,j\right\rangle }\left\langle \sigma_{i}\right\rangle \left\langle \sigma_{j}\right\rangle ,
+\]
+
+\end_inset
+
+now, let's think in physical terms: 
+\begin_inset Formula $\left\langle \sigma_{i}\right\rangle $
+\end_inset
+
+ corresponds to the expectation value of each spin, thus, it makes sense
+ that we consider the expectation value as the magnetization, because, on
+ average that what we observe, thus 
+\begin_inset Formula 
+\[
+\left\langle \sigma_{i}\right\rangle =M,
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+\left\langle E_{int}\right\rangle \approx-J\sum_{\left\langle i,j\right\rangle }M^{2},
+\]
+
+\end_inset
+
+but still, we have do to a little bit of work with the sum, and here its
+ common to define the coordination number 
+\begin_inset Formula $q$
+\end_inset
+
+, which it is the number of neighbors that each spin has, thus if we have
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ spins and we consider 
+\begin_inset Formula $q$
+\end_inset
+
+ neighbors then, the sum will be 
+\begin_inset Formula $Nq$
+\end_inset
+
+, however, this overcounts by a factor of two, because we're counting twice
+ the interactions, and therefore, we need to divide by a factor of 2, and
+ all this reasoning will lead us to the following 
+\begin_inset Formula 
+\[
+\left\langle E_{int}\right\rangle \approx-\frac{1}{2}NqJM^{2},
+\]
+
+\end_inset
+
+and from this, we have that the free energy is given by 
+\begin_inset Formula 
+\[
+\frac{F}{N}=-\frac{1}{2}qJM^{2}-hM+k_{B}T\left(\left(\frac{1+M}{2}\right)\log\left(\frac{1+M}{2}\right)+\left(\frac{1-M}{2}\right)\log\left(\frac{1-M}{2}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

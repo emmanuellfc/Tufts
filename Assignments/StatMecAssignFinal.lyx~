@@ -97,6 +97,171 @@ J.
  Emmanuel Flores Calderon
 \end_layout
 
+\begin_layout Date
+Apr 29, 2024.
+\end_layout
+
+\begin_layout Problem
+Consider a paramagnetic system consisting of four distinguishable, uncoupled,
+ spin-½ magnetic dipoles.
+ The diagram shows all the possible configurations of the system.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How many microstates does the system have? 
+\end_layout
+
+\begin_layout Enumerate
+How many macro-states does it have? 
+\end_layout
+
+\begin_layout Enumerate
+What is the probability of finding the system in the most probable macrostate?
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+Let's begin
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This is a problem of counting, and because the system can only be in to
+ states, the number os microstates, this is; the number of possible configuratio
+ns is given by 
+\begin_inset Formula 
+\[
+2^{n},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the number of particles in the ensemble, in this case, this number correspon
+ds to 
+\begin_inset Formula $n=4$
+\end_inset
+
+, thus we have 
+\begin_inset Formula 
+\[
+\Omega=2^{4},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\Omega=16.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Because the dipoles are uncoupled, their spins can be aligned independently,
+ which implies that the possible macro states will correspond to the total
+ spin of the system.
+ The total spin can range from +2 (all spins up) to -2 (all spins down).
+ Therefore, there will be a total of (2 * total spin + 1) macro states,
+ this is 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(2\times2+1)=5$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ We're considering that the spins are distinguishable, then we can form
+ the following combinations:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+All spins up (+2) 
+\end_layout
+
+\begin_layout Itemize
+Three spins up, one spin down (+1) 
+\end_layout
+
+\begin_layout Itemize
+Two spins up, two spins down (0) 
+\end_layout
+
+\begin_layout Itemize
+Three spins down, one spin up (-1) 
+\end_layout
+
+\begin_layout Itemize
+All spins down (-2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The most probable state is the one with the bigger number of microstates,
+ in this case; this macrostate corresponds to having two spins up and two
+ spins down, now, in the following we're going to think that any microstate
+ is equally likely, therefore, the probability will be just the ratio of
+ the number or microstates with the total number of possibilities, and in
+ this case, the number of microstates with tow spins up and two spins down
+ is given by 9, then it follows that 
+\begin_inset Formula 
+\[
+P=\frac{9}{16}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Problem
 A system, in thermal contact with a reservoir at temperature T, has four
  possible states, with the energies shown on the left of the diagram.
@@ -305,7 +470,7 @@ but this is the same expression for the probability in the Condition A,
  therefore 
 \begin_inset Formula 
 \[
-P\left(\epsilon_{2}\right)_{B}=P\left(\epsilon_{2}\right)_{A},
+P\left(\epsilon_{2}\right)_{B}=P\left(\varepsilon_{2}\right)_{A},
 \]
 
 \end_inset
@@ -313,5 +478,1175 @@ P\left(\epsilon_{2}\right)_{B}=P\left(\epsilon_{2}\right)_{A},
 and from this we can conclude that the probability stays the same.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+In class, we worked out many properties of a degenerate Fermi gas in three
+ dimensions.
+ In this problem, you will repeat the process in two dimensions.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+This may appear to be a purely academic exercise – after all, we live in
+ a three- dimensional world – but it’s actually experimentally realizable.
+ In the analysis we did in class, we assumed the particles were confined
+ in a cubical box with equal sides 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ But suppose one of the sides, say in the 
+\begin_inset Formula $z$
+\end_inset
+
+ direction, is much smaller, so instead of in a cube, the particles are
+ in a thin sheet.
+ Then the energy spacings between orbitals associated with motion in the
+ small dimension will be much larger, and if the spacing between the two
+ lowest energy levels is much greater than 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+, only the ground state will be occupied.
+ In that case the electron gas is effectively two-dimensional in its properties
+ and behavior, even though the film has nonzero thickness in the third dimension.
+ Suppose we deposit a metal film (on an insulating substrate) that is 10
+ atomic layers thick.
+ Estimate how low the temperature would have to be in order for the electron
+ gas to behave as a two-dimensional system.
+\end_layout
+
+\begin_layout Enumerate
+For such a two-dimensional Fermi gas, derive appropriate expressions for
+ the Fermi energy and density of states.
+ Also determine how the heat capacity varies with temperature (you don’t
+ have to work out an exact expression, but figure out the 
+\begin_inset Formula $T$
+\end_inset
+
+-dependence).
+ Discuss any similarities or differences from the three- dimensional case.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+1.
+ We know that the eigen-energies for the 
+\begin_inset Quotes eld
+\end_inset
+
+particle in a box
+\begin_inset Quotes erd
+\end_inset
+
+ problem are given by 
+\begin_inset Formula 
+\[
+E=\frac{n\pi^{2}\hbar^{2}}{2mL^{2}},
+\]
+
+\end_inset
+
+On the other hand, because the film is much thinner in the one of the spatial
+ dimensions, we have that the size of the box becomes 
+\begin_inset Formula $𝑑$
+\end_inset
+
+ d in that direction.
+ It follows that, the energy spacing 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ between the first two energy levels (ground state and first excited state)
+ in the dimension is approximately given by 
+\begin_inset Formula 
+\[
+\Delta E=\frac{\pi^{2}\hbar^{2}}{2md^{2}},
+\]
+
+\end_inset
+
+and even more, if 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ is much greater than 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+, then, only the ground state will be occupied, and the system effectively
+ behaves as two-dimensional, which imposes the following condition
+\begin_inset Formula 
+\[
+\Delta E\gg k_{B}T,
+\]
+
+\end_inset
+
+therefore, it follows that 
+\begin_inset Formula 
+\[
+\frac{\pi^{2}\hbar^{2}}{2md^{2}}\gg k_{B}T,
+\]
+
+\end_inset
+
+and in this form, we have the following condition for the temperature 
+\begin_inset Formula 
+\[
+T\ll\frac{\pi^{2}\hbar^{2}}{2mk_{B}d^{2}}.
+\]
+
+\end_inset
+
+2) For this part we first need to compute the density of states and having
+ that we can derive the partition function, and from this all the other
+ thermodynamical quantities.
+ So, let's begin: we know that the density of states is defined as follows
+ 
+\begin_inset Formula 
+\[
+g\left(k\right)dk=\frac{\text{volume in }k\text{ -space of a complete speherical shell}}{\text{volume in }k\text{ -space occupied per allowed state}},
+\]
+
+\end_inset
+
+but that was for the 3D case, and in 2D, we have to make some changes, in
+ particular, we have the following definition
+\begin_inset Formula 
+\[
+g\left(k\right)dk=\frac{\text{area in }k\text{ -space of a complete speherical shell}}{\text{area in }k\text{ -space occupied per allowed state}},
+\]
+
+\end_inset
+
+thus, we have 
+\begin_inset Formula 
+\[
+g\left(k\right)dk=\frac{2\pi kdk}{\left(\frac{2\pi}{L}\right)^{2}}\times2,
+\]
+
+\end_inset
+
+the factor in the denominator comes from the solution of the solution of
+ the Schrödinger equation for a particle in a box, and the overall two comes
+ from the spin degeneracy of the electrons.
+ And from this we can obtain the following expression 
+\begin_inset Formula 
+\[
+g\left(k\right)dk=\frac{L^{2}}{\pi}kdk,
+\]
+
+\end_inset
+
+and now, with this in mind let's write the density of states in terms of
+ the energy, and in order to to that, we're going to consider that 
+\begin_inset Formula 
+\[
+E=\frac{\hbar^{2}k^{2}}{m},
+\]
+
+\end_inset
+
+and from this it follows that 
+\begin_inset Formula 
+\[
+dE=\frac{\hbar^{2}}{m}kdk\implies kdk=\frac{m}{\hbar^{2}}dE,
+\]
+
+\end_inset
+
+thus, we can rewrite the density of states as 
+\begin_inset Formula 
+\[
+g\left(k\right)dk\rightarrow g\left(E\right)dE=\frac{mL^{2}}{\pi\hbar^{2}}dE,
+\]
+
+\end_inset
+
+and even more, let's call 
+\begin_inset Formula $L^{2}=A$
+\end_inset
+
+, then, we have that the density of states can be written as 
+\begin_inset Formula 
+\[
+g\left(E\right)dE=\frac{mA}{\pi\hbar^{2}}dE.
+\]
+
+\end_inset
+
+Now, for the determination of the Fermi Energy, let's compute 
+\begin_inset Formula 
+\[
+N=\int_{0}^{\infty}\frac{g\left(E\right)dE}{\exp\left[\beta\left(E-\mu\right)\right]+1},
+\]
+
+\end_inset
+
+at 
+\begin_inset Formula $T=0$
+\end_inset
+
+, but in this regime, the fermi statistics takes the form of a step function,
+ and thus, the previous equation transforms into 
+\begin_inset Formula 
+\[
+N=\int_{0}^{E_{F}}g\left(E\right)dE,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies N=\frac{mA}{\pi\hbar^{2}}\int_{0}^{E_{F}}dE,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{N}{A}=\frac{m}{\pi\hbar^{2}}E_{F},
+\]
+
+\end_inset
+
+and making 
+\begin_inset Formula $n=N/A$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+n=\frac{m}{\pi\hbar^{2}}E_{F},
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+E_{F}=\frac{\pi\hbar^{2}}{m}n,
+\]
+
+\end_inset
+
+and now, if 
+\begin_inset Formula $T\neq0$
+\end_inset
+
+, then we have to deal with the whole integral, which usually can be recasted
+ in terms of the polylogarithm functions, or we can use the Sommerfeld approxima
+tion, and in any case, in order to compute the heat capacity, we first need
+ to compute the internal energy, and then derive with respect to the temperature
+, but first let's focus on the internal energy, which can be computed via
+ the expectation value
+\begin_inset Formula 
+\[
+U=\left\langle E\right\rangle ,
+\]
+
+\end_inset
+
+which in this kind of statistics is given by
+\begin_inset Formula 
+\[
+U=\int_{0}^{\infty}\frac{Eg\left(E\right)dE}{\exp\left[\beta\left(E-\mu\right)\right]+1},
+\]
+
+\end_inset
+
+and now, if we put the density of states previously computed we have that
+ 
+\begin_inset Formula 
+\[
+U=\frac{mA}{\pi\hbar^{2}}\int_{0}^{\infty}\frac{EdE}{\exp\left[\beta\left(E-\mu\right)\right]+1},
+\]
+
+\end_inset
+
+now, I decided to go with Sommerfeld's approximation, which reads 
+\begin_inset Formula 
+\[
+U=\int_{0}^{\mu}Eg\left(E\right)dE+\frac{\pi^{2}}{6}\left(k_{B}T\right)^{2}\left[\frac{d}{dE}\left(Eg\left(E\right)\right)\right]_{\mu}+\cdots,
+\]
+
+\end_inset
+
+and from this we have that 
+\begin_inset Formula 
+\[
+\int_{0}^{\mu}Eg\left(E\right)dE=\frac{mA}{\pi\hbar^{2}}\int_{0}^{\mu}EdE,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\int_{0}^{\mu}Eg\left(E\right)dE=\frac{mA}{2\pi\hbar^{2}}\mu^{2},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\frac{d}{dE}\left(Eg\left(E\right)\right)=\frac{d}{dE}\left(E\frac{mA}{\pi\hbar^{2}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{d}{dE}\left(Eg\left(E\right)\right)=\frac{mA}{\pi\hbar^{2}},
+\]
+
+\end_inset
+
+therefore, we have that the internal energy is given by 
+\begin_inset Formula 
+\[
+U\approx\frac{mA}{2\pi\hbar^{2}}\mu^{2}+\frac{\pi^{2}}{6}\frac{mA}{\pi\hbar^{2}}\left(k_{B}T\right)^{2},
+\]
+
+\end_inset
+
+and from this it follows that the heat capacity, which is defined by 
+\begin_inset Formula 
+\[
+C=\frac{\partial U}{\partial T},
+\]
+
+\end_inset
+
+is given by 
+\begin_inset Formula 
+\[
+C=\frac{\pi^{2}}{3}\frac{mA}{\pi\hbar^{2}}k_{B}^{2}T,
+\]
+
+\end_inset
+
+which means that the heat capacity depends linearly with the temperature,
+ which is the same result as the three dimensional case, up to some constants,
+ of course, which come from the differences between the density of states.
+ Now, let me elaborate a little more on this:in both cases, 2D and 3D, the
+ heat capacity shows a linear dependence on temperature (T) at low temperatures
+ which is where the Sommerfeld approximation is good, on the other hand
+ the key difference lies in the density of states, as stated before, in
+ the 2D, the density of states scales linearly with the wave vector 
+\begin_inset Formula $k$
+\end_inset
+
+, whereas in 3D, it scales as 
+\begin_inset Formula $k^{2}$
+\end_inset
+
+, and this leads to a different pre-factor in the final expression for the
+ heat capacity.
+ And finally, while both show a temperature dependence, the pre-factor in
+ the 2D case is smaller than in 3D, which indicates that a 2D electron gas
+ will have a lower heat capacity compared to a 3D gas with the same number
+ of electrons and temperature.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+In the case of the Fermi gas at 
+\begin_inset Formula $T=0$
+\end_inset
+
+, we found 
+\begin_inset Formula $E_{F}=\mu\left(T=0\right)$
+\end_inset
+
+ by setting the integral of the occupancy over all energies, weighted by
+ the density of states, equal to the number of particles, 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ We can do a similar calculation for a gas of spinless bosons, at finite
+ nonzero temperature.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Show that such a calculation leads to an implicit relationship for μ given
+ by:
+\begin_inset Formula 
+\[
+\int\frac{\sqrt{x}}{\exp\left(x-\bar{\mu}\right)-1}dx=\frac{\sqrt{\pi}}{2}\frac{n}{n_{Q}},\hspace{1em}\bar{\mu}=\frac{\mu}{k_{B}T}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n_{Q}$
+\end_inset
+
+ is our usual quantum concentration.
+ (Note: This expression is valid provided the temperature is high enough
+ that the population of the ground state is small compared to 
+\begin_inset Formula $N$
+\end_inset
+
+ – that is, not in the Bose- Einstein condensation regime.)
+\end_layout
+
+\begin_layout Enumerate
+Show that, in the limit of a classical ideal gas, this expression leads
+ to the result previously derived for the chemical potential of an ideal
+ gas.
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+a) In general the density of states is given by the following expression
+ 
+\begin_inset Formula 
+\[
+g\left(k\right)dk=\frac{\left(2S+1\right)4\pi k^{2}dk}{\left(2\pi/L\right)^{3}},
+\]
+
+\end_inset
+
+where the factor 
+\begin_inset Formula $\left(2S+1\right)$
+\end_inset
+
+ takes into account the degeneracy in each level.
+ On the other hand, we know that the Bose-Einstein Statistics is given by
+ 
+\begin_inset Formula 
+\[
+f\left(E\right)=\frac{1}{\exp\left[\beta\left(E-\mu\right)\right]-1},
+\]
+
+\end_inset
+
+and before doing any calculations, let's rewrite the density of states in
+ terms of energy, which is given by 
+\begin_inset Formula 
+\[
+g\left(E\right)dE=\frac{\left(2S+1\right)VE^{1/2}dE}{\left(2\pi\right)^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{3/2},
+\]
+
+\end_inset
+
+and with that, let's do the following 
+\begin_inset Formula 
+\[
+N=\int_{0}^{\infty}f\left(E\right)g\left(E\right)dE,
+\]
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\[
+N=\int_{0}^{\infty}\frac{1}{\exp\left[\beta\left(E-\mu\right)\right]-1}\frac{\left(2S+1\right)VE^{1/2}dE}{\left(2\pi\right)^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{3/2}dE,
+\]
+
+\end_inset
+
+which can be rewritten as 
+\begin_inset Formula 
+\[
+\frac{N}{V}=\frac{\left(2S+1\right)}{2\pi^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{3/2}\int_{0}^{\infty}\frac{E^{1/2}dE}{\exp\left[\beta\left(E-\mu\right)\right]-1},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $n=N/V$
+\end_inset
+
+, then it follows that 
+\begin_inset Formula 
+\[
+n=\frac{\left(2S+1\right)}{2\pi^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{3/2}\int_{0}^{\infty}\frac{E^{1/2}dE}{\exp\left[\beta\left(E-\mu\right)\right]-1}
+\]
+
+\end_inset
+
+on the other hand, if we make the following change of variable 
+\begin_inset Formula 
+\[
+x=\beta E\implies dE=\frac{dx}{\beta},
+\]
+
+\end_inset
+
+thus it follows that 
+\begin_inset Formula 
+\[
+E^{1/2}=\frac{x^{1/2}}{\beta^{1/2}},
+\]
+
+\end_inset
+
+then, we have 
+\begin_inset Formula 
+\[
+n=\frac{\left(2S+1\right)}{2\pi^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{3/2}\frac{1}{\beta^{3/2}}\int_{0}^{\infty}\frac{x^{1/2}dx}{\exp\left[x-\beta\mu\right]-1},
+\]
+
+\end_inset
+
+and if we make 
+\begin_inset Formula $\beta\mu=\bar{\mu}$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+n=\frac{\left(2S+1\right)}{2\pi^{2}}\left(\frac{2m}{\hbar^{2}}\right)^{3/2}\frac{1}{\beta^{3/2}}\int_{0}^{\infty}\frac{x^{1/2}dx}{\exp\left[x-\bar{\mu}\right]-1},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+n\frac{\beta^{3/2}\left(2\pi\right)^{2}}{\left(2S+1\right)}\left(\frac{\hbar}{2m}\right)^{3/2}=\int_{0}^{\infty}\frac{x^{1/2}dx}{\exp\left[x-\bar{\mu}\right]-1},
+\]
+
+\end_inset
+
+and now, let's play a little bit with the math on the left hand side of
+ the previous expression 
+\begin_inset Formula 
+\[
+n\frac{\beta^{3/2}2\pi^{2}}{\left(2S+1\right)}\left(\frac{\hbar}{2m}\right)^{3/2}=n\frac{2\pi^{2}}{\left(2S+1\right)}\left(\frac{\hbar}{2mk_{B}T}\right)^{3/2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies n\frac{2\pi^{2}}{\left(2S+1\right)}\left(\frac{\hbar}{2mk_{B}T}\right)^{3/2}=n\frac{2\pi^{2}}{\left(2S+1\right)}\left(\frac{\frac{\hbar}{2\pi}}{\frac{2mk_{B}T}{2\pi}}\right)^{3/2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies n\frac{2\pi^{2}}{\left(2S+1\right)}\left(\frac{\frac{\hbar}{2\pi}}{\frac{2mk_{B}T}{2\pi}}\right)^{3/2}=n\frac{2\pi^{2}}{\left(2S+1\right)}\left(\frac{\frac{\hbar}{2\pi}}{\frac{2mk_{B}T}{2\pi}}\right)^{3/2}\frac{\frac{1}{\hbar^{3}}}{\frac{1}{\hbar^{3}}},
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula 
+\[
+n_{Q}=\frac{1}{\hbar^{3}}\left(\frac{mk_{B}T}{2\pi}\right)^{3/2},
+\]
+
+\end_inset
+
+thus if follows that 
+\begin_inset Formula 
+\[
+n\frac{2\pi^{2}}{\left(2S+1\right)}\left(\frac{\frac{\hbar}{2\pi}}{\frac{2mk_{B}T}{2\pi}}\right)^{3/2}\frac{\frac{1}{\hbar^{3}}}{\frac{1}{\hbar^{3}}}=\frac{n}{n_{Q}}\frac{2\pi^{1/2}\hbar^{-3/2}}{\left(2S+1\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and from this it follows that 
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}\frac{\sqrt{x}}{\exp\left(x-\bar{\mu}\right)-1}dx=\frac{\sqrt{\pi}}{2}\frac{n}{n_{Q}},
+\]
+
+\end_inset
+
+just as we wanted.
+ b) Now for this part we have remember that in the case in which 
+\begin_inset Formula $\beta\left(E-\mu\right)\gg1$
+\end_inset
+
+, Bose statistics tend to the Boltzmann distribution, then, using that limit
+ we also have that 
+\begin_inset Formula 
+\[
+\beta\left(E-\mu\right)\gg1\implies\exp\left(x-\bar{\mu}\right)\gg1,
+\]
+
+\end_inset
+
+thus it follows that 
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}\frac{\sqrt{x}}{\exp\left(x-\bar{\mu}\right)-1}dx\approx\int_{0}^{\infty}\frac{\sqrt{x}}{\exp\left(x-\bar{\mu}\right)}dx,
+\]
+
+\end_inset
+
+but the previous integral is given by 
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}\frac{\sqrt{x}}{\exp\left(x-\bar{\mu}\right)}dx=\frac{\exp\left(\mu\right)\sqrt{2}}{2},
+\]
+
+\end_inset
+
+thus we have that 
+\begin_inset Formula 
+\[
+\frac{\exp\left(\bar{\mu}\right)\sqrt{\pi}}{2}=\frac{\sqrt{\pi}}{2}\frac{n}{n_{Q}},
+\]
+
+\end_inset
+
+and from this 
+\begin_inset Formula 
+\[
+\bar{\mu}=\ln\left(\frac{n}{n_{Q}}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\mu=k_{B}T\ln\left(\frac{n}{n_{Q}}\right),
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula 
+\[
+\frac{1}{n_{Q}}=\lambda_{\text{th}}^{3},
+\]
+
+\end_inset
+
+thus we have 
+\begin_inset Formula 
+\[
+\mu=k_{B}T\ln\left(n\lambda_{\text{th}}^{3}\right),
+\]
+
+\end_inset
+
+which corresponds to the chemical potential for an ideal gas.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+In class, we discussed the Debye model of the heat capacity of a solid due
+ to lattice vibrations, using the blackbody radiation model with three significa
+nt modifications:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Three polarizations rather than two, because both longitudinal and transverse
+ vibrations are possible;
+\end_layout
+
+\begin_layout Itemize
+A maximum possible frequency 
+\begin_inset Formula $ω_{D}$
+\end_inset
+
+ , owing to the fact that there is a minimum wavelength related to the spacing
+ between atoms; 
+\end_layout
+
+\begin_layout Itemize
+A wave speed of 
+\begin_inset Formula $v_{s}$
+\end_inset
+
+, the speed of sound in the solid, rather than c.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+From this model, we found that at low temperatures, the heat capacity is
+ proportional to 
+\begin_inset Formula $T^{3}$
+\end_inset
+
+.
+ We still assumed, however, that the wave speed is independent of frequency.
+ Suppose, instead, that the wave speed is related to frequency by: 
+\begin_inset Formula 
+\[
+v=v_{0}\left(\frac{\omega}{\omega_{D}}\right)^{\alpha},
+\]
+
+\end_inset
+
+where the exponent 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a constant greater than or equal to zero.
+ Repeat the Debye calculation for this case, and determine the temperature
+ dependence of the heat capacity.
+ Check that your result is consistent with the Debye result in the appropriate
+ limit.
+ 
+\end_layout
+
+\begin_layout Solution*
+As stated in the problem, for the Debye model we used the following dispersion
+ relationship
+\begin_inset Formula 
+\[
+\omega=v_{s}k,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $k$
+\end_inset
+
+ is the wave vector, and 
+\begin_inset Formula $v_{s}$
+\end_inset
+
+ the velocity of sound.
+ Here, however, we're going to change that dispersion relationship, and
+ we're going to rewrite the density of states of lattice vibrations.
+ But before doing any calculations, I think that the dispersion relationship
+ is wrong, and here I plan to prove why I state that, in particular, I think
+ the dispersion relationship should be written as 
+\begin_inset Formula 
+\[
+v=v_{0}\left(\frac{\omega_{D}}{\omega}\right)^{\alpha},
+\]
+
+\end_inset
+
+and with this in mind I plan to prove that by computing 
+\begin_inset Formula 
+\[
+\int_{0}^{\omega_{D}}g\left(\omega\right)d\omega=3N,
+\]
+
+\end_inset
+
+I can recover the Debye frequency.
+ Now, we know that 
+\begin_inset Formula 
+\[
+g\left(k\right)dk=\frac{4\pi k^{2}dk}{\left(\frac{2\pi}{L}\right)^{3}}\times3,
+\]
+
+\end_inset
+
+on the other hand we have that 
+\begin_inset Formula $k=\omega/v$
+\end_inset
+
+, which implies that 
+\begin_inset Formula 
+\[
+k=\frac{\omega}{v_{0}}\left(\frac{\omega}{\omega_{D}}\right)^{\alpha}\implies k=\frac{1}{v_{0}}\frac{\omega^{\alpha+1}}{\omega_{D}^{\alpha}},\implies k^{2}=\frac{1}{v_{0}^{2}}\frac{\omega^{2\alpha+2}}{\omega_{D}^{2\alpha}}
+\]
+
+\end_inset
+
+and from this it follows that 
+\begin_inset Formula 
+\[
+dk=\frac{\alpha+1}{v_{0}}\frac{\omega^{\alpha}}{\omega_{D}^{\alpha}}d\omega,
+\]
+
+\end_inset
+
+which then, implies that 
+\begin_inset Formula 
+\[
+g\left(\omega\right)d\omega=\frac{12\pi}{\left(\frac{2\pi}{L}\right)^{3}}\left(\frac{1}{v_{0}^{2}}\frac{\omega^{2\alpha+2}}{\omega_{D}^{2\alpha}}\right)\left(\left(\frac{\alpha+1}{v_{0}}\right)\frac{\omega^{\alpha}}{\omega_{D}^{\alpha}}\right)d\omega,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies g\left(\omega\right)d\omega=\frac{12\pi}{\left(\frac{2\pi}{L}\right)^{3}}\left(\frac{\alpha+1}{v_{0}^{3}}\frac{\omega^{3\alpha+2}}{\omega_{D}^{3\alpha}}\right)d\omega,
+\]
+
+\end_inset
+
+now, let's use the condition 
+\begin_inset Formula 
+\[
+\int_{0}^{\omega_{D}}g\left(\omega\right)d\omega=3N,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{12\pi L^{3}}{8\pi^{3}}\frac{\alpha+1}{v_{0}^{3}\omega_{D}^{3\alpha}}\int_{0}^{\omega_{D}}\omega^{3\alpha+2}d\omega=3N,
+\]
+
+\end_inset
+
+but for the integral we simply have 
+\begin_inset Formula 
+\[
+\int_{0}^{\omega_{D}}\omega^{3\alpha+2}d\omega=\frac{1}{3\left(\alpha+1\right)}\omega_{D}^{3\alpha+3},
+\]
+
+\end_inset
+
+then it follows that 
+\begin_inset Formula 
+\[
+\left(\frac{12\pi L^{3}}{8\pi^{3}}\right)\left(\frac{\alpha+1}{v_{0}^{3}\omega_{D}^{3\alpha}}\right)\frac{1}{3\left(\alpha+1\right)}\omega_{D}^{3\alpha+3}=3N,
+\]
+
+\end_inset
+
+and from this 
+\begin_inset Formula 
+\[
+\frac{4L^{3}}{8\pi^{2}v_{0}^{3}\omega_{D}^{3\alpha}}\omega_{D}^{3\alpha+3}=3N,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{L^{3}}{2\pi^{2}v_{0}^{3}}\omega_{D}^{3}=3N,
+\]
+
+\end_inset
+
+and from the last expression we arrive at the following relation for 
+\begin_inset Formula $\omega_{D}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega_{D}=\left(\frac{6N\pi^{2}v_{0}^{3}}{L^{3}}\right)^{1/3},
+\]
+
+\end_inset
+
+which corresponds to the well known Debye frequency.
+ 
+\end_layout
+
+\begin_layout Solution*
+Now with this at hand let's move on with the calculation of the heat capacity.
+ By definition, we have that 
+\begin_inset Formula 
+\[
+C_{X}=\left(\frac{\partial U}{\partial T}\right)_{X},
+\]
+
+\end_inset
+
+thus, first we need to compute the expectation value of the internal energy,
+ and for that we're going to make use of the following 
+\begin_inset Formula 
+\[
+U=\int_{0}^{\omega_{D}}g\left(\omega\right)d\omega\left[\hbar\omega\left(\frac{1}{2}+\frac{1}{\exp\left(\beta\hbar\omega\right)-1}\right)\right],
+\]
+
+\end_inset
+
+but first, let's write 
+\begin_inset Formula $g\left(\omega\right)d\omega$
+\end_inset
+
+ as follows 
+\begin_inset Formula 
+\[
+g\left(\omega\right)d\omega=\gamma\omega^{3\alpha+2}d\omega,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\gamma=\frac{3L^{3}}{2\pi^{2}}\frac{\alpha+1}{v_{0}^{3}\omega_{D}^{3\alpha}},
+\]
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\[
+U=\gamma\hbar\int_{0}^{\omega_{D}}d\omega\left[\left(\omega^{\alpha+1}\right)^{3}\left(\frac{1}{2}+\frac{1}{\exp\left(\beta\hbar\omega\right)-1}\right)\right],
+\]
+
+\end_inset
+
+and from this is follows that 
+\begin_inset Formula 
+\[
+U=\frac{\gamma\hbar}{2\left(3\alpha+4\right)}\omega^{3\alpha+4}+\gamma\hbar\int_{0}^{\omega_{D}}d\omega\frac{\left(\omega^{\alpha+1}\right)^{3}}{\exp\left(\beta\hbar\omega\right)-1},
+\]
+
+\end_inset
+
+and it's important to remember that 
+\begin_inset Formula $\beta=1/k_{B}T$
+\end_inset
+
+, thus, taking the derivative with respect to time of the previous expression
+ we have that 
+\begin_inset Formula 
+\[
+\frac{\partial U}{\partial T}=\gamma\hbar\int_{0}^{\omega_{D}}d\omega\frac{\partial}{\partial T}\left(\frac{\omega^{3\alpha+3}}{\exp\left(\beta\hbar\omega\right)-1}\right),
+\]
+
+\end_inset
+
+and taking the partial derivative we obtain
+\begin_inset Formula 
+\[
+\frac{\partial U}{\partial T}=\gamma\hbar\int_{0}^{\omega_{D}}d\omega\frac{\left(\omega^{\alpha+1}\right)^{3}}{\left(\exp\left(\beta\hbar\omega\right)-1\right)^{2}}\exp\left(\beta\hbar\omega\right)\left(-\frac{\hbar\omega}{k_{B}T^{2}}\right),
+\]
+
+\end_inset
+
+and now, let's play a little bit with the equation, just to find a nicer
+ expression for the integral
+\begin_inset Formula 
+\[
+\frac{\partial U}{\partial T}=-\gamma\hbar^{2}\int_{0}^{\omega_{D}}d\omega\frac{k_{B}\omega^{3\alpha+4}\exp\left(\beta\hbar\omega\right)}{k_{B}^{2}T^{2}\left(\exp\left(\beta\hbar\omega\right)-1\right)^{2}}=-\gamma\hbar^{2}k_{B}\int_{0}^{\omega_{D}}d\omega\frac{\beta^{2}\omega^{3\alpha+4}\exp\left(\beta\hbar\omega\right)}{\left(\exp\left(\beta\hbar\omega\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+and now, if we make the following change of variable 
+\begin_inset Formula 
+\[
+x=\beta\hbar\omega\implies x_{D}=\beta\hbar\omega_{D},
+\]
+
+\end_inset
+
+then we have 
+\begin_inset Formula 
+\[
+\frac{\partial U}{\partial T}=\frac{\gamma k_{B}\beta^{2}\hbar^{2}}{\left(\beta\hbar\right)^{3\alpha+4}}\int_{0}^{x_{D}}\frac{dx}{\beta\hbar}\frac{x^{3\alpha+4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial U}{\partial T}=\frac{\gamma k_{B}}{\left(\beta\hbar\right)^{3\alpha+3}}\int_{0}^{x_{D}}dx\frac{x^{3\alpha+4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\partial U}{\partial T}=\gamma k_{B}\left[\left(\frac{\omega_{D}}{x_{D}}\right)^{\alpha+1}\right]^{3}\int_{0}^{x_{D}}dx\frac{x^{3\alpha+4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+therefore, we have that 
+\begin_inset Formula 
+\[
+C=\gamma k_{B}\left[\left(\frac{\omega_{D}}{x_{D}}\right)^{\alpha+1}\right]^{3}\int_{0}^{x_{D}}dx\frac{x^{3\alpha+4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+and from the previous expression we can investigate the high/low temperature
+ limits as follows:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For the high 
+\begin_inset Formula $T$
+\end_inset
+
+ limit we have 
+\begin_inset Formula $x\rightarrow0$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\left(\exp\left(x\right)-1\right)\rightarrow x$
+\end_inset
+
+, and from this we have 
+\begin_inset Formula 
+\[
+C\rightarrow\gamma k_{B}\left[\left(\frac{\omega_{D}}{x_{D}}\right)^{\alpha+1}\right]^{3}\int_{0}^{x_{D}}dx\frac{x^{3\alpha+4}}{x^{2}},
+\]
+
+\end_inset
+
+and now, if we consider 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+C\rightarrow\gamma k_{B}\left(\frac{\omega_{D}}{x_{D}}\right)^{3}\int_{0}^{x_{D}}dx\frac{x^{4}}{x^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies C\rightarrow\gamma k_{B}\left(\frac{\omega_{D}}{x_{D}}\right)^{3}\frac{x_{D}^{3}}{3},
+\]
+
+\end_inset
+
+and if now we put the definition of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ with 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ too, we have 
+\begin_inset Formula 
+\[
+C\rightarrow\left(\frac{3L^{3}}{2\pi^{2}}\frac{k_{B}}{v_{0}^{3}}\right)\frac{\omega_{D}^{3}}{3},
+\]
+
+\end_inset
+
+but we can also use the definition of the Debye frequency, and that implies
+ that
+\begin_inset Formula 
+\[
+C\rightarrow\left(\frac{L^{3}}{2\pi^{2}}\frac{k_{B}}{v_{0}^{3}}\right)\left(\frac{6N\pi^{2}v_{0}^{3}}{L^{3}}\right)=3Nk_{B},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C\rightarrow3Nk_{B},
+\]
+
+\end_inset
+
+which is expected from the equipartition theorem.
+\end_layout
+
+\begin_layout Itemize
+For low 
+\begin_inset Formula $T$
+\end_inset
+
+ limit, we have 
+\begin_inset Formula $\exp\left(x\right)\gg1$
+\end_inset
+
+, thus, it follows that
+\begin_inset Formula 
+\[
+C\rightarrow\gamma k_{B}\left[\left(\frac{\omega_{D}}{x_{D}}\right)^{\alpha+1}\right]^{3}\int_{0}^{\infty}dx\frac{x^{3\alpha+4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+and again, making 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+C\rightarrow\gamma k_{B}\left(\frac{\omega_{D}}{x_{D}}\right)^{3}\int_{0}^{\infty}dx\frac{x^{4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}},
+\]
+
+\end_inset
+
+but we know the value of the integral, which is given by 
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}dx\frac{x^{4}\exp\left(x\right)}{\left(\exp\left(x\right)-1\right)^{2}}=\frac{4\pi^{4}}{15},
+\]
+
+\end_inset
+
+thus, we have 
+\begin_inset Formula 
+\[
+C\rightarrow\gamma k_{B}\left(\frac{\omega_{D}}{x_{D}}\right)^{3}\frac{4\pi^{4}}{15},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $x_{D}=\beta\hbar\omega_{D}$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+C\rightarrow\gamma k_{B}\left(\frac{\omega_{D}}{\beta\hbar\omega_{D}}\right)^{3}\frac{4\pi^{4}}{15}=\frac{4\pi^{4}\gamma k_{B}^{4}}{15\hbar^{3}}T^{3},
+\]
+
+\end_inset
+
+and if we make 
+\begin_inset Formula 
+\[
+\delta=\frac{4\pi^{4}\gamma k_{B}^{4}}{15\hbar^{3}},
+\]
+
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\[
+C\rightarrow\delta T^{3},
+\]
+
+\end_inset
+
+which agrees with the Debye model.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
