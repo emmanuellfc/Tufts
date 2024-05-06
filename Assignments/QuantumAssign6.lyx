@@ -98,7 +98,7 @@ J.
 \end_layout
 
 \begin_layout Date
-April 23, 2024.
+May 1st, 2024.
 \end_layout
 
 \begin_layout Problem
@@ -148,7 +148,235 @@ where
 \end_layout
 
 \begin_layout Solution*
-Sol
+From time dependent perturbation theory, we have the following general results
+\begin_inset Formula 
+\[
+c_{n}^{\left(0\right)}=\delta_{ni},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{i}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega_{ni}t^{\prime}\right)V_{ni}\left(t^{\prime}\right)dt^{\prime},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{ni}\left(t^{\prime}\right)$
+\end_inset
+
+ is computed using the state kets for the non-perturbed Hamiltonian.
+ Now, in this particular case, we thinking in the ground state, and we have
+ that 
+\begin_inset Formula $V\left(t\right)=F_{0}x\cos\left(\omega t\right)$
+\end_inset
+
+, thus it follows that 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{i}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega_{ni}t^{\prime}\right)\left\langle n|F_{0}x\cos\left(\omega t^{\prime}\right)|0\right\rangle dt^{\prime},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies c_{n}^{\left(1\right)}=-\frac{iF_{0}}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega_{ni}t^{\prime}\right)\cos\left(\omega t^{\prime}\right)\left\langle n|x|0\right\rangle dt^{\prime},
+\]
+
+\end_inset
+
+and for the SHO, we also have the following result 
+\begin_inset Formula 
+\[
+\left\langle n^{\prime}|x|n\right\rangle =\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{n}\delta_{n^{\prime},n-1}+\sqrt{n+1}\delta_{n^{\prime},n+1}\right),
+\]
+
+\end_inset
+
+thus, it follows that 
+\begin_inset Formula 
+\[
+\left\langle n|x|0\right\rangle =\sqrt{\frac{\hbar}{2m\omega}}\delta_{n,1},
+\]
+
+\end_inset
+
+on in other words, just the term 
+\begin_inset Formula $n=1$
+\end_inset
+
+ contributes.
+ Using this result we have 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{iF_{0}}{\hbar}\sqrt{\frac{\hbar}{2m\omega}}\int_{t_{0}}^{t}\exp\left(i\omega_{n0}t^{\prime}\right)\cos\left(\omega t^{\prime}\right)\delta_{n,1}dt^{\prime},
+\]
+
+\end_inset
+
+and now, with this at hand, we can write the cosine function inside the
+ integral in terms of complex exponentials, which will lead us to an easier
+ way of performing the integral, this is 
+\begin_inset Formula 
+\[
+c_{1}^{\left(1\right)}=-\frac{iF_{0}}{\hbar}\sqrt{\frac{\hbar}{2m\omega_{0}}}\int_{t_{0}}^{t}\exp\left(i\omega_{0}t^{\prime}\right)\left[\exp\left(i\omega t^{\prime}\right)-\exp\left(-i\omega t^{\prime}\right)\right]dt^{\prime},
+\]
+
+\end_inset
+
+and from this, it follows that 
+\begin_inset Formula 
+\[
+c_{1}^{\left(1\right)}=-\frac{F_{0}}{\hbar}\sqrt{\frac{\hbar}{2m\omega_{0}}}\left[\frac{\exp\left[i\left(\omega_{0}+\omega\right)t\right]-1}{\omega_{0}+\omega}+\frac{\exp\left[i\left(\omega_{0}-\omega\right)t\right]-1}{\omega_{0}-\omega}\right],
+\]
+
+\end_inset
+
+and in order to make the notation more clear we're not going to put the
+ explicit time dependence, and even more, we're going to make the change
+ 
+\begin_inset Formula $c_{1}^{\left(1\right)}=c_{1}$
+\end_inset
+
+.
+ Now, it follows that the expansion for the perturbed ket is given by 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =\left|0\right\rangle +c_{1}^{\left(1\right)}\left|1\right\rangle ,
+\]
+
+\end_inset
+
+and in order to compute the expectation value we have to choose one representati
+on, in this case I'm going to choose the Schrödinger representation, which
+ implies that 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle _{S}=\exp\left(-iH_{0}t/\hbar\right)\left|\alpha\right\rangle _{I},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|\alpha\right\rangle _{S}=\exp\left(-i\omega_{0}t/2\right)\left|0\right\rangle +c_{1}^{\left(1\right)}\exp\left(-3i\omega_{0}t/2\right)\left|0\right\rangle ,
+\]
+
+\end_inset
+
+and from this it follows that 
+\begin_inset Formula 
+\begin{align*}
+\left\langle x\right\rangle  & =\left[\exp\left(i\omega_{0}t/2\right)\left\langle 0\right|+c_{1}^{*}\exp\left(3i\omega_{0}t/2\right)\left\langle 1\right|\right]\left(x\right)\\
+ & \times\left[\exp\left(-i\omega_{0}t/2\right)\left|0\right\rangle +c_{1}\exp\left(-3i\omega_{0}t/2\right)\left|1\right\rangle \right],
+\end{align*}
+
+\end_inset
+
+but we know that we can write 
+\begin_inset Formula $x$
+\end_inset
+
+ in terms of the ladder operators as follows
+\begin_inset Formula 
+\[
+x=\sqrt{\frac{\hbar}{2m\omega_{0}}}\left[a+a^{\dagger}\right],
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\begin{align*}
+\left\langle x\right\rangle  & =\left[\exp\left(i\omega_{0}t/2\right)\left\langle 0\right|+c_{1}^{*}\exp\left(3i\omega_{0}t/2\right)\left\langle 1\right|\right]\left(\sqrt{\frac{\hbar}{2m\omega_{0}}}\left[a+a^{\dagger}\right]\right)\\
+ & \times\left[\exp\left(-i\omega_{0}t/2\right)\left|0\right\rangle +c_{1}\exp\left(-3i\omega_{0}t/2\right)\left|1\right\rangle \right],
+\end{align*}
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\begin{align*}
+\left\langle x\right\rangle  & =\left[\exp\left(i\omega_{0}t/2\right)\left\langle 0\right|+c_{1}^{*}\exp\left(3i\omega_{0}t/2\right)\left\langle 1\right|\right]\left(\sqrt{\frac{\hbar}{2m\omega_{0}}}\right)\\
+ & \times\left[c_{1}\exp\left(-3i\omega_{0}t/2\right)\left|0\right\rangle +\exp\left(-i\omega_{0}t/2\right)\left|1\right\rangle +c_{1}\exp\left(-3i\omega_{0}t/2\right)\sqrt{2}\left|2\right\rangle \right],
+\end{align*}
+
+\end_inset
+
+and, performing the inner product, we have 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle =\sqrt{\frac{\hbar}{2m\omega_{0}}}\left[c_{1}\exp\left(-i\omega_{0}t\right)+c_{1}^{*}\exp\left(i\omega_{0}t\right)\right],
+\]
+
+\end_inset
+
+thus, we have 
+\begin_inset Formula 
+\begin{align*}
+\left\langle x\right\rangle  & =-\frac{F_{0}}{\hbar}\left(\sqrt{\frac{\hbar}{2m\omega_{0}}}\right)^{2}\left[\left(\frac{\exp\left[i\left(\omega_{0}+\omega\right)t\right]-1}{\omega_{0}+\omega}+\frac{\exp\left[i\left(\omega_{0}-\omega\right)t\right]-1}{\omega_{0}-\omega}\right)\exp\left(-i\omega_{0}t\right)\right]\\
+ & \times\left[\left(\frac{\exp\left[-i\left(\omega_{0}+\omega\right)t\right]-1}{\omega_{0}+\omega}+\frac{\exp\left[-i\left(\omega_{0}-\omega\right)t\right]-1}{\omega_{0}-\omega}\right)\exp\left(i\omega_{0}t\right)\right]
+\end{align*}
+
+\end_inset
+
+and from this, we have 
+\begin_inset Formula 
+\begin{align*}
+\left\langle x\right\rangle  & =-\frac{F_{0}}{\hbar}\left(\frac{\hbar}{2m\omega_{0}}\right)\left[\frac{\exp\left(i\omega t\right)-\exp\left(-i\omega_{0}t\right)}{\omega_{0}+\omega}+\frac{\exp\left(-i\omega t\right)-\exp\left(-i\omega_{0}t\right)}{\omega_{0}-\omega}\right]\\
+ & -\frac{F_{0}}{\hbar}\left(\frac{\hbar}{2m\omega_{0}}\right)\left[\frac{\exp\left(-i\omega t\right)+\exp\left(i\omega_{0}t\right)}{\omega_{0}+\omega}+\frac{\exp\left(i\omega t\right)+\exp\left(i\omega_{0}t\right)}{\omega_{0}-\omega}\right],
+\end{align*}
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\left\langle x\right\rangle =-\frac{F_{0}}{2m\omega_{0}}\left[\frac{\cos\left(\omega t\right)-\cos\left(\omega_{0}t\right)}{\omega_{0}+\omega}+\frac{\cos\left(i\omega t\right)-\cos\left(\omega_{0}t\right)}{\omega_{0}-\omega}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle =-\frac{F_{0}}{2m\omega_{0}}\left[\cos\left(\omega t\right)-\cos\left(\omega_{0}t\right)\left(\frac{1}{\omega_{0}+\omega}+\frac{1}{\omega_{0}-\omega}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left\langle x\right\rangle =-\frac{F_{0}}{2m\omega_{0}}\left[\cos\left(\omega t\right)-\cos\left(\omega_{0}t\right)\left(\frac{\omega_{0}-\omega+\omega_{0}+\omega}{\omega_{0}^{2}-\omega^{2}}\right)\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\therefore\left\langle x\right\rangle =-\frac{F_{0}}{m}\left(\frac{\cos\left(\omega t\right)-\cos\left(\omega_{0}t\right)}{\omega_{0}^{2}-\omega^{2}}\right).
+\]
+
+\end_inset
+
+Now in the regime 
+\begin_inset Formula $\omega\simeq\omega_{0}$
+\end_inset
+
+, we encounter the very well known phenomena or resonance, and in that regime,
+ we know that the response tends to infinity for any finite 
+\begin_inset Formula $F_{0}$
+\end_inset
+
+ and thus perturbation theory in some sense breaks down.
 \end_layout
 
 \begin_layout Problem
@@ -203,7 +431,198 @@ Can we find higher excited states?
 
 \end_deeper
 \begin_layout Solution*
-Sol
+It we assume that the force given can be derived from a potential function
+ we have that (in 1D) 
+\begin_inset Formula 
+\[
+F=-\frac{dV}{dx},
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+V=-F_{0}x\exp\left(-\frac{t}{\tau}\right)
+\]
+
+\end_inset
+
+Now, the rest of this problem is pretty similar to the previous one, but
+ we have to remember that the probability for the transition 
+\begin_inset Formula $\left|i\right\rangle \rightarrow\left|n\right\rangle $
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+P\left(i\rightarrow n\right)=\left|c_{n}^{\left(1\right)}+c_{n}^{\left(2\right)}+\cdots\right|^{2},
+\]
+
+\end_inset
+
+and to first order perturbation theory the previous transition probability
+ becomes 
+\begin_inset Formula 
+\[
+P\left(i\rightarrow n\right)=\left|c_{n}^{\left(1\right)}\right|^{2},
+\]
+
+\end_inset
+
+where this 
+\begin_inset Formula $c_{n}^{\left(1\right)}$
+\end_inset
+
+ is given (as in the previous problem) by 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{i}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega_{ni}t^{\prime}\right)V_{ni}\left(t^{\prime}\right)dt^{\prime},
+\]
+
+\end_inset
+
+thus, because we want transition from the ground state, it follows that
+ 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=\frac{iF_{0}}{\hbar}\int_{0}^{t}\exp\left(i\omega_{n0}t^{\prime}\right)\exp\left(-\frac{t^{\prime}}{\tau}\right)\left\langle n|x|0\right\rangle dt^{\prime},
+\]
+
+\end_inset
+
+and again, we're going to make use of the result
+\begin_inset Formula 
+\[
+\left\langle n^{\prime}|x|n\right\rangle =\sqrt{\frac{\hbar}{2m\omega}}\left(\sqrt{n}\delta_{n^{\prime},n-1}+\sqrt{n+1}\delta_{n^{\prime},n+1}\right),
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+\left\langle n|x|0\right\rangle =\sqrt{\frac{\hbar}{2m\omega}}\delta_{n,1},
+\]
+
+\end_inset
+
+and from this, it follows
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=\frac{iF_{0}}{\hbar}\sqrt{\frac{\hbar}{2m\omega}}\delta_{n,1}\int_{0}^{t}\exp\left(i\omega_{0}t^{\prime}\right)\exp\left(-\frac{t^{\prime}}{\tau}\right)dt^{\prime},
+\]
+
+\end_inset
+
+thus, we have ^
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=\frac{iF_{0}}{\hbar}\sqrt{\frac{\hbar}{2m\omega}}\frac{\exp\left[\left(i\omega_{0}-\frac{1}{\tau}\right)t^{\prime}\right]}{i\omega_{0}-1/\tau},
+\]
+
+\end_inset
+
+and as in the previous problem, we have 
+\begin_inset Formula $c_{n}^{\left(n\right)}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+, then, the transition probability is given by 
+\begin_inset Formula 
+\[
+\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{F_{0}^{2}}{2m\omega}\frac{\exp\left[-2t/t^{\prime}\right]-2\exp\left[-t/t^{\prime}\right]\cos\omega_{0}t+1}{\omega_{0}^{2}+1/\tau^{2}},
+\]
+
+\end_inset
+
+and if now we consider the limit 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\[
+\lim_{t\rightarrow\infty}\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{F_{0}^{2}}{2m\omega}\frac{1}{\omega_{0}^{2}+1/\tau^{2}},
+\]
+
+\end_inset
+
+which can be put in the following form 
+\begin_inset Formula 
+\[
+\lim_{t\rightarrow\infty}\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{1}{2m\omega}\frac{F_{0}^{2}\tau^{2}}{\tau^{2}\omega_{0}^{2}+1},
+\]
+
+\end_inset
+
+which as we can see is independent of 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+For the question about higher exited states we prove that just considering
+ first order perturbation theory this is not possible, however, if we go
+ to higher order that could be the case, let's think just in the second
+ order, we know that in this case we have 
+\begin_inset Formula 
+\[
+c_{n}^{\left(2\right)}=\left(\frac{-i}{\hbar}\right)^{2}\sum_{m}\int_{0}^{t}dt^{\prime}\int_{0}^{t^{\prime}}dt^{\prime\prime}\exp\left(i\omega_{nm}t^{\prime}\right)V_{nm}\left(t^{\prime}\right)\exp\left(i\omega_{mi}t^{\prime\prime}\right)V_{mi}\left(t^{\prime\prime}\right),
+\]
+
+\end_inset
+
+but we just need to look at the transitions 
+\begin_inset Formula $V_{nm}\left(t^{\prime}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{mi}\left(t^{\prime\prime}\right)$
+\end_inset
+
+, in this case 
+\begin_inset Formula $i=0$
+\end_inset
+
+, and we prove that when this is the case we have 
+\begin_inset Formula 
+\[
+V_{n0}\left(t^{\prime\prime}\right)\propto\delta_{m,1},
+\]
+
+\end_inset
+
+and we now that in general 
+\begin_inset Formula 
+\[
+V_{nm}\left(t^{\prime}\right)\propto\delta_{n,m-1}+\delta_{n,m+1},
+\]
+
+\end_inset
+
+thus, from the first transition we have 
+\begin_inset Formula $m=1$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\delta_{n,1+1}$
+\end_inset
+
+, i.e, 
+\begin_inset Formula $n=2$
+\end_inset
+
+, thus we can reach the state 
+\begin_inset Formula $n=2$
+\end_inset
+
+ in second order perturbation theory.
 \end_layout
 
 \begin_layout Problem
@@ -240,7 +659,114 @@ is switched on.
 \end_layout
 
 \begin_layout Solution*
-Sol 
+Again, this problem is pretty similar to the previous ones; the probability
+ for the transition 
+\begin_inset Formula $\left|i\right\rangle \rightarrow\left|n\right\rangle $
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+P\left(i\rightarrow n\right)=\left|c_{n}^{\left(1\right)}+c_{n}^{\left(2\right)}+\cdots\right|^{2},
+\]
+
+\end_inset
+
+and to first order perturbation theory the previous transition probability
+ becomes 
+\begin_inset Formula 
+\[
+P\left(i\rightarrow n\right)=\left|c_{n}^{\left(1\right)}\right|^{2},
+\]
+
+\end_inset
+
+where this 
+\begin_inset Formula $c_{n}^{\left(1\right)}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{i}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega_{ni}t^{\prime}\right)V_{ni}\left(t^{\prime}\right)dt^{\prime},
+\]
+
+\end_inset
+
+now, the new thing here is the quadratic dependence on the perturbation,
+ but we have the following result 
+\begin_inset Formula 
+\[
+\left\langle m|x^{2}|n\right\rangle =\frac{\hbar}{2m\omega}\left(\sqrt{n\left(n-1\right)}\delta_{n-2,m}+\sqrt{\left(n+1\right)\left(n+2\right)}\delta_{n+2,m}\right),
+\]
+
+\end_inset
+
+thus it follows that 
+\begin_inset Formula 
+\[
+\left\langle m|x^{2}|0\right\rangle =\frac{\sqrt{2}\hbar}{2m\omega}\delta_{2,m},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{i}{\hbar}\left(\frac{\sqrt{2}\hbar}{2m\omega_{0}}\delta_{2,m}A\right)\int_{0}^{t}\exp\left(i\omega_{0}t^{\prime}\right)\exp\left(-\frac{t^{\prime}}{\tau}\right)dt^{\prime},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies c_{n}^{\left(1\right)}=-\frac{i}{\sqrt{2}m\omega_{0}}\delta_{2,m}A\left(\frac{\exp\left[\left(i\omega_{0}-\frac{1}{\tau}\right)t\right]-1}{\left(i\omega_{0}-\frac{1}{\tau}\right)}\right),
+\]
+
+\end_inset
+
+and from this it follows that 
+\begin_inset Formula 
+\[
+\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{A^{2}}{2m^{2}\omega_{0}^{2}}\left(\frac{\exp\left[-2t/\tau\right]-2\exp\left[-t/\tau\right]+1}{\left(\omega_{0}^{2}+\frac{1}{\tau^{2}}\right)}\right),
+\]
+
+\end_inset
+
+and again taking the limit 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ we have that 
+\begin_inset Formula 
+\[
+\lim_{t\rightarrow\infty}\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{A^{2}}{2m^{2}\omega_{0}^{2}}\left(\frac{1}{\left(\omega_{0}^{2}+\frac{1}{\tau^{2}}\right)}\right),
+\]
+
+\end_inset
+
+which can be put in the following form 
+\begin_inset Formula 
+\[
+\lim_{t\rightarrow\infty}\left|c_{n}^{\left(1\right)}\right|^{2}=\frac{1}{2m^{2}\omega_{0}^{2}}\frac{A^{2}\tau^{2}}{\left(\omega_{0}^{2}\tau^{2}+1\right)},
+\]
+
+\end_inset
+
+which again, is independent of time, and from that we can also see that
+ if we just consider perturbations to first order, then the transitions
+ for states other than 
+\begin_inset Formula $n=2$
+\end_inset
+
+ do not occur.
+\end_layout
+
+\begin_layout Solution*
+And for the transitions to other states, we have to do the same analysis
+ as in the previous problem, go to higher order and see if there's contribution,
+ on in other words, non-zero terms in the transitions.
 \end_layout
 
 \begin_layout Problem
@@ -336,7 +862,110 @@ Why is this procedure not valid when
 
 \end_deeper
 \begin_layout Solution*
-Sol
+Again, we're going to follow a similar procedure as in the previous problems,
+ but first let's use the following notation
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)=\left|\uparrow\right\rangle ,\left(\begin{array}{c}
+0\\
+1
+\end{array}\right)=\left|\downarrow\right\rangle ,
+\]
+
+\end_inset
+
+and we're thinking in the following expansion 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =\sum_{n}c_{n}\exp\left[-iE_{n}t/\hbar\right]\left|n\right\rangle ,
+\]
+
+\end_inset
+
+and if we just consider first order, then it follows that 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =\exp\left[-iE_{1}^{0}t/\hbar\right]\left|\uparrow\right\rangle +c_{2}^{\left(1\right)}\exp\left[-iE_{2}^{0}t/\hbar\right]\left|\downarrow\right\rangle ,
+\]
+
+\end_inset
+
+where, as in the previous problems, we have 
+\begin_inset Formula 
+\[
+c_{n}^{\left(1\right)}=-\frac{i}{\hbar}\int_{0}^{t}\exp\left(i\omega_{ni}t^{\prime}\right)V_{ni}\left(t^{\prime}\right)dt^{\prime},
+\]
+
+\end_inset
+
+or more specifically 
+\begin_inset Formula 
+\[
+c_{2}^{\left(1\right)}=-\frac{i}{\hbar}\int_{0}^{t}\exp\left(i\omega_{0}t^{\prime}\right)\lambda\cos\left(\omega t^{\prime}\right)dt^{\prime},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\omega_{0}=\frac{E_{1}^{0}-E_{2}^{0}}{\hbar},
+\]
+
+\end_inset
+
+thus after performing the integral, we have 
+\begin_inset Formula 
+\[
+c_{2}^{\left(1\right)}=-\frac{i}{\hbar}\lambda\frac{e^{it\omega_{0}}\left(\omega\sin(t\omega)+i\omega_{0}\cos(t\omega)\right)-i\omega_{0}}{\omega^{2}-\omega_{0}^{2}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\left|c_{2}^{\left(1\right)}\right|^{2}=\frac{\lambda^{2}}{\hbar^{2}}\left(\frac{e^{it\omega_{0}}\left(\omega\sin(t\omega)+i\omega_{0}\cos(t\omega)\right)-i\omega_{0}}{\omega^{2}-\omega_{0}^{2}}\right)\left(\frac{e^{-it\omega_{0}}\left(\omega\sin(t\omega)-i\omega_{0}\cos(t\omega)\right)+i\omega_{0}}{\omega^{2}-\omega_{0}^{2}}\right),
+\]
+
+\end_inset
+
+and after some manipulations, we have
+\begin_inset Formula 
+\[
+\left|c_{2}^{\left(1\right)}\right|^{2}=\frac{\lambda^{2}}{\hbar^{2}}\left[\frac{\sin^{2}\left[\left(\omega_{0}+\omega\right)t/2\right]}{\left(\omega_{0}^{2}+\omega^{2}\right)^{2}}+\frac{\sin^{2}\left[\left(\omega_{0}-\omega\right)t/2\right]}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}}+\frac{\cos\left(\omega t\right)\left[\cos\left(\omega t\right)-\cos\left(\omega_{0}t\right)\right]}{\left(\omega_{0}^{2}-\omega^{2}\right)^{2}}\right].
+\]
+
+\end_inset
+
+Now, if 
+\begin_inset Formula $E_{1}^{0}-E_{2}^{0}$
+\end_inset
+
+ is close to 
+\begin_inset Formula $\pm\hbar\omega$
+\end_inset
+
+, then in the language of our previous expression, we have that this is
+ equivalent to say 
+\begin_inset Formula 
+\[
+\omega_{0}\approx\omega,
+\]
+
+\end_inset
+
+which is the resonance condition, and even more clearly implies that at
+ least one of denominators in the above expression goes to zero, which implies
+ that 
+\begin_inset Formula $\left|c_{2}^{\left(1\right)}\right|^{2}$
+\end_inset
+
+ goes to infinity, and we can say that the perturbation expansion breaks
+ down.
 \end_layout
 
 \begin_layout Problem
@@ -356,7 +985,7 @@ Sol
 \mathbf{E}=\left\{ \begin{array}{cc}
 0 & t<0\\
 \mathbf{E}_{0}\exp\left(-\frac{t}{\tau}\right) & t>0
-\end{array}\right.\left(\mathbf{E}_{0}\text{in the positive z-direction.}\right)
+\end{array}\right.\left(\mathbf{E}_{0}\text{ in the positive z-direction.}\right)
 \]
 
 \end_inset
@@ -384,7 +1013,225 @@ Using first-order time-dependent perturbation theory, compute the probability
 \end_layout
 
 \begin_layout Solution*
-Sol
+We know that for the electric force we have 
+\begin_inset Formula 
+\[
+\mathbf{F}=q\mathbf{E},
+\]
+
+\end_inset
+
+and on the other hand, we know that 
+\begin_inset Formula 
+\[
+\mathbf{F}=-\nabla V,
+\]
+
+\end_inset
+
+and if we consider that 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ lives in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction, then we have that
+\begin_inset Formula 
+\[
+V=-eE_{0}z\exp\left(-\frac{t}{\tau}\right),
+\]
+
+\end_inset
+
+and now, we can use the previous expression as the perturbed potential,
+ and again, to first order perturbation theory, we have that 
+\begin_inset Formula 
+\[
+c_{2p}^{\left(1\right)}=-\frac{i}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega t^{\prime}\right)V_{2p0}\left(t^{\prime}\right)dt^{\prime},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{2p0}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+V_{2p0}=-eE_{0}\exp\left(-\frac{t}{\tau}\right)\left\langle 2,1,\pm1\text{ or }0|z|100\right\rangle ,
+\]
+
+\end_inset
+
+which decomposes in the cases 
+\begin_inset Formula 
+\[
+V_{2p0}^{1}=-eE_{0}\exp\left(-\frac{t}{\tau}\right)\left\langle 2,1,1|z|100\right\rangle ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{2p0}^{-1}=-eE_{0}\exp\left(-\frac{t}{\tau}\right)\left\langle 2,1,-1|z|100\right\rangle ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{2p0}^{0}=-eE_{0}\exp\left(-\frac{t}{\tau}\right)\left\langle 2,1,0|z|100\right\rangle ,
+\]
+
+\end_inset
+
+but given the fact that 
+\begin_inset Formula $z$
+\end_inset
+
+ can be seen as a tensor operator of the kind 
+\begin_inset Formula 
+\[
+z\propto T_{0}^{(1)},
+\]
+
+\end_inset
+
+we can use the result (selection rule) which states that 
+\begin_inset Formula 
+\[
+\left\langle \alpha^{\prime}j^{\prime}m^{\prime}|T_{q}^{\left(k\right)}|\alpha jm\right\rangle =0,
+\]
+
+\end_inset
+
+unless 
+\begin_inset Formula $m^{\prime}=q+m$
+\end_inset
+
+, thus we have
+\begin_inset Formula 
+\[
+\left\langle 21m^{\prime}|T_{0}^{\left(1\right)}|100\right\rangle =0,
+\]
+
+\end_inset
+
+unless 
+\begin_inset Formula $m^{\prime}=0+0$
+\end_inset
+
+, which implies that the cases 
+\begin_inset Formula $V_{2p0}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{2p0}^{-1}$
+\end_inset
+
+ are zero, thus we only need to work with 
+\begin_inset Formula $V_{2p0}^{0}$
+\end_inset
+
+, and using Mathematica I found 
+\begin_inset Formula 
+\[
+\left\langle 210|z|100\right\rangle =\frac{128\sqrt{2}}{243}a_{0},
+\]
+
+\end_inset
+
+and from this it follows that 
+\begin_inset Formula 
+\[
+c_{2p}^{\left(1\right)}=-\frac{i}{\hbar}\int_{t_{0}}^{t}\exp\left(i\omega t^{\prime}\right)\left(-eE_{0}\exp\left(-\frac{t^{\prime}}{\tau}\right)\right)\frac{128\sqrt{2}}{243}a_{0}dt^{\prime},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies c_{2p}^{\left(1\right)}=\frac{ieE_{0}}{\hbar}\frac{128\sqrt{2}}{243}a_{0}\int_{t_{0}}^{t}\exp\left[\left(i\omega-\frac{1}{\tau}\right)t^{\prime}\right]dt^{\prime},
+\]
+
+\end_inset
+
+which implies that
+\begin_inset Formula 
+\[
+c_{2p}^{\left(1\right)}=\frac{ieE_{0}}{\hbar}\frac{128\sqrt{2}}{243}a_{0}\frac{\exp\left[\left(i\omega-\frac{1}{\tau}\right)t^{\prime}\right]}{i\omega-\frac{1}{\tau}},
+\]
+
+\end_inset
+
+and now, let's define
+\begin_inset Formula 
+\[
+\alpha=\frac{eE_{0}}{\hbar}\frac{128\sqrt{2}}{243}a_{0},
+\]
+
+\end_inset
+
+thus we have 
+\begin_inset Formula 
+\[
+c_{2p}^{\left(1\right)}=i\alpha\frac{\exp\left[\left(i\omega-\frac{1}{\tau}\right)t\right]}{i\omega-\frac{1}{\tau}},
+\]
+
+\end_inset
+
+and from that we compute 
+\begin_inset Formula 
+\[
+\left|c_{2p}^{\left(1\right)}\right|^{2}=\alpha^{2}\frac{\exp\left(-2t/\tau\right)-2\exp\left(-t/\tau\right)\cos\omega t+1}{\omega^{2}+1/\tau^{2}},
+\]
+
+\end_inset
+
+and again, if we consider the limit 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\lim\left|c_{2p}^{\left(1\right)}\right|_{t\rightarrow\infty}^{2}=\frac{\alpha^{2}}{\omega^{2}+1/\tau^{2}},
+\]
+
+\end_inset
+
+on the other hand, for the limit 
+\begin_inset Formula $\tau\rightarrow\infty$
+\end_inset
+
+, the perturbation becomes a step function and we have 
+\begin_inset Formula 
+\[
+\lim\left|c_{2p}^{\left(1\right)}\right|_{\tau\rightarrow\infty}^{2}=\frac{\alpha^{2}}{\omega^{2}}.
+\]
+
+\end_inset
+
+And now, for the state 
+\begin_inset Formula $\left(n,l,m\right)=\left(2,0,0\right)$
+\end_inset
+
+, we can repeat the same calculations, however, if we invoke parity symmetry,
+ then we can see that the expectation value 
+\begin_inset Formula 
+\[
+\left\langle 200|z|100\right\rangle =0.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Problem
@@ -449,15 +1296,262 @@ with
 \end_layout
 
 \begin_layout Solution*
-Sol
+Let's start writing the perturbation potential as follows
+\begin_inset Formula 
+\[
+V=\frac{\exp\left(kz-\omega t\right)+\exp\left(-kz-\omega t\right)}{2},
+\]
+
+\end_inset
+
+and we know that in the time-dependent perturbation theory between interactions
+ of atomic electrons with the classical radiation field, we usually work
+ with the following Hamiltonians
+\begin_inset Formula 
+\[
+H=\frac{\mathbf{p}^{2}}{2m_{e}}+e\phi\left(\mathbf{x}\right)-\frac{e}{m_{e}c}\mathbf{A}\cdot\mathbf{p},
+\]
+
+\end_inset
+
+and from this we can obtain
+\begin_inset Formula 
+\[
+-\frac{e}{m_{e}c}\mathbf{A}\cdot\mathbf{p}=-\frac{e}{m_{e}c}A_{0}\mathbf{\varepsilon}\cdot\mathbf{p}\left\{ \exp\left[\left(i\omega/c\right)\mathbf{n}\cdot\mathbf{x}-i\omega t\right]+\exp\left[-\left(i\omega/c\right)\mathbf{n}\cdot\mathbf{x}+i\omega t\right]\right\} ,
+\]
+
+\end_inset
+
+but we just need to consider the first term, because we're interested in
+ absorption, and from this, we also know that the absorption rate can be
+ computed using the following expression 
+\begin_inset Formula 
+\[
+\omega_{i\rightarrow n}=\left(\frac{2\pi}{\hbar}\right)\left|V_{ni}\right|^{2}\delta\left(E_{n}-E_{i}\right),
+\]
+
+\end_inset
+
+which is also known as the Fermi Golden rule.
+ Now, in our case we have the following expression
+\begin_inset Formula 
+\[
+\omega_{i\rightarrow f}=\frac{2\pi}{\hbar}\left(\frac{V_{0}}{2}\right)^{2}\left|\left\langle \mathbf{p}|\exp\left(ikz\right)|0\right\rangle \right|^{2}\delta\left(E_{\mathbf{p}}-E_{0}-\hbar\omega\right),
+\]
+
+\end_inset
+
+where in this case we have that 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ is the energy of the ground state 
+\begin_inset Formula $\left|0\right\rangle $
+\end_inset
+
+, and 
+\begin_inset Formula $E_{\mathbf{p}}$
+\end_inset
+
+ is the energy of the state 
+\begin_inset Formula $\left|\mathbf{p}\right\rangle $
+\end_inset
+
+, which in this case we're taking it to be a plane wave with momentum 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+, and now, for the transition amplitude, we can compute it going to the
+ position basis, this is 
+\begin_inset Formula 
+\[
+\left\langle \mathbf{p}|\exp\left(ikz\right)|0\right\rangle =\frac{1}{\sqrt{\pi}}\left(\frac{1}{a_{0}L}\right)^{3/2}\int d^{3}x^{\prime}\exp\left(-i\mathbf{p}\cdot\mathbf{x}^{\prime}/\hbar\right)\exp\left(ikz\right)\exp\left(-r^{\prime}/a_{0}\right),
+\]
+
+\end_inset
+
+and if we define 
+\begin_inset Formula 
+\[
+\mathbf{q}=k\mathbf{z}-\mathbf{p}/\hbar,
+\]
+
+\end_inset
+
+we have that
+\begin_inset Formula 
+\[
+\left\langle \mathbf{p}|\exp\left(ikz\right)|0\right\rangle =\frac{1}{\sqrt{\pi}}\left(\frac{1}{a_{0}L}\right)^{3/2}\int d^{3}x^{\prime}\exp\left(-i\mathbf{q}\cdot\mathbf{x}^{\prime}/\hbar\right)\exp\left(-r^{\prime}/a_{0}\right),
+\]
+
+\end_inset
+
+and from this we just need to compute the integral, and this can be done
+ as follows; if we assume that 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ lies in the 
+\begin_inset Formula $z^{\prime}$
+\end_inset
+
+ direction, then we can decompose the integral as follows 
+\begin_inset Formula 
+\[
+\int d^{3}x^{\prime}\exp\left(-i\mathbf{q}\cdot\mathbf{x}^{\prime}/\hbar\right)\exp\left(-r^{\prime}/a_{0}\right)=2\pi\int_{0}^{\infty}r^{2}dr\exp\left(-r/a_{0}\right)\int_{-1}^{1}d\left(\cos\theta\right)\exp\left(-iqr\cos\theta\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\int d^{3}x^{\prime}\exp\left(-i\mathbf{q}\cdot\mathbf{x}^{\prime}/\hbar\right)\exp\left(-r^{\prime}/a_{0}\right)=\frac{4\pi a_{0}^{3}}{\left(1+a_{0}^{2}q^{2}\right)^{2}},
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+\omega_{i\rightarrow f}=\frac{2\pi}{\hbar}\left(\frac{V_{0}}{2}\right)^{2}\frac{1}{\pi}\left(\frac{1}{a_{0}L}\right)^{3}\left(\frac{4\pi a_{0}^{3}}{\left(1+a_{0}^{2}q^{2}\right)^{2}}\right)\delta\left(E_{\mathbf{p}}-E_{0}-\hbar\omega\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Problem
-Mann 7
+According to Sakurai’s Fig.
+ 5.6, the Full Width at Half Maximum (FWHM) of the Breit-Wigner frequency
+ response curve for a two-state system near resonance is 
+\begin_inset Formula $4\gamma/\hbar$
+\end_inset
+
+.
+ Prove it
 \end_layout
 
 \begin_layout Solution*
-Sol
+For this problem, we have the following 
+\begin_inset Formula 
+\[
+\left|c_{2}\right|^{2}=\frac{\gamma^{2}/\hbar^{2}}{\gamma^{2}/\hbar^{2}+\left(\omega-\omega_{21}\right)^{2}/4}\sin^{2}\left\{ \left[\frac{\gamma^{2}}{\hbar^{2}}+\frac{\left(\omega-\omega_{21}\right)^{2}}{4}\right]^{1/2}t\right\} ,
+\]
+
+\end_inset
+
+and if we consider the equation in the resonance regime, this is 
+\begin_inset Formula $\omega\approx\omega_{21}$
+\end_inset
+
+, we have that 
+\begin_inset Formula 
+\[
+\left|c_{2}\right|^{2}=\sin^{2}\left(\frac{\gamma}{\hbar}t\right),
+\]
+
+\end_inset
+
+and in order to determine the FWHM we have to do solve
+\begin_inset Formula 
+\[
+\sin^{2}\left(\frac{\gamma}{\hbar}t_{FWHM}\right)=\frac{1}{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{\gamma}{\hbar}t_{FWHM}=\arcsin\left(\pm\frac{1}{\sqrt{2}}\right),
+\]
+
+\end_inset
+
+but we know that 
+\begin_inset Formula $\arcsin\left(\pm1/\sqrt{2}\right)=\arcsin\left(\pm\sqrt{2}/2\right)=\pm\pi/4$
+\end_inset
+
+, thus, it follows that 
+\begin_inset Formula 
+\[
+\frac{\gamma}{\hbar}t_{FWHM}=\pm\frac{\pi}{4},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies t_{\pm}=\pm\frac{\hbar\pi}{4\gamma}
+\]
+
+\end_inset
+
+and from this we have that
+\begin_inset Formula 
+\[
+FWHM\left(t\right)=\Delta t=t_{+}-t_{-},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies FWHM\left(t\right)=\frac{\hbar\pi}{4\gamma}+\frac{\hbar\pi}{4\gamma},
+\]
+
+\end_inset
+
+and from this we have 
+\begin_inset Formula 
+\[
+FWHM\left(t\right)=\frac{\hbar\pi}{2\gamma},
+\]
+
+\end_inset
+
+but we want the 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+FWHM in frequency, and we know that 
+\begin_inset Formula 
+\[
+\omega=\frac{2\pi}{t},
+\]
+
+\end_inset
+
+then, it follows that 
+\begin_inset Formula 
+\[
+\frac{1}{t}=\frac{2\gamma}{\hbar\pi}\implies\frac{2\pi}{t}=\frac{4\gamma}{\hbar},
+\]
+
+\end_inset
+
+and from this we obtain
+\begin_inset Formula 
+\[
+FWHM\left(\omega\right)=\frac{4\gamma}{\hbar},
+\]
+
+\end_inset
+
+just as we wanted.
 \end_layout
 
 \end_body
