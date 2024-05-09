@@ -1,0 +1,211 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Individual Project Reflection
+\end_layout
+
+\begin_layout Author
+Emmanuel Flores
+\end_layout
+
+\begin_layout Date
+05/06/2024
+\end_layout
+
+\begin_layout Subsection*
+Please submit your answers to the following questions:
+\end_layout
+
+\begin_layout Enumerate
+Apart from the specific physics content, what are one or two important things
+ that you learned from doing the project? These could be about physics,
+ about teaching, about collaboration, about yourself, or anything else that
+ you find meaningful.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Was there anything interesting or surprising that you learned from the peer
+ reviews? 
+\end_layout
+
+\begin_layout Enumerate
+Thinking back on the process, how would you judge your own contribution
+ to the effort? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I contributed significantly more than my partner
+\end_layout
+
+\begin_layout Itemize
+We contributed roughly equally 
+\end_layout
+
+\begin_layout Itemize
+I contributed significantly less than my partner
+\end_layout
+
+\begin_layout Standard
+If you answered "significantly more" or "significantly less," please explain.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Please add any other comments about your experience with the project.
+\end_layout
+
+\begin_layout Subsection*
+Answers: 
+\end_layout
+
+\begin_layout Enumerate
+I think I learned many things, in particular the importance of trying to
+ understand something very well and then sharing it with colleagues.
+ A while ago, when I took this course during my master's degree, my former
+ mentor joked that now I was learning to "not write the partition function"
+ and at the time I didn't understand what he meant, but after studying the
+ Ising model and work a little more thoroughly with mid-field approximations,
+ I think I get the joke; you can do that, but the problem becomes quite
+ complicated, thus, you try to find clever ways to avoid doing that calculation,
+ clever approximations, for instance.
+ The reason o why I'm sharing this is because my knowledge of statistical
+ mechanics is definitely deeper, I feel more comfortable with the topics
+ in general, and I feel prepared to delve deeper into some topics that I
+ find interesting.
+ Just as I did with the teaching project.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Overall, I think the feedback was good, in the sense that provides insight
+ in the things that I can improve, for example to be consistent with the
+ notation about 
+\begin_inset Formula $E$
+\end_inset
+
+ and 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ when I was reading several books I found that some people like to use one
+ over another, and I agree that can lead to some confusion.
+ Another classmate wrote that the cicada stuff was cool/interesting, and
+ that made me think that we need to make things more memorable, and introducing
+ some examples like that can help a lot.
+ You notice that I'm really attracted into math, and for me some things
+ are easier to remember whenever are motivated by some math, or when I found
+ some cool result, and that made me think that knowing the interests of
+ the students, can improve how to teach some kind of material.
+ 
+\end_layout
+
+\begin_layout Enumerate
+I think we worked almost 50/50, so we contributed roughly equally.
+\end_layout
+
+\begin_layout Subsection*
+Additional comments
+\end_layout
+
+\begin_layout Standard
+I did like the project, and this whole project gave confidence to start
+ teaching myself some other things related to statistical mechanics, for
+ example brownian motion, and stocastic processes.
+ As you may notice my language skills are sometimes limited(I'm still improving,
+ and I think I'll always be), but for me this was a great deal; to teach
+ a class in a foreign language means a lot to me.
+\end_layout
+
+\end_body
+\end_document
