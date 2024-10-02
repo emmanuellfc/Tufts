@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Digression on Topology}{6}{0}{2}
+\beamer@sectionintoc {3}{Homeomorphisms, Homotopy and Topological invariants}{8}{0}{3}
+\beamer@sectionintoc {4}{Differential Geometry: Manifolds and Diff Forms}{9}{0}{4}
+\beamer@sectionintoc {5}{Titleformats}{10}{0}{5}
+\beamer@subsectionintoc {5}{1}{Tricks}{12}{0}{5}
+\beamer@sectionintoc {6}{Elements}{15}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{32}{0}{7}
