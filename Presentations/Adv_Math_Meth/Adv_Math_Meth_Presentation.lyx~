@@ -1,0 +1,1112 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+minimalistic
+multicol
+theorems-named
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Rotations and the Spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+ Particle in a Magnetic Field
+\end_layout
+
+\begin_layout Author
+Emmanuel Flores
+\end_layout
+
+\begin_layout Institute
+Advanced Mathematical Methods
+\end_layout
+
+\begin_layout Section*
+Spinor Representation
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Some Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The existence of spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+ particles shows that is 
+\begin_inset Formula $Spin\left(3\right)$
+\end_inset
+
+ rather than 
+\begin_inset Formula $SO\left(3\right)$
+\end_inset
+
+ that is the symmetry group of corresponding of rotations of fundamental
+ quantum systems.
+\end_layout
+
+\begin_layout Itemize
+The idea is to study 
+\begin_inset Formula $\mathcal{H}=\mathbb{C}^{2}$
+\end_inset
+
+ with the group action given by rotations in 
+\begin_inset Formula $3D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+The spinor representation of 
+\begin_inset Formula $Spin\left(3\right)=SU\left(2\right)$
+\end_inset
+
+ is the representation on 
+\begin_inset Formula $\mathbb{C}^{2}$
+\end_inset
+
+ given by 
+\begin_inset Formula 
+\[
+g\in SU\left(2\right)\rightarrow\pi_{spinor}\left(g\right)=g,
+\]
+
+\end_inset
+
+and elements of the representation space 
+\begin_inset Formula $\mathbb{C}^{2}$
+\end_inset
+
+ are called spinors.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section*
+Spin 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ in a Magnetic Field
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Elements of the Lie algebra
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We will consider only the 
+\begin_inset Formula $SU\left(2\right)$
+\end_inset
+
+ subgroup of 
+\begin_inset Formula $U\left(2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+When it occurs in its role as double cover of the rotational group, the
+ quantum system is said to carry “spin”, in particular “spin 
+\begin_inset Formula $1/2$
+\end_inset
+
+” for the two dimensional irreducible representation.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Elements of the Lie algebra 
+\begin_inset Formula 
+\[
+X_{j}=-i\frac{\sigma_{j}}{2},
+\]
+
+\end_inset
+
+with commutation relations 
+\begin_inset Formula 
+\[
+\left[X_{1},X_{2}\right]=X_{3},\hspace{1em}\left[X_{2},X_{3}\right]=X_{1},\left[X_{3},X_{1}\right]=X_{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Physics Connection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Making contact with physics 
+\begin_inset Formula 
+\[
+S_{j}=i\hbar X_{j},
+\]
+
+\end_inset
+
+we like this as observables because the eigenvalues are real 
+\begin_inset Formula $\pm1/2$
+\end_inset
+
+ (experimental measures).
+\end_layout
+
+\begin_layout Itemize
+Elements of the group are given by 
+\begin_inset Formula 
+\[
+\Omega\left(\theta,\mathbf{w}\right)=\exp\left(-\frac{i}{\hbar}\mathbf{w}\cdot\mathbf{S}\right)\in SU\left(2\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+States in 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ that have a well-defined value of the observable 
+\begin_inset Formula $S_{j}$
+\end_inset
+
+ will be eigenvectors of 
+\begin_inset Formula $S_{j}$
+\end_inset
+
+ with eigenvalues 
+\begin_inset Formula $\pm1/2.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Action of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\left|\psi\right\rangle \in\mathcal{H}$
+\end_inset
+
+, thus we have 
+\begin_inset Formula 
+\[
+\left|\psi\right\rangle \rightarrow\Omega\left|\psi\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Baker-Hausdorff lemma 
+\begin_inset Formula 
+\begin{align*}
+\exp\left(iG\lambda\right)A\exp\left(-iG\lambda\right) & =A+i\lambda\left[G,A\right]\\
+ & +\left(\frac{i^{2}\lambda^{2}}{2!}\right)\left[G,\left[G,A\right]\right]+\dots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The Hamiltonian
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The spin degree of freedom that we are describing by 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ has a dynamics given by 
+\begin_inset Formula 
+\[
+\mathbf{H}=-\mu\cdot\mathbf{B},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\mu=-\frac{ge}{2mc}\mathbf{S},
+\]
+
+\end_inset
+
+is the magnetic moment operator.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+With Schrödinger Equation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The Schrödinger equation is given by
+\begin_inset Formula 
+\[
+\frac{d}{dt}\left|\psi\right\rangle =-i\left(-\mu\cdot B\right)\left|\psi\right\rangle 
+\]
+
+\end_inset
+
+and solution 
+\begin_inset Formula 
+\[
+\left|\psi\left(t\right)\right\rangle =U\left(t\right)\left|\psi\left(0\right)\right\rangle ,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+U\left(t\right)=\exp\left(it\mu\cdot B\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Explicitly
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assuming 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ with just a component in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction, we have
+\begin_inset Formula 
+\[
+\mathbf{H}=\omega S_{z},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+U\left(t\right)=\exp\left(-\frac{iS_{z}\omega t}{\hbar}\right),
+\]
+
+\end_inset
+
+we see that this Hamiltonian causes spin precession.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Precession_in_magnetic_field.png
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Physical Systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The Zeeman effect,
+\end_layout
+
+\begin_layout Itemize
+Stern Gerlach experiment,
+\end_layout
+
+\begin_layout Itemize
+Nuclear magnetic resonance spectroscopy,
+\end_layout
+
+\begin_layout Itemize
+Quantum computing.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Heisenberg Picture
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Schrödinger and Heisenberg Pictures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Heisenberg Picture
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Schrödinger Picture
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+State Ket
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No Change
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Evolution Given by 
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observable
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Evolution Given by 
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No Change
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section*
+Complex Projective Space
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Trying Another Characterization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Multiplication on 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ by non-zero complex number do not change eigenvectors 
+\begin_inset Formula $\implies$
+\end_inset
+
+ no physical effect.
+\end_layout
+
+\begin_layout Itemize
+The relevant part is the quotient space 
+\begin_inset Formula $\left(\mathbb{C}^{2}-\left\{ 0\right\} \right)/\mathbb{C}^{*}$
+\end_inset
+
+, and constructed by: taking all non-zero elements of 
+\begin_inset Formula $\mathbf{C}^{2}$
+\end_inset
+
+ and identifying those related by multiplication by a non-zero complex number.
+\end_layout
+
+\begin_layout Itemize
+In some sense the space 
+\begin_inset Formula $CP^{1}$
+\end_inset
+
+ is the complex plane, but with a “point at infinity” added.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Riemann Sphere
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $CP^{1}$
+\end_inset
+
+: “Riemann sphere” with the relation to the plane and the point at infinity
+ given by stereographic projection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Stereo_Projection.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Coordinates relationship
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Relation between coordinates on the sphere 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3}\right)$
+\end_inset
+
+ and complex coordinates 
+\begin_inset Formula $z_{1}/z_{2}=z=x+iy$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+x=\frac{x_{1}}{1-x_{3}},y=\frac{x_{2}}{1-x_{3}},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+x_{1}=\frac{2x}{x^{2}+y^{2}+1},x_{2}=\frac{2y}{x^{2}+y^{2}+1},x_{3}=\frac{x^{2}+y^{2}-1}{x^{2}+y^{2}+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+The Bloch Sphere
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Another Characterization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The unit sphere 
+\begin_inset Formula $S^{2}\subset\mathbb{R}^{3}$
+\end_inset
+
+ can be mapped to operators by 
+\begin_inset Formula 
+\[
+\mathbf{x}\rightarrow\sigma\cdot\mathbf{x},
+\]
+
+\end_inset
+
+and for each point 
+\begin_inset Formula $\mathbf{x}\in S^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma\cdot\mathbf{x}$
+\end_inset
+
+ has eigenvalues 
+\begin_inset Formula $\pm1$
+\end_inset
+
+.
+ Eigenvectors with eigenvalue 
+\begin_inset Formula $+1$
+\end_inset
+
+ are solutions to 
+\begin_inset Formula 
+\[
+\sigma\cdot\mathbf{x}\left|\psi\right\rangle =\left|\psi\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Interpretation in terms of spin operators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+One can characterize the 
+\begin_inset Formula $\mathbb{C}\subset\mathcal{H}$
+\end_inset
+
+ corresponding to 
+\begin_inset Formula $\mathbf{x}\in S^{2}$
+\end_inset
+
+ as the solutions to 
+\begin_inset Formula 
+\[
+\mathbf{S}\cdot\mathbf{x}\left|\psi\right\rangle =\frac{1}{2}\left|\psi\right\rangle ,
+\]
+
+\end_inset
+
+thus, the North pole of the sphere is a 
+\begin_inset Quotes eld
+\end_inset
+
+spin-up
+\begin_inset Quotes erd
+\end_inset
+
+ state and the South pole is a 
+\begin_inset Quotes eld
+\end_inset
+
+spin down
+\begin_inset Quotes erd
+\end_inset
+
+ state.
+\end_layout
+
+\begin_layout Itemize
+Along the equator one finds two points corresponding to states with definite
+ values for 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+, as well as two for states that have definite values for 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
