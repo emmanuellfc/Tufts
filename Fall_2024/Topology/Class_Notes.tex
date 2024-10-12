@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+% Formatting Page and Font Type
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+\usepackage{charter}
+% Math packages and environments
+\usepackage{amsthm}
+\usepackage{amssymb}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+% Title
+\title{Topology: Class Notes}
+\author{Emmanuel Flores \thanks{eq.emmanuel@gmail.com}}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\begin{section}{General Defintions}
+
+\end{section}
+
+
+
+
+
+\begin{section}{Bases and Subspaces}
+
+In what follows I'm going to use TS for Topological Space. Given a topological space we define a basis for this TS as follows:
+
+\begin{definition}[Basis]
+Given a TS $\left( X, \mathcal{T}\right)$, we say that $\mathcal{\beta}\subset\mathcal{T}$ is a basis for the TS if all open subsets of $X$ can be written as the union of elements of $\mathcal{\beta}$
+\end{definition}
+
+\begin{theorem}
+Let $\left( X, \mathcal{T}\right)$ be a TS, and let $\mathcal{\beta}$ be a collection of subsets of $X$. Then $\mathcal{\beta}$ is a basis for $\mathcal{T}$ if and only if
+\begin{itemize}
+	\item $\mathcal{\beta}\subset\mathcal{T}$,
+	\item for each open set $U$ in $\mathcal{T}$ and a point $p\ni U$ there is a set $V\in\mathcal{\beta}$ such that $p\in V\subset U$
+
+\begin{proof}
+Let's assume that $\mathcal{\beta}$ is a basis, thus it follows that $\mathcal{\beta}\subset\mathcal{T}$ by definition. On the other hand, let $U\in\mathcal{T}$ such that $p\in U$, because $\mathcal{\beta}$ is basis it follows that $U$ can be written as the union of elements of $\mathcal{\beta}$, and from this it follows that there exists $V\in\mathcal{\beta}$ such that$p\in V\subset U$.
+
+Now let's $\mathcal{\beta}$ as given 
+\end{proof}	
+	
+\end{itemize}
+\end{theorem}
+\end{section}
+
+\end{document}
