@@ -9,14 +9,14 @@
 \usetheme[progressbar=frametitle]{metropolis}
 \usepackage{appendixnumberbeamer}
 
-\usepackage{booktabs}
-\usepackage[scale=2]{ccicons}
+%\usepackage{booktabs}
+%\usepackage[scale=2]{ccicons}
 
-\usepackage{pgfplots}
-\usepgfplotslibrary{dateplot}
+%\usepackage{pgfplots}
+%\usepgfplotslibrary{dateplot}
 
-\usepackage{xspace}
-\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+%\usepackage{xspace}
+%\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 \end_preamble
 \use_default_options true
 \begin_modules
