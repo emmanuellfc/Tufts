@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 % Formatting Page and Font Type
 \usepackage{geometry}
+\usepackage{tcolorbox}
+%\usepackage{multicol} % to format using two or more columns
 \geometry{letterpaper, portrait, margin=1in}
 \usepackage{charter}
 % Math packages and environments
@@ -19,16 +21,23 @@
 \begin{document}
 \maketitle
 
-\begin{section}{General Defintions}
+
+\begin{section}{General Definitions}
+
+\begin{tcolorbox}[title=Topological Space]
+	\begin{definition}[Topological Space]
+	Definition of a topology  
+	\end{definition}
+\end{tcolorbox}
 
 \end{section}
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{section}{Bases and Subspaces}
 
+As far as I know the idea of basis for a topological space is pretty similar to the idea of a basis in linear algebra. The goal is to describe the whole space in terms of its building blocks. And in the context of topology the building blocks are open sets, however in linear algebra the idea was to use the basic elements with linear combinations in order to generate the whole space. In this case we don't have the concept of linear space, but the concept of union and intersection of sets; therefore, we should expect that the definition of basis follows one of those operations.
+On the other hand in the definition of topology we learn that the arbitrary union of open sets is also and open set, which in some sense implies that the result of those union could be quite complicated; this is where the idea of basis becomes useful.
 In what follows I'm going to use TS for Topological Space. Given a topological space we define a basis for this TS as follows:
 
 \begin{definition}[Basis]
@@ -37,18 +46,88 @@ Given a TS $\left( X, \mathcal{T}\right)$, we say that $\mathcal{\beta}\subset\m
 
 \begin{theorem}
 Let $\left( X, \mathcal{T}\right)$ be a TS, and let $\mathcal{\beta}$ be a collection of subsets of $X$. Then $\mathcal{\beta}$ is a basis for $\mathcal{T}$ if and only if
-\begin{itemize}
-	\item $\mathcal{\beta}\subset\mathcal{T}$,
-	\item for each open set $U$ in $\mathcal{T}$ and a point $p\ni U$ there is a set $V\in\mathcal{\beta}$ such that $p\in V\subset U$
-
-\begin{proof}
-Let's assume that $\mathcal{\beta}$ is a basis, thus it follows that $\mathcal{\beta}\subset\mathcal{T}$ by definition. On the other hand, let $U\in\mathcal{T}$ such that $p\in U$, because $\mathcal{\beta}$ is basis it follows that $U$ can be written as the union of elements of $\mathcal{\beta}$, and from this it follows that there exists $V\in\mathcal{\beta}$ such that$p\in V\subset U$.
-
-Now let's $\mathcal{\beta}$ as given 
-\end{proof}	
-	
-\end{itemize}
+	\begin{itemize}
+		\item $\mathcal{\beta}\subset\mathcal{T}$,
+		\item for each open set $U$ in $\mathcal{T}$ and a point $p\ni U$ there is a set $V\in\mathcal{\beta}$ such that $p\in V\subset U$
+	\end{itemize}
 \end{theorem}
+
+\begin{tcolorbox}
+By definition of basis it follows that the empty set is the union of open sets, in this case an empty union is the empty set, but what does that even mean?
+\end{tcolorbox}
+
+\begin{theorem}
+Suppose that $X$ is a TS and $\mathcal{B}$ is a collection of subsets of $X$. Then $\mathcal{B}$ is a basis for some topology on $X$ if and only if 
+	\begin{itemize}
+		\item each point of $X$ is in some element of $\mathcal{B}$, and
+		\item if $U$ and $V$ are sets in $\mathcal{B}$ and $p\in U\cap V$, there is a set $W$ in $\mathcal{B}$ such that $p\in W\subset U\cap V$
+	\end{itemize}
+\end{theorem}
+
+\begin{definition}
+Suppose $\mathcal{T}$ and $\mathcal{T}^{\prime}$ are two topologies on the same underlying set $X$. If $\mathcal{T}\subset\mathcal{T}^{\prime}$, then we say that $\mathcal{T}^{\prime}$ is finer than $\mathcal{T}$. Alternatively, we say that $\mathcal{T}$ is coarser than  $\mathcal{T}^{\prime}$. We say strictly coarser or strictly finer if additionally $\mathcal{T}\neq\mathcal{T}^{\prime}$
+\end{definition}
+
+\begin{subsection}{Subbases}
+
+\begin{definition}
+Let $\left(X, \mathcal{T}\right)$ a TS and let $\mathcal{S}$ be a collection of subsets of $X$. Then $\mathcal{S}$ is said to be a sub basis for $\mathcal{T}$ if and only if the collection $\mathcal{B}$ of all finite intersections of sets in $\mathcal{S}$ is a basis for $\mathcal{T}$. And an element of $\mathcal{S}$ is called a sub basis element or a subbasic open set.
+\end{definition}
+
+\begin{theorem}
+Let $\left(X, \mathcal{T}\right)$ a TS and let $\mathcal{S}$ be a collection of subsets of $X$. Then $S$ is sub-basis for $\mathcal{T}$ if and only if
+	\begin{enumerate}
+	\item $\mathcal{S}\subset\mathcal{T},$ and
+	\item for each set $U\in \mathcal{T}$ and a point $p\in U$ there is an finite collection $\{ V_{i}\}_{I}^{n}$ of elements of $\mathcal{S}$ such that 
+	$$ 
+		p\in \cup_{j=1}^{n}V_{j}\subset U
+	$$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+Suppose $X$ is a set and $\mathcal{S}$ is a collection of subsets of $X$. Then $\mathcal{S}$ is a sub basis for some topology on $X$ if and only if every point of $X$ is in some element of $\mathcal{S}$.
+\end{theorem}
+
+\end{subsection}
+
+\begin{subsection}{Order Topology}
+
+\begin{definition}
+Let $X$ be a totally ordered set by $\leq$. Let $\mathcal{B}$ be the collection of all subsets of $X$ that are any of the following terms
+$$
+	\{ x\in X | x < a \}, \{ x\in X | a < x\}, \{x\in X | a< x < b\}.
+$$
+For $a,b\in X$. Then $\mathcal{B}$ is a basis for a topology $\mathcal{T}$ called the order topology on $X$.
+\end{definition}
+
+\begin{definition}
+Given sets $A$ and $B$, their product ( or Cartesian Product) $A\times B$ is the set of all ordered pairs $(a,b)$ such that $a\in A$ and $b\in B$.
+\end{definition}
+
+\end{subsection}
+
+\begin{subsection}{Subspaces}
+\end{subsection}
+
+
 \end{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Begin section about Covers
+
+\begin{section}{Open Cover and Compactness}
+\end{section}
+
+
+
+%%% Begin section about Separation Properties
+
+\begin{section}{Separation Properties}
+\end{section}
+
+
+
+
 
 \end{document}
