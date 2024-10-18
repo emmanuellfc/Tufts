@@ -1,0 +1,135 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                	 % layout options
+\geometry{letterpaper}
+\usepackage{charter}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{ams math}
+\usepackage{tcolorbox}
+
+
+\title{HW5 Point Set Topology}
+\author{Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}
+1. Consider $\mathbb{R}$ with the standard topology. Let $C$ be a compact subset of $\mathbb{R}$. Prove that $C$ as a maximum, that is a point $m\in C$ such that $x\leq m$ for all $x\in C$.
+\end{tcolorbox}
+\begin{proof}
+This follows from the Heine-Borel theorem, which states that $C\subset\mathbb{R}$, with the standard topology, is compact if and only if $C$ is bounded and closed. 
+
+Now let's suppose that $C\subset\mathbb{R}$ is compact, then it follows that $C$ is bounded and closed, but being bounded means that $C$ is bounded from above and bounded from below, in particular let's focus on being bounded by above, this implies that there is a point $m\in \mathbb{R}$ such that $x\leq m$ for all $x\in C$. Now, because $C$ is bounded it follows that it has a least upper bound, and let's call it $m$. Now, let's prove that $m\in C$; because $m$ is the least upper bound it follows that for any $\epsilon>0$ there is an element $x\in C$ such that $m-\epsilon<x\leq m$, which implies that $m$ is a limit point of $C$ and because $C$ is closed, this implies that $C$ contains all its limit points, therefore $m\in C$
+
+\end{proof}
+
+\newpage
+\begin{tcolorbox}
+2. If $A$ and $B$ are compact subspaces of a separated topological space $(X, \mathcal{T})$, prove that $A \cup B$ is a compact subspace of $X$.
+\end{tcolorbox}
+\begin{proof}
+Let $A$ and $B$ be compact subspaces of a separated topological space $(X, \mathcal{T})$. Thus let $\{ O_{\alpha\in\lambda_{A}}^{A} \}$ and $\{ O_{\beta\in\lambda_{B}}^{B} \}$ be open covers of $A$ and $B$ respectively, this is
+$$
+A\subset \cup \{ O_{\alpha\in\lambda_{A}}^{A} \}, \ \
+B\subset \cup \{ O_{\beta\in\lambda_{B}}^{B} \}.
+$$
+From this if follows that $\{ O_{\alpha\in\lambda_{A}}^{A} \}\cup \{ O_{\beta\in\lambda_{B}}^{B} \}$ is an open cover for $A\cup B$, this is 
+$$
+A\cup B\subset \{ O_{\alpha\in\lambda_{A}}^{A} \}\cup \{ O_{\beta\in\lambda_{B}}^{B} \}.
+$$
+Now, because $A$ and $B$ are compact it follows that every open cover has a finite subcover, this is $\exists n,k$ such that $\{ O_{1}^{A},\cdots, O_{n}^{A}\}$ is subcover for $A$ and $\{ O_{1}^{B},\cdots, O_{k}^{B}\}$ is subcover for $B$, this is 
+$$
+A\subset \cup \{ O_{1}^{A},\cdots, O_{n}^{A}\}, \ \
+B\subset \cup \{ O_{1}^{B},\cdots, O_{k}^{B}\}.
+$$
+And again, from this it follows that $\{ O_{1}^{A},\cdots, O_{n}^{A}\}\cup \{ O_{1}^{B},\cdots, O_{k}^{B}\}$ is a finite subcover for $A\cup B$. Because the covers were arbitrary it follows that every open cover for $A\cup B$ has a finite subcover, therefore, $A\cup B$ is compact.
+
+\end{proof}
+
+\newpage
+\begin{tcolorbox}
+3. A $(X,\mathcal{T})$ topological space is said to be normal if for every disjoint pair of closed subsets $A$ and $B$
+there exist two disjoint open set $U$ and $V$ with $A \subset U$ and $B\subset V$.
+
+3.1 Prove that $(X,\mathcal{T})$ is a normal topological space if and only if for each closed set $A$ in $X$ and open
+set $U$ containing $A$, there exists an open set $V$ such that $A\subset V$ and $V \subset U$.
+
+3.2 Prove that $(X,\mathcal{T})$ is a normal topological space if and only if for every disjoint pair of closed subsets $A$ and $B$ there exist two disjoint open sets $U$ and $V$ with $A \subset U$ , $B \subset V$ and $U \cap V = \emptyset$.
+
+3.3 Prove that if $(X,\mathcal{T})$ is a (Hausdorff) compact topological space, then $(X, T )$ is normal.
+\end{tcolorbox}
+
+\begin{proof}
+
+3.1 ($\implies$) Let $(X,\mathcal{T})$ is a normal topological space, $A$ be a closed set in $X$, and $U$ be an open set containing $A$, then it follows that $X\setminus$ are disjoint closed sets in $X$. Now, because $X$ is normal, it follows that there exists disjoint open sets $V$ and $W$ such that $A\subset V$ and $X\setminus U\subset W$. Since $V$ and $W$ are disjoint, it follows that $V\subset X\setminus W$, but $X\setminus W\subset U$ then $A\subset V\subset X\setminus W\subset U$, which implies that $A\subset V\subset U$.
+
+($\impliedby$)
+Now, let's suppose that for each closed set $A\subset X$ and open set $U$ containing $A$, there exists an open set $V$ such that $A\subset V$ and  $\overline{V} \subset U$. And let $A$ and $B$ be two disjoint closed sets in $X$, then,$X\setminus B$ is an open set containing $A$. By supposition, there is an open set $V$ such that $A\subset V$ and $\overline{V} \subset X\setminus B$, then it follows that $B\subset X\setminus \overline{V}$. Because $X\setminus \overline{V}$ is open and disjoint from $V$, we have found disjoint open sets $V$ and $X\setminus \overline{V}$ containing $A$ and $B$ respectively, therefore $(X,\mathcal{T})$ is a normal topological space.
+
+
+%3.2 ($\implies$)
+
+
+%3.3
+
+%Let $(X, \mathcal{T})$ be a compact Hausdorff space, and let $x \in X$ and let $Y$ be a closed subset of $X$ such that $x \notin Y$. Since $X$ is a Hausdorff topological space, it follows that for each $y \in Y$, there exist disjoint open sets $U_y$ and $V_y$ such that $x \in U_y$ and $y \in V_y$.
+
+%The collection $\{V_y | y \in Y\}$ forms an open cover of $Y$. Since $Y$ is a closed subset of a compact space, $Y$ itself is compact. Therefore, there exists a finite subcover $\{V_{y_1}, V_{y_2}, ..., V_{y_n}\}$ of $Y$. Now, let $U = \bigcap_{i=1}^n U_{y_i}$ and $V = \bigcup_{i=1}^n V_{y_i}$. Then it follows that $U,V$ are open, $x \in U$, since $x \in U_{y_i}$ for all $i$, $Y \subseteq V$, because $\{V_{y_1}, V_{y_2}, ..., V_{y_n}\}$ covers $Y$, and $U \cap V = \emptyset$. Indeed let $z \in U \cap V$ then it follows that $z \in U_{y_i}$ for all $i$ and $z \in V_{y_j}$ for some $j$. But this contradicts the fact that $U_{y_j}$ and $V_{y_j}$ are disjoint. Therefore, we have found disjoint open sets $U$ and $V$ containing $x$ and $Y$ respectively.
+
+
+\end{proof}
+
+
+
+
+
+\newpage
+\begin{tcolorbox}
+4. Let $\{K_{n}\}_{n\geq 1}$ be a decreasing sequence of compact subspaces of a Hausdorff topological space $(X,\mathcal{T})$.
+Prove that $K = \cap_{k=1}^{\infty}K_{n}$  is nonempty, and that for every open set $O$ containing $K$, there exists a $K_{n}$
+contained in $O$.
+\end{tcolorbox}
+
+\begin{proof}
+First, let's prove that $K = \cap_{k=1}^{\infty}K_{n}$  is nonempty, and for that, let's do it by contradiction, that is, let's suppose that there's no point $x\in X$ that belongs to $K_{n}$ for all $n$. Now, let's look at the complements of each one of the $K_{n}$, this is $U_{n} = X\setminus K_{n}$. Now, because each one of the $K_{n}$ is compact and is also Hausdorff, it follows that $K_{n}$ is compact for all $n$, which implies that $U_{n}$ is open, and because no point belongs to all $K_{n}$, it follows that the collection $\{U_{n}\}_{n\leq 1}$ is an open cover of $X$. On the other hand, because each $K_{n}$ is compact for each $K_{n}$ there is finite subcover, in particular, let's focus on $K_{1}$, and the finite subcover $\{ U_{n_{1}},\cdots, U_{n_{k}}\}$. Now, let's suppose that $n_{1}<n_{2}<\cdots<n_{k}$, and because $\{K_{n}\}_{n}$ is decreasing, it follows that
+$$
+U_{n_{1}}\subset U_{n_{2}}\subset\cdots U_{n_{k}}\subset.
+$$
+But then it follows that $U_{n_{k}}$ by itself covers $K_{1}$, which implies that $K_{n_{k}}\cap K_{1}=\emptyset$ but this contradicts the fact that by supposition the sequence is decreasing, therefore $K = \cap_{k=1}^{\infty}K_{n}$  is nonempty.
+
+Now, let's prove that for every open set $O$ containing $K$, there exists a $K_{n}$ contained in $O$. And let $O$ be an open set containing $K$, thus $X\setminus O$ is closed. Now, let's define the closed sets $F_{n} = K_{n}\cap(X\setminus O)$, and each one is a subset of the compact $K_{n}$ which implies that each $F_{n}$ is also compact. On the other hand, by construction, the sequence $\{F_{n}\}_{n\leq 1}$ is also a decreasing sequence of compact sets. And even more, let's notice that 
+$$
+\cap_{n=1}^{\infty}F_{n} = (\cap_{n=1}^{\infty}K_{n})\cap(X\setminus O) = K\cap (X\setminus O)=\emptyset
+$$
+because $K\subset O$. By the same argument as before, a decreasing sequence of non-empty compact sets cannot have an empty intersection, therefore it follows that there must exist an $n$ such that $F_{n}=\emptyset$, and from this it follows that $K_{n}\cap(X\setminus O)=\emptyset$, which implies that $K_{n}\subset O$ for each $n$, and this concludes the proof.
+\end{proof}
+
+
+
+\newpage
+\begin{tcolorbox}
+5. Consider the rational $\mathbb{Q}$ with the subspace topology from the standard topology on $\mathbb{R}$. Find a set $A$ in
+$\mathbb{Q}$ that is closed and bounded but not compact.
+\end{tcolorbox}
+
+\begin{proof}
+Let's consider the following subset of $\mathbb{Q}$,
+$$
+A=\{ q\in\mathbb{Q} | \sqrt{2}<q<\sqrt{3} \}.
+$$
+Now, let's prove that $A$ is bounded and closed but it's not compact. Indeed, $A$ is bounded from below by $\sqrt{2}$ and bounded from above by $\sqrt{3}$, it follows that $A$ is bounded. On the other hand let's consider the complement of $A$ and let's prove that is open. Indeed
+$$
+\mathbb{Q}\setminus A = \{ q\in\mathbb{Q}|q\leq\sqrt{2} \text{ or } q\geq\sqrt{3} \}.
+$$
+It follows that every rational number in $\mathbb{Q}\setminus A$ will have an open internal around it that is entirely contained in $\mathbb{Q}\setminus A$, and it follows that $A$ is closed.
+Now, let's prove that $A$ is not compact, thus for each rational number $q\in A$,  choose a small open interval $(a_{q},b_{q})$ in $\mathbb{Q}$ centered at $q$ such that 
+$$
+\sqrt{2}<a_{q}<q<b_{q}<\sqrt{3}.
+$$
+It follows that the collection of all these intervals $\{(a_{q},b_{q}|q\in A)\}$ is an open cover of $A$. Now, let's try to find a finite subcover; because $\mathbb{Q}$ is dense in $\mathbb{R}$ it follows that there are infinitely many rational numbers in between $\sqrt{2}$ and $\sqrt{3}$, and therefore for any finite subcover there will always be rational numbers in $A$ that are not covered by this finite family, thus there is no finite subcover, and $A$ is not compact.
+\end{proof}
+
+\end{document}  

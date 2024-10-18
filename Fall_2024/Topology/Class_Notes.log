@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  13 OCT 2024 18:02
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  14 OCT 2024 09:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -476,7 +476,7 @@ LaTeX Font Warning: Font shape `TU/bch/m/it' undefined
 
 [1
 
-] [2] (./Class_Notes.aux)
+] [2] [3] [4] (./Class_Notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -484,10 +484,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  12555 strings out of 476683
  259041 string characters out of 5804047
- 1855018 words of memory out of 5000000
+ 1859018 words of memory out of 5000000
  32603 multiletter control sequences out of 15000+600000
  520224 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,11n,104p,619b,495s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Class_Notes.pdf (2 pages).
+Output written on Class_Notes.pdf (4 pages).
