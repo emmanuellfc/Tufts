@@ -1,0 +1,1301 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 4cm
+\rightmargin 3cm
+\bottommargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Math 171: Homework 1
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Problem
+Given a set 
+\begin_inset Formula $X$
+\end_inset
+
+, consider the poset 
+\begin_inset Formula $P$
+\end_inset
+
+ of all subset of 
+\begin_inset Formula $X$
+\end_inset
+
+ partially ordered by inclusion.
+ Show that 
+\begin_inset Formula $X$
+\end_inset
+
+ is the unique maximum element of 
+\begin_inset Formula $P$
+\end_inset
+
+ , and show that the empty set is the unique least element of 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+By definition, a partially ordered set (poset) is a set equipped with a
+ binary relation that is reflexive, antisymmetric and transitive.
+ Now, with this in mind, let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a non empty set and let's consider the poset 
+\begin_inset Formula $\left(P\left(X\right),\subset\right)$
+\end_inset
+
+.
+ It's clear that 
+\begin_inset Formula $\emptyset,X\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Now, let's suppose that there's an 
+\begin_inset Formula $O\neq\emptyset$
+\end_inset
+
+ such that 
+\begin_inset Formula $O$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+least element
+\begin_inset Quotes erd
+\end_inset
+
+, then it follows that 
+\begin_inset Formula $O\subset\emptyset$
+\end_inset
+
+, which is clearly a contradiction, therefore the empty set is the least
+ element and it's unique.
+\end_layout
+
+\begin_layout Solution*
+On the other hand, it's clear that 
+\begin_inset Formula $X$
+\end_inset
+
+ is the greatest element.
+ Now let's suppose that there's an 
+\begin_inset Formula $X^{\prime}$
+\end_inset
+
+, with the following property, 
+\begin_inset Formula $A\subset X^{\prime}$
+\end_inset
+
+ for each 
+\begin_inset Formula $A\in P$
+\end_inset
+
+, thus it follows that 
+\begin_inset Formula $X\subset X^{\prime}$
+\end_inset
+
+, but 
+\begin_inset Formula $X$
+\end_inset
+
+ is the greatest element, thus 
+\begin_inset Formula $X^{\prime}\subset X$
+\end_inset
+
+, therefore
+\begin_inset Formula 
+\[
+X=X^{\prime},
+\]
+
+\end_inset
+
+it follows that the maximum element of 
+\begin_inset Formula $P$
+\end_inset
+
+ is unique.
+\end_layout
+
+\begin_layout Problem
+Given examples of sets 
+\begin_inset Formula $A$
+\end_inset
+
+ in various topological spaces 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ with:
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+2.1
+\series default
+ a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+ that is an element of 
+\begin_inset Formula $A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+2.2
+\series default
+ a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+ that is not an element of 
+\begin_inset Formula $A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+2.3
+\series default
+ an isolated point of 
+\begin_inset Formula $A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+2.4
+\series default
+ a point not in 
+\begin_inset Formula $A$
+\end_inset
+
+ that is not a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Let 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ be a topological space.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ be 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ be the usual topology.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[0,1\right]$
+\end_inset
+
+, thus 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ are limit points of 
+\begin_inset Formula $A$
+\end_inset
+
+ and they belong to 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left(0,1\right)$
+\end_inset
+
+, in this case 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ are limit points of 
+\begin_inset Formula $A$
+\end_inset
+
+ and they do not belong to 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left\{ 0\right\} \cup\left(1,2\right)$
+\end_inset
+
+, in this case 
+\begin_inset Formula $0$
+\end_inset
+
+ is an isolated point because we can find a neighborhood that does not intersect
+ any other element of the set.
+ Indeed any interval with 
+\begin_inset Formula $0<\epsilon<1$
+\end_inset
+
+ does not intersect the set 
+\begin_inset Formula $A$
+\end_inset
+
+ other than in 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left(0,1\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $p=5$
+\end_inset
+
+, thus 
+\begin_inset Formula $p\in\mathbb{R}$
+\end_inset
+
+ is a point not in 
+\begin_inset Formula $A$
+\end_inset
+
+ that is not a limit point of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Problem
+Let 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ be a topological space:
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+3.1
+\series default
+ Which sets are closed in a set X with the discrete topology?
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+3.2
+\series default
+ Which sets are closed in a set X with the indiscrete topology?
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+3.3
+\series default
+ Which set are closed in a set X with the finite complement topology?
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+3.4
+\series default
+ Which set are closed in a set X with the countable complement topology?
+\end_layout
+
+\begin_layout Solution*
+Let 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ be a topological space.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+3.1
+\series default
+ In the case in which 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ is the discrete topology, we have 
+\begin_inset Formula $\mathcal{T}=\mathcal{P}\left(X\right),$
+\end_inset
+
+ this is every possible subset of 
+\begin_inset Formula $X$
+\end_inset
+
+ is an element of the topology 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+.
+ Moreover, we know that a set is closed if its complement is open, but the
+ complement of any subset of 
+\begin_inset Formula $X$
+\end_inset
+
+ is also a subset of 
+\begin_inset Formula $X$
+\end_inset
+
+ thus it follows that every subset of 
+\begin_inset Formula $X$
+\end_inset
+
+ is also closed.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+3.2
+\series default
+ In the case in which 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ is the indiscrete topology, we have 
+\begin_inset Formula $\mathcal{T}=\left\{ \emptyset,X\right\} $
+\end_inset
+
+.
+ Moreover, the complement of an open set is, by definition, a closed set.
+ Therefore , the closed sets in the indiscrete topology are 
+\begin_inset Formula $\left\{ \emptyset,X\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+3.3
+\series default
+ Let 
+\begin_inset Formula $𝑋$
+\end_inset
+
+ be a set, the finite complement (or cofinite) topology on 
+\begin_inset Formula $𝑋$
+\end_inset
+
+ is defined as: 
+\begin_inset Formula $\mathcal{𝑈}\subset X$
+\end_inset
+
+ is open if and only if 
+\begin_inset Formula $𝑋/\mathcal{U}$
+\end_inset
+
+ is finite or 
+\begin_inset Formula $\mathcal{U}=∅$
+\end_inset
+
+.
+ And again, using the definition that a set if closed when its complement
+ is open we have that closed sets in the cofinite topology are finite sets,
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ or the empty set 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+3.4 Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set, the countable complement (or cocountable) topology on 
+\begin_inset Formula $X$
+\end_inset
+
+ is defined as: 
+\begin_inset Formula $\mathcal{𝑈}\subset X$
+\end_inset
+
+ is open if and only if 
+\begin_inset Formula $𝑋/\mathcal{U}$
+\end_inset
+
+ is countable or 
+\begin_inset Formula $\mathcal{U}=∅$
+\end_inset
+
+.
+ As previously a set if closed when its complement is open, but the open
+ sets in this topology are defined as the sets whose complements are countable,
+ thus the closed sets are countable sets, 
+\begin_inset Formula $X$
+\end_inset
+
+ or the empty set 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+In 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ with the standard topology, describe the limit points and the closure of
+ the set 
+\begin_inset Formula 
+\[
+S=\left\{ (x,\sin(1/x))|x∈(0,1)\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Clearly, in for for each 
+\begin_inset Formula $p\in\left(0,1\right)$
+\end_inset
+
+ we can always find a neighborhood 
+\begin_inset Formula $U_{p}$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\left(U_{x}/\left\{ p\right\} \right)\cap S\neq\emptyset.
+\]
+
+\end_inset
+
+On the other hand the when the function approaches 
+\begin_inset Formula $0$
+\end_inset
+
+ from the left, the function 
+\begin_inset Formula $\sin(1/x)$
+\end_inset
+
+ oscillates abruptly between the interval 
+\begin_inset Formula $\left[-1,1\right]$
+\end_inset
+
+ without settling at any particular value, and that behavior is shown in
+ the next figure.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename TSin_Curve.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+Moreover, for each 
+\begin_inset Formula $𝑦\in\left[−1,1\right]$
+\end_inset
+
+ we can always solve the equation 
+\begin_inset Formula 
+\[
+y=\sin\left(\frac{1}{x}\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+because the sine function is dense in 
+\begin_inset Formula $\left[-1,1\right]$
+\end_inset
+
+, for each 
+\begin_inset Formula $𝑦\in\left[-1,1\right]$
+\end_inset
+
+ and for each 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ there is an 
+\begin_inset Formula $x$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\left|\sin\left(\frac{1}{x}\right)-y\right|<\epsilon.
+\]
+
+\end_inset
+
+Thus, we have that the limit points of point in 
+\begin_inset Formula $S$
+\end_inset
+
+, and also points in 
+\begin_inset Formula $A$
+\end_inset
+
+, where 
+\begin_inset Formula $A$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+A=\left\{ \left(0,y\right)\subset\mathbb{R}^{2};y\in\left[-1,1\right]\right\} .
+\]
+
+\end_inset
+
+On the other hand, by definition, the closure of 
+\begin_inset Formula $S$
+\end_inset
+
+ is the union of the set with its accumulation points, therefore, we have
+ 
+\begin_inset Formula 
+\[
+\overline{S}=S\cup\left\{ \left(0,y\right)\subset\mathbb{R}^{2};y\in\left[-1,1\right]\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Prove or disprove each of the following statements.
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+5.1
+\series default
+ If 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+ then 
+\begin_inset Formula $\overline{A}\subset\overline{B}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+5.2
+\series default
+ 
+\begin_inset Formula $\overline{A\cup B}=\overline{A}\cup\overline{B}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+5.3
+\series default
+ 
+\begin_inset Formula $\overline{\cup_{\alpha}A_{\alpha}}=\cup_{\alpha}\overline{A_{\alpha}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+5.4
+\series default
+ 
+\begin_inset Formula $\overline{\overline{A}}=\overline{A}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+5.5
+\series default
+ 
+\begin_inset Formula $\text{Int}\left(\text{Int}\left(A\right)\right)=\text{Int}\left(A\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+5.6
+\series default
+ 
+\begin_inset Formula $\text{Int}\left(A\cap B\right)=\text{Int}\left(A\right)\cap\text{Int}\left(B\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Solution*
+Let 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ be a topological space.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+5.1 
+\series default
+Let's suppose that 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+, by definition 
+\begin_inset Formula 
+\[
+\overline{A}=\cup\left\{ \mathcal{V}:\mathcal{V}\text{ is closed and }\hspace{1em}A\subset\mathcal{V}\right\} ,
+\]
+
+\end_inset
+
+it follows that 
+\begin_inset Formula $A\subset\overline{A}$
+\end_inset
+
+, but 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+ which implies that 
+\begin_inset Formula 
+\[
+A\subset B\subset\overline{B}\implies A\subset\overline{B},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ is the smallest closed set that contains 
+\begin_inset Formula $A$
+\end_inset
+
+, thus we have 
+\begin_inset Formula 
+\[
+\overline{A}\subset\overline{B}.
+\]
+
+\end_inset
+
+
+\series bold
+5.2
+\series default
+ Let's prove that 
+\begin_inset Formula $\overline{A\cup B}=\overline{A}\cup\overline{B}$
+\end_inset
+
+.
+ By definition 
+\begin_inset Formula 
+\[
+\overline{A\cup B}=\cap\left\{ \mathcal{V}:\mathcal{V}\text{ is closed and }\hspace{1em}A\cup B\subset\mathcal{V}\right\} ,
+\]
+
+\end_inset
+
+but clearly 
+\begin_inset Formula $\overline{A}\subset\overline{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $B\subset\overline{B}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula 
+\[
+A\cup B\subset\overline{A}\cup\overline{B},
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\overline{A\cup B}$
+\end_inset
+
+ is the smallest closed set that contains 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+, thus any other set containing 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+, should be greater than 
+\begin_inset Formula $\overline{A\cup B}$
+\end_inset
+
+, this is
+\begin_inset Formula 
+\[
+\overline{A\cup B}\subset\overline{A}\cup\overline{B}.
+\]
+
+\end_inset
+
+On the other hand, 
+\begin_inset Formula $A\subset A\cup B$
+\end_inset
+
+ and 
+\begin_inset Formula $B\subset A\cup B$
+\end_inset
+
+, and again, by 5.1, we have 
+\begin_inset Formula $\overline{A}\subset\overline{A\cup B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{B}\subset\overline{A\cup B}$
+\end_inset
+
+, it follows that 
+\begin_inset Formula 
+\[
+\overline{A}\cup\overline{B}\subset\overline{A\cup B},
+\]
+
+\end_inset
+
+therefore, we have 
+\begin_inset Formula 
+\[
+\overline{A\cup B}=\overline{A}\cup\overline{B}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+5.3
+\series default
+ Let 
+\begin_inset Formula $\left\{ A_{\alpha}\right\} _{\alpha\in\lambda}$
+\end_inset
+
+ a collection of sets in a topological space 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ but we know that the arbitrary union of closed sets in general is not a
+ closed set.
+ Therefore, the statement 
+\begin_inset Formula 
+\[
+\overline{\cup_{\alpha}A_{\alpha}}=\cup_{\alpha}\overline{A_{\alpha}},
+\]
+
+\end_inset
+
+in general is not true.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+5.4
+\series default
+ Let 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+, thus by definition 
+\begin_inset Formula 
+\[
+\overline{A}=\cap\left\{ \mathcal{V}:\mathcal{V}\text{ is closed and }\hspace{1em}A\subset\mathcal{V}\right\} ,
+\]
+
+\end_inset
+
+it follows that 
+\begin_inset Formula $A\subset\overline{A}$
+\end_inset
+
+, and by 5.1, we have 
+\begin_inset Formula 
+\[
+\overline{A}\subset\overline{\overline{A}},
+\]
+
+\end_inset
+
+on the other hand 
+\begin_inset Formula 
+\[
+\overline{\overline{A}}=\cap\left\{ \mathcal{V}:\mathcal{V}\text{ is closed and }\hspace{1em}\overline{A}\subset\mathcal{V}\right\} ,
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ is closed by definition, thus 
+\begin_inset Formula 
+\[
+\overline{\overline{A}}\subset\overline{A},
+\]
+
+\end_inset
+
+therefore 
+\begin_inset Formula 
+\[
+\overline{\overline{A}}=\overline{A}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+5.5
+\series default
+ Let 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+.
+ By definition 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\right)=\cup\left\{ \mathcal{U}:\mathcal{U}\in\mathcal{T}\hspace{1em}\&\hspace{1em}\mathcal{U}\subset A\right\} ,
+\]
+
+\end_inset
+
+and because the interior is an union of open sets it follows that is an
+ open set.
+ Now if we consider the interior of the interior of a set 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+, because the interior is open, and even more, it's the greatest open contained
+ in the given set, it follows that
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\[
+\text{Int}\left(\text{Int}\left(A\right)\right)=\text{Int}\left(A\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+5.6
+\series default
+ Let 
+\begin_inset Formula $A,B\subset X$
+\end_inset
+
+.
+ As an auxiliary step, let's prove that if 
+\begin_inset Formula $C\subset D$
+\end_inset
+
+, then 
+\begin_inset Formula $\text{Int}\left(C\right)\subset\text{Int}\left(D\right)$
+\end_inset
+
+; indeed
+\begin_inset Formula 
+\[
+\text{Int}\left(C\right)\subset C\subset D,
+\]
+
+\end_inset
+
+but the interior of 
+\begin_inset Formula $D$
+\end_inset
+
+ is the greatest open set contained in 
+\begin_inset Formula $D$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\text{Int}\left(C\right)\subset\text{Int}\left(D\right),
+\]
+
+\end_inset
+
+just as we wanted.
+ Moreover, we have that 
+\begin_inset Formula 
+\[
+A\cap B\subset A\hspace{1em}\&\hspace{1em}A\cap B\subset B,
+\]
+
+\end_inset
+
+thus, using the previous result we have that 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\cap B\right)\subset\text{Int}\left(A\right)\hspace{1em}\&\hspace{1em}\text{Int}\left(A\cap B\right)\subset\text{Int}\left(B\right),
+\]
+
+\end_inset
+
+and from this it follows that 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\cap B\right)\subset\text{Int}\left(A\right)\cap\text{Int}\left(B\right).
+\]
+
+\end_inset
+
+On the other hand, because the interior is the greatest open contained in
+ the given set, we have that 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\right)\subset A\hspace{1em}\&\hspace{1em}\text{Int}\left(B\right)\subset B,
+\]
+
+\end_inset
+
+it follows that 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\right)\cap\text{Int}\left(B\right)\subset A\cap B,
+\]
+
+\end_inset
+
+but the interior of 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ is the greatest open contained in 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\right)\cap\text{Int}\left(B\right)\subset\text{Int}\left(A\cap B\right),
+\]
+
+\end_inset
+
+therefore, we have that
+\begin_inset Formula 
+\[
+\text{Int}\left(A\right)\cap\text{Int}\left(B\right)=\text{Int}\left(A\cap B\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a subset of 
+\begin_inset Formula $X$
+\end_inset
+
+ where 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ is a topological space.
+ Prove that 
+\begin_inset Formula $\text{Int}\left(A\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\partial\left(A\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\text{Int}\left(X/A\right)$
+\end_inset
+
+ form a partition of 
+\begin_inset Formula $X$
+\end_inset
+
+, that is, the sets are pairwise disjoint and their union is 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+Let 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ be a topological space and 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+, the boundary of 
+\begin_inset Formula $A$
+\end_inset
+
+ is by definition
+\begin_inset Formula 
+\[
+\partial\left(A\right)=\overline{A}\cap\overline{\left(X/A\right)}.
+\]
+
+\end_inset
+
+Clearly 
+\begin_inset Formula 
+\[
+\text{Int}\left(A\right)\cap\text{Int}\left(X/A\right)=\emptyset.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

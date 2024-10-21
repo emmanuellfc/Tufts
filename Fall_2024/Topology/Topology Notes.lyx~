@@ -1,0 +1,242 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 4cm
+\rightmargin 3cm
+\bottommargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Topology
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Warning:
+\series default
+ Topology produces theorems that are usually qualitative in nature—they
+ may assert, for example, the existence or non-existence of an object.
+ They will not in general, provide the means for its construction.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a non-empty set and 
+\begin_inset Formula $\tau\subset\exp\left(X\right)$
+\end_inset
+
+.
+ We say 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is a topology for 
+\begin_inset Formula $X$
+\end_inset
+
+ if 
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $\emptyset\in\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $X\in\tau$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+2.
+ If 
+\begin_inset Formula $\mathcal{U},\mathcal{V}\in\tau$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathcal{U}\cap\mathcal{V}\in\tau$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ If 
+\begin_inset Formula $\mathcal{U}_{\alpha}\in\tau$
+\end_inset
+
+ for each 
+\begin_inset Formula $\alpha\in\lambda$
+\end_inset
+
+, then 
+\begin_inset Formula $\cup_{\alpha}\mathcal{U}_{\alpha}\in\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Why not allow open sets to be open under arbitrary intersections?
+\end_layout
+
+\begin_layout Standard
+Answer: if we allow this, then the definition of TS would render most TS
+ useless.
+\end_layout
+
+\begin_layout Standard
+The main idea behind topological space if to provide a definition as general
+ as could be managed for the study of continuous functions.
+\end_layout
+
+\begin_layout Standard
+Def(continuous functions).
+ Let 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ be two topological spaces and 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+, we say that 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous if the image inver of an open set in 
+\begin_inset Formula $Y$
+\end_inset
+
+ is an open set in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Another point worth examining is the reason why the Definition (1.18) demands
+ that the inverse of an open set remains open under f, rather than the reverse.
+ That is to say would it not be simpler and more natural to define f to
+ be continuous if f maps open sets in X into open sets in Y?
+\end_layout
+
+\begin_layout Standard
+It is clear that the discrete topology is the largest topology that we can
+ give to X, largest that is in terms of number of open sets.
+ Also the trivial topology is the smallest topology that we can give to
+ X.
+\end_layout
+
+\begin_layout Standard
+Given a topology T on X, then N is a neighborhood of a point x ⊃ X if N
+ is a subset of X and N contains some open set Xα to which x belongs.
+\end_layout
+
+\begin_layout Standard
+Let T be a topology on X, then any subset U of X is closed if the complement
+ of U in X (which we write as X − U), is an open set.
+\end_layout
+
+\begin_layout Standard
+The main general idea in topology is to study spaces which can be continuously
+ deformed into one another.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

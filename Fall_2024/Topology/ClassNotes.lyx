@@ -1,0 +1,329 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 4cm
+\rightmargin 3cm
+\bottommargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Topology Class Notes: October 09, 2024
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+,
+\begin_inset Formula $Y$
+\end_inset
+
+ be two compact TS, then 
+\begin_inset Formula $E=X\times Y$
+\end_inset
+
+ with the product topology is compact.
+\end_layout
+
+\begin_layout Corollary
+Suppose 
+\begin_inset Formula $a_{k}<b_{k}$
+\end_inset
+
+ are real numbers where 
+\begin_inset Formula $k=1,2,\dots,n$
+\end_inset
+
+, then 
+\begin_inset Formula $\Pi_{k=1}^{n}\left[a_{k},b_{k}\right]$
+\end_inset
+
+ is compact
+\end_layout
+
+\begin_layout Subsection*
+Metric Spaces
+\end_layout
+
+\begin_layout Definition
+A metric space is a pair consisting of a set 
+\begin_inset Formula $E$
+\end_inset
+
+ and a mapping 
+\begin_inset Formula $d:E\times E\rightarrow\left[0,\infty\right)$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $d(x,y)=0\iff x=y,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d(x,y)=d(y,x),\forall x,y\in E,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d(x,y)\leq d(x,z)+d(z,y),\hspace{1em}\forall x,y,z\in E$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Remark.
+ If the 
+\begin_inset Formula $\left(E,d\right)$
+\end_inset
+
+ is a metric space 
+\begin_inset Formula $d$
+\end_inset
+
+ is called a metric or a distance on 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $\left(E,d\right)$
+\end_inset
+
+ be a metric space, 
+\begin_inset Formula $x_{0}\in E$
+\end_inset
+
+ and 
+\begin_inset Formula $r>0$
+\end_inset
+
+.
+ The set 
+\begin_inset Formula $B\left(x_{0},r\right)=\left\{ x\in E;d\left(x_{0},x\right)<r\right\} $
+\end_inset
+
+ is called the open ball centered at 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ of radius 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+On the other hand, the set 
+\begin_inset Formula $\overline{B\left(x_{0},r\right)}=\left\{ x\in E;d\left(x_{0},x\right)\leq r\right\} $
+\end_inset
+
+ is called the closed ball centered in 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ of radius 
+\begin_inset Formula $r.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+If 
+\begin_inset Formula $A\subset E$
+\end_inset
+
+, the diameter of 
+\begin_inset Formula $A$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\delta A=\sup\left\{ d\left(x,y\right);x,y\in A\right\} $
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A,B\subset E$
+\end_inset
+
+, then the distance between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ is given by 
+\begin_inset Formula $d\left(A,B\right)=\inf\left\{ d\left(x,y\right);x\in A,y\in B\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $\left(E,d\right)$
+\end_inset
+
+ be a metric space.
+ We can define a topology on 
+\begin_inset Formula $E$
+\end_inset
+
+ by defining 
+\begin_inset Formula $A\subset E$
+\end_inset
+
+ to be open if either 
+\begin_inset Formula $A=\emptyset$
+\end_inset
+
+ or if 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ there's a 
+\begin_inset Formula $\rho_{a}$
+\end_inset
+
+ such that the open ball 
+\begin_inset Formula $B\left(a,\rho_{a}\right)$
+\end_inset
+
+ is indeed in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+If 
+\begin_inset Formula $\left(E,d\right)$
+\end_inset
+
+ be a metric space and 
+\begin_inset Formula $\left(E,\mathcal{T}_{d}\right)$
+\end_inset
+
+ is their corresponding topological space.
+ Then the following statements hold:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(E,\mathcal{T}_{d}\right)$
+\end_inset
+
+ is Hausdorff
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

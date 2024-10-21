@@ -1,0 +1,119 @@
+%% LyX 2.3.7 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,english]{amsart}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=4cm,bmargin=4cm,lmargin=3cm,rmargin=3cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Classwork: Week of Sep 16, 2024}
+\author{Xavier S. deSouza, Cisco J. Hadden, Seth R. Lupo, Abhi Mummaneni,
+Emmanuel Flores}
+
+\maketitle
+Let $X$ be a nonempty set and $\mathcal{T}$ be the set of all subset
+$E$ of $T$ such that $X/E$ is countable or $E=\emptyset$.
+\begin{enumerate}
+\item Prove that $\left(X,\mathcal{T}\right)$ is a topological space. ($\mathcal{T}$
+is called the countable complement topology on $X$.)
+
+1. Let's prove that $\emptyset,X\in\mathcal{T}$. Indeed, $\emptyset\in\mathcal{T}$
+by definition. On the other hand, $X\in\mathcal{T}$ because $X/X=\emptyset$
+which is a member of $\mathcal{T}$.
+
+2. Let's prove that the finite intersection of open sets is an open
+set. Indeed, let $U_{1},U_{2}\in\mathcal{T}$, then, by the definition
+of $\mathcal{T}$, we have that $U_{1}$ is empty or $X/U_{1}$ countable,
+and the same as well for $X/U_{2}$. So let's assume that both $U_{1}$
+and $U_{2}$ are non-empty, thus, it follows that
+\[
+X/U_{1}\hspace{1em}\&\hspace{1em}X/U_{2},
+\]
+are both countable, now let's take $U_{1}\cap U_{2}$, we want to
+prove that $U_{1}\cap U_{2}\in\mathcal{T}$. Indeed, if $U_{1}\cap U_{2}=\emptyset$,
+then $U_{1}\cap U_{2}\in\mathcal{T}$, now, let's assume that the
+intersection is non-empty, thus using the Morgan's Laws, we have that
+\[
+X/\left(U_{1}\cap U_{2}\right)=\left(X/U_{1}\right)\cup\left(X/U_{2}\right),
+\]
+but we know that the union of countable sets is countable, and by
+assumption $X/U_{1}$ and $X/U_{2}$ are countable, thus we have that
+\[
+U_{1}\cap U_{2}\in\mathcal{T},
+\]
+just as we wanted.
+
+3. Now, we want to prove that the arbitrary union of open sets is
+open. Indeed let $U_{\alpha}$ be an indexed family of open sets,
+with $\alpha\in\lambda$. Then, let's consider $\cup_{\alpha\in\lambda}U_{\alpha}$,
+and again, we have two options, for each $\alpha\in\lambda$ either
+$U_{\alpha}$ is the empty set or the complement is countable, so
+let's assume that the complement is countable. Again, using the Morgan's
+Laws, we have that 
+\[
+X/\left(\cup_{\alpha\in\lambda}U_{\alpha}\right)=\cap_{\alpha\in\lambda}\left(X/U_{\alpha}\right),
+\]
+but each one of $X/U_{\alpha}$ are countable, thus the intersection
+is at most countable, with means that 
+\[
+\cup_{\alpha\in\lambda}U_{\alpha}\in\mathcal{T},
+\]
+just as we wanted.
+\item For $X=\mathbb{R}$ given an example of a set that is open in both
+the standard and countable complement topologies.
+
+The standard topology of $\mathbb{R}$ is given by the open intervals,
+thus if we consider 
+\[
+\mathcal{U}=\left(-\infty,0\right)\cup\left(0,\infty\right),
+\]
+then, using the definition of countable topology we have that 
+\[
+\mathbb{R}/\mathcal{U}=\left\{ 0\right\} ,
+\]
+which is finite, and therefore, countable.
+\item For $X=\mathbb{R}$ given an example of a set that is open in the
+standard topology but not open in the countable complement topology.
+
+Again, the standard topology of $\mathbb{R}$ is given by the open
+intervals, thus if we consider the open interval $\left(0,1\right)$
+and taking complement, we have 
+\[
+X/\left(0,1\right)=\left(-\infty,0\right]\cup\left[1,\infty\right),
+\]
+which is clearly non countable, thus we found an open set which is
+open in the standard topology but not in the countable complement
+topology.
+\item For $X=\mathbb{R}$ given an example of a set that is closed in both
+the standard and countable complement topologies.
+
+The complement of a closed set is an open set, thus $0$ is an closed
+set in the standard topology because the complement is the union of
+two open sets, this is 
+\[
+X/\left\{ 0\right\} =\left(-\infty,0\right)\cup\left(0,\infty\right),
+\]
+on the other hand in the countable complement topology the complements
+of open sets are the empty set of countable, thus $\left\{ 0\right\} $
+is closed too in the countable complement topology.
+\end{enumerate}
+
+\end{document}

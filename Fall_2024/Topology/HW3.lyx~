@@ -1,0 +1,835 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+todonotes
+pdfcomment
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 4cm
+\rightmargin 3cm
+\bottommargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Math 171: Homework 3
+\end_layout
+
+\begin_layout Author
+J.
+ Emmanuel Flores
+\end_layout
+
+\begin_layout Problem
+Prove that 
+\begin_inset Formula $\mathcal{B}=\left\{ (a,b)\subset R:a,b∈\mathbb{Q}\right\} $
+\end_inset
+
+ is a basis for the standard topology on R.
+\end_layout
+
+\begin_layout Solution*
+Let's start with the definition of basis for a topology.
+ Given a TS (topological space) 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+, and a family 
+\begin_inset Formula $\mathcal{B}\subset\mathcal{T}$
+\end_inset
+
+, we say that 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis for the TS 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ if every open set can be written as the union of elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ On the other hand, we know that the rationals are dense in the reals, this
+ is 
+\begin_inset Formula 
+\[
+\forall x,y\in\mathbb{R}\text{ with }x<y,\exists r\in\mathbb{Q},\text{ s.t }x<r<y.
+\]
+
+\end_inset
+
+ Now, let 
+\begin_inset Formula $x,y\in\mathbb{R}$
+\end_inset
+
+ we know that the standard topology of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is given by open intervals such as 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+, with this in mind we have that 
+\begin_inset Formula 
+\[
+x<\frac{x+y}{2}<y,
+\]
+
+\end_inset
+
+and let's call 
+\begin_inset Formula $z_{1}=\left(x+y\right)/2$
+\end_inset
+
+, thus we have 
+\begin_inset Formula $z_{1}\in\mathbb{R}$
+\end_inset
+
+, and because the rationals are dense in the reals, we have that there exists
+ 
+\begin_inset Formula $r_{1},r_{1}^{\prime}\in\mathbb{Q}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+x<r_{1}<z_{1}\hspace{1em}\&\hspace{1em}z_{1}<r_{1}^{\prime}<y,
+\]
+
+\end_inset
+
+and from this let's consider 
+\begin_inset Formula $\mathcal{B}_{1}=\left(r_{1},r_{1}^{\prime}\right)$
+\end_inset
+
+.
+ Now let's repeat the same process, we have 
+\begin_inset Formula $x<z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{1}<y$
+\end_inset
+
+, thus we have 
+\begin_inset Formula 
+\[
+x<\frac{x+z_{1}}{2}<z_{1}\hspace{1em}\&\hspace{1em}z_{1}<\frac{z_{1}+y}{2}<y,
+\]
+
+\end_inset
+
+and let's call 
+\begin_inset Formula $z_{2}=\left(x+z_{1}\right)/2$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2}^{\prime}=\left(z_{1}+y\right)/2$
+\end_inset
+
+.
+ Again, by the property of 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ being dense in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ there exists 
+\begin_inset Formula $r_{2},r_{2}^{\prime}\in\mathbb{Q}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+x<r_{2}<z_{2}\hspace{1em}\&\hspace{1em}z_{2}^{\prime}<r_{2}^{\prime}<y,
+\]
+
+\end_inset
+
+and from this we consider 
+\begin_inset Formula $\mathcal{B}_{2}=\left(r_{2},r_{2}^{\prime}\right)$
+\end_inset
+
+.
+ We repeat this process recursively and we'll have a family of open intervals
+ of the form 
+\begin_inset Formula 
+\[
+\mathcal{B}=\left\{ \left(a,b\right);a,b\in\mathbb{Q}\right\} ,
+\]
+
+\end_inset
+
+and by construction we have that the union of this family is 
+\begin_inset Formula $\left(x,y\right).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Solution*
+Therefore, we've just proved that 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis for the usual topology of the real line.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Give an example of two topologies on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ such that neither is finer than the other space topology.
+\end_layout
+
+\begin_layout Solution*
+Let's also consider the lower limit topology on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{R}_{l}$
+\end_inset
+
+, which is generated by the basis 
+\begin_inset Formula 
+\[
+\left[a,b\right)=\left\{ x\in\mathbb{R};a\leq x<b\right\} ,
+\]
+
+\end_inset
+
+and in this topology 
+\begin_inset Formula $\mathcal{U}\subset\mathbb{R}$
+\end_inset
+
+ is open if 
+\begin_inset Formula $\forall x\in\mathcal{U}$
+\end_inset
+
+, there is an 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left[x,x+\epsilon\right)\subset\mathcal{U}$
+\end_inset
+
+.
+ And let's also consider the K-Topology on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{R}_{k}$
+\end_inset
+
+, which is obtained by taking as a base the family of open intervals 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ together with sets of the form
+\begin_inset Formula 
+\[
+\left(a,b\right)/K,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+K=\left\{ \frac{1}{n};n=1,2,\cdots\right\} .
+\]
+
+\end_inset
+
+Now, let's prove that these topologies are not comparable; clearly 
+\begin_inset Formula $\left[1,2\right)$
+\end_inset
+
+ is open in 
+\begin_inset Formula $\mathbb{R}_{l}$
+\end_inset
+
+ but it's not open in 
+\begin_inset Formula $\mathbb{R}_{k}$
+\end_inset
+
+.
+ Indeed, any open interval that contains 
+\begin_inset Formula $1$
+\end_inset
+
+ must contain an interval given by 
+\begin_inset Formula $\left(x-\epsilon,x+\epsilon\right)$
+\end_inset
+
+.
+ On the other hand 
+\begin_inset Formula $\left(-1,1\right)/K$
+\end_inset
+
+ is clearly open in 
+\begin_inset Formula $\mathbb{R}_{k}$
+\end_inset
+
+, but is not open in 
+\begin_inset Formula $\mathbb{R}_{l}$
+\end_inset
+
+.
+ Indeed any open set in 
+\begin_inset Formula $\mathbb{R}_{l}$
+\end_inset
+
+ that contains 
+\begin_inset Formula $0$
+\end_inset
+
+ must contain an interval 
+\begin_inset Formula $\left[0,\epsilon\right)$
+\end_inset
+
+ for some 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, and therefore contain elements of 
+\begin_inset Formula $K$
+\end_inset
+
+.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider the following:
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+3.1
+\series default
+ Consider sequences in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ with the finite complement topology.
+ Which sequences converge? To what value(s) to they converge?
+\end_layout
+
+\begin_layout Problem
+
+\series bold
+3.2
+\series default
+ Consider sequences in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ with the countable complement topology.
+ Which sequences converge? To what value(s) to they converge?
+\end_layout
+
+\begin_layout Solution*
+Let 
+\begin_inset Formula $X=\mathbb{R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+3.1
+\series default
+ The finite complement topology 
+\begin_inset Formula $\mathcal{T}_{fc}$
+\end_inset
+
+ over 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is defined as: 
+\begin_inset Formula $\mathcal{U}\in\mathcal{T}_{fc}$
+\end_inset
+
+ if 
+\begin_inset Formula $\mathbb{R}/\mathcal{U}$
+\end_inset
+
+ is finite or 
+\begin_inset Formula $\mathcal{U}=\emptyset$
+\end_inset
+
+.
+ Now, let's assume that 
+\begin_inset Formula $x_{i}\rightarrow x$
+\end_inset
+
+, with 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, then this implies that for each open set 
+\begin_inset Formula $\mathcal{U}\ni x$
+\end_inset
+
+ there exist some integer 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i>N$
+\end_inset
+
+ we have 
+\begin_inset Formula $x_{i}\in\mathcal{U}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution*
+But being open in this topology means that the complement is finite, this
+ is 
+\begin_inset Formula $V=\mathbb{R}/\mathcal{U}$
+\end_inset
+
+ is finite, and because for each 
+\begin_inset Formula $i>N$
+\end_inset
+
+ all elements belong to the open set, this implies that 
+\begin_inset Formula $x_{i}\notin V$
+\end_inset
+
+ for each 
+\begin_inset Formula $i>N$
+\end_inset
+
+.
+ Moreover, any open set in this topology is finite, thus this implies that
+ after 
+\begin_inset Formula $i>N$
+\end_inset
+
+ we have 
+\begin_inset Formula $x_{i}=x$
+\end_inset
+
+.
+ This means that after some label 
+\begin_inset Formula $i$
+\end_inset
+
+ the sequence is constant.
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+3.2
+\series default
+ On the other hand, the countable complement topology 
+\begin_inset Formula $\mathcal{T}_{cc}$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $\mathcal{U}\in\mathcal{T}_{cc}$
+\end_inset
+
+ if 
+\begin_inset Formula $\mathbb{R}/\mathcal{U}$
+\end_inset
+
+ is countable or 
+\begin_inset Formula $\mathcal{U}=\emptyset$
+\end_inset
+
+.
+ Here, the reasoning is pretty similar to the previous problem.
+ Again, let's assume that 
+\begin_inset Formula $x_{i}\rightarrow x$
+\end_inset
+
+, with 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, then this implies that for each open set 
+\begin_inset Formula $\mathcal{U}\ni x$
+\end_inset
+
+ there exist some integer 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i>N$
+\end_inset
+
+ we have 
+\begin_inset Formula $x_{i}\in\mathcal{U}$
+\end_inset
+
+.
+ In this case 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ being open means that its complement is countable.
+ Now, let's consider 
+\begin_inset Formula 
+\[
+\mathcal{U}=\left\{ x_{i}\in\mathbb{R}:i\in\mathbb{N}\right\} ,
+\]
+
+\end_inset
+
+it follows that 
+\begin_inset Formula $\mathbb{R}/\mathcal{U}$
+\end_inset
+
+ is open.
+ Now, let's suppose that 
+\begin_inset Formula $x_{i}\neq x$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in\mathbb{N}$
+\end_inset
+
+, but this implies that 
+\begin_inset Formula $x\in\mathbb{R}/\mathcal{U}$
+\end_inset
+
+ but this a contradiction with the assumption that the sequence converges,
+ because we found an open set that contains 
+\begin_inset Formula $x$
+\end_inset
+
+ and does not contain any of the members of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Thus it follows that if 
+\begin_inset Formula $x_{i}\rightarrow x$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{i}=x$
+\end_inset
+
+ for at least one 
+\begin_inset Formula $i\in\mathbb{N}$
+\end_inset
+
+.
+ Now let's consider the following set 
+\begin_inset Formula 
+\[
+A=\left\{ x_{i}\in\mathbb{R};i\in\mathbb{N}\text{ and }x_{i}\neq x\right\} ,
+\]
+
+\end_inset
+
+it follows that this set is countable, therefore 
+\begin_inset Formula $\mathbb{R}/A$
+\end_inset
+
+ is open, but 
+\begin_inset Formula $x_{i}\rightarrow x$
+\end_inset
+
+, thus 
+\begin_inset Formula $x_{i}=n$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ sufficiently large.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a totally ordered set by 
+\begin_inset Formula $\leq$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ be the collection of sets of the form 
+\begin_inset Formula 
+\[
+\mathcal{S}=\left\{ x\in X:x<a\right\} \text{ or }\left\{ x\in X:a<x\right\} 
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $a\in X$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ is a sub-basis for a topology on 
+\begin_inset Formula $X$
+\end_inset
+
+ called the order topology.
+\end_layout
+
+\begin_layout Solution*
+The order topology is defined as follows: let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set totally ordered by 
+\begin_inset Formula $\leq$
+\end_inset
+
+ and let 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+, then let 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ be the family of subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+ that are of the form 
+\begin_inset Formula 
+\[
+\left\{ x\in X;x<a\right\} \text{ or }\left\{ x\in X;a<x\right\} \text{ or }\left\{ x\in X;a<x<b\right\} .
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis for the topology 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+, called the order topology on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution*
+On the other hand we know that a family of open sets 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ is sub-basis if all finite intersections of 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ form a basis for the TS.
+ 
+\end_layout
+
+\begin_layout Solution*
+So let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a totally ordered set, and 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+, with 
+\begin_inset Formula $a\leq b$
+\end_inset
+
+, and let's consider 
+\begin_inset Formula 
+\[
+S_{a<}=\left\{ x\in X:x<a\right\} ,\hspace{1em}S_{a>}=\left\{ x\in X:a<x\right\} ,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{b<}=\left\{ x\in X:x<b\right\} ,\hspace{1em}S_{b>}=\left\{ x\in X:b<x\right\} ,
+\]
+
+\end_inset
+
+and let's look at the intersections.
+ It's clear that if 
+\begin_inset Formula $a\leq b$
+\end_inset
+
+ it follows that 
+\begin_inset Formula $S_{a<}\subset S_{b<}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{b>}\subset S_{a>}$
+\end_inset
+
+ , which implies that 
+\begin_inset Formula 
+\[
+S_{a<}=S_{a<}\cap S_{b<},\hspace{1em}\&\hspace{1em}S_{b>}=S_{b>}\cap S_{a>}
+\]
+
+\end_inset
+
+and on the other hand, 
+\begin_inset Formula 
+\[
+\left\{ x\in X;a<x<b\right\} =S_{a>}\cap S_{b<}
+\]
+
+\end_inset
+
+therefore, as we can see all finite (and allowed) intersections of 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ form a basis for the order topology of 
+\begin_inset Formula $X$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ is a sub-basis.
+\end_layout
+
+\end_body
+\end_document

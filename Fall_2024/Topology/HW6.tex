@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{charter}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Point Set Topology}
+\author{Emmanuel Flores}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+%%%%% Problem 1 %%%%%
+\begin{problem}
+		Recall that $\mathbb{R}$ with the standard topology is a Hausdorff space. A subset $S\subset \mathbb{R}$ is said to be sequentially compact provided that every sequence in $S$ has a subsequence that converges to a point in $S$.
+		\begin{enumerate}
+			\item Prove that $S$ is sequentially compact if and only if $S$ is closed and bounded. (This is known as the Bolzano-Weierstrass Theorem).
+			\item Prove that if $S$ is compact in the standard topology of $\mathbb{R}$, then $S$ is closed and bounded, hence sequentially compact. (Note: This has now established the Heine-Borel Theorem on $\mathbb{R}$ with the standard topology: Every closed bounded subset of $\mathbb{R}$ is compact.)
+			\item Prove that if S is sequentially compact then it is compact in the standard topology of $\mathbb{R}$.
+		\end{enumerate}
+\end{problem}
+\begin{proof}
+	\begin{enumerate}
+		\item Let's suppose that $S$ is sequentially compact; to prove, $S$ is bounded and closed. Indeed let $\{x_n\}$ be a convergent sequence in $S$, this is $x_n\rightarrow x$, where $\in S$, and because $S$ is sequentially compact, it follows that there exists a subsequence $\{x_{n_k}\}$ of $\{x_n\}$,  such that $\{x_{n_k}\}\rightarrow x$, and from this, it follows that $S$ is closed.
+			Let's prove that it's also closed, and let's proceed by contradiction, this is, suppose that $S$ is not bounded, it follows that there exists $x_n$ such that $x_n>n$ for each $n$. And even more, let's focus on the convergent sequence $\{x_n\}$ because $S$ is not bounded, it follows that every subsequence of $\{x_n\}$ is also unbounded which implies that it does not converge, and we've reached a contradiction. Therefore, it follows that $S$ is also bounded.
+			On the other hand, suppose that $S$ is closed and bounded to prove that $S$ is sequentially compact. Indeed, let $\{x_n\}$ be a bounded sequence, but every bounded sequence has a convergent subsequence. Thus, it follows that $x_n\rightarrow x$ with $x\in S$, and thus, $S$ is sequentially compact.
+		\item 
+	\end{enumerate}
+\end{proof}
+
+\pagebreak
+
+%%%%% Problem 2 %%%%%
+\begin{problem}
+	For two points $x = (x_{k})_{k=1}^{n},$ $y = (y_{k})_{k=1}^{n}\in \mathbb{R}$ˆˆ, consider the following three functions:
+	\begin{enumerate}
+		\item Verify that each of these functions defines a metric on $\mathbb{R}^n$.
+		\item Prove that the three distances generate the same topology on $\mathbb{R}^n$.
+	\end{enumerate}
+\end{problem}
+\pagebreak
+
+%%%%% Problem 3 %%%%%
+\begin{problem}
+	A topological space $(E, \mathcal{T} )$ is said to be locally compact provided that it is Hausdorff and every point in $E$ has a least one compact neighborhood.
+	\begin{enumerate}
+		\item Prove that every compact space is locally compact.
+		\item Prove that $E$ equipped with the discrete topology is locally compact.
+		\item Every closed subspace of a locally compact space is locally compact.
+	\end{enumerate}
+\end{problem}
+\pagebreak
+
+%%%%% Problem 4 %%%%%
+\begin{problem}
+	Let $d$, $d^{\prime}$ be two metrics on a set $E$, and let $\psi : [0, \infty] â†’ [0, \infty]$ be an increasing function whose derivative $\psi : [0, \infty) â†’ [0, \infty]$ is also increasing with $\psi(0) = \psi^{\prime}(0) = 0$. Suppose that for all $x, y \in E$ 
+	\begin{displaymath}
+  	d^{\prime}(x,y)\leq \varphi(d(x,y)) \text{ and } d(x,y) \leq \varphi^{\prime}(d^{\prime}(x,y))
+	\end{displaymath}
+	Prove that these two distances generate the same topology on $E$.
+\end{problem}
+\pagebreak
+
+%%%%% Problem 5 %%%%%
+\begin{problem}
+	Let $(A_{n})$be a decreasing sequence of subsets of R, each of which is a finite union of pairwise disjoint closed intervals. We also assume that each of the intervals making up $A_{n}$ contains exactly two of the intervals which make up $A_{n+1}$, and that the diameter of these intervals tends to $0$ with $1/n$. Show that the set $A = \cap_{n}A_{n}$ is a compact set without any isolated points.
+\end{problem}
+
+
+\end{document}
