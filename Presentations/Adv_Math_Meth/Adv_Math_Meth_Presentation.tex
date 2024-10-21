@@ -60,8 +60,7 @@
 \makebeamertitle
 
 \section*{Spinor Representation}
-\begin{frame}{Some Motivation}
-
+\begin{frame}{Some Motivation 1}
 \begin{itemize}
 \item The existence of spin $1/2$ particles shows that is $Spin\left(3\right)$
 rather than $SO\left(3\right)$ that is the symmetry group of corresponding
@@ -80,7 +79,13 @@ spinors.
 \end{defn}
 
 \end{frame}
-
+%
+\begin{frame}{Some Motivation 2}
+	\begin{itemize}
+		\item States of elementary particles such as the electron are described by a state space $\mathcal{H} =\mathbb{C}^2$.
+		\item We want to study rotations acting on this space, and this is done via: the two dimensional irreducible representation of $SU(2)=Spin(3)$
+	\end{itemize}
+\end{frame}
 \section*{Spin $\frac{1}{2}$ in a Magnetic Field}
 \begin{frame}{Elements of the Lie algebra}
 \begin{itemize}
@@ -115,6 +120,18 @@ we like this as observables because the eigenvalues are real $\pm1/2$
 \item States in $\mathcal{H}$ that have a well-defined value of the observable
 $S_{j}$ will be eigenvectors of $S_{j}$ with eigenvalues $\pm1/2.$
 \end{itemize}
+\end{frame}
+%
+\begin{frame}{Step Back: Axioms of QM}
+	\begin{itemize}
+		\item A1: The state of a QMS is given by a non-zero vector in a complex vector space $\mathcal{H}$ with Hermitian inner product.
+		\item A2: The observables of a QMS are given by self-adjoint linear operators on $\mathcal{H}$
+		\item A3: There is a distinguished quantum observable, the Hamiltonian $H$. Time evolution of states $| \psi(t)\rangle\in\mathcal{H}$ is given by the Schrödinger equation 
+		\begin{displaymath}
+  			i\hbar\frac{d}{dt}| \psi(t)\rangle = H| \psi(t)\rangle
+		\end{displaymath}
+
+	\end{itemize}
 \end{frame}
 %
 \begin{frame}{Action of $\Omega$ }
@@ -193,6 +210,36 @@ we see that this Hamiltonian causes spin precession.
 \end{frame}
 
 \section*{Heisenberg Picture}
+\begin{frame}{Heisenberg Picture}
+	\begin{itemize}
+		\item Time evolution operator can be used to make a unitary transformation that puts the time-dependence on the observables. This is:
+		\begin{displaymath}
+  			|\psi(t)\rangle \rightarrow |\psi(t)\rangle_{H}=U^{-1}(t)|\psi(t)\rangle,
+		\end{displaymath}
+		\begin{displaymath}
+  			\mathcal{O}\rightarrow\mathcal{O}_{H}(t)=U^{-1}(t)\mathcal{O}U(t)
+		\end{displaymath}
+		\item The dynamics is given by a differential equation on the operators
+		\begin{displaymath}
+  			\frac{d}{dt}\mathcal{O}_{H}(t) = i[H,\mathcal{O}_{H}(t)] 
+		\end{displaymath}
+	\end{itemize}
+\end{frame}
+%
+\begin{frame}{Rotation of the Spin Vector}
+	\begin{itemize}
+		\item Putting all together:
+		\begin{displaymath}
+  			\frac{d}{dt}\mathbf{S}_{H}(t)= i[H,\mathbf{S}_{H}(t)] 
+		\end{displaymath}
+		the solution will be 
+		\begin{displaymath}
+  			\mathbf{S}_{H}(t) = U(t)\mathbf{S}_H(0)U(t)^{-1}.
+		\end{displaymath}
+		\item The spin vector observable evolves in the Heisenberg picture by rotating about the magnetic field vector $\mathbf{B}$ with angular velocity $(ge/2mc)|\mathbf{B}|$
+		\end{itemize}
+\end{frame}
+%
 \begin{frame}{Schrödinger and Heisenberg Pictures}
 
 \begin{minipage}[t]{1\columnwidth}%
