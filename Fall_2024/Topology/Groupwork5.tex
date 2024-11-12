@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{charter}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+
+\title{Groupwork 5}
+\author{Cisco J. Hadden
+\and  Seth R. Lupo
+\and Abhi Mummaneni
+\and Emmanuel Flores}
+
+\begin{document}
+\maketitle
+\begin{problem}
+	Let $X$ be a topological space, $D$ a dense subset of $X$, and $Y$ be a Hausdorff topological space. Suppose $f$	and $g$ are two continuous functions from $X$ to $Y$ such that $f(x) = g(x)$ for all $x \in D$. Prove that $f(x) = g(x)$ for all $x \in X$.
+\end{problem}	
+
+\begin{proof}
+Let $f: X \rightarrow Y$ and $g: X \rightarrow Y$ be two continuous functions, where $X$ is a topological space and $Y$ is a Hausdorff topological space, and let's suppose that $f(x) = g(x)$ for all $x\in D$, where $D\subset X$  is dense.
+
+Let's prove that $f(x) = g(x)$ for all $x\in X$, and let's proceed by contradiction, let's assume that there exists $x \in X$ such that $f(x) \neq g(x)$. 
+
+Because $Y$ is Hausdorff, it follows that there exist open sets $U\ni f(x) $ and $V \ni g(x)$ subsets of $Y$ such that
+\begin{displaymath}
+  U \cap V =\emptyset.
+\end{displaymath}
+Now, on the other hand, we know that both $f$ and $g$ are continuous, which implies that $f^{-1}(U)$ is open in $X$, and $  g^{-1}(V)$ is open also in $X$, and even more,
+\begin{displaymath}
+	x\in f^{-1}(U) \text{  and  } x\in g^{-1}(V).
+\end{displaymath}
+Now, let's consider the open set $W=f^{-1}(U)\cap g^{-1}(V)$, it's clear that $x \in W$, thus $W$ is an open set that contains $x$, i.e., is a neighborhood of $x$. But $D$ is dense in $X$ which implies that $W$ must contain some point $d \in D$, thus,
+\begin{displaymath}
+  d\in W \implies d\in f^{-1}(U)\cap g^{-1}(V),
+\end{displaymath}
+thus 
+\begin{displaymath}
+  f(d)\in U \text{ and } f(d)\in U,
+\end{displaymath}
+but because $d \in D$ it follows that $f(d)=g(d)$, but this contradicts the fact that $U\cap V=\emptyset$, therefore $f(x) = g(x)$ for all $x \in X$
+
+\end{proof}
+\end{document}

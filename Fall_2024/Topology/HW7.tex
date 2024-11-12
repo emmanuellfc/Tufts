@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+\usepackage{charter}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{graphicx}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Point Set Topology: HW7}
+\author{Emmanuel Flores}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\begin{problem}
+Let X be a topological space and $D$ be a dense subset of $X$. Suppose $f: X \rightarrow Y$ is a continuous surjective function. Prove that $f(D)$ is dense in $Y$.
+\end{problem}
+\begin{proof}
+	Let $f: X \rightarrow Y$ be a continuous function and $D\subset Y$ be a dense subset of $Y$. The continuity of $f$ means that the image inverse of any open set in $Y$ is an open set in $X$. 
+	
+	On the other hand, the density of $D$ means that $\overline{D}=X$, or equivalently, that for any open set in $U\in X$, we have $U\cap D\neq \emptyset$. 
+	
+	We want to prove that $f(D)$ is dense in $Y$, which means
+\begin{displaymath}
+V\cap  f(D)\neq \emptyset,
+\end{displaymath}
+for any open set $V\in Y$.
+
+So, let $V$ be an open set in $Y$; because $f$ is surjective, this means that $f(X)=Y$, or in other words, $V$ contains points of the image of $f$. On the other hand, because $V$ is open, $f^{-1}(V)$ is open for the continuity of $f$. And now, let's use the density of $D$ in this open set, this is
+\begin{displaymath}
+  f^{-1}(V)\cap D \neq \emptyset,
+\end{displaymath}
+and because it is non-empty, let $x\in f^{-1}(V)\cap D$, which implies that 
+\begin{displaymath}
+  x\in f^{-1}(V)\implies f(x)\in V,
+\end{displaymath}
+and
+\begin{displaymath}
+  x\in D\implies f(x)\in D,
+\end{displaymath}
+thus 
+\begin{displaymath}
+  f(x)\in V\cap f(D),
+\end{displaymath}
+or in other words
+\begin{displaymath}
+   V\cap f(D)\neq \emptyset
+\end{displaymath}
+for any open set $V\in Y$; this is, $f(D)$ is dense in $Y$.
+\end{proof}
+\pagebreak
+
+\begin{problem}
+\begin{enumerate}
+	\item Find an open function that is not continuous.
+	\item Find a closed function that is not continuous.
+	\item Find a continuous function that is neither open nor closed.
+	\item Find a continuous function that is open but not closed.
+	\item Find a continuous function that is closed but not open.
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\begin{enumerate}
+\item Let's consider the following function, $f:\mathbb{R}\rightarrow\mathbb{R}$ defined as follows 
+\[ 
+\begin{cases} 
+      2x  & x < 0, \\
+      x+1 & x \geq 0,
+\end{cases}
+\]
+clearly $f$ is not continous at $x=0$, however, it is open. Indeed, let $a, b\in\mathbb{R}$, if $(a,b)\subset(-\infty,0)$, then the image of this interval is $(2a,2b)$, which is an open set, on the other hand, if $(a,b)\subset[0,\infty)$ then the image will be $(a+1,b+1)$ which again, is an open set. Finally, if $0\in(a,b)$ then the image will be $(2a,0)\cup (1,b+1)$ which again, is open.
+\item Now, let's consider the following function $f:\mathbb{R}\rightarrow\mathbb{R}$, also defined piecewise;
+\[ 
+\begin{cases} 
+      0 & x \leq 0, \\
+      1 & x > 0,
+\end{cases}
+\]
+this function is closed. Indeed, let $E\subset\mathbb{R}$ be a closed subset; then $f(E)$ only has $0$ and/or $1$, thus $f(E)$ can only be $\emptyset, \{0\}, \{1\}$ or $\{0,1\}$, and all these sets are closed in $\mathbb{R}$, however, $f$ is not continuous at $x=0$.
+\item ---
+\item ---
+\item Finally, let $f:\mathbb{R}\rightarrow\mathbb{R}$, defined as $f(x)=1$ for all $x\in \mathbb{R}$, clearly $f$ is continuous and is also closed because for any closed set $E\subset\mathbb{R}$ we have $f(E)=\{1\}$ which is closed, but it's not open.
+\end{enumerate}
+\end{proof}
+
+\pagebreak
+
+\begin{problem}
+Let $X$ be a compact topological space and $Y$ be a Hausdorff space. Suppose that $f: X\rightarrow Y$ is continuous. Prove that $f$ is closed.
+\end{problem}
+\begin{proof}
+	We want to prove that $f(E)$ is closed in $Y$ for any closed set $E$ in $X$.
+	
+	Let $E$ be a closed set in $X$; because $X$ is compact, every closed set is also compact; thus $E$ is also compact.
+	
+	On the other hand, $f$ maps compact sets on compact sets by the continuity of $f$. Thus, $f(E)$ is compact.
+	
+	But $Y$ is Hausdorff, and in any Hausdorff space, any compact set is also closed; therefore $f(E)$ is closed.
+\end{proof}
+
+
+\pagebreak
+\begin{problem}
+Let $\{X_\alpha\}_\alpha\in\Lambda$ be a collection of topological spaces. Prove that the product topology on the cartesian product $\Pi_\alpha\in \Lambda X_\alpha$ is the coarsest topology that each of the projection maps $\pi_\beta: \Pi_\alpha\in \Lambda X_\alpha X_\alpha\rightarrow X_{\beta}$ continuous. 
+\end{problem}
+\begin{proof}
+Let $T$ be the topology on the product space $\Pi_\alpha$ with $\alpha\in\Lambda$, we need to show that 1) all the projections are continuous in $T$ and 2) for any other topology $T^{\prime}$ making any of the projection operators continuous we have $T\subset T^{\prime}$.
+
+Let's prove 1); the product topology is generated by the basic elements
+\begin{displaymath}
+  \pi_{\beta_1}^{-1}(U_1)\cap\pi_{\beta_2}^{-1}(U_2)\cap\cdots\cap \pi_{\beta_n}^{-1}(U_n),
+\end{displaymath}
+where each one of $U_i$ being open in $X_i$. Now, let $\pi_{\beta}$ be any projection map, and let $U\subset X_{\beta}$ an open set, then it follows that $\pi_{\beta}^{-1}(U)$ is open; thus $\pi_{\beta}$ is continuous.
+
+Now, let's prove that it is the coarsest topology; let $T^{\prime}$ be any topology that makes all the projection maps continuous, and let $B$ any open set in the product topology $T$, then, we can express $B$ as follows
+
+\begin{displaymath}
+  B=\pi_{\beta_1}^{-1}(U_1)\cap\pi_{\beta_2}^{-1}(U_2)\cap\cdots\cap \pi_{\beta_n}^{-1}(U_n),
+\end{displaymath}
+and because $\pi_{beta_i}$ is continuous in $T^{\prime}$ by assumption, thus $\pi_{\beta_i}^{-1}(U_i)$ is open in $T^{\prime}$, but because $T^{\prime}$ is a topology, it follows that all finite intersections are open, which implies that $B\in T^{\prime}$, which implies that every basic open set in $T$ is also an element in $T^{\prime}$, and $T$ is generated by these elements; thus $T\subset T^{\prime}$, just as we wanted.
+
+
+
+\end{proof}
+
+
+\pagebreak
+\begin{problem}
+Let $(E, d)$ be a complete metric space and $f:E\rightarrow E$ be a function such that there exists $c\in (0,1)$ such that $d(f(x),f(y))\leq cd(x,y)$ for all $x,y\in E$.
+\begin{enumerate}
+	\item Prove that $f$ is uniformly continuous
+	\item Let $x_1 \in E$ and define the sequence $\{x_n\}$ in $E$ be $x_{n+1}=f(x_n)$ for $n\geq 1$. Prove that $\{x_n\}_{n\geq 1}$ is a Cauchy sequence in $E$. Denote $x_0$ the limit of this sequence.
+	\item Prove that $f(x_0)=x_0$ and that $x_0$ is the unique point of $E$ with this property.
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\begin{enumerate}
+\item Being $f$ uniformly continuous on $E$ means that for every $\epsilon > 0$, there exists a $\delta > 0$ such that for all $x$ and $y$ in $E$, if $d(x,y)<\delta$, then $d(f(x), f(y)<\epsilon$. 
+		
+	So, let $\delta>0$ and $x,y\in E$, and such that $d(x,y)<\delta$, but we know that
+\begin{displaymath}
+  d(f(x),f(y))\leq cd(x,y)\implies d(f(x),f(y)) < c\delta,
+\end{displaymath}
+thus, making $\epsilon = \delta / c$ we get the desired inequality; therefore, $f$ is uniformly continous.
+\item Now, let's prove that the given sequence is a Cauchy sequence. Indeed, let's look at the first few terms 
+\begin{displaymath}
+  d(x_2,x_3) = d(f(x_1),f(x_2))\leq cd(x_1,x_2),
+\end{displaymath}
+and also 
+\begin{displaymath}
+  d(x_3,x_3) = d(f(x_2),f(x_3))\leq cd(x_2,x_3)\leq c^2d(x_1,x_2),
+\end{displaymath}
+thus, we can see that for any $k\geq 1$ we have
+\begin{displaymath}
+  d(x_k,x_{k+1})\leq c^{k+1}d(x_1,x_2).
+\end{displaymath}
+Now, for any $p>0$ and $n\geq 1$, let's look at $d(x_n, x_{n+p})$,
+\begin{displaymath}
+d(x_n, x_{n+p}) \leq d(x_n, x_{n+1}) + d(x_{n+1}, x_{n+2}) + ... + d(x_{n+p-1}, x_{n+p})
+\end{displaymath}
+but from the previous result, we have that
+\begin{displaymath}
+  d(x_n, x_{n+p}) \leq  c^{n-1}d(x_1, x_2) + c^nd(x_1, x_2) + ... + c^{n+p-2}d(x_1, x_2)
+\end{displaymath}
+and the right-hand side is equal to 
+\begin{displaymath}
+  d(x_1, x_2)[c^{n-1} + c^n + ... + c^{n+p-2}]=d(x_1, x_2)c^{n-1}[1 + c + ... + c^{p-1}],
+\end{displaymath}
+thus 
+\begin{displaymath}
+  d(x_n, x_{n+p}) \leq d(x_1, x_2)c^{n-1}[(1-c^p)/(1-c)],
+\end{displaymath}
+but because $c\in(0,1)$, thus $c^{n-1}\rightarrow 0$ as $n\rightarrow\infty$, and $(1-c^p)/(1-c)$ is bounded for all $p\in \mathbb{R}$, therefore $d(x_n, x_{n+p})\rightarrow 0$ as $n\rightarrow\infty$, which means that for any $ \epsilon> 0$, there exists $N$ such that for all $n\geq N$ and all $p > 0$, we have $d(x_n, x_{n+p}) < \epsilon$, which is the definition of Cauchy sequence. Since $E$ is complete, we know that $\{x_n\}$ converges, and let's call this limit $x_0$.
+\item Let's prove that $f(x_0)=x_0$. Indeed, we know that $x_0$ is the limit of $\{x_n\}$, thus or any $\epsilon > 0$, there exists $N$ such that for all $n \geq N$ we have $d(x_n, x_0) < \epsilon$. Now, let's consider $d(f(x_0), x_0)$ and prove that this distance is zero; indeed
+\item 
+\begin{displaymath}
+  d(f(x_0),x_0)\leq d(f(x_0),f(x_n)) + d(f(x_n),x_0)\leq cd(x_0,x_n)+d(x_{n+1},x_0),
+\end{displaymath}
+thus for any $\epsilon > 0$, we can choose $N$ large enough such that for $n \geq N$ we have $d(x_0, x_n) < \epsilon$ and $d(x_{n+1}, x_0) < \epsilon$, thus $d(f(x_0),x_0)\leq c\epsilon+\epsilon=c(1+\epsilon)$, which is true for any $\epsilon>0$, therefore $d(f(x_0),x_0)=0$.
+
+
+\end{enumerate}
+\end{proof}
+
+
+
+
+
+\end{document}

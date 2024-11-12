@@ -1,31 +1,30 @@
 \documentclass[12pt]{article}
-% Formatting Page and Font Type
-\usepackage{geometry}
-\usepackage{tcolorbox}
-%\usepackage{multicol} % to format using two or more columns
-\geometry{letterpaper, portrait, margin=1in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Formatting Page and Font Type
 \usepackage{charter}
-% Math packages and environments
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+\usepackage{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Math packages and environments
 \usepackage{amsthm}
 \usepackage{amssymb}
-\newtheorem{definition}{Definition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
-% Title
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title
 \title{Topology: Class Notes}
 \author{Emmanuel Flores \thanks{eq.emmanuel@gmail.com}}
 \date{\today}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% General Definitions
 \begin{section}{General Definitions}
 
 Before we define the idea of topological space I think it's worth saying a few words about it, in particular I think it's quite important to say that the first books on the subject were under the title of set theory, which explains why the heavy use of that "apparatus" in the theory. Ok, having said that Let's start with the definition of topological space.
-
 
 \begin{tcolorbox}[title=Topological Space]
 	\begin{definition}[Topological Space]
@@ -37,16 +36,17 @@ Before we define the idea of topological space I think it's worth saying a few w
 
 	\end{definition}
 \end{tcolorbox}
-
 \end{section}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Bases, SubBases and Subspaces
 
 \begin{section}{Bases and Subspaces}
 
 As far as I know the idea of basis for a topological space is pretty similar to the idea of a basis in linear algebra. The goal is to describe the whole space in terms of its building blocks. And in the context of topology the building blocks are open sets, however in linear algebra the idea was to use the basic elements with linear combinations in order to generate the whole space. In this case we don't have the concept of linear space, but the concept of union and intersection of sets; therefore, we should expect that the definition of basis follows one of those operations.
 On the other hand in the definition of topology we learn that the arbitrary union of open sets is also and open set, which in some sense implies that the result of those union could be quite complicated; this is where the idea of basis becomes useful.
 In what follows I'm going to use TS for Topological Space. Given a topological space we define a basis for this TS as follows:
-
+% TODO Add definitions about closure, interior and boundary. 
 \begin{definition}[Basis]
 Given a TS $\left( X, \mathcal{T}\right)$, we say that $\mathcal{\beta}\subset\mathcal{T}$ is a basis for the TS if all open subsets of $X$ can be written as the union of elements of $\mathcal{\beta}$
 \end{definition}
@@ -168,30 +168,115 @@ And in this defintion $f(\alpha)$ is the $\alpha$-th coordinate of $f$, whereas 
 
 \end{subsection}
 \end{section}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Begin section about Covers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Covers
 
 \begin{section}{Open Cover and Compactness}
+\begin{definition}
+	$(X, \mathcal{T})$ is said to be compact if and only if, for every open cover of $X$, we can find a finite subcover.
+\end{definition}
+
+\begin{proposition}
+	Suppose that $X$ is a compact TS, the the following statements hold:
+	\begin{enumerate}
+		\item Every sequence in $X$ has at least one limit point.
+		\item If a sequence has a unique limit point, then it converges to this point.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}
+	Suppose $(X, T)$ is a compact TS. Then it follows that 
+	\begin{enumerate}
+		\item Every infinite subset $A\subset X$ has at least one accumulation point.
+		\item Every subset $A$ of $X$ which has no accumulation point is finite.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proposition}
+	Let $A$ be a Hausdorff subspace of a topological space $X$. $A$ is compact if and only if every family of open sets in $X$ which covers $A$ contains a finite family which covers $A$.
+\end{proposition}
+
+\begin{theorem}
+	Let $(X, T)$ be a Hausdorff space, If $A$ is a compact subspace then $A$ is closed in $X$.
+\end{theorem}
+
+\begin{theorem}
+	Let $X$ and $Y$ be two compact topological spaces. Then $E = X\times Y$ with the product topology is also compact.
+\end{theorem}
+
+\begin{theorem}
+	Let $X, Y$ be topological spaces and $f:X\rightarrow Y$, then the following statements are true:
+	\begin{enumerate}
+		\item $f$ is continuous.
+		\item $f^{-1}(C)$ is closed for each $C\subset Y$ closed.
+		\item For every set  $A\subset X$ we have $f(\overline{A})\subset\overline{f(A)}$
+	\end{enumerate}
+\end{theorem}
+
+\begin{proposition}
+	Let $E,F,G$ be TS together with $f:E\rightarrow F$ and $g:F\rightarrow G$ both continuous functions, thus the composition $g\circ f:E\rightarrow G$ is also continuous.
+\end{proposition}
+
+\begin{definition}
+	Let $E,F$ be TS. A function $f:E\rightarrow F$ is said to be closed provided that $f(C)$ is closed in $F$ for any closed set $C$ in $E$.
+	On the other hand, $f$ is said to be open provided that $f(O)$ is open for each open set $O$ in $E$.
+\end{definition}
+
+
+\begin{definition}
+	Let $E, F$ be TS. A function $f:E\rightarrow F$ is said to be homeomorphic provided that $f$ is bijective, continuous, and $f^{-1}$ is also continuous. If $f:E\rightarrow F$ a homeomorphism, we say that $E$ and $F$ are homeomorphic.
+\end{definition}
+
+\begin{theorem}
+	If $f:E\rightarrow F$ is continous, then the following statements are equivalent:
+	\begin{enumerate}
+		\item $f$ is homeomorphic.
+		\item $f$ is a closed bijection.
+		\item $f$ is an open bijection.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	Let $E\times F$ be the Cartesian product of two sets. The projection map $\pi_E$ and $\pi_F$ are defined as follows:
+	\begin{displaymath}
+  		\pi_E:E\times F\rightarrow E, \pi_F:E\times F\rightarrow F,
+	\end{displaymath}
+\end{definition}
+
+\begin{proposition}
+	If $E$ and $F$ are TS, and $E\times F$ is equipped with the product topology, then the projection maps are continuous.
+\end{proposition}
+
+\begin{theorem}
+	Let $E$ and $F$ be TS. The product topology on $E\times F$ is the weakest topology that makes the projection maps $\pi_E$ and $\pi_F$ continuous on $E\times F$.
+\end{theorem}
+
+\begin{proposition}
+	If $E$ and $F$ are TS and $f\in F$, then $E\times{f}$ is homeomorphic to $E$.
+\end{proposition}
+
+\begin{proposition}
+	Let $E, F, G$ be TS. A function $f:G\rightarrow E\times F$ is continous if and only if $\pi_E\circ f$ and $\pi_F\circ f$ are continuous.
+\end{proposition}
+
+
+
 \end{section}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Begin section about Separation Properties
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Separation Properties
 
 \begin{section}{Separation Properties}
-One of the main motivations for topology is to understand the essential properties of a space that make ideas from calculus work, such as convergence and continuity. And in particular we want to define those ideas without recurring to the concept of distance.
+One of the main motivations for topology is to understand the essential properties of a space that make ideas from calculus work, such as convergence and continuity. And in particular, we want to define those ideas without recurring to the concept of distance.
 
 \begin{subsection}{Hausdorff, Regular and Normal Spaces}
 \begin{definition}
 Let $\left(X, \mathcal{T}\right)$ a TS.
 	\begin{enumerate}
 		\item $X$ is a $T_{1}$-space if and only if for every pair $x,y$ of distinct points there are open sets $U,V$ such that $x\in U$, $y\in V$ but $x\notin V$ and $y\notin U$.
-		\item $X$ is Hausdorff, or a $T_{2}$-space, if and only if for every pair of distinct points $x,y$ there are disjoint open sets $U,V$ such that $x\in U$, $y\in V$.
+		\item $X$ is Hausdorff, or a $T_{2}$-space, if and only if for every pair of distinct points $x,y$ there are disjoint open sets $U, V$ such that $x\in U$, $y\in V$.
 	\end{enumerate}
-
 \end{definition}
-
 \end{subsection}
 
 

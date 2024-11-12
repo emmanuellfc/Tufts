@@ -1,4 +1,11 @@
 \documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{breqn}
@@ -20,15 +27,15 @@
 		\begin{enumerate}
 			\item Prove that $S$ is sequentially compact if and only if $S$ is closed and bounded. (This is known as the Bolzano-Weierstrass Theorem).
 			\item Prove that if $S$ is compact in the standard topology of $\mathbb{R}$, then $S$ is closed and bounded, hence sequentially compact. (Note: This has now established the Heine-Borel Theorem on $\mathbb{R}$ with the standard topology: Every closed bounded subset of $\mathbb{R}$ is compact.)
-			\item Prove that if S is sequentially compact then it is compact in the standard topology of $\mathbb{R}$.
+			\item Prove that if S is sequentially compact, then it is compact in the standard topology of $\mathbb{R}$.
 		\end{enumerate}
 \end{problem}
 \begin{proof}
 	\begin{enumerate}
 		\item Let's suppose that $S$ is sequentially compact; to prove, $S$ is bounded and closed. Indeed let $\{x_n\}$ be a convergent sequence in $S$, this is $x_n\rightarrow x$, where $\in S$, and because $S$ is sequentially compact, it follows that there exists a subsequence $\{x_{n_k}\}$ of $\{x_n\}$,  such that $\{x_{n_k}\}\rightarrow x$, and from this, it follows that $S$ is closed.
-			Let's prove that it's also closed, and let's proceed by contradiction, this is, suppose that $S$ is not bounded, it follows that there exists $x_n$ such that $x_n>n$ for each $n$. And even more, let's focus on the convergent sequence $\{x_n\}$ because $S$ is not bounded, it follows that every subsequence of $\{x_n\}$ is also unbounded which implies that it does not converge, and we've reached a contradiction. Therefore, it follows that $S$ is also bounded.
-			On the other hand, suppose that $S$ is closed and bounded to prove that $S$ is sequentially compact. Indeed, let $\{x_n\}$ be a bounded sequence, but every bounded sequence has a convergent subsequence. Thus, it follows that $x_n\rightarrow x$ with $x\in S$, and thus, $S$ is sequentially compact.
-		\item 
+			Let's prove that it's also closed, and let's proceed by contradiction, this is, suppose that $S$ is not bounded, it follows that there exists $x_n$ such that $x_n>n$ for each $n$. And even more, let's focus on the convergent sequence $\{x_n\}$ because $S$ is not bounded, it follows that every subsequence of $\{x_n\}$ is also unbounded which implies that it does not converge, and we've reached a contradiction. Therefore, it follows that $S$ is also bounded. On the other hand, suppose that $S$ is closed and bounded to prove that $S$ is sequentially compact. Indeed, let $\{x_n\}$ be a bounded sequence, but every bounded sequence has a convergent subsequence. Thus, it follows that $x_n\rightarrow x$ with $x\in S$, and thus, $S$ is sequentially compact.
+		\item Let's prove that compactness implies boundedness. Indeed, let's suppose $S$ is compact, and by contradiction, let's assume that $S$ is unbounded, which means that for every number $M>0$, there is an element $x\in S$ such that $x>M$. Now let's consider the family of open intervals $(-n, n)$ for all natural numbers $n$. This is a collection of intervals that covers the entire real line, in particular $S$. But because $S$ is unbounded, it follows that for any finite family of these intervals, there will always be elements of $S$ outside the largest interval, but this is a contradiction because we assume that $S$ is compact. Therefore, $S$ is bounded. Now, let's prove that compactness implies closedness, and as before, let's assume that $S$ is compact, and let's proceed by contradiction that $S$ is not closed, which implies that there exists a limit point $x$ of $S$ that is not in $S$. Now, for each point $s \in S$, let's consider the open interval $(s - d(s, x)/2, s + d(s, x)/2)$, where $d(s, x)$ is the distance between $s$ and $x$. This collection of intervals covers $S$. And because $x$ is a limit point, it follows that every neighborhood of $x$ contains infinitely many points of $S$. Thus, any finite subcollection of these intervals will miss some points of $S$ close to $x$, which, again, contradicts our assumption of $S$ being compact. Therefore, it follows that $S$ is closed.
+		\item Let's prove that being sequentially compact implies compactness. And let's proceed by contradiction, let's assume that $S$ is not compact, then there exists an open cover of $S$ that has no finite subcover, and let's call it $\{U_\alpha\}$. From this, let's select a sequence as follows for each $n$ let's choose $x_n\in S\setminus \cup _{i=1}^{n}U_i$ where $U_i$ are finitely many open sets in the cover; we can do this because no finite subcover exists. Thus, the sequence $(x_n)\in S$ by construction, $S$ is sequentially compact by assumption. Thus, this sequence must have a convergent sequence $(x_{n_{k}})$ with limit $x\in S$. But because $\{U_\alpha\}$ is an open cover of $S$, it follows that $x$ must belong to some open set in $\{U_\alpha\}$, but this is a contradiction because each term in the sequence was chosen to lie outside the finite subcover. Therefore, sequential compactness implies compactness.
 	\end{enumerate}
 \end{proof}
 
@@ -37,11 +44,73 @@
 %%%%% Problem 2 %%%%%
 \begin{problem}
 	For two points $x = (x_{k})_{k=1}^{n},$ $y = (y_{k})_{k=1}^{n}\in \mathbb{R}$ˆˆ, consider the following three functions:
+	\begin{displaymath}
+	  	d_{1}(x,y) = \sum_{k=1}^{n}|x_k - y_k|
+	\end{displaymath}
+	\begin{displaymath}
+  		d_{2}(x,y) = \sqrt{\sum_{k=1}^{n}(x_k - y_k)^{2}}
+	\end{displaymath}
+	\begin{displaymath}
+  		d_{\infty}(x,y) = max\{|x_k - y_k|: k=1,\cdots, n. \}
+	\end{displaymath}
+
 	\begin{enumerate}
 		\item Verify that each of these functions defines a metric on $\mathbb{R}^n$.
 		\item Prove that the three distances generate the same topology on $\mathbb{R}^n$.
 	\end{enumerate}
 \end{problem}
+
+\begin{proof}
+	\begin{enumerate}
+		\item Let's verify that each one is a metric. Indeed 
+		\begin{displaymath}
+		  	d_{1}(x,y) = \sum_{k=1}^{n}|x_k - y_k|\geq 0,
+		\end{displaymath}
+		because each one of the terms in the sum is greater or equal to zero. On the other hand 
+		\begin{displaymath}
+		  	d_{1}(x,y) = \sum_{k=1}^{n}|x_k - y_k| =0 \iff  x_k =y_k \forall k\implies, d_{1}(x,y)=0\iff x=y.
+		\end{displaymath}
+The metric is also symmetric, this is
+\begin{displaymath}
+  d_{1}(x,y) = \sum_{k=1}^{n}|x_k - y_k| = \sum_{k=1}^{n}|-1||y_k - x_k|=\sum_{k=1}^{n}|y_k - x_k|=d_1(y,x)
+\end{displaymath}
+Now, let's prove the triangle inequality, let $x,y,z\in \mathbb{R}^n$,
+\begin{displaymath}
+d_1(x,y) = \sum_{k=1}^{n}|x_k - y_k| = \sum_{k=1}^{n}|x_k - z_k + z_k- y_k|\leq  \sum_{k=1}^{n}|x_k - z_k| + |z_k- y_k| =d_1(x,z) + d_1(z,y)
+\end{displaymath}
+Let's move to the metric $d_2$, and again 
+\begin{displaymath}
+  d_2(x,y)\geq 0 \text{ and }, d_2(x,y)=0\iff x=y.
+\end{displaymath}
+$d_2$ is also symmetric
+\begin{displaymath}
+  d_2(x,y) = \sqrt{\sum_{k=1}^{n}(x_k - y_k)^{2}}=\sqrt{\sum_{k=1}^{n}(y_k - x_k)^{2}}=d_2(y,x).
+\end{displaymath}
+Finally, for the triangle inequality, we're going to make use of the Minkowsky inequality, which is a consequence of the Cauchy-Schwarz inequality, which in this case reads 
+\begin{displaymath}
+  \sqrt{\sum(x_k+y_k)^{2}}\leq \sqrt{\sum x_k^2} + \sqrt{\sum y_k^2},
+\end{displaymath}
+from this it follows that 
+\begin{displaymath}
+  \sum(x_k+y_k)^{2}=\sum(x_k-z_k+z_k+y_k)^{2}\leq (\sum (x_k-z_k)^2)^{1/2} + (\sum (-z_k+y_i^2)^{1/2},
+\end{displaymath}
+it follows that $d_2(x,y)\leq d_2(x,z) + d_2(z,y)$.
+
+Finally, $d_{\infty}(x,y) = max\{|x_k - y_k|\}\geq 0$,and also $d_{\infty}(x,y) = max\{|x_k - y_k|\}= 0\iff x = y$.
+On the other hand $d_\infty(x,y)=max\{|x_k - y_k|\}=max\{|y_k - x_k|\}$, which implies that $$d_\infty(x,y)=d_\infty(y,x).$$
+And finally, let $x,y,z\in\mathbb{R}^n$, thus
+$$
+d_\infty(x,y) = max\{|x_k - y_k|\}= max\{|x_k -z_k + z_k- y_k|\}\leq max\{|x_k -z_k|\}+  max\{|z_k- y_k|\},
+$$
+therefore 
+$$
+d_\infty(x,y)\leq d_\infty(x,z)+d_\infty(z,y)
+$$
+
+\item In order to prove that they generate the same topology, we need to prove that the basic open sets generated by these topologies are the same.
+
+\end{enumerate}
+\end{proof}
 \pagebreak
 
 %%%%% Problem 3 %%%%%
@@ -53,16 +122,42 @@
 		\item Every closed subspace of a locally compact space is locally compact.
 	\end{enumerate}
 \end{problem}
+
+\begin{proof}
+	\begin{enumerate}
+		\item Let's suppose that $(E, \mathcal{T} )$ is compact. By definition, is Hausdorff, and even more, $\forall x\in X$ follows that $E$ is a neighborhood of $x$, therefore $(E, \mathcal{T} )$ is locally compact.
+		\item Let's consider the topological space $(E, \mathcal{T} )$ equipped with the discrete topology, to prove that it is compact. Let $x\in E$, and let's consider the singleton $\{x\}$, which is open. Now, in this topology every set is also closed, thus $\{x\}$ is both open and closed, which means that the $\{x\}$ equals to its closure. Finally, we know that any finite set in a topological space is compact, and since $\{x\}$ is finite, it's compact.
+		\item Let $E$ be a locally compact space and let $F$ be a closed subspace of $E$. To prove; $F$ is locally compact. Indeed, let $x\in F$, since $E$ is locally compact, there exists a compact neighborhood $K$ of $x$ in $E$. This implies that there's an open set $U$ in $E\ni x$, such that $U\subset K$. From this, let's consider the set $V = U\cap F$, which is an open set in the subspace topology on $F$, and it contains $x$. $K$ is compact in $E$, and $F$ is closed in $E$, because the intersection of a compact set and a closed set is always compact. Therefore, $V = U \cap F$ is compact in $E$. And since it's a subset of $F$, it's also compact in $F$.
+	\end{enumerate}
+\end{proof}
 \pagebreak
 
 %%%%% Problem 4 %%%%%
 \begin{problem}
-	Let $d$, $d^{\prime}$ be two metrics on a set $E$, and let $\psi : [0, \infty] â†’ [0, \infty]$ be an increasing function whose derivative $\psi : [0, \infty) â†’ [0, \infty]$ is also increasing with $\psi(0) = \psi^{\prime}(0) = 0$. Suppose that for all $x, y \in E$ 
+	Let $d$, $d^{\prime}$ be two metrics on a set $E$, and let $\psi : [0, \infty] â†’ [0, \infty]$ be an increasing function whose derivative $\psi : [0, \infty)\rightarrow [0, \infty]$ is also increasing with $\psi(0) = \psi^{\prime}(0) = 0$. Suppose that for all $x, y \in E$ 
 	\begin{displaymath}
   	d^{\prime}(x,y)\leq \varphi(d(x,y)) \text{ and } d(x,y) \leq \varphi^{\prime}(d^{\prime}(x,y))
 	\end{displaymath}
 	Prove that these two distances generate the same topology on $E$.
 \end{problem}
+\begin{proof}
+	Again, the idea is to show that for any open ball around a point $x$ with respect to the metric $d$, we can find an open ball around the same point x with respect to the metric $d^{\prime}$ that is contained within the first ball, and vice-versa.
+	Let $B_{d}(x,r)$ be the open ball centered at $x$ with radius $r$ with respect to the metric $d$, and similarly let denote $B_{d^\prime}(x,r)$ the open ball with respect to the other metric.
+	
+	Let $x\in E$ and $r>0$. We want to prove that $B_{d^\prime}(x,r)\subset B_{d}(x,r)$. Indeed, for any $y\in B_{d^\prime}(x,r)$ we have $d^\prime(x,y)<\epsilon$, ans using the given inequality we have that 
+	\begin{displaymath}
+  		d(x,y)\leq \psi^\prime (d^\prime(x,y))<\psi^\prime(\epsilon),
+	\end{displaymath}
+	but because $\psi^\prime$ is an increasing function and $\psi^\prime(0)=0$ we can choose $\epsilon$ small enough such that $\psi^\prime (\epsilon)<r$, which ensures that $d(x,y)<r$, and from this we have $y\in B_{d}(x,r)$, therefore $B_{d^\prime}(x,r)\subset B_{d}(x,r)$.
+	
+	Now, let's prove the other contention. Let $x\in E$ and $r>0$. We want to find a $\delta>0$ such that $B_{d}(x,\delta)\subset B_{d^\prime}(x,r)$. Indeed for any $y\in B_{d}(x,\delta)$ we have $d(x,y)<\delta$, and again, using the given inequality we have 
+	\begin{displaymath}
+  		d^{\prime}(x,y)\leq \psi(d(x,y))\implies d^\prime(x,y)\leq \psi(d(x,y))<\psi(\delta),
+	\end{displaymath}
+	and as before, because $\psi$ is increasing and $\psi(0)=0$ we can choose $\delta$ small enough such that $\\psi(\delta)<r$, which ensures that $d^{\prime}(x,y)<r$, and hence $y\in B_{d^\prime}(x,r)$, and therefore $B_{d}(x,\delta)\subset B_{d^\prime}(x,r)$.
+
+\end{proof}
+
 \pagebreak
 
 %%%%% Problem 5 %%%%%
@@ -70,5 +165,8 @@
 	Let $(A_{n})$be a decreasing sequence of subsets of R, each of which is a finite union of pairwise disjoint closed intervals. We also assume that each of the intervals making up $A_{n}$ contains exactly two of the intervals which make up $A_{n+1}$, and that the diameter of these intervals tends to $0$ with $1/n$. Show that the set $A = \cap_{n}A_{n}$ is a compact set without any isolated points.
 \end{problem}
 
-
+\begin{proof}
+	Let's prove that $A$ is compact. Indeed, each $A_n$ is a finite union of closed intervals, thus is closed, and even more, the intersection of closed sets is closed, so $A = \cap_{n}A_{n}$ is closed. On the other hand, since $(A_n)$ is decreasing, and because $A_1$ is a finite union of pairwise disjoint closed intervals, it follows that it is bounded, and from this, we have that all $A_n$ and their intersection are bounded. Using Heine-Borel Theorem it follows that the $A = \cap_{n}A_{n}$ is compact.
+	Now, let's prove that is has no isolated points. Indeed, let $x\in A$, and we need to show that this is not an isolated point, which means that $\forall \epsilon>0$ there exists $y\in A$ with $y\neq x$ such that $|x-y|<\epsilon$. Now, since the diameter of $A_n$ tends to $0$ as $n$ increases, we can find an $n$ big enough such that the diameter of $A_n$ is less than $\epsilon/2$, and even more, $x\in A$, and hence to $A_n$, thus there exist some closed interval $I_n\subset A$ such that $x\in I_n$. Now using the condition given $I_n$ contains two disjoint closed intervals, let's call it $I^{\prime}_{n+1}$ and $I^{\prime\prime}_{n+1}$ that make up $A_{n+1}$. Since $x\in I_n$, it follows that it must belong to either $I^{'}_{n+1}$ or $I^{\prime\prime }_{n+1}$, let's choose $x\in I^{\prime}_{n+1}$ and let $y\in I^{\prime\prime}_{n+1}$. Since both $I^{\prime}_{n+1}$ and $I^{\prime\prime }_{n+1}$ are contained in $I_n$ and the diameter of $I_n$ is less than $\epsilon/2$, and from this we have that $y\in A_n+1\subset A_n$, $y\neq x$, and even more $|x-y|\leq \delta(I_n)<\epsilon/2$, where $\delta$ stands for diameter, and from this we have that $x$ is not an isolated point, and since $x$ was arbitrary it follows that $A$ has no isolated points.
+\end{proof}
 \end{document}
