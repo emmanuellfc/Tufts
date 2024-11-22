@@ -1,32 +1,405 @@
-%%
-% Please see https://bitbucket.org/rivanvx/beamer/wiki/Home for obtaining beamer.
-%%
 \documentclass[12pt]{beamer}
+\usepackage{amsmath}
 \usetheme[progressbar=frametitle]{metropolis}
 \title{Position and the Free Particle}
 \author{Emmanuel Flores}
-\institute{Advanced Mathematical Methods, Tufts University}
+\institute{Advanced Mathematical Methods, \\Tufts University}
 
 \begin{document}
 \maketitle
-
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Contents}
 	\setbeamertemplate{section in toc}[sections numbered]
 	\tableofcontents
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[The Position Operator]{The Position Operator}
+%%%%%
+\begin{frame}{Preamble}
+\begin{itemize}
+	\item For a free particle, the Hamiltonian commutes with the momentum operator, i.e $[p,H] = 0$ as a result momentum is conserved and under time evolution eigenstates do not change.
+	\item Under Fourier transformations position and momentum can be interchanged. Even more, position eigenstates will be $\delta$ functions (distributions), and now $[q,H]\neq0$
+\end{itemize}
+\end{frame}
+%%%%%
+\begin{frame}{The Position Operator}
+Given a Hilbert Space $\mathcal{H}$	, we define the position operator by the eigenvalue problem
+\begin{displaymath}
+Q\psi(q) = q\psi(q)  
+\end{displaymath}
+\begin{itemize}
+	\item It has the same issues as P $\implies $ we need to relax the space of admisible functions (distributions)
+\end{itemize}
+\end{frame}
+%%%%%
+\begin{frame}{Interdule 1: Distributions}
+Also known as Schwartz distributions or generalized functions, which are defined as continuous linear functionals on a space of infitely differentiable test functions.
+\begin{itemize}
+	\item PDE \& Weak Solutions: enable the discovery of solutions that wouldn't exist in the classical sense, known as weak solutions.
+	\item Enable construction of Sobolev Spaces: useful for analyzing the regularity of PDEs and their solutions.
+	\item Physical motivation: singular initial conditions, problems dealing with discountinupus functions (etc).
+\end{itemize}
+\end{frame}
+%%%%%
+\begin{frame}{The Position Operator}
+By the following relationship 
+\begin{displaymath}
+  \int_{\infty}^{\infty} q\delta(q-q^{\prime})f(q)dq = \int_{\infty}^{\infty} q^{\prime}\delta(q-q^{\prime})f(q)dq,
+\end{displaymath}
+it follows that 
+\begin{displaymath}
+  q\delta(q-q^{\prime}) = q^{\prime}\delta(q-q^{\prime}),
+\end{displaymath}
+in the sense of distributions. Thus; $\delta(q-q^{\prime})$ is eigenfunction of Q with eigenvalue $q^{\prime}$.
+\end{frame}
+%%%%%
+\begin{frame}{The Position Operator}
+$Q$ and $P$ do not commute, in fact 
+\begin{displaymath}
+  [Q,P]=i\hbar,
+\end{displaymath}
+And even more; $H$ commutes with $P$, but $P$ does not commute with $Q$ $\implies$ $Q$ does not commute with $H$, thus $Q$ is not conserved.
+\end{frame}
+%%%%%
+\begin{frame}{Interlude 2: Spectral theorem}
+Finite-Dimensional Case: for a Hermitian matrix, this theorem states that it is unitarily diagonalizable. 
 
+This is:  $\exists$ unitary matrix $U$ such that 
+\begin{displaymath}
+  	A = U\Lambda U^{\dagger},
+\end{displaymath}
+where $\Lambda$  is a diagonal matrix containing the real eigenvalues of $A$, and the columns of  are the orthonormal eigenvectors of $A$.
+
+Or in other words: every symmetric matrix can be diagonalized using orthogonal eigenvectors
+\end{frame}
+%%%%%
+\begin{frame}{Interlude 2: Spectral theorem}
+Infinite-Dimensional Case: for a self-adjoint operator  on a Hilbert space, the spectral theorem generalizes by stating that $A$ is unitarily equivalent to a multiplication operator.
+
+This is: $\exists$ an isometry $U$ and a measure space such that 
+\begin{displaymath}
+  (U^{-1}AUf)(x)=\lambda(x)f(x),
+\end{displaymath}
+where $\lambda(x)$ is the spectrum of $A$, and the operator acts like multiplication by $\lambda(x)$.
+\end{frame}
+%%%%%
+\begin{frame}{The Position Operator}
+Thus, by the spectral theorem; any state can be written as a linear combination of eigenvectors of the given operator.
+
+Thus we can interpret 
+\begin{displaymath}
+  \psi(q) = \int_{-\infty}^{\infty}\delta(q-q^{\prime})\psi(q^{\prime})dq^{\prime}
+\end{displaymath}
+as the expansion of an arbitrary state in terms of a continuous linear combination of eigenvectors of $Q$ with eigenvalue $q^{\prime}$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[The Momentum Space Representation]{The Momentum Space Representation}
+%%%%%
+\begin{frame}{Momentum Representation}
+Let $\mathcal{H}$ be a Hilbert space. Going back to the Hamiltonian of the free particle, by taking states to be wavefunctions $\psi(q)$, we can Fourier transform them, as
+\begin{displaymath}
+  \tilde\psi(k) = \mathcal{F}\psi = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\exp(-ikq)\psi(q)dq.
+\end{displaymath}
+And even more, we can consider $\mathcal{H}$ to be a space of functions $\tilde\psi(k)$ on momentum space.
+\end{frame}
+%%%%%
+\begin{frame}{Momentum Operator}
+Given a Hilbert space $\mathcal{H}$ with the momentum operator
+\begin{displaymath}
+  P\tilde\psi(k)=k\tilde\psi(k),
+\end{displaymath}
+we will call them momentum space representation.
 
+Note:By the Plancherel theorem, momentum and space representations are unitarily equivalent representations of the group $\mathbb{R}$.
+\end{frame}
+%%%%%
+\begin{frame}{Eigenfunctions of P}
+In this representation, the eigenfunctions of $P$ are distributions $\delta(k-k^{\prime})$, with eigenvalue $k^{\prime}$, and the expansion of any state reads
+\begin{displaymath}
+  \tilde\psi(k)=\int_{-\infty}^{\infty}\delta(k-k^{\prime})\tilde\psi(k^{\prime})dk^{\prime}.
+\end{displaymath}
+
+And even more, the position operator is
+\begin{displaymath}
+  Q=i\frac{d}{dk},
+\end{displaymath}
+with eigenfunctions 
+\begin{displaymath}
+  \frac{1}{\sqrt{2\pi}}\exp(-ikq{\prime})
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Dirac Notation]{Dirac Notation}
-
+%%%%%
+\begin{frame}{Dirac Notation}
+In Dirac notation, $Q$ and $P$ are
+\begin{displaymath}
+  Q|q\rangle=q|q\rangle,   P|k\rangle=k|k\rangle,
+\end{displaymath}
+and arbitrary states
+\begin{displaymath}
+  \langle q|\psi\rangle = \psi(q), \langle k|\psi\rangle = \psi(k).
+\end{displaymath}
+Proper interpretation of relations 
+\begin{displaymath}
+  \langle q|q^{\prime}\rangle=\delta(q-q^{\prime}),\langle k|k^{\prime}\rangle=\delta(k-k^{\prime})
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Dirac Notation}
+We have 
+\begin{displaymath}
+  |\psi\rangle=\int_{-\infty}^{\infty}|q\rangle\langle q|\psi \rangle dq,
+\end{displaymath}
+\begin{displaymath}
+  |\psi\rangle=\int_{-\infty}^{\infty}|k\rangle\langle k|\psi \rangle dk,
+\end{displaymath}
+with identity
+\begin{displaymath}
+  1 = \int_{-\infty}^{\infty}|q\rangle\langle q| dq=\int_{-\infty}^{\infty}|k\rangle\langle k| dk
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Dirac Notation: Switching representations 1}
+Transformation between both bases/representations is done by Fourier transform 
+\begin{displaymath}
+  \langle k|\psi\rangle=\int_{-\infty}^{\infty}\langle k|q\rangle \langle q|\psi\rangle dq
+\end{displaymath}
+and
+\begin{displaymath}
+  \langle k|q\rangle = \frac{1}{\sqrt{2\pi}}\exp(-ikq).
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Dirac Notation: Switching representations 2}
+Transformation between both bases/representations is done by Fourier transform 
+\begin{displaymath}
+  \langle q|\psi\rangle=\int_{-\infty}^{\infty}\langle q|k\rangle \langle k|\psi\rangle dk
+\end{displaymath}
+and
+\begin{displaymath}
+  \langle q|k\rangle = \frac{1}{\sqrt{2\pi}}\exp(ikq).
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Interlude 3: Bra-Ket Notation and Dual Spaces}
+\begin{itemize}
+	\item A state vector $|\psi\rangle$ (ket) lives in $\mathcal{H}$
+	\item Its dual $\langle \psi|$ (bra) lives in $\mathcal{H}^{*}$ (the dual space)
+	\item When we write $\langle \psi|\phi\rangle$, we're actually applying a linear functional from $\mathcal{H}^{*}$ to the complex numbers.
+	\item Every observable corresponds to a linear operator $A$ that acts on states. 
+	\item When we measure an observable, we're essentially using elements of the dual space
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Heisenberg uncertainty}
-
+%%%%%
+\begin{frame}{Theorem}
+\begin{displaymath}
+  \frac{\langle\psi|Q^2|\psi\rangle}{\langle\psi|\psi\rangle}\frac{\langle\psi|P^2|\psi\rangle}{\langle\psi|\psi\rangle}\geq\frac{1}{4}
+\end{displaymath}
+The proof relies on using self-adjointness of $P$ and $Q$ together with commutation relations between $Q$ and $P$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Propagator in Position Space}
+%%%%%
+\begin{frame}{Time Evolution}
+For any quantum system, time evolution if given by the unitary operator 
+\begin{displaymath}
+  U(t) = \exp(-itH),
+\end{displaymath}
+considering that $H$ is independent of time.
+\begin{itemize}
+	\item Momentum Space: just the multiplication operator.
+	\item Position Space: given by an integral kernel called the propagator.
+\end{itemize}
+\end{frame}
+%%%%%
+\begin{frame}{Interlude 4: Time Evolution}
+If $H$ is time dependent but the commutes at different times, then the time evolution is given by 
+\begin{displaymath}
+U(t) = \exp[-\frac{1}{\hbar}\int_{0}^{t}dt^{\prime}H(t^{\prime})]
+\end{displaymath}
 
+If $H$ is time dependent and at different times do not commute, then the time evolution is given by
+\begin{displaymath}
+	U(t) = 1+\sum_{n=1}^{\infty} (\frac{-i}{\hbar})^n\int_{0}^{t_1}dt_{1}\cdots\int_{0}^{t_{n-1}}dt_n H(t_1)\cdots H(t_n)
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Propagator}
+Definition: The position space propagator is the kernel $U(t, q_t, q_0)$ of the time evolution operator acting on position space wavefunctions. Determines the time evolution of wavefunctions for all times t by
+\begin{displaymath}
+  \psi(q_t,t) = \int_{-\infty}^{\infty} U(t, q_t, q_0)\psi(q_0,0)dq_0,
+\end{displaymath}
+where $\psi(q_0,0)$ is the initial value of the wavefunction at time 0.
+\end{frame}
+%%%%%
+\begin{frame}{Propagator: Dirac Notation}
+Using Dirac notation we have
+\begin{displaymath}
+  \psi(q_t,t) = \langle q_t|\psi(t)\rangle = \langle q_t|\exp(-itH)|\psi(0)\rangle,
+\end{displaymath}
+\begin{displaymath}
+  \implies \psi(q_t,t) = \langle q_t|\exp(-itH)\int_{-\infty}^{\infty}|q_0\rangle\langle q_0|\psi(0)\rangle dq_0,
+\end{displaymath}
+and the propgator can be written as 
+\begin{displaymath}
+  U(t,q_t,q_0) = \langle q_t|\exp(-itH)|q_0\rangle
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Propagator for the Free Particle}
+For the free particle we can compute the progator, which is 
+\begin{displaymath}
+  U(t,q_t,q_0) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\exp(-ik(q_t - q_0))\exp(-\frac{ik^2 t}{2m})dk,
+\end{displaymath}
+and $U(t,q_t,q_0) = U(t,q_t-q_0)$.
+due to translation invarianceo of $H$, the propagator only depends on the difference $q_t-q_0$.
+\end{frame}
+%%%%%
+\begin{frame}{Tricks from Complex Analysis}
+Let's consider $it\rightarrow z=\tau+it$, then the propagator is well defined when $\tau=Re(z)>0$, which defined a holomorphic function in $z$. Then we can find
+\begin{displaymath}
+  U(z,q_t-q_0)=\sqrt{\frac{m}{2\pi z}}\exp(-\frac{m}{2z}(q_t-q_0)^2)
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Relation with Heat Equation (Diffusion Equation)}
+If $z=\tau$ is real and positive, then this is the kernel function for solutions to the partial differential equation
+\begin{displaymath}
+  \frac{\partial}{\partial \tau}\psi(q,t) = \frac{1}{2m}\frac{\partial^2}{\partial q^2}\psi(q,\tau),
+\end{displaymath}
+which models the way temperature diffuses in a medium, it also models the way probability of a given position diffuses in a random walk.
+\end{frame}
+%%%%%
+\begin{frame}{Interlude 5: Fokker-Planck Equation}
+The FP equation is a classical PDE that describes the time evolution of a probability density function:
+\begin{displaymath}
+  \frac{\partial}{\partial t}p(x,t) = -\frac{\partial}{\partial x}(\mu(x,t)p(x,t)) + \frac{\partial^2}{\partial x^2}(D(x,t)p(x,t))
+\end{displaymath}
+
+\begin{itemize}
+	\item Solving certain FPEs using quantum mechanical methods.
+	\item The quantum extensions of the FPE help describe phenomena like decoherence, thermalization, and energy relaxation in quantum systems interacting with their environment.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Propagators in frequency-momentum space}
+%%%%%
+\begin{frame}{Causality}
+The propagator as defined before works for positive and negative times, let's define a version that takes into account causality
 
-\section{Green's Functions and Solutions to the Schrodinger Equations}
+Definition(Retarted Propagator): The retarted propagator $U_{+}(t,q_t-q_0)$ is given by $0$ if $t<0$ and $U_{+}(t,q_t-q_0)=U(t,q_t,q_0)$ if $t>0$.
 
+It can also be wrtitten in terms of a step function $\theta$
+\end{frame}
+%%%%%
+\begin{frame}{Integral Representation of $\theta$}
+A useful representation of $\theta$ is given by 
+\begin{displaymath}
+  \theta(t) = \lim_{\epsilon\rightarrow 0^{+}}\frac{i}{2\pi}\int_{-\infty}^{\infty}\frac{1}{\omega + i\epsilon}\exp(-i\omega t)d\omega.
+\end{displaymath}	
+\end{frame}
+%%%%%
+\begin{frame}{Propagator in frequency domain}
+The Fourier transform of the previously copmuted propagator is
+\begin{displaymath}
+  \hat U(\omega,k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}(\frac{1}{\sqrt{2\pi}}\exp(-\frac{ik^2 t}{2m})\exp(i\omega t)dt,
+\end{displaymath}
+$\implies$ 
+\begin{displaymath}
+	\hat U(\omega,k) = \delta(\omega - \frac{1}{2m}k^2)  
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Retarded Propagator in position space}
+The retarded propagator in position space is given by 
+\begin{displaymath}
+  U_{+}(t,q_t - q_0) = \lim_{\epsilon\rightarrow 0^{+}}(\frac{1}{2\pi})^{2}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{i}{\omega + i\epsilon}f(\omega, k,t,q_t-q_0)d\omega dk,
+\end{displaymath}
+where 
+\begin{displaymath}
+f(\omega, k,t,q_t-q_0) = \exp(-i(\omega + \frac{1}{2m}k^2)t)\exp(ik(q_t-q_0))
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Retarded Propagator in position space}
+Doing the change of variables $\omega\rightarrow \omega^{\prime} =\omega + \frac{1}{2m}k^2$, we can find
+\begin{displaymath}
+  U_{+}(t,q_t - q_0) = \lim_{\epsilon\rightarrow 0^{+}}(\frac{1}{2\pi})^{2}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}g d\omega^{\prime} dk
+\end{displaymath}
+where \begin{displaymath}
+  g=\frac{exp(-i\omega^{\prime} t)\exp(ik(q_t-q_0))}{\omega^{\prime}-\frac{1}{2m}k^2+i\epsilon}
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{{Retarded Propagator in position space}}
+Which is the Fourier transform 
+\begin{displaymath}
+  U_{+}(t,q_t - q_0) =\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} \hat U_{+}(\omega, k) hd\omega dk,
+\end{displaymath}
+where
+\begin{displaymath}
+  \hat U_{+}(\omega, k) = \lim_{\epsilon\rightarrow 0^{+}}\frac{i}{2\pi}\frac{1}{\omega -\frac{1}{2m}k^2+i\epsilon}
+\end{displaymath}
+and
+\begin{displaymath}
+	h = \exp(-i\omega t)\exp(ik(q_t-q_0))
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Green's Functions and Solutions to the Schrodinger Equation	}
+%%%%%
+\begin{frame}{Green's Function}
+\begin{itemize}
+	\item Act as an integral kernel that transforms differential equations into more manageable algebraic forms.
+	\item In position basis, the Green's function acts as a propagator, describing how quantum particles move between different positions
+\end{itemize}
+Given the PDE
+\begin{displaymath}
+  D\psi=J,
+\end{displaymath}
+We define the Green's function of $D$ to be the distribution with Fourier transform
+\begin{displaymath}
+  \hat G = \frac{1}{\hat D}
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Schrodinger Equation}
+Let $D$ be given by 
+\begin{displaymath}
+  D = i\frac{\partial}{\partial t}+\frac{1}{2m}\frac{\partial^2}{\partial q^2},
+\end{displaymath}
+then, it's Fourier transform will be
+\begin{displaymath}
+  \hat D = \omega - \frac{k^2}{2m},
+\end{displaymath}
+ans thus, it's Green function will be
+\begin{displaymath}
+  \hat G = \frac{1}{\omega - \frac{k^2}{2m}}
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Schrodinger Equation}
+And then, solutions of $D\psi=J$, are found by computing the inverse Fourier transform of $\hat G\hat J$
+\begin{displaymath}
+  \psi(q,t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{1}{\omega -\frac{k^2}{2m}}\hat J(\omega, k)\exp(-i\omega t)\exp(ikq)d\omega dk
+\end{displaymath}
+\end{frame}
+%%%%%
+\begin{frame}{Final Words: $P$ and $Q$ Representations}
+Complementary Descriptions of Quantum Systems linked by Fourier transformations;
+\begin{itemize}
+	\item $Q$ representation describes the system using a wavefunction, which gives the probability amplitude for finding the particle at a specific position.
+	\item $P$ representation describes the system using a wavefunction, that provides the probability amplitude for the particle having a specific momentum.
+	\item In $Q$ representation $Q$ is multiplicative and $P$ is a differential operator.
+	\item in $P$ representation $P$ is multiplicative and $Q$ is a differential operator.
+\end{itemize}
+\end{frame}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
 \end{document}

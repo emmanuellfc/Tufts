@@ -1,0 +1,46 @@
+\documentclass[oneside,english]{amsart}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=4cm,bmargin=4cm,lmargin=3cm,rmargin=3cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\newtheorem{Proof}{proof}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Classwork 8}
+\date{\today}
+\author{Danshyl Boodhoo, Isaac Dreeben, Anna J. Kelley, Chris Kotsifakis, Emmanuel Flores}
+
+\maketitle
+Let $(X, \mathcal{T})$ be a topological space. Show that the set of connected components of $X$ forms a partition of X.
+\begin{proof}
+The definition of connected components is given by
+\begin{itemize}
+	\item A connected component is a maximal connected subset.
+	\item Each point belong to exactly one connected component.
+\end{itemize}
+Now, to show, that the connected components of $X$ form a partition, we need to show that they are pairwise disjoint and their union is the whole $X$. 
+Pairwise disjoint: Let $C_{1}$ and $C_{2}$ be two connected components of $X$, and by contradiction let's assume they have a commont point $p$, now let's look at $C = C_1 \cup C_2$, which is a connected subset of $X$, but whis contradicts the maximality of both $C_{1}$ and $C_{2}$, it follows that distinct connected components must be disjoint.
+Union is all $X$: every point in $X$ belongs to at least one connected component, otherwise it would contradict the definition of connected components.
+
+$\therefore$ the set of connected components forms a partition of X.
+\end{proof}
+
+
+
+
+\end{document}
