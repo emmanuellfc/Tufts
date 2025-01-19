@@ -1,0 +1,63 @@
+\documentclass[oneside,english]{amsart}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2.5cm,rmargin=2.5cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\newtheorem{Proof}{proof}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Exam Redo}
+\date{\today}
+\author{Emmanuel Flores}
+
+\maketitle
+Let $X$ be a Hausdorff space. Prove that $X$ is compact if and only of for any open set $O$ in $X$ and any collection of closed sets $\{C_{\alpha}\}_{\alpha\in\Lambda}$ such that $\cap_{\alpha\in\Lambda}C_{\alpha} \subset O$, then there exist a finite number of the sets ${C_{\alpha}}$ whose intersection lies in O.
+\begin{proof}
+$\implies$ 
+
+Let $O$ be an open set in $X$, and $\{C_{\alpha}\}_{\alpha\in\Lambda}$ be a collection of closed sets in $X$ such that $\cap_{\alpha\in\Lambda}C_{\alpha} \subset O$. Since the intersection of $C_{\alpha}$'s in contained in $O$, by taking complements we have 
+\begin{displaymath}
+  X\setminus O \subset \cup _{\alpha\in\Lambda} (X\setminus C_{\alpha}),
+\end{displaymath}
+but becasue $O$ is closed, its complement is open, and for the same reason; each one of $X\setminus C_{\alpha}$ is open.
+Now we just found an open cover of the closed set $X\setminus O$, this is $\cup _{\alpha\in\Lambda} (X\setminus C_{\alpha})$. Now, since $X$ is compact, and $X\setminus O$ is closed, it follows that $X\setminus O$ is also compact. Thus there exists a finite subcover 
+\begin{displaymath}
+  \{ X\setminus C_{\alpha_1},\cdots X\setminus C_{\alpha_n}\}
+\end{displaymath}
+of $X\setminus O$, this is 
+\begin{displaymath}
+  X\setminus O\subset (X\setminus C_{\alpha_1})\cup \cdots\cup(X\setminus C_{\alpha_n}),
+\end{displaymath}
+and taking complements again, we have
+\begin{displaymath}
+  C_{\alpha_1}\cap\cdots\cap C_{\alpha_n}\subset O.
+\end{displaymath}
+$\impliedby$
+
+Now, let's prove the other direction. Let $\{U_\alpha\}$ be an open cover of $X$. Since each one of the $U_{\alpha}$'s is open, their complement is closed, and even more, their intersection is empty, since the union of all of them covers the whole space $X$. This is $\cap_{\alpha\in \Lambda}(X\setminus U_{\alpha})=\emptyset.$
+On the other hand, the empty set is subset of any set, in particular any open set; so by taking any open set $U_{\beta}$ from the original cover, we have $\cap_{\alpha\in\Lambda}(X\setminus U_{\alpha})\subset U_{\beta}$, and by assumption, there exist finitely many sets $X\setminus U_{\alpha_1}\cdots X\setminus U_{\alpha_n}$ such that
+\begin{displaymath}
+  (X\setminus U_{\alpha_1}\cap\cdots\cap(X\setminus U_{\alpha_n}))\subset U_{\beta},
+\end{displaymath}
+and taking the complements back again, we have 
+\begin{displaymath}
+  X\setminus U_{\beta}\subset U_{\alpha_1}\cup\cdots U_{\alpha_n},
+\end{displaymath}
+and from this it follows that $X = U_{\beta}\cup (X\setminus U_{\beta})\subset$, this is we have a finite subsocer of $X$, thus $X$ is compact.
+\end{proof}
+\end{document}
