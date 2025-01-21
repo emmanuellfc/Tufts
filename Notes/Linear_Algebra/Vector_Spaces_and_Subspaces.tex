@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{charter}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\title{Self-Study Notes: Vector Spaces}
+\author{Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+\maketitle	
+I don't particularly appreciate doing heavy computations, and that's a bad thing, probably. I can give a long list of why is that, but the	 principal reasons are the following:
+	\begin{itemize}
+		\item In the heat of the moment I'm very error-prone, especially with numerical factors.
+		\item Computers are a great tool for doing this.
+		\item At some point it becomes repetitive, thus; boring.
+	\end{itemize}
+This is probably a bad take, but that's how I am, at least right now. But why am I saying this, well the reason is this: 
+\begin{quote}
+	As an undergrad, I took Applied Linear Algebra 1, and it was a complete nightmare, I could follow the theory but it was such a pain to do Gauss elimination for big matrices. Some of my friends loved that, but that wasn't for me. I got a bad grade obviously, and the next semester I was supposed to take Applied Linear Algebra 2, which in principle was way more difficult than the course that I was taking, however, I decided to do that jump of faith and I enrolled in the class. I was surprised when I realized that the prerequisites for this class were not really the material covered in the previous course. The class was way more abstract, be started studying the notion of vector spaces, and that's when I fell in love with math. For some weird reason, I enjoyed that kind of abstraction.
+\end{quote}
+That's the reason why I like linear algebra. And now, let's jump to the definitions.
+
+\begin{definition}
+	Let $V$ be a non-empty set, and $\mathbf{F}$ be a field (usually real or complex), we define a vector space as $(V,+,*)$ where $+$ and $*$ are maps defined as follows $+:V\times V\rightarrow V$, $*: \mathbf{F}\times V\rightarrow V$ that satisfy the following relations
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{definition}
+	
+There are some properties of every vector space, that are quite natural to expect, and those are listed below:
+\begin{itemize}
+	\item The additive identity is unique.
+	\item The additive inverse is unique.
+	\item For every vector $v\in V$ we have $0v = 0$.
+	\item For every scalar $a\in \mathbf{F}$ we have $a0=0$.
+	\item For every vector $v\in V$ we have $-1v = -v$.
+\end{itemize}
+	
+Having defined vector spaces, in the following referred as VS, we introduce the notion of subspace.
+\begin{definition}
+	
+\end{definition}
+Given a VS $V$ we say that $U\subset V$ is a subspace of $V$ if and only if the following conditions hold
+\begin{itemize}
+	\item $0\in U$
+	\item $U$ is closed under vector addition.
+	\item $U$ is closed under scalar multiplication.
+\end{itemize}
+With this in mind let's jump the definition of sums of subspaces.
+\begin{definition}
+	Suppose that $V_1, V_2, \cdots, V_n$ are subspaces of $V$. The sum of $V_1 + V_1 + \cdots + V_n$ is denoted by $V_1 + V_2 +\cdots, + V_n$ is the set of all possible sums of elements of $V_1, V_2, \cdots, V_n$. More precisely we have 
+		\begin{displaymath}
+  			V_1 + V_1 + \cdots + V_n = \{V_1 + V_2, \cdots, V_n | v_1\in V_1,\cdots, v_n\in V_n \}
+		\end{displaymath}
+\end{definition}
+As a side note, the union of subspaces is rarely a subspace.
+\begin{proposition}
+	Suppose that $V_1,\cdots V_n$ are subspaces of $V$. Then $V_1 + V_1 + \cdots + V_n$ is the smallest subspace containing $V_1, V_2,\cdots ,V_n$
+\end{proposition}
+As a side note, we can make an analogy with set theory, and relate the sum to a union in the following sense: given two subsets of a set, the smallest subset containing them is their union.
+Now we proceed to define the notion of direct sums.
+\begin{definition}
+	
+\end{definition}
+	
+\end{document}
