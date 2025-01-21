@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{charter}
+\usepackage{amsmath}
+
+\title{Notes on Statistical Mechanics}
+\author{Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Thermodynamic Potentials}
+Thermodynamic potentials are state functions, and remember, state functions are functions that do not depend on the path taken, they depend on the current state of the system. Having that in mind, let's begin with the notion of termodynamic potentials. These are the following; internal energy, enthalpy, Helmhotz free energy and Gibbs free energy. Each one is obtained via a Legendre transformation of the internal energy.
+
+Let's start with the enthalpy; by the second Law of thermodynamics, we have
+\begin{displaymath}
+  dU = TdS-pdV,
+\end{displaymath}
+and the definition of the enthalpy is given by
+\begin{displaymath}
+  H = U + pv,
+\end{displaymath}
+and by taking the derivatives we get
+\begin{displaymath}
+  dH = TdS + Vdp,
+\end{displaymath}
+thus, the natual variables for this thermodynamic potential are the entropy and the pressure. Even more, if we consider an isobaric process, then, the enthalpy represents the heat absorbed by the system.
+Moving on, the Hemholtz free energy is defined by 
+\begin{displaymath}
+  F = U - TS,
+\end{displaymath}
+again, by taking the differentials, we have
+\begin{displaymath}
+  dF = -pdV-SdT,
+\end{displaymath}
+thus, the natural units for this potential are the volume and the temperature. And even more, for an insotermal process, a positive change in $F$ represents reversible work done on the system by the surroundings, while negative change in $F$ means the oppositve, reversible done on the surroundings by the system.
+Finally, the Gibbs' potential is obtained by combining the previous definitions, as follows
+\begin{displaymath}
+  G = U + pV - TS,
+\end{displaymath}
+and as usual, by taking the differentials, we have
+\begin{displaymath}
+  dG = Vdp - SdT,
+\end{displaymath}
+which implies that the natural variables are the pressure and the temperature.
+\subsection{Maxwell's Relations}
+The whole idea behind Maxwell's relations is the following: we start with a state function, let's say $f=f(x,y)$ that depends both on $x$ and $y$, thus, it follows that a change in $f$ can be written as 
+\begin{displaymath}
+  df = \left(\frac{\partial f}{\partial x}\right)_{y}dx + \left(\frac{\partial f}{\partial y}\right)_{x}dy,
+\end{displaymath}
+and since $f$ is an exact differential it follows that the second mixed derivatives are equal, this is 
+\begin{displaymath}
+  \frac{\partial^2 f}{\partial x\partial y} = \frac{\partial^2 f}{\partial y\partial x},
+\end{displaymath}
+and if we rename
+\begin{displaymath}
+  F_{x} = \frac{\partial f}{\partial x}, F_{y} = \frac{\partial f}{\partial y},
+\end{displaymath}
+we have that 
+\begin{displaymath}
+	\frac{\partial F_x}{\partial y} = \frac{\partial F_y}{\partial x}  
+\end{displaymath}
+and following this procedure, we can find a bunch of useful expression that relate thermodynami quantities.
+
+\section{Rods, bubbles and magnets}
+Quite often our point start is the first law, this is
+\begin{displaymath}
+  dU = TdS- pdV,
+\end{displaymath}
+but we want to apply the tecniques developed to other thermodynamical system, reason for what we introduce the following generalized expression of work
+\begin{displaymath}
+  dW = Xdx,
+\end{displaymath}
+where $X$ is an intensive quantity, often called generalized force, and $dx$ is an extensive one, often called generalized displacement.
+Examples of this are given in the following table
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+  & X & x & dW \\
+ \hline\hline
+ fluid        & $-p$ & $V$ & $-pdV$ \\ 
+ elastic rod  & $f$  & $L$ & $fdL$ \\ 
+ liquid film  & $\gamma$ & $A$ & $\gamma dA$ \\ 
+ dielectric   & $\mathbf{E}$ & $\mathbf{p}_E$ & $\mathbf{E}\cdot d\mathbf{p}_E$ \\
+ magnetic     & $\mathbf{B}$ & $\mathbf{m}$   & $\mathbf{B}\cdot d\mathbf{m}$\\
+ \hline
+\end{tabular}
+\end{center}
+
+
+\end{document}
