@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{charter}
+
+\title{Problem 1: Evolution of Universe with general Energy of Particles}
+\author{Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+\maketitle
+The Friedmann equation is given by 
+\begin{displaymath}
+  \left( \frac{\dot{R}}{R}\right)^2 = \frac{8\pi G}{3}\rho +\frac{2E}{mR^2},
+\end{displaymath}
+where \begin{displaymath}
+  \rho = \frac{\rho_0 R_0^3}{R^3}.
+\end{displaymath}
+1. Rewrite the Friedmann equation by replacing derivatives with respect to the time variable $t$ by derivatives with respect to the conformal time variable $\eta$ defined by
+\begin{displaymath}
+  dt = Rd\eta
+\end{displaymath}
+Sol.
+By the chain rule, we have
+\begin{displaymath}
+  \frac{dR}{dt} = \frac{dR}{d\eta}\frac{d\eta}{dt},
+\end{displaymath}
+thus, we have 
+\begin{displaymath}
+  \frac{dR}{dt} = \frac{dR}{d\eta}\frac{1}{R},
+\end{displaymath}
+and from this, the Friedmann equation is rewriten as
+\begin{displaymath}
+  \left( \frac{dR}{d\eta}\frac{1}{R^2}\right)^2 = \frac{8\pi G}{3}\rho +\frac{2E}{mR^2},
+\end{displaymath}
+thus
+\begin{displaymath}
+  \left( \frac{dR}{d\eta}\right)^2 = \frac{8\pi GR^4}{3}\rho +\frac{2ER^4}{mR^2},
+\end{displaymath}
+but $\rho$ is a function of $R$, thus
+\begin{displaymath}
+  \left( \frac{dR}{d\eta}\right)^2 = \frac{8\pi \rho_0 R_0^3G}{3}R +\frac{2E}{m}R^2.
+\end{displaymath}
+Now, let's make 
+\begin{displaymath}
+  \alpha = \frac{8\pi \rho_0 R_0^3G}{3}, \beta = \frac{2E}{m},
+\end{displaymath}
+thus, we have
+\begin{displaymath}
+  \frac{dR}{d\eta} = \sqrt{(\alpha+\beta R)R},
+\end{displaymath}
+and by separation of variables, we have
+\begin{displaymath}
+  \int_{R_0}^{R} dR' \frac{1}{\sqrt{(\alpha+\beta R')R'}} = \int_{\eta_0}^{\eta} d\eta' 
+\end{displaymath}
+the integral on the RHS is given by
+\begin{displaymath}
+  \int \frac{1}{\sqrt{(\alpha+\beta R')R'}} = \frac{\log (R)-\log (\alpha+\beta R)}{\alpha}
+  \end{displaymath}
+thus, we have 
+\begin{displaymath}
+  \frac{1}{\alpha} \ln \left(\frac{R}{\alpha+\beta R}\right)=\eta,
+\end{displaymath}
+it follows that
+\begin{displaymath}
+  \frac{R}{\alpha+\beta R}=\exp(\alpha\eta)
+\end{displaymath}
+
+
+
+
+
+\end{document}
