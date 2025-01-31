@@ -1,10 +1,24 @@
 \documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
 \usepackage{charter}
+\usepackage{amsthm}
 
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+
+\usepackage{thmtools}
+\declaretheoremstyle[headfont=\normalfont]{normalhead}
+\declaretheorem[style=normalhead]{problem}
+\declaretheorem[style=normalhead]{solution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Problem 1: Evolution of Universe with general Energy of Particles}
 \author{Emmanuel Flores}
 \date{\today}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
 The Friedmann equation is given by 
@@ -14,18 +28,19 @@ The Friedmann equation is given by
 where \begin{displaymath}
   \rho = \frac{\rho_0 R_0^3}{R^3}.
 \end{displaymath}
-1. Rewrite the Friedmann equation by replacing derivatives with respect to the time variable $t$ by derivatives with respect to the conformal time variable $\eta$ defined by
+%%%%%%%%%%%%%%%% Problem 1
+\begin{problem}
+	Rewrite the Friedmann equation by replacing derivatives with respect to the time variable $t$ by derivatives with respect to the conformal time variable $\eta$ defined by
+\end{problem} 
 \begin{displaymath}
   dt = Rd\eta
 \end{displaymath}
-Sol.
+
+%%%%%%%%%%%%%%%% Solution 1
+\begin{solution}
 By the chain rule, we have
 \begin{displaymath}
-  \frac{dR}{dt} = \frac{dR}{d\eta}\frac{d\eta}{dt},
-\end{displaymath}
-thus, we have 
-\begin{displaymath}
-  \frac{dR}{dt} = \frac{dR}{d\eta}\frac{1}{R},
+  \frac{dR}{dt} = \frac{dR}{d\eta}\frac{d\eta}{dt}\implies \frac{dR}{dt} = \frac{dR}{d\eta}\frac{1}{R},
 \end{displaymath}
 and from this, the Friedmann equation is rewriten as
 \begin{displaymath}
@@ -39,33 +54,152 @@ but $\rho$ is a function of $R$, thus
 \begin{displaymath}
   \left( \frac{dR}{d\eta}\right)^2 = \frac{8\pi \rho_0 R_0^3G}{3}R +\frac{2E}{m}R^2.
 \end{displaymath}
-Now, let's make 
+and by making
 \begin{displaymath}
   \alpha = \frac{8\pi \rho_0 R_0^3G}{3}, \beta = \frac{2E}{m},
 \end{displaymath}
-thus, we have
+we have
 \begin{displaymath}
-  \frac{dR}{d\eta} = \sqrt{(\alpha+\beta R)R},
+  \left(\frac{dR}{d\eta}\right )^2 = \alpha R+\beta R^2.
 \end{displaymath}
-and by separation of variables, we have
+\end{solution}
+
+\pagebreak
+%%%%%%%%%%%%%%%% Problem 2
+\begin{problem}
+Use separation of variables to re-write the Friedmann equation as an expression for $\eta$ in terms of an integral of $R$.
+\end{problem}
+
+%%%%%%%%%%%%%%%% Solution 2
+\begin{solution}
+	By separation of variables we have
 \begin{displaymath}
-  \int_{R_0}^{R} dR' \frac{1}{\sqrt{(\alpha+\beta R')R'}} = \int_{\eta_0}^{\eta} d\eta' 
+  \frac{dR}{\sqrt{\alpha R+\beta R^2}} = d\eta,
 \end{displaymath}
-the integral on the RHS is given by
+thus, the problem now resides on solving the preovious integral.
+	
+\end{solution}
+
+\pagebreak
+%%%%%%%%%%%%%%%% Problem 3
+\begin{problem}
+	Carry out the integral and invert to obtain $R(\eta)$; simplify for $E > 0$, $E = 0$, and $E < 0$.
+\end{problem}
+
+%%%%%%%%%%%%%%%% Solution 3
+\begin{solution}
+In the variables that I'm using $E = 0\implies \beta=0$, $E>0\implies \beta>0$, and $E<0\implies \beta<0$, So let's proceed accordingly.
+
+\textbf{Case 1}, $\beta = 0$: in this case, the integral becomes 
 \begin{displaymath}
-  \int \frac{1}{\sqrt{(\alpha+\beta R')R'}} = \frac{\log (R)-\log (\alpha+\beta R)}{\alpha}
-  \end{displaymath}
-thus, we have 
-\begin{displaymath}
-  \frac{1}{\alpha} \ln \left(\frac{R}{\alpha+\beta R}\right)=\eta,
+  \int \frac{dR}{\sqrt{\alpha R }} = \int d\eta,
 \end{displaymath}
-it follows that
+with solution given by
 \begin{displaymath}
-  \frac{R}{\alpha+\beta R}=\exp(\alpha\eta)
+  R(\eta) = \frac{\alpha}{2}\eta^2
+\end{displaymath}
+
+\textbf{Case 2}, $\beta < 0 $: Here, I'm going to add the sign of $\beta$ by hand (not elegant at all, but just to be more explicit),
+\begin{displaymath}
+    \int \frac{dR}{\sqrt{\alpha R-\beta R^2}} = \int d\eta,
+\end{displaymath}
+and here the idea is to make a change of variables (I attach the notes with the algebra at the end of the document). Having done that, the solution reads
+\begin{displaymath}
+  R(\eta) = \frac{\alpha}{\beta} \cos^2\left( \frac{\sqrt{\beta}}{2}\eta \right)
+\end{displaymath}
+
+\textbf{Case 3}, $\beta > 0 $:  Here the integral becomes
+\begin{displaymath}
+  \int \frac{dR}{\sqrt{\alpha R+\beta R^2}} = \int d\eta,
+\end{displaymath}
+with solution given by
+\begin{displaymath}
+  R(\eta) = \frac{\alpha e^{\alpha\eta}}{1-\beta e^{\alpha\eta}},
+\end{displaymath}
+and again, details about the algebra are attached at the end of the document.
+
+\end{solution}
+
+\pagebreak
+%%%%%%%%%%%%%%%% Problem 4
+\begin{problem}
+	Determine $t(\eta)$; again simplify for $E > 0$, $E = 0$, and $E < 0$.
+\end{problem}
+
+%%%%%%%%%%%%%%%% Solution 4
+\begin{solution}
+We know that
+\begin{displaymath}
+    dt = Rd\eta,
+\end{displaymath}
+and in the previous bullet we found exactly $R(\eta)$, thus we only need to integrate, this is
+\begin{displaymath}
+  t(\eta) = \int d\eta R(\eta).
 \end{displaymath}
 
 
+\textbf{Case 1}, $\beta=0$: in this case we have
+\begin{displaymath}
+  t(\eta) = \frac{\alpha}{2} \int d\eta \left(\eta^2\right),
+\end{displaymath}
+with solution given by
+\begin{displaymath}
+  t = \frac{\alpha}{6}\eta^3.
+\end{displaymath}
 
 
+\textbf{Case 2}, $\beta<0$: here we have
+\begin{displaymath}
+  t(\eta) = \frac{\alpha}{\beta}\int d\eta \cos^2\left( \frac{\sqrt{\beta}}{2}\eta \right),
+\end{displaymath}
+with solution
+\begin{displaymath}
+  t = \frac{\alpha}{\beta}\frac{2\sin\left (\frac{\sqrt{\beta}}{2}\eta\right )}{\sqrt{\beta}}
+\end{displaymath}
 
+
+\textbf{Case 3}, $\beta>0$: and finally, we have
+\begin{displaymath}
+  t(\eta) = \alpha \int d\eta \frac{e^{\alpha\eta}}{1-\beta e^{\alpha\eta}}
+\end{displaymath}
+with solution given by
+\begin{displaymath}
+  t(\eta) = -\frac{\log \left(1-\beta  e^{\alpha  x}\right)}{\beta }.
+\end{displaymath}
+	
+\end{solution}
+
+\pagebreak
+%%%%%%%%%%%%%%%% Problem
+\begin{problem}
+	Using the above pair of parametric equations, plot $R(t)$ (use some plotting software, such as Mathematica) for 3 different choices of $E$, namely $E > 0$, $E = 0$, and $E < 0$.
+\end{problem}
+
+%%%%%%%%%%%%%%%% Solution
+\begin{solution}
+By combining the two previous parts we can write a parametric equation
+\begin{displaymath}
+  \gamma(\eta) = (R(\eta), t(\eta)),
+\end{displaymath}
+therefore.
+
+\textbf{Case 1}, $\beta=0$: in this case we have
+\begin{displaymath}
+  \gamma(\eta) = \frac{\alpha}{2}\left( \eta^2, \eta^3\right)
+\end{displaymath}
+
+
+\textbf{Case 2}, $\beta<0$: again, we have
+\begin{displaymath}
+  \gamma(\eta) = \frac{\alpha}{\beta}\left( \cos^2\left( \frac{\sqrt{\beta}}{2}t\right), \frac{2}{\sqrt{\beta}}\sin\left(\frac{\sqrt{\beta}}{2}t \right) \right)
+\end{displaymath}
+
+\textbf{Case 3}, $\beta>0$: and finally
+\begin{displaymath}
+  \gamma(\eta) = \left(\frac{\alpha e^{\alpha\eta}}{1-\beta e^{\alpha\eta}}, -\frac{\log \left(1-\beta  e^{\alpha  x}\right)}{\beta }\right)
+\end{displaymath}
+\end{solution}
+The plots are shown in the next page.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
