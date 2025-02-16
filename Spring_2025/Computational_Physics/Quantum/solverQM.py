@@ -19,14 +19,14 @@ plt.rcParams.update(newParams) # Set new plotting parameters
 
 def initial_condition(x: np.ndarray[float], x0: float) -> np.ndarray[float]:
     """
-    Compute the initial condition for the wavefunction.
+    Compute the initial condition for the wave function.
 
     Parameters:
     x (np.ndarray[float]): The spatial grid points.
     x0 (float): The center of the Gaussian.
 
     Returns:
-    np.ndarray[float]: The initial wavefunction values at the grid points.
+    np.ndarray[float]: The initial wave function values at the grid points.
     """
     return np.exp(-(x - x0)**2)
 
@@ -44,7 +44,7 @@ t  = np.linspace(t0,tF,11)
 # Define empty matrix where we hold x
 x_mat = []
 
-# Create the tridiagonal matrix
+# Create the tri-diagonal matrix
 gamma   = -1j*(dt/dx**2)
 B       = np.zeros(len(x0), dtype=complex)
 B[0]    = 1
@@ -78,7 +78,7 @@ for i in range(1000):
     if i % 200 == 0:
         plt.plot(x0, np.real(psi[i]), label="Time {}".format(i))
     # plt.plot(x0, np.real(psi[i]), label="Time {}".format(i))
-plt.title("Real Part of the Wavefunction")
+plt.title("Real Part of the Wave function")
 plt.legend()
 plt.grid()
 plt.show()
@@ -87,12 +87,12 @@ plt.figure()
 for i in range(1000):
     if i % 200 == 0:
         plt.plot(x0, np.imag(psi[i]), label="Time {}".format(i))
-plt.title("Imaginary Part of the Wavefunction")
+plt.title("Imaginary Part of the Wave function")
 plt.legend()
 plt.grid()
 plt.show()
 
-# Plot the norm of the wavefunction
+# Plot the norm of the wave-function
 for i in range(1000):
     if i % 100 == 0:
         print(np.linalg.norm(psi[i]))
@@ -102,4 +102,3 @@ for i in range(1000):
         # print("P2 Norm at t = {}-----------".format(i))
         integral = np.trapz(np.abs(psi[i])**2, dx=dx)
         print("P2 Norm at t = {}: ".format(i) + str(integral))
-for i in range(10):
