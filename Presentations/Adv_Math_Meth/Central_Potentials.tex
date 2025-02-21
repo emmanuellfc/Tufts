@@ -1,0 +1,128 @@
+\documentclass[12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetheme[progressbar=frametitle]{metropolis}
+\title{Central Potentials and the Hydrogen Atom}
+\author{Emmanuel Flores}
+\institute{Advanced Mathematical Methods, 
+		   \\Tufts University}
+
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Contents}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Quantum particle in a central potential]{Quantum particle in a central potential}
+%%%%%
+\begin{frame}{Symmetries of the Hamiltonian}
+	\begin{itemize}
+		\item If $H$ is invariant under rotations, then their corresponding eigenspaces carry representations of $SO(3)$
+		\item This eigenspaces, break up into irreducible representations, which are labeled by $l$ and have dimension $2l + 1$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Central Potential}
+The hamiltonian function in phase space reads
+\begin{displaymath}
+  h = \frac{p^2}{2m} + V(q),
+\end{displaymath}
+and in 3D
+\begin{displaymath}
+ h = \frac{1}{2m}(p_{1}^2+p_{2}^2+p_{3}^2) + V(q_1,q_2,q_3)
+\end{displaymath}
+\end{frame}
+
+\begin{frame}{Schrodinger Representation}
+The Hamiltonian in the Schrodinger representation reads,
+\begin{displaymath}
+H = -\frac{\hbar^2}{2m}(\frac{\partial ^2}{\partial q_1^2} + \frac{\partial ^2}{\partial q_2^2}+\frac{\partial ^2}{\partial q_3^2}) + V(q_1,q_2,q_3) 	
+\end{displaymath}
+and the focus wil be in potentials that are only functions of
+\begin{displaymath}
+q_1^2 + q_2^2 + q_3^2,
+\end{displaymath}
+this is, functions that depend just on the radial distance to the origin.
+\end{frame}
+
+\begin{frame}{Casimir Operator}
+\textbf{Reminder: }The casimir operator is defined as 
+\begin{displaymath}
+  L^2 = L_1^2 + L_2^2 + L_3^2.
+\end{displaymath}
+And one can write the Laplacian in 3D spherical coordinates in terms of $L^2$, as
+\begin{displaymath}
+  \triangle = \frac{\partial^2}{\partial r^2} + \frac{2}{r}\frac{\partial}{\partial r} - \frac{1}{r^2}L^2
+\end{displaymath}
+\end{frame}
+
+\begin{frame}{Casimir Operator}
+\textbf{Reminder:} The eigenvalues fo the Casimir Operator 
+\begin{displaymath}
+  l(l+1)
+\end{displaymath}
+ and thus, the Laplacian reads
+\begin{displaymath}
+  \triangle = \frac{\partial^2}{\partial r^2} + \frac{2}{r}\frac{\partial}{\partial r} - \frac{l(l+1)}{r^2}
+\end{displaymath}
+\end{frame}
+
+\begin{frame}{Eigenfunctions}
+The space of eigenfunctions of energy $E$ will be a sum of irreducible representations of $SO(3)$, with the $SO(3)$ acting on the angular coordinates of th wavefunctions, leaving the radial coordinate invariant.
+And we will seek for functions that only have raidial dependence; $g_{lE}(r)$
+\begin{displaymath}
+  \left(-\frac{\hbar^2}{2m} \left( \frac{d^2}{dr^2} +2\frac{2}{dr} - \frac{l(l+1)}{r^2} \right)+ V(r) \right)g_{lE}(r) = Eg_{lE}(r)
+\end{displaymath}
+\end{frame}
+
+\begin{frame}{Spherical Harmonics}
+Representationd of $SO(3)$ on functions of angular coordinates can be explicitly expressed in ters of spherical harmonics, $Y^{m}_{l}(\theta, \phi)$.
+For each solution, $g_{lE}(r)$ will have the eigenvalue equation
+\begin{displaymath}
+  Hg_{lE}(r)Y^{m}_{l}(\theta, \phi) = Eg_{lE}(r)Y^{m}_{l}(\theta, \phi).
+\end{displaymath}however, for a general potential function $V(r)$, exact solutions for the eigenvalues $E$ and corresponding functions $g_{lE}$ cannot be found in closed form.
+\end{frame}
+
+\begin{frame}{Coulomb Potential}
+This potential describes a light charged particle moving in the potential due to the electric field of a much heavier charged particle. The potential reads
+\begin{displaymath}
+  V = -\frac{e^2}{r^2},
+\end{displaymath}
+and we're looking for solutions to 
+\begin{displaymath}
+  \left(-\frac{\hbar^2}{2m} \left( \frac{d^2}{dr^2} +2\frac{2}{dr} - \frac{l(l+1)}{r^2} \right) -\frac{e^2}{r^2} \right)g_{lE}(r) = Eg_{lE}(r).
+\end{displaymath}
+\end{frame}
+
+\begin{frame}{Coulomb Potential}
+By a change of coordinates
+\begin{displaymath}
+\left(-\frac{\hbar^2}{2m}\left( \frac{d^2}{dr^2} - \frac{l(l+1)}{r^2}\right) - \frac{e^2}{r^2} \right)rg_{lE}(r) =Erg_{lE}(r),
+\end{displaymath}
+and the solution of this equation is genellary done via the Frobenius method, which is a power series solution.
+\begin{itemize}
+	\item For $E\geq 0$; non-normalizable solutions that descrive scattering phenomena.
+	\item For $E<0$ solutions correspond to an integer $n=1,2,3,.\cdots$, and describe bound states.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Coulomb Potential}
+\begin{itemize}
+	\item Bound state: A bound state occurs when a particle is trapped or localized within a specific region of space due to the potential acting upon it.
+	\item Scattering state: A scattering state describes a particle that is not confined and can move freely to infinity.
+\end{itemize}
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[$\mathfrak{so}(4)$ symmetry and the Coulomb potential]{symmetry and the Coulomb potential}
+%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[The hydrogen atom]{The hydrogen atom}
+%%%%%
+
+
+
+\end{document}
