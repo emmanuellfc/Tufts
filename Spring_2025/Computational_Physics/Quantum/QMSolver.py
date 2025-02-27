@@ -42,6 +42,12 @@ class QMSolver:
         self.x = np.linspace(x_min, x_max, self.n)
         return self.x
 
+    def gaussian_wave_packet(self, x0, sigma, k0):
+        """Generates a Gaussian wave packet."""
+        A = (1 / (sigma * np.sqrt(np.pi))) ** 0.5
+        self.psi = A * np.exp(-(self.x - x0) ** 2 / (2 * sigma ** 2)) * np.exp(1j * k0 * self.x)
+        return self.psi
+
     def initial_condition(self):
         """
         Create initial condition for psi
@@ -49,6 +55,17 @@ class QMSolver:
             - Numpy array with initial condition
         """
         self.psi = (1/np.pi**0.25) * np.exp(-0.5*self.x**2)
+
+    def sw_potential(self):
+        """
+        Create Square Well potential
+        Returns:
+            - Numpy array with Square Well potential
+        """
+        self.potential = np.zeros_like(self.x)
+        self.potential[0] = 1e30
+        self.potential[-1] = 1e30
+        return self.potential
 
     def sho_potential(self):
         """
@@ -84,9 +101,6 @@ class QMSolver:
             self.hamiltonian[i, i] = 2 * c 
             self.hamiltonian[i, i + 1] = -c
             self.hamiltonian[i, i - 1] = -c
-        # Set Dirichlet Boundary Conditions
-        self.hamiltonian[0, 0]   = 1e30
-        self.hamiltonian[-1, -1] = 1e30
         return self.hamiltonian
 
     def solve(self):

@@ -20,11 +20,14 @@ newParams = {'figure.figsize'  : (12, 6),  # Figure size
 plt.rcParams.update(newParams) # Set new plotting parameters
 
 # Solving the SHO
-t_steps = 100
-resolution = 200
+t_steps = 500
+resolution = 100
+sigma = 1.0  # Ground state width
+x0 = 0.0      # Initial center position (equilibrium)
+k0 = 0.0      # Initial wave number (ground state)
 sim = QMSolver(dt=0.1, dx=0.1, n=resolution, steps=t_steps)
 sim.create_grid(-5,5)
-sim.initial_condition()
+sim.gaussian_wave_packet(x0, sigma, k0)
 sim.sho_potential()
 sim.create_hamiltonian()
 sim_solution = sim.solve()
@@ -34,7 +37,7 @@ def generate_time_series_data(solution, num_time_steps, num_points):
     """Generates sample time-series graph data."""
     data = []
     for t in range(num_time_steps):
-        data.append(np.column_stack((solution.x, np.real(solution.psi_total[t]))))
+        data.append(np.column_stack((solution.x, np.abs(solution.psi_total[t]))))
     return np.array(data)
 
 time_series_data = generate_time_series_data(sim, t_steps, resolution)
@@ -44,8 +47,9 @@ fig, ax = plt.subplots()
 line, = ax.plot(time_series_data[0, :, 0], time_series_data[0, :, 1], label = "SHO")  # Initial plot
 ax.set_xlim(np.min(time_series_data[:,:,0]), np.max(time_series_data[:,:,0]))
 ax.set_ylim(np.min(time_series_data[:,:,1]), np.max(time_series_data[:,:,1]))
+ax.set_title("Simple Harmonic Potential")
 ax.set_xlabel("x")
-ax.set_ylabel(r"Re($\psi(t)$)")
+ax.set_ylabel(r"$|\psi(t)|^2$")
 
 # Animation function
 def animate(i):
