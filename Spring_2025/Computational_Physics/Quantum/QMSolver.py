@@ -73,7 +73,6 @@ class QMSolver:
         Returns:
             - Numpy array with harmonic potential
         """
-        h_bar, m, omega = 1, 1, 1
         self.potential = 0.5 * self.x ** 2
         return self.potential
 
@@ -83,8 +82,24 @@ class QMSolver:
         Returns:
             - Numpy array with harmonic potential
         """
-        h_bar, m, omega = 1, 1, 1
         self.potential = np.abs(self.x)
+        return self.potential
+
+    def potential_barrier(self, v0, x_left, x_right):
+        """
+        Create a Potential Barrier
+        Args:
+            v0:
+            x_left:
+            x_right:
+
+        Returns:
+            - Numpy array with barrier potential
+        """
+        self.potential = np.zeros_like(self.psi)
+        for i, xi in enumerate(self.x):
+            if x_left < xi < x_right:
+                self.potential[i] = v0
         return self.potential
 
     def create_hamiltonian(self):
