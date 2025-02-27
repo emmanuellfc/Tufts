@@ -1,6 +1,7 @@
-# Main Class Object Containing
+# Load Libraries
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
 # Set figure parameters for all plots
 newParams = {'figure.figsize'  : (12, 6),  # Figure size
@@ -17,19 +18,28 @@ newParams = {'figure.figsize'  : (12, 6),  # Figure size
             }
 plt.rcParams.update(newParams) # Set new plotting parameters
 
+# Main Class Definition
 class QMSolver:
     """
-    Initialize the QM solver
-        Parameters
-            - dt:
-            - dx:
-            - n:
-            - steps:
+    A class for solving the time-dependent Schrödinger equation using the Crank-Nicolson scheme.
+
+    Parameters:
+        dt (float): Time step.
+        dx (float): Spatial step.
+        n (int): Number of grid points.
+        steps (int): Number of time steps.
     """
-    def __init__(self, dt: float, dx: float, n: int, steps: int) -> None:
+    def __init__(self, dt: float, dx: float, n: int, steps: int):
+        """
+        Args:
+            dt: delta t
+            dx: delta x
+            n: number of grid points
+            steps: number of time steps (time-evolution)
+        """
         self.dt = dt
         self.dx = dx
-        self.N = n
+        self.n = n
         self.steps = steps
         self.x = None
         self.psi = None
@@ -37,108 +47,113 @@ class QMSolver:
         self.potential = None
         self.hamiltonian = None
 
-    def create_sho_hamiltonian(self):
+    def create_grid(self, x_min: float, x_max: float):
         """
+        Create Space Grid
+        Args:
+            x_min:
+            x_max:
         Returns:
-            Hamiltonian
+            - Numpy array
         """
-        self.x = np.linspace(-self.N * self.dx, self.N * self.dx, self.N)
-        self.potential = np.zeros(self.N)
-        h_bar, m = 1, 1
-        # Make Hamiltonian Complex Matrix
-        c = - h_bar ** 2 / (2 * m * self.dx ** 2)
-        self.hamiltonian = np.zeros((self.N, self.N), dtype=complex)
-        for i in range(1, self.N - 1):
-            self.hamiltonian[i, i] = 2 * c + 0.5*self.potential[i]**2
+        self.x = np.linspace(x_min, x_max, self.n)
+        return self.x
+
+    def initial_condition(self):
+        """
+        Create initial condition for psi
+        Returns:
+            - Numpy array with initial condition
+        """
+        self.psi = (1/np.pi**0.25) * np.exp(-0.5*self.x**2)
+
+    def sho_potential(self):
+        """
+        Create SHO potential
+        Returns:
+            - Numpy array with harmonic potential
+        """
+        h_bar, m, omega = 1, 1, 1
+        self.potential = 0.5 * self.x ** 2
+        return self.potential
+
+    def create_hamiltonian(self):
+        """
+        Constructs the Hamiltonian matrix
+        Returns:
+            - Square matrix of the Hamiltonian
+        """
+        # Construct the Hamiltonian matrix
+        c: float = - 1 / (2 * self.dx ** 2)
+        self.hamiltonian = np.zeros((self.n, self.n), dtype=complex)
+        for i in range(1, self.n - 1):
+            self.hamiltonian[i, i] = 2 * c + self.potential[i]
+            self.hamiltonian[i, i] = 2 * c 
             self.hamiltonian[i, i + 1] = -c
             self.hamiltonian[i, i - 1] = -c
         # Set Dirichlet Boundary Conditions
-        self.hamiltonian[0, 0] = 1e30
+        self.hamiltonian[0, 0]   = 1e30
         self.hamiltonian[-1, -1] = 1e30
         return self.hamiltonian
-
-    def create_sw_hamiltonian(self):
-        """
-        Returns:
-            Hamiltonian
-        """
-        h_bar, m = 1, 1
-        self.x = np.linspace(-self.N * self.dx, self.N * self.dx, self.N)
-        # Potential: infinite square well
-        self.potential = np.zeros(self.N)
-        self.potential[0] = np.inf
-        self.potential[-1] = np.inf
-        # Create Hamiltonian Complex Matrix
-        c = - h_bar ** 2 / (2 * m * self.dx ** 2)
-        self.hamiltonian = np.zeros((self.N, self.N), dtype=complex)
-        for i in range(1, self.N - 1):
-            self.hamiltonian[i, i] = 2 * c + self.potential[i]
-            self.hamiltonian[i, i + 1] = -c
-            self.hamiltonian[i, i - 1] = -c
-        # Set Dirichlet Boundary Conditions
-        self.hamiltonian[0, 0] = 1e30
-        self.hamiltonian[-1, -1] = 1e30
-        return self.hamiltonian
-
-    def create_pb_hamiltonian(self, height, width):
-        self.x = np.linspace(-self.N * self.dx, self.N * self.dx, self.N)
-        center = len(self.x) // 2  # Center the barrier
-        self.potential = np.zeros(self.N)
-        self.potential[center - width // 2:center + width // 2] = height
-        # Create Hamiltonian Complex Matrix
-        h_bar, m = 1, 1
-        c = - h_bar ** 2 / (2 * m * self.dx ** 2)
-        self.hamiltonian = np.zeros((self.N, self.N), dtype=complex)
-        for i in range(1, self.N - 1):
-            self.hamiltonian[i, i] = 2 * c + self.potential[i]
-            self.hamiltonian[i, i + 1] = -c
-            self.hamiltonian[i, i - 1] = -c
-        self.hamiltonian = 1e30
-        self.hamiltonian[-1, -1] = 1e30
-        return self.hamiltonian
-
-    def ic_gaussian(self):
-        """
-        Returns:
-            Initial condition
-        """
-        # self.psi = np.exp(-((self.x - self.N * self.dx / 2) ** 2) / 2)
-        self.psi = np.exp(-((self.x**2) / 2))
-        self.psi = self.psi / np.sqrt(np.sum(np.abs(self.psi) ** 2) * self.dx)  # Normalize
-        return self.psi
-
-    def ic_wave_packet(self, k0 = 1):
-        self.psi = (2 / np.pi ** .25) * np.exp(-np.square(self.x) + 1j * k0 * self.x)
-        return self.psi
 
     def solve(self):
         """
         Returns:
             Wave function at all times
         """
-        I = np.identity(self.N, dtype=complex)
+        identity_matrix = np.identity(self.n, dtype=complex)
         # Create matrices A and B
-        A = I + (1j / 2) * self.hamiltonian * self.dt
-        B = I - (1j / 2) * self.hamiltonian * self.dt
+        forward_matrix  = identity_matrix + (1j / 2) * self.hamiltonian * self.dt
+        backward_matrix = identity_matrix - (1j / 2) * self.hamiltonian * self.dt
         # Time evolution
         self.psi_total = []
         for n in range(self.steps):
             # Solve the linear system
-            self.psi = np.linalg.solve(A, B @ self.psi)
+            self.psi = np.linalg.solve(forward_matrix, backward_matrix @ self.psi)
             # Normalize the wave-function
             self.psi = self.psi / np.sqrt(np.sum(np.abs(self.psi) ** 2) * self.dx)
+            # Append the wave function to psi total
             self.psi_total.append(self.psi)
         return self.psi_total
 
+# Solving the SHO
+t_steps = 100
+resolution = 200
+sim = QMSolver(dt=0.1, dx=0.1, n=resolution, steps=t_steps)
+sim.create_grid(-5,5)
+sim.initial_condition()
+sim.sho_potential()
+sim.create_hamiltonian()
+sim_solution = sim.solve()
 
-test  = QMSolver(dt=0.001, dx=0.1, n=200, steps=200)
-test.create_pb_hamiltonian(height=1, width=1)
-test.ic_gaussian()
-sols = test.solve()
 
-# Plot Solution
-plt.figure()
-plt.plot(test.x, np.real(sols[0]), label='Re(psi) @ t = t0')
-plt.plot(test.x, np.imag(sols[199]), label='Re(psi) @ t = tf')
-plt.legend()
-plt.show()
+# Animation
+def generate_time_series_data(solution, num_time_steps, num_points):
+    """Generates sample time-series graph data."""
+    data = []
+    for t in range(num_time_steps):
+        data.append(np.column_stack((solution.x, np.real(solution.psi_total[t]))))
+    return np.array(data)
+
+time_series_data = generate_time_series_data(sim, t_steps, resolution)
+
+# Set up the figure and axes
+fig, ax = plt.subplots()
+line, = ax.plot(time_series_data[0, :, 0], time_series_data[0, :, 1], label = "SHO")  # Initial plot
+ax.set_xlim(np.min(time_series_data[:,:,0]), np.max(time_series_data[:,:,0]))
+ax.set_ylim(np.min(time_series_data[:,:,1]), np.max(time_series_data[:,:,1]))
+ax.set_xlabel("x")
+ax.set_ylabel(r"Re($\psi(t)$)")
+
+# Animation function
+def animate(i):
+    line.set_xdata(time_series_data[i, :, 0])
+    line.set_ydata(time_series_data[i, :, 1])
+    return line,
+
+# Create the animation
+ani = animation.FuncAnimation(fig, animate, frames=t_steps, interval=1, blit=True)
+
+# Display or save the animation
+ani.save('simple_harmonic_oscillator.mp4', writer='ffmpeg', fps=30)
+
