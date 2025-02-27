@@ -12,7 +12,7 @@ newParams = {'figure.figsize'  : (12, 6),  # Figure size
              'ytick.labelsize' : 11,       # fontsize of tick labels on y axis
              'xtick.labelsize' : 11,       # fontsize of tick labels on x axis
              'legend.fontsize' : 12,       # fontsize of labels in legend
-             'legend.frameon'  : True,     # activate frame on lengend?
+             'legend.frameon'  : True,     # activate frame on lengend
             }
 plt.rcParams.update(newParams) # Set new plotting parameters
 
