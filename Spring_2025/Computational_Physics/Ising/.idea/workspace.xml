@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbfc1b74-8e79-4c39-8f2e-eb3922ff94ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ising,py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adaptative_DEV.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adaptative_Scheme.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Class3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data_Analysis.nb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DeepXDE_Quadratic_Resistance.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DeepXDE_Quadratic_Resistance_DEV.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DeepXDE_Quadratic_Resistance_v2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dropping_a_ball_initial.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dropping_a_ball_initial_v2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Euler_and_Runge.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Full_Comparisson.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Full_Comparisson_With_Data.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Full_Comparisson_With_Data_v2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ODEs.nb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_One.nb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectileMotion.nb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quantum/BarrierPotentialQM.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Quantum/BarrierPotentialQM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quantum/HarmonicQM.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Quantum/HarmonicQM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quantum/SquareWellQM.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Quantum/SquareWellQM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quantum/TriangularWellQM.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Quantum/TriangularWellQM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Quantum/animation_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Quantum/helper_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runge_Kutta.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runge_Kutta_DEV.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrackerData.nb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adapt_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../euler_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../file_stuff.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gettting_data.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../parsing_tracker_data.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pinn_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rk4_solver.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tennis.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tennis1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test001.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tracker.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tracker.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tracker2.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2tcwI8XClFS1MSLyAgm2gIfJqv7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/emmanuelflores/GitHub/Tufts/Spring_2025/Computational_Physics/Ising",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Ising" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54" />
+        <option value="bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbfc1b74-8e79-4c39-8f2e-eb3922ff94ab" name="Changes" comment="" />
+      <created>1740664587823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740664587823</updated>
+      <workItem from="1740664588920" duration="50000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

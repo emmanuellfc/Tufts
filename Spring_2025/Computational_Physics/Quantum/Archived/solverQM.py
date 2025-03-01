@@ -100,5 +100,5 @@ for i in range(1000):
 for i in range(1000):
     if i % 100 == 0:
         # print("P2 Norm at t = {}-----------".format(i))
-        integral = np.trapz(np.abs(psi[i])**2, dx=dx)
+        integral = np.trapezoid(np.abs(psi[i])**2, dx=dx)
         print("P2 Norm at t = {}: ".format(i) + str(integral))

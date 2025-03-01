@@ -21,10 +21,10 @@ class QMSolver:
             steps: number of time steps (time-evolution)
         """
         self.dt = dt
-        self.dx = dx
         self.n = n
         self.steps = steps
         self.x = None
+        self.dx = dx
         self.psi = None
         self.psi_total = None
         self.potential = None
@@ -39,6 +39,7 @@ class QMSolver:
         Returns:
             - Numpy array
         """
+        # self.dx = (x_max - x_min)/self.n
         self.x = np.linspace(x_min, x_max, self.n)
         return self.x
 
@@ -48,7 +49,7 @@ class QMSolver:
         self.psi = A * np.exp(-(self.x - x0) ** 2 / (2 * sigma ** 2)) * np.exp(1j * k0 * self.x)
         return self.psi
 
-    def initial_condition(self):
+    def gaussian_wave(self):
         """
         Create initial condition for psi
         Returns:
@@ -102,9 +103,25 @@ class QMSolver:
                 self.potential[i] = v0
         return self.potential
 
-    def create_hamiltonian(self):
+    def create_hamiltonian_fd(self):
         """
-        Constructs the Hamiltonian matrix
+        Construct the Hamiltonian matrix following a Finite-Difference Scheme
+        Returns:
+            - Square matrix of the Hamiltonian
+        """
+        self.hamiltonian = np.zeros((self.n, self.n), dtype=complex)  # Initialize A as a complex matrix
+        c = self.dt / (1j * self.dx ** 2)
+        for j in range(self.n):
+            self.hamiltonian[j, j] = 1 + 2 * c - 1j * self.dt * self.potential[j]  # Diagonal elements
+            if j > 0:
+                self.hamiltonian[j, j - 1] = -c  # Lower diagonal
+            if j < self.n - 1:
+                self.hamiltonian[j, j + 1] = -c  # Upper diagonal
+        return self.hamiltonian
+
+    def create_hamiltonian_cn(self):
+        """
+        Construct the Hamiltonian matrix following a Crank-Nicolson Scheme
         Returns:
             - Square matrix of the Hamiltonian
         """
@@ -118,8 +135,24 @@ class QMSolver:
             self.hamiltonian[i, i - 1] = -c
         return self.hamiltonian
 
-    def solve(self):
+    def solve_finite_difference(self):
         """
+        Solve the system using a Finite Difference Scheme
+        Returns:
+            Wave function at all times"""
+
+        # Time evolution
+        self.psi_total = []
+        for n in range(self.steps):
+            self.psi = np.linalg.solve(self.hamiltonian, self.psi)
+            self.psi = self.psi / np.sqrt(np.sum(np.abs(self.psi) ** 2) * self.dx)
+            # Append the wave function to psi total
+            self.psi_total.append(self.psi)
+        return self.psi_total
+
+    def solve_crank_nicolson(self):
+        """
+        Solve the system using a Crank Nisolson Scheme
         Returns:
             Wave function at all times
         """

@@ -11,11 +11,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-#plotting modules
-import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots # utility for configuring figure with multiple plots
-import torch
+# #plotting modules
+# import plotly.express as px
+# import plotly.graph_objects as go
+# from plotly.subplots import make_subplots # utility for configuring figure with multiple plots
+# import torch
 
 def initial_condition(x0,k0):
     """
@@ -29,10 +29,10 @@ xi=-10
 xF = 10
 t0 = 0
 tF = 200
-nsteps=int(tF/dt)+1
+nsteps = int(tF/dt)+1
 x0=np.linspace(-10,10,100)
 t=np.linspace(t0,tF,nsteps)
-print(len(t))
+# print(len(t))
 
 # Define empty matrix where we hold x
 x_mat = []
@@ -102,98 +102,98 @@ plt.show()
 # plt.figure()
 for i in range(len(t)):
     if i % 100 == 0:
-        print(np.linalg.norm(psi[i]))
+        print(np.abs(psi[i])**2)
 
-"""Animation Attempts      """
-
-def animation():
-
-  # Create the figure
-  layout = go.Layout(width=600,height=600,title="Traveling and Dispersing!")
-  fig = go.Figure(layout=layout)
-
-  #Add the initial scatter plot (first time step)
-
-  fig.add_trace(go.Scatter(x=x0, y=np.real(x_mat[0]), mode='lines', line=dict(shape='spline', smoothing=1.3)
-  ))
-
-  # Create frames for each time step
-  frames = []
-  for packet in range(0,nsteps):
-    frame_data= go.Scatter(x=x0,y=np.real(x_mat[packet]),mode='lines',line=dict(shape='spline', smoothing=1.3))
-    frames.append(go.Frame(data=frame_data, name=f'frame{packet}'))
-  #print(frames)
-  fig.frames = frames
-
-  print("num frames: ",len(frames))
-  # # give the frames to the figure
-  fig.frames = frames
-
-  # we add widgets using the layout options
-  # Add animation buttons
-  # Add slider and play button
-  fig.update_layout(
-      updatemenus=[
-          dict(
-              type="buttons",
-              buttons=[dict(label="Play",
-                            method="animate",
-                            args=[None, {"frame": {"duration": 80, "redraw": True},
-                                          "fromcurrent": True, "transition": {"duration": 15,
-                                                                              "easing": "linear"}}]),
-                    dict(label="Pause",
-                            method="animate",
-                            args=[[None], {"frame": {"duration": 0, "redraw": False},
-                                          "mode": "immediate",
-                                          "transition": {"duration": 0}}])
-                    ],
-              # Adjust button position and direction
-              direction="left",
-              pad={"r": 10, "t": 87},
-              showactive=False,
-              x=0.1,
-              xanchor="right",
-              y=0,
-              yanchor="top"
-          ),
-      ],
-      sliders = [dict(
-          active=0,
-          yanchor="top",
-          xanchor="left",
-          currentvalue={"prefix":"Time: ","suffix":" s"},
-          pad={"b": 10, "t": 50},
-          len=0.9,
-          x=0.1,
-          y=0,
-          steps = [{
-              "method": "animate",
-              "args": [[f'frame{k}'], # The name of the corresponding frame
-                      {"frame": {"duration": 1, "redraw": True},
-                        "mode": "immediate",
-                        "transition": {"duration": 0}}
-                      ],
-              "label": k # The label that will appear on the slider
-          } for k in range(nsteps)]
-      )]
-  )
-
-  # Update initial layout
-  # fig.update_layout(
-  #     scene=dict(
-  #         xaxis=dict(autorange=True),
-  #         yaxis=dict(range=[-.2, .2],autorange=False),
-  #         aspectratio=dict(x=1, y=1)
-  #     )
-  # )
-  fig.update_layout(scene=dict(
-          xaxis=dict(autorange=np.True_),
-          yaxis=dict(autorange=True),
-          aspectratio=dict(x=1, y=1)
-      ))
-
-  return fig
-
-fig_animation = animation()
-fig_animation.show()
-
+# """Animation Attempts      """
+#
+# def animation():
+#
+#   # Create the figure
+#   layout = go.Layout(width=600,height=600,title="Traveling and Dispersing!")
+#   fig = go.Figure(layout=layout)
+#
+#   #Add the initial scatter plot (first time step)
+#
+#   fig.add_trace(go.Scatter(x=x0, y=np.real(x_mat[0]), mode='lines', line=dict(shape='spline', smoothing=1.3)
+#   ))
+#
+#   # Create frames for each time step
+#   frames = []
+#   for packet in range(0,nsteps):
+#     frame_data= go.Scatter(x=x0,y=np.real(x_mat[packet]),mode='lines',line=dict(shape='spline', smoothing=1.3))
+#     frames.append(go.Frame(data=frame_data, name=f'frame{packet}'))
+#   #print(frames)
+#   fig.frames = frames
+#
+#   print("num frames: ",len(frames))
+#   # # give the frames to the figure
+#   fig.frames = frames
+#
+#   # we add widgets using the layout options
+#   # Add animation buttons
+#   # Add slider and play button
+#   fig.update_layout(
+#       updatemenus=[
+#           dict(
+#               type="buttons",
+#               buttons=[dict(label="Play",
+#                             method="animate",
+#                             args=[None, {"frame": {"duration": 80, "redraw": True},
+#                                           "fromcurrent": True, "transition": {"duration": 15,
+#                                                                               "easing": "linear"}}]),
+#                     dict(label="Pause",
+#                             method="animate",
+#                             args=[[None], {"frame": {"duration": 0, "redraw": False},
+#                                           "mode": "immediate",
+#                                           "transition": {"duration": 0}}])
+#                     ],
+#               # Adjust button position and direction
+#               direction="left",
+#               pad={"r": 10, "t": 87},
+#               showactive=False,
+#               x=0.1,
+#               xanchor="right",
+#               y=0,
+#               yanchor="top"
+#           ),
+#       ],
+#       sliders = [dict(
+#           active=0,
+#           yanchor="top",
+#           xanchor="left",
+#           currentvalue={"prefix":"Time: ","suffix":" s"},
+#           pad={"b": 10, "t": 50},
+#           len=0.9,
+#           x=0.1,
+#           y=0,
+#           steps = [{
+#               "method": "animate",
+#               "args": [[f'frame{k}'], # The name of the corresponding frame
+#                       {"frame": {"duration": 1, "redraw": True},
+#                         "mode": "immediate",
+#                         "transition": {"duration": 0}}
+#                       ],
+#               "label": k # The label that will appear on the slider
+#           } for k in range(nsteps)]
+#       )]
+#   )
+#
+#   # Update initial layout
+#   # fig.update_layout(
+#   #     scene=dict(
+#   #         xaxis=dict(autorange=True),
+#   #         yaxis=dict(range=[-.2, .2],autorange=False),
+#   #         aspectratio=dict(x=1, y=1)
+#   #     )
+#   # )
+#   fig.update_layout(scene=dict(
+#           xaxis=dict(autorange=np.True_),
+#           yaxis=dict(autorange=True),
+#           aspectratio=dict(x=1, y=1)
+#       ))
+#
+#   return fig
+#
+# fig_animation = animation()
+# fig_animation.show()
+#
