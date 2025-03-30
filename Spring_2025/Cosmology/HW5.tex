@@ -11,7 +11,7 @@
 \declaretheorem[style=normalhead]{problem}
 \declaretheorem[style=normalhead]{solution}
 
-\title{Cosmology: HW5}
+\title{Cosmology, Problem Set 5: Neutron Abundance and Hydrogen Recombination}
 \author{J. Emmanuel Flores}
 
 \begin{document}
@@ -140,7 +140,11 @@ and again, using the fact that $T\propto a^{-1}$ we have $T/a = 1$, thus
 just as we wanted.
 \newline
 \textbf{Problem 1e:}
-For this problem, I append the solution of the ode as a Mathematica notebook.
+For this problem, I append the solution of the ode as a Mathematica notebook. On the other hand, the limi of neutron fraction for longer times is given by
+\begin{displaymath}
+  X_e \rightarrow 0.149533
+\end{displaymath}
+
 \newpage
 \textbf{Problem 2a:}
  Starting with
@@ -155,7 +159,7 @@ and from this we have
 \begin{displaymath}
   \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi m_H}{m_e m_p T}\right)^{3/2} \exp\left[ \frac{m_e + m_p - m_H}{T} + \frac{\mu_H - \mu_e - \mu_p}{T}\right],
 \end{displaymath}
-and by using the condition of equilibriuym given, we have 
+and by using the condition of equilibrium given, we have 
 \begin{displaymath}
   \mu_H - \mu_e - \mu_p =0,
 \end{displaymath}
@@ -165,11 +169,11 @@ thus
 \end{displaymath}
 and by making
 \begin{displaymath}
-  E_i = m_e + m_p - m_H,
+  E_I = m_e + m_p - m_H,
 \end{displaymath}
 we finally have
 \begin{displaymath}
-  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi m_H}{m_e m_p T}\right)^{3/2} \exp\left[ \frac{E_i}{T}\right],
+  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi m_H}{m_e m_p T}\right)^{3/2} \exp\left[ \frac{E_I}{T}\right],
 \end{displaymath}
 just as we wanted.
 \newline
@@ -184,11 +188,11 @@ thus this implies that
 \end{displaymath}
 on the other hand, the degrees of freedom are $g_p=2$, $g_e=2$, whereas for the hydrogen, the spins of the electron and proton can be either aligned or anti aligned, which will give one singlet state and one triplet state, therefore $g_H = 1+3 =4$, and with this
 \begin{displaymath}
-  \frac{n_H}{n_e n_p} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[ \frac{E_i}{T}\right],
+  \frac{n_H}{n_e n_p} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[ \frac{E_I}{T}\right],
 \end{displaymath}
 moving on, the universe isn't electrically charged, so $n_e=e_p$, thus
 \begin{displaymath}
-  \frac{n_H}{n_e^2} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[\frac{E_i}{T}\right],
+  \frac{n_H}{n_e^2} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[\frac{E_I}{T}\right],
 \end{displaymath}
 as desired.
 \newline
@@ -204,21 +208,21 @@ thus, we can write
 \begin{displaymath}
 \frac{1-X_e}{X_e^2} = \frac{n_H}{n_e^2}\left( n_e + n_H\right) \implies   \frac{1-X_e}{X_e^2} = \frac{n_H}{n_e^2}n_b,
 \end{displaymath}
-where $n_b = \left( n_e + n_H\right)$.
+where $n_b = n_e + n_H$.
 \newline
 \textbf{Problem 2d:} In the previous homework we found the following result for bosons
 \begin{displaymath}
   n = \frac{\zeta(3)}{\pi^2}gT^3,
 \end{displaymath}
-for photons we have $g=2$, thus
+and in particular, for photons we have $g=2$, thus
 \begin{displaymath}
   n_\gamma = \frac{2\zeta(3)}{\pi^2}T^3,
 \end{displaymath}
-thus we by using $n_b = \eta n_gamma$ we have
+and if we use $n_b = \eta n_\gamma$ we have
 \begin{displaymath}
   \frac{1-X_e}{X_e^2} = \frac{n_H}{n_e^2}\frac{2\eta\zeta(3)}{\pi^2}T^3,
 \end{displaymath}
-but we also derive that
+but we also know that
 \begin{displaymath}
   \frac{n_H}{n_e^2} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[\frac{E_i}{T}\right],
 \end{displaymath}
@@ -263,13 +267,17 @@ the final solution take the form
 \begin{displaymath}
   X_e(T) = \frac{-1 + \sqrt{1+4f}}{2f},
 \end{displaymath}
-which is much "pretiier".
+which is much "prettier".
 \newline
 \textbf{Problem 2f:} I append a Mathematica Notebook with the plot.
 \newline
-\textbf{Problem 2g:} The temperature of recombination is given by
+\textbf{Problem 2g:} The temperature of recombination can be calculated by
 \begin{displaymath}
-  T_{rec}=0.323887 \text{eV}
+  X_e(T)=0.5,
+\end{displaymath}
+which I solved numerically, with the result given by
+\begin{displaymath}
+  T_{rec}=0.323887 \text{eV}.
 \end{displaymath}
 \newline
 \textbf{Problem 2h:} For $a_{rec}$ we have
@@ -278,7 +286,7 @@ which is much "pretiier".
 \end{displaymath}
 and if we use $T_0 = 2.3\times 10^{-4}$eV we have
 \begin{displaymath}
-  a_{rec} = 0.000710124
+  a_{rec} = 0.000710124.
 \end{displaymath}
 \newline
 \textbf{Problem 2i:} Finally, we need to compute $t_{rec}$, where $t$ is given by
