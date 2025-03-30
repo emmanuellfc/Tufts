@@ -1,0 +1,270 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{charter}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\declaretheoremstyle[headfont=\normalfont]{normalhead}
+\declaretheorem[style=normalhead]{problem}
+\declaretheorem[style=normalhead]{solution}
+
+\title{Cosmology: HW5}
+\author{J. Emmanuel Flores}
+
+\begin{document}
+\maketitle
+\textbf{Problem 1a:}
+The Boltzmann equation reads 
+\begin{displaymath}
+  \frac{1}{a^3}\frac{d}{dt}(n_1 a^3) =-\Gamma_1 \left( n_1 -\left(\frac{n_1 n_2}{n_3 n_4}\right)_{eq} \frac{n_3 n_4}{n_2}\right),
+\end{displaymath}
+and by making $n_1 = n_n$, $n_3 = n_p$, with $n_2, n_4$ to be leptons $n_l$, we have
+\begin{displaymath}
+  \frac{1}{a^3}\frac{d}{dt}(n_n a^3) =-\Gamma_n \left( n_n -\left(\frac{n_n n_l}{n_p n_l}\right)_{eq} \frac{n_p n_l}{n_l}\right),
+\end{displaymath}
+which will lead us to
+\begin{displaymath}
+  \frac{1}{a^3}\frac{d}{dt}(n_n a^3) = -\Gamma_n \left( n_n -\left(\frac{n_n}{n_p}\right)_{eq} n_p\right),
+\end{displaymath}
+just as we wanted.
+\newline
+\textbf{Problem 1b:}
+The equilibrium distribution of number density of species $i$ is given by 
+\begin{displaymath}
+  (n_i)_{eq} = g_{i}\left(\frac{m_i T}{2\pi}\right)^{3/2} \exp{\left[-\frac{m_i-\mu_i}{T}\right]},
+\end{displaymath}
+then by neglecting the chemical potential, we will have 
+\begin{displaymath}
+  (n_n)_{eq} = g_{n}\left(\frac{m_n T}{2\pi}\right)^{3/2} \exp{\left[-\frac{m_n}{T}\right]},
+\end{displaymath}
+and also
+\begin{displaymath}
+  (n_p)_{eq} = g_{p}\left(\frac{m_p T}{2\pi}\right)^{3/2} \exp{\left[-\frac{m_p}{T}\right]},
+\end{displaymath}
+from this we can make the ratio
+\begin{displaymath}
+  \left(\frac{n_i}{n_p}\right)_{eq} = \frac{g_{n}\left(\frac{m_n T}{2\pi}\right)^{3/2} \exp{\left[-\frac{m_n}{T}\right]}}{g_{p}\left(\frac{m_p T}{2\pi}\right)^{3/2} \exp{\left[-\frac{m_p}{T}\right]}}
+\end{displaymath}
+but $g_n = g_p$, thus
+\begin{displaymath}
+  \left(\frac{n_i}{n_p}\right)_{eq} = \left(\frac{m_n}{m_p}\right)^{3/2}\exp{\left[\frac{-m_n + m_p}{T}\right]},
+\end{displaymath}
+and if we define $Q = m_n-m_p$, we have $-Q = -m_n+m_p$, thus
+\begin{displaymath}
+  \left(\frac{n_i}{n_p}\right)_{eq} = \left(\frac{m_n}{m_p}\right)^{3/2}\exp{\left[\frac{-Q}{T}\right]},
+\end{displaymath}
+just as we wanted.
+\newline
+\textbf{Problem 1c:}
+We know that 
+\begin{displaymath}
+  \frac{1}{a^3}\frac{d}{dt}(n_n a^3) = -\Gamma_n \left( n_n - \left(\frac{n_n}{n_p}\right)_{eq} n_p\right),
+\end{displaymath}
+on the other hand, if we define 
+\begin{displaymath}
+  X_n = \frac{n_n}{n_n + n_p},
+\end{displaymath}
+we can write
+\begin{displaymath}
+  \frac{1}{a^3}\frac{d}{dt}(n_n a^3 \frac{n_n + n_p}{n_n + n_p}) = -\Gamma_n \left( n_n - \left(\frac{n_n}{n_p}\right)_{eq} n_p\right),
+\end{displaymath}
+which implies that
+\begin{displaymath}
+  \frac{1}{a^3}\frac{d}{dt}(X_n a^3 (n_n + n_p)) = -\Gamma_n \left( n_n - \left(\frac{n_n}{n_p}\right)_{eq} n_p\right),  
+\end{displaymath}
+and if we take the time derivative we have
+\begin{displaymath}
+  \frac{1}{a^3}\left[a^3 (n_n + n_p)\frac{d}{dt}(X_n) + X_n\frac{d}{dt}(a^3 (n_n + n_p))\right] = -\Gamma_n \left( n_n - \left(\frac{n_n}{n_p}\right)_{eq} n_p\right).  
+\end{displaymath}
+On the other hand, if we assume that the baryon number is conserved, we have the following condition
+\begin{displaymath}
+  \frac{d}{dt}(a^3 (n_n + n_p))=0,
+\end{displaymath}
+which implies that
+\begin{displaymath}
+  \frac{1}{a^3}\left[a^3 (n_n + n_p)\frac{d}{dt}(X_n) \right] = -\Gamma_n \left( n_n - \left(\frac{n_n}{n_p}\right)_{eq} n_p\right),  
+\end{displaymath}
+thus
+\begin{displaymath}
+\frac{d}{dt} X_n = -\Gamma_n \left( \frac{n_n}{(n_n + n_p)} - \left(\frac{n_n}{n_p}\right)_{eq} \frac{n_p}{(n_n + n_p)}\right),  
+\end{displaymath}
+on the other hand we know that 
+\begin{displaymath}
+  \left(\frac{n_n}{n_p}\right)_{eq} \approx \exp(-Q/T),
+\end{displaymath}
+thus, we have
+\begin{displaymath}
+\frac{d}{dt} X_n = -\Gamma_n \left( X_n - \exp(-Q/T) \frac{n_p}{(n_n + n_p)}\right).
+\end{displaymath}
+On the other hand, we have the following identity
+\begin{displaymath}
+  \frac{n_p}{n_n +n_p} = 1 - \frac{n_n}{n_n +n_p}= 1 - X_n,
+\end{displaymath}
+which leads us to 
+\begin{displaymath}
+\frac{d}{dt} X_n = -\Gamma_n \left( X_n - \exp(-Q/T) (1 - X_n)\right),  
+\end{displaymath}
+therefore, we finally have
+\begin{displaymath}
+\frac{d}{dt} X_n = -\Gamma_n \left( X_n - (1 - X_n)\exp(-Q/T)\right),
+\end{displaymath}
+as desired.
+\newline
+\textbf{Problem 1d:}
+For this part we have the following derivative
+\begin{displaymath}
+  \frac{dX_n}{dt}=\frac{dx}{dt}\frac{dX_n}{dx},
+\end{displaymath}
+but $x = x(T)$ and $T=T(a)$, thus by the chain rule we have
+\begin{displaymath}
+ 	\frac{dX_n}{dt}=\frac{dx}{dT}\frac{dT}{da}\frac{da}{dt}\frac{dX_n}{dx},
+\end{displaymath}
+and more explicitly $x=Q/T$, whereas by assuming $T\propto a^{-1}$, we have
+\begin{displaymath}
+ 	\frac{dx}{dT} = -\frac{Q}{T^2}, \frac{dT}{da}= -\frac{1}{a^2}, 
+\end{displaymath}
+ thus we have
+\begin{displaymath}
+	\frac{dX_n}{dt}=\left(-\frac{Q}{T^2}\right)\left(-\frac{1}{a^2}\right)\frac{da}{dt}\frac{dX_n}{dx},  
+\end{displaymath}
+\begin{displaymath}
+\implies\frac{dX_n}{dt}=\left(\frac{Q}{T}\right)\left(\frac{1}{T}\right)\left(\frac{1}{a}\right)\left(\frac{1}{a}\frac{da}{dt}\right)\frac{dX_n}{dx},
+\end{displaymath}
+and again, using the fact that $T\propto a^{-1}$ we have $T/a = 1$, thus
+\begin{displaymath}
+\implies\frac{dX_n}{dt}=xH\frac{dX_n}{dx},  
+\end{displaymath}
+just as we wanted.
+\newline
+\textbf{Problem 1e:}
+For this problem, I append the solution of the ode as a Mathematica notebook.
+\newpage
+\textbf{Problem 2a:}
+ Starting with
+\begin{displaymath}
+  n_i = g_i\left(\frac{m_i T}{2\pi}\right)^{3/2} \exp\left[ -\frac{(m_i -\mu_i)}{T}\right],
+\end{displaymath}
+we have
+\begin{displaymath}
+  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p}\left( \frac{\left(\frac{m_H T}{2\pi}\right)^{3/2} }{\left(\frac{m_e T}{2\pi}\right)^{3/2} \left(\frac{m_p T}{2\pi}\right)^{3/2} }\right)\exp\left[ -\frac{(m_H -\mu_H)}{T} +\frac{(m_e -\mu_e)}{T}+\frac{(m_p -\mu_p)}{T} \right],
+\end{displaymath}
+and from this we have
+\begin{displaymath}
+  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi m_H}{m_e m_p T}\right)^{3/2} \exp\left[ \frac{m_e + m_p - m_H}{T} + \frac{\mu_H - \mu_e - \mu_p}{T}\right],
+\end{displaymath}
+and by using the condition of equilibriuym given, we have 
+\begin{displaymath}
+  \mu_H - \mu_e - \mu_p =0,
+\end{displaymath}
+thus
+\begin{displaymath}
+  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi m_H}{m_e m_p T}\right)^{3/2} \exp\left[ \frac{m_e + m_p - m_H}{T}\right],
+\end{displaymath}
+and by making
+\begin{displaymath}
+  E_i = m_e + m_p - m_H,
+\end{displaymath}
+we finally have
+\begin{displaymath}
+  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi m_H}{m_e m_p T}\right)^{3/2} \exp\left[ \frac{E_i}{T}\right],
+\end{displaymath}
+just as we wanted.
+\newline
+\textbf{Problem 2b:}
+The mass of the Hydrogen comes mostly from the proton, thus to a good approxixmation we have
+\begin{displaymath}
+  \frac{m_H}{m_p}\approx 1,
+\end{displaymath}
+thus this implies that
+\begin{displaymath}
+  \frac{n_H}{n_e n_p} = \frac{g_H}{g_e g_p} \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[ \frac{E_i}{T}\right],
+\end{displaymath}
+on the other hand, the degrees of freedom are $g_p=2$, $g_e=2$, whereas for the hydrogen, the spins of the electron and proton can be either aligned or anti aligned, which will give one singlet state and one triplet state, therefore $g_H = 1+3 =4$, and with this
+\begin{displaymath}
+  \frac{n_H}{n_e n_p} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[ \frac{E_i}{T}\right],
+\end{displaymath}
+moving on, the universe isn't electrically charged, so $n_e=e_p$, thus
+\begin{displaymath}
+  \frac{n_H}{n_e^2} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[\frac{E_i}{T}\right],
+\end{displaymath}
+as desired.
+\newline
+\textbf{Problem 2c:} If we define
+\begin{displaymath}
+  X_e = \frac{n_e}{n_e+n_H}, 
+\end{displaymath}
+then we have
+\begin{displaymath}
+  \frac{1-X_e}{X_e^2} = \frac{1-\frac{n_e}{n_e+n_H}}{\frac{n_e^2}{\left(n_e+n_H\right)^2}} = \frac{\frac{n_e+n_H-n_e}{n_e+n_H}}{\frac{n_e^2}{\left(n_e+n_H\right)^2}},
+\end{displaymath}
+thus, we can write
+\begin{displaymath}
+\frac{1-X_e}{X_e^2} = \frac{n_H}{n_e^2}\left( n_e + n_H\right) \implies   \frac{1-X_e}{X_e^2} = \frac{n_H}{n_e^2}n_b,
+\end{displaymath}
+where $n_b = \left( n_e + n_H\right)$.
+\newline
+\textbf{Problem 2d:} In the previous homework we found the following result for bosons
+\begin{displaymath}
+  n = \frac{\zeta(3)}{\pi^2}gT^3,
+\end{displaymath}
+for photons we have $g=2$, thus
+\begin{displaymath}
+  n_\gamma = \frac{2\zeta(3)}{\pi^2}T^3,
+\end{displaymath}
+thus we by using $n_b = \eta n_gamma$ we have
+\begin{displaymath}
+  \frac{1-X_e}{X_e^2} = \frac{n_H}{n_e^2}\frac{2\eta\zeta(3)}{\pi^2}T^3,
+\end{displaymath}
+but we also derive that
+\begin{displaymath}
+  \frac{n_H}{n_e^2} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[\frac{E_i}{T}\right],
+\end{displaymath}
+thus
+\begin{displaymath}
+  \frac{1-X_e}{X_e^2} = \left(\frac{2\pi }{m_e T}\right)^{3/2} \exp\left[\frac{E_i}{T}\right]\times\frac{2\eta\zeta(3)}{\pi^2}T^3,
+\end{displaymath}
+but $T^{-3/2}T^3 = T^{3/2}$, thus
+\begin{displaymath}
+ \frac{1-X_e}{X_e^2} = \left(\frac{2\pi T}{m_e}\right)^{3/2} \exp\left[\frac{E_i}{T}\right]\times\frac{2\eta\zeta(3)}{\pi^2},
+\end{displaymath}
+and we arrive at the desired result.
+\newline
+\textbf{Problem 2e:} I used Mathematica and I append the notebook. But here I'll do some algebra to find a nicer expression. 
+The solution is given by
+\begin{displaymath}
+X_e(T)  = -\frac{e^{-\frac{E_I}{T}} \left(1-\sqrt{8 \sqrt{2} \pi
+   ^{3/2} \eta  X_0 e^{E_I/T}
+   \left(\frac{T}{m_e}\right){}^{3/2}+1}\right)}{4 \sqrt{2} \pi
+   ^{3/2} \eta  X_0
+   \left(\frac{T}{m_e}\right){}^{3/2}},
+\end{displaymath}
+where I defined 
+\begin{displaymath}
+  X_0 = \frac{2\zeta(3)}{\pi^2},
+\end{displaymath}
+but $8\times2^{1/2}=4\times2^{3/2}$, and $4\times 2^{1/2} = 2\times 2^{3/2}$, and with that we have
+\begin{displaymath}
+  X_e(T)  = -\frac{ \left(1 -\sqrt{4\times2^{3/2} \pi^{3/2} \eta  X_0 \exp[E_I/T] 
+   \left(\frac{T}{m_e}^{}\right)^{3/2}+1}\right)}{2\times 2^{3/2} \pi
+   ^{3/2} \eta  X_0 \left(\frac{T}{m_e}\right){}^{3/2}\exp[E_I/T]},
+\end{displaymath}
+which can be simplified to
+\begin{displaymath}
+  X_e(T) = \frac{-1+\sqrt{1 + 4 X_0\left(\frac{2\pi T}{m_e}\right)^{3/2} \exp\left[\frac{E_i}{T}\right]}}{2X_0\left(\frac{2\pi T}{m_e}\right)^{3/2} \exp\left[\frac{E_i}{T}\right]},
+\end{displaymath}
+and if we define 
+\begin{displaymath}
+  f = X_0\left(\frac{2\pi T}{m_e}\right)^{3/2} \exp\left[\frac{E_i}{T}\right],
+\end{displaymath}
+the final solution take the form
+\begin{displaymath}
+  X_e(T) = \frac{-1 + \sqrt{1+4f}}{2f},
+\end{displaymath}
+which is much "pretiier".
+\newline
+\textbf{Problem 2f:}
+
+\end{document}
