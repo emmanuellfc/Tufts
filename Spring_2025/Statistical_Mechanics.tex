@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{charter}
+\usepackage{graphicx}
+
+\title{Statistical Mechanics}
+\author{J. Emmanuel Flores}
+\date{\today}
+\begin{document}
+\maketitle
+
+1. Consider a gas of particles at temperature $T$ whose average energy in a box of volume $V$ is
+\begin{displaymath}
+  E = bVT^3
+\end{displaymath}
+with $b$ a positive constant.
+\begin{enumerate}
+	\item Find the entropy contained in the gas.
+	\item Consider two termanlly insulated boxes, each comprised of a gas whose particles 
+	\item What quantities are conserved in this mixing process?
+	\item Compute the change in  entropy from initial to final in terms of $T_1, V_1, T_2, V_2$ (and $b$).
+	\item Prove that the change in entropy is never negative. Can the chage be zero?
+\end{enumerate}
+\newpage
+2. Consider a system of (spin-less) non-interacting particles, where each particle can only be  in one of three energy levels. The Hamiltonian $H=\sum_i \epsilon_i n_i$, where the energy levels are $\epsilon_i=0$(ground state) or $\epsilon_i=\epsilon_0$ (first excited state, with $\epsilon_0>0$) or $\epsilon_i=2\epsilon_0$ (second excited state, with $\epsilon_i>0$), and $n_i$ is the occupancy number.
+Let's focus on the case of $N=2$ particles and let the system be held at temperature $T$.
+\begin{enumerate}
+	\item If the particles are treated classically, what is the probability the particles will be in different levels?
+	\item If the particles are fermions, what is the probability the particles will be in different levels?
+	\item If the particles are bosons, what is the probability the particles will be in different levels?
+	\item If we take the limit $\epsilon_0\gg k_B T$, what do each of the above probabilities tend to?
+	\item If we take the limit $\epsilon_0\ll k_B T$, what do each of the above probabilities tend to?
+\end{enumerate}
+\newpage
+3. Consider a system of two identical, distinguishable non-interacting spin-$\frac{3}{2}$ particles. The magnetic moment of each particle is connected to its spin through its gyromagnetic ratio $\gamma$:
+\begin{displaymath}
+  \mu_i = \gamma S_i
+\end{displaymath}
+\begin{enumerate}
+	\item Enumerate the possible microstates and macrostates of the system.
+	\item In the absence of an applied magnetic field, what is the most probable macrostate of the system, and what is the probability that the system will be in that macrostate?
+	\item If the system is placed in a static magnetic field of magnitude $B$, and in thermal contact with a large reservoir at temperature $T$, derive an expression for the average total magnetic moment of the system in terms of $\gamma, T, B$ and any appropiate constants.
+	\item For fixed temperature $T$, find the total magnetic moment as a function of $B$ for small(but nonzero) field $B$, to lowest nonzero order in $B$.
+	\item For fixed temperature $T$, find the total magnetic moment for very large $B$.
+	\item Make a qualitative sketch showing the dependence of total magnetic moment on $B$ from zero to very large $B$. Explain why the general shape of this curve, and particularly, its limiting cases, do or do not make physical sense.
+	\item At roughly what field (in terms of the other parameters of the problem) would you expect the curve to transition from its low-feld to its high-field behaviour?
+\end{enumerate}
+\newpage
+4. A small container holding one mole of liquid nitrogen is placed in a very large tank, of volume $V$, containing a lare quantity of oxygen gas at atmospheric pressure $P_a$ and at room temperature $T_a$. The tank and quantity of oxygen are sufficiently large that any change in the pressure and the temperature of the gas can be neglected. The liquid nitrogen will evaporate, and the resulting nitrogen gas will mix fully with the oxygen. The molar latent heat of vaporization of liquid nitrogen at atmospherica pressure is $L$.
+
+Derive an expression for the chagne in entropy of the complete system (nitrogen + oxygen) in this entire process, from the initial state in which the nitrogen is liquid to the final state in which the gases are gully mixed and at a uniform temperature, in terms of the parameters given and any necessary constants. Clearly explain and justify your reasoning.
+\end{document}
