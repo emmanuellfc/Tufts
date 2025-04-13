@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Supersymmetry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Advanced Mathematical Methods
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{beamer}
+\usepackage{amsmath}
+%\usepackage{charter}
+\usetheme[progressbar=frametitle]{metropolis}
+%\usefonttheme{professionalfonts} % required for mathspec
+%\usepackage{mathspec}
+
+\title{Supersymmetry}
+\author{Emmanuel Flores}
+\institute{Advanced Mathematical Methods, \\Tufts University}
+
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Contents}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Motivation]{Motivation}
+\begin{frame}{Combining Bosonic and Fermionics Systems}
+By taking tensor products ($\otimes$) of bosonic and fermionic systems, the operators (bosonic of fermionic) will  continue to act on the combined systems.
+
+And the idea is to consider some very special operators:
+\begin{itemize}
+	\item They appear to mix bosonic and fermionic systems.
+	\item They commute with the hamiltonian $H$.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[The supersymmetric oscillator]{The supersymmetric oscillator}
+\begin{frame}{Bosonic Harmonic Oscillator}
+\begin{definition}
+The Hamiltonian of a bosonic harmonic oscillator in $d$-dimensions, with state space $\mathcal{F}_d$ is given by:
+\begin{displaymath}
+H = \frac{1}{2}\hbar\omega\sum_{j=1}^{d} (a^{\dagger}_{B_j}a_{B_j} +a_{B_j}a^{\dagger}_{B_j}), 
+\end{displaymath}
+or 
+\begin{displaymath}
+H  = \sum_{j=1}^{d}(N_{B_j}+\frac{1}{2})\hbar\omega
+\end{displaymath}
+where $N_{B_j}$ has eigenvalues $n_{B_j}=0,1,2,\dots$
+\end{definition}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Fermionic Harmonic Oscillator}
+\begin{definition}
+The Hamiltonian of a fermionic harmonic oscillator in $d$-dimensions, with state space $\mathcal{F}^{\dagger}_d$ is given by:
+\begin{displaymath}
+H = \frac{1}{2}\hbar\omega \sum_{j=1}^{d} (a^{\dagger}_{F_j}a_{F_j} - a_{B_j}a^{\dagger}_{B_j}), 
+\end{displaymath}
+or 
+\begin{displaymath}
+H  = \sum_{j=1}^{d}(N_{F_j}-\frac{1}{2})\hbar\omega
+\end{displaymath}
+where $N_{B_j}$ has eigenvalues $n_{B_j}=0,1$
+\end{definition}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Definition of the Full System}
+By taking the state spaces $\mathcal{F}_d$ and $\mathcal{F}^{\dagger}_d$ we can make the new state
+\begin{displaymath}
+  \mathcal{H} = \mathcal{F}_d\otimes\mathcal{F}^{\dagger}_d
+\end{displaymath}
+with a corresponding Hamiltonian given by
+\begin{displaymath}
+  H = \sum_{j=1}^{d}(N_{B_j}+N_{F_j})\hbar\omega,
+\end{displaymath}
+and the lowest energy state has energy $|0\rangle$ has energy $0$.
+\end{frame}
+
+\section[Supersymmetric quantum mechanics with a superpotential]{Supersymmetric quantum mechanics with a superpotential}
+\begin{frame}
+	
+\end{frame}
+
+\section[Supersymmetric quantum mechanics and differential forms]{Supersymmetric quantum mechanics and differential forms}
+\end{document}
