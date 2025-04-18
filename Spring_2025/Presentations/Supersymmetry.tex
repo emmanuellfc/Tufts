@@ -74,11 +74,166 @@ with a corresponding Hamiltonian given by
 \end{displaymath}
 and the lowest energy state has energy $|0\rangle$ has energy $0$.
 \end{frame}
-
-\section[Supersymmetric quantum mechanics with a superpotential]{Supersymmetric quantum mechanics with a superpotential}
-\begin{frame}
-	
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Going back to 1D}
+If we just look at $d=1$, we have
+\begin{displaymath}
+  H = \left( N_{B} + N_{F}\right)\hbar\omega,
+\end{displaymath}
+where the eigenvalue problem reads
+\begin{displaymath}
+  H| n_B, n_F \rangle = \left( n_B + n_F\right)\hbar\omega.
+\end{displaymath}
+Some facts about the system:
+\begin{itemize}
+	\item The ground state is uniquel $|0,0\rangle$
+	\item All the nonzero energy states come in the following pairs $|n,0\rangle$, $|n-1,1\rangle$, both with energy $n\hbar\omega$
+\end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Looking for Symmetries}
+Degeneracy usually(not always) implies some kind of symmetries, a.k.a the existence of some operator that will commute with the Hamiltonian.
+By looking at operators that $|n,0\rangle \longleftrightarrow |n-1,1\rangle$ we define
+\begin{displaymath}
+  Q_{+}=a_B a_{f}^{\dagger}, Q_{-}=a_B^{\dagger} a_{f}
+\end{displaymath}
+which by themselves are not self-adjoint, but are each other adjoints.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Looking for symmetries(2)}
+We can prove that 
+\begin{displaymath}
+  Q_{+}^2 = Q_{-}^2=0,
+\end{displaymath}
+together with
+\begin{displaymath}
+  \left(Q_{+}+Q_{-}\right)^2 = \left[ Q_{+},Q_{-}\right]_{+} = H,
+\end{displaymath}
+therefore, we could easily work with
+\begin{displaymath}
+  Q_{1} = Q_{+}+Q_{-}, Q_{2}=\frac{1}{i}\left(Q_{+}-Q_{-}\right)
+\end{displaymath}
+and these new operators will satisty
+\begin{displaymath}
+  \left[Q_1,Q_2\right]_{+}=0,Q_{1}^2=Q_{2}^2=H
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Looking for symmetries(3)}
+Using the previous result, $H$ can be expressed as the square of some operator, $Q_{+} +Q_{-}$, which implies that the eigenvalues are nonnegative. And even more, the eigenstates will be degenerate and will come in pairs
+\begin{displaymath}
+  |\psi\rangle , Q_{+} +Q_{-}|\psi\rangle.
+\end{displaymath}
+Therefore, to find the state of zero energy, we can look for the sollowing solutions
+\begin{displaymath}
+  Q_1|0\rangle=0, Q_2|0\rangle=0,
+\end{displaymath}
+and this result is similar to what happens with the usual BHO, in which the lowest energy state in various representations can be found by looking at solutions to $a|0\rangle=0$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Physical Realization}
+It turns out that there exista a physical system with this exact behavior: A charged particle confined to a plane, coupled to a magnetic field perpendicular to the plane.
+\begin{itemize}
+	\item In this system, the equally spaced energy lavels are called \textbf{Landau levels}.
+	\item If the particle has spin, there's an external term in the hamiltonian, $-\mu\mathbf{S}\cdot\mathbf{B}$.
+\end{itemize}
+And in the case of a gyromagnetic ratio $g=2$, the match up between the SSHO and this system is exact, they present the same pattern of energy levels.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Supersymmetric quantum mechanics with a superpotential]{Supersymmetric quantum mechanics with a superpotential}
+\begin{frame}{Looking for generalizations}
+Let's lift the SSHO to a wider class of potentials, while preserving the suersymmetry. In analogy with the creating and anhiltion bosonic operators we can introduce a superpotential $W(q)$ and define
+\begin{displaymath}
+a_{B} = \frac{1}{\sqrt{2}}\left( W^\prime(Q) + iP\right), a_{B}^{\dagger} = \frac{1}{\sqrt{2}}\left( W^\prime(Q) - iP\right),
+\end{displaymath}
+where $W^\prime(Q)$ is the multiplication operator $W^{\prime}(q)$ in the Schrödinger position space representation on functions of q.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Looking for generalizations(2)}
+By taking $W(q) = \frac{q^2}{2}$ together with
+\begin{displaymath}
+Q_{+} = a_{B}a_{F}^{\dagger}, Q_{-} = a_{B}^{\dagger}a_{F}
+\end{displaymath}
+we can prove that
+\begin{displaymath}
+Q_{+}^2 = Q_{-}^2 = 0.
+\end{displaymath}
+And even more we find
+\begin{displaymath}
+H = (Q_{+} + Q_{-})^2,
+\end{displaymath}
+\begin{displaymath}
+\implies H =\frac{1}{2}\left( W^\prime(Q)^2 + P^2\right) + \frac{1}{2}\left( i[P, W^\prime(Q)]\right)\sigma_3
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Looking for generalizations(3)}
+But $iP$ is the operator corresponding to infinitesimal translations in Q, thus
+\begin{displaymath}
+i[P,W^\prime(Q)]=W^{\prime\prime},
+\end{displaymath}
+which implies thath
+\begin{displaymath}
+  H = \frac{1}{2}\left( W^{\prime}(Q)^2 + P^2\right) + \frac{1}{2}W^{\prime\prime}(Q)\sigma_3,
+\end{displaymath}
+therefore, by taking different choices of $W$ we have a large class of quantum systems that can be used as toy models to investigate properties of qantum ground states.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Looking for generalizations(4)}
+All the previous class of models have the same state space
+\begin{displaymath}
+\mathcal{H} = \mathcal{H}_B\otimes\mathcal{F}_d^\dagger = L^2(\mathbf{R})\otimes \mathbf{C}^2,
+\end{displaymath}
+and all the energies eigen alues will be nonnegative, and the eigenvectors with positive energy will occur in pairs
+\begin{displaymath}
+|\psi\rangle, \left(Q_{+} + Q_{-}\right)|\psi\rangle.
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Breaking the symmetry(1)}
+If the lowest energy is not unique, and there exist a symmetry group that acts non-trivually on the space of lowest energy states, then the symmetry is said to be \textbf{spontaneously broken}.
 
+In the context of supersymmetric quantum mechanics(by thinking in terms of Lie superalgebras) one calls $Q_1$ the generator of the action of a supersymmetry, with $H$ invariant under the supersymmetry in the sense that $[Q_1, H]=0$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Breaking the symmetry(2)}
+And now we can ask the question: how the supersymmetry acts on the lowest energy state? The answer depends on wheter or not we can find solutions to 
+\begin{displaymath}
+  \left(Q_{+} + Q_{-}\right)|0\rangle=Q_1|0\rangle = 0.
+\end{displaymath}
+And if such solution exists, we say that the ground state is \textbf{invariant under the supersymmetry}. 
+On the other hand, if this does not happen, then $Q_1$ will take a lowest energy state to another energy state, and in this case we say that the system has \textbf{spontaneously broken supersymmetry}.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Breaking the symmetry(3)}
+Appaarently the question of whether a given supersymmetric theory has its supersymmetry spontaneously broken or not is of great interest in more sophisticated theories.
+There's this hope of making contact with the real worl via theories with such mechanism, i.e. where the supersymmetry is spontaneoulsy broken.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Supersymmetric quantum mechanics and differential forms]{Supersymmetric quantum mechanics and differential forms}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Going back to d-Dimensions}
+By considering supersymmetric quantum mechanics in the case of $d$ degrees of freedom in the Schrodinger representation, the state space is described by
+\begin{displaymath}
+  \mathcal{H} = L^{2}(\mathbf{R}^d)\otimes\Lambda^{*}(\mathbf{C}^d),
+\end{displaymath}
+which is the tensor product of complex valued functions on $\mathbf{R}^d$ and anticummuting functions on $\mathbf{C}^d$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Differential forms}
+It turns out that the space $\mathcal{H}$ is the space of complex-valued differential forms on $\mathbf{R}^d$, often denotes as $\Omega^*(\mathbf{R}^d)$.
+
+In this space, we have an operator $d$ whose square is zero, which is called de Rham differential, and can be used to write the Laplacian operator on differential forms
+\begin{displaymath}
+  \square = (d+\delta)^2,
+\end{displaymath}
+where $\delta$ is the adjoint of $d$.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Differential Forms(2)}
+In this context, the supersymmetric quantum systems we've been studied corresponds to
+\begin{displaymath}
+Q_{+} = e^{-W(q)}de^{w(q)}, Q_{-}=e^{W(q)}\delta e^{-W(q)}
+\end{displaymath}
+\end{frame}
 \end{document}

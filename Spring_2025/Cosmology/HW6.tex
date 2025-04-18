@@ -1,19 +1,174 @@
 \documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage{charter}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\declaretheoremstyle[headfont=\normalfont]{normalhead}
+\declaretheorem[style=normalhead]{problem}
+\declaretheorem[style=normalhead]{solution}
+
 \title{Structure Formation, Statistics, and Scalar Field}
 \author{J. Emmanuel Flores}
 
 \begin{document}
 \maketitle
-1. By making 
+\begin{problem}
+Dark Matter and Baryon Density Growth.
+\newline
+a. Let's start by defining 
 \begin{displaymath}
   \epsilon = \delta_b(t) - \delta_d(t),
 \end{displaymath}
-then we have
+and we're given
 \begin{displaymath}
   \ddot\delta_d(t) + 2H\dot\delta_d(t) - \frac{3}{2}H^2(\Omega_d\delta_d +\Omega_b\delta_b)=0,
 \end{displaymath}
 \begin{displaymath}
   \ddot\delta_b(t) + 2H\dot\delta_b(t) - \frac{3}{2}H^2(\Omega_d\delta_d +\Omega_b\delta_b)=0,
 \end{displaymath}
-by taking the difference 
+by taking the difference of the two previous equations, we have the following
+\begin{displaymath}
+  \ddot\delta_b(t)-\ddot\delta_d(t) + 2H\dot\delta_b(t) -2H\dot\delta_d(t)=0\implies \ddot\delta_b(t)-\ddot\delta_d(t) + 2H(\dot\delta_b(t) -\dot\delta_d(t))=0
+\end{displaymath}
+but we know that $H=12/3t$, thus
+\begin{displaymath}
+\ddot{\epsilon} + \frac{4}{3t}\dot{\epsilon}=0,
+\end{displaymath}
+\newline
+b. The solution of this equation is given by
+\newline
+c. I append the Mathematica notebook with the solution and the corresponding plots.
+\newline
+d. From the numerical plot we can see that a late times $\delta_{b}$ becomes almost equal to $\delta_{d}$
+\end{problem}
+\newpage
+
+\begin{problem}
+Matter Growth with Dark Energy
+\newline
+\end{problem}
+\newpage
+
+\begin{problem}
+Power Spectrum
+\end{problem}
+\newpage
+
+\begin{problem}
+Scalar Field (Inflaton) in Expanding Universe
+\newline
+a. Let's begin with the following action
+\begin{displaymath}
+  S = \int d^4x \sqrt{-g}\left[\frac{1}{2} g^{\mu\nu}\partial_\mu\phi\partial_\nu\phi -V(\phi)\right],
+\end{displaymath}
+where 
+\begin{displaymath}
+  g_{\mu\nu}=\text{diag}(1,-a^2,-a^2,-a^2),
+\end{displaymath}
+and with this metric, we have
+\begin{displaymath}
+\sqrt{-g}=a^3,
+\end{displaymath}
+whereas 
+\begin{displaymath}
+  g^{\mu\nu} = \text{diag}(1,-1/a^2,-1/a^2,-1/a^2),
+\end{displaymath}
+therefore, the action takes the form
+\begin{displaymath}
+S = \int dt d^3x a^3\left[\frac{1}{2}(\dot\phi)^2 - \frac{1}{2a^2}(\nabla\phi)^2-V(\phi) \right]
+\end{displaymath}
+which can be simplified to
+\begin{displaymath}
+S = \int dt d^3x \left[\frac{1}{2}a^3(\dot\phi)^2 - \frac{1}{2}a(\nabla\phi)^2- a^3V(\phi) \right].
+\end{displaymath}
+And if we perform the variation, we have
+\begin{displaymath}
+  \delta S = \int dt d^3x \left[a^3\dot\phi\delta\dot\phi - a\nabla\phi\cdot\nabla\delta\phi - a^3 \frac{V(\phi)}{d\phi}\delta\phi \right],
+\end{displaymath}
+for the first two terms, we can perform integration by parts as follows
+\begin{displaymath}
+\int dt(a^3 \dot\phi)\delta\dot\phi = -\int\frac{d}{dt}\left(a^3\dot\phi\right)\delta\phi + \text{boundary terms},
+\end{displaymath}
+and 
+\begin{displaymath}
+\int d^3x a\nabla\phi\cdot\nabla\delta\phi = -\int d^3x (a\nabla^2\phi)\delta\phi + \text{boundary terms},
+\end{displaymath}
+thus, if we neglect the boundary terms, the variation becomes
+\begin{displaymath}
+  \delta S = \int dt d^3x\left[-\frac{d}{dt}\left(a^3\dot\phi\right)\delta\phi + (a\nabla^2\phi)\delta\phi - a^3 \frac{V(\phi)}{d\phi}\delta\phi\right],
+\end{displaymath}
+and impossing the condition $\delta S=0$ we have
+\begin{displaymath}
+  -\frac{d}{dt}\left(a^3\dot\phi\right)\delta\phi + (a\nabla^2\phi)\delta\phi - a^3 \frac{V(\phi)}{d\phi}\delta\phi = 0,
+\end{displaymath}
+which can be simplified to 
+\begin{displaymath}
+  -3a^2\dot a\dot\phi  - a^3\ddot\phi + a\nabla^2\phi - a^3 \frac{V(\phi)}{d\phi}=0,
+\end{displaymath}
+since $a\neq 0$ we have
+\begin{displaymath}
+ -3\frac{\dot a}{a}\dot\phi  - \ddot\phi + \frac{\nabla^2\phi}{a^2} -\frac{V(\phi)}{d\phi}=0,
+\end{displaymath}
+and by using the fact $H = \dot a /a$ we have
+\begin{displaymath}
+-3H\dot\phi  - \ddot\phi + \frac{\nabla^2\phi}{a^2} -\frac{V(\phi)}{d\phi}=0, 
+\end{displaymath}
+which can also be writen as
+\begin{displaymath}
+\ddot\phi + 3H\dot\phi- \frac{\nabla^2\phi}{a^2} + \frac{V(\phi)}{d\phi}=0,
+\end{displaymath}
+just as we wanted.
+\newline
+b. By assuming $\phi$ is homogeneous in space and that $V=\frac{1}{2}m^2\phi^2$ we have
+\begin{displaymath}
+  \frac{dV}{d\phi} = m^2\phi, \nabla^2\phi = 0,
+\end{displaymath}
+thus the previous equation becomes:
+\begin{displaymath}
+\ddot\phi + 3H\dot\phi + m^2\phi=0,  
+\end{displaymath}
+just as we wanted.
+\newline
+c. Finally, by assuming $H$ a constant we seek solutions of the form 
+\begin{displaymath}
+  \phi = \phi_0\exp(rt),
+\end{displaymath}
+we have the following equation
+\begin{displaymath}
+\phi_0\exp(rt)\left(r^2 +3Hr+m^2\right)=0
+\end{displaymath}
+and solving the characteristic equation lead us to the following expression
+\begin{displaymath}
+  r = \frac{-3H\pm \sqrt{1-\frac{2m^2}{9H^2}}}{2},
+\end{displaymath}
+which can be simplified to 
+\begin{displaymath}
+r = \frac{3H}{2}\left( 1 \pm \sqrt{1-\left(\frac{2m}{3H}\right )^2}\right)
+\end{displaymath}
+or we can also make
+\begin{displaymath}
+  r = \frac{m}{\alpha}(1 \pm \sqrt{1-\alpha^2}),
+\end{displaymath}
+where $\alpha = \frac{2m}{3H}$. Therefore, the general solution takes the form
+\begin{displaymath}
+  \phi(t) = \phi_{+}\exp\left[\frac{m}{\alpha}(1 + \sqrt{1-\alpha^2})t\right] + \phi_{-}\exp\left[\frac{m}{\alpha}(1 - \sqrt{1-\alpha^2})t\right].
+\end{displaymath}
+Now, the solution will oscillate when the following condition hold
+\begin{displaymath}
+  1-\left(\frac{2m}{3H}\right)^2<0 \iff 2m>3H.
+\end{displaymath}
+On the other hand, the solution will not oscillate when
+\begin{displaymath}
+  1-\left(\frac{2m}{3H}\right)^2 \geq 0 \iff 3H\geq 2m.
+\end{displaymath}
+And finally, if $m\ll H$, this implies that $\frac{m}{H}\ll 1$, thus the solution will take the form
+\begin{displaymath}
+  r\approx 3H\implies \phi(t) \propto e^{3Ht}
+\end{displaymath}
+therefore, $\phi$ will evolve quickly.
+\end{problem}
 \end{document}
