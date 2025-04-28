@@ -17,7 +17,7 @@
 \renewcommand{\thefootnote}{}%
 \title{Numerical Techniques in Cosmology}
 \author{Emmanuel Flores}
-\institute{Cosmololgy Final Presentation, \\Tufts University}
+\institute{Cosmology Final Presentation, \\Tufts University}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle	
@@ -41,8 +41,8 @@ The formal way to proceed: \pause
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Standard Techniques in Cosmology}
-\begin{frame}{We can separate cosmo observables into: deterministic and stochastic\footnote {\tiny{\gray{arXiv:1908.00116v1(Selected Topics in Numerical Methods for Cosmology)}}}}
+\section{Some Numerical Techniques in Cosmology}
+\begin{frame}{We can separate observables into: deterministic and stochastic\footnote {\tiny{\gray{arXiv:1908.00116v1(Selected Topics in Numerical Methods for Cosmology)}}}}
 In general we can separate
 \begin{displaymath}
   g_{\mu\nu} = g_{\mu\nu}^{0} \pause + \alert{h_{\mu\nu}}
@@ -56,8 +56,11 @@ In general we can separate
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{We can also separate numerical cosmology into two groups \footnote{\tiny{\gray{arXiv:1908.00116v1 (Selected Topics in Numerical Methods for Cosmology)}}}}
 \begin{enumerate}
-	\item \alert{Deterministic:} Background observables ($H_0$ for example) $\rightarrow$ ODE theory
-	\item \alert{Stochastic:} Inhomoenoeus part $\rightarrow$ linear perturbation theory and beyond
+	\item \alert{Deterministic:} background observables $\rightarrow$ ODE theory
+	\begin{itemize}
+		\item $H_0$ determination for example\pause
+	\end{itemize}
+	\item \alert{Stochastic:} inhomogeneous part $\rightarrow$ linear perturbation theory and beyond
 	\begin{itemize}
 		\item CMB radiation
 		\item Large Scale Structure Observables: galaxy spatial correlations, galaxy cluster count, gravitational lensing, etc.
@@ -78,13 +81,13 @@ which lead us to
 where $D_i$ is the covariant derivative, $(\psi,\phi,E, B)$ are scalar field and $\gamma$ is the spatial projection of the FLRW metric. \pause\alert{And from here, the idea is to obtain Einstein's equations and solve them...}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background dynamics and Machine Learning}
+\section{Background Dynamics and Machine Learning}
 \begin{frame}{For some function spaces, a neural network is an universal approximator}
 One of very interesting results from ML is the following:\pause
 \begin{block}{\alert{Universal Approximation Theorem}}
 Given a family of neural networks $\forall f\in \mathcal{F}$ where $\mathcal{F}$ is some function space, there exist a family of functions \{$\phi_n$\}, such that $\phi_n\rightarrow f$. We can also say that \{$\phi_n$\} is dense in $\mathcal{F}$.\pause
 \end{block}
-\alert{Thus it makes sense to try to use ML with ODE's: Physics Informed Neural Networks}
+\alert{Thus it makes sense to try to use ML with ODE's: Physics Informed Neural Networks (PINN's)}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Cosmology-Informed Neural Networks\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
@@ -105,7 +108,7 @@ and assuming the universe is a perfect fluid, we have
   \frac{dx}{dz} = \frac{3x}{1+z}, \ x(z)|_{z=0} = \frac{\kappa\rho_{m,0}}{3H_0^2}=\Omega_{m,0}
 \end{displaymath}
 \pause
-\alert{Parametric Dark Matter:} incorporation of new component of $T^{\mu}_{\nu}$, whose equation of state is that of a fluid and a function of redshift(\alert{DM})\pause
+\alert{Parametric Dark Matter:} incorporation of new component of $T^{\mu}_{\nu}$, whose equation of state is that of a fluid and a function of redshift (\alert{DM})\pause
 	\begin{displaymath}
   	\frac{dx}{dz} = \frac{3x}{1+z}\left( 1+\omega_0 + \frac{\omega_1 z}{1+z}\right), \ \ x(z)|_{z=0} = \frac{\kappa\rho_{DE,0}}{3H_0^2} = 1-\Omega_{m,0}
 	\end{displaymath}
@@ -114,7 +117,7 @@ and assuming the universe is a perfect fluid, we have
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Models: \alert{$\Lambda$CDM}, \alert{parametric dark energy}, \alert{quintessence}  and \alert{$f(R)$ gravity}\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
 
-\alert{Quintessence:} alternative proposal forthe expansion of the universe via a scalar field $\phi$ minimally coupled to gravity via $V(\phi)$\pause
+\alert{Quintessence:} alternative proposal for the expansion of the universe via a scalar field $\phi$ minimally coupled to gravity via $V(\phi)$\pause
 \begin{displaymath}
   \frac{dx}{dN} = -3x+\frac{\sqrt{6}}{2}\lambda y^2 + \frac{3}{2}x\left( 1+x^2-y^2\right),
 \end{displaymath}
