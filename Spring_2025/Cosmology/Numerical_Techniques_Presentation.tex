@@ -6,11 +6,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[aspectratio=169, 12pt]{beamer}
 \usepackage{amsmath}
+\usepackage{xcolor}
 \usetheme[subsectionpage = progressbar, 
 		  progressbar=frametitle, 
 		  block=fill,
 		  numbering=fraction, 
-		  background=light]{metropolis}
+		  background=dark]{metropolis}
+\usepackage{charter}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\renewcommand{\thefootnote}{}%
 \title{Numerical Techniques in Cosmology}
 \author{Emmanuel Flores}
 \institute{Cosmololgy Final Presentation, \\Tufts University}
@@ -23,18 +27,159 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Motivation}
-\begin{frame}{Motivation 1}
-%\begin{block}{\alert{Remark}}
-%Sample text
-%\end{block}
-	
+\begin{frame}{The more tricks you have up your sleeve, the easier it is to handle stuff.}
+\pause
+Why should we care about numerical techniques? 
+\pause
+\begin{itemize}
+	\item Sometimes it's not possible to find analytical solutions, but \alert{an approximate solution is better than no solution at all}\pause
+	\item Highly complex systems often requiere some numerical treatment(\alert{nonlinearities, lots DOF, etc.})\pause
+\end{itemize}
+The formal way to proceed: \pause
+\begin{itemize}
+	\item Is to find criteria under which the \alert{solution exists} (well posed problem), and prove that under some discretization (on desired function spaces) the approximate solution is \alert{bounded from below and it converges}
+\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Standard Techniques}
+\section{Standard Techniques in Cosmology}
+\begin{frame}{We can separate cosmo observables into: deterministic and stochastic\footnote {\tiny{\gray{arXiv:1908.00116v1(Selected Topics in Numerical Methods for Cosmology)}}}}
+In general we can separate
+\begin{displaymath}
+  g_{\mu\nu} = g_{\mu\nu}^{0} \pause + \alert{h_{\mu\nu}}
+\end{displaymath}
+\begin{itemize}
+	\item General Relativity $\rightarrow$ homogeneous and isotropic background \pause 
+	\item \alert{Perturbation theory} $\rightarrow$ inhomogeneous description \pause
+\end{itemize}
+\textbf{Initial conditions in the universe are given in terms of initial perturbations}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{ML: Approach}
-\begin{frame}{Artificial Neural Networks}
-	
+\begin{frame}{We can also separate numerical cosmology into two groups \footnote{\tiny{\gray{arXiv:1908.00116v1 (Selected Topics in Numerical Methods for Cosmology)}}}}
+\begin{enumerate}
+	\item \alert{Deterministic:} Background observables ($H_0$ for example) $\rightarrow$ ODE theory
+	\item \alert{Stochastic:} Inhomoenoeus part $\rightarrow$ linear perturbation theory and beyond
+	\begin{itemize}
+		\item CMB radiation
+		\item Large Scale Structure Observables: galaxy spatial correlations, galaxy cluster count, gravitational lensing, etc.
+		\item We want to describe the evolution of the universe from initial primordial fluctuations to the structure formation $\rightarrow$ observables we can measure
+	\end{itemize}
+\end{enumerate}	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{We take the FLRW metric with small perturbations and do GR \footnote{\tiny{\gray{arXiv:1908.00116v1 (Selected Topics in Numerical Methods for Cosmology)}}}}
+Start with FLRW metricand assume that all deviations are described by small perturbations. Then\pause
+\begin{displaymath}
+  g_{\mu\nu} = g_{\mu\nu}^{0} + h_{\mu\nu},\pause
+\end{displaymath}
+which lead us to
+\begin{displaymath}
+  h_{00} = 2\phi, h_{0i} = -a D_i B,  h_{ij} = 2a^2(\psi\gamma_{ij} -D_iD_jE)
+\end{displaymath}
+where $D_i$ is the covariant derivative, $(\psi,\phi,E, B)$ are scalar field and $\gamma$ is the spatial projection of the FLRW metric. \pause\alert{And from here, the idea is to obtain Einstein's equations and solve them...}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background dynamics and Machine Learning}
+\begin{frame}{For some function spaces, a neural network is an universal approximator}
+One of very interesting results from ML is the following:\pause
+\begin{block}{\alert{Universal Approximation Theorem}}
+Given a family of neural networks $\forall f\in \mathcal{F}$ where $\mathcal{F}$ is some function space, there exist a family of functions \{$\phi_n$\}, such that $\phi_n\rightarrow f$. We can also say that \{$\phi_n$\} is dense in $\mathcal{F}$.\pause
+\end{block}
+\alert{Thus it makes sense to try to use ML with ODE's: Physics Informed Neural Networks}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Cosmology-Informed Neural Networks\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+Starting with the FLRW metric
+\begin{displaymath}
+ds^2  = -dt^2 +a(t)^2\left[ \frac{dr^2}{1-kr^2} + r^2(d\theta^2+ +sin^2\theta d\phi^2)\right],
+\end{displaymath}
+and assuming the universe is a perfect fluid, we have
+\begin{displaymath}
+\dot{\rho} + 3H(\rho + p) = 0
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Models: \alert{$\Lambda$CDM}, \alert{parametric dark energy}, \alert{quintessence}  and \alert{$f(R)$ gravity}\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+
+\alert{$\Lambda$CMD:} the background cosmological evolution considering an $T^{\mu}_{\nu}$ with only nonrelativistic matter\pause
+\begin{displaymath}
+  \frac{dx}{dz} = \frac{3x}{1+z}, \ x(z)|_{z=0} = \frac{\kappa\rho_{m,0}}{3H_0^2}=\Omega_{m,0}
+\end{displaymath}
+\pause
+\alert{Parametric Dark Matter:} incorporation of new component of $T^{\mu}_{\nu}$, whose equation of state is that of a fluid and a function of redshift(\alert{DM})\pause
+	\begin{displaymath}
+  	\frac{dx}{dz} = \frac{3x}{1+z}\left( 1+\omega_0 + \frac{\omega_1 z}{1+z}\right), \ \ x(z)|_{z=0} = \frac{\kappa\rho_{DE,0}}{3H_0^2} = 1-\Omega_{m,0}
+	\end{displaymath}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Models: \alert{$\Lambda$CDM}, \alert{parametric dark energy}, \alert{quintessence}  and \alert{$f(R)$ gravity}\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+
+\alert{Quintessence:} alternative proposal forthe expansion of the universe via a scalar field $\phi$ minimally coupled to gravity via $V(\phi)$\pause
+\begin{displaymath}
+  \frac{dx}{dN} = -3x+\frac{\sqrt{6}}{2}\lambda y^2 + \frac{3}{2}x\left( 1+x^2-y^2\right),
+\end{displaymath}
+\begin{displaymath}
+  \frac{dy}{dN} = -\frac{
+  \sqrt{6}}{2}xy\lambda + \frac{3}{2}y\left(1+x^2-y^2\right)
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Models: \alert{$\Lambda$CDM}, \alert{parametric dark energy}, \alert{quintessence}  and \alert{$f(R)$ gravity}\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+\alert{$f(R)$ gravity:} GR modifications\pause
+\begin{displaymath}
+  \frac{dx}{dz} = \frac{1}{1+z}\left( -\Omega + 2v + x + 4y + xv + x^2\right),
+\end{displaymath}
+\begin{displaymath}
+  \frac{dy}{dz} = -\frac{1}{1+z}\left( vx\Gamma - xy + 4y - 2vy\right),
+\end{displaymath}
+\begin{displaymath}
+  \frac{dv}{dz} = -\frac{v}{1+z}\left( x\Gamma + 4 -2v\right),\ \ \frac{d\Omega}{dz} = \frac{\Omega}{1+z}\left(-1 + 2v + x\right),
+\end{displaymath}
+\begin{displaymath}
+  \frac{dr}{dz} = -\frac{r\Gamma x}{1+z}
+\end{displaymath}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Core Methodology and Trainig Details\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+\begin{itemize}
+	\item Unsupervised learning: \alert{the training process does not rely on pre-computed analytical or numerical solutions of the differential equations}\pause
+	\item Optimization problem: \alert{the network's internal parameters (weights and biases) are adjusted during training to minimize a loss function}\pause
+	\item 1 NN is assigned per dependent variable in the system, and \alert{each network have two hidden layers of 32 units each}, with $tanh$ as activation function\pause
+	\item Use of \alert{ADAM optimizer} for the gradient descent\pause
+	\item \alert{Minimize loss on batches of points until convergence}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Validation Methodology\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+Having trained their models, they validate with
+\begin{itemize}
+	\item Cosmic Chronometers (CC)\pause
+	\item Type Ia Supernovae (SNIa)\pause
+	\item Baryon Acoustic Oscillations (BAO)\pause
+\end{itemize}
+Statistical Analysis \alert{(MCMC)}
+\begin{itemize}
+	\item Trained models give $H(z)$ as output\pause
+	\item Standard likelihood constructed on the dataset\pause
+	\item MCMC to explore the parameter space of each cosmological model
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Main Punch Lines\footnote{\tiny{\gray{Phys. Rev. D 107, 063523 (Cosmology-informed neural networks to solve the background dynamics of the Universe)}}}}
+Key takeways\pause
+\begin{enumerate}
+	\item \alert{They can solve the equations}\pause
+	\item Successful implementation of \alert{bundle solution}: NN can output solutions across a continuous landscape of parameters.\pause
+	\item Parameter constraints were found to be consistent with those obtained in previous studies that used numerical solvers\pause
+	\item In some cases can be \alert{more efficient than traditional numerical solvers} after the initial training phase, especially with the $f(R)$ model
+\end{enumerate}
+\end{frame}
+% --- Thank You Slide ---
+\begin{frame}
+  \centering % Center the content horizontally
+  \vspace*{\fill} % Push content vertically towards the center (optional)
+  \Huge \alert{Thanks!}
+  \vspace*{\fill} % Push content vertically towards the center (optional)
 \end{frame}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
