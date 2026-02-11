@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Format and Stuff
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage[sfdefault]{merriweather}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting Documment
+\title{GR-HW-01}
+\author{J Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{problem}[Two-Body Problem]
+
+\end{problem}
+i) Explain why the equations are (i) rotationally invariant, (ii) spatial translationally invariant, (iii) time trsnalationally invariant, (iv) Galilean invariant.
+
+We can write the equations as follows
+\begin{equation}
+  \mathbf{F_1} = -\frac{G m_1m_2}{|\mathbf{r}_{12}|^2} \hat{\mathbf{r}}_{12},
+\end{equation}
+where $\mathbf{r}_{12} = \mathbf{r}_1-\mathbf{r}_2$.
+\begin{itemize}
+\item The equations are rototionally invariant since one of the defining properties of the rotation matricies is that they are length invariant.
+\item If we shift the spatial variables by the same parameter, let's say $\mathbf{x}_0$, since we're dealing with diferences of vectors, the extra factor cancels out and we recover the same expression.
+\item Since we have a second order differential equation, that means if we perform a time translation, that will be ignored by the nature of the ODE.
+\item Finally, if we consider a Galilean transformation, this is $x\rightarrow x \pm vt$, with $v$ a constant, by the same argument as with the shift in spatial dimensions, since we have differences of vectors in the equation, the extra factors cancel out and we recover the same expression. On the other hand, for the left hand side of the equations, since $v$ is a constant, i.e., independent of $t$, then by performing the second derivative on the transformed coordinates, the extra factor cancels out and the equation takes the same form upon this Galilean transformation.
+\end{itemize}
+
+\begin{problem}[Uranus vs Mercury]
+As discussed, the observed precession in mercury's orbit is at the level of $\mathcal{O}$, making it  ripe to be explained by a Lorentz invariant theory of gravity. But what about uranus? Pretend  you didn't know about neptune and try the following: Look up the observed precession of  uranus. Convert it into the useful quantity
+\begin{equation}
+  \frac{\Delta\sigma}{2\pi},
+\end{equation}
+i.e., the fractional change in uranus in one orbit. Then look up the typical speed of uranus,  say at perihelion, and compute
+
+\begin{equation}
+  v/c
+\end{equation}
+Is the observed precession the same order of magnitude as the anticipated relativistic correction? Should we realize that maybe indeed something else is going on (like influencers from  other planets)?
+
+
+\end{problem}
+
+\begin{problem}[Estimates of Gravitational Potential]
+The Newtonian gravitational potential from a point source is $\phi_{N} = -GM/R$, where $M$ is the  mass of the source and $R$ is the distance to the source.
+\begin{itemize}
+\item What are the units of $\phi_N$?
+\item As we will discuss later in the book, a measure of the strength of the gravitational  potential in a relativistic theory is $\phi_N/c$ (where c is the speed of light). Provide order  of magnitude estimates for $\phi_N$ at
+	\begin{itemize}
+	\item Earth's surface (due to the earth)  
+	\item Sun's surface (due to the sun)  
+	\item Mercury's orbit (due to the sun)  
+	\item Neutron star's surface (due to the neutron star)
+	\end{itemize}
+\end{itemize}
+
+\end{problem}
+\end{document}

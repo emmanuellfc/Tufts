@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Format and Stuff
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage[sfdefault]{merriweather}
+\usepackage[T1]{fontenc}
+% \newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+% \newtheorem{proof}{Proof}
+\newcommand{\pd}{\partial}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting Document
+\title{GR-HW-06}
+\author{J Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{problem}[Transformation Rule for Inverse Metric]
+\end{problem}
+Let's prove that the transformed $g^{\mu\nu}$ is the inverse of the transformed $g_{\mu\nu}$. Indeed, the transformation rule for a covariant tensor is given by
+\begin{equation}
+  \bar{g}_{\mu\nu} = \frac{\pd x^\rho}{\pd \bar{x}^\mu}\frac{\pd x^\sigma}{\pd \bar{x}^\mu}g_{\rho\sigma}
+\end{equation}
+Whereas for a contravariant one, we have
+\begin{equation}
+  \bar{g}^{\mu\nu} = \frac{\pd \bar{x}^\mu}{\pd x^\alpha}\frac{\pd \bar{x}^\nu}{\pd x^\beta}g^{\alpha\beta},
+\end{equation}
+then, we have
+\begin{equation}
+  \bar{g}^{\mu\alpha}\bar{g}_{\nu\alpha} = \frac{\pd \bar{x}^\mu}{\pd x^\rho}\frac{\partial \bar{x}^\alpha}{\pd x^\sigma}g^{\rho\sigma} \frac{\partial x^\delta}{\partial \bar{x}^\nu}\frac{\partial x^\gamma}{\partial \bar{x}^\alpha}g_{\delta\gamma},
+\end{equation}
+and from this we can see that, by moving the partials, we have a $\delta^{\gamma}_{\sigma}$ in the expression, thus
+\begin{equation}
+  \bar{g}^{\mu\alpha}\bar{g}_{\nu\alpha} = \frac{\pd \bar{x}^\mu}{\pd x^\rho}\frac{\pd x^\delta}{\pd \bar{x}^\nu}\delta^{\gamma}_\sigma g^{\rho\sigma}g_{\delta\gamma},
+\end{equation}
+but we know that
+\begin{equation}
+  \delta^{\gamma}_\sigma g^{\rho\sigma}g_{\delta\gamma} = g^{\rho\sigma}g_{\delta\rho} = \delta^{\rho}_{\delta},
+\end{equation}
+which implies
+\begin{equation}
+  \bar{g}^{\mu\alpha}\bar{g}_{\nu\alpha} = \frac{\pd \bar{x}^\mu}{\pd x^\rho}\frac{\pd x^\delta}{\pd \bar{x}^\nu} \delta^{\rho}_{\delta}=\frac{\pd \bar{x}^\mu}{\pd \bar{x}^\nu},
+\end{equation}
+therefore, we have
+\begin{equation}
+  \bar{g}^{\mu\alpha}\bar{g}_{\nu\alpha} = \delta^\mu_\nu,
+\end{equation}
+which proves that indeed, the transformed $g^{\mu\nu}$ is the inverse of the transformed $g_{\mu\nu}$.
+
+\pagebreak
+\begin{problem}[Covariant Derivative of Vector]
+\end{problem}
+\textbf{1. } Let's prove that $\partial_\mu V_\nu$ does not transform as a tensor. Indeed, from the transformation definition, we have that
+\begin{equation}
+  \bar{\pd}_\mu\bar{V}_\nu =  \bar{\pd}_\mu\left( \frac{\pd x^\beta}{\pd \bar{x}^\nu}V_\beta\right) = \frac{\pd x^\beta}{\pd \bar{x}^\nu}\bar{\pd}_\mu V_\beta + \frac{\pd^2x^\beta}{\pd x^\mu \pd x^\nu}V_\beta,
+\end{equation}
+and by the chain rule, we have
+\begin{equation}
+  \bar{\pd}_\mu\bar{V}_\nu = \frac{\pd x^\alpha}{\pd \bar{x}^\mu} \frac{\pd x^\beta}{\pd \bar{x}^\nu} \pd_\alpha V_\beta + \frac{\pd^2x^\beta}{\pd \bar{x}^\mu \pd \bar{x}^\nu}V_\beta,
+\end{equation}
+and as we can see, we have an extra term, therefore, $\partial_\mu V_\nu$ does not transform as 2-rank tensor.
+%%%%%%%%%% 2.1
+\newline
+
+\textbf{2. }We need to prove that the covariant derivative transforms as a tensor, this is
+\begin{equation}
+  \nabla_\mu V_\nu\rightarrow \frac{\partial\bar{x}^\alpha}{\partial x^\mu}\frac{\partial\bar{x}^\beta}{\partial x^\nu}\bar{\nabla}_\alpha \bar{V}_\beta.
+\end{equation}
+Indeed, by definition, we have that
+\begin{equation}
+  \nabla_\mu V_\nu = \partial_\mu V_\nu -\Gamma^\lambda_{\mu\nu}V_\lambda,
+\end{equation}
+thus $\bar{\nabla}_\mu \bar{V}\nu$ is given by
+\begin{equation}
+  \bar{\nabla}_\mu \bar{V}_\nu = \bar{\partial}_\mu\bar{V}_\nu
+ - \bar{\Gamma}^\lambda_{\mu\nu} \bar{V}_\lambda.
+\end{equation}
+The only term that we need to be more careful is with the Christoffel symbol, since this does not transform like a tensor, in fact, the transformation rule for this object is given by
+\begin{equation}
+  \bar{\Gamma}^\lambda_{\mu\nu} = \Gamma^{\alpha}_{\beta\gamma}\frac{\pd\bar{x}^\lambda}{\pd x^\alpha}\frac{\pd x^\beta}{\pd \bar{x^\mu}}\frac{\pd x^\gamma}{\pd \bar{x}^\nu} + \frac{\pd \bar{x}^\lambda}{\pd x^\gamma}\frac{\pd^2 x^\gamma}{\pd\bar{x}^\mu\pd\bar{x}^\nu},
+\end{equation}
+from this we have
+\begin{equation}
+  \bar{\nabla}_\mu \bar{V}_\nu = \frac{\pd x^\alpha}{\pd \bar{x}^\mu} \frac{\pd x^\beta}{\pd \bar{x}^\nu} \pd_\alpha V_\beta + \frac{\pd^2x^\beta}{\pd \bar{x}^\mu \pd \bar{x}^\nu}V_\beta- \left( \Gamma^{\alpha}_{\beta\gamma}\frac{\pd\bar{x}^\lambda}{\pd x^\alpha}\frac{\pd x^\beta}{\pd \bar{x^\mu}}\frac{\pd x^\gamma}{\pd \bar{x}^\nu} + \frac{\pd \bar{x}^\lambda}{\pd x^\gamma}\frac{\pd^2 x^\gamma}{\pd\bar{x}^\mu\pd\bar{x}^\nu}\right)\frac{\pd x^\delta}{\pd \bar{x}^\lambda}V_\delta,
+\end{equation}
+from this we can see that inside the third term we have two Kronecker deltas, $\delta^\delta_\alpha$ and $\delta^\delta_\gamma$, respectively, thus
+\begin{equation}
+	\bar{\nabla}_\mu \bar{V}_\nu = \frac{\pd x^\alpha}{\pd \bar{x}^\mu} \frac{\pd x^\beta}{\pd \bar{x}^\nu} \pd_\alpha V_\beta + \frac{\pd^2x^\beta}{\pd \bar{x}^\mu \pd \bar{x}^\nu}V_\beta- \Gamma^{\alpha}_{\beta\gamma}\delta^\delta_\alpha\frac{\pd x^\beta}{\pd \bar{x^\mu}}\frac{\pd x^\gamma}{\pd \bar{x}^\nu}V_\delta - \delta^\delta_\gamma\frac{\pd^2 x^\gamma}{\pd\bar{x}^\mu\pd\bar{x}^\nu}V_\delta,  
+\end{equation}
+thus we have
+\begin{equation}
+  \bar{\nabla}_\mu \bar{V}_\nu = \frac{\pd x^\alpha}{\pd \bar{x}^\mu} \frac{\pd x^\beta}{\pd \bar{x}^\nu} \pd_\alpha V_\beta + \frac{\pd^2x^\beta}{\pd \bar{x}^\mu \pd \bar{x}^\nu}V_\beta- \frac{\pd x^\beta}{\pd \bar{x^\mu}}\frac{\pd x^\gamma}{\pd \bar{x}^\nu}\Gamma^{\alpha}_{\beta\gamma} V_\alpha - \frac{\pd^2 x^\gamma}{\pd\bar{x}^\mu\pd\bar{x}^\nu}V_\gamma,
+\end{equation}
+and from this we can see that the second term cancels with the fourth one, whereas for the third, we can relabel the indices as follows
+\begin{equation}
+  \bar{\nabla}_\mu \bar{V}_\nu = \frac{\pd x^\alpha}{\pd \bar{x}^\mu}\frac{\pd x^\beta}{\pd \bar{x}^\nu} \pd_\alpha V_\beta - \frac{\pd x^\alpha}{\pd \bar{x}^\mu}\frac{\pd x^\beta}{\pd \bar{x}^\nu}\Gamma^\lambda_{\alpha\beta}V_\lambda = \frac{\pd x^\alpha}{\pd \bar{x}^\mu}\frac{\pd x^\beta}{\pd \bar{x}^\nu}\left( \nabla_\mu V_\nu\right),
+\end{equation}
+this is 
+\begin{equation}
+  \bar{\nabla}_\mu \bar{V}_\nu =\frac{\pd x^\alpha}{\pd \bar{x}^\mu}\frac{\pd x^\beta}{\pd \bar{x}^\nu}\left( \nabla_\mu V_\nu\right),
+\end{equation}
+therefore, the covariant derivative is indeed a good 2-rank tensor.
+\end{document}

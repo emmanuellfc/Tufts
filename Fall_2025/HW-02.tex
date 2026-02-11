@@ -1,0 +1,77 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Format and Stuff
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage[sfdefault]{merriweather}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting Documment
+\title{GR-HW-01}
+\author{J Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{problem}
+
+\end{problem}
+\begin{proof}
+
+\end{proof}
+
+
+
+\pagebreak
+\begin{problem}[Two-Body Problem]
+By performing a Lorentz transformation, show that $T_{\mu\nu}B^\mu A^\nu$ is a Lorentz scalar
+\end{problem}
+\begin{proof}
+By definition a Lorentz scalar is an entity for which the following relationship holds
+\begin{equation}
+  \bar{T}_{\mu\nu}\bar{B}^\mu \bar{A}^\nu = T_{\mu\nu}B^\mu A^\nu,
+\end{equation}
+this is, it has the same form under a Lorentz transformation. So let's proceed with the proof. By definition, we have the following
+\begin{equation}
+  \bar{T}_{\mu\nu} = \Lambda_{\mu}^{\alpha_1}\Lambda_{\nu}^{\alpha_2}T_{\alpha_1 \alpha_2}
+\end{equation}
+and as well for the other two tensors of order one
+\begin{equation}
+  \bar{B}^\mu = \Lambda^{\mu}_{\alpha_3}B^{\alpha_3},\ \   \bar{A}^\nu = \Lambda^{\nu}_{\alpha_4}A^{\alpha_4}, 
+\end{equation}
+and from this we have that
+\begin{equation}
+  \bar{T}_{\mu\nu}\bar{B}^\mu \bar{A}^\nu = \Lambda_{\mu}^{\alpha_1}\Lambda_{\nu}^{\alpha_2}\Lambda^{\mu}_{\alpha_3}\Lambda^{\nu}_{\alpha_4}T_{\alpha_1 \alpha_2}B^{\alpha_3}A^{\alpha_4}.
+\end{equation}
+After rearangin the terms and using the fact that
+\begin{equation}
+  \Lambda_{\mu}^{\alpha_1}\Lambda^{\mu}_{\alpha_3} = \delta^{\alpha_1}_{\alpha_3}, \ \ \Lambda_{\nu}^{\alpha_2}\Lambda^{\nu}_{\alpha_4}= \delta^{\alpha_2}_{\alpha_4},
+\end{equation}
+then we have 
+\begin{equation}
+  \bar{T}_{\mu\nu}\bar{B}^\mu \bar{A}^\nu = \delta^{\alpha_1}_{\alpha_3}\delta^{\alpha_2}_{\alpha_4}T_{\alpha_1 \alpha_2}B^{\alpha_3}A^{\alpha_4},
+\end{equation}
+and then the RHS of the previous equation takes the form
+\begin{equation}
+  T_{\alpha_1 \alpha_2}B^{\alpha_1}A^{\alpha_2},
+\end{equation}
+but since those are dummy indices, we can change them to make the equation prettier, leaving us with
+\begin{equation}
+  \bar{T}_{\mu\nu}\bar{B}^\mu \bar{A}^\nu = T_{\mu\nu}B^\mu A^\nu,
+\end{equation}
+just as we wanted.
+\end{proof}
+
+\end{document}

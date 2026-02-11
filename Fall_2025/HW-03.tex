@@ -1,0 +1,306 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Format and Stuff
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage[sfdefault]{merriweather}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting Documment
+\title{GR-HW-03}
+\author{J Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{problem}[A Causal 1+1 dimensional theory]
+\end{problem}
+\textbf{i)} By considering 
+\begin{equation}
+  \frac{dp_1^\mu}{d\tau} = B\varepsilon^{\mu}_\nu \frac{dx^\nu_1}{d\tau},
+\end{equation}
+where $B$ is a Lorentz scalar and $\varepsilon^{\mu}_\nu$ is given by the matrix
+$$\varepsilon^{\mu}_\nu =
+\left(
+\begin{matrix}{}
+  0 & 1 \\
+  -1 & 0 \\
+\end{matrix}
+\right).
+$$
+
+This epsilon tensor is an antisymmetric rank-2 tensor, it's invariant under proper Lorentz transformations, and flips sign under improper ones. On the other hand, we know thath in 1+1D, Lorentz transformations preserve the antisymmetry and normalization; thus, $\varepsilon^{mu}_\nu$ transforms appropriately as a (pseudo-)tensor. Its invariance under Lorentz boosts makes it a good Lorentz tensor.
+
+\textbf{ii)} On the other hand, the given equation is fully Lorentz covariant:
+\begin{itemize}
+\item In the LHS, the 4-momentum is a 4-vector and $\tau$ is the proper time, which is a Lorentz scalar; thus the derivative is a 4-vector.
+\item On the RHS, $B$ is given and it's a Lorentz scalar, as I comment previously, $\varepsilon$ is a rank-2 tensor, a good Lorentz tensor, and the four velocity is a 4-vector, therefore the whole expression it's also a good four vector. 
+\item And then, the whole equation is fully covariant.
+\end{itemize}
+
+\textbf{iii)} Let's consider $mu=1$, in the given equation. It follows that
+\begin{equation}
+  \frac{dp_1^1}{d\tau}=B\epsilon^{1}_\nu\frac{dx_1^\nu}{d\tau},
+\end{equation}
+but $\epsilon^{1}_0=1$ and $\epsilon^1_1=0$, we have
+\begin{equation}
+  \frac{dp_1^1}{d\tau} = B(1)\frac{dx^0_1}{d\tau} + B(0)\frac{dx^1_1}{d\tau} = B\frac{dx^0_1}{d\tau},
+\end{equation}
+by the chain rule we have
+\begin{equation}
+  \frac{dp_1^1}{dt}\frac{dt}{d\tau} = B\frac{dt}{dt}\frac{dt}{d\tau},
+\end{equation}
+then we have
+\begin{equation}
+  \frac{dp_1^1}{dt} = B,
+\end{equation}
+and from this it follows that
+\begin{equation}
+  B=-C_{12}\frac{\mathbf{x}_1-\mathbf{x}_2}{|\mathbf{x}_1-\mathbf{x}_2|}.
+\end{equation}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Nonlinear Field Theory]
+
+\end{problem}
+\textbf{i)} The Lagrangian is given by
+\begin{equation}
+  \mathcal{L} = \frac{1}{2}\eta^{\mu\nu}\partial_\mu\phi\partial_\nu\phi - \frac{1}{2}m_{\phi}^2\phi^{2} - \frac{\lambda}{4}\phi^4,
+\end{equation}
+and we know the Euler-Lagrange equation is given by
+\begin{equation}
+  \partial_\mu \left( \frac{\partial\mathcal{L}}{\partial (\partial_\mu\phi)}\right) -\frac{\partial \mathcal{L}}{\partial\phi} = 0.
+\end{equation}
+Second term term in the previous equation is easy, and it's given by
+\begin{equation}
+  \frac{\partial\mathcal{L}}{\partial\phi} = -m_\phi^2\phi - \lambda\phi^3 \implies   \frac{\partial\mathcal{L}}{\partial\phi} =  -\left(m_\phi^2 + \lambda\phi^2 \right)\phi.
+\end{equation}
+And for the first term we have to work a little more;
+\begin{equation}
+  \frac{\partial\mathcal{L}}{\partial (\partial_\mu\phi)} = \frac{1}{2}\eta^{\mu\nu}\left[\partial_\nu\phi +\partial_\mu\phi \delta^{\nu}_\mu \right]\implies \frac{\partial\mathcal{L}}{\partial (\partial_\mu\phi)} = \eta^{\mu\nu}\partial_\nu \phi,
+\end{equation}
+and from this we have
+\begin{equation}
+  \partial_\mu \left( \frac{\partial\mathcal{L}}{\partial (\partial_\mu\phi)}\right) = \eta^{\mu\nu}\partial_\mu\partial_\nu \phi,
+\end{equation}
+therefore, for the Euler-Lagrange equation we have
+\begin{equation}
+  \eta^{\mu\nu}\partial_\mu\partial_\nu \phi + \left(m_\phi^2 + \lambda\phi^2 \right)\phi=0,
+\end{equation}
+or more explicitly
+\begin{equation}
+  \partial_t^2\phi - \nabla^2\phi + \left(m_\phi^2 + \lambda\phi^2 \right)\phi=0,
+\end{equation}
+or
+\begin{equation}
+  \Box\phi + \left(m_\phi^2 + \lambda\phi^2 \right)\phi = 0,
+\end{equation}
+and as we can see, in the case $\lambda = 0$, we recover the Klein-Gordon equation.
+\break
+\textbf{ii)} The energy momentum tensor is given by
+\begin{equation}
+  T^{\mu\nu} = \frac{\partial\mathcal{L}}{\partial (\partial_\mu\phi)}\partial^\nu\phi - \eta^{\mu\nu}\mathcal{L},
+\end{equation}
+thus, we have
+\begin{equation}
+  T^{\mu\nu} = \eta^{\mu\nu}\partial_{\nu}\phi\partial^{\nu}\phi-\eta^{\mu\nu} \left[ \frac{1}{2}\eta^{\alpha\beta} \partial_\alpha\phi\partial_\beta\phi -\frac{1}{2}m_ \phi^2\phi^2 -\frac{\lambda}{4} \phi^4 \right]
+\end{equation}
+\textbf{iii)} Let's compute the divergence of the energy-momentum tensor, this is
+\begin{equation}
+\partial_{\mu} T^{\mu\nu} = \partial_\mu(\partial^{\mu} \phi\partial^{\nu}\phi) - \partial_mu(\eta^{\mu\nu}\mathcal{L}),  
+\end{equation}
+then, we have
+\begin{equation}
+\partial_\mu T^{\mu\nu} = (\partial_\mu\partial^{\mu} \phi)\partial^{\nu}\phi+ \partial^\mu\phi(\partial_\mu\partial^\nu\phi) - \partial^{\nu}\mathcal{L},    
+\end{equation}
+and using the chain rule for the last term, we have
+\begin{equation}
+  \partial^{\nu}\mathcal{L} = \frac{\partial\mathcal{L}}{\partial\phi}\partial^{\nu}\phi + \frac{\partial\mathcal{L}}{\partial(\partial_\alpha\phi)}\partial^\nu(\partial_\alpha\phi) = \frac{\partial\mathcal{L}}{\partial\phi}\partial^{\nu}\phi + (\partial^\alpha \phi)\partial_\alpha\partial^\nu\phi,
+\end{equation}
+then we have
+\begin{equation}
+  \partial_\mu T^{\mu\nu} = (\Box\phi)\partial^{\nu}\phi + \partial^{\mu}\phi(\partial_\mu\partial^{\nu}\phi) - \left(\frac{\partial\mathcal{L}}{\partial\phi}\partial^{\nu}\phi + \partial^\alpha\phi(\partial_\alpha\partial^\nu\phi)\right),
+\end{equation}
+and as we can see, the second and last term cancel between them, thus
+\begin{equation}
+  \partial_\mu T^{\mu\nu} = \Box\phi\partial^{\nu}\phi - \frac{\partial \mathcal{L}}{\partial\phi}\partial^{\nu}\phi=\left(\Box\phi -\frac{\partial\mathcal{L}}{\partial\phi}\right)\partial^\nu\phi,
+\end{equation}
+but the term in the parenthesis vanishes due to the Euler-Lagrange equation of motion, therefore, we have that
+\begin{equation}
+  \partial_\mu T^{\mu\nu}=0,
+\end{equation}
+just as we wanted to prove.
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Scalar Gravity with Non-Universal Couplings]
+The action is given by
+\begin{equation}
+  S = S_{kin} + S_{int},
+\end{equation}
+where
+\begin{equation}
+  S_{kin} = \int d^4x\left[ \frac{1}{2}\eta^{\mu\nu}\partial_\mu\phi\partial_\nu\phi -\frac{1}{2} m_{\phi}^2\phi^{2}\right] - \sum_{i}m_i\int d\tau_i,
+\end{equation}
+and 
+\begin{equation}
+  S_{int} = -\sum_i g_i\int d^4x\phi T_i,
+\end{equation}
+where $T_i$ is the trace of the energy-momentum tensor associated with the ith particle.
+\end{problem}
+
+\textbf{i)} Let's derive the equation of motion for $\phi$. And for this first we need to derive the Euler-Lagrange equation which, again, is given by
+\begin{equation}
+    \partial_\mu \left( \frac{\partial\mathcal{L}}{\partial (\partial_\mu\phi)}\right) -\frac{\partial \mathcal{L}}{\partial\phi} = 0,
+\end{equation}
+and from this we have
+\begin{equation}
+  \eta^{\mu\nu}\partial_\mu\phi\partial_\nu\phi + m_{\phi}^{2}\phi^2 = -\sum_{i}g_iT_i,
+\end{equation}
+which can be writen as
+\begin{equation}
+  \Box\phi +m_\phi^2\phi^2 = -\sum_{i}g_iT_i,
+\end{equation}
+which is the equation of motion for $\phi$.
+
+\textbf{ii)} In the static non-relativistic limit we have the following condition $\partial_t\phi=0$, which implies that $\Box\rightarrow-\nabla^2$, and if the particles are non-relativistic, we have
+\begin{equation}
+  \sqrt{1-v_i^2} \approx 1,
+\end{equation}
+then the trace of the energy-momentum tensor becomes
+\begin{equation}
+  T_{i}\approx m_i\delta^3(\mathbf{x}-\mathbf{x}_i),
+\end{equation}
+and then the equation of motion simplifies to
+\begin{equation}
+  \left(\nabla^2-m_\phi^2\right)\phi = \sum_i g_i m_i\delta^3(\mathbf{x}-\mathbf{x}_i),
+\end{equation}
+and by following the same procedure derived in class we have the solution
+\begin{equation}
+  \phi(\mathbf{x}) = \int d^3x^\prime
+G(\mathbf{x}-\mathbf{x}_i)(\sum_i g_i m_i\delta^3(\mathbf{x}-\mathbf{x}_i)),
+\end{equation}
+where
+\begin{equation}
+  G(\mathbf{r}) = -\frac{e^{-m_\phi |\mathbf{r}|}}{4\pi |\mathbf{r}|},
+\end{equation}
+which implies that
+\begin{equation}
+\phi(\mathbf{x}) = -\sum_i g_i m_i\frac{e^{-m_\phi |\mathbf{x}-\mathbf{x}_i|}}{4\pi |(\mathbf{x}-\mathbf{x}_i|},
+\end{equation}
+and if we define 
+\begin{equation}
+  \rho_g = \sum_i g_i m_i\delta(\mathbf{x}-\mathbf{x}^\prime),
+\end{equation}
+then the solution is given by
+\begin{equation}
+  \phi(\mathbf{x}) = -\int d^3x^\prime \frac{\rho_g(\mathbf{x}^\prime)e^{-m_\phi |\mathbf{x}-\mathbf{x}^\prime|}}{4\pi|\mathbf{x}-\mathbf{x}^\prime|}
+\end{equation}
+\textbf{iii)} Now, let's compute the acceleration of a particle: the action for a single particle $i$ interacting with the field $\phi$ is given by
+\begin{equation}
+  S_i = -m_i\int d\tau_i -g_i\int d^4\phi(x) T_i(x) = -m_i\int(1+g_i\phi(x_i(\tau_i)))d\tau_i,
+\end{equation}
+and in the non-relativistic limit we have
+\begin{equation}
+  d\tau_i = \sqrt{1-\dot{\mathbf{x}}^2}dt\approx(1-\frac{1}{2}\dot{\mathbf{x}}^2)dt,
+\end{equation}
+adn thus, the Lagrangian becomes
+\begin{equation}
+  L_i \approx -m_i(1+g_i\phi(\mathbf{x}_i))(1-\frac{1}{2}\dot{\mathbf{x}}^2)\approx\frac{1}{2}m_i\dot{\mathbf{x}}^2_i-m_ig_i(\mathbf{x}_i)-m_i.
+\end{equation}
+The potential energy is $V_i=m_ig_i\phi(\mathbf{x}_i)$, which implies that the force on the particle is
+\begin{equation}
+  \mathbf{F}_i=-\nabla_iV_i=-m_ig_i\nabla_i\phi(\mathbf{x}_i),
+\end{equation}
+then, we have
+\begin{equation}
+\frac{d^2\mathbf{x}_i}{dt^2} = -g_i\phi_i(\mathbf{x_i}),  
+\end{equation}
+
+and since the field $\phi$ at the location of particle $i$ is generated by all the other particles $j\neq i$ we have that
+\begin{equation}
+  \phi(\mathbf{x}_i) = -\sum_{j\neq i}g_jM_j\frac{e^{-m_\phi |\mathbf{x}-\mathbf{x}^\prime|}}{4\pi|\mathbf{x}-\mathbf{x}^\prime|},
+\end{equation}
+and by taking the gradient we have
+\begin{equation}
+\nabla_i\phi(\mathbf{x}_i) = \sum_{j\neq i}\frac{g_jM_j}{4\pi}\frac{\mathbf{x_i}-\mathbf{x_j}}{|\mathbf{x_i}-\mathbf{x_j}|}e^{-m_\phi|\mathbf{x_i}-\mathbf{x_j}|}(1+m_\phi |\mathbf{x_i}-\mathbf{x_j}|),
+\end{equation}
+and then, the accelation of the particle is given by
+\begin{equation}
+  \frac{d^2\mathbf{x}_i}{dt^2} = -\sum_{j\neq i}\frac{g_ig_jM_j}{4\pi}\frac{\mathbf{x_i}-\mathbf{x_j}}{|\mathbf{x_i}-\mathbf{x_j}|}e^{-m_\phi|\mathbf{x_i}-\mathbf{x_j}|}(1+m_\phi |\mathbf{x_i}-\mathbf{x_j}|),
+\end{equation}
+
+\textbf{iv)} The charactesitic length scale is giveb by the Compton wavelength of the scalaron, $\lambda_\phi$, this is
+\begin{equation}
+  \lambda_\phi = \frac{\hbar}{m_\phi c},
+\end{equation}
+and since $m_\phi = 10^{-20}eVc^{-2}$, we have that
+\begin{equation}
+  \lambda_\phi = \frac{\hbar c}{m_\phi c^2} = \frac{1.97\times 10^-7eVm}{10^-{20}eV}\approx 1.97\times^{13}m,
+\end{equation}
+which is a really big number.
+
+\textbf{v)} By setting $m_\phi = 0$, the exponential term in the acceleration formula from part (iii) vanishes. The acceleration of a particle $i$ in the gravitational field of a large source $S$ (with mass $M_S$ and coupling $g_S$) simplifies to:
+\begin{equation}
+\mathbf{a}_i = - \frac{g_i g_S M_S}{4\pi} \frac{\mathbf{r}}{r^3}  
+\end{equation}
+where as usual $\mathbf{r}$ is the position vector from the source $S$ to the particle $i$. And we know that the acceleration $\mathbf{a}_i$ is directly proportional to the particle's own coupling, $g_i$.
+Now, if we consider two different test bodies, 1 and 2, with couplings $g_1$ and $g_2$ falling toward the source. Since they are at the same position, their acceleration magnitudes are given by:
+\begin{align*}
+    a_1 &= \frac{g_1 g_S M_S}{4\pi r^2} \\
+    a_2 &= \frac{g_2 g_S M_S}{4\pi r^2}
+\end{align*}
+From these we have
+\begin{align*}
+    \left| \frac{a_1 - a_2}{a_1 + a_2} \right| &\lesssim 10^{-13} \\
+    \left| \frac{(g_1 g_S M_S / 4\pi r^2) - (g_2 g_S M_S / 4\pi r^2)}{(g_1 g_S M_S / 4\pi r^2) + (g_2 g_S M_S / 4\pi r^2)} \right| &\lesssim 10^{-13} \\
+    \left| \frac{g_1 - g_2}{g_1 + g_2} \right| &\lesssim 10^{-13}
+\end{align*}
+Which implies that the couplings $g_1$ and $g_2$ must be almost identical. If we assume $g_2 \approx g_1$, then the denominator $g_1 + g_2 \approx 2g_1$. The constraint on the relative difference is thus given by:
+\begin{equation}
+  \left| \frac{g_1 - g_2}{g_1} \right| \lesssim 2 \times 10^{-13}.
+\end{equation}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Gravitational Redshift]
+By considering 
+\begin{equation}
+  \omega = \omega_0 \left(1+\frac{G_N M}{Rc^2} \right),
+\end{equation}
+derive the fractional change in frequency.
+\end{problem}
+The fractional change in frequency is given by
+\begin{equation}
+  \frac{\Delta\omega}{\omega_0}=\frac{\omega - \omega_0}{\omega_0}\approx\frac{\Delta\Phi}{c^2},
+\end{equation}
+where $\Delta\Phi$ is the change in gravitational potential. Now, with this at hand, the change in potential is given by
+\begin{equation}
+  \Delta\Phi = gh,
+\end{equation}
+where $g$ is the acceleration due to gravity. Since the light is moving away from the mass, its frequency is decreasing (by redshift), thus the change is negative, this is
+\begin{equation}
+  \frac{\Delta\omega	}{\omega_0} = \frac{-gh}{c^2},
+\end{equation}
+and now, if we use the values $g=9.8 ms^-2$, $h=22.6m$ and $c=3\times 10^8ms^-2$, we have
+\begin{equation}
+  \frac{\Delta\omega	}{\omega_0}=-\frac{221.706}{9\times10^-16}\approx-2.46\times10^{-15}.
+\end{equation}
+According to Wikipedia, the experimental value measured was
+\begin{equation}
+  \left(\frac{\Delta\omega	}{\omega_0}\right)_{exp}=-2.1\pm 0.25\times 10^{-15},
+\end{equation}
+which is not bad, it's actually pretty close.
+\end{document}

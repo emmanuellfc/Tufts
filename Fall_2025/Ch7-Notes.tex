@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Format and Stuff
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage[sfdefault]{merriweather}
+\usepackage[T1]{fontenc}
+% \newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+% \newtheorem{proof}{Proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting Document
+\begin{document}
+
+\section*{Chapter 7: From Particles to Fields}
+
+\subsection*{Key Concepts}
+\begin{itemize}
+    \item There are no Lorentz invariant and causal theories between \textbf{classical particles} in three spatial dimensions.
+    \item Therefore, we turn to quantum mechanics, this is: \textbf{quantum fields} and \textbf{force carriers}.
+    \item And the \textbf{starting point} is this: force carriers must be \textbf{bosons} (for rotation invariance). 
+    \item As a first go, we are going to study \textbf{spinless particles} (scalars).
+\end{itemize}
+
+\subsection*{Creation and Annihilation Operators}
+Since the number of particles is not always the same (emission or absorption processes), we use \textbf{creation} ($\hat{a}^\dagger$) and \textbf{annihilation} ($\hat{a}$) operators with their usual commutation rules.
+
+\subsection*{The Hamiltonian}
+For a collection of free particles, the total energy is:
+\begin{equation}
+  E = \sum_{i} E_{i}, \quad \text{where}\quad E_{i} = \sqrt{p_{i}^2 c^2 + m^2 c^4}
+\end{equation}
+And iff we set $\hbar = c = 1$, we have $E = \sqrt{p^2 + m^2}$. Alternatively, the total energy can be written in terms of the number of particles as follows:
+\begin{equation}
+  E = \sum_{p} E_{p} N_{p}
+\end{equation}
+where $N_{p}$ is the \textbf{number operator}. From this, we can construct a Hamiltonian operator as:
+\begin{equation}
+  H = \sum_{\vec{p}} E_{\vec{p}} \hat{N}_{\vec{p}} = \sum_{\vec{p}} E_{\vec{p}} \hat{a}_{\vec{p}}^\dagger \hat{a}_{\vec{p}}
+\end{equation}
+
+In the continuous limit ($\sum_{\vec{p}} \to V \int \frac{d^3p}{(2\pi)^3}$), the Hamiltonian becomes:
+\begin{equation}
+  \hat{H} = \int \frac{d^3p}{(2\pi)^3} E_{\vec{p}} \hat{a}_{\vec{p}}^\dagger \hat{a}_{\vec{p}}
+\end{equation}
+
+Similarly, the total momentum operator becomes:
+\begin{equation}
+  \vec{P}_{\text{tot}} = \int \frac{d^3p}{(2\pi)^3} \vec{p} \hat{N}_{\vec{p}} = \int \frac{d^3p}{(2\pi)^3} \vec{p} \hat{a}_{\vec{p}}^\dagger \hat{a}_{\vec{p}}
+\end{equation}
+
+\subsection*{Physics Turn: Position Space Fields}
+We need a \textbf{causal} theory, which implies the theory must be \textbf{LOCAL} in position space. We use a Fourier transform to go to position space.
+
+\subsubsection*{Scalar Field Definition}
+We define the \textbf{scalar field} operator:
+
+\begin{equation}
+  \hat{\phi}(\vec{x}) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2E_{\vec{p}}}} \left( \hat{a}_{\vec{p}} e^{i\vec{p}\cdot\vec{x}} + \hat{a}_{\vec{p}}^\dagger e^{-i\vec{p}\cdot\vec{x}} \right)
+\end{equation}
+
+\begin{itemize}
+    \item This is known as a \textbf{Lorentz scalar field}.
+    \item The factor $\frac{1}{\sqrt{2E_{\vec{p}}}}$ ensures $\hat{\phi}$ transforms as a Lorentz scalar.
+    \item The creation operator ($\hat{a}_{\vec{p}}^\dagger$) is included to make $\hat{\phi}$ \textbf{real} (Hermitian).
+\end{itemize}
+
+\subsubsection*{Conjugate Gradient Field (Conjugate Momentum)}
+We define the conjugate gradient field (or conjugate momentum operator):
+
+\begin{equation}
+  \hat{\pi}(\vec{x}) = \int \frac{d^3p}{(2\pi)^3} (-i) \sqrt{\frac{E_{\vec{p}}}{2}} \left( \hat{a}_{\vec{p}} e^{i\vec{p}\cdot\vec{x}} - \hat{a}_{\vec{p}}^\dagger e^{-i\vec{p}\cdot\vec{x}} \right)
+\end{equation}
+
+It's important to notice that $\hat{\pi}$ is \textbf{NOT Lorentz invariant}.
+The canonical commutation relation is:
+
+\begin{equation}
+  [\hat{\phi}(\vec{x}), \hat{\pi}(\vec{y})] = i \delta^3(\vec{x}-\vec{y})
+\end{equation}
+
+\subsection*{Hamiltonian Density}
+Using the inverse Fourier theorem, the Hamiltonian can be written as an integral over the \textbf{Hamiltonian density} $\mathcal{H}(\vec{x})$:
+
+\begin{equation}
+  \hat{H} = \int d^3x \, \hat{\mathcal{H}}(\vec{x}), \quad \text{where}
+\end{equation}
+
+\begin{equation}
+  \hat{\mathcal{H}}(\vec{x}) = \frac{1}{2} \hat{\pi}(\vec{x})^2 + \frac{1}{2} \vec{\nabla}\hat{\phi}(\vec{x}) \cdot \vec{\nabla}\hat{\phi}(\vec{x}) + \frac{1}{2} m^2 \hat{\phi}(\vec{x})^2
+\end{equation}
+
+\subsection*{The Lagrangian Formalism}
+The Lagrangian formulation is ideal because the \textbf{action} ($S$) must be a \textbf{Lorentz invariant}.
+We decompose the Lagrangian into an integral over a \textbf{density} $\mathcal{L}$:
+\begin{equation}
+  L = \int d^3x \, \mathcal{L}, \quad \text{with } S = \int d^4x \, \mathcal{L}
+\end{equation}
+The \textbf{Lagrangian density} arises from the Hamiltonian density as follows:
+\begin{equation}
+  \mathcal{L} = \dot{\phi} \pi - \mathcal{H}, \quad \text{where } \pi = \frac{\partial \mathcal{L}}{\partial \dot{\phi}}
+\end{equation}
+Using the previous Hamiltonian density, we get the \textbf{Lagrangian density} for the free scalar field:
+\begin{equation}
+  \mathcal{L} = \frac{1}{2} \dot{\phi}^2 - \frac{1}{2} (\vec{\nabla}\phi)^2 - \frac{1}{2} m^2 \phi^2
+\end{equation}
+This is \textbf{manifestly Lorentz invariant}. In covariant notation, this is:
+\begin{equation}
+  \mathcal{L} = \frac{1}{2} \eta^{\mu\nu} \partial_{\mu}\phi \, \partial_{\nu}\phi - \frac{1}{2} m^2 \phi^2
+\end{equation}
+and even more, this is the \textbf{only Lorentz invariant quadratic Lagrangian density}.
+\subsection*{Lagrange equations of motion}
+Given a lagrangian density $\mathcal{L}$, the Euler-Lagrange equations of motion are given by
+\begin{equation}
+  \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial(\partial_\mu\phi)}\right) - \frac{\partial\mathcal{L}}{\partial\phi} = 0.
+\end{equation}
+\subsection*{Energy Momentum Tensor}
+One way to define the energy momentum tensor is by Taylor expangind the Lagrangian density as follows
+
+\begin{equation}
+  \mathcal{L} (\phi, \partial_\mu \phi) \rightarrow \int d^4 x \mathcal{L}(\phi + a_\nu\partial^\nu\phi, \partial_\mu\phi + a_\nu \left( \frac{\partial \mathcal{L}}{\partial_\mu(\partial\phi)}\right)\partial^\nu\partial_\mu\phi)
+\end{equation}
+
+
+
+
+
+\subsection*{Takeaways}
+\begin{itemize}
+    \item Field formalism is great to later include \textbf{interactions} and ensure they are \textbf{local}.
+    \item Fields are useful mathematical tools that help us build \textbf{local theories} in position space.
+\end{itemize}
+
+\end{document}

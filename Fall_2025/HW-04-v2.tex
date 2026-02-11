@@ -1,0 +1,367 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Format and Stuff
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\usepackage[sfdefault]{merriweather}
+\usepackage[T1]{fontenc}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{proof}{Proof}
+\newcommand{\pd}{\partial}
+\newcommand{\sq}{\square}
+\newcommand{\hmn}{h_{\mu\nu}}
+\newcommand{\hMN}{h^{\mu\nu}}
+\newcommand{\trh}{h}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starting Documment
+\title{GR-HW-04: Spin and Electromagnetism and Linear Gravitational Field Equation}
+\author{J Emmanuel Flores}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{problem}[Spin 2 Polarization]
+\end{problem}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Electromagnetism with Point Charges]
+\end{problem}
+
+\textbf{(i)} The expression given by 
+\begin{equation}
+  J^{\mu}(x) = \sum_{i}^{N} q_i\int d\tau_{i}\frac{dx_i^\mu}{d\tau_i}\delta^4(x^\alpha - x_i^\alpha(\tau_i)),
+\end{equation}
+is indeed a good 4-Lorentz vector, and let me explain why.
+\begin{itemize}
+	\item First, $q_i$ is a scalar, so it's fine.
+	\item Proper time $\tau_i$ is a good Lorentz invariant.
+	\item The 4-velocity, $dx_i^\mu/d\tau_i$ is a good Lorentz vector.
+	\item And finally, the 4-dimensional delta is also a Lorentz invariant.
+\end{itemize}
+Therefore, the whole combination in the previous expression is a good 4-Lorentz vector, since is the combination of good Lorentz quantities.
+\newline
+
+\textbf{(ii)} Let's express $J^\mu$ in terms of a 3-dimensional delta function.
+Let's start with 
+\begin{equation}
+	J^{\mu}(x) = \sum_{i}^{N} q_i\int d\tau_{i}\frac{dx_i^\mu}{d\tau_i}\delta^4(x^\alpha - x_i^\alpha(\tau_i)),
+\end{equation}
+then, by the chain rule, we have
+\begin{equation}
+  J^{\mu}(x) = \sum_{i}^{N} q_i\int d\tau_{i}\frac{dt}{d\tau_i}\frac{dx_i^\mu}{d\tau_i}\delta(t-t_i(\tau_i))\delta^3(x^\alpha - x_i^\alpha(\tau_i)),
+\end{equation}
+which implies that
+\begin{equation}
+  J^{\mu}(x) = \sum_{i}^{N} q_i\int dt\frac{dx_i^\mu}{dt}\delta(t-t_i(\tau_i))\delta^3(x^\alpha - x_i^\alpha(\tau_i)),
+\end{equation}
+and from this we can express perform the time integral. We have
+\begin{equation}
+  J^{\mu}(x) = \sum_{i}^{N} q_i\frac{dx_i^\mu}{dt}\delta^3(x^\alpha - x_i^\alpha(t)),
+\end{equation}
+\newline
+
+\textbf{(iii)} And now let's compute
+\begin{equation}
+  \int d^3x J^0(x),
+\end{equation}
+from which the previous expression we have
+\begin{equation}
+  \int d^3x J^0(x) = \int d^3x \left( \sum_{i}^{N} q_i\frac{dx_i^0}{dt}\delta^3(x^\alpha - x_i^\alpha(t))\right),
+\end{equation}
+and since everything under the integral sign is well behaved we can commute the summation and the integral
+\begin{equation}
+  \int d^3x J^0(x) = \sum_{i}^{N} \int d^3x \left( q_i\frac{dx_i^0}{dt}\delta^3(x^\alpha - x_i^\alpha(t))\right),
+\end{equation}
+but $dx^0=cdt$, thus the previous expression reduces to 
+\begin{equation}
+  \int d^3x J^0(x) = \sum_{i}^{N} cq_i,
+\end{equation}
+or
+\begin{equation}
+  \int d^3x J^0(x) = cQ, \text{ where }\quad Q = \sum_{i}^{N} q_i.
+\end{equation}
+\newline
+
+\textbf{(iii)} The interaction term is given by
+\begin{equation}
+  S_{int} = -\int d^4x A_\mu J^\mu
+\end{equation}
+let's massage this term a little bit. So let's begin
+\begin{equation}
+  S_{int} = -\int d^4xA_{\mu}J^\mu = -\int d^4x A_{\mu}\left[ \sum_i^N q_i \int d\tau_i \frac{dx_i^\mu}{d\tau_i}\delta^4(x^\alpha -x_i^\alpha(\tau_i))\right],
+\end{equation}
+and assuming the functions inside the integrand are well behaved, we can commute the sum and the interal operations, this yields
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int d^4x A_{\mu}\left[\int d\tau_i \frac{dx_i^\mu}{d\tau_i}\delta^4(x^\alpha -x_i^\alpha(\tau_i))\right],
+\end{equation}
+and if we unfold the 4-dimensional delta, we have
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int d^4x A_{\mu}\left[\int d\tau_i \frac{dx_i^\mu}{d\tau_i}\delta(t-t_i(\tau_i))\delta^3(\mathbf{x} -\mathbf{x}_i(\tau_i))\right],
+\end{equation}
+and we can write the inner integral just as we did before, this is
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int d^4x A_{\mu}\left[\int  dt\frac{d\tau_i}{dt}\frac{dx_i^\mu}{d\tau_i}\delta(t-t_i(\tau_i))\delta^3(\mathbf{x} -\mathbf{x}_i(\tau_i))\right],  
+\end{equation}
+it follows that
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int d^4x A_{\mu}\left[\frac{dx_i^\mu}{dt}\delta^3(\mathbf{x} -\mathbf{x}_i(\tau_i))\right],
+\end{equation}
+and from this, the 3-dimensional delta collapses the 4-dimensional integral to a 1-dimensional one as follows
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int dt \frac{dx_i^\mu}{dt}A_{\mu}(x_i),
+\end{equation}
+and again, by the chain rule, we have
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int d\tau_i \frac{dt}{d\tau_i}\frac{dx_i^\mu}{dt}A_{\mu}(x_i),
+\end{equation}
+thus, the final result is given by 
+\begin{equation}
+  S_{int} =  -  \sum_i^N q_i\int d\tau_i \frac{dx_i^\mu}{d\tau_i}A_{\mu}(x_i),
+\end{equation}
+just as we wanted.
+\newline
+
+\textbf{(iv)} Now, let's compute the equations of motion from the Euler-Lagrange equations:
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Gravitational Field Equations]
+\end{problem}
+The lagrangian is given by
+\begin{equation}
+  \mathcal{L} = \frac{1}{4}\partial_\mu h_{\alpha\beta}\partial^{\mu}h^{\alpha\beta} - \frac{1}{2}\partial^\mu h_{\mu\nu}\partial_\alpha h^{\alpha\nu} +\frac{1}{4}\partial_\mu h\partial^{\mu} h + \frac{1}{2}\partial_{\mu}h\partial_\nu h^{\mu\nu} - h_{\mu\nu}\tau^{\mu\nu}
+ \end{equation}
+ Let's compute the Euler-Lagrange equations of motion, which are given by
+ \begin{equation}
+  \partial_{\alpha}\left(\frac{\partial\mathcal{L}}{\partial(\partial_\alpha h^{\mu\nu})}\right)-\frac{\partial\mathcal{L}}{\partial h^{\mu\nu}} = 0,
+\end{equation}
+and from here, probably the easiest term is the derivative with respect to $h^{\mu\nu}$, for that we have
+\begin{equation}
+  \frac{\partial\mathcal{L}}{\partial h^{\mu\nu}} = \frac{\partial}{\partial h^{\mu\nu}}\left(h_{\mu\nu} \tau^{\mu\nu}\right)=\tau^{\mu\nu}.
+\end{equation}
+Now, the hard work comes with the remainder terms, so I'll proceed one by one, but before that; in the derivation I'll be using heavily the following identity
+\begin{equation}
+  \frac{\pd(\pd_k h_{\rho\sigma})}{\pd(\pd_\alpha h_{\mu\nu})} = \frac{1}{2}\delta^{\alpha}_{k}\left[\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma}\right],
+  \label{eq:PartialsIdentity}
+\end{equation}
+and with this in mind, let's begin. 
+For the first term, we have
+\begin{equation}
+  \mathcal{L}_1 = \frac{1}{4}\partial_\lambda h_{\rho\sigma} \partial^\lambda h^{\rho\sigma},
+\end{equation}
+and from there we have
+\begin{equation}
+  \frac{\pd(\mathcal{L}_1)}{\pd(\pd_\alpha\hmn)} = \frac{1}{4}\left[\frac{\pd(\pd_\lambda h_{\rho_\sigma})}{\pd(\pd_\alpha\hmn)}\pd^\lambda h^{\rho\sigma} +  \pd_\lambda h_{\rho\sigma} \frac{\pd(\pd^\lambda h^{\rho\sigma})}{\pd(\pd_\alpha \hmn)} \right],
+\label{eq:pdL1}
+\end{equation}
+the first term in the previous expression is easy, as all the indices are lowered, and by using equation (\ref{eq:PartialsIdentity}), we have that
+\begin{equation}
+  \frac{1}{8}\delta^{\alpha}_{\lambda}\left[\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma}\right]\pd^\lambda h^{\rho\sigma},
+\end{equation}
+by expanding the product we have
+\begin{equation}
+  \frac{1}{8}\delta^{\alpha}_{\lambda}\left[\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma}\right]\pd^\lambda h^{\rho\sigma} = 
+  \frac{1}{8}\delta^{\alpha}_{\lambda}\left[\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma}\pd^\lambda h^{\rho\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma}\pd^\lambda h^{\rho\sigma}\right]
+\end{equation}
+and from this we can see that $\lambda=\alpha$, and in the first term we have $\rho=\mu$ and $\sigma=\nu$, whereas for the second one, we have $\rho=\nu$ and $\sigma=\mu$, thus
+\begin{equation}
+  \frac{1}{8}\delta^{\alpha}_{\lambda}\left[\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma}\right]\pd^\lambda h^{\rho\sigma} = \frac{1}{8}\left[ \pd^\alpha \hMN +\pd^\alpha h^{\nu\mu}\right],
+\end{equation}
+but $\hmn$ is symmetric, thus
+\begin{equation}
+  \frac{1}{8}\delta^{\alpha}_{\lambda}\left[\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma}\right]\pd^\lambda h^{\rho\sigma} = \frac{1}{4}h^\alpha \hMN,
+\end{equation}
+and now, for the second term in equation (\ref{eq:pdL1}), we need to work a little more since the indices are up, but we know the way to lower them is via the metric, thus
+\begin{equation}
+  \pd^\lambda h^{\rho\sigma} = \eta^{\lambda\beta}\eta^{\rho\gamma}\eta^{\sigma\delta}\partial_\beta h_{\gamma\delta},
+\end{equation}
+and from this we have
+\begin{equation}
+  \frac{1}{4}\pd_\lambda h_{\rho_\sigma}\frac{\pd(\pd^\lambda h^{\rho\sigma})}{\pd(\pd_\alpha \hmn)} = \frac{1}{4}\eta^{\lambda\beta}\eta^{\rho\gamma}\eta^{\sigma\delta}\pd_\lambda h_{\rho_\sigma}\frac{\pd(\partial_\beta h_{\gamma\delta})}{\pd(\pd_\lambda h_{\rho_\sigma})},
+\end{equation}
+ana again, we can use the identity given in equation (\ref{eq:PartialsIdentity}), which in this case reads
+\begin{equation}
+	\frac{\pd(\partial_\beta h_{\gamma\delta})}{\pd(\pd_\lambda h_{\rho_\sigma})} = \frac{1}{2}\delta^{\alpha}_{\beta}\left[\delta^{\mu}_{\delta}\delta^{\nu}_{\gamma} + \delta^{\nu}_{\gamma}\delta^{\mu}_{\delta}\right],
+\end{equation}
+and from this, we can see that the first delta implies $\beta=\alpha$, the deltas in the first term also implies that $\delta=\mu$, $ \gamma = \nu$ whereas for the second term we have $ \gamma =\nu$ and $\delta = \mu$, then if we expand the product we have
+
+\begin{equation}
+  \frac{1}{4}\pd_\lambda h_{\rho_\sigma}\frac{\pd(\pd^\lambda h^{\rho\sigma})}{\pd(\pd_\alpha \hmn)} = \frac{1}{8}\eta^{\lambda\alpha}\eta^{\rho\nu}\eta^{\sigma\mu}\pd_\lambda h_{\rho_\sigma}  + \frac{1}{8}\eta^{\lambda\alpha}\eta^{\rho\nu}\eta^{\sigma\mu}\pd_\lambda h_{\rho_\mu},
+\end{equation}
+which can also be writen as
+\begin{equation}
+  \frac{1}{4}\pd_\lambda h_{\rho_\sigma}\frac{\pd(\pd^\lambda h^{\rho\sigma})}{\pd(\pd_\alpha \hmn)} = \frac{1}{8}\pd^\alpha h^{\mu\nu} + \frac{1}{8}\pd^\alpha h^{\nu\mu},  
+\end{equation}
+but again, by symmetry, we have
+\begin{equation}
+  \frac{1}{4}\pd_\lambda h_{\rho_\sigma}\frac{\pd(\pd^\lambda h^{\rho\sigma})}{\pd(\pd_\alpha \hmn)} = \frac{1}{4}\pd^\alpha h^{\mu\nu}
+\end{equation}
+therefore, 
+\begin{equation}
+    \frac{\pd(\mathcal{L}_1)}{\pd(\pd_\alpha\hmn)} = \frac{1}{4}\pd^\alpha h^{\mu\nu} + \frac{1}{4}\pd^\alpha h^{\mu\nu} 
+\end{equation}
+thus
+\begin{equation}
+  \frac{\pd\mathcal{L}_1}{\pd(\pd_\alpha\hmn)} = \frac{1}{2}\pd^\alpha h^{\mu\nu},
+\end{equation}
+and from this
+\begin{equation}
+  \pd_\alpha\left(\frac{\pd \mathcal{L}_1}{\pd(\pd_\alpha\hmn)} \right) = \frac{1}{2}\pd_\alpha\pd^\alpha h^{\mu\nu} = \frac{1}{2}\sq \hMN.
+\end{equation}
+
+Now, let's move to the second term
+\begin{equation}
+  \mathcal{L}_2 = - \frac{1}{2}\partial^\mu h_{\mu\nu}\partial_\alpha h^{\alpha\nu},
+\end{equation}
+then we have
+\begin{equation}
+  \frac{\pd\mathcal{L}_2}{\pd(\pd_\alpha \hmn))} = -\frac{1}{2}\left[\frac{\pd(\pd^\lambda h_{\lambda\rho})}{\pd(\pd \hmn)}\pd_\sigma h^{\sigma\rho}  + \pd^{\lambda}h_{\lambda\rho} \frac{\pd(\pd_\sigma h^{\sigma\rho})}{\pd(\pd_\alpha \hmn)}\right]
+\end{equation}
+but we know that
+\begin{equation}
+  \pd^{\lambda} = \eta^{\lambda\beta}\pd_\beta,
+\end{equation}
+thus, for the first term we have
+\begin{equation}
+  \frac{\pd(\pd^{\lambda}h_{\lambda\rho})}{\pd(\pd \hmn)}\pd_\sigma h^{\sigma\rho} = \eta^{\lambda\beta}\frac{\pd(\pd_\beta h_{\lambda\rho})}{\pd(\pd_{\alpha} \hmn)}\pd_\sigma h^{\sigma\rho},
+\end{equation}
+and by making use of the equation (\ref{eq:PartialsIdentity}), we have
+\begin{equation}
+  \frac{\pd(\pd_\beta h_{\lambda\rho})}{\pd(\pd \hmn)}\pd_\sigma h^{\sigma\rho} = \eta^{\lambda\beta}\left[\frac{1}{2}\delta^{\alpha}_{\beta}(\delta^{\mu}_{\lambda}\delta^{\nu}_{\rho} + \delta^{\nu}_{\lambda}\delta^{\mu}_{\rho}) \right]\pd_\sigma h^{\sigma\rho},
+\end{equation}
+which implies that
+\begin{equation}
+  \frac{\pd(\pd^\lambda h_{\lambda\rho})}{\pd(\pd \hmn)}\pd_\sigma h^{\sigma\rho} = \frac{1}{2}\eta^{\alpha\mu}\pd_{\sigma}h^{\sigma\nu} + \frac{1}{2}\eta^{\alpha\nu}\pd_{\sigma}h^{\sigma\mu},
+\end{equation}
+and for the second term is pretty much the same procedure, but we need to lower the indices of the $h^{\rho\sigma}$, this is
+\begin{equation}
+  h^{\sigma\rho} = \eta^{\sigma\beta}\eta^{\rho\epsilon}h_{\beta\epsilon},
+\end{equation}
+then the second term becomes
+\begin{equation}
+  \pd^{\lambda}h_{\lambda\rho} \frac{\pd(\pd_\sigma h^{\sigma\rho})}{\pd(\pd_\alpha \hmn)} = \eta^{\sigma\beta}\eta^{\rho\epsilon}\pd^{\lambda}h_{\lambda\rho} \frac{\pd(\pd_\sigma h_{\beta\epsilon})}{\pd(\pd_\alpha \hmn)}
+\end{equation}
+and again, by making use of the equation (\ref{eq:PartialsIdentity}), we have
+\begin{equation}
+  \eta^{\sigma\beta}\eta^{\rho\epsilon}\pd^{\lambda}h_{\lambda\rho} \frac{\pd(\pd_\sigma h_{\beta\epsilon})}{\pd(\pd_\alpha \hmn)} = \frac{1}{2}\eta^{\sigma\beta}\eta^{\rho\epsilon}\pd^{\lambda}h_{\lambda\rho} \left[\delta^{\alpha}_\sigma (\delta^{\mu}_{\beta}\delta^{\nu}_{\epsilon} + \delta^{\nu}_{\beta}\delta^{\mu}_{\epsilon})\right]
+\end{equation}
+the previous expression implies that $\sigma = \alpha$, and for the first deltas we have $\beta = \mu$, $\epsilon=\nu$ whereas for the second deltas we have $\beta = \nu$, $\epsilon = \mu$, thus
+\begin{equation}
+  \eta^{\sigma\beta}\eta^{\rho\epsilon}\pd^{\lambda}h_{\lambda\rho} \frac{\pd(\pd_\sigma h_{\beta\epsilon})}{\pd(\pd_\alpha \hmn)} = \frac{1}{2}\eta^{\alpha\mu}\eta^{\rho\nu}\pd^{\lambda}h_{\lambda\rho} + \frac{1}{2}\eta^{\alpha\nu} \eta^{\rho\mu}\partial^{\lambda}h_{\lambda\rho},
+\end{equation}
+now, from that expression we can see that each one of the $\eta$'s is going to mix the indices, this is; raise one index of $h$, and since we want the index in the derivative down (so we can match the other computed term), we can lower this and raise the other index in the field $h$, this results in 
+\begin{equation}
+  \eta^{\sigma\beta}\eta^{\rho\epsilon}\pd^{\lambda}h_{\lambda\rho} \frac{\pd(\pd_\sigma h_{\beta\epsilon})}{\pd(\pd_\alpha \hmn)} =\frac{1}{2}\eta^{\alpha\mu}\pd_\lambda h^{\lambda\nu} + \frac{1}{2}\eta^{\alpha\nu}\pd_{\lambda}h^{\lambda\mu},
+\end{equation}
+and from this we have
+\begin{equation}
+  \frac{\pd\mathcal{L}_2}{\pd(\pd_\alpha \hmn))} = -\frac{1}{2}\left[ \eta^{\alpha\mu}\pd_\lambda h^{\lambda\nu} + \eta^{\alpha\nu}\pd_{\lambda}h^{\lambda\mu}\right]
+\end{equation}
+which is equivalent to
+\begin{equation}
+  \frac{\pd\mathcal{L}_2}{\pd(\pd_\alpha \hmn)} = -\frac{1}{2}\left[ \eta^{\alpha\mu}\pd_\sigma h^{\sigma\nu} + \eta^{\alpha\nu}\pd_{\sigma}h^{\sigma\mu}\right],
+\end{equation}
+and if we take $\pd_\alpha$ of the previous expression we can see that the $\eta$'s are going to raise the index in this partial, thus
+\begin{equation}
+  \pd_\alpha \left( \frac{\pd\mathcal{L}_2}{\pd(\pd_\alpha \hmn)}\right) = -\frac{1}{2}\left[\pd^\mu\pd_\sigma h^{\sigma\nu} + \pd^{\nu}\pd_\sigma h^{\sigma\mu} \right].
+\end{equation}
+Now, for the third term
+\begin{equation}
+  \mathcal{L}_3 = -\frac{1}{4} \pd_\lambda h \pd^\lambda h,
+\end{equation} 
+we follow the same procedure as before, but before proceding any further, we need to remember that 
+\begin{equation}
+  h = \eta^{\rho\sigma} h_{\rho\sigma},
+\end{equation}
+with this in mind we have
+\begin{equation}
+  \frac{\pd\mathcal{L}_3}{\pd(\pd_\alpha \hmn)} = -\frac{1}{4}\left[ \eta^{\rho\sigma} \frac{\pd(\pd_\lambda h_{\rho\sigma})}{\pd(\pd_\alpha \hmn)} + \eta^{\rho\sigma}\eta^{\lambda\delta}\pd_\lambda \frac{\pd(\pd_\delta h_{\rho\sigma})}{\pd(\pd_\alpha \hmn)} \right],
+\end{equation}
+and again, using the identity in equation (\ref{eq:PartialsIdentity}), we have
+\begin{equation}
+  \frac{\pd\mathcal{L}_3}{\pd(\pd_\alpha \hmn)} = -\frac{1}{4}\left[ \frac{1}{2} \eta^{\sigma\rho }\delta^{\alpha}_{\lambda}(\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma})\pd^{\lambda}h  + \frac{1}{2}\eta^{\rho\sigma}\eta^{\lambda\delta}\pd_\lambda h \delta^{\alpha}_{\delta}(\delta^{\mu}_{\rho}\delta^{\nu}_{\sigma} + \delta^{\nu}_{\rho}\delta^{\mu}_{\sigma})\right],
+\end{equation}
+and from this expression we have that $\lambda = \alpha$, and even more, the deltas in the first term impose $\rho=\nu$,  $\sigma=\nu$ and $\rho=\nu$, $\sigma=\mu$, and for the second term the deltas impose the same relationship as well, which implies that
+\begin{equation}
+  \frac{\pd\mathcal{L}_3}{\pd(\pd_\alpha \hmn)} = -\frac{1}{8}\eta^{\mu\nu}\pd^{\alpha}h - \frac{1}{8}\eta^{\nu\mu}\pd^{\alpha}h - \frac{1}{8}\eta^{\mu\nu}\pd^{\alpha}h - \frac{1}{8}\eta^{\nu\mu}\pd^\alpha h,
+\end{equation}
+but $\eta$ is symmetric, thus, the previous expression reduces to
+\begin{equation}
+  \frac{\pd\mathcal{L}_3}{\pd(\pd_\alpha \hmn)} = -\frac{1}{2}\eta^{\mu\nu}\pd^\alpha h,
+\end{equation}
+and if we take $\pd_\alpha$, we get the box operator, this is
+\begin{equation}
+  \pd_\alpha\left(\frac{\pd\mathcal{L}_3}{\pd(\pd_\alpha \hmn)}\right) = -\frac{1}{2}\eta^{\mu\nu}\sq h.
+\end{equation}
+Finally, let's move to the last term
+\begin{equation}
+  \mathcal{L}_4 = \frac{1}{2}\pd_\lambda h\pd_\rho h^{\lambda\rho},
+\end{equation}
+then we have
+\begin{equation}
+  \frac{\pd \mathcal{L}_4}{\pd(\pd_\alpha \hmn)} = \frac{1}{2}\left[ \frac{\pd(\pd_\lambda h)}{\pd(\pd_\alpha \hmn)}\pd_\rho h^{\lambda\rho} + \pd_\lambda h\frac{\pd(\pd_\rho h^{\lambda\rho})}{\pd(\pd_\alpha \hmn)}\right],
+\end{equation}
+and for the first term we follow the same procedure as with $\mathcal{L}_3$, whereas for the second term, we use two $\eta$'s to lower the indices in the field $h^{\lambda\rho}$, with this in mind we have
+\begin{equation}
+  \frac{\pd \mathcal{L}_4}{\pd(\pd_\alpha \hmn)} = \frac{1}{2}\left[\eta^{\delta\sigma} \frac{\pd(\pd_\lambda h_{\delta\sigma})}{\pd(\pd_\alpha \hmn)}\pd_\rho h^{\lambda\rho} +\eta^{\lambda\delta}\eta^{\rho\gamma}\pd_\lambda h\frac{\pd(\pd_\rho h_{\delta\gamma})}{\pd(\pd_\alpha \hmn)}  \right],
+\end{equation}
+and again, we use the identity given in equation (\ref{eq:PartialsIdentity}), which again, is making $\lambda=\alpha$ in the first term and $\rho=\alpha$ in the second, for the first one we have
+\begin{equation}
+  \eta^{\delta\sigma} \frac{\pd(\pd_\lambda h_{\delta\sigma})}{\pd(\pd_\alpha \hmn)}\pd_\rho h^{\lambda\rho} = \frac{1}{2}\eta^{\mu\nu}\pd_\rho h^{\alpha\rho} + \frac{1}{2}\eta^{\nu\mu}\pd_\rho h^{\alpha\rho} = \eta^{\mu\nu}\pd_\rho h^{\alpha\rho} ,
+\end{equation}
+whereas for the second term we have
+\begin{equation}
+	\eta^{\lambda\delta}\eta^{\rho\gamma}\pd_\lambda h\frac{\pd(\pd_\rho h_{\delta\gamma})}{\pd(\pd_\alpha \hmn)} = \frac{1}{2}\eta^{\lambda\delta}\eta^{\rho\gamma}\pd_\lambda h(\delta^{\mu}_\delta \delta^{\nu}_{\gamma} + \delta^{\nu}_\delta \delta^{\mu}_{\gamma}),
+\end{equation}
+which implies that
+\begin{equation}
+  \eta^{\lambda\delta}\eta^{\rho\gamma}\pd_\lambda h\frac{\pd(\pd_\rho h_{\delta\gamma})}{\pd(\pd_\alpha \hmn)} =\frac{1}{2}\eta^{\lambda\mu}\eta^{\alpha\nu}\pd_\lambda h + \frac{1}{2}\eta^{\alpha\mu}\partial^\nu h = \frac{1}{2}(\eta^{\alpha\nu}\pd^{\mu} h + \eta^{\alpha\mu} \pd^{\nu}h),
+\end{equation}
+then, the whole expression reduces to 
+\begin{equation}
+	\frac{\pd \mathcal{L}_4}{\pd(\pd_\alpha \hmn)} = \frac{1}{2}\eta^{\mu\nu}\pd_\rho h^{\alpha\rho}  + \frac{1}{4}(\eta^{\alpha\nu}\pd^{\mu} h + \eta^{\alpha\mu} \pd^{\nu}h),
+\end{equation}
+and if we take $\pd_\alpha$, we have
+\begin{equation}
+	\pd_\alpha\left(\frac{\pd \mathcal{L}_4}{\pd(\pd_\alpha \hmn)}\right) = \frac{1}{2}\eta^{\mu\nu}\pd_\alpha\pd_\rho h^{\alpha\rho}  + \frac{1}{4}\pd_\alpha(\eta^{\alpha\nu}\pd^{\mu} h + \eta^{\alpha\mu} \pd^{\nu}h),
+\end{equation}
+now, in the second term, the $\eta$'s are going to raise the indec of $\pd_\alpha$ and since derivatives commute we have
+\begin{equation}
+  \pd_\alpha\left(\frac{\pd \mathcal{L}_4}{\pd(\pd_\alpha \hmn)}\right) = \frac{1}{2}\eta^{\mu\nu}\pd_\alpha\pd_\rho h^{\alpha\rho}  + \frac{1}{2}\pd^{\mu}\pd^{\nu} h,
+\end{equation}
+then, if we put everything together, and define
+\begin{equation}
+  K^{\mu\nu} = \pd_\alpha\left(\frac{\pd\mathcal{L}}{\pd(\pd_\alpha \hmn)}\right),
+\end{equation}
+we have
+\begin{equation}
+   K^{\mu\nu} = \frac{1}{2}\sq \hMN - \frac{1}{2}\left[\pd^\mu\pd_\sigma h^{\sigma\nu} + \pd^{\nu}\pd_\sigma h^{\sigma\mu} \right] -\frac{1}{2}\eta^{\mu\nu}\sq h + \frac{1}{2}\eta^{\mu\nu}\pd_\alpha\pd_\rho h^{\alpha\rho}  + \frac{1}{2}\pd^{\mu}\pd^{\nu} h,
+\end{equation}
+now, the expression we got from $G$ has its indices lowered, and the version with the indices up is given by
+\begin{equation}
+  G^{\mu\nu} = \frac{1}{2}\left( \pd_\alpha\pd^{\nu}h^{\alpha\mu} + \pd_\alpha\pd^{\mu}h^{\alpha\nu} - \pd^\mu\pd^\nu h -\sq h^{\mu\nu} - \eta^{\mu\nu}\pd^{\alpha}\pd^{\beta}h_{\alpha\beta} + \eta^{\mu\nu} \sq h    \right),
+\end{equation}
+and we can rearrange the terms in $K^{\mu\nu}$ as follows
+\begin{equation}
+  K^{\mu\nu} = \frac{1}{2}(-\pd^\mu\pd_\sigma h^{\sigma\nu} - \pd^{\nu}\pd_\sigma h^{\sigma\mu} + \pd^{\mu}\pd^{\nu} h + \sq \hMN  + \eta^{\mu\nu}\pd_\alpha\pd_\rho h^{\alpha\rho} -\eta^{\mu\nu}\sq h),
+\end{equation}
+and from this it follows
+\begin{equation}
+  K^{\mu\nu} = -G^{\mu\nu},
+\end{equation}
+going back to the original Euler-Lagrange equation, we have
+\begin{equation}
+  -G^{\mu\nu} + \tau^{\mu\nu} = 0\quad \implies G^{\mu\nu} = \tau^{\mu\nu},
+\end{equation}
+just as we wanted.
+\end{document}

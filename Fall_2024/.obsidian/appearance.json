@@ -1,3 +1,7 @@
 {
-  "cssTheme": ""
+  "cssTheme": "",
+  "interfaceFontFamily": "",
+  "textFontFamily": "SF Mono",
+  "baseFontSize": 17,
+  "accentColor": "#5cc7f5"
 }
